@@ -1,0 +1,7 @@
+<html><head></head><body>18630715
+
+   
+   ABSTRACT
+   <p>A streaming method executed by a control device includes receiving a streaming media playback address of a cloud streaming service returned by a cloud device, and transmitting a media projection request corresponding to a local media file stored on the control device to a playback device. The method further includes transmitting a loading instruction indicating to start loading the virtual scene to the cloud device, generating initial file parameters corresponding to the local media file and replacing a file address of the local media file in the initial file parameters with the streaming media playback address to obtain modified file parameters. The method further includes returning the modified file parameters to the playback device, the modified file parameters providing the streaming media playback address instead of the initial file parameters corresponding to the local media file.</p>
+
+</body></html>

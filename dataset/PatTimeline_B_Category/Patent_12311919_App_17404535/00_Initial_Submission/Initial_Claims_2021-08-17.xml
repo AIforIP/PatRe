@@ -1,0 +1,225 @@
+<html><head></head><body><h3>Date: 2021-08-17</h3>
+ What is claimed is:
+<br>
+
+1.
+An information processing device for a vehicle, comprising: 
+<br>
+an object detecting unit configured to detect, based on an output of a sensor mounted on 
+<br>
+the vehicle, an object located around the vehicle; 
+<br>
+an object information storage unit configured to store, as object information, information about the object detected by the object detecting unit; and 
+<br>
+an object information management unit configured to: 
+<br>
+receive, from a travelling assistance unit that performs an assistance operation of 
+<br>
+assisting travelling of the vehicle based on the object information, related information, the related information being related to the assistance operation performed by the travelling assistance unit; 
+<br>
+determine storage priority of the object information in the object information storage unit based on the related information; and 
+<br>
+manage a storage state of the object information in the object information storage 
+<br>
+unit based on the storage priority.
+<br>
+
+2.
+The information processing device according to claim 1, wherein the related information includes one of (i) travel mode information indicative of a travel mode of the vehicle in the assistance operation and (ii) interest information indicative of a degree of interest in the object in the assistance operation; and 
+<br>
+the object information management unit is configured to determine the storage priority based on the one of the travel mode information and the interest information. 
+
+<br>
+
+3.
+The information processing device according to claim 1, wherein the related information includes one of (i) parking mode information and (ii) positional relationship information if the assistance operation is a parking assistance operation of assisting parking of the vehicle, 
+the parking mode information representing a mode of the vehicle to be parked in the parking assistance operation, the positional relationship information representing a positional relationship between the object and one of a target parking space and one or more candidates of the target parking; and 
+<br>
+the object information management unit is configured to determine the storage priority in accordance with the one of the parking mode information and the positional relationship information.
+<br>
+
+4.
+The information processing device according to claim 1, wherein the object information management unit is configured to determine the storage priority based on the related information and an azimuth of the object of the object information.
+<br>
+
+5.
+The information processing device according to claim 1, wherein the object information management unit is configured to determine the storage priority based on the related information and a detection accuracy of the object of the object information.
+<br>
+
+6.
+The information processing device according to claim 5, wherein the object information management unit is configured to: 
+<br>
+reduce the storage priority with a decrease in the detection accuracy; and 
+<br>
+curb a reduction of the storage priority with the decrease in the detection accuracy if the object of the object information is located in a travelling direction of the vehicle.
+<br>
+
+7.
+The information processing device according to claim 1, wherein the object information includes a plurality of object information items about one or more objects detected by the object detecting unit, the information processing device further comprising: 
+<br>
+an object information selection unit configured to: 
+<br>
+determine, based on the related information, transfer priority of each of the object 
+
+information items stored in the object information storage unit; and 
+<br>
+select, based on the transfer priority of each of the object information items, one of the object information items to be transferred to the travelling assistance uni. 
+
+<br>
+
+8.
+The information processing device according to claim 7, wherein the related information includes one of (i) travel mode information indicative of a travel mode of the vehicle in the assistance operation and (ii) interest information indicative of a degree of interest in the one or more objects in the assistance operation; and 
+<br>
+the object information management unit is configured to determine the transfer priority 
+<br>
+of each of the object information items based on the one of the travel mode information and the interest information.
+<br>
+
+9.
+The information processing device according to claim 7, wherein the related information includes one of (i) parking mode information and (ii) positional relationship information if the assistance operation is a parking assistance operation of assisting parking of the vehicle, the parking mode information representing a mode of the vehicle to be parked in the parking assistance operation, the positional relationship information representing a positional relationship between the one or more objects and one of a target parking space and one or more candidates of the target parking; and 
+<br>
+the object information management unit is configured to determine the transfer priority of each of the object information items in accordance with the one of the parking mode information and the positional relationship information. 
+<br>
+
+10.    The information processing device according to claim 7, wherein the object information selection unit is configured to determine the transfer priority of 
+each of the object information items based on the related information and an azimuth of the one or more objects of the object information items.
+<br>
+
+<br>
+11.    The information processing device according to claim 7, wherein the object information selection unit is configured to determine the transfer priority of each of the object information items based on the related information and a detection accuracy of the one or more objects of the object information items.
+<br>
+
+<br>
+12.    The information processing device according to claim 11, wherein the object information management unit is configured to: 
+<br>
+reduce the transfer priority of each of the object information items with a decrease in the detection accuracy; and 
+<br>
+curb a reduction of the transfer priority of each of the object information items with the decrease in the detection accuracy if the one or more objects of the object information 
+<br>
+items are located in a travelling direction of the vehicle.
+<br>
+
+<br>
+13.    An information processing method which is performed by an information processing device for a vehicle, the information processing method comprising: 
+<br>
+detecting, based on an output of a sensor mounted on the vehicle, an object located around 
+<br>
+the vehicle; 
+<br>
+storing, into an object information storage unit, as object information, information about the object detected by the object detecting unit; 
+<br>
+receiving, from a travelling assistance unit that performs an assistance operation of assisting travelling of the vehicle based on the object information, related information, the related 
+<br>
+information being related to the assistance operation performed by the travelling assistance unit; 
+<br>
+determining storage priority of the object information in the object information storage unit based on the related information; and 
+
+managing a storage state of the object information in the object information storage unit based on the storage priority.
+<br>
+
+<br>
+14.    The information processing method according to claim 13, wherein the related information includes one of (i) travel mode information indicative of a travel mode of the vehicle in the assistance operation and (ii) interest information indicative of a degree of interest in the object in the assistance operation; and 
+<br>
+the information processing method further comprising: 
+<br>
+determining the storage priority based on the one of the travel mode information and the 
+<br>
+interest information.
+<br>
+
+<br>
+15.    The information processing method according to claim 13, wherein the related information includes one of (i) parking mode information and (ii) positional relationship information if the assistance operation is a parking assistance operation of assisting parking of the vehicle, the parking mode information representing a mode of the vehicle to be parked in the parking assistance operation, the positional relationship information representing a positional relationship between the object and one of a target parking space and one or more candidates of the target parking; and 
+<br>
+the information processing method further comprising: 
+<br>
+determining the storage priority in accordance with the one of the parking mode information and the positional relationship information. 
+
+<br>
+
+<br>
+16.    The information processing method according to claim 13, wherein the information processing method further comprising: 
+<br>
+determining the storage priority based on the related information and an azimuth of the object of the object information. 
+<br>
+17.    The information processing method according to claim 13, wherein the information processing method further comprising: 
+<br>
+determining the storage priority based on the related information and a detection accuracy 
+<br>
+of the object of the object information.
+<br>
+
+<br>
+18.    The information processing method according to claim 17, wherein the information processing method further comprising: 
+<br>
+reducing the storage priority with a decrease in the detection accuracy; and, 
+<br>
+curbing a reduction of the storage priority with the decrease in the detection accuracy if the object of the object information is located in a travelling direction of the vehicle.
+<br>
+
+<br>
+19.    The information processing method according to claim 13, wherein the object information includes a plurality of object information items about one or more objects detected by the object detecting unit, and 
+<br>
+the information processing method further comprising: 
+<br>
+determining, based on the related information, transfer priority of each of the object information items stored in the object information storage unit; and 
+<br>
+selecting, based on the transfer priority of each of the object information items, one of the 
+<br>
+object information items to be transferred to the travelling assistance uni.
+<br>
+
+20.
+The information processing method according to claim 19, wherein the related information includes one of (i) travel mode information indicative of a travel mode of the vehicle in the assistance operation and (ii) interest information indicative of a degree of interest in the one or more objects in the assistance operation; and 
+<br>
+the information processing method further comprising: 
+<br>
+determining the transfer priority of each of the object information items based on the one 
+
+of the travel mode information and the interest information.
+<br>
+
+21.
+The information processing method according to claim 19, wherein the related information includes one of (i) parking mode information and (ii) positional relationship information if the assistance operation is a parking assistance operation of assisting parking of the vehicle, the parking mode information representing a mode of the vehicle to be parked in the parking assistance operation, the positional relationship information representing a positional relationship between the one or more objects and one of a target parking space and one or more candidates of the target parking; and 
+<br>
+the information processing method further comprising: 
+<br>
+determining the transfer priority of each of the object information items in accordance with the one of the parking mode information and the positional relationship information. 
+<br>
+
+22.
+The information processing method according to claim 19, wherein the information processing method further comprising: 
+<br>
+determining the transfer priority of each of the object information items based on the related information and an azimuth of the one or more objects of the object information items. 
+<br>
+
+23.
+The information processing method according to claim 19, wherein the information processing method further comprising: 
+<br>
+determining the transfer priority of each of the object information items based on the related information and a detection accuracy of the one or more objects of the object information 
+<br>
+items.
+<br>
+
+24.
+The information processing method according to claim 23, wherein 
+the information processing method further comprising: 
+<br>
+reducing the transfer priority of each of the object information items with a decrease in the detection accuracy; and, 
+<br>
+curbing a reduction of the transfer priority of each of the object information items with 
+<br>
+the decrease in the detection accuracy if the one or more objects of the object information items are located in a travelling direction of the vehicle.
+48
+49
+50
+51
+52
+53
+54
+55
+5
+10
+15
+20
+25
+</body></html>

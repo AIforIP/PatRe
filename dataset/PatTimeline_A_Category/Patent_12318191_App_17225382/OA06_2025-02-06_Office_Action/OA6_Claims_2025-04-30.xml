@@ -1,0 +1,101 @@
+<html><head></head><body><h3>Date: 2025-04-30</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<br>
+<br>
+1.    (Previously Presented) A system for monitoring patient movement comprising:a first tracking device affixed to a table;<br>
+a second tracking device configured to be affixed to an anatomical element, the anatomical element having a pose relative to the table;<br>
+a robotic arm positionable in any pose and configured to support an object;<br>
+at least one processor; and<br>
+at least one memory storing instructions for execution by the at least one processor that, when executed, cause the at least one processor to:<br>
+register a patient to a pre-operative image to yield a correlation between a coordinate system associated with the patient and a coordinate system associated with a navigation system, wherein the correlation is used to track the robotic arm relative to the anatomical element,<br>
+receive a first dataset, the first dataset containing a first image depicting the first tracking device and the second tracking device,<br>
+receive a second dataset, the second dataset containing a second image depicting the first tracking device and the second tracking device,<br>
+process each of the first image and the second image to identify the first tracking device and the second tracking device,<br>
+determine a first relative pose of the first tracking device relative to the second tracking device from the processed first image and a second relative pose of the first tracking device relative to the second tracking device from the processed second image,<br>
+compare the first relative pose and the second relative pose to determine if a relative pose of the first tracking device and the second tracking device has changed,<br>
+generate a notification when the relative pose of the first tracking device and the second tracking device has changed,<br>
+reregister the patient to the pre-operative image based on the notification indicating that the relative pose of the first tracking device and the second tracking device has changed, wherein reregistering the patient to the pre-operative image yields an<br>
+<br>
+updated correlation between the coordinate system associated with the patient and the coordinate system associated with the navigation system, and<br>
+use the updated correlation to automatically position the robotic arm relative to the anatomical element.<br>
+2.
+(Previously Presented) The system of claim 1, further comprising:<br>
+a user interface, and wherein the at least one memory stores additional instructions for execution by the at least one processor that, when executed, further cause the at least one processor to:<br>
+cause the notification to be displayed on the user interface.<br>
+3.
+(Original) The system of claim 1, wherein the notification includes instructions for performing one or more verification steps.<br>
+4.
+(Previously Presented) The system of claim 3, wherein the at least one memory stores additional instructions for execution by the at least one processor that, when executed, further cause the at least one processor to:<br>
+determine a spatial relationship between a patient and the second tracking device.<br>
+5.
+(Canceled)<br>
+6.
+(Original) The system of claim 1, wherein the anatomical element is a vertebra.<br>
+7.
+(Examiner Amended) The system of claim 1, wherein the navigation system comprises an optical imaging device, the optical imaging device configured to obtain the first dataset and the second dataset.<br>
+8.
+(Original) The system of claim 1, wherein the second tracking device comprises a plurality of tracking devices.<br>
+9.
+(Currently Amended) A system for monitoring patient movement comprising:<br>
+<br>
+a robotic arm positionable in any pose and configured to support an object;<br>
+a first tracking device affixed to a table;<br>
+a second tracking device affixed to the robotic arm, the robotic arm having a pose relative to the table;<br>
+at least one processor; and<br>
+at least one memory storing instructions for execution by the at least one processor that, when executed, cause the at least one processor to:<br>
+register a patient to a pre-operative image to yield a correlation between a coordinate system associated with the patient and a coordinate system associated with a navigation system, wherein the correlation is used to track the robotic arm,<br>
+receive a first dataset, the first dataset containing a first image depicting the first tracking device and the second tracking device,<br>
+receive a second dataset, the second dataset containing a second image depicting the first tracking device and the second tracking device,<br>
+process each of the first image and the second image to identify the first tracking device and the second tracking device,<br>
+determine a first relative pose of the first tracking device relative to the second tracking device from the processed first image and a second relative pose of the first tracking device relative to the second tracking device from the processed second image,<br>
+compare the first relative pose and the second relative pose to determine if a relative pose of the first tracking device and the second tracking device has changed,<br>
+generate a notification when thea relative pose of the first tracking device and the second tracking device has changed,<br>
+reregister the patient to the pre-operative image based on the notification indicating that the relative pose of the first tracking device and the second tracking device has changed, wherein reregistering the patient to the pre-operative image yields an updated correlation between the coordinate system associated with the patient and the coordinate system associated with the navigation system, and<br>
+use the updated correlation to automatically position the robotic arm.<br>
+<br>
+<br>
+<br>
+10.   (Previously Presented) The system of claim 9, wherein the second tracking device is integrated with the robotic arm.<br>
+<br>
+11.   (Previously Presented) The system of claim 9, further comprising:a user interface, and wherein the at least one memory stores additional instructions for execution by the at least one processor that, when executed, further cause the at least one processor to:<br>
+cause the notification to be displayed on the user interface.<br>
+<br>
+12.    (Original) The system of claim 9, wherein the notification includes instructions for performing one or more verification steps.<br>
+<br>
+13.   (Examiner Amended) The system of claim 9, wherein the navigation system comprises an optical imaging device, the optical imaging device configured to obtain the first dataset and the second dataset.<br>
+<br>
+14.    (Previously Presented) The system of claim 12, wherein the robotic arm is affixed to the table.<br>
+<br>
+15.   (Previously Presented) The system of claim 12, wherein the one or more verification steps includes verifying a pose of one or more anatomical elements using a navigation probe.<br>
+<br>
+16.    (Original) The system of claim 9, wherein the first dataset and the second dataset comprises image data.<br>
+<br>
+17.    (Original) The system of claim 9, wherein the first dataset and the second dataset comprises sensor data.<br>
+<br>
+18-20. (Cancelled)1919<br>
+<br>
+<br>
+21.    (Previously Presented) A system for monitoring patient movement comprising:<br>
+a first tracking device affixed to a table;<br>
+a second tracking device configured to be affixed to an anatomical element, the anatomical element having a pose relative to the table;<br>
+a robotic arm positionable in any pose and configured to support an object;<br>
+at least one processor; and<br>
+at least one memory storing instructions for execution by the at least one processor that, when executed, cause the at least one processor to:<br>
+register a patient to a pre-operative image to yield a correlation between a coordinate system associated with the patient and a coordinate system associated with a navigation system, wherein the correlation is used to track the robotic arm relative to the anatomical element,<br>
+receive a first dataset, the first dataset containing first sensor data corresponding to the first tracking device and the second tracking device,<br>
+receive a second dataset, the second dataset containing second sensor data corresponding to the first tracking device and the second tracking device,<br>
+process each of the first sensor data and the second sensor data to identify the first tracking device and the second tracking device,<br>
+determine a first relative pose of the first tracking device relative to the second tracking device from the processed first sensor data and a second relative pose of the first tracking device relative to the second tracking device from the processed second sensor data,<br>
+compare the first relative pose and the second relative pose to determine if a relative pose of the first tracking device and the second tracking device has changed,<br>
+generate a notification when the relative pose of the first tracking device and the second tracking device has changed,<br>
+reregister the patient to the pre-operative image based on the notification indicating that the relative pose of the first tracking device and the second tracking device has changed, wherein reregistering the patient to the pre-operative image yields an updated correlation between the coordinate system associated with the patient and the coordinate system associated with the navigation system, and<br>
+<br>
+use the updated correlation to automatically position the robotic arm relative to the anatomical element.<br>
+<br>
+22.    (Previously Presented) The system of claim 21, further comprising at least one sensor that measures sensor data corresponding to the first tracking device and the second tracking device.<br>
+<br>
+23.    (Previously Presented) The system of claim 22, wherein the at least one sensor comprises at least one of an optical camera, an infrared camera, a 3D camera system, or a stereoscopic vision system.
+</body></html>

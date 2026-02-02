@@ -1,0 +1,7 @@
+<html><head></head><body><h3>Date: 2021-10-14</h3>
+<h1>A BSTRACT</h1>
+
+<p>A virtual object control method is described. A skill type of a skill is obtained in response to a first click/tap operation on a skill control. In response to determining that the obtained skill type of the skill is a target skill that supports selecting a casting position based on a screen click/tap, a castable region of the skill in a virtual scene is displayed according to a position where a controlled virtual object is located and a casting range of the skill. In response to a second click/tap operation in the castable region, the controlled virtual object is controlled to cast the skill at a casting position indicated by the second click/tap operation. Thus, a complex drag operation based on a wheel virtual joystick need not be performed. simplifying the operation of accurate aiming by a user. Apparatus and non-transitory computer-readable counterpart embodiments are also provided.</p>
+TenCent Ref.: 2iPCTi35/US42
+Oblon Ref: 539242US
+</body></html>

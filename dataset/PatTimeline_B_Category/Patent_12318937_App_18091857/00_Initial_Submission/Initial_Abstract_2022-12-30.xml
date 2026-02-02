@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-12-30</h3>
+<p>Attorney Docket No. 10081-01-0019-US</p>
+<h1>ABSTRACT</h1>
+<p>The present application relates to the field of error detection technology. An error</p><p>detection method and a robot system are provided. The error detection method includes:</p><p>obtaining a target pose of an end of an operating arm; acquiring a positioning image; recognizing,</p><p> in the positioning image, a plurality of pose identifications located on the end of the operating arm; recognizing, based on the plurality of pose identifications, an angle identification located on</p><p>the end of the operating arm, the angle identification having a position association relationship with a first pose identification of the plurality of pose identifications; determining, based on the</p><p>angle identification and the plurality of pose identifications, an actual pose of the end of the</p><p> operating arm; and generating, in response to the target pose and the actual pose meeting an error</p><p>detection condition, a control signal related to a fault.</p><p>-83-</p>5
+10
+</body></html>

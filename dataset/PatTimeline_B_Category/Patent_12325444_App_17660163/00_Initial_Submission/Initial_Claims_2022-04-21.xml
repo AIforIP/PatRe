@@ -1,0 +1,131 @@
+<html><head></head><body><h3>Date: 2022-04-21</h3>
+ What is claimed is:
+<br>
+
+<br>
+1. A mobile warning apparatus for issuing a warning in response to observation of a mobile object approaching a vehicle, the mobile warning apparatus comprising: 
+<br>
+a velocity  calculator configured  to calculate, based  on observation information observed by a sensor installed in the vehicle, one or more relative velocities of one or more observed points; 
+<br>
+a position determiner configured to determine whether the 
+<br>
+observed points are in a predetermined proximity extent; and 
+<br>
+an  eliminator configured  to  eliminate, in  response   to determination that the observed points are in the predetermined proximity extent, all the observed points from a warning target. 
+
+<br>
+
+<br>
+2. The mobile warning apparatus according to claim 1, wherein: 
+<br>
+the relative velocities include at least one first relative velocity in a first direction approaching the vehicle, and at least one second relative velocity in a second direction moving away from the vehicle. 
+
+<br>
+
+<br>
+3. The mobile warning apparatus according to claim 1, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among positions of the respective observed points observed by the sensor are smaller than or equal to a predetermined position threshold; and 
+<br>
+determine  that the   observed  points  are in   the predetermined proximity extent in response to determination that the differences among the positions of the respective observed points observed by the sensor are smaller than or equal to the predetermined position threshold.
+
+<br>
+4. The mobile warning apparatus according to claim 2, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among positions of the respective observed points observed by the sensor are smaller than or 
+<br>
+equal to a predetermined position threshold; and 
+<br>
+determine  that the   observed  points  are in  the predetermined proximity extent in response to determination that the differences among the positions of the respective observed points observed by the sensor are smaller than or equal to the predetermined 
+<br>
+position threshold.
+<br>
+
+<br>
+5. The mobile warning apparatus according to claim 1, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among azimuths of the 
+<br>
+respective observed points relative to the vehicle observed by the sensor are smaller than or equal to a predetermined azimuth threshold; and 
+<br>
+determine  that the   observed  points  are in  the predetermined proximity extent in response to determination that the differences among the azimuths of the respective observed points 
+<br>
+relative to the vehicle observed by the sensor are smaller than or equal to the predetermined azimuth threshold.
+<br>
+
+<br>
+6. The mobile warning apparatus according to claim 2, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among azimuths of the respective observed points relative to the vehicle observed by the sensor are smaller than or equal to a predetermined azimuth threshold; and 
+<br>
+determine  that the   observed  points  are in  the predetermined proximity extent in response to determination that the 
+differences among the azimuths of the respective observed points 
+relative to the vehicle observed by the sensor are smaller than or equal to the predetermined azimuth threshold.
+<br>
+
+<br>
+7. The mobile warning apparatus according to claim 3, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among azimuths of the respective observed points relative to the vehicle observed by the sensor are smaller than or equal to a predetermined azimuth threshold; and 
+<br>
+determine that the observed    points are in the 
+<br>
+predetermined proximity extent in response to determination that the differences among the azimuths of the respective observed points relative to the vehicle observed by the sensor are smaller than or equal to the predetermined azimuth threshold.
+<br>
+
+<br>
+8. The mobile warning apparatus according to claim 4, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among azimuths of the respective observed points relative to the vehicle observed by the sensor are smaller than or equal to a predetermined azimuth threshold; and 
+determine that the observed
+points are in the predetermined proximity extent in response to determination that the differences among the azimuths of the respective observed points relative to the vehicle observed by the sensor are smaller than or equal to the predetermined azimuth threshold.
+
+<br>
+
+<br>
+9. The mobile warning apparatus according to claim 1, wherein: 
+<br>
+the position determiner is configured to: 
+<br>
+determine whether differences among distances of the respective observed points relative to the vehicle observed by the sensor 
+<br>
+are smaller than or equal to a predetermined distance threshold; and 
+
+determine that the observed    points are in the predetermined proximity extent in response to determination that the differences among the distances of the respective observed points relative to the vehicle observed by the sensor are smaller than or equal to the predetermined distance threshold.
+<br>
+
+<br>
+10. The mobile warning apparatus according to claim 5. further comprising: 
+<br>
+an azimuth threshold determiner configured to determine a value 
+<br>
+of the azimuth threshold as a function of a distance of at least one observed point relative to the vehicle, the at least one observed point being included in the observed points.
+<br>
+
+<br>
+11. The mobile warning apparatus according to claim 9, further comprising: 
+<br>
+a distance threshold determiner configured to determine a value of the distance threshold as a function of an echo intensity of at least one observed point included in the observed points. 
+29
+30
+31
+32
+5
+10
+15
+20
+25
+30
+</body></html>

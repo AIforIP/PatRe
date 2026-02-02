@@ -1,0 +1,93 @@
+<html><head></head><body><h3>Date: 2025-03-27</h3>
+
+<h1><u>Listing of claims (replacing all prior versions):</u></h1>
+<p>Application No.  :   17/146,619
+
+D01</p><br>
+<br>
+1-29. (Canceled)228<br>
+<br>
+<br>
+30. (Currently Amended) A method of predicting endometrial receptivity status for embryonic implantation in a human subject, the method comprising:<br>
+(a) providing a first biological sample obtained from a human subject at a first time point within a menstrual cycle;<br>
+(b) determining a gene expression profile of a panel of genes in the first biological sample,<br>
+wherein the panel of genes comprises: Arginase 2 (ARG2), Glutathione peroxidase 3 (GPX3), Mucin 1 (MUC1), Apolipoprotein D (APOD) and Secretoglobin family 2A member 2 (SCGB2A2), using reverse transcription polymerase chain reaction analysis; [[and]] (c) comparing the determined gene expression profile in step (b) with a gene expression profile of the same panel of genes listed in step (b) of a receptive endometrial receptivity reference group, a non-receptive endometrial receptivity reference group, a pre-receptive endometrial receptivity reference group, and a post-receptive endometrial receptivity reference group;<br>
+(d) identifying the human subject as having:(i) a receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a receptive endometrial receptivity reference group,<br>
+(ii) a non-receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a non-receptive endometrial receptivity reference group,<br>
+(iii) a pre-receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a pre-receptive endometrial receptivity reference group, or<br>
+Application No.  :   17/146,619
+
+D01<br>
+<br>
+(iv) a post-receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a post-receptive endometrial receptivity reference group; and<br>
+(e) transferring a pre-implantation embryo into the human subject identified as having a receptive endometrial status.<br>
+<br>
+31.    (Previously Presented) The method of claim 30, wherein the first biological sample is an endometrial biopsy obtained from an uterine fundus.<br>
+<br>
+32.    (Previously Presented) The method of claim 30, wherein the human subject has undergone assisted reproductive treatment, and the first time point is seven days after a luteinizing hormone surge.<br>
+<br>
+33.    (Previously Presented New) The method of claim 30, wherein the human subject has undergone assisted reproductive treatment, and the first time point is seven days after administration of human chorionic gonadotropin (hCG).<br>
+<br>
+34.    (Previously Presented) The method of claim 30, wherein the human subject has undergone hormone replacement therapy cycles, and the first time point is five days after progesterone impregnation.<br>
+<br>
+35.    (Previously Presented) The method of claim 30, further comprising after identifying the human subject as having a non-receptive endometrial status, a pre-receptive endometrial status, or a post-receptive endometrial status, (f) obtaining a second biological sample from the human subject at a second time point and repeating steps (b), (c), and (d) on the second biological sample.<br>
+<br>
+36.    (Previously Presented) The method of claim 35, further comprising after identifying the human subject has having a receptive endometrial status, (g) transferring a pre- implantation embryo into the identified human subject.<br>
+Application No.  :   17/146,619
+
+D01<br>
+<br>
+<br>
+<br>
+37.    (Previously Presented) The method of claim 35, wherein the second biological sample is an endometrial biopsy obtained from an uterine fundus.<br>
+<br>
+38.    (Previously Presented) The method of claim 35, wherein the subject is identified as having a post-receptive endometrial status, and the second biological sample is obtained in another menstrual cycle one or two days earlier in the another menstrual cycle as compared to when the first biological sample was taken in the previous menstrual cycle.<br>
+<br>
+39.    (Previously Presented) The method of claim 35, wherein the subject is identified as having a pre-receptive endometrial status, and the second biological sample is obtained in another menstrual cycle one or two days later in the another menstrual cycle as compared to when the first biological sample was taken in the previous menstrual cycle.<br>
+<br>
+40.    (Previously Presented) The method of claim 35, wherein the subject is identified as having a non-receptive endometrial status, further comprising instructing a healthcare professional to select a treatment plan for the identified subject.<br>
+<br>
+41.    (Previously Presented) The method of claim 35, wherein the subject is identified as having a non-receptive endometrial status, further comprising selecting a treatment plan for the identified subject.<br>
+<br>
+42.    (Previously Presented) The method of claim 41, wherein the treatment plan comprises a hormone replacement therapy cycle.<br>
+<br>
+43.    (Previously Presented) The method of claim 30, wherein the subject has a history of miscarriages or stillbirths, and/or a history of fertility issues.<br>
+<br>
+44.    (Previously Presented) The method of claim 30, wherein the subject has had one or more cycles of in vitro fertilization (IVF).<br>
+Application No.  :   17/146,619
+
+D01<br>
+<br>
+<br>
+<br>
+45.    (Previously Presented) The method of claim 30, wherein the subject has previously not had IVF.<br>
+<br>
+46.    (Previously Presented) The method of claim 30, wherein the determining step occurs on a chip, an array, a multi-well plate, or a tube.<br>
+<br>
+47.    (Previously Presented) The method of claim 30, wherein the determining step of each gene within the panel of genes is performed in a reaction volume of 0.005 pL to 100 pL.<br>
+<br>
+48.    (Previously Presented) The method of claim 30, wherein the determining step of each gene within the panel of genes is performed in a reaction volume of 0.005 pL to 50 pL.<br>
+<br>
+49.    (Previously Presented) The method of claim 30, wherein the determining step is performed using a computer-assisted algorithm.<br>
+<br>
+50.    (Previously Presented) The method of claim 30, wherein the comparing step is performed using a classification model, wherein the classification model is principal component analysis and/or discriminant functional analysis.<br>
+<br>
+51.    (Previously Presented) The method of claim 30, further comprising modifying the subject's clinical record to identify the subject as having a receptive endometrial status, as having a non-receptive endometrial status, as having a pre-receptive endometrial status, or as having a post-receptive endometrial status.<br>
+<br>
+52.    (Previously Presented) The method of claim 51, wherein the clinical record is stored in a computer readable medium.<br>
+Application No.  :   17/146,619
+
+D01<br>
+<br>
+<br>
+<br>
+53.    (Withdrawn) A kit comprising: reagents suitable for determining an endometrial gene expression profile of a panel of genes, wherein the panel of genes comprises: ARG2, GPX3, MUC1, APOD and SCGB2A2, in a biological sample obtained from a subject.<br>
+<br>
+54.    (Withdrawn) The kit of claim 53, wherein the biological sample is an endometrial biopsy obtained from an uterine fundus.<br>
+<br>
+55.    (Withdrawn) The kit of claim 53, wherein the reagents are suitable for reverse transcription polymerase chain reaction.<br>
+<br>
+56.    (Withdrawn) The kit of claim 53, further comprising a chip, an array, a multi- well plate or a tube.<br>
+<br>
+57.    (Withdrawn) The kit of claim 53, further comprising instructions for use of the kit according to claim 1.
+</body></html>

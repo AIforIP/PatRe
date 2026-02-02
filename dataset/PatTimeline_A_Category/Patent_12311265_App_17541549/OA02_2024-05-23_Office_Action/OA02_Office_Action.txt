@@ -1,0 +1,132 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Response to Arguments
+Applicant’s arguments have been considered but are moot because the new ground of rejection does not rely on any reference applied in the prior rejection of record for any teaching or matter specifically challenged in the argument.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(2) the claimed invention was described in a patent issued under section 151, or in an application for patent published or deemed published under section 122(b), in which the patent or application, as the case may be, names another inventor and was effectively filed before the effective filing date of the claimed invention.
+Claim(s) 1, 10, 17 is/are rejected under 35 U.S.C. 102(a)(2) as being anticipated by Holland (WO 2021216060 A1).
+Regarding claim 1, Holland discloses a method for determining a real-world environment (Holland, ¶ [0069]: “the real world may be conveyed to the user at an appropriate time such that the user’s ability to effectively consume audio”) in which a first user is located, comprising:
+receiving a plurality of sets of audio data generated from sounds emitted in a plurality of real-world environments, wherein each of the plurality of real-world environments has a different combination of objects receiving input data regarding the plurality of real-world environments (Holland, ¶ [0041]: “in various implementations, the one or more events can include communications received by the computing device (e.g., text messages, SMS messages, voice messages, etc.), audio signals from the surrounding environment (e.g., announcements over a PA system), notifications from an application operating on the computing device (e.g., application badges, news updates, etc.), or prompts from an application operating on the computing device (e.g., turn- by-tum directions from a navigation application).”);
+training an artificial intelligence (AI) model based on the plurality of sets of audio data generated from the sounds in the plurality of real-world environments and based on the input data regarding the plurality of real-world environments (Holland, ¶ [0063]: “ the AI system can be trained based at least in part on a previous user input descriptive of an intervention preference… train the AI system whether and/or when to present audio information associated with similar events occurring at a future time to the user.”)
+applying the AI model to audio data captured from the real-world environment surrounding the first user to determine a type of the real-world environment (Holland, ¶ [00167]: “the method can include training an AI system comprising one or more machine-learned models to incorporate an audio signal associated with one or more future events into an acoustic environment of a user based at least in part on the semantic content for the one or more previous events associated with the user and the data indicative of the user response to the one or more events. ”).
+Regarding claim 10, Holland discloses a server for determining a real-world environment in which a user is located (Holland, ¶ [0084]), comprising:
+a processor (Holland, Fig. 1A, item 132) configured to:
+receive, via a computer network (Holland, Fig. 1A, item 180), a plurality of sets of audio data generated from sounds emitted in a plurality of real-world environments, wherein each of the plurality of real-world environments has a different combination of objects (Holland, Fig. 1B; ¶ [0043]);
+receive, via the computer network (Holland, Fig. 1A, item 180, 102, 150), input data regarding the plurality of real- world environments (Holland, ¶ [0041]: “in various implementations, the one or more events can include communications received by the computing device (e.g., text messages, SMS messages, voice messages, etc.), audio signals from the surrounding environment (e.g., announcements over a PA system), notifications from an application operating on the computing device (e.g., application badges, news updates, etc.), or prompts from an application operating on the computing device (e.g., turn- by-tum directions from a navigation application).”);
+train an artificial intelligence (AI) model based on the plurality of sets of audio data generated from the sounds in the plurality of real-world environments and based on the input data regarding the plurality of real-world environments (Holland, ¶ [0063]: “ the AI system can be trained based at least in part on a previous user input descriptive of an intervention preference… train the AI system whether and/or when to present audio information associated with similar events occurring at a future time to the user.”); and
+apply the AI model to audio data captured from the real-world environment surrounding a user to determine a type of the real-world environment (Holland, Fig. 2A-F; ¶ [00144]); and
+a memory device coupled to the processor (Holland, Fig. 1A;  ¶ [0084]: “The memory 134 can store data 136 and instructions 138 which are executed by the processor 132 to cause the server computing system 130 to perform operations.”).
+Regarding claim 17, A system for determining a real-world environment in which a user is located (Holland, ¶ [0084]), comprising:
+a plurality of client devices (Holland, Fig. 1A, item 150) configured to:
+generate a plurality of sets of audio data generated from sounds emitted in a plurality of real-world environments, wherein each of the plurality of real- world environments has a different combination of objects (Holland, Fig. 1B; ¶ [0043]); and
+receive input data regarding the plurality of real-world environments (Holland, ¶ [0041]); and
+a server coupled to the plurality of client devices (Holland, Fig. 1A, items 180, 150), wherein the server is configured to:
+receive the plurality of sets of audio data from the plurality of client devices via a computer network (Holland, Fig. 1A, items 130, 180, 150);
+receive the input data regarding the plurality of real-world environments from the plurality of client devices via the computer network (Holland, Fig. 1A, items 130, 180, 150);
+train an artificial intelligence (AI) model based on the plurality of sets of audio data generated from the sounds in the plurality of real-world environments and based on the input data regarding the plurality of real-world environments (Holland, ¶ [0063]); and
+apply the AI model to audio data captured from the real-world environment surrounding a user to determine a type of the real-world environment (Holland, Fig. 2A-F; ¶ [00144]).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim(s) 2, 11 and 18 is/are rejected under 35 U.S.C. 103 as being unpatentable over Holland (WO 2021216060 A1), and further in view of Chien (US 20230147573 A1).
+Regarding claims 2, 11 and 18, Holland discloses all the limitations of claim 1, 10 and 17 respectively.
+However, Holland fails to disclose extracting a plurality of features from the plurality of sets of audio data the plurality of features include a plurality of amplitudes of the plurality of sets of audio data, a plurality of frequencies of the plurality of sets of audio data, and a plurality of sense directions in which the sounds are sensed.
+In an analogous field of endeavor, Chien (US 20230147573 A1) discloses
+extracting a plurality of features from the plurality of sets of audio data, wherein the
+plurality of features include a plurality of amplitudes of the plurality of sets of audio data,
+a plurality of frequencies of the plurality of sets of audio data, and a plurality of sense
+directions in which the sounds are sensed (Chien, ¶ [0035]: “extracted audio features from one or more representative audio samples, such as low-level audio features, including: spectral centroid, spectral roll-off, signal energy, mel-frequency cepstrum coefficients (MFCCs), linear predictor coefficients (LPC), line spectral frequency (LSF) coefficients, loudness coefficients, sharpness of loudness coefficients, spread of loudness coefficients, octave band signal intensities”).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Chien with Holland to provide environmental data, premises monitoring, and so on (as suggested by Chien, ¶ [0002]).
+Claim(s) 4 is/are rejected under 35 U.S.C. 103 as being unpatentable over
+Holland (WO 2021216060 A1), and further in view of Gardner (US 20230158409 A1).
+Regarding claims 4, Holland discloses all the limitations of claim 1.
+However, Holland fails to disclose receiving an indication of the type of the real-world environment to be simulated; accessing, based on the type of the real-world environment to be simulated, the audio data captured from the real-world environment; providing the audio data captured from the real-world environment to a client device for outputting a sound corresponding to the type of the real-world environment.
+In an analogous endeavor. Gardner (US 20230158409 A1) discloses receiving
+an indication of the type of the real-world environment to be simulated (Gardner, ¶ [0109]: “any type of environment to millions of players and followers around the world concurrently”, ¶ [0110]: “simulation of participating in the real race”);
+accessing, based on the type of the real-world environment to be simulated, the audio data captured from the real-world environment (Gardner, ¶ [0205]: “ when the computer game player's simulated car is substituted for a real car there is exchange of video, audio, or any other technical data”);
+Therefore, it would have been obvious to one with ordinary skill in the art before the effective filing date of the claimed invention to combine Gardner with Holland to provide real world sounds.
+Claim(s) 5 and 14 is/are rejected under 35 U.S.C. 103 as being unpatentable
+over Holland (WO 2021216060 A1), and further in view of Flaks (US 8767968 B2).
+Regarding claims 5 and 14, Holland discloses all the limitations of claim 1 and
+10 respectively.
+However, Holland fails to disclose a plurality of sets of audio data include audio data that is generated from sounds emitted from one or more of the objects in the plurality of real-world environments and sounds that reflected from remaining of the objects.
+In an analogous field of endeavor, Flaks discloses a plurality of sets of audio data include audio data that is generated from sounds emitted from one or more of the objects in the plurality of real-world environments and sounds that reflected from remaining of the objects (Flaks, claim 9: “a plurality of components for a 3D audio
+signal based on the model including the virtual physical characteristics that were
+applied to the physical dimensions and locations of the real objects in
+the environment and the location of the listener in the environment, including determining how the virtual physical characteristics that were applied to the physical dimensions and locations of the real objects will affect sound reflection”).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Flaks with Holland to model various objects physical parameters and environment.
+Claim(s) 6 and 15 is/are rejected under 35 U.S.C. 103 as being unpatentable
+over Holland (WO 2021216060 A1), and further in view of Nuernberger (US
+20170287218 A1).
+Regarding claim 6, Holland discloses all the limitations of claim 1.
+However, Holland fails to disclose wherein the input data includes data identifying the objects in the plurality of real-world environments or image data captured by cameras in the plurality of real-world environments or a combination thereof.
+In an analogous field of endeavor, Nuernberger (US 20170287218 A1) discloses wherein the input data includes data identifying the objects in the plurality of real-world environments or image data captured by cameras in the plurality of real-world environments or a combination thereof (Nuernberger, Fig. 20A, item 924; ¶ [0123]).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Nuernberger with Holland to identify at least one correspondence between the virtual anchor feature of the virtual object and a corresponding candidate anchor feature from the plurality of candidate anchor features (according to Nuernberger, ¶ [0123]).
+Claim(s) 7 is/are rejected under 35 U.S.C. 103 as being unpatentable over
+Holland (WO 2021216060 A1), and further in view of Dascola (US 20190228589 A1).
+Regarding claim 7, Holland discloses all the limitations of claim 1.
+However, Holland fails to disclose, wherein the plurality of sets of audio data is captured when a second user moves from one location to another.
+In an analogous field of endeavor, Dascola (US 20190228589 A1) discloses a
+plurality of sets of audio data is captured when a second user moves from one location to another (Dascola, ¶ [0573]: “detecting the request to switch to another operation applicable to the virtual object in the second user interface region, the device generates an audio output that names a second operation among the plurality of operations applicable to the virtual object”).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Dascola with Holland to
+display the representation of the virtual object in the first user interface region, the
+device displays the representation of the virtual object in a second user interface region
+(according to Dascola, ¶ [0573]).
+Claim(s) 8 is/are rejected under 35 U.S.C. 103 as being unpatentable over
+Holland (WO 2021216060 A1), and further in view of Hijazi (US 20220392478 A1).
+Regarding claim 8, Holland discloses all the limitations of claim 1.
+However, Holland fails to disclose, wherein the plurality of sets of audio data is
+captured when a plurality of users including a second user and a third user are at a
+location.
+In an analogous field of endeavor, Hijazi (US 20220392478 A1) discloses a
+plurality of sets of audio data is captured when a plurality of users including a second
+user and a third user are at a location (Hijazi, ¶ [0055]: “the plurality of users may be
+at varying distances and places within the physical location of the audio space captured by the microphone.”).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Hijazi with Holland to
+minimize the distracting background noise is intelligible human speech generated by
+people surrounding the desired speaker.
+Claim(s) 9 and 16 is/are rejected under 35 U.S.C. 103 as being unpatentable
+over Holland (WO 2021216060 A1), and further in view of Wang (US 20190236416
+A1).
+Regarding claim 9 and 16, Holland discloses all the limitations of claim 1 and
+10 respectively.
+However, Holland fails to disclose, applying the AI model to the audio data captured from the real-world environment surrounding the first user to identify one or more objects within the real-world environment surrounding the first user or one or more states of the one or more objects or an arrangement of the one or more objects or a combination thereof.
+In an analogous field of endeavor, Wang discloses applying an Al model to the
+audio data captured from the real-world environment surrounding the first user to identify one or more objects within the real-world environment surrounding the first user or one or more states of the one or more objects or an arrangement of the one or more objects or a combination thereof (Wang, ¶ [0012]: “the environment surrounding the device may be monitored in an always on mode, to identify audio and/or visual triggers (objects) from a user indicating that an action should be taken by an AI application controlled by the device.”).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Wang with Holland to
+provide a speech and vision fusion model that may be trained using deep learning to
+combine features from many different sources, including available sensor data from the
+capture device (according to Wang, Abstract).
+Claim(s) 15 is/are rejected under 35 U.S.C. 103 as being unpatentable over
+Holland (WO 2021216060 A1), and further in view of Yeung (US 20200388068 A1).
+Regarding claim 15, Holland discloses all the limitations of claim 10.
+However, Holland fails to disclose, wherein the input data includes data identifying the objects in the plurality of real-world environments or image data captured by cameras in the plurality of real-world environments or a combination thereof.
+In an analogous field of endeavor, Yeung discloses an input data includes data identifying the objects in the plurality of real-world environments or image data captured by cameras in the plurality of real-world environments or a combination thereof (Yeung, ¶ [0267]: “receiving video data captured from a plurality of different cameras at an event, the video data comprising a plurality of video images captured from each of
+the plurality of different cameras; performing image recognition on at least a
+portion of the video data to identify objects within the plurality of video images;
+associating metadata with one or more of the objects; processing the video data to generate point cloud data usable to render an immersive virtual reality environment for the event”).
+Therefore, it would have been obvious to one with ordinary skill in the art before
+the effective filing date of the claimed invention to combine Yeung with Holland to use
+multiple camaras and using the video to generate a virtual reality environment.
+Allowable Subject Matter
+Claims 3, 12-13 and 19-20 are objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Conclusion
+Applicant's amendment necessitated the new ground(s) of rejection presented in this Office action.  Accordingly, THIS ACTION IS MADE FINAL.  See MPEP § 706.07(a).  Applicant is reminded of the extension of time policy as set forth in 37 CFR 1.136(a).
+A shortened statutory period for reply to this final action is set to expire THREE MONTHS from the mailing date of this action.  In the event a first reply is filed within TWO MONTHS of the mailing date of this final action and the advisory action is not mailed until after the end of the THREE-MONTH shortened statutory period, then the shortened statutory period will expire on the date the advisory action is mailed, and any extension fee pursuant to 37 CFR 1.136(a) will be calculated from the mailing date of the advisory action.  In no event, however, will the statutory period for reply expire later than SIX MONTHS from the date of this final action.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to FRIEDRICH FAHNERT whose telephone number is (571)270-7797. The examiner can normally be reached 7:00 am-4:00 pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, CAROLYN EDWARDS can be reached on (571)270-7136. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/CAROLYN R EDWARDS/Supervisory Patent Examiner, Art Unit 2692
+/FRIEDRICH FAHNERT/
+Examiner
+Art Unit 2692

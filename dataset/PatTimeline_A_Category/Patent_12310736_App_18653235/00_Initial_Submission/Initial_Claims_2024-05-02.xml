@@ -1,0 +1,142 @@
+<html><head></head><body>18653235
+
+   
+   What is claimed is:
+   
+
+<br>
+
+1. An apparatus for identifying abnormal biomedical features within images of biomedical data, the apparatus comprising:
+an image capture device configured to capture an image of biomedical data pertaining to a first patient;
+a processor communicatively connected to the image capture device;
+a memory communicatively connected to the processor, wherein the memory contains instructions configuring the processor to:
+receive the image of biomedical data from the image capture device;
+extract a plurality of biomedical features from the biomedical data;
+receive repository data from a medical repository as a function of the plurality of biomedical features;
+generate at least a distance metric as a function of the plurality of biomedical features and the repository data; and
+highlight at least a biomedical feature within the image as a function of the at least a distance metric; and
+a display device communicatively connected to the processor, wherein the display device is configured to display the at least a highlighted biomedical feature within the image. 
+<br>
+
+2. The apparatus of claim 1, wherein generating the at least a distance metric comprises:
+generating a plurality of hypotheses by creating a plurality of labels, wherein each label of the plurality of labels represents a diagnostic feature associated with one or more hypotheses within the plurality of hypotheses;
+identifying at least a hypothesis from the plurality of hypotheses by matching the at least a biomedical feature of the plurality of biomedical features against at least a label of the plurality of labels; and
+generating the at least a distance metric as a function of the at least a hypothesis.
+<br>
+
+3. The apparatus of claim 1, wherein the processor is further configured to identify within the medical repository at least a second patient associated with at least a similar distance metric; wherein:
+
+a first set of statistical parameters are extracted as a function of the image, and at least a second set of statistical parameters are extracted as a function of at least an image associated with the at least a second patient; and 
+identifying the at least a second patient comprises matching the first set of statistical parameters with the at least a second set of statistical parameters using a statistical model. 
+<br>
+
+4. The apparatus of claim 1, wherein: 
+the biomedical data includes at least an electrocardiogram (ECG); and
+the at least a biomedical feature includes at least an ECG feature identified from the at least an ECG.
+<br>
+
+5. The apparatus of claim 1, wherein: 
+the biomedical data includes time series data; and
+the at least a biomedical feature includes at least a feature identified from the time series data.
+<br>
+
+6. The apparatus of claim 1, wherein extracting the plurality of biomedical features comprises: 
+receiving feature extraction training data comprising a plurality of training images as inputs and a plurality of training biomedical features as outputs; 
+training a feature extraction model by correlating the plurality of training images with the plurality of training biomedical features; and
+extracting the plurality of biomedical features from the image using the trained feature extraction model.  
+<br>
+
+7. The apparatus of claim 1, wherein receiving the image of biomedical data comprises:
+extracting a plurality of biomedical parameters from the image of biomedical data;
+converting the plurality of biomedical parameters to one or more digitized signals; and
+transforming the one or more digitized signals into an in-silicon image.
+<br>
+
+8. The apparatus of claim 7, wherein receiving the image of biomedical data further comprises:
+validating the one or more digitized signals, comprising:
+classifying the one or more digitized signals to a plurality of preliminary parameters; and
+
+determining an accuracy status of the plurality biomedical parameters by comparing the plurality of preliminary parameters to the plurality of biomedical parameters; and
+generating a quality diagnostic of the biomedical data based on the result of the validation.
+<br>
+
+9. The apparatus of claim 1, wherein highlighting the at least a biomedical feature within the image comprises generating a color-coded heat map at one or more regions within the image. 
+<br>
+
+10. The apparatus of claim 9, wherein generating the color-coded heat map comprises:
+generating a plurality of color-coded regions as function of the at least a distance metric; and
+displaying, using the display device, the plurality of color-coded regions. 
+<br>
+
+11. The apparatus of claim 1, further comprising a user interface, wherein highlighting the at least a biomedical feature within the image comprises:
+receiving, using the user interface, a user query from a user; and
+highlighting, using the user interface, the at least a biomedical feature within the image as a function of the user query. 
+<br>
+
+12. A method for identifying abnormal biomedical features within images of biomedical data, the method comprising:
+capturing, using an image capture device, an image of biomedical data pertaining to a first patient; 
+receiving, by a processor from the image capture device, the image of biomedical data;
+extracting, by the processor, a plurality of biomedical features as a function of the biomedical data;
+receiving, by the processor, repository data from a medical repository as a function of the plurality of biomedical features;
+generating, by the processor, at least a distance metric as a function of the plurality of biomedical features and the repository data;
+highlighting, by the processor, at least a biomedical feature within the image as a function of the at least a distance metric; and
+
+displaying, using a display device, the at least a highlighted biomedical feature within the image.
+<br>
+
+13. The method of claim 12, wherein generating the at least a distance metric comprises:
+generating a plurality of hypotheses by creating a plurality of labels, wherein each label of the plurality of labels represents a diagnostic feature associated with one or more hypotheses within the plurality of hypotheses;
+identifying at least a hypothesis from the plurality of hypotheses by matching the at least a biomedical feature of the plurality of biomedical features against at least a label of the plurality of labels; and
+generating the at least a distance metric as a function of the at least a hypothesis.
+<br>
+
+14. The method of claim 12, wherein the method further comprises identifying, by the processor, within the medical repository at least a second patient associated with at least a similar distance metric; wherein:
+a first set of statistical parameters are extracted as a function of the image, and at least a second set of statistical parameters are extracted as a function of at least an image associated with the at least a second patient; and 
+identifying the at least a second patient comprises matching the first set of statistical parameters with the at least a second set of statistical parameters using a statistical model. 
+<br>
+
+15. The method of claim 12, wherein: 
+the biomedical data includes at least an electrocardiogram (ECG); and
+the at least a biomedical feature includes at least an ECG feature identified from the at least an ECG.
+<br>
+
+16. The method of claim 12, wherein: 
+the biomedical data includes time series data; and
+the at least a biomedical feature includes at least a feature identified from the time series data.
+<br>
+
+17. The method of claim 12, wherein extracting the plurality of biomedical features comprises: 
+receiving feature extraction training data comprising a plurality of training images as inputs and a plurality of training biomedical features as outputs; 
+
+training a feature extraction model by correlating the plurality of training images with the plurality of training biomedical features; and
+extracting the plurality of biomedical features from the image using the trained feature extraction model.  
+<br>
+
+18. The method of claim 12, wherein receiving the image of biomedical data comprises:
+extracting a plurality of biomedical parameters from the image of biomedical data;
+converting the plurality of biomedical parameters to one or more digitized signals; and
+transforming the one or more digitized signals into an in-silicon image.
+<br>
+
+19. The method of claim 18, wherein receiving the image of biomedical data further comprises:
+validating the one or more digitized signals, comprising:
+classifying the one or more digitized signals to a plurality of preliminary parameters; and
+determining an accuracy status of the plurality biomedical parameters by comparing the plurality of preliminary parameters to the plurality of biomedical parameters; and
+generating a quality diagnostic of the biomedical data based on the result of the validation.
+<br>
+
+20. The method of claim 12, wherein highlighting the at least a biomedical feature within the image comprises generating a color-coded heat map at one or more regions within the image. 
+<br>
+
+21. The method of claim 20, wherein generating the color-coded heat map comprises:
+generating a plurality of color-coded regions as function of the at least a distance metric; and
+displaying, using the display device, the plurality of color-coded regions. 
+<br>
+
+22. The method of claim 12, wherein highlighting the at least a biomedical feature within the image comprises:
+receiving, using a user interface, a user query from a user; and
+highlighting, using the user interface, the at least a biomedical feature within the image as a function of the user query. 
+
+   
+
+</body></html>

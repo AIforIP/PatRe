@@ -1,0 +1,185 @@
+<html><head></head><body><h3>Date: 2022-12-09</h3>
+ What is claimed is:
+<br>
+
+<br>
+1.    A system, comprising: 
+<br>
+a processor; and 
+<br>
+a memory storing: 
+<br>
+a calculations module including instructions that, when executed by the processor, cause the processor to: 
+<br>
+determine a time, during a deceleration phase or an acceleration phase of a stop-and-go cycle of a preceding vehicle, when a preceding vehicle speed will equal a desired speed of an ego vehicle; and 
+<br>
+determine, in response to the time being during: 
+<br>
+the deceleration phase, that a gap, between the preceding vehicle and the ego vehicle, will be smaller than a desired maximum gap, or 
+<br>
+the acceleration phase, that the gap will be larger than a desired minimum gap; and 
+<br>
+an actuation module including instructions that, when executed by the processor, cause the processor to change an ego vehicle speed to correct the gap. 
+
+<br>
+
+<br>
+2.    The system of claim 1, wherein: 
+<br>
+the instructions to change the ego vehicle speed include instructions to cause a cruise control system, of the ego vehicle, to operate to change the ego vehicle speed, the cruise control system is configured to optimize a model to maintain a range of the gap, and 
+<br>
+the instructions to change the ego vehicle speed include at least one of instructions to change at least one term in the model, instructions to add at least one term to the model, or 
+<br>
+instructions to remove at least one term from the model. 
+
+<br>
+
+<br>
+3.    The system of claim 2, wherein the model includes an expression for an ego vehicle acceleration.
+
+<br>
+
+<br>
+4.    The system of claim 3, wherein the instructions to change the ego vehicle speed include instructions to add a term to the expression for the ego vehicle acceleration.
+<br>
+
+<br>
+5.    The system of claim 4, wherein: 
+<br>
+the term, added to the expression for the ego vehicle acceleration, includes a product of a gain multiplied by a difference, and 
+<br>
+in response to the time, when the preceding vehicle speed will equal the desired speed, being during: 
+<br>
+the deceleration phase: 
+<br>
+the gain is a first gain, and 
+<br>
+the difference is the desired maximum gap subtracted from a current gap between the ego vehicle and the preceding vehicle, or 
+<br>
+the acceleration phase: 
+<br>
+the gain is a second gain, and 
+<br>
+the difference is the desired minimum gap subtracted from the current gap. 
+
+<br>
+
+<br>
+6.    The system of claim 4, wherein the instructions to add the term to the expression for the ego vehicle acceleration include instructions to add, in response to an existence of a condition, the term to the expression for the ego vehicle acceleration.
+<br>
+
+<br>
+7.    The system of claim 6, wherein the condition comprises: 
+<br>
+an absolute value of a difference of the desired speed subtracted from the preceding vehicle speed being less than a threshold, and 
+<br>
+in response to the time, when the preceding vehicle speed will equal the desired speed, being during: 
+<br>
+the deceleration phase, a preceding vehicle acceleration being negative, or 
+<br>
+the acceleration phase, the preceding vehicle acceleration being positive. 
+
+<br>
+
+<br>
+8.    The system of claim 3, wherein the instructions to change the ego vehicle speed include instructions to change a term of the expression for the ego vehicle acceleration.
+
+<br>
+
+<br>
+9.    The system of claim 8, wherein the term of the expression for the ego vehicle acceleration includes a product of a gain multiplied by a first difference, the first difference being the ego vehicle speed subtracted from the desired speed.
+<br>
+
+<br>
+10.   The system of claim 9, wherein the instructions to change the term of the expression for the ego vehicle acceleration include instructions to change, in response to an existence of a condition, the desired speed to a modified desired speed.
+<br>
+
+<br>
+11.   The system of claim 10, wherein the condition comprises a current time being between the time when the preceding vehicle speed will equal the desired speed and a desired time.
+<br>
+
+<br>
+12.   The system of claim 10, wherein: 
+<br>
+the modified desired speed is a sum of the desired speed added to a ratio, the ratio is a quotient of a second difference divided by a duration of time, the duration of time is between the time when the preceding vehicle speed will equal the desired speed and a desired time, and 
+<br>
+the second difference is, in response to the time when the preceding vehicle speed will equal the desired speed being during: 
+<br>
+the deceleration phase, the desired maximum gap subtracted from a current gap between the ego vehicle and the preceding vehicle, or 
+<br>
+the acceleration phase, the desired minimum gap subtracted from the current gap. 
+
+<br>
+
+<br>
+13.   The system of claim 12, wherein the duration of time equals a period of the stop-and-go cycle.
+<br>
+
+<br>
+14.   A method, comprising: 
+<br>
+determining, by a processor, a time, during a deceleration phase or an acceleration phase of a stop-and-go cycle of a preceding vehicle, when a preceding vehicle speed will equal a desired speed of an ego vehicle; 
+<br>
+determining, by the processor, in response to the time being during: 
+
+ the deceleration phase, that a gap, between the preceding vehicle and the ego vehicle, will be smaller than a desired maximum gap, or 
+<br>
+the acceleration phase, that the gap will be larger than a desired minimum gap; 
+<br>
+and changing, by the processor, an ego vehicle speed to correct the gap. 
+
+<br>
+
+<br>
+15.   The method of claim 14, further comprising determining, by the processor, the desired maximum gap.
+<br>
+
+<br>
+16.   The method of claim 15, wherein the determining the desired maximum gap comprises adding the desired minimum gap to a first difference.
+<br>
+
+<br>
+17.   The method of claim 16, wherein: 
+<br>
+the time, when the preceding vehicle speed will equal the desired speed, comprises a first time and a second time, the first time is during the deceleration phase, the second time is during the acceleration phase, a first position is a position of the preceding vehicle at the first time, a second position is a position of the preceding vehicle at the second time, a third position is a position of the ego vehicle at the first time, a fourth position is a position of the ego vehicle at the second time, the first difference is a second difference subtracted from a third distance, the second difference is the third position subtracted from the fourth position, and 
+<br>
+the third difference is the first position subtracted from the second position. 
+
+<br>
+
+<br>
+18.   The method of claim 17, wherein: 
+<br>
+the first difference is a first term subtracted from a second term, the first term is the desired speed multiplied by a duration of time, the duration of time being between the first time and the second time, and 
+
+ a maximum value of the second term is a distance traversed by the preceding vehicle during a single iteration of the stop-and-go cycle.
+<br>
+
+<br>
+19.   The method of claim 16, wherein: 
+<br>
+the minimum desired gap is a sum of a constant added to a product, the product is the desired speed multiplied by a duration of time, the duration of time is between a first time and a second time, the first time is a time at which the preceding vehicle passes a point, and 
+<br>
+the second time is a time at which the ego vehicle, moving at the desired speed, passes the point. 
+
+<br>
+
+<br>
+20.   A non-transitory computer-readable medium for maintaining a range of a gap between an ego vehicle and a preceding vehicle, the non-transitory computer-readable medium including instructions that, when executed by one or more processors, cause the one or more processors to: 
+<br>
+determine a time, during a deceleration phase or an acceleration phase of a stop-and-go cycle of a preceding vehicle, when a preceding vehicle speed will equal a desired speed of an ego vehicle; 
+<br>
+determine, in response to the time being during: 
+<br>
+the deceleration phase, that a gap, between the preceding vehicle and the ego vehicle, will be smaller than a desired maximum gap, or 
+<br>
+the acceleration phase, that the gap will be larger than a desired minimum gap; 
+<br>
+and change an ego vehicle speed to correct the gap. 
+ 
+{01253090140
+{01253090141
+{01253090142
+{01253090}38
+{01253090}39
+</body></html>

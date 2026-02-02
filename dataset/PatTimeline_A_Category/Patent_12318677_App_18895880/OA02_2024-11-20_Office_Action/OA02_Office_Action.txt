@@ -1,0 +1,32 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Drawings
+The drawings are objected to as failing to comply with 37 CFR 1.84(p)(4) because reference character “110” has been used to designate both the scoreboard and the field (Fig. 1).
+The drawings are further objected to because #908 should likely read “upon receiving the start first .
+Corrected drawing sheets in compliance with 37 CFR 1.121(d) are required in reply to the Office action to avoid abandonment of the application. Any amended replacement drawing sheet should include all of the figures appearing on the immediate prior version of the sheet, even if only one figure is being amended. Each drawing sheet submitted after the filing date of an application must be labeled in the top margin as either “Replacement Sheet” or “New Sheet” pursuant to 37 CFR 1.121(d). If the changes are not accepted by the examiner, the applicant will be notified and informed of any required corrective action in the next Office action. The objection to the drawings will not be held in abeyance.
+Claim Objections
+Claims 7 and 15 are objected to because of the following informalities:
+“receiving a start between-inning clock selection via the user interface upon receiving” recited in claim 7, ln. 2-3 should likely read “receiving a start between-inning clock selection via the user interface; upon receiving”;
+“the start between inning clock device message” recited in claim 7, ln. 12 and 14 should likely read “the start between-inning clock device message” for consistency purposes; and
+“receiving the start pitch clock device message. the processor is further configured for at least one of” recited in claim 15, ln. 52-53 should likely read “receiving the start pitch clock device message[[.]]; the processor is further configured for at least one of”.
+Appropriate correction is required.
+Allowable Subject Matter
+Claims 1-6, 8-14, and 16-27 are allowed. Claims 7 and 15 are currently objected to, as presented in detail above, but would be allowable if corrected as previously discussed above.
+The following is an examiner’s statement of reasons for allowance:
+As presented, the combination of all the elements of the independent claims do not appear in a single reference of prior art. Additionally, based on the art of record, it does not appear that it would have been obvious to a person of ordinary skill in the art at the time the application was filed to combine various pieces of the cited prior art to obtain each and every limitation as currently required by the independent claims.
+The closest relevant prior art, U.S. Pub. 2023/0381629 A1, directed to a device, comprising in part a vibration device, that allows an umpire to control the operations of a baseball game (i.e., a pitch clock) has a public availability date of November 30, 2023, which is after the effective filing date of April 12, 2023 of the present application. Thereby, U.S. Pub. 2023/0381629 A1 is not applicable prior art. The same may be said regarding U.S. Pub. 2023/0158391 A1, which teaches a signaling system for use on a baseball field. The additional relevant prior art, U.S. Pub. 2005/0064961 A1, which discusses a pitch clock, a time limit for a batter to return to the box, and accompanying penalties, as well as the below-recited non-patent literature, fail to disclose, teach, and/or reasonably suggest all claim limitations of the independent claims, such as, for example, the recited hardware working in combination to perform the claimed functions. Accordingly, claims 1-6, 8-14, and 16-27 are allowed.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee. Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+a.	U.S. Pub. 2023/0381629 A1 – This reference is directed to a device that allows an umpire to control the operations of a baseball game, including a pitch clock.
+b.	U.S. Pub. 2023/0158391 A1 – This reference teaches a signaling system for use on a baseball field.
+c.	U.S. Pub. 2005/0064961 A1 – This reference teaches assigning a pitcher a penalty when the pitcher fails to deliver a pitch within a predetermined amount of time, wherein the time is dependent on whether there are runners on base, and further, assigning a penalty to the batter for failing to return to the batter’s box within a preset reasonable amount of time.
+d.	MLB, “Pitch Timer (2023 rule change)”, pp. 1-2, December 18, 2022 – This reference teaches the MLB 2023 rule changes.
+e.	MLB, “Warmup Pitches”, p. 1, January 19, 2021 – This reference teaches the MLB rules with respect to time between innings and between batters.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ALYSSA N BRANDLEY whose telephone number is (571)272-4280. The examiner can normally be reached M-F: 8:30am-5:00pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Dmitry Suhol, can be reached on (571)272-4430. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/ALYSSA N BRANDLEY/Examiner, Art Unit 3715
+/Jay Trent Liddle/Primary Examiner, Art Unit 3715

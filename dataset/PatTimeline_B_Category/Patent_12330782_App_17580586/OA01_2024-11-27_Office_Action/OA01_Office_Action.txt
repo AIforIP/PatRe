@@ -1,0 +1,39 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+DETAILED CORRESPONDENCE
+This is the first Office Action on the merits of Application 17/580,586 filed on 1/20/22. Claims 1-20 are pending.
+Claim Objections
+Claims 1-20 are objected to because of the following informalities:
+Claim 1
+Line 4: “a motor, configured” should be amended as -- a motor configured --.
+Line 5: “controller, configured” should be amended as -- controller configured --.
+Claim 2
+Line 1: “field, and” should be amended as -- field and --.
+Claim 6
+Line 1: “symmetry, and” should be amended as -- symmetry and --.
+Claim 11
+Line 3: “a motor a” should be amended as -- a motor --.
+Claim 15
+Line 1: “element withy” should be amended as -- element with --.
+Claim 17
+Line 1: “surface, and” should be amended as -- surface and --.
+Claim 18
+Line 6: “controller, configured” should be amended as -- controller configured --.
+Appropriate correction is required.
+Allowable Subject Matter
+Claims 1-20 would be allowable if rewritten to overcome the objections stated above.
+The following is a statement of reasons for the indication of allowable subject matter: The prior art of record fails to show or render obvious an automated controller, configured to generate the control signal, selectively dependent on feedback from the field sensor, to synchronize a phase of the mechanical response of the motor with a phase of the relative rotation of the exterior surface in combination with the remaining limitations of the claims.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+Davidson ‘002 teaches an aircraft with rotating outer shell.
+Epperson Jr ‘150 teaches a gyroscopically steerable bullet.
+Larkin ‘216 teaches a segmented projectile with de-spun joint.
+This application is in condition for allowance except for the following formal matters:
+See claim objections stated above.
+Prosecution on the merits is closed in accordance with the practice under Ex parte Quayle, 25 USPQ 74, 453 O.G. 213, (Comm’r Pat. 1935).
+A shortened statutory period for reply to this action is set to expire TWO (2) MONTHS from the mailing date of this letter. Extensions of time may be granted under  37 CFR 1.136 but in no case can any extension carry the date for reply to this Office action beyond the maximum period of SIX MONTHS set by statute (35 U.S.C. 133).
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to HUAN LE whose telephone number is (571)270-3122.  The examiner can normally be reached on Monday - Friday 9:00am - 5:00pm PST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Ernesto Suarez can be reached on 571-270-5565.  The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/HUAN LE/Primary Examiner, Art Unit 3655

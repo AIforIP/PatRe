@@ -1,0 +1,51 @@
+<html><head></head><body><h3>Date: 2024-11-07</h3>
+
+<h1><u>LISTING OF CLAIMS</u></h1>
+<br>
+<br>
+1.   (Currently amended) A method for controlling a vehicle, the method comprising:<br>
+<u>automatically </u>determining that one or more surrounding vehicles demonstrates threatening behavior <u>by</u><u>;</u><u>- ac</u><u>q</u><u>uiring, with one or more sensors mounted on the vehicle, information </u><u>reg</u><u>ardin</u><u>g</u><u></u><del>detecting that </del>a first surrounding vehicle directly in front of the vehicle,<u></u><u>and</u><br>
+<u>- </u><u></u><u>interpreting the information, with a controller, to detect that the first surrounding vehicle slows</u> down in an absence of a traffic related reason to slow down <u>in conjunction with detecting, based on further information from the one or more sensors, that </u><del>and </del>a person approaches the vehicle;and upon determining that the one or more surrounding vehicles demonstrates threatening behavior, <u>the controller automatically </u>controlling the vehicle to perform one or more threat evasive actions.<br>
+<br>
+2.   (Currently amended) The method of claim 1, wherein <u>interpretin</u><u>g</u><del> determining that the one or more surrounding vehicles demonstrates threatening behavior is based on: information regarding surrounding vehicles acquired by one or more external sensors mounted on the vehicle; and</del><del></del><del>interpretation of t</del>he information<u> includes establishing </u><del>regarding surrounding vehicles to provide </del>one or more threat determining metrics associated with the one or more surrounding vehicles.<br>
+<br>
+3.   (Previously presented) The method of claim 2, wherein the one or more threat determining metrics associated with the one or more surrounding vehicles comprise one or more of a speed of the one or more surrounding vehicles, a velocity of the one or more surrounding vehicles, a difference between speed of the one or more surrounding vehicles and a speed of the controlled vehicle, a difference between velocity of the one or more surrounding vehicles and a velocity of the controlled vehicle, a distance between the one or more surrounding vehicles and the controlled vehicle, or<br>
+<br>
+a trend of the distance between the one or more surrounding vehicles and the controlled vehicle.<br>
+<br>
+4.   (Previously presented) The method of claim 1, wherein determining that one or more surrounding vehicles demonstrates threatening behavior further comprises detecting that a second surrounding vehicle blocks a route of the vehicle alternative to forward progression.<br>
+<br>
+5.   (Previously presented) The method of claim 4, wherein the second surrounding vehicle that blocks the route of the vehicle alternative to forward progression is in an adjacent lane to the vehicle and slows down in association with the first surrounding vehicle.<br>
+<br>
+6.   (Previously presented) The method of claim 1, wherein controlling the vehicle to perform one or more threat evasive actions comprises controlling the vehicle to perform one or more of:<br>
+activating a visual deterrent maneuver;<br>
+activating an audial deterrent maneuver;<br>
+activating an intrusion mitigating maneuver;<br>
+disabling a collision avoidance system;<br>
+taking an available escape route;<br>
+initiating an emergency call; or initiating a call to a remote controller.<br>
+<br>
+7.   (Original) A non-transitory computer readable medium storing a computer program comprising program instructions, the computer program being loadable into a data processing unit and configured to cause execution of the method according to claim 1 when the computer program is run by the data processing unit.<br>
+<br>
+8.   (Cancelled)<br>
+<br>
+9.   (Currently amended) An apparatus for controlling a vehicle, the apparatus comprising controlling circuitry configured to<del>;</del><del> cause:</del><br>
+<u>receive information regarding surroundings of the vehicle from one or more sensors mounted on the vehicle automatically determine </u><del>determination </del>that one or more surrounding vehicles demonstrates threatening behavior <u>by</u><u>;</u><u>- interpreting the received information related to </u><del>detecting that </del>a first surrounding vehicle <u>located </u>directly in front of the vehicle <u>to detect that the first surrounding vehicle slows</u> down in an absence of a traffic related reason to slow down <u>in conjunction with detecting, based on further information from the one or more sensors, that </u><del>and </del>a person approaches the vehicle; and<br>
+responsive to the determination that the one or more surrounding vehicles demonstrates demonstrate threatening behavior, <u>automatically </u>control of the vehicle to perform one or more threat evasive actions.<br>
+<br>
+10.  (Currently amended) The apparatus of claim 9, wherein the controlling circuitry is further configured to <u>interpret </u><del>cause: acquisition of information regarding surrounding vehicles from one or more external sensors mounted on the vehicle; and interpretation of t</del>he information regarding surrounding vehicles to <u>establish </u><del>provide </del>one or more threat determining metrics associated with the one or more surrounding vehicles, wherein determination of threatening behavior is based on the one or more threat determining metrics.<br>
+<br>
+11.  (Previously presented) The apparatus of claim 10, wherein the one or more threat determining metrics comprise one or more of a speed of the one or more surrounding vehicles, a velocity of the one or more surrounding vehicles, a difference between speed of the one or more surrounding vehicles and a speed of the controlled vehicle, a difference between velocity of the one or more surrounding vehicles and a velocity of the controlled vehicle, a distance between the one or more surrounding vehicles and the controlled vehicle, or a trend of the distance between the one or more surrounding vehicles and the controlled vehicle.<br>
+<br>
+12.  (Currently amended) <u>The apparatus of </u><u>claim 9, </u><u>further </u><del>A system for controlling a vehicle, the system c</del>omprising:<br>
+<u>the </u>one or more <del>external </del><u>sensors, the one or more sensors bein</u><u>g</u><u> externally</u> mountable on the vehicle<del> and configured to acquire information regarding one or more surrounding vehicles; and</del><br>
+<del>the apparatus of</del><del> claim 9, </del><del>wherein the determination is made based on the controlling circuitry interpreting the information</del>.<br>
+<br>
+13.  (Currently amended) The <u>apparatus of </u><u>claim 9</u><u>,</u><u></u><del>system of claim 12,</del> wherein the one or more threat evasive actions comprise one or more of:<br>
+activating a visual deterrent maneuver;<br>
+activating an audial deterrent maneuver;<br>
+activating an intrusion mitigating maneuver;<br>
+disabling a collision avoidance system;<br>
+taking an available escape route;<br>
+initiating an emergency call; or initiating a call to a remote controller.
+</body></html>

@@ -1,0 +1,126 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Election/Restrictions
+Applicant's arguments filed 11th April 2024, with respect to requirement for restriction/election have been fully considered and are persuasive. The restriction requirement between inventions I and II, as set forth in the Office action mailed on 6th March 2024, is hereby withdrawn.
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 1-20 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Claims 1, 12 and 20 recites the limitation “a cryogenic tank supplying the propulsion system” which renders the claim indefinite as it is unclear what is being supplied by the cryogenic tank to the propulsion system. For the examination purpose the limitation is interpreted as “a cryogenic tank supplying cryogenic fuel to the propulsion system.
+Claims not addressed above are rejected due to their dependency on rejected base claim.
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+Claim(s) 1-6 and 8-11 is/are rejected under 35 U.S.C. 103 as being unpatentable over Maier (US 2,545,481) in view of Hernaiz Lopez et al. (US 2023/0035247) and Strange et al. (US 2017/0130900).
+Regarding claims 1, 3 and 6, Maier ‘481 teaches (figures 1-6) an aircraft (Col. 1 Lines 15-16; the tank is for an aircraft) comprising:
+an airframe configured to transmit aircraft flight loads (airframe forms structure of an aircraft and transmits flight loads),
+a propulsion system (Col. 1 Lines 15-16; aircraft is powered by propulsion system), and
+a tank supplying fuel to the propulsion system (Col. 1 Lines 15-16, 54-56; fuel tank supplies fuel to run the propulsion system of an aircraft), the tank comprising
+an outer vessel/ sections (10-12) (Col. 1 Lines 31-34), the outer vessel/sections (10-12) comprising
+a mounting member/eyed hangers (18) for structurally connecting the outer vessel of the tank to the airframe, the mounting member/eyed hangers (18) permitting transfer of static and/or dynamic loads between the airframe and the outer vessel (Col. 1 Lines 46-52; mounting member/eyed hangers connects the airframe and the outer vessel which enables load transfer between the airframe and the outer vessel), and
+wherein the mounting member/eyed hanger includes a flange extending outwardly from and longitudinally along the outer vessel (clearly seen in figure 1) (Col. Lines 46-52)
+but it is silent about the aircraft comprising:
+a tank as a cryogenic tank, the cryogenic tank comprising
+an inner vessel defining a closed volume configured to carry a cryogenic fuel
+an outer vessel enclosing the inner vessel,
+a vessel mount structurally connecting the inner vessel to the outer vessel,
+wherein the outer vessel comprises a first panel and a second panel, the first panel comprising an outwardly-extending flange portion that overlaps with a corresponding region of the second panel to thereby join the first panel and the second panel and provide the flange extending outwardly from the outer vessel.
+Hernaiz Lopez et al. ‘247 teaches (figures 1-4) a hydrogen/cryogenic tank (100) for an aircraft comprising an inner vessel (110) defining a closed volume and configured to carry hydrogen/cryogenic fuel, an outer vessel/tank enclosing the inner vessel (110), a vessel mount (clearly shown in the figure below) structurally connecting the inner vessel to the outer vessel, wherein the outer vessel/tank comprises a first panel/outer jacket (130a) and a second panel/outer jacket dome (120a), the first panel/outer jacket (130a) comprising an outwardly-extending flange portion/L-shaped end (135) that overlaps with a corresponding region/L shaped end (125) of the second panel/outer jacket dome to thereby join the first panel/outer jacket (130a) and the second panel/outer jacket dome (120a) and provide the flange extending outwardly from the outer vessel (clearly seen in figure 1) (Para 0010, 0033-0037).
+PNG
+media_image1.png
+398
+612
+media_image1.png
+Greyscale
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified Maier ‘481 to incorporate the teachings of Hernaiz Lopez et al. ‘247 to configure the aircraft comprising:
+a tank as a cryogenic tank, the cryogenic tank comprising
+an inner vessel defining a closed volume configured to carry a cryogenic fuel
+an outer vessel enclosing the inner vessel,
+a vessel mount structurally connecting the inner vessel to the outer vessel,
+wherein the outer vessel comprises a first panel and a second panel, the first panel comprising an outwardly-extending flange portion that overlaps with a corresponding region of the second panel to thereby join the first panel and the second panel and provide the flange extending outwardly from the outer vessel.
+One of ordinary skill in art would recognize that doing so would enable to securely carry cryogenic fuel and mount the cryogenic tank on an aircraft.
+Modified Maier ‘481 is silent about the aircraft comprising:
+the cryogenic tank comprising:
+an outer vessel enclosing the inner vessel to define an insulating volume therebetween, the insulating volume comprising a vacuum and
+a vessel mount configured to isolate the inner vessel from said static and/or dynamic loads carried by the outer vessel.
+Strange et al. ‘900 teaches (figure 3) a cryogenic storage vessel/tank (100) comprising:
+an outer vessel (130) enclosing the inner vessel (110) to define an insulating volume/space (140) therebetween, the insulating volume/space (140) comprising a vacuum (Para 0022), and
+a vessel mount/ support structure (170) constrains radial and rotational movement of inner vessel (110) with respect to outer vessel i.e., isolate the inner vessel from static and/or dynamic loads carried by the outer vessel (130) (Para 0022)
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Maier ‘481 to incorporate the teachings of Strange et al. ‘900 to configure the aircraft comprising:
+the cryogenic tank comprising:
+an outer vessel enclosing the inner vessel to define an insulating volume therebetween, the insulating volume comprising a vacuum and
+a vessel mount configured to isolate the inner vessel from said static and/or dynamic loads carried by the outer vessel.
+One of ordinary skill in art would recognize that doing so would maintain temperature of the cryogenic fuels and stability of the cryogenic fuels by preventing loads to be transferred to the inner vessel.
+Regarding claim 2, modified Maier ‘481 teaches (figures 1-6) the aircraft,
+wherein the mounting member/flange comprises two longitudinally-spaced mounting locations for connecting the outer vessel to the airframe (clearly seen in figure 1) and
+wherein the mounting member/flange is configured to transfer the static and/or dynamic loads between the two  longitudinally -spaced mounting locations (mounting locations are within mounting members which are connected to each other which enables load transfer between two longitudinally spaced mounting locations).
+Regarding claim 4, modified Maier ‘481 teaches (figures 1-6) the aircraft,
+wherein the flange includes a fastener hole at a mounting location, the fastener hole being configured to accommodate a fastener (410) to connect the cryogenic tank to the airframe (clearly seen in figure 4 of Hernaiz Lopez et al. ‘247) (Para 0043; mounting locations are within mounting members/flanges; fastener hole accommodates fastener) and
+wherein the fastener hole extends through the flange and does not penetrate the insulation volume (clearly seen in figure 4 of Hernaiz Lopez et al. ‘247).
+Regarding claim 5, modified Maier ‘481 teaches (figures 1-6) the aircraft, wherein the flange is formed integrally with a panel of the outer vessel (clearly seen in figure 4 of Hernaiz Lopez et al. ‘247).
+Regarding claim 8, modified Maier ‘481 teaches (figures 1-6) the aircraft wherein the outer vessel has an outer surface that forms an outer surface of the airframe (portion of the outer vessel exposed to outside environment is an outer surface which also forms the outer surface of the airframe).
+Regarding claim 9, modified Maier ‘481 teaches (figures 1-6) the aircraft
+wherein the outer vessel/tank comprises a panel/outer jacket (130a) and a reinforcing member/elements (140) mounted on the panel (Hernaiz Lopez et al. ‘247 Para (0036, 0041), and
+wherein the reinforcing member/element (140) projects inwardly from the panel/outer jacket (130a) of the outer vessel/tank into the insulating volume (clearly seen in figure 2 of Hernaiz Lopez et al. ‘247).
+Regarding claim 10, modified Maier ‘481 teaches (figures 1-6) the aircraft wherein the vessel mount/support structure (170) comprises a floating mount which permits relative movement between the inner vessel and the outer vessel (as modified by Strange et al. ‘900 Para 0022; vessel mount/support structure (170) is a floating mount as it allows for axial movement of the inner vessel along longitudinal axis with respect to the outer vessel).
+Regarding claim 11, modified Maier ‘481 teaches (figures 1-6) the aircraft wherein the floating mount comprises
+a first mounting member/support bracket (200) connected to the inner vessel (110) (as modified by Strange et al. ‘900 Para 0022) and
+a second mounting member/support bracket (210) connected to the outer vessel (130) (as modified by Strange et al. ‘900 Para 0022),
+the first mounting member/support bracket (200) and the second mounting member/support bracket (210) being interconnected to permit relative linear movement therebetween (as modified by Strange et al. ‘900 Para 0022).
+Claim(s) 12 and 17 is/are rejected under 35 U.S.C. 103 as being unpatentable over Hernaiz Lopez et al. (US 2023/0035247) in view of Strange et al. (US 2017/0130900).
+Regarding claim 12, Hernaiz Lopez et al. ‘247 teaches (figures 1-4) a cryogenic/hydrogen tank (100) for supplying cryogenic fuel to a propulsion system of a vehicle, the cryogenic tank comprising:
+an inner vessel (110) defining a closed volume configured to carry a cryogenic fuel/hydrogen (clearly seen in figure 1) (Para 0033);
+an outer vessel/tank enclosing the inner vessel (110) (Para 0034);
+the outer vessel/tank comprising:
+a first panel/outer jacket (130a) comprising an outwardly-extending flange portion/ L shaped end (135) (Para 0036-0037);
+the second panel/outer jacket dome (120a) with a corresponding region/L shaped end (125) which overlaps with the outwardly extending flange portion/ L shaped end (135) to thereby join the first panel/outer jacket (130a) and the second panel/outer jacket dome (120a) and provide a flange extending outwardly from the outer vessel (clearly seen in figure 1) (Para 0035-0037);
+wherein
+the outwardly extending flange extends longitudinally along the outer vessel and permits transfer of static and/or dynamic loads between the vehicle and the outer vessel (outwardly extending flange circles the tank, thus extends in the longitudinal direction/into the page in figure 1; the outwardly extending flange comes in contact/connects with the vehicle which permits transferring of static and/or dynamic loads between the vehicle and the outer vessel);
+but it is silent about the cryogenic tank comprising:
+an outer vessel enclosing inner vessel to define an insulating volume therebetween,
+the insulating volume comprising a vacuum, and
+the cryogenic tank further comprising a vessel mounting structure connecting the inner vessel to the outer vessel, and configured to avoid transfer of said static and/or dynamic loads from the outer vessel to the inner vessel.
+Strange et al. ‘900 teaches (figure 3) a cryogenic storage vessel/tank (100) comprising:
+an outer vessel (130) enclosing the inner vessel (110) to define an insulating volume/space (140) therebetween, the insulating volume/space (140) comprising a vacuum (Para 0022), and
+the cryogenic storage vessel/ tank (100) further comprising a vessel mounting structure/ support structure (170) which connects the inner vessel (110) to the outer vessel (130) and constrains radial and rotational movement of inner vessel (110) with respect to outer vessel i.e., avoid transfer of said static and/or dynamic loads from the outer vessel to the inner vessel (Para 0022).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified Maier ‘481 to incorporate the teachings of Strange et al. ‘900 to configure the cryogenic tank comprising:
+an outer vessel enclosing inner vessel to define an insulating volume therebetween,
+the insulating volume comprising a vacuum, and
+the cryogenic tank further comprising a vessel mounting structure connecting the inner vessel to the outer vessel, and configured to avoid transfer of said static and/or dynamic loads from the outer vessel to the inner vessel.
+One of ordinary skill in art would recognize that doing so would maintain temperature of the cryogenic fuels and stability of the cryogenic fuels by preventing loads to be transferred to the inner vessel.
+Regarding claim 17, modified Hernaiz Lopez et al. ‘247 teaches (figures 1-4) the cryogenic tank wherein a reinforcing member/element (140) projects inwardly from the first panel/outer jacket (130a) of the outer vessel into the insulating volume (clearly seen in figure 2) (Para 0040).
+Claim(s) 18-19 is/are rejected under 35 U.S.C. 103 as being unpatentable over Hernaiz Lopez et al. (US 2023/0035247) and Strange et al. (US 2017/0130900) as applied to claim 12 above, and further in view of Maier (US 2,545,481).
+Regarding claim 18, modified Hernaiz Lopez et al. ‘247 teaches (figures 1-4) the cryogenic tank wherein the flange includes a fastener hole, the fastener hole being configured to accommodate a fastener (410) (Para 0043; fastener hole accommodates fastener), and
+wherein the fastener hole extends through the flange and does not penetrate the insulating volume (clearly seen in figure 4),
+but it is silent about the cryogenic tank wherein the flange includes a fastener hole at a mounting location, the fastener hole being configured to accommodate a fastener to connect the cryogenic tank to the vehicle.
+Maier ‘481 teaches (figures 1-6) an aircraft with a tank comprising a metallic lower section (10), an upper metallic section (11) and a pair of eyed hangers/flange (18s) to attach the tank to the aircraft (Col. 1 Lines 15-16, 31-32, 46-52; mounting location is within a pair of eyed hangers).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Hernaiz Lopez et al. ‘247 to incorporate the teachings of Maier ‘481 to configure the cryogenic tank wherein the flange includes a fastener hole at a mounting location, the fastener hole being configured to accommodate a fastener to connect the cryogenic tank to the vehicle.
+One of ordinary skill in art would recognize that doing so would mount the cryogenic tank to the vehicle.
+Regarding claim 19, modified Hernaiz Lopez et al. ‘247 teaches (figures 1-4) an aircraft (Para 0002; the hydrogen tank is for an aircraft) comprising
+an airframe configured to transmit aircraft flight loads (airframe forms structure of an aircraft and transmits flight loads),
+a propulsion system (aircraft is powered by propulsion system), and
+the cryogenic tank of claim 12
+but it is silent about the aircraft comprising
+the cryogenic tank for supplying cryogenic fuel to the propulsion system.
+Maier ‘481 teaches (figures 1-6) a tank adapted to the requirements of jet-propelled aircraft comprising a system of fuel delivery (Col. 1 Lines 15-16, 54-55; fuel tank supplies fuel to run the propulsion system of an aircraft).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Hernaiz Lopez et al. ‘247 to incorporate the teachings of Maier ‘481 to configure the aircraft comprising
+the cryogenic tank for supplying cryogenic fuel to the propulsion system.
+One of ordinary skill in art would recognize that doing so would provide fuel to run the propulsion system.
+Allowable Subject Matter
+Claims 7 and 13-16 would be allowable if rewritten to overcome the rejection(s) under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), 2nd paragraph, set forth in this Office action and to include all of the limitations of the base claim and any intervening claims.
+Claim 20 would be allowable if rewritten or amended to overcome the rejection(s) under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), 2nd paragraph, set forth in this Office action.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ASHESH DANGOL whose telephone number is (303)297-4455. The examiner can normally be reached Monday-Friday 0730-0530 MT.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joshua J Michener can be reached on (571) 272-1467. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/ASHESH DANGOL/Examiner, Art Unit 3642
+/Richard Green/Primary Examiner, Art Unit 3647

@@ -1,0 +1,53 @@
+<html><head></head><body><h3>Date: 2025-02-28</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS:</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in this application:</p>
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<br>
+<br>
+1-11 (Canceled).210<br>
+<br>
+<br>
+12. (Currently Amended) A method for an at least partially automated guidance of a motor vehicle within an infrastructure, comprising the following steps:receiving first instruction signals by a first server of a first operator of the infrastructure, the <u>fir</u><u>st</u><u></u>instruction signals representing an instruction of an instruction giver for the at least partially automated guidance of the motor vehicle within the infrastructure;<br>
+a first checking by the first server of whether the instruction is able to be executed;<br>
+transmitting of second instruction signals by the first server to a second server of a platform for the at least partially automated guidance of a motor vehicle within the infrastructure of a second operator in an event of a positive first check, the second instruction signals representing the <u>second </u>instruction for the at least partially automated guidance of the motor vehicle within the infrastructure;<br>
+a second checking by the second server of whether the instruction is able to be executed;<br>
+generating control signals for the at least partially automated control of a lateral and/or longitudinal guidance of the motor vehicle based on the instruction by the platform in an event of a positive second check, <del>in such a way that </del><u>wherein </u>the instruction is executed in an at least partially automated control of the lateral and/or longitudinal guidance of the motor vehicle; and<br>
+outputting the generated control signals.<br>
+<br>
+13. (Previously Presented) The method as recited in claim 12, wherein first certificate signals, which represent a first digital certificate, are received by the first server, the first check being<br>
+<br>
+carried out based on the first digital certificate, the first digital certificate including a first data set, which includes one or more of the following data items: i) specification data of the motor vehicle which represent a technical specification regarding an at least partially automated guidance of the motor vehicle, and/or ii) identification data which represent an identification of the motor vehicle and/or of a driver of the motor vehicle and/or of the instruction giver.<br>
+<br>
+14. (Previously Presented) The method as recited in claim 13, wherein in the event of the positive first check, the first digital certificate is transmitted by the first server to the second server, so that the second server receives the first digital certificate, the second checking being carried out based on the first digital certificate.<br>
+<br>
+15. (Previously Presented) The method as recited in claim 14, wherein second certificate signals, which represent a second digital certificate, are received by the second server, the second check being carried out based on the second digital certificate, the second digital certificate including a second data set, which includes one or more of the following data items: i) specification data of the motor vehicle which represent a technical specification regarding an at least partially automated guidance of the motor vehicle, and/or ii) identification data, which represent an identification of the motor vehicle and/or of a driver of the motor vehicle and/or of the instruction giver.<br>
+<br>
+16. (Previously Presented) The method as recited in claim 12, wherein: i) the first checking includes a check of whether the instruction giver has made payments required for the at least partially automated guidance of the motor vehicle, and/or ii) it is ensured that payments required for the at least partially automated guidance of the motor vehicle are being made.<br>
+<br>
+17. (Previously Presented) The method as recited in claim 12, wherein: i) the second checking comprises a check of whether the first operator has made payments required for the at least partially automated guidance of the motor vehicle, and/or ii) it is ensured that payments required for the at least partially automated guidance of the motor vehicle are being made.<br>
+<br>
+<br>
+18. (Previously Presented) The method as recited in claim 12, wherein the second checking includes a check of whether the instruction transmitted by the first server is signed by a digital signature of the first operator.<br>
+<br>
+19. (Previously Presented) The method as recited in claim 12, wherein the infrastructure is an element selected from the following group of infrastructure elements: parking facility, a parking garage, a tunnel, a bridge, a construction site, a junction, a four-way or three-way junction, an entrance ramp of a freeway, a toll station.<br>
+<br>
+20. (Currently Amended) A system for the at least partially automated guidance of a motor vehicle within an infrastructure, comprising:a first server; and<br>
+a platform;<br>
+wherein the system is configured for an at least partially automated guidance of a motor vehicle within an infrastructure, the system configured to:<br>
+receive first instruction signals by the first server of a first operator of the infrastructure, the <u>fir</u><u>st</u><u></u>instruction signals representing an instruction of an instruction giver for the at least partially automated guidance of the motor vehicle within the infrastructure,<br>
+a first check by the first server of whether the instruction is able to be executed,<br>
+transmit second instruction signals by the first server to a second server of the platform for the at least partially automated guidance of a motor vehicle within the infrastructure of a second operator in an event of a positive first check, the second instruction signals representing the instruction for the at least partially automated guidance of the motor vehicle within the infrastructure,<br>
+a second check by the second server of whether the instruction is able to be executed,<br>
+generate control signals for the at least partially automated control of a lateral and/or longitudinal guidance of the motor vehicle based on the instruction by the platform in an event of a positive second check, <del>in such a </del><del>w</del><del>ay that </del><u>wherein</u> the instruction is executed in an at least partially automated control of the lateral<br>
+<br>
+and/or longitudinal guidance of the motor vehicle; and output the generated control signals.<br>
+<br>
+21. (Currently Amended) A non-transitory machine-readable storage medium on which is stored a computer program for an at least partially automated guidance of a motor vehicle within an infrastructure, the computer program, when executed by a computer, causing the computer to perform the following steps:receiving first instruction signals by a first server of a first operator of the infrastructure, the <u>fir</u><u>st</u><u></u>instruction signals representing an instruction of an instruction giver for the at least partially automated guidance of the motor vehicle within the infrastructure;<br>
+a first checking by the first server of whether the instruction is able to be executed;<br>
+transmitting of second instruction signals by the first server to a second server of a platform for the at least partially automated guidance of a motor vehicle within the infrastructure of a second operator in an event of a positive first check, the second instruction signals representing the instruction for the at least partially automated guidance of the motor vehicle within the infrastructure;<br>
+a second checking by the second server of whether the instruction is able to be executed;<br>
+generating control signals for the at least partially automated control of a lateral and/or longitudinal guidance of the motor vehicle based on the instruction by the platform in an event of a positive second check, <del>in such a </del><del>w</del><del>ay that </del><u>wherein </u>the instruction is executed in an at least partially automated control of the lateral and/or longitudinal guidance of the motor vehicle; and<br>
+outputting the generated control signals.<br>
+
+</body></html>

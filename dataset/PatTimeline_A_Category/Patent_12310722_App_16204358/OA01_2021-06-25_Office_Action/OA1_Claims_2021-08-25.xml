@@ -1,0 +1,148 @@
+<html><head></head><body><h3>Date: 2021-08-25</h3>
+<p><u>LISTING OF THE CLAIMS</u> The following listing of claims replaces all previous listings and versions of claims in this application.</p>
+<br>
+
+<br>
+1. (Original) A method of adjusting analyte sensor data, comprising: 
+<br>
+collecting sensor data with an analyte sensor at least partially inserted into a human body; 
+<br>
+adjusting, with processing circuitry, the sensor data to compensate for at least a first duration of time, wherein the first duration of time is one of a shelf duration or a wear duration; and 
+<br>
+outputting an analyte level representative of the adjusted sensor data. 
+
+<br>
+
+<br>
+2. (Cancelled)
+
+<br>
+
+<br>
+3. (Original) The method of claim 1, wherein the first duration of time is the shelf duration, the method further comprising determining the shelf duration with processing circuitry.
+
+<br>
+
+<br>
+4. (Original) The method of claim 3, wherein the shelf duration is representative of a period of time after the analyte sensor was manufactured and before the analyte sensor was inserted into the human body.
+
+<br>
+
+<br>
+5. (Original) The method of claim 3, wherein the shelf duration includes the entire time the analyte sensor was in a packaged state prior to insertion into the human body.
+
+<br>
+
+<br>
+6. (Original) The method of claim 5, wherein a wait period is implemented such that the shelf duration is representative of a time period less than the entire time the analyte sensor was in a packaged state prior to insertion.
+
+<br>
+
+<br>
+7. (Original) The method of claim 3, wherein the adjusted sensor data is different from the collected sensor data.
+
+<br>
+
+8. (Original) The method of claim 3, wherein the analyte sensor has a sensitivity at least 
+  partially represented by a slope and/or an intercept, and wherein adjusting, with processing circuitry, the sensor data to compensate for the shelf duration comprises adjusting at least one of the slope and the intercept.
+
+<br>
+
+<br>
+9. (Cancelled)
+
+<br>
+
+<br>
+10. (Original) The method of claim 3, further comprising collecting temperature data representative of a plurality of temperatures to which the analyte sensor was subjected during the shelf duration.
+
+<br>
+
+<br>
+11. (Original) The method of claim 10, further comprising adjusting, with processing circuitry, the sensor data to compensate for the shelf duration and the plurality of temperatures.
+
+<br>
+
+<br>
+12. (Original) The method of claim 1, wherein the first duration of time is the wear duration, the method further comprising determining the wear duration with processing circuitry.
+
+<br>
+
+<br>
+13. (Original) The method of claim 12, wherein the wear duration is representative of a period of time during which the analyte sensor is at least partially inserted into the human body.
+
+<br>
+
+<br>
+14. (Original) The method of claim 12, wherein the wear duration begins upon insertion of the analyte sensor into the human body.
+
+<br>
+
+<br>
+15. (Original) The method of claim 12, wherein a wait period is implemented such that the wear duration begins a period of time period after insertion of the analyte sensor into the human body.
+
+<br>
+
+<br>
+16. (Original) The method of claim 12, wherein a sensor control device comprises the analyte sensor and sensor electronics, and wherein the wear duration begins upon activation of the sensor control device.
+
+<br>
+
+<br>
+17-22. (Cancelled)
+
+1821
+<br>
+<br>
+
+<br>
+23. (Original) The method of claim 3, wherein adjusting, with processing circuitry, the sensor data to compensate for the shelf duration comprises: 
+
+  adjusting, with processing circuitry, the sensor data with a function comprising an adjustment parameter and a value representative of time.
+
+<br>
+
+<br>
+24. (Original) The method of claim 23, wherein the adjustment parameter corresponds to a code selected from one of a plurality of codes, the method further comprising: 
+<br>
+decoding, with processing circuitry, the code to determine the adjustment parameter. 
+
+<br>
+
+<br>
+25. (Original) The method of claim 23, wherein the adjustment parameter corresponds to a code selected from one of a plurality of codes, the method further comprising: 
+<br>
+communicating the code from a sensor control device to a reader device; 
+<br>
+decoding, with processing circuitry of the reader device, the code to determine the adjustment parameter; and 
+<br>
+adjusting, with processing circuitry of the reader device, the sensor data with the function comprising the adjustment parameter and the value representative of time. 
+
+<br>
+
+<br>
+26. (Original) The method of claim 23, wherein the value representative of time is representative of a shelf duration.
+
+<br>
+
+<br>
+27. (Original) The method of claim 23, wherein the value representative of time is representative of a shelf duration less a wait period.
+
+<br>
+
+<br>
+28. (Original) The method of claim 23, wherein the adjustment factor is stored in memory in an unencoded form, the method further comprising: 
+<br>
+adjusting, with processing circuitry, the sensor data without decoding the adjustment factor. 
+
+<br>
+
+<br>
+29-73. (Cancelled). 
+<br>
+3072
+<br>
+2
+3
+4
+</body></html>

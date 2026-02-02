@@ -1,0 +1,92 @@
+<html><head></head><body>18319315
+
+   What is claimed is:
+   
+
+<br>
+
+1. A traveling support device that is applied to a vehicle equipped with an imaging device that captures an image of a surrounding of an own vehicle, and performs a traveling support control for the own vehicle based on the image captured by the imaging device, the traveling support device comprising:
+a recognizer that recognizes, based on the image, a front object located ahead of the own vehicle in a direction of travel and a boundary portion located on each of left and right sides of a road on which the own vehicle is traveling;
+an angular width calculator that calculates an object point and a boundary point on one line extending along a width direction of the own vehicle in the image and calculates, for the object point and the boundary point, an angular width based on an origin defined in the image, the object point indicating a predetermined portion of the front object, the boundary point being on the boundary portion;
+an obtainer that obtains distance information indicating a distance to the predetermined portion of the front object;
+a lateral distance calculator that calculates, based on the angular width calculated by the angular width calculator and the distance information, a lateral distance between the predetermined portion of the front object and the boundary portion along the width of the own vehicle; and
+a controller that performs the traveling support control to the front object based on the lateral distance, wherein
+the recognizer recognizes, as the front object, another vehicle traveling in an adjacent lane that is adjacent to an own lane in which the own vehicle is traveling,
+the angular width calculator calculates, as the angular width, a first angular width at a position of an own-vehicle-end lateral end portion of a rear surface of the other vehicle recognized by the recognizer and a second angular width at a position of a front-end portion of an own-vehicle-end side surface of the other vehicle,
+the lateral distance calculator calculates, as the lateral distance, a first lateral distance corresponding to the first angular width of the other vehicle and a second lateral distance corresponding to the second angular width of the other vehicle, and
+the controller performs the traveling support control for the other vehicle based on the first lateral distance and the second lateral distance to the other vehicle.
+<br>
+
+2. The traveling support device according to claim 1, wherein
+the recognizer recognizes, as the front object, an oncoming vehicle traveling from ahead of the own vehicle,
+the angular width calculator calculates, as the angular width, a first angular width at a position of an own-vehicle-end lateral end portion of a front surface of the oncoming vehicle recognized by the recognizer and a second angular width at a position of a rear end portion of an own-vehicle-end side surface of the oncoming vehicle,
+the lateral distance calculator calculates, as the lateral distance, a first lateral distance corresponding to the first angular width of the oncoming vehicle and a second lateral distance corresponding to the second angular width of the oncoming vehicle, and
+the controller performs the traveling support control for the oncoming vehicle based on the first lateral distance and the second lateral distance to the oncoming vehicle.
+<br>
+
+3. A traveling support device that is applied to a vehicle equipped with an imaging device that captures an image of a surrounding of an own vehicle, and performs a traveling support control for the own vehicle based on the image captured by the imaging device, the traveling support device comprising:
+a recognizer that recognizes, based on the image, a front object located ahead of the own vehicle in a direction of travel and a boundary portion located on each of left and right sides of a road on which the own vehicle is traveling;
+an angular width calculator that calculates an object point and a boundary point on one line extending along a width direction of the own vehicle in the image and calculates, for the object point and the boundary point, an angular width based on an origin defined in the image, the object point indicating a predetermined portion of the front object, the boundary point being on the boundary portion;
+an obtainer that obtains distance information indicating a distance to the predetermined portion of the front object;
+a lateral distance calculator that calculates, based on the angular width calculated by the angular width calculator and the distance information, a lateral distance between the predetermined portion of the front object and the boundary portion along the width of the own vehicle; and
+a controller that performs the traveling support control to the front object based on the lateral distance, wherein
+the recognizer recognizes, as the front object, an oncoming vehicle traveling from ahead of the own vehicle,
+the angular width calculator calculates, as the angular width, a first angular width at a position of an own-vehicle-end lateral end portion of a front surface of the oncoming vehicle recognized by the recognizer and a second angular width at a position of a rear end portion of an own-vehicle-end side surface of the oncoming vehicle,
+the lateral distance calculator calculates, as the lateral distance, a first lateral distance corresponding to the first angular width of the oncoming vehicle and a second lateral distance corresponding to the second angular width of the oncoming vehicle, and
+the controller performs the traveling support control for the oncoming vehicle based on the first lateral distance and the second lateral distance to the oncoming vehicle.
+<br>
+
+4. A traveling support device that is applied to a vehicle equipped with an imaging device that captures an image of a surrounding of an own vehicle, and performs, as a traveling support control based on the image captured by the imaging device, a following traveling control to a leading vehicle traveling ahead of the own vehicle in a direction of travel in an own lane in which the own vehicle is traveling, the traveling support device comprising:
+a recognizer that recognizes, based on the image, a front object located ahead of the own vehicle in the direction of travel and a boundary portion located on each of left and right sides of a road on which the own vehicle is traveling;
+an angular width calculator that calculates an object point and a boundary point on one line extending along a width direction of the own vehicle in the image and calculates, for the object point and the boundary point, an angular width based on an origin defined in the image, the object point indicating a predetermined portion of the front object, the boundary point being on the boundary portion;
+an obtainer that obtains distance information indicating a distance to the predetermined portion of the front object;
+a lateral distance calculator that calculates, based on the angular width calculated by the angular width calculator and the distance information, a lateral distance between the predetermined portion of the front object and the boundary portion along the width of the own vehicle; and
+a controller that performs the traveling support control to the front object based on the lateral distance, wherein
+the recognizer recognizes, as the front object, another vehicle traveling in an adjacent lane that is adjacent to the own lane and in which a vehicle travels in the same direction as a direction of travel of a vehicle in the own lane, and recognizes a marking line between the own lane and the adjacent lane as the boundary portion,
+the angular width calculator calculates the angular width of the other vehicle recognized by the recognizer, at a position of a front-end portion of an own-vehicle-end side surface of the other vehicle,
+the lateral distance calculator calculates the lateral distance to the front-end portion, and
+the controller determines, based on the lateral distance, whether to select the other vehicle as the leading vehicle.
+<br>
+
+5. The traveling support device according to claim 4, wherein
+the angular width calculator calculates, as the angular width, a first angular width at a position of an own-vehicle-end lateral end portion of a rear surface of the other vehicle recognized by the recognizer and a second angular width at the position of the front-end portion of the own-vehicle-end side surface of the other vehicle,
+the lateral distance calculator calculates, as the lateral distance, a first lateral distance corresponding to the first angular width and calculates a second lateral distance corresponding to the second angular width, and
+based on a transition from a state in which both the first lateral distance and the second lateral distance have positive values to a state in which at least the second lateral distance has a negative value where the lateral distance has a negative value on an own lane side of the marking line and a positive value on an opposite side of the marking line from the own lane, the controller determines that the other vehicle is to be selected as the leading vehicle.
+<br>
+
+6. The traveling support device according to claim 4, wherein
+the recognizer recognizes, as a left marking line, the marking line located on a left side of the own lane and recognizes, as a right marking line, the marking line located on a right side of the own lane,
+the angular width calculator calculates a left angular width and a right angular width as the angular width at the front-end portion of the other vehicle, the left angular width being the angular width with respect to the left marking line, the right angular width being the angular width with respect to the right marking line,
+the lateral distance calculator calculates a left lateral distance and a right lateral distance as the lateral distance to the front-end portion of the other vehicle, the left lateral distance being calculated based on the left angular width, the right lateral distance being calculated based on the right angular width, and
+the controller makes a leading vehicle determination based on the lateral distance to the front-end portion on a condition that a difference between a lateral width of the own lane and a distance difference between the left lateral distance and the right lateral distance is less than a predetermined difference.
+<br>
+
+7. The traveling support device according to claim 4, wherein
+the recognizer recognizes, as the boundary portion, the marking line that is visible in the image as an actual marking line, and recognizes, as the boundary portion, the marking line that is not visible or is hardly visible in the image as a virtual marking line,
+in response to a predetermined condition including a condition that the lateral distance to the front-end portion of the other vehicle is within a predetermined range being met, the controller determines that the other vehicle is to be selected as the leading vehicle in the following traveling control, and
+the controller makes an implementation mode of a leading vehicle determination based on the predetermined condition different depending on whether the actual marking line is recognized and the lateral distance is calculated based on the actual marking line or the virtual marking line is recognized instead of the actual marking line and the lateral distance is calculated based on the virtual marking line.
+<br>
+
+8. The traveling support device according to claim 7, wherein
+the controller includes
+a counter that counts a total number of times the condition that the lateral distance to the front-end portion of the other vehicle is within the predetermined range is met consecutively, and when the lateral distance is out of the predetermined range, resets a count value,
+when the count value of the counter reaches a predetermined value, the controller determines that the predetermined condition has been met and the other vehicle is to be selected as the leading vehicle in the following traveling control,
+when the actual marking line is recognized and the lateral distance calculated based on the actual marking line is within the predetermined range, the counter increments the count value by a predetermined number, and
+when the virtual marking line is recognized instead of the actual marking line and the lateral distance calculated based on the virtual marking line is within the predetermined range, the counter maintains the count value or increments the count value by a number less than the predetermined number.
+<br>
+
+9. A traveling support device that is applied to a vehicle equipped with an imaging device that captures an image of a surrounding of an own vehicle, and performs, as a traveling support control based on the image captured by the imaging device, a collision damage reduction control for avoiding collision with an object or reducing collision with the object the traveling support device comprising:
+a recognizer that recognizes, based on the image, a front object located ahead of the own vehicle in a direction of travel and a boundary portion located on each of left and right sides of a road on which the own vehicle is traveling;
+an angular width calculator that calculates an object point and a boundary point on one line extending along a width direction of the own vehicle in the image and calculates, for the object point and the boundary point, an angular width based on an origin defined in the image, the object point indicating a predetermined portion of the front object, the boundary point being on the boundary portion;
+an obtainer that obtains distance information indicating a distance to the predetermined portion of the front object;
+a lateral distance calculator that calculates, based on the angular width calculated by the angular width calculator and the distance information, a lateral distance between the predetermined portion of the front object and the boundary portion along the width of the own vehicle; and
+a controller that performs the traveling support control to the front object based on the lateral distance, wherein
+the recognizer includes:
+a first recognizer that recognizes, as the boundary portion, a marking line defining an own lane in which the own vehicle is traveling; and
+a second recognizer that recognizes, as the boundary portion, a boundary marking object that is a road boundary different from the marking line and extending along a road on which the own vehicle is traveling,
+the controller determines, based on the lateral distance, whether to select the object as a target of the collision damage reduction control, and
+the controller makes an implementation mode of the collision damage reduction control based on the lateral distance different depending on whether the marking line is recognized as the boundary portion or the boundary marking object is recognized as the boundary portion.
+
+   
+
+</body></html>

@@ -1,0 +1,134 @@
+<html><head></head><body><h3>Date: 2022-09-27</h3>
+<p><u>AMENDMENTS TO THE CLAIMS:</u></p>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<p><u>Listing of Claims:</u></p>
+<br>
+
+<br>
+1. (Original) A method of determining the position of one or more components of a landing gear assembly of an aircraft, the method comprising the steps of: 
+<br>
+scanning the one or more components of the landing gear assembly with a lidar system to generate a set of position data points, wherein each position data point comprises a set of three orthogonal position values; 
+<br>
+partitioning the set of position data points into one or more clusters, wherein two position data points are determined to be in the same cluster if a distance metric for the two position data points is below a threshold; 
+<br>
+determining, for each cluster of the one or more of the clusters, a component of the one or more components of the landing gear assembly that the cluster represents; and 
+<br>
+determining, for each component of the one or more of the components of the landing gear assembly, the position of the component from the position data points in the cluster representing the component; 
+<br>
+wherein the value of the distance metric for a first position data point and a second position data point is representative of the difference between a first position value of the three orthogonal position values of the first position data point and the corresponding first position value of the three orthogonal position values of the second position data point. 
+
+<br>
+
+<br>
+2. (Original) A method as claimed in claim 1, wherein the three orthogonal position values of the position data point are a horizontal position value, a vertical position value and a depth position value.
+<br>
+
+<br>
+3. (Original) A method as claimed in claim 1, wherein the distance metric is representative of the difference between the horizontal position values of the first position data point and the second position data point.
+
+<br>
+
+<br>
+4. (Currently Amended) A method as claimed in <del>a claim</del> <del>2</del><del> or</del> <del>3</del><del>c</del><u>l</u><u>aim</u> <u>2</u>, wherein the landing gear assembly comprises a set of landing gear wheels, and wherein the horizontal position value of a position data point is indicative of a position along a line perpendicular to the plane through which the landing gear wheels of the landing gear assembly move when the landing gear assembly is extended.
+
+<br>
+
+<br>
+5. (Currently Amended) A method as claimed in <del>claim</del> <del>2</del><del> or</del> <del>3</del><del>c</del><u>l</u><u>aim</u> <u>2</u>, wherein the vertical position value of a position data point is indicative of a position along a line perpendicular to the bottom surface of the aircraft body in which the landing gear assembly is mounted.
+
+<br>
+
+<br>
+6. (Currently Amended) A method as claimed in <del>claim</del> <del>2</del><del> or</del> <del>3</del><del>c</del><u>l</u><u>aim</u> <u>2</u>, wherein the depth position value of a position data point is indicative of a position along a line from the lidar system to the landing gear assembly parallel to the bottom surface of the aircraft body in which the landing gear assembly is mounted.
+
+<br>
+
+<br>
+7. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the landing gear assembly comprises a set of landing gear wheels, and the set of landing gear wheels is a component of the one or more components of the landing gear assembly.
+
+<br>
+
+<br>
+8. (Currently Amended) A method as claimed in <del>any of claims</del> <del>1 to 6</del><del>c</del><u>laim</u> <u>1</u>, wherein the landing gear assembly comprises a set of landing gear wheels, the landing gear wheels of the landing gear assembly are mounted on a movable strut, and the combination of the landing gear wheels and the strut is a component of the one or more components of the landing gear assembly.
+<br>
+
+<br>
+9. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the landing gear assembly comprises one or more doors, and each of the one or more doors is a component of the one or more components of the landing gear assembly.
+
+<br>
+
+<br>
+10. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the landing gear assembly comprises a set of landing gear wheels, and wherein the lidar system is positioned in the plane through which the landing gear wheels move when the landing gear assembly is extended.
+
+<br>
+
+<br>
+11. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the position of a component of the one or more components of the landing gear assembly is determined to be the centroid of the position data points in the cluster representing the component.
+
+<br>
+
+<br>
+12. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, further comprising, prior to the step of partitioning the set of position data points into one or more clusters, the step of removing position data points from the set of position data points that have a depth position value greater than a threshold value.
+
+<br>
+
+<br>
+13. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, further comprising, prior to the step of partitioning the set of position data points into one or more clusters, the step of removing position data points from the set of position data points that have a depth position value less than a threshold value.
+
+<br>
+
+<br>
+14. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the positions of the one or more components of the landing gear assembly of an aircraft are tracked as the landing gear assembly moves from the retracted position to the extended position or from the extended position to the retracted position.
+
+<br>
+
+<br>
+15. (Currently Amended) An aircraft comprising: 
+
+  a landing gear assembly comprising one or more components; 
+<br>
+a lidar system arranged to scan the one or more components of the landing gear assembly and generate a set of position data points, wherein each position data point comprises a set of three orthogonal position values; and 
+<br>
+a computer system arranged to determine, from the set of position data points, the position of one or more components of the landing gear assembly in accordance with <del>the method of any of claims</del> 
+<br>
+<del>1 to 14</del><u>a method comprising the steps of:</u> 
+<br>
+<u>scanning the one or more components of the landing gear assembly with a lidar system to generate a set of position data points, wherein each position data point comprises a set of three orthogonal position values;</u> 
+<br>
+<u>partitioning the set of position data points into one or more clusters, wherein two position data points are determined to be in the same cluster if a distance metric for the two position data points is below a threshold;</u> 
+<br>
+<u>determining, for each cluster of the one or more of the clusters, a component of the one or more components of the landing gear assembly that the cluster represents; and</u> 
+<br>
+<u>determining, for each component of the one or more of the components of the landing gear assembly, the position of the component from the position data points in the cluster representing the component;</u> 
+<br>
+<u>wherein the value of the distance metric for a first position data point and a second position data point is representative of the difference between a first position value of the three orthogonal position values of the first position data point and the corresponding first position value of the three orthogonal position values of the second position data point</u>. 
+
+<br>
+
+<br>
+16. (Currently Amended) A non-transitory computer readable medium comprising computer-readable program code for determining the position of one or more components of a landing gear assembly of an aircraft, the computer-readable program code arranged, when executed in a computer system of an aircraft comprising: 
+<br>
+a landing gear assembly comprising one or more components; and 
+
+  a lidar system arranged to scan the one or more components of the landing gear assembly and generate a set of position data points, wherein each position data point comprises a set of three orthogonal position values; 
+<br>
+to cause the computer system to determine, from the set of position data points, the position of one or more components of the landing gear assembly in accordance with <del>the method of any of claims</del> 
+<br>
+<del>1 to 14</del><u>a method comprising the steps of:</u> 
+<br>
+<u>scanning the one or more components of the landing gear assembly with a lidar system to generate a set of position data points, wherein each position data point comprises a set of three orthogonal position values;</u> 
+<br>
+<u>partitioning the set of position data points into one or more clusters, wherein two position data points are determined to be in the same cluster if a distance metric for the two position data points is below a threshold;</u> 
+<br>
+<u>determining, for each cluster of the one or more of the clusters, a component of the one or more components of the landing gear assembly that the cluster represents; and</u> 
+<br>
+<u>determining, for each component of the one or more of the components of the landing gear assembly, the position of the component from the position data points in the cluster representing the component;</u> 
+<br>
+<u>wherein the value of the distance metric for a first position data point and a second position data point is representative of the difference between a first position value of the three orthogonal position values of the first position data point and the corresponding first position value of the three orthogonal position values of the second position data point</u>. 
+<br>
+-4-
+-5-
+-6-
+-7-
+-8-
+</body></html>

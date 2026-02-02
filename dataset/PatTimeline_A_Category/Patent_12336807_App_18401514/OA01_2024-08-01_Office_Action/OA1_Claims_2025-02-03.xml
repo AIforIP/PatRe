@@ -1,0 +1,119 @@
+<html><head></head><body><h3>Date: 2025-02-03</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<br>
+<br>
+1.    (Currently Amended) A data acquisition module for a system for measuring a nasal valve collapse of a patient, <u>wherein the data ac</u><u>q</u><u>uisition module comprises a processor that is</u><del>the data acquisition module being </del>configured to:<br>
+receive a plurality of images of a nasal valve from a camera of an endoscope positioned through an endoscope port of a facial mask and a plurality of air flow measurements from an air flow sensor configured to measure an air flow across an opening in the facial mask;<br>
+determine (i) a first image of the plurality of images of the nasal valve taken during inhalation and (ii) a second image of the plurality of images of the nasal valve taken during a period between exhalation and inhalation, wherein the second image is synchronized with a zero flow measurement of the plurality of air flow measurements, wherein the first image is synchronized with a non-zero flow measurement of the plurality of air flow measurements; and<br>
+determine, based on the first image and the second image, a size difference of the nasal valve during inhalation and during the period between exhalation and inhalation.<br>
+<br>
+2.    (Currently Amended) The data acquisition module of claim 1, wherein, to determine the size difference of the nasal valve, the <del>data acquisition module </del><u>processor </u>is configured to:<br>
+determine, based on the first image, a first distance between a septum and a lateral wall of the nasal valve during inhalation,2<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+determine, based on the second image, a second distance between the septum and the lateral wall of the nasal valve during the period between exhalation and inhalation, and<br>
+determine the size difference by dividing the first distance by the second distance.<br>
+<br>
+3.    (Original) The data acquisition module of claim 1, wherein the plurality of images are taken during a plurality of inhalation rates,<br>
+wherein the plurality of inhalation rates are different from each other, and wherein the data acquisition module is further configured to, for each inhalation rate, determine a relative distance between a septum and a lateral wall of the nasal valve.<br>
+4.
+(Currently Amended) The data acquisition module of claim 3, wherein the <del>data acquisition module </del><u>processor </u>is configured to communicate with an external computing device to cause display of a graph of (i) the relative distances between the septum and the lateral wall of the nasal valve at the plurality of inhalation rates versus (ii) the air flow measurements at the plurality of inhalation rates.<br>
+<br>
+5.    (Currently Amended) The data acquisition module of claim 1, wherein the <del>data acquisition module </del><u>processor </u>is further configured to:<br>
+receive an annotation of the first image of the nasal valve during inhalation, wherein the annotation of the first image indicates a distance between a septum and a lateral wall of the nasal valve in the first image;3<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+determining a first distance between the septum and the lateral wall based on the annotation of the first image of the nasal valve during inhalation;<br>
+receive an annotation of the second image of the nasal valve during the period between exhalation and inhalation, wherein the annotation of the second image indicates a distance between the septum and the lateral wall of the nasal valve in the second image; and<br>
+determine a second distance between the septum and the lateral wall based on the annotation of the second image of the nasal valve during the period between exhalation and inhalation; and<br>
+determine the size difference of the nasal valve based on the first distance and the second distance.<br>
+<br>
+6.    (Currently Amended) The data acquisition module of claim 1, wherein the <del>data acquisition module </del><u>processor </u>is configured to apply image analysis to the first image to automatically measure an area of space between a septum and a lateral wall to automatically determine an area or a length of the septum and a lateral wall.<br>
+<br>
+7.    (Currently Amended) The data acquisition module of claim 1, wherein the <del>data acquisition module </del><u>processor </u>is configured to receive the plurality of images as video captured by the camera.<br>
+<br>
+8.    (Canceled)<br>
+<br>
+9.    (Canceled)4<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+10.    (Canceled)<br>
+<br>
+11.    (Canceled)<br>
+<br>
+12.    (Canceled)<br>
+<br>
+13.    (Canceled)<br>
+<br>
+14.    (Canceled)<br>
+<br>
+15.    (Currently Amended) A method of measuring a nasal valve collapse by a data acquisition module <u>comprising a processor,</u> the method comprising:<br>
+<u>receiving, at a processor of a data ac</u><u>q</u><u>uisition module, </u>a plurality of images of a nasal valve from a camera of an endoscope positioned through an endoscope port of a facial mask and a plurality of air flow measurements from an air flow sensor configured to measure an air flow across an opening in the facial mask,<br>
+<u>determining, by the processor, </u>(i) a first image of the plurality of images of the nasal valve taken during inhalation and (ii) a second image of the plurality of images of the nasal valve taken during a period between exhalation and inhalation, wherein the second image is synchronized with a zero flow measurement of the plurality of air flow measurements, wherein 5<br>
+<br>
+HULBERT&amp;BERGHOFF LLP 300SOUTHWACKERDRIVE CHICAGO, ILLINOIS 60606 TELEPHONE (312) 913-0001 the first image is synchronized by the processor with a non-zero flow measurement of the plurality of air flow measurements, and<br>
+determining, based on the first image and the second image, a size difference of the nasal valve during inhalation and during the period between exhalation and inhalation.<br>
+<br>
+16.   (Original) The method of claim 15, wherein, determining the size difference of the nasal valve comprises:<br>
+determining, based on the first image, a first distance between a septum and a lateral wall of the nasal valve during inhalation,<br>
+determining, based on the second image, a second distance between the septum and the lateral wall of the nasal valve during the period between exhalation and inhalation, and<br>
+determining the size difference by dividing the first distance by the second distance.<br>
+<br>
+17.   (Original) The method of claim 15, wherein the plurality of images are taken during a plurality of inhalation rates,<br>
+wherein the plurality of inhalation rates are different from each other, and wherein the method further comprises, for each inhalation rate, determining a relative distance between a septum and a lateral wall of the nasal valve.<br>
+<br>
+18.   (Original) The method of claim 17, further comprising communicating with an external computing device to cause display of a graph of (i) the relative distances between the 6<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+septum and the lateral wall of the nasal valve at the plurality of inhalation rates versus (ii) the air flow measurements at the plurality of inhalation rates.<br>
+<br>
+19.   (Original) The method of claim 15, further comprising:<br>
+receiving an annotation of the first image of the nasal valve during inhalation, wherein the annotation of the first image indicates a distance between a septum and a lateral wall of the nasal valve in the first image;<br>
+determining a first distance between the septum and the lateral wall based on the annotation of the first image of the nasal valve during inhalation;<br>
+receiving an annotation of the second image of the nasal valve during the period between exhalation and inhalation, wherein the annotation of the second image indicates a distance between the septum and the lateral wall of the nasal valve in the second image; and<br>
+determining a second distance between the septum and the lateral wall based on the annotation of the second image of the nasal valve during the period between exhalation and inhalation; and<br>
+determining the size difference of the nasal valve based on the first distance and the second distance.<br>
+<br>
+20.    (Original) The method of claim 15, further comprising applying image analysis to the first image to automatically measure an area of space between a septum and a lateral wall to automatically determine an area or a length of the septum and a lateral wall.7<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+21.   (New) The method of claim 15, further comprising synchronizing the plurality of images from the camera and the plurality of air flow measurements from the air flow sensor using a plurality of time stamps associated with the plurality of images and the plurality of air flow measurements.<br>
+<br>
+22.   (New) The method of claim 15, wherein determining the size difference of the nasal valve during inhalation and during the period between exhalation and inhalation comprises calculating, based on the first image and the second image, a percentage difference in an area or one or more dimensions of the nasal valve between the first image and the second image<br>
+<br>
+23.   (New) The method of claim 15, further comprising causing a display device to display a graphical user interface, an image of the plurality of images taken at a first time, and an airflow measurement taken at the first time.<br>
+<br>
+24.   (New) The method of claim 15, further comprising causing a display device to display a graph including the plurality of air flow measurements versus time.<br>
+<br>
+25.   (New) The data acquisition module of claim 1, wherein the processor is further configured to synchronize the plurality of images from the camera and the plurality of air flow measurements from the air flow sensor using a plurality of time stamps associated with the plurality of images and the plurality of air flow measurements.<br>
+<br>
+26.   (New) The data acquisition module of claim 1, wherein the processor is configured to determine the size difference of the nasal valve during inhalation and during the 8<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+period between exhalation and inhalation by calculating, based on the first image and the second image, a percentage difference in an area or one or more dimensions of the nasal valve between the first image and the second image.<br>
+<br>
+27.    (New) The data acquisition module of claim 1, wherein the processor is configured to cause a display device to display a graph including the plurality of air flow measurements versus time.9<br>
+<br>
+HULBERT&amp;BERGHOFF LLP 300SOUTHWACKERDRIVE CHICAGO, ILLINOIS 60606 TELEPHONE (312) 913-0001
+</body></html>

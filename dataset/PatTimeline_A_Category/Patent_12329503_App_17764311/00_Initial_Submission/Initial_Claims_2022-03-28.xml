@@ -1,0 +1,119 @@
+<html><head></head><body><h3>Date: 2022-03-28</h3>
+<p><u>LIST OF CURRENT CLAIMS</u></p>
+<br>
+
+<br>
+1.-14.(Canceled)
+
+213
+<br>
+<br>
+
+<br>
+15. (New) A computer-implemented method for evaluating quality of ratio of ratios, RR, values computed for at least three photoplethysmographic, PPG, signals corresponding to distinct wavelengths, wherein each PPG signal comprises successive heartbeat signal segments, said method comprising: 
+<br>
+segmenting a first PPG signal corresponding to a red wavelength and a second PPG signal corresponding to an infrared wavelength into a plurality of signal segments each corresponding to one heartbeat, by: 
+<br>
+extracting a sequence of heartbeat instants tb,g[n] from a third PPG signal corresponding to a third wavelength; 
+<br>
+segmenting the first and second PPG signals into a plurality of signal segments, each signal segment corresponding to one heartbeat, using the sequence of heartbeat instants tb,g [n] extracted from the third PPG signal, for each given signal segment, computing a sequence of RR values, and 
+<br>
+evaluating, for each given signal segment, a quality index of the sequence of computed RR values on the basis of a computed heart rate and/or a measured peripheral temperature corresponding to the given signal segment. 
+
+<br>
+
+<br>
+16. (New) The method according to claim 15, wherein the quality index of a sequence of computed RR values involves a term resulting from a comparison between the number of heartbeats in the period of time on which the computed RR values are determined and the number of heartbeats calculated from the computed heart rate for said period of time.
+
+<br>
+
+<br>
+17. (New) The method according to claim 15, wherein the computed heart rate is obtained by identifying a maximum peak in the frequency domain in a third PPG signal corresponding to a third wavelength.
+
+<br>
+
+18. (New) The method according to claim 15, wherein the sequence of heartbeat instants tb,g[n] is applied to the first and second PPG signals such that:
+SVG
+
+{EMBED HERE}
+
+0.17
+1.97
+ 
+
+   each heartbeat signal segment of the first PPG signal and the second PPG signal being defined according to the following expressions:
+SVG
+
+{EMBED HERE}
+
+0.47
+5
+<br>
+
+<br>
+19. (New) The method according to claim 18, wherein each heartbeat instant tb,r[n] and tb,ir[n] is determined, respectively for the first and second PPG signals, by searching the local maximum of the PPG signal closest to the corresponding value of tb,g[n].
+
+<br>
+
+<br>
+20. (New) The method according to claim 15, wherein the quality index of a sequence of computed RR values involves a term resulting from a comparison between a measured peripheral temperature and a reference temperature.
+
+<br>
+
+<br>
+21. (New) The method according to claim 15, wherein the quality index of a sequence of computed RR values involves a term resulting from the calculation of a dispersion of the computed RR values for the different signal segments.
+
+<br>
+
+<br>
+22. (New) The method according to claim 16, wherein the quality index of a sequence of computed RR values is a product of at least two among the terms resulting from the dispersion calculation, the heartbeat comparison and the temperature comparison.
+
+<br>
+
+<br>
+23. (New) The method according to claim 15, further comprising: 
+<br>
+for each given signal segment, estimating the fitness of the given signal segment for RR estimation and outputting a signal quality index for the given signal segment, for each given signal segment, evaluating the quality of the computed RR value on the basis of the signal quality index for the given signal segment. 
+
+<br>
+
+<br>
+24. (New) A method for evaluating an SpO2 value based on a ratio of ratios, RR, value evaluated according to the method of any one of the preceding claims, wherein the photoplethysmographic, PPG, signals are obtained by using LEDs as light sources, the SpO2 value being obtained using a calibration model having as parameters the RR value and the LED current of at least one of the LEDs.
+<br>
+
+<br>
+25. (New) The method according to claim 24, wherein the calibration model is a second order polynomial calibration model having as parameters: 
+<br>
+the RR value and its squared value RR2, the logarithm of the LED current of at least one of the LEDs and its squared value. 
+
+<br>
+
+<br>
+26. (New) A computer program comprising instructions for the implementation of a method according to claim 15 when the program is executed by a computer.
+
+<br>
+
+<br>
+27. (New) A system for evaluating the quality of ratio of ratios, RR, values computed for at least three photoplethysmographic, PPG, signals corresponding to distinct wavelengths, wherein each PPG signal comprises successive heartbeat, said system comprising: 
+<br>
+a segmentation module for segmenting a first PPG signal corresponding to a red wavelength and a second PPG signal corresponding to an infrared wavelength into a plurality of signal segments each corresponding to one heartbeat pattern, a computation module for computing, for each given signal segment, a sequence of RR values, by: 
+<br>
+extracting a sequence of heartbeat instants tb,g[n] from a third PPG signal corresponding to a third wavelength; 
+<br>
+segmenting the first and second PPG signals into a plurality of signal segments using the heartbeat patterns extracted from the third PPG signal, and 
+<br>
+an evaluation module for evaluating, for each given signal segment, a quality index of the sequence of computed RR values on the basis of a computed heart rate and/or a measured peripheral temperature corresponding to the given signal segment. 
+
+<br>
+
+<br>
+28. (New) A system for performing a pulse oximetry comprising: 
+<br>
+at least two light sources configured to emit light at two distinct wavelengths, an acquisition module configured to acquire the photoplethysmographic, PPG, signals resulting from the illumination of tissues of a subject by means of said light sources, a system according to claim 
+<br>
+27 for evaluating the quality of ratio of ratios values computed for the PPG signals corresponding to the two distinct wavelengths.
+<br>
+6
+7
+8
+</body></html>

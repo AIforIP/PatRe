@@ -1,0 +1,79 @@
+<html><head></head><body>18537639
+
+   CLAIMS
+   What is claimed is:
+   
+
+<br>
+
+1. A surgical robotic system, comprising:
+a tool drive to be coupled to a distal end of a surgical robotic arm, the tool drive comprising a docking interface to receive a trocar wherein the docking interface defines a chamber, one or more clamp components disposed in the chamber and configured to move to secure an attachment portion of the trocar to the docking interface;
+one or more sensors operable to visually sense a surface feature of the trocar; and
+one or more processors configured to
+determine a position and an orientation of the trocar based on the visually sensed surface feature, and 
+signal the plurality of actuators to guide the robotic arm toward the determined position of the trocar while orienting the docking interface to the determined orientation of the trocar.
+<br>
+
+2. The surgical robotic system of claim 1, wherein the one or more processors are configured to generate a planned trajectory to the determined position of the trocar, and guide the robotic arm along the planned trajectory.
+<br>
+
+3. The surgical robotic system of claim 2, wherein the one or more processors are configured to guide the robotic arm by controlling the plurality of actuators to automatically drive the arm along the planned trajectory.
+<br>
+
+4. The surgical robotic system of claim 2, wherein the one or more processors are configured to guide the robotic arm by controlling the plurality of actuators to assist an operator who is manually forcing the arm.
+<br>
+
+5. The surgical robotic system of claim 2, wherein the one or more processors are configured to control the plurality of actuators to resist an operator’s manual forcing of the robotic arm when the operator’s manual forcing is directing the robotic arm away from the planned trajectory.
+<br>
+
+6. The surgical robotic system of claim 5, wherein the actuators controlled by the one or more processors resist an operator’s manual guidance of the robotic arm away from the planned trajectory with a force that is proportional to a distance between the robotic arm and the planned trajectory.
+<br>
+
+7. The surgical robotic system of claim 2 wherein the planned trajectory avoids collision of the robotic arm with one or more of a patient, a table on which the patient rests, bedside staff, a cable, a pipe, and other surgical robotic arms.
+<br>
+
+8. The surgical robotic system of claim 1, wherein the arm comprises a switch that when manually actuated by an operator changes a mode of operation between a first mode in which the one or more processors guide the robotic arm under admittance control of the actuators, and a second mode in which the one or more processors control the actuators to enable fully manual guidance of the robotic arm.
+<br>
+
+9. The surgical robotic system of claim 1, wherein the attachment portion of the trocar is a protrusion extending from an upper portion of the trocar.
+<br>
+
+10. The surgical robotic system of claim 1, further comprising a lever supported on the docking interface, and wherein movement of the lever causes movement of the one or more clamp components.
+<br>
+
+11. The surgical robotic system of claim 1 further comprising a switch mounted on the docking interface that, when actuated, signals the processor to i) activate the one or more sensors, ii) determine the position and the orientation of the trocar based on the visually sensed surface feature, or iii) guide the robotic arm toward the determined position of the trocar, the switch positioned such that movement of the lever in one direction actuates the switch, and movement of the lever in an opposite direction causes movement of the one or more clamp components to secure the docking interface to the trocar.
+<br>
+
+12. The surgical robotic system of claim 1, wherein the one or more sensors are disposed in the docking interface.
+<br>
+
+13. The surgical robotic system of claim 12, wherein the docking interface comprises a sterile adapter coupled to a frontal portion thereof, the one or more sensors being mounted on the sterile adapter.
+<br>
+
+14. A method for docking a robotic arm of a surgical robotic system to a trocar, the method comprising:
+producing, by one or more sensors that are coupled to a docking interface of a tool drive that is coupled to the robotic arm, an image of a surface feature that is on the trocar;
+determining, by one or more processors, a sensed pose of the trocar based on the image of the surface feature, the sensed pose including a position and an orientation of the trocar; 
+calculating, by the one or more processors, a planned trajectory to the sensed pose of the trocar; and
+driving, by the one or more processors, a plurality of actuators in the robotic arm to guide the docking interface of the robotic arm along the planned trajectory to the sensed pose of the trocar.
+<br>
+
+15. The method of claim 14, further comprising determining, by the one or more processors, a distance between the docking interface and the planned trajectory, and controlling the plurality of actuators in the robotic arm to guide the robotic arm toward the planned trajectory based on the distance.
+<br>
+
+16. The method of claim 14, further comprising determining, by the processor, a component of a manual force applied by an operator on the robotic arm in the direction of the planned trajectory, and controlling the plurality of actuators in the robotic arm to guide the robotic arm along the planned trajectory based on the component of the manual force applied by the operator along the planned trajectory.
+<br>
+
+17. The method of claim 16, wherein the processor controls the plurality of actuators in the robotic arm to guide the robotic arm along the planned trajectory with a force determined by a product of i) the component of the manual force applied by the operator along the planned trajectory and ii) a predetermined scalar value.
+<br>
+
+18. The method of claim 14, further comprising determining, by the processor, a component of a manual force applied by an operator on the robotic arm in a direction away from a direction of the planned trajectory, and controlling the plurality of actuators in the robotic arm to drive the robotic arm toward the planned trajectory based on the component of the manual force applied by the operator in the direction away from the planned trajectory.
+<br>
+
+19. The method of claim 18, wherein the processor controls the plurality of actuators in the robotic arm to drive the robotic arm toward the planned trajectory with a force determined by a product of i) the component of the manual force applied by the operator in the direction away from the planned trajectory and ii) a predetermined scalar value.
+<br>
+
+20. The method of claim 14, wherein the one or more sensors are part of a camera on the arm, and the one or more processors control the plurality of actuators in the robotic arm to maintain the surface feature at a center of a field of view of the camera while the arm moves along the planned trajectory.
+
+   
+
+</body></html>

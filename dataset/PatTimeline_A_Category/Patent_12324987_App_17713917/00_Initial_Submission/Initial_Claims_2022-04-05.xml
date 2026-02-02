@@ -1,0 +1,186 @@
+<html><head></head><body><h3>Date: 2022-04-05</h3>
+<p>CLAIMS</p>
+<p><u>What is claimed is:</u></p>
+<br>
+
+<br>
+1. A method for displaying a virtual item, performed by a computer device, the method comprising: 
+<br>
+displaying a first virtual environment picture, the first virtual environment picture displaying a second virtual item in an effective state; 
+<br>
+controlling, in response to a use instruction, a target virtual character to use an equipped first virtual item; 
+<br>
+displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state; and 
+<br>
+displaying, in response to satisfying a restoration condition, that the second virtual item is switched from the ineffective state to the effective state. 
+
+<br>
+
+<br>
+2. The method according to claim 1, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+switching, in response to the second virtual item being located within the first influence range of the first virtual item, the display of the second virtual item from a first display form to a second display form, the first display form corresponding to the effective state, and the second display form corresponding to the ineffective state. 
+
+<br>
+
+<br>
+3. The method according to claim 1, wherein the displaying, in response to satisfying a restoration condition, that the second virtual item is switched from the ineffective state to the effective state comprises: 
+<br>
+timing a first duration for which the second virtual item is in the ineffective state; and 
+
+displaying, in response to the first duration reaching a first time threshold, that the second virtual item is switched from the ineffective state to the effective state.
+<br>
+
+<br>
+4. The method according to claim 1, wherein the controlling, in response to a use instruction, a target virtual character to use an equipped first virtual item comprises: 
+<br>
+controlling, in response to the use instruction, the target virtual character to throw the first virtual item, and controlling the first virtual item to be thrown to a first position according to a throw trajectory. 
+
+<br>
+
+<br>
+5. The method according to claim 4, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+obtaining a second position of the second virtual item in a virtual environment; and 
+<br>
+displaying, in response to a distance from the first position to the second position being less than a first distance threshold, that the second virtual item is switched from the effective state to the ineffective state. 
+
+<br>
+
+<br>
+6. The method according to claim 4, further comprising: 
+<br>
+timing, in response to the first virtual item reaching the first position, a second duration for the first virtual item at the first position, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+displaying, in response to the second duration reaching a second time threshold and the second virtual item being located within the first influence range of the first virtual item, that the second virtual item is switched from the effective state to the ineffective state. 
+
+<br>
+
+7. The method according to claim 1, wherein the second virtual item in the effective state is 
+configured to periodically detect a target object located in a second influence range and produce an effect on the target object; and 
+<br>
+the method further comprises: 
+<br>
+stopping the second virtual item from periodically detecting the target object within the second influence range in response to the second virtual item being located within the first influence range of the first virtual item. 
+
+<br>
+
+<br>
+8. The method according to claim 1, further comprising displaying, in response to the target object being located within a second influence range of the second virtual item, an effect on the target object produced according to the second virtual item, wherein the effect comprises at least one of an activity limitation of the target object or a reduction in a hit point value of the target object, and the activity limitation of the target object comprises at least one of movement speed reduction, line-of-sight obstruction, slow activity, control manner change, item use limitation, or movement manner limitation of the target object.
+<br>
+
+<br>
+9. The method according to claim 8, wherein the second virtual item is located at a second position in the virtual environment; and 
+<br>
+the displaying, in response to the target object being located within a second influence range of the second virtual item, an effect on the target object comprises: 
+<br>
+obtaining a third position of the target object in the virtual environment; and 
+<br>
+displaying, in response to a distance from the second position to the third position being less than a second distance threshold, the effect on the target object. 
+
+<br>
+
+<br>
+10. An apparatus for displaying a virtual item, comprising: a processor and a memory, the memory storing at least one computer program, the at least one computer program being loaded and executed by the processor to implement: 
+
+displaying a first virtual environment picture, the first virtual environment picture displaying a second virtual item in an effective state; 
+<br>
+controlling, in response to a use instruction, a target virtual character to use an equipped first virtual item; 
+<br>
+displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state; and 
+<br>
+displaying, in response to satisfying a restoration condition, that the second virtual item is switched from the ineffective state to the effective state. 
+
+<br>
+
+<br>
+11. The apparatus according to claim 10, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+switching, in response to the second virtual item being located within the first influence range of the first virtual item, the display of the second virtual item from a first display form to a second display form, the first display form corresponding to the effective state, and the second display form corresponding to the ineffective state. 
+
+<br>
+
+<br>
+12. The apparatus according to claim 10, wherein the displaying, in response to satisfying a restoration condition, that the second virtual item is switched from the ineffective state to the effective state comprises: 
+<br>
+timing a first duration for which the second virtual item is in the ineffective state; and 
+<br>
+displaying, in response to the first duration reaching a first time threshold, that the second virtual item is switched from the ineffective state to the effective state. 
+
+<br>
+
+<br>
+13. The apparatus according to claim 10, wherein the controlling, in response to a use instruction, a target virtual character to use an equipped first virtual item comprises: 
+
+controlling, in response to the use instruction, the target virtual character to throw the first virtual item, and controlling the first virtual item to be thrown to a first position according to a throw trajectory.
+<br>
+
+<br>
+14. The apparatus according to claim 13, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+obtaining a second position of the second virtual item in a virtual environment; and 
+<br>
+displaying, in response to a distance from the first position to the second position being less than a first distance threshold, that the second virtual item is switched from the effective state to the ineffective state. 
+
+<br>
+
+<br>
+15. The apparatus according to claim 13, wherein the processor is further configured to perform: 
+<br>
+timing, in response to the first virtual item reaching the first position, a second duration for the first virtual item at the first position, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+displaying, in response to the second duration reaching a second time threshold and the second virtual item being located within the first influence range of the first virtual item, that the second virtual item is switched from the effective state to the ineffective state. 
+
+<br>
+
+<br>
+16. The apparatus according to claim 10, wherein the second virtual item in the effective state is configured to periodically detect a target object located in a second influence range and produce an effect on the target object; and 
+<br>
+the processor is further configured to perform: 
+
+stopping the second virtual item from periodically detecting the target object within the second influence range in response to the second virtual item being located within the first influence range of the first virtual item.
+<br>
+
+<br>
+17. The apparatus according to claim 10, wherein the processor is further configured to perform: 
+<br>
+displaying, in response to the target object being located within a second influence range of the second virtual item, an effect on the target object produced according to the second virtual item, wherein the effect comprises at least one of an activity limitation of the target object or a reduction in a hit point value of the target object, and the activity limitation of the target object comprises at least one of movement speed reduction, line-of-sight obstruction, slow activity, control manner change, item use limitation, or movement manner limitation of the target object. 
+
+<br>
+
+<br>
+18. The apparatus according to claim 17, wherein the second virtual item is located at a second position in the virtual environment; and 
+<br>
+the displaying, in response to the target object being located within a second influence range of the second virtual item, an effect on the target object comprises: 
+<br>
+obtaining a third position of the target object in the virtual environment; and 
+<br>
+displaying, in response to a distance from the second position to the third position being less than a second distance threshold, the effect on the target object. 
+
+<br>
+
+<br>
+19. A non-transitory computer-readable storage medium, storing at least one computer program, the at least one computer program being loaded and executed by a processor to implement: 
+<br>
+displaying a first virtual environment picture, the first virtual environment picture displaying a second virtual item in an effective state; 
+
+controlling, in response to a use instruction, a target virtual character to use an equipped first virtual item; 
+<br>
+displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state; and 
+<br>
+displaying, in response to satisfying a restoration condition, that the second virtual item is switched from the ineffective state to the effective state. 
+
+<br>
+
+<br>
+20. The storage medium according to claim 19, wherein the displaying, in response to the second virtual item being located within a first influence range of the first virtual item, that the second virtual item is switched from the effective state to an ineffective state comprises: 
+<br>
+switching, in response to the second virtual item being located within the first influence range of the first virtual item, the display of the second virtual item from a first display form to a second display form, the first display form corresponding to the effective state, and the second display form corresponding to the ineffective state. 
+00144.1117.OOUS (21PCT141/US)59
+00144.1117.OOUS (21PCT141/US)60
+00144.1117.OOUS (21PCT141/US)57
+00144.1117.OOUS (21PCT141/US)58
+00144.1117.OOUS (21PCT141/US)61
+00144.1117.OOUS (21PCT141/US)62
+00144.1117.OOUS (21PCT141/US)63
+</body></html>

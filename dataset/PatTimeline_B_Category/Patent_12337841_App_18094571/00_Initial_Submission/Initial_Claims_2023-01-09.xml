@@ -1,0 +1,129 @@
+<html><head></head><body><h3>Date: 2023-01-09</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1. A method, comprising: 
+<br>
+receiving, at a telematics server: 
+<br>
+training acceleration data from a first telematics device coupled to a first vehicle, and 
+<br>
+a vehicle-provided reversing indication from the first telematics device; 
+<br>
+training, by the telematics server, a central reversing determination machine- learning model using the training acceleration data and the vehicle-provided reversing indication; 
+<br>
+generating and sending, by the telematics server, a reversing determination model update to a second telematics device coupled to a second vehicle which does not provide a reverse gear indication; 
+<br>
+updating, by the second telematics device, an edge reversing determination machine-learning model using the reversing determination model update; 
+<br>
+capturing, by the second telematics device, captured acceleration data for the second vehicle; and 
+<br>
+determining, by the edge reversing determination machine-learning model, a machine-learning-determined reversing indication for the second vehicle based on the captured acceleration data. 
+
+<br>
+
+<br>
+2. The method of claim 1, further comprising generating an alert of a reversing event at the second telematics device in response to determining the machine- learning-determined reversing indication.
+<br>
+
+<br>
+3. The method of claim 1, wherein the vehicle-provided reversing indication comprises: 
+
+  a vehicle speed, provided by the first vehicle to the first telematics device, that is greater than about zero, and 
+<br>
+a reverse gear indication, provided by the first vehicle to the first telematics device. 
+
+<br>
+
+<br>
+4. The method of claim 1, wherein the captured acceleration data is captured from a three-axis accelerometer installed in the second telematics device.
+<br>
+
+<br>
+5. The method of claim 1, wherein sending the reversing determination model update to the second telematics device is done periodically.
+<br>
+
+<br>
+6. The method of claim 1, wherein sending the reversing determination model update to the second telematics device is done in response to an improvement in an output confidence level of the central reversing determination machine- learning model.
+<br>
+
+<br>
+7. The method of claim 1, wherein sending the reversing determination model update to the second telematics device is done in response to an update request from the second telematics device.
+<br>
+
+<br>
+8. The method of claim 1, wherein capturing the captured acceleration data is done in response to a synchronous event on the second telematics device.
+<br>
+
+<br>
+9. The method of claim 8, wherein capturing the captured acceleration data comprises copying sampled accelerometer readings from accelerometer First- In-First-Out buffers after the synchronous event.
+<br>
+
+<br>
+10. The method of claim 8, wherein capturing the captured acceleration data comprises copying sampled accelerometer readings from accelerometer First- In-First-Out buffers prior to the synchronous event.
+
+<br>
+
+<br>
+11. The method of claim 1, further comprising capturing, at the first telematics device, the training acceleration data from a three-axis accelerometer installed in the first telematics device.
+<br>
+
+<br>
+12. The method of claim 1, wherein capturing the training acceleration data is in response to a trigger event.
+<br>
+
+<br>
+13. The method of claim 1, wherein capturing the training acceleration data comprises capturing post-trigger event acceleration data.
+<br>
+
+<br>
+14. The method of claim 1, wherein capturing the training acceleration data comprises capturing pre-trigger event acceleration data and post-trigger event acceleration data.
+<br>
+
+<br>
+15. The method of claim 12, wherein capturing pre-trigger event acceleration data comprises copying sampled accelerometer readings from accelerometer First- In-First-Out buffers prior to the trigger event.
+<br>
+
+<br>
+16. The method of claim 12, wherein capturing post-trigger event acceleration data comprises copying sampled accelerometer readings from accelerometer First- In-First-Out buffers after the trigger event and before an expiry of a post-trigger duration timer.
+<br>
+
+<br>
+17. The method of claim 12, wherein the trigger event comprises the vehicle- provided reversing indication.
+<br>
+
+<br>
+18. The method of claim 1, further comprising sending, by the second telematics device, the machine-learning-determined reversing indication for the second vehicle to the telematics server.
+
+<br>
+
+<br>
+19. The method of claim 1, further comprising logging, by the telematics server, the machine-learning-determined reversing indication for the second vehicle in a telematics database coupled to the telematics server.
+<br>
+
+<br>
+20. A telematics system, comprising: 
+<br>
+a telematics server running a central reversing determination machine-learning model; 
+<br>
+a network; 
+<br>
+a first telematics device coupled to a first vehicle and in communication with the telematics server over the network; and 
+<br>
+a second telematics device coupled to a second vehicle which does not provide a reverse gear indication over the network; 
+<br>
+wherein: 
+<br>
+the telematics server receives training acceleration data and a vehicle- provided reversing indication from the first telematics device; 
+<br>
+the telematics server trains the central reversing determination machine- learning model and generates a reversing determination model update using the training acceleration data and the vehicle-provided reversing indication; 
+<br>
+the telematics server sends the reversing determination model update to the second telematics device; 
+<br>
+the second telematics device updates an edge reversing determination machine-learning model using the reversing determination model update; 
+<br>
+the second telematics device captures captured acceleration data for the second vehicle; and 
+<br>
+the edge reversing determination machine-learning model determines a machine-learning-determined reversing indication for the second vehicle based on the captured acceleration data. 
+</body></html>

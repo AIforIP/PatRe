@@ -1,0 +1,5 @@
+<html><head></head><body><h3>Date: 2022-10-17</h3>
+<p>Abstract A method for robust identification of a vehicle occupant. Simultaneously acquired data pairs from interior sensors and sensing elements are used as a training data set for global learning of a Deep Canonical Correlation Analysis architecture with two neural networks, wherein an authentication of the respective vehicle occupants from the group of vehicle users is carried out in a first step as an initialization. In a second step or a subsequent use, only one of the two sensing elements is then needed to identify the respective vehicle occupant. Also described is a system, via which the robust identification is provided by way of the method.</p>
+5
+10
+</body></html>

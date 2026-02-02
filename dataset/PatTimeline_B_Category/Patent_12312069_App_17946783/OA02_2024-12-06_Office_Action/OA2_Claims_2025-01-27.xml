@@ -1,0 +1,72 @@
+<html><head></head><body><h3>Date: 2025-01-27</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+<br>
+1.   (CURRENTLY AMENDED) A flight control system that is adapted for controlling movements of a rotary wing aircraft, comprising:<br>
+sensors that are configured to generate sensor data based on captured motions of the rotary wing aircraft;<br>
+motion actuators that are adapted for inducing a translational and/or a rotational movement of the rotary wing aircraft about at least one of a yaw axis, a roll axis, or a pitch axis<u> of the rotary wing aircraft;</u> anda passenger discomfort-aware control unit that is configured to receive the sensor data from the sensors and to generate, based on the sensor data, passenger discomfort-aware actuator control signals for controlling the motion actuatorsof<u></u><u>thc rotary wingc ircra</u><u>ft,</u> wherein the passenger discomfort-aware actuator control signals are at least suitable for kinetosis reduction or for whole-body vibration reduction in passengers of the rotary-wing aircraft when being applied to the motion actuator SVG
+{EMBED HERE}
+0.120.183<u> wherein the passenger discomfort-aware control unit generates the passenger discomfort-aware actuator control signals based on a linear feedback function that minimizes a transfer from the sensor data to control signals that increase a difference of a passenger discomfort index from a reference value, the reference value being indicative of an absence of passenger discomfort; and</u><br>
+<u>the linear feedback function is determined with a feedback controller that is adjusted based on an application of a predetermined filter signal in a passenger discomfort weighting</u><br>
+<br>
+<br>
+<br>
+<br>
+<u>filter, the predetermined filter signal being determined based on motion simulations of representative trajectories of the rotary wing aircraft with a motion simulator for flight control system design.</u><br>
+<br>
+2-4. (CANCELLED)33<br>
+<br>
+<br>
+5.   (CURRENTLY AMENDED) The flight control system of<del></del><del>claim 4</del><u>claim</u><u></u><u>1,</u>wherein the representative trajectories of the rotary wing aircraft comprise translational motions and rotational motions about the yaw, roll, and pitch axis.<br>
+<br>
+6.   (CURRENTLY AMENDED) The flight control system of<u></u><u>claim 3</u><u>claim</u><u></u><u>1,</u>wherein the predetermined filter signal adjusts a motion frequency in the feedback controller.<br>
+<br>
+7.   (CURRENTLY AMENDED) The flight control system of<del></del><del>claim 3</del><u>claim 1,</u>wherein the predetermined filter signal adjusts a motion pattern in the feedback controller.<br>
+<br>
+8.   (CANCELLED)<br>
+<br>
+9.   (CURRENTLY AMENDED) A method of operating a flight control system for a rotary wing aircraft, comprising:<br>
+using sensors to generate sensor data based on captured motions of the rotary wing aircraft;<br>
+using motion actuators to induce a translational and/or a rotational movement of the rotary wing aircraft about at least one of a yaw axis, a roll axis, or a pitch axis<u> of the rotary wing aircraft;</u><del> and</del><br>
+<br>
+<br>
+<br>
+using a passenger discomfort-aware control unit to receive the sensor data from the sensors and to generate, based on the sensor data, passenger discomfort-aware actuator control signals for controlling the motion actuators<u>of thc rotary sing</u>aircaft, wherein the passenger discomfort-aware actuator control signals are at least suitable for kinetosis reduction or for whole- body vibration reduction in passengers of the rotary-wing aircraft when being applied to the motion <u>actuators; and</u><br>
+<u>configuring the passenger discomfort-aware control unit before using the passenger discomfort-aware control unit in the flight control system;</u><br>
+<u>wherein </u><u></u><u>configuring </u><u></u><u>the passenger </u><u></u><u>discomfort-aware control unit comprises:</u><u>using a motion simulator to perform motion simulations of representative trajectories of the rotary wing aircraft;</u><br>
+<u>determining a filter signal based on the motion simulations;</u><br>
+<u>adjusting a feedback controller based on an application </u><u></u><u>of the </u><u></u><u>filter </u><u></u><u>signal in </u><u></u><u>a passenger discomfort weighting filter; and</u><br>
+<u>with </u><u></u><u>the </u><u></u><u>adjusted </u><u></u><u>feedback </u><u></u><u>controller,</u><br>
+<u>determining a linear feedback function that minimizes a transfer from the sensor data to control signals that increase a difference of a passenger discomfort index from a reference value, the reference value being indicative of an absence of passenger discomfort.</u><br>
+<br>
+10-11. (CANCELLED)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+12. (CURRENTLY AMENDED) The method of <u>c</u><u>laim </u><u>11</u><u>claim 9,</u>wherein the representative trajectories of the rotary wing aircraft comprise translational motions and rotational motions around the yaw, roll, and pitch axes of the rotary wing aircraft.<br>
+<br>
+13. (CANCELLED)<br>
+<br>
+14. (CURRENTLY AMENDED) The method of <u>cl</u><u>aim 1</u><u>3claim</u><u> 9,</u>wherein adjusting the feedback controller further comprises:<br>
+with the filter signal, adjusting a motion frequency in the feedback controller.<br>
+<br>
+15. (CURRENTLY AMENDED) The method of <u>claim</u><u> 13claim 9</u><u>,</u>wherein adjusting the feedback controller further comprises:<br>
+with the filter signal adjusting a motion pattern in the feedback controller.<br>
+<br>
+16. (NEW) The flight control system of claim 1, wherein the motion actuators include a pitch control unit configured to control collective and cyclic pitch of rotor blades of the rotary wing aircraft for inducing a translational and/or a rotational movement of the rotary wing aircraft about at least one of the yaw axis, the roll axis, or the pitch axis.<br>
+<br>
+17. (NEW) The flight control system of claim 1, wherein the motion actuators include at least one motion actuator configured to control a drive system of the rotary wing aircraft for inducing a translational and/or a rotational movement of the rotary wing aircraft about at least one of the yaw axis, the roll axis, or the pitch axis.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+18. (NEW) The method of claim 9, wherein using motion actuators to induce a translational and/or a rotational movement of the rotary wing aircraft about at least one of a yaw axis, a roll axis, or a pitch axis includes using a pitch control unit configured to control collective and cyclic pitch of rotor blades of the rotary wing aircraft to inducing the translational and/or the rotational movement of the rotary wing aircraft about at least one of the yaw axis, the roll axis, or the pitch axis.<br>
+<br>
+19. (NEW) The method of claim 9, wherein using motion actuators to induce a translational and/or a rotational movement of the rotary wing aircraft about at least one of a yaw axis, a roll axis, or a pitch axis includes using at least one motion actuator configured to control a drive system of the rotary wing aircraft to induce the translational and/or the rotational movement of the rotary wing aircraft about at least one of the yaw axis, the roll axis, or the pitch axis.
+</body></html>

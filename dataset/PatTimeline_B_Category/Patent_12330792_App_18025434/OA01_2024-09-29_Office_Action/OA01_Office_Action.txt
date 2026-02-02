@@ -1,0 +1,93 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Double Patenting
+A rejection based on double patenting of the “same invention” type finds its support in the language of 35 U.S.C. 101 which states that “whoever invents or discovers any new and useful process... may obtain a patent therefor...” (Emphasis added). Thus, the term “same invention,” in this context, means an invention drawn to identical subject matter. See Miller v. Eagle Mfg. Co., 151 U.S. 186 (1894); In re Vogel, 422 F.2d 438, 164 USPQ 619 (CCPA 1970); In re Ockert, 245 F.2d 467, 114 USPQ 330 (CCPA 1957).
+A statutory type (35 U.S.C. 101) double patenting rejection can be overcome by canceling or amending the claims that are directed to the same invention so they are no longer coextensive in scope. The filing of a terminal disclaimer cannot overcome a double patenting rejection based upon 35 U.S.C. 101.
+Applicant is advised that should claim 5-6 be found allowable, claims 18-19 will be objected to under 37 CFR 1.75 as being a substantial duplicate thereof.  When two claims in an application are duplicates or else are so close in content that they both cover the same thing, despite a slight difference in wording, it is proper after allowing one claim to object to the other as being a substantial duplicate of the allowed claim. See MPEP § 608.01(m).
+(This appears to be due to a typographical error in which claim 18 was made to depend from claim 1 instead of claim 15.)
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+Claims 1-20 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention for the following reasons:
+Claim 1, line 6, it is not clear to which of the passenger seats “the passenger seat” refers;
+Claim 1, lines 8-9, it is not clear to which of the passenger seats “the passenger seat” refers;
+Claim 5, lines 2-3, it is not clear to what element the “first end” and “second end” refer;
+Claim 5, line 3, “at a second end forms a loop” does not make sense and is likely missing a word;
+Claim 6, lines 2-3, it is not clear to what element the “first end” and “second end” refer;
+Claim 8, line 6, it is not clear to which of the passenger seats “the passenger seat” refers;
+Claim 12, lines 2-3, it is not clear to what element the “first end” and “second end” refer;
+Claim 12, line 3, “at a second end forms a loop” does not make sense and is likely missing a word;
+Claim 13, lines 2-3, it is not clear to what element the “first end” and “second end” refer;
+Claim 15, lines 6, it is not clear to which of the passenger seats “the passenger seat” refers;
+Claim 15, lines 11-12, it is not clear to which of the passenger seats “the passenger seat” refers;
+Claim 17, lines 2-3, it is not clear to what element the “first end” and “second end” refer;
+Claim 17, line 3, “at a second end forms a loop” does not make sense and is likely missing a word;
+Claim 18, lines 2-3, it is not clear to what element the “first end” and “second end” refer;
+Claim 20, line 1, “the at least one stability” lacks antecedent basis; and
+Claims 2-4, 7, 9-11, 14, 16, and 19 are indefinite as depending from indefinite claims.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(2) the claimed invention was described in a patent issued under section 151, or in an application for patent published or deemed published under section 122(b), in which the patent or application, as the case may be, names another inventor and was effectively filed before the effective filing date of the claimed invention.
+Claim(s) 1-4, 8-11, 15-16, and 20. is/are rejected under 35 U.S.C. 102(a)(2) as being anticipated by Colletti (US 10479506).
+A copy of the claims is provided below with parenthetical explanations and/or reference numerals showing how each of the claimed features is met.
+1. A privacy panel for a passenger seat comprising:
+a main body (comprising elements 122) positioned between adjacent passenger seats and having an upper end and a lower end (Figures 9-11);
+an attachment mechanism removably coupled to the main body proximate the lower end (comprising track 140 described in column 4 starting with line 58 and attachment by fasteners or the like, as described in column 4, starting at line 51), wherein the attachment mechanism comprises:
+a first attachment member couplable to an armrest of the passenger seat (first attachment member comprising a base of the housing 132, as described starting at column 4, line 51); and
+a second attachment member coupled to the first attachment member (second attachment member comprising fasteners that attach the first attachment member to the armrest 112, as described in column 4, starting at line 51);
+wherein the second attachment member is attachable to a fixed location on the passenger seat for preventing rotation of the armrest (where the armrest 112 is considered a fixed location on the passenger seat).
+2. The privacy panel of claim 1, wherein the main body comprises a concave portion along an edge extending between the upper end and the lower end (concave portions shown by grooves at 152, 178 in Figure 5, an end of which is along a front edge or a back edge that extends between the upper and the lower ends of the main body 122).
+3. The privacy panel of claim 1, further comprising at least one stability member (comprising the housing 132) coupled to the main body (as shown in Figure 6) configured to contact a seatback of the adjacent passenger seats resulting in less rotation of an upper portion of the main body (as shown by the close fit of the housing between seatback portions 100a and 100b in Figure 9).
+4. The privacy panel of claim 3, wherein the at least one stability member comprises projections that extend outward from opposing surfaces of the main body for contacting the adjacent passenger seats (the housing 132 forms the stability member with opposing projections that project laterally outward from the main body 122 and contact the adjacent seats 100a and 100b, as shown in Figure 9).
+8. A privacy panel for a passenger seat comprising:
+a main body (comprising elements 122) positioned between adjacent passenger seats and having an upper end and a lower end (Figures 9-11);
+an attachment mechanism removably coupled to the main body proximate the lower end (comprising track 140 described in column 4 starting with line 58 and attachment by fasteners or the like, as described in column 4, starting at line 51), wherein the attachment mechanism comprises:
+a first attachment member couplable to an armrest of the passenger seat (first attachment member comprising a base of the housing 132, as described starting at column 4, line 51); and
+a second attachment member coupled to the first attachment member (second attachment member comprising fasteners that attach the first attachment member to the armrest 112, as described in column 4, starting at line 51);
+wherein the second attachment member prevents rotation of the armrest (by the fasteners and/or adhesives described in column 4, starting at line 51).
+9. The privacy panel of claim 8, wherein the main body comprises a concave portion along an edge extending between the upper end and the lower end (concave portions shown by grooves at 152, 178 in Figure 5, an end of which is along a front edge or a back edge that extends between the upper and the lower ends of the main body 122).
+10. The privacy panel of claim 8, further comprising at least one stability member (comprising the housing 132) coupled to the main body (as shown in Figure 6) configured to contact a seatback of the adjacent passenger seats resulting in less rotation of an upper portion of the main body (as shown by the close fit of the housing between seatback portions 100a and 100b in Figure 9).
+11. The privacy panel of claim 10, wherein the at least one stability member comprises projections that extend outward from opposing surfaces of the main body for contacting the adjacent passenger seats (the housing 132 forms the stability member with opposing projections that project laterally outward from the main body 122 and contact the adjacent seats 100a and 100b, as shown in Figure 9).
+15. A privacy panel for a passenger seat comprising:
+a main body (comprising elements 122) positioned between adjacent passenger seats and having an upper end and a lower end (Figures 9-11);
+an attachment mechanism removably coupled to the main body proximate the lower end (comprising track 140 described in column 4 starting with line 58 and attachment by fasteners or the like, as described in column 4, starting at line 51), wherein the attachment mechanism comprises:
+a first attachment member couplable to an armrest of the passenger seat (first attachment member comprising a base of the housing 132, as described starting at column 4, line 51); and
+a second attachment member coupled to the first attachment member (second attachment member comprising fasteners that attach the first attachment member to the armrest 112, as described in column 4, starting at line 51);
+at least one stability feature (comprising the housing 132)  positioned on the main body (as shown in Figure 6) and configured to contact a seatback of the adjacent passenger seats resulting in less rotation of the privacy panel in a lateral direction (as shown by the close fit of the housing between seatback portions 100a and 100b in Figure 9);
+wherein the second attachment member is attachable to a fixed location on the passenger seat for preventing rotation of the armrest (where the armrest 112 is considered a fixed location on the passenger seat).
+16. The privacy panel of claim 15, wherein the main body comprises a concave portion along an edge extending between the upper end and the lower end (concave portions shown by grooves at 152, 178 in Figure 5, an end of which is along a front edge or a back edge that extends between the upper and the lower ends of the main body 122).
+20. The privacy panel of claim 15, wherein the at least one stability comprises at least one projection, wherein the at least one projection extends from a surface of the main body (as best understood in light of the indefiniteness, the housing 132 forms the stability member with opposing projections that project laterally outward from the main body 122 and contact the adjacent seats 100a and 100b, as shown in Figure 9).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim(s) 5, 12, and 17 is/are rejected under 35 U.S.C. 103 as being unpatentable over Colletti (US 10479506) in view of Bergdoll (US 11291306).
+Colletti shows and discloses the details set forth in the rejection under 102, above, and including the second attachment member coupled to a fixed location of the passenger seat, but lacks a second end of the second attachment member extending from the first attachment member and forming a loop around the fixed location, thus forming a stop.
+On the other hand, Bergdoll shows just such a structure in Figures 1-10 by the contoured shell that extends downward from the horizontal portion of the armrest to surroundingly engage an underside of the armrest and an upper portion of the spreader.
+It would have been obvious to provide additional structure subjacently of the housing 132 of Colletti and extending in a surrounding engagement with an underside of the armrest 112 and an upper portion of the spreader of Colletti, as taught by Bergdoll because doing so would provide the benefit of a more secure connection and mechanically advantageous support forming a stop against rotation.
+A copy of the claims is provided below with parenthetical explanations and/or reference numerals showing how each of the claimed features is met.
+5. The privacy panel of claim 1, wherein the second attachment member extends from the first attachment member at a first end and couples to a seat structure between the adjacent passenger seats at a second end forms a loop around the fixed location forming a stop (in accordance with the statement of obviousness, above).
+12. The privacy panel of claim 8, wherein the second attachment member extends from the first attachment member at a first end and couples to a seat structure between the adjacent passenger seats at a second end forms a loop forming a stop (in accordance with the statement of obviousness, above).
+17. The privacy panel of claim 15, wherein the second attachment member extends from the first attachment member at a first end and couples to a seat structure between the adjacent passenger seats at a second end forms a loop around the fixed location forming a stop (in accordance with the statement of obviousness, above).
+Claim(s) 6-7, 13-14, and 18-19 is/are rejected under 35 U.S.C. 103 as being unpatentable over Colletti (US 10479506) in view of von der Heyde (6260903).
+Colletti shows and discloses the details set forth in the rejection under 102, above, and including the second attachment member coupled to a fixed location of the passenger seat, but lacks a second attachment member having a second end coupled to a seat bottom of the passenger seat.
+On the other hand, von der Heyde shows just such a structure, including the latches 41 in Figures 1-4.
+It would have been obvious to provide additional structure subjacently of the housing 132 of Colletti and configured to overlie a portion of adjacent seats on opposite sides of the privacy panel of Colletti, as taught by von der Heyde, because doing so would provide the benefit of a more secure connection of the privacy panel to the seats.
+A copy of the claims is provided below with parenthetical explanations and/or reference numerals showing how each of the claimed features is met.
+6. The privacy panel of claim 1, wherein the second attachment member extends from the attachment mechanism at a first end and couples to a seat bottom of the passenger seat at the second end (in accordance with the statement of obviousness, above).
+7. The privacy panel of claim 6, wherein, when a passenger is seated, a weight of the passenger prevents rotation of the armrest (as can be appreciated from the weight of the seat occupants in Figure 1 of von der Heyde in combination with the privacy panel of Colletti).
+13. The privacy panel of claim 8, wherein the second attachment member extends from the attachment mechanism at a first end and couples to a seat bottom of the passenger seat at the second end (in accordance with the statement of obviousness, above).
+14. The privacy panel of claim 13, wherein, when a passenger is seated, a weight of the passenger prevents rotation of the armrest (as can be appreciated from the weight of the seat occupants in Figure 1 of von der Heyde in combination with the privacy panel of Colletti).
+18. The privacy panel of claim 1, wherein the second attachment member extends from the attachment mechanism at a first end and couples to a seat bottom of the passenger seat at the second end (in accordance with the statement of obviousness, above).
+19. The privacy panel of claim 18, wherein, when a passenger is seated, a weight of the passenger prevents rotation of the armrest (as can be appreciated from the weight of the seat occupants in Figure 1 of von der Heyde in combination with the privacy panel of Colletti).
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to DAVID E ALLRED whose telephone number is (571)272-7833. The examiner can normally be reached Mon-Fri, 9-5:30.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, David R Dunn can be reached on 571-272-6670. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+DAVID E. ALLRED
+Primary Examiner
+Art Unit 3636
+/DAVID E ALLRED/Primary Examiner, Art Unit 3636

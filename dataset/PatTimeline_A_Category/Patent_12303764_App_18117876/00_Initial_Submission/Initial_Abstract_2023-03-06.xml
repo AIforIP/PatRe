@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2023-03-06</h3>
+
+<h1>ABSTRACT</h1>
+<p>A system and method for scoring the performance of a performer in a sport, such as bull riding and gymnastic competitions. The scoring can be done using a video feed of a performance. Computer vision of the system can detect predefined body parts of the performer in frames of the video feed. Thereafter, geometric centers of the predefined body parts can be defined. Thereafter, a framework can be built by connecting the geometric centers and spatiotemporal changes in the framework can be tracked for determining predefined body movements. A scoring module based on deep neural network can score the performance using the predefined body movements.</p><p>18</p></body></html>

@@ -1,0 +1,68 @@
+<html><head></head><body><h3>Date: 2024-10-26</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS:</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+1.(Currently Amended)
+A redundant auxiliary power system for an aircraft comprising:<br>
+an auxiliary power unit (APU) for supplying power to the aircraft;<br>
+a normal electric busbar network in the aircraft;<br>
+an emergency electric busbar network in the aircraft;<br>
+a normal starter in the aircraft configured to start the APU;<br>
+an emergency starter in the aircraft configured to start the APU;<br>
+a normal electric power generator in the aircraft configured to be driven by the APU to generate electrical power supplied to the normal electric busbar; and<br>
+an emergency electric power generator in the aircraft configured to be driven by the APU to generate electric power supplied to the emergency busbar network;<br>
+an electrical power controller in the aircraft configured to control electrical operational parameters of the normal electric busbar network and the emergency electric busbar networks;<br>
+and an APU controller in the aircraft operatively connected to the electrical power controller and configured to control the APU to selectively operate in a normal mode and an emergency mode based <u>information received by the APU controller, wherein the information is contained in at least one of: </u><del>on d</del>ata received <u>by the APU controller </u>from the electrical power controller, data<u> received by the APU controller and that is indicative of </u><del>related to </del>aircraft operational parameters or <u>a signal received by the APU controller from </u>a manually activated <u>device;</u><u></u><del>signal;</del>wherein the normal starter and the emergency starter are each configured to start the APU to operate the normal electric power generator and/or the emergency electric power generator;<br>
+and wherein the redundant auxiliary power system is configured to operate in:the emergency mode during which the APU controller and the electrical power controller are jointly configured to activate the emergency starter to start the APU and activate the emergency electric power generator to supply electric power to the emergency electric busbar network; and<br>
+<br>
+<br>
+in the normal mode during which the APU controller is configured to select the normal starter or the emergency starter to start the APU; select the normal electric power generator or the emergency electric power generator, and<br>
+select whether power from the normal or emergency electric power generator is to be applied to the normal electric busbar network or the emergency electric busbar network.<br>
+<br>
+2. (Original) The redundant auxiliary power system according to claim 1, wherein the normal electric power generator is configured to supply electric power to the emergency electric busbar network,<br>
+wherein the APU controller is configured to activate the normal electric power generator to supply electric power to the normal emergency busbar network or the emergency electric busbar network while operating in the normal mode of the redundant auxiliary power system, and wherein the activation by the APU controller is based on the data received from the electrical power controller, data related to the aircraft operational parameters, or a manually activated signal.<br>
+<br>
+3. (Original) The redundant auxiliary power system according to claim 1, wherein the emergency electric power generator is configured to supply electric power to the normal electric busbar network,<br>
+wherein the APU controller is configured to activate the emergency electric power generator to supply electric power to the normal electric busbar network or the emergency electric busbar network while operating in the normal mode of the redundant auxiliary power system, and<br>
+wherein the activation by the APU controller is based on data received from the electrical power controller, data related to the aircraft operational parameters, or a manually activated signal.<br>
+<br>
+<br>
+<br>
+4. (Original) The redundant auxiliary power system according to claim 1, wherein the electrical power controller is configured to monitor an operating time of each of the normal electric power generator and the emergency power generator,<br>
+wherein while in the normal mode, the APU controller is configured to activate the normal electric power generator or the emergency power generator based on which has operated for a shortest time based on the operating time monitored by the electrical power controller.<br>
+<br>
+5. (Original) The redundant auxiliary power system according to claim 1, wherein the electrical power controller is configured to detect a malfunction in the normal starter and in the emergency starter, and<br>
+the APU controller is configured to deactivate the normal starter in response to a signal from the electrical power controller indicating a malfunction in the normal starter and deactivate the emergency starter in response to a signal from the electrical power controller indicating a malfunction in the emergency starter.<br>
+<br>
+6. (Original) The redundant auxiliary power system according to claim 1, wherein the electrical power controller is configured to detect a malfunction in the normal electric power generator and the emergency power generator, and<br>
+the APU controller is configured to deactivate the normal electric power generator to a signal from the electrical power controller indicating a malfunction in the normal electric power generator, and deactivate the emergency electric power generator in response to a signal from the electrical power controller indicating a malfunction in the emergency power generator.<br>
+<br>
+7. (Original) The redundant auxiliary power system according to claim 1, wherein the auxiliary power system is configured to operate in the emergency mode when the APU controller receives a signal indicating a Total Engine Flame Out (TEFO) or a Loss of Main Electrical Supply (LMES).<br>
+<br>
+8. (Original) The redundant auxiliary power system according to claim 1, wherein the aircraft operational parameters are used by the APU controller to control the normal mode or the emergency mode of the APU.<br>
+<br>
+<br>
+<br>
+9. (Original) An aircraft comprising the redundant auxiliary power system according to claim 1.<br>
+<br>
+10. (Currently Amended) A method for supplying electric power to an aircraft by a redundant auxiliary power system in the aircraft which includes an auxiliary power unit (APU), a normal electric busbar network, an emergency electric busbar network, a normal starter, an emergency starter, a normal electric power generator and an emergency electric power generator, an electrical power controller and an APU controller operatively,<br>
+wherein the method comprises:<br>
+operating the redundant auxiliary power system in a normal mode during which <u>the APU controller makes a selection </u><del>a selection is made </del>to activate the normal starter or the emergency starter to start the APU, select and activate the normal electric power generator or the emergency electric power generator to be driven by the APU, and select and activate whether power from the selected normal or emergency electric power generator is applied to the normal electric busbar network or the emergency electric busbar network, and<br>
+operating in an emergency mode during which the emergency starter <u>is</u><u></u><del>to </del>activated b~y<u> the APU controller </u>to start the APU and the emergency electric power generator is driven by the APU to supply electric power to the emergency electric busbar network.<br>
+<br>
+11. (Original) The method of claim 10, further comprising:<br>
+activating, during the normal mode, the normal starter by the APU controller to start the APU,<br>
+activating, during the normal mode, the normal power generator by the APU controller to be driven by the APU to supply electric power to the normal electric busbar network.<br>
+<br>
+12. (Original) The method according to claim 11, further comprising selecting the emergency electric busbar network to be supplied with the electrical power from the normal power generator.<br>
+<br>
+<br>
+<br>
+13. (Original) The method according to claim 10, wherein if the emergency electric power generator is activated, the method further comprises selecting whether the electric power generated by the emergency electric power generator is supplied to the normal electric busbar network or the emergency electric busbar network.<br>
+<br>
+14. (Original) The method according to claim 11, further comprising monitoring operating times of the normal electric power generator and the emergency electric power generator, and<br>
+selecting to activate the normal electric power generator or the emergency electric power based on the operating times.<br>
+<br>
+15. (Original) The method according to claim 11, wherein:<br>
+detecting a malfunction of the normal starter and deactivating the normal starter or detecting a malfunction of the emergency starter and deactivating the emergency starter, and in response to the deactivation of the normal or emergency starter, activating the other of the normal or emergency starter; and/or detecting a malfunction of and deactivating the normal electrical power generator or detecting of and deactivating the emergency electric power generator, and activating the other of the normal or emergency electric power supply.
+</body></html>

@@ -1,0 +1,125 @@
+<html><head></head><body>18046122
+
+   CLAIMS
+   
+What is claimed is:
+   
+   
+
+<br>
+
+1. A prop control method comprising:
+acquiring a trigger operation performed on a target shooting prop in a virtual battlefield scene, wherein an attack range of the target shooting prop covers a partial area in the virtual battlefield scene; and
+performing, in response to the trigger operation and in a target time period by using the target shooting prop, a plurality of continuous shooting actions on a target area in which a target object is located, wherein the target object is targeted by the target shooting prop.
+<br>
+
+2. The method according to claim <u>1</u>, further comprising:
+acquiring operation attribute information of the trigger operation in response to the trigger operation;
+adjusting an aim point of the currently displayed target shooting prop in an aiming direction to a target size that matches the operation attribute information; and
+determining an object targeted by the aim point as the target object.
+<br>
+
+3. The method according to claim <u>2</u>, wherein in the process of adjusting an aim point further comprises:
+acquiring a shooting parameter that matches the operation attribute information, the shooting parameter comprising a shooting initial speed and an initial gravity acceleration of a prop object that are shot by the target shooting prop; and
+determining a shooting flight track of the prop object in the aiming direction according to the shooting parameter, a flight distance of the shooting flight track when no collision is negatively related to the target size of the aim point.
+<br>
+
+4. The method according to claim <u>3</u>, wherein the acquiring a shooting parameter that matches the operation attribute information comprises:
+acquiring, when the operation attribute information is an operation duration, wherein the shooting parameter matches the operation duration and the operation duration is positively related to the shooting initial speed, wherein the operation duration is negatively related to the initial gravity acceleration, and the operation duration comprises any one of a press duration of a press operation, a gesture holding duration of a gesture operation, or a holding duration of a gesture trigger operation; or
+acquiring, when the operation attribute information is the press operation, the shooting parameter that matches the pressing pressure, which is positively related to the shooting initial speed, and is negatively related to the initial gravity acceleration; or
+acquiring, when the operation attribute information is a slide distance of a slide operation, the shooting parameter that matches the slide distance, which is obtained by performing a slide operation in a first slide direction being positively related to the shooting initial speed and being negatively related to the initial gravity acceleration, further wherein the slide distance obtained by performing a slide operation in a second slide direction is negatively related to the shooting initial speed, and is positively related to the initial gravity acceleration; or
+acquiring, when the operation attribute information is a gesture movement distance of a gesture operation, the shooting parameter that matches the gesture movement distance, which is obtained by performing a gesture operation in a first gesture direction being positively related to the shooting initial speed and being negatively related to the initial gravity acceleration, wherein the gesture movement distance obtained by performing a gesture operation in a second gesture direction is negatively related to the shooting initial speed, and is positively related to the initial gravity acceleration.
+<br>
+
+5. The method according to claim <u>2</u>, wherein the adjusting comprises:
+adjusting, when the operation attribute information is an operation duration, the aim point of the currently displayed target shooting prop in the aiming direction to a target size that matches the operation duration, which is negatively related to the target size, wherein the operation duration comprises any one of press duration of a press operation, a gesture holding duration of a gesture operation, or a holding duration of a gesture trigger operation; or
+adjusting, when the operation attribute information is a slide distance of a slide operation, the aim point of the currently displayed target shooting prop in the aiming direction to a target size that matches the slide distance obtained by performing a slide operation in a first slide direction being positively related to the target size, wherein the slide distance obtained by performing a slide operation in a second slide direction is negatively related to the target size; or
+adjusting, when the operation attribute information is a gesture movement distance of a gesture operation, the aim point of the currently displayed target shooting prop in the aiming direction to a target size that matches the gesture movement distance, which is obtained by performing a gesture operation in a first gesture direction that is positively related to the target size, wherein the gesture movement distance obtained by performing a gesture operation in a second gesture direction is negatively related to the target size.
+<br>
+
+6. The method according to claim <u>1</u>, wherein after the performing, the method further comprises:
+adjusting, when the target object is located in the attack range of the target shooting prop and the prop object shot by the target shooting prop collides with the target object, hit points of all objects in the target area in which the target object is located;
+wherein an adjusted hit point is less than an unadjusted hit point, and the target area is an area obtained by using the position of the target object as a center and a target distance as a radius.
+<br>
+
+7. The method according to claim <u>6</u>, wherein the adjusting hit points of all objects in the target area further comprises:
+determining a distance between each of the objects and the center of the target area; and
+adjusting the hit point of each of the objects according to the distance, wherein the distance and a change amplitude of the hit point are negatively related.
+<br>
+
+8. The method according to claim <u>1</u>, wherein after the performing, the method further comprises:
+adjusting, when the target object is not in the attack range of the target shooting prop and the prop object shot by the target shooting prop collides with a first reference object in the attack range of the target shooting prop, hit points of all objects in a first reference area in which the first reference object is located;
+an adjusted hit point being less than an unadjusted hit point, and a direction of the first reference object relative to the target shooting prop is the same as a direction of the target object relative to the target shooting prop, and the first reference area is an area obtained by using the position of the first reference object as a center and a first reference distance as a radius; and
+adjusting, when the target object is not located in the attack range of the target shooting prop and the prop object shot by the target shooting prop does not collide with any object in the attack range of the target shooting prop, hit points of all objects in a second reference area;
+an adjusted hit point being less than an unadjusted hit point, wherien the second reference area is an area obtained by using a landing position of the prop object as a center and a second reference distance as a radius.
+<br>
+
+9. The method according to claim <u>1</u>, wherein the performing comprises:
+performing, by using the target shooting prop when detecting that the aiming direction of the target shooting prop does not change in the target time period, a plurality of continuous shooting actions on the target area in which the target object is located; and
+updating, when detecting that the aiming direction of the target shooting prop changes within the target time period, a target object targeted before each shooting action is performed by the target shooting prop, and performing, by using the target shooting prop, the shooting action on an updated target area in which the updated target object is located.
+<br>
+
+10. The method according to claim <u>1</u>, wherein the performing comprises:
+performing, when detecting that the position of the target shooting prop does not change within the target time period, a plurality of continuous shooting actions on the target area in which the target object is located; and
+updating, when detecting that the position of the target shooting prop changes within the target time period, a target object targeted before each shooting action is performed according to the position of the target shooting prop before each shooting action, and performing, by using the target shooting prop, the shooting action on an updated target area in which the updated target object is located.
+<br>
+
+11. The method according to claim <u>1</u>, wherein the virtual battlefield scene runs in a shooting task; and before the acquiring a trigger operation performed on a target shooting prop in a virtual battlefield scene, the method further comprises:
+acquiring a prop configuration instruction;
+displaying, in response to the prop configuration instruction, a configuration interface that is in the shooting task and is used for providing a shooting prop, the configuration interface comprising a target slot configured for the target shooting prop; 
+adding, when a selection operation performed on the target slot is acquired, the target shooting prop to the shooting task; and 
+displaying a prop trigger icon corresponding to the target shooting prop in an operation area of the shooting task.
+<br>
+
+12. The method according to claim <u>11</u>, wherein after the performing, the method further comprises:
+adjusting the prop trigger icon corresponding to the target shooting prop in the operation area from a first display state to a second display state; and the second display state being used for indicating that the target shooting prop is in a frozen state;
+displaying a remaining duration of the prop trigger icon corresponding to the target shooting prop in the second display state; and
+adjusting, when the remaining duration is zero, the prop trigger icon corresponding to the target shooting prop from the second display state to the first display state.
+<br>
+
+13. The method according to claim <u>12</u>, wherein the displaying the remaining duration of the prop trigger icon further comprises:
+displaying the remaining duration of the prop trigger icon corresponding to the target shooting prop in the second display state according to a countdown prompt manner, wherein the countdown prompt manner comprises at least one of a seconds countdown or a progress bar countdown.
+<br>
+
+14. A prop control apparatus, comprising:
+an acquiring unit configured to acquire a trigger operation performed on a target shooting prop in a virtual battlefield scene, wherein an attack range of the target shooting prop covers a partial area in the virtual battlefield scene; and
+a control unit configured to perform, in response to the trigger operation and in a target time period by using the target shooting prop, a plurality of continuous shooting actions on a target area in which a target object is located, wherein the target object is targeted by the target shooting prop.
+<br>
+
+15. The apparatus of claim <u>14</u>, further comprising:
+a determining unit configured to determine, in response to the trigger operation, the target object targeted by the target shooting prop, wherein the determining unit is further configured for:
+acquiring operation attribute information of the trigger operation in response to the trigger operation;
+adjusting an aim point of the currently displayed target shooting prop in an aiming direction to a target size that matches the operation attribute information; and
+determining an object targeted by the aim point as the target object.  
+<br>
+
+16. The apparatus of claim <u>15</u>, wherein the determining unit is configured for:
+determining an object selected targeted by the aim point as the target object by adjusting an aim point of the currently displayed target shooting prop in an aiming direction to a target size that matches the operation attribute information;
+acquiring a shooting parameter that matches the operation attribute information, the shooting parameter comprising a shooting initial speed and an initial gravity acceleration of a prop object that are shot by the target shooting prop; and
+determining a shooting flight track of the prop object in the aiming direction according to the shooting parameter, a flight distance of the shooting flight track when no collision being is negatively related to the target size of the aim point.
+<br>
+
+17. The apparatus of claim <u>14</u>, further comprising:
+an adjusting unit configured for adjusting, when the target object is located in the attack range of the target shooting prop and the prop object shot by the target shooting prop collides with the target object, hit points of all objects in the target area in which the target object is located, wherein an adjusted hit point is less than an unadjusted hit point, and the target area is an area obtained by using the position of the target object as a center and a target distance as a radius. 
+<br>
+
+18. A non-transitory computer readable storage medium, comprising a stored computer program, and the computer program running to perform:
+acquiring a trigger operation performed on a target shooting prop in a virtual battlefield scene, wherein an attack range of the target shooting prop covers a partial area in the virtual battlefield scene; and
+performing, in response to the trigger operation and in a target time period by using the target shooting prop, a plurality of continuous shooting actions on a target area in which a target object is located, wherein the target object is targeted by the target shooting prop.
+<br>
+
+19. The computer readable storage medium of claim <u>18</u>, wherein the virtual battlefield scene runs in a shooting task; and before the acquiring a trigger operation performed on a target shooting prop in a virtual battlefield scene, the computer program running further performs:
+acquiring a prop configuration instruction;
+displaying, in response to the prop configuration instruction, a configuration interface that is in the shooting task and that is used for providing a shooting prop, the configuration interface comprising a target slot configured for the target shooting prop; 
+adding, when a selection operation performed on the target slot is acquired, the target shooting prop to the shooting task; and 
+displaying a prop trigger icon corresponding to the target shooting prop in an operation area of the shooting task.
+<br>
+
+20. The computer readable storage medium of claim <u>19</u>, wherein after the performing, the computer program running further performs:
+adjusting the prop trigger icon corresponding to the target shooting prop in the operation area from a first display state to a second display state; and the second display state being used for indicating that the target shooting prop is in a frozen state;
+displaying a remaining duration of the prop trigger icon corresponding to the target shooting prop in the second display state; and
+adjusting, when the remaining duration is zero, the prop trigger icon corresponding to the target shooting prop from the second display state to the first display state.
+
+   
+
+</body></html>

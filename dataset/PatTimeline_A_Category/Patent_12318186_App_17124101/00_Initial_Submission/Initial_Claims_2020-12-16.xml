@@ -1,0 +1,134 @@
+<html><head></head><body><h3>Date: 2020-12-16</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1.    A system for testing the breath of a patient for the concentration of various gases comprising: 
+<br>
+a breath collector; 
+<br>
+a gas inlet connectable to the breath collector a gas exhaust; 
+<br>
+a manifold comprising a gas flow path in gaseous communication with the gas inlet and the gas exhaust; 
+<br>
+at least one gas sensor configured to output sensor data relating to a concentration of a gas passing through the gas flow path; 
+<br>
+a heating element in thermal communication with the manifold; 
+<br>
+a temperature sensor configured to output temperature data relating to a temperature of the manifold; 
+<br>
+a control system comprising one or more processors and a memory for determining a concentration of gases based on the output sensor data; and 
+<br>
+a display that outputs the determined concentration of gases. 
+
+<br>
+
+2.
+The system of claim 1, wherein the at least one gas sensor comprises at least one of a CH4 sensor, a CO2 sensor, an H2 sensor, or an H2S sensor.
+<br>
+
+3.
+The system of claim 1, wherein the at least one gas sensor comprises a CO2 sensor, an H2 sensor, and H2S sensor, positioned in series along the gas flow path and the gas flow path comprises a single channel in the manifold.
+<br>
+
+4.
+The system of claim 3, wherein one a first baffle is position adjacent the H2 sensor and a second baffle is positioned adjacent to the H2S sensor and wherein the first and second baffle are sized and shaped to facilitate gas exchange with the H2S sensor and the H2 sensor.
+
+<br>
+5.    The system of claim 1, further comprising a pump configured to pump gas through the gas flow path based on feedback from a flow meter configured to detect a flow rate through the gas flow path.
+<br>
+
+<br>
+6.    The system of claim 1, wherein the temperature sensor is a thermistor connected to a printed circuit board.
+<br>
+
+<br>
+7.    The system of claim 6, wherein the heating element is connected to the printed circuit board.
+<br>
+
+8.
+The system of claim 6, wherein the heating element comprises a trace printed on the printed circuit board.
+<br>
+
+<br>
+9.    The system of claim 4, wherein the heating element comprises a plurality of heating elements, and wherein each of the plurality of heating elements is configured to heat one of a set of zones of the manifold.
+<br>
+
+<br>
+10.   The system of claim 9, wherein the temperature sensor comprises a plurality of temperature sensors and wherein each of the plurality of temperature sensors is configured to output temperature data relating to one of the set of zones of the manifold.
+<br>
+
+<br>
+11.   The system of claim 1, wherein the control system is configured to maintain a minimum temperature of the manifold by energizing the heating element based on data output from the temperature sensor.
+<br>
+
+<br>
+12.   The system of claim 1, wherein the manifold comprises a metal block and wherein the gas flow path is constructed through the metal block.
+<br>
+
+<br>
+13.   The system of claim 1, wherein the manifold comprises a thermally conductive material.
+<br>
+
+<br>
+14.   The system of claim 13, wherein the thermally conductive material comprises stainless steel or copper.
+<br>
+
+<br>
+15.   The system of claim 1, wherein the gas flow path comprises a baffle positioned adjacent to the at least one gas sensor.
+
+<br>
+16.   The system of claim 11, wherein the minimum temperature is between 38 and 41 degrees Celsius.
+<br>
+
+<br>
+17.   The system of claim 11, wherein the minimum temperature is 40 degrees Celsius.
+<br>
+
+<br>
+18.   The system of claim 1, wherein the control system is configured to determine an indication of whether a patient has SIBO based on the output sensor data.
+<br>
+
+<br>
+19.   The system of claim 18, wherein the output sensor data comprises data output from a CH4 sensor, a CO2 sensor, an H2 sensor, and an H2S sensor.
+<br>
+
+<br>
+20.    The system of claim 19, wherein the control system is further configured to output an indication of diarrhea of the patient if the output sensor data indicates an increase in H2S level.
+<br>
+
+<br>
+21.   The system of claim 19, wherein the control system is further configured to output a positive indication of SIBO if the output sensor data indicates that an H2S level increases and a CH4 and H2 breath gases levels did not increase during a lactulose breath test.
+<br>
+
+<br>
+22.   A method of sensing gas concentration in exhaled breath, the method comprising: 
+<br>
+receiving a batch of exhaled breath from a patient; 
+<br>
+heating the batch of exhaled breath to a temperature above 37 degrees Celsius while pumping the air through a flow path at a constant flow rate; 
+<br>
+sensing gas concentrations in the flow path using a set of electrochemical sensors; and 
+<br>
+displaying the gas concentrations. 
+
+<br>
+
+<br>
+23.   The method of claim 22, wherein the gas concentrations comprise a CH4, a CO2, H2, and a H2S concentration.
+<br>
+
+<br>
+24.   The method of claim 22, wherein the flow path is routed through a manifold.
+<br>
+
+<br>
+25.   The method of claim 24, wherein heating the batch of breath comprises maintaining the manifold at a temperature above 37 degrees Celsius.
+
+<br>
+26.    The method of claim 22, wherein the gas concentrations comprise at least CH4, and H2 and the control system is further configured to determine an indication of whether the patient has SIBO based on the gas concentrations.
+4833-6651-8484 1Page 53 of 56065472-000794US00
+4833-6651-8484 1Page 54 of 56065472-000794US00
+4833-6651-8484.1Page 55 of 56065472-000794US00
+4833-6651-84841Page 52 of 56065472-000794US00
+</body></html>

@@ -1,0 +1,177 @@
+<html><head></head><body><h3>Date: 2021-03-05</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1.    A system comprising: 
+<br>
+an optical fibre assembly configured to measure one or more physiological 
+<br>
+parameters of an individual; and 
+<br>
+a pressure sensor configured to measure a contact pressure of the optical fibre assembly on the individual; 
+<br>
+wherein the pressure sensor comprises: 
+<br>
+an optical fibre comprising a transducer fibre Bragg grating and a 
+<br>
+matrix; 
+<br>
+wherein the transducer fibre Bragg grating is embedded in a matrix; and 
+<br>
+the matrix is configured to cause longitudinal strain in the transducer fibre Bragg grating in response to the matrix being subject to a transverse load. 
+
+<br>
+
+2.
+The system of claim 1, wherein: 
+<br>
+the optical fibre of the pressure sensor further comprises a temperature compensation fibre Bragg grating, the temperature compensation fibre Bragg grating received in a clearance fit in a cavity of a rigid support member isolating the temperature compensation fibre Bragg grating from a transverse load; 
+<br>
+wherein the temperature compensation fibre Bragg grating is free to expand and contract independently of the rigid support member.
+<br>
+
+<br>
+3.    The system of claim 1 or of claim 2, wherein the optical fibre of the pressure sensor further comprises a strain compensation fibre Bragg grating.
+
+<br>
+
+<br>
+4.    The system of claim 1 or claim 2, wherein the matrix containing the transducer fibre Bragg grating comprises an elongated longitudinal section relative to a length of the transducer fibre Bragg grating.
+<br>
+
+5.
+The system of any of claims 1 to 4, wherein the optical fibre comprises a plurality of transducer fibre Bragg gratings, each of the plurality of fibre Bragg gratings embedded in a respective matrix.
+
+<br>
+
+<br>
+6.    The system of claim 5 as it depends from claim 3, wherein each of the plurality of transducer fibre Bragg gratings has a corresponding strain compensation fibre Bragg grating; or 
+<br>
+the system of claim 
+<br>
+5 as it depends from claim 4, wherein the matrix of each of the plurality of transducer fibre Bragg gratings comprises an elongated longitudinal section relative to a length of the transducer fibre Bragg grating.
+<br>
+
+<br>
+7.    The system of any of claims 1 to 6, wherein one or more optical fibres of the optical fibre assembly is embedded in a matrix such that the ends of the one or more optical fibres of the optical fibre assembly are able to transmit light to or receive light from the individual when an outer surface of the matrix is in contact with the individual, and/or 
+<br>
+wherein one or more optical fibres of the optical fibre assembly is embedded in a matrix such that the ends of the one or more optical fibres of the optical fibre 
+<br>
+assembly are exposed to gas emitted from the individual.
+<br>
+
+<br>
+8.    The system of claim 7 or 8, wherein: 
+<br>
+i) the one or more optical fibres of the optical fibre assembly are embedded in the same matrix as the matrix in which a transducer fibre Bragg grating of the optical 
+<br>
+fibre of the pressure sensor is embedded; or 
+<br>
+ii) the matrix in which the one or more optical fibres of the optical fibre assembly are embedded is connected to a matrix in which a transducer fibre Bragg grating of the optical fibre of the pressure sensor is embedded. 
+
+<br>
+
+9.
+The system of claim 7 or of claim 8, wherein the matrix in which the one or more optical fibres of the optical fibre assembly are embedded comprises scattering elements configured to diffusely scatter light from the optical fibres.
+<br>
+
+<br>
+10.   The system of claim 7 or of claim 8, wherein the system comprises a scattering layer disposable between the matrix in which the one or more optical fibres of the optical fibre assembly are embedded and the individual, wherein the scattering layer is configured to diffusely scatter light from the optical fibres.
+
+<br>
+
+<br>
+11.   The system of any preceding claim, wherein the optical fibre assembly is configured to measure blood oxygen saturation of an individual when in contact with the individual, the optical fibre assembly comprising: 
+<br>
+a first optical fibre configured to deliver light to the individual at a first 
+<br>
+wavelength; 
+<br>
+a second optical fibre configured to deliver light to the individual at a second wavelength; and 
+<br>
+a third optical fibre configured to receive light reflected from the individual at both the first and second wavelength. 
+<br>
+
+<br>
+12.   The system of any preceding claim, wherein the optical fibre assembly is configured to measure CO2 emitted from the skin of an individual when in contact with the individual, the optical fibre assembly comprising: 
+<br>
+a fourth optical fibre with a tip that is configured with reflectance properties 
+<br>
+that vary in response to CO2 and which is exposed to gases emitted from the skin of the individual.
+<br>
+
+<br>
+13.   A handheld probe comprising the system of any of claims 1 to 12.
+<br>
+
+<br>
+14.   A textile comprising the system of any of claims 1 to 12, wherein the optical fibres of the optical fibre assembly are integrated with the textile by knitting, weaving, embroidering or threading the optical fibres into the textile.
+<br>
+
+<br>
+15.   The textile of claim 14, wherein the optical fibre of the pressure sensor is integrated with the textile by knitting, weaving, embroidering or threading the optical fibre into the textile.
+<br>
+
+<br>
+16.   A compression bandage or compression garment comprising the textile of claim 14 or of claim 15.
+
+<br>
+
+<br>
+17.   A loose fitting garment comprising the textile of claim 14 or of claim 15, wherein the optical fibre assembly is configured to measure the one or more physiological parameters only when an appropriate pressure is applied.
+
+<br>
+
+<br>
+18.   The loose fitting garment of claim 17, wherein the appropriate pressure is between from 5 kPa to 15 kPa.
+<br>
+
+<br>
+19.   A method of monitoring a physiological parameter of an individual, the method comprising: 
+<br>
+applying an optical fibre assembly to an individual; 
+<br>
+measuring the physiological parameter using the optical fibre assembly; and 
+<br>
+measuring a contact pressure of the optical fibre assembly on the individual using a pressure sensor; 
+<br>
+wherein the pressure sensor comprises: 
+<br>
+an optical fibre comprising a transducer fibre Bragg grating; 
+<br>
+wherein the transducer fibre Bragg grating is embedded in a matrix; and 
+<br>
+the matrix is configured to cause longitudinal strain in the transducer fibre Bragg grating in response to the matrix being subject to a transverse load. 
+<br>
+
+<br>
+20.   The method of claim 19, wherein the optical fibre assembly is configured to measure the physiological parameter only when contact pressure of the optical fibre assembly measured by the pressure sensor is determined to be within an optimal range.
+
+<br>
+
+<br>
+21.   The method of claim 20, wherein the optimal range of contact pressure of the optical fibre assembly is between from 5 kPa to 15 kPa.
+<br>
+
+<br>
+22.   The method of any of claims 19 to 21, wherein the optical fibre assembly and the pressure sensor are integrated with a textile, the method comprising applying the textile to the individual to measure the physiological parameter and the contact pressure.
+<br>
+
+<br>
+23.   The method of claim 22, wherein applying the textile to the individual comprises at least one of the individual i) wearing the textile, ii) lying on the textile, 
+<br>
+iii) sitting on the textile, iv) resting part of their body on the textile, and/or v) performing an activity whilst at least part of their body is in contact with the textile. 
+
+<br>
+
+<br>
+24.   The method of any of claims 19 to 21, wherein the optical fibre assembly and the pressure sensor are incorporated into a handheld probe.
+5
+10
+15
+20
+25
+30
+35
+</body></html>

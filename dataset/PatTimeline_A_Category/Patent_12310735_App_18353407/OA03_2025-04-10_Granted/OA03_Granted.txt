@@ -1,0 +1,38 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA . Claims 1-20 are currently pending.
+Continued Examination Under 37 CFR 1.114
+A request for continued examination under 37 CFR 1.114, including the fee set forth in 37 CFR 1.17(e), was filed in this application after final rejection.  Since this application is eligible for continued examination under 37 CFR 1.114, and the fee set forth in 37 CFR 1.17(e) has been timely paid, the finality of the previous Office action has been withdrawn pursuant to 37 CFR 1.114.  Applicant's submission filed on 03/27/2025 has been entered.
+Terminal Disclaimer
+The terminal disclaimer filed on 04/01/2025 disclaiming the terminal portion of any patent granted on this application which would extend beyond the expiration date of US Patents 9433380 and 9730593 as well as pending (allowed) application 18/318641 has been reviewed and is accepted.  The terminal disclaimer has been recorded.
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with Kevin McCormick on 04/01/2025.
+The application has been amended as follows:
+Claim 1 (Currently Amended): An electrocardiography monitor, comprising:
+a battery;
+a non-conductive receptacle configured to house [[a]] the battery;
+a housing comprising rounded edges along a top surface, wherein the housing engages the non-conductive receptacle and the non-conductive receptacle is configured to receive the housing, wherein the battery is positioned between the housing and a bottom surface of the non-conductive receptacle;
+a patient feedback button located on the top surface of the housing;
+an electrographic front end circuit to sense electrocardiographic signals;
+a distal electrocardiography electrode coupled to a distal end of a flexible circuit and a proximal electrocardiography electrode coupled to a proximal end of the flexible circuit, wherein the flexible circuit is coupled to a flexible backing and the flexible backing is configured to adhere to skin of a patient’s chest; and
+a microcontroller secured by the housing, wherein the microcontroller is interfaced to the electrocardiographic front end circuit to sample the electrocardiographic signals.
+Claim 11 (Currently Amended):  An electrocardiography monitor assembly, comprising:
+a battery compartment formed on a bottom surface of a non-conductive receptacle, wherein a battery is located in the battery compartment;
+a housing comprising rounded edges along a top surface, wherein the non-conductive receptacle is configured to receive the housing, and wherein the battery compartment is positioned between the housing and the bottom surface of the non-conductive receptacle;
+an electrographic front end circuit to sense electrocardiographic signals;
+a distal electrocardiography electrode coupled to a distal end of a flexible circuit and a proximal electrocardiography electrode coupled to a proximal end of the flexible circuit, wherein the flexible circuit is coupled to a flexible backing and the flexible backing is configured to adhere to skin of a patient’s chest;
+a microcontroller secured by the housing, wherein the microcontroller is interfaced to the electrocardiographic front end circuit to sample the electrocardiographic signals memory; and
+a backing configured to receive the housing.
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance:
+The closest prior art of record does not disclose nor render obvious the above claimed invention. The closest art, Baker, does not teach that a battery is within the non-conductive receptacle that then goes on to receive the housing which ultimately contains the other electronic components, where the battery is located between the bottom surface of the non-conductive receptacle and the housing. The claim is being read in that the battery must take up a physically different space than the claimed housing given the above detailed positional relationship.
+Bay, US Publication 2015/0250422, teaches a compartment/cavity in the nonconductive receptacle that then is configured to receive a housing with the same claimed electronic components, however the skilled artisan would not have been inclined to place the battery in the compartment as per Figures 2-4 as there are already flexible circuits located there. Further including a battery within the non-conductive receptacle would not have been obvious with the housing (of the monitor) claimed as well without the use of the Applicant’s original disclosure as a blueprint for doing so.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to Brian M Antiskay whose telephone number is(571)270-5179. The examiner can normally be reached M-F 10am-6pm EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joseph Stoklosa can be reached on 571-272-1213. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/BRIAN M ANTISKAY/Examiner, Art Unit 3794
+/JOSEPH A STOKLOSA/Supervisory Patent Examiner, Art Unit 3794

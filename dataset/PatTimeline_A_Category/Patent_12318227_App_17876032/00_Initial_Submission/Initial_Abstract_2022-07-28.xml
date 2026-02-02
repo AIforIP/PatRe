@@ -1,0 +1,7 @@
+<html><head></head><body><h3>Date: 2022-07-28</h3>
+<h1>ABSTRACT</h1>
+
+<p>A method includes: receiving first data including physiological information obtained from a subject and a first result that a disease is developing: specifving a lirst time point at ,w hich the physiological information included in the first data is obtained: receiving second data including the physiological information obtained from the subject and a second result that the disease is not developing: specifying a second time point at which the physiological information included in the second data is obtained: upon determining that a time interval between the first time point and the second time point is smaller than a first predetermined value. assigning, to the second data, a first training label indicating that the disease is developing and a weighting index that is capable of taking a plurality of values accordintt to the time interval: and performing machine learning of a model by using the second data as training data.</p>
+5
+10
+</body></html>

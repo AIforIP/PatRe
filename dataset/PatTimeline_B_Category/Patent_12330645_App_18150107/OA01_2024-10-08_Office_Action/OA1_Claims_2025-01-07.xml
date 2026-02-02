@@ -1,0 +1,102 @@
+<html><head></head><body><h3>Date: 2025-01-07</h3>
+
+<h1><u>AMENDMENTS</u> <u>TO</u> <u>THE</u> <u>CLAIMS</u></h1>
+<p>Please amend the claims as set forth in the following listing of claims. In the claim amendments below, deletions are shown by strikethrough or enclosure in [[double brackets]], and additions are underlined.</p><br>
+SVG
+{EMBED HERE}
+0.216.503SVG
+{EMBED HERE}
+0.1736.513<br>
+1. (Currently Amended) A control device controlling a velocity of a vehicle, the control device comprising:<br>
+a scene determination unit determining a scene in which a visibility is limited by an occluding object at an intersection where a traveling road of the vehicle intersects with an intersecting road, the scene determination unit further determining whether the vehicle on the traveling road has a right of way; and<br>
+a control unit controlling the velocity of the vehicle <u>by setting a maximum velocity, as an upper limit velocity of the vehicle, at which the vehicle can </u><del>to </del>stop immediately before the intersection when the vehicle on the traveling road has no right of way.<br>
+<br>
+2. (Original) The control device according to claim 1, further comprising:<br>
+a virtual moving object setting unit setting, within an area occluded by the occluding object, an intersecting moving object at a position closest to the intersection; anda velocity evaluation unit setting a velocity of the intersecting moving object,SVG
+{EMBED HERE}
+0.1530.46wherein, in response to the vehicle on the traveling road being determined to have the right of way, the control unit controls the velocity of the vehicle to not collide with the inters
+moving object based on the position and the velocity of the intersecting moving object.<br>
+<br>
+3. (Original) The control device according to claim 2, wherein the velocity evaluation unit sets a reasonably foreseeable velocity as the velocity of the intersecting moving object.<br>
+<br>
+4. (Original) The control device according to claim 3, wherein,when the intersecting moving object is closer to the intersection than the vehicle, the velocity SVG
+{EMBED HERE}
+0.0770.063evaluation unit sets, as the reasonably foreseeable velocity of the intersecting moving object, at least one of (i) a maximum velocity under a condition that the intersecting moving object Page 2 of 11 can stop immediately before the intersection, (ii) a legal speed, (iii) an average value of velocities of vehicles travelling on a same road as the intersecting moving object, (iv) a maximum value among the velocities of the vehicles travelling on the same road as the intersecting moving object,SVG
+{EMBED HERE}
+0.216.503SVG
+{EMBED HERE}
+0.1736.513or (v) a minimum velocity among the velocities (i) to (iv), and<br>
+the control unit controls the vehicle to travel at the velocity, an upper limit of which is set to avoid a collision with the intersecting moving object.<br>
+<br>
+5. (Original) The control device according to claim 3, wherein,<br>
+when the vehicle is closer to the intersection than the intersecting moving object, the velocity evaluation unit sets, as the reasonably foreseeable velocity of the intersecting moving object, at least one of (i) a maximum velocity under a condition that the intersecting moving object can stop immediately before the intersection, (ii) a legal speed, (iii) an average value of velocities of vehicles travelling on a same road as the intersecting moving object, (iv) a maximum value among the velocities of the vehicles travelling on the same road as the intersecting moving object, or (v) a maximum velocity among the velocities (i) to (iv), and<br>
+the control unit controls the vehicle to travel at the velocity, a lower limit of which is set to avoid a collision with the intersecting moving object.<br>
+<br>
+6. (Original) The control device according to claim 2, wherein,<br>
+when the visibility is limited by multiple occluding objects, for each of areas occluded by the multiple occluding objects, the virtual moving object setting unit sets the intersecting moving object at the position closest to the intersection,<br>
+the velocity evaluation unit sets the velocity of each intersecting moving object, and<br>
+the control unit controls the velocity of the vehicle to not collide with each intersecting moving object based on the position and the velocity of each intersecting moving object.<br>
+<br>
+7. (Original) The control device according to claim 1, wherein,<br>
+when a distance from the intersection to a visible area of the intersecting road, which is not occluded by the occluding object, becomes longer than a predetermined threshold as the vehicle approaches the intersection, the control unit controls the velocity of the vehicle based on detection data of an intersecting moving object traveling on the intersecting road.<br>
+SVG
+{EMBED HERE}
+0.216.503SVG
+{EMBED HERE}
+0.1736.513<br>
+8. (Currently Amended) A control device controlling a velocity of a vehicle, the control device comprising:<br>
+a virtual moving object setting unit setting, in a scene where a visibility is limited by an occluding object at an intersection where a traveling road of the vehicle intersects with an intersecting road, an intersecting moving object at a position closest to the intersection within an area occluded by the occluding object;<br>
+a velocity evaluation unit setting a velocity of the intersecting moving <u>object, wherein the velocity evaluation unit sets, as the velocity of the intersecting moving object, a maximum velocity at which the intersecting moving object can stop before the intersection in a case where the intersecting moving object has no right of way at the intersection;</u> and<br>
+a control unit controlling the velocity of the vehicle to not collide with the intersecting moving object based on the position and the velocity of the intersecting moving object.<br>
+<br>
+9. (Currently Amended) A control method that controls a traveling of a vehicle, the control method comprising:<br>
+identifying, with a control device, a scene where a visibility is limited at an intersection where a traveling road of the vehicle intersects with an intersecting road;<br>
+determining, with the control device, whether the vehicle has a right of way at the intersection; and<br>
+controlling, with the control device, the vehicle <u>by setting a maximum velocity, as an upper limit velocity of the vehicle, at which the vehicle can </u><del>to </del>stop immediately before the intersection in response to determining that the vehicle has no right of way at the intersection.<br>
+<br>
+10. (Currently Amended) A control method that controls a traveling of a vehicle, the control method comprising:<br>
+identifying, with a control device, a scene where a visibility is limited by an occluding object at an intersection where a traveling road of the vehicle intersects with an intersecting road;<br>
+assuming, with the control device, an intersecting moving object in an area occluded by the occluding object in the scene where the visibility is limited at the intersection;<br>
+assuming, with the control device, a velocity of the intersecting moving object; andSVG
+{EMBED HERE}
+0.216.503SVG
+{EMBED HERE}
+0.1736.513controlling, with the control device, the vehicle to not collide with the intersecting moving object based on the assumed intersecting moving object,<br>
+<u>wherein a maximum velocity at which the intersecting movin</u><u>g</u><u> object can stop before the intersection is set as the velocity of the intersecting movin</u><u>g</u><u> object in a case where the intersecting movin</u><u>g</u><u> object has no ri</u><u>g</u><u>ht of way at the intersection.</u><br>
+<br>
+11. (Currently Amended) A control program product stored in a computer-readable non- transitory storage medium, the control program comprising instructions to be executed by at least one processor of a control device for controlling a velocity of a vehicle, the instructions comprising:<br>
+identifying, with the control device, a scene where a visibility is limited at an intersection where a traveling road of the vehicle intersects with an intersecting road;<br>
+determining, with the control device, whether the vehicle has a right of way at the intersection; and<br>
+controlling, with the control device, the vehicle <u>by settin</u><u>g</u><u> a maximum velocity, as an upper limit velocity of the vehicle, at which the vehicle can </u><del>to </del>stop immediately before the intersection in response to determining that the vehicle has no right of way at the intersection.<br>
+<br>
+12. (Currently Amended) A control program product stored in a computer-readable non- transitory storage medium, the control program comprising instructions to be executed by at least one processor of a control device for controlling a velocity of a vehicle, the instructions comprising:<br>
+setting, with the control device, an intersecting moving object in a scene where a visibility is limited by an occluding object at an intersection where a traveling road of the vehicle intersects with an intersecting road, the intersecting moving object being set at a position closest to the intersection within an area occluded by the occluding object;<br>
+setting, with the control device, a velocity of the intersecting moving object; and<br>
+controlling, with the control device, the velocity of the vehicle to not collide with the intersecting moving object based on the position and velocity of the intersecting moving object,<br>
+<u>wherein</u>SVG
+{EMBED HERE}
+0.1736.513SVG
+{EMBED HERE}
+0.216.503<u>a maximum velocity, at which the intersecting moving object can stop before the intersection, is set as the velocity of the intersecting moving object in a case where the intersecting moving object has no right of way at the intersection.</u><br>
+13. (New) The control device according to claim 1, wherein the maximum velocity (viimir) of the vehicle is calculated by the following expression:Vlimit=SVG
+{EMBED HERE}
+0.3731.763 - (a + b)p wherein a is a maximum accelerator value during an idling state,<br>
+p is a reaction time,<br>
+b is a strength of brake, and<br>
+dsrop is a distance from the intersection to the vehicle.<br>
+14. (New) The control device according to claim 8, wherein the maximum velocity (vimit) of the intersecting moving object is calculated by the following expression:Vlimit=SVG
+{EMBED HERE}
+0.3731.763 - (a + b)p wherein a is a maximum accelerator value during an idling state,<br>
+p is a reaction time,<br>
+b is a strength of brake, and<br>
+dsrop is a distance from the intersection to the intersecting moving object.<br>
+<br>
+15. (New) The control device according to claim 8, wherein the control unit determines whether the vehicle can enter the intersection according to a visible range of the intersecting road, and then sets the intersecting moving object in response to determining that the vehicle can enter the intersection.Application No. 18/150,107
+Attorney Docket Number D2203.11161US01<br>
+SVG
+{EMBED HERE}
+0.146.513<br>
+16. (New) The control method according to claim 9, wherein the control device comprises an electronic control unit, which includes a processor and a non-transitory tangible storage medium, and<br>
+the vehicle is equipped with the control device.<br>
+
+</body></html>

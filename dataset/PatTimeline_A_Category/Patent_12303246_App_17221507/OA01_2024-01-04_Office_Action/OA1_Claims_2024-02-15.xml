@@ -1,0 +1,59 @@
+<html><head></head><body><h3>Date: 2024-02-15</h3>
+
+<h1><u>Amendments To The Claims:</u></h1>
+<p>This listing of claims will replace all prior versions  and listings, of claims in the application.</p>
+<h1>What is claimed is:</h1>
+<p>Serial No. 17/22 1,507</p><br>
+SVG
+{EMBED HERE}
+0.100.087<br>
+1.    (Original) A sensory mapping method for a human brain, the method comprising:flattening the cortical surface of the human brain;<br>
+projecting functional imaging data onto the flattened surface;<br>
+smoothing the functional imaging data; and<br>
+generating a sensory map.<br>
+<br>
+2.    (Cancelled)<br>
+<br>
+3.    (Currently Amended) The method of claim 1, wherein the smoothing comprises:determining coordinates of each cortical area based on the functional imaging data;<br>
+<u>and</u> repeating a process until the maximum absolute value of the Beltrami coefficient for each coordinate is less than one.<br>
+<br>
+4.-5.    (Cancelled)<br>
+<br>
+6.
+(Original) The method of claim 1, wherein the flattening comprises:<br>
+applying harmonic mapping to a unit disk; and<br>
+refining repetitively parametric coordinate for each point on a parameter domain to produce conformal mapping.<br>
+7.
+(Original) The method of claim 1, further comprising rendering the sensory map with an image of stimuli that activate the cortical surface.<br>
+8.
+(Original) The method of claim 1, further comprising registering a plurality of sensory maps across different individuals.<br>
+<br>
+Serial No. 17/221,507<br>
+9.
+(Original) The method of claim 8, further comprising analyzing the plurality of sensory maps in a common space.<br>
+<br>
+10.    (Original) The method of claim 8, wherein the registering is diffeomorphic.<br>
+<br>
+11.-13. (Cancelled)1212<br>
+<br>
+<br>
+14.   (Original) A sensory mapping method for a human brain, the method comprising:flattening the cortical surface of the human brain;<br>
+projecting functional imaging data onto the flattened surface;<br>
+processing the functional imaging data to produce topological results; and<br>
+generating a sensory map.<br>
+<br>
+15.   (Cancelled)<br>
+<br>
+16.   (Original) The method of claim 14, wherein the processing comprises:segmenting the cortical surface of the human brain by preserving the prior connectivity pattern of the cortical surface areas;<br>
+decoding the functional imaging data based on at least one topological condition within each cortical area; and<br>
+repeating the segmentation and decoding.<br>
+<br>
+17.   (Original) The method of claim 14, further comprising registering a plurality of sensory maps across different individuals.<br>
+<br>
+18.   (Original) The method of claim 17, wherein the registering is diffeomorphic<br>
+<br>
+19.   (Original) The method of claim 17, further comprising analyzing the plurality of sensory maps in a common space.<br>
+<br>
+20.   (Original) The method of claim 17, wherein the registering comprises:<br>
+Serial No. 17/221,507 applying Beltrami coefficient to quantify diffeomorphism; and modeling the registering in an optimization framework.<br>
+</body></html>

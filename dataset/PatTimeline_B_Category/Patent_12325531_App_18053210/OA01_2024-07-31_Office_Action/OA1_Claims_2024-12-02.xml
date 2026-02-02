@@ -1,0 +1,88 @@
+<html><head></head><body><h3>Date: 2024-12-02</h3>
+<p><u>I</u><u>N THE CLAIMS</u>The following listing of claims replaces all previous versions.</p><br>
+<br>
+1.    (Currently Amended) An avionics system for an aircraft, the avionics system comprising:<u>a sensor system configured for measuring a flight characteristic of the aircraft</u><u>;</u><br>
+a storage device for storing instructions for monitoring an actual performance of the aircraft; and<br>
+one or more data processors configured to execute the instructions to:<br>
+provide an energy state model of the aircraft;<br>
+determine a first measured value of a flight characteristic of the aircraft at a first position of the aircraft <u>using the sensor system;</u><br>
+execute at least one flight maneuver between the first position and a second position of the aircraft;<br>
+generate a predicted <u>specific excess power (PSpredicted) </u><del>energy change </del>of the aircraft between the first position and the second position based on the at least one flight maneuver and the energy state model;<br>
+determine a second measured value of the flight characteristic of the aircraft at the second position <u>using the sensor system;</u><del>and</del><br>
+<u>determine a specific excess power error (PSerror) of the aircraft</u><u>;</u><u> and</u><br>
+generate an adjustment to the energy state model based on the first measured value, the second measured value, and the <u>determined specific excess power error (PSerror</u><u>)</u><del>predicted energy change of the aircraft between the first position and the second position</del>.<br>
+<br>
+<br>
+2.
+(Previously Presented) The avionics system of claim 1, wherein the energy state model of the aircraft includes a value describing a gross weight of the aircraft and wherein the adjustment to the energy state model is implemented by changing the value describing the gross weight of the aircraft.<br>
+3.
+(Previously Presented) The avionics system of claim 1, wherein the energy state model of the aircraft is based in part on an interpolation between a maximum climb rate of the aircraft and an idle power descent rate.<br>
+4.
+(Previously Presented) The avionics system of claim 1, wherein the energy state model of the aircraft is based in part on an interpolation between a maximum climb rate of the aircraft and an idle power descent rate at different specific temperatures.<br>
+5.
+(Previously Presented) The avionics system of claim 1, wherein the energy state model of the aircraft is based in part on an interpolation between a maximum climb rate of the aircraft and an idle power descent rate at different aircraft configurations, where the different aircraft configurations include each of: a power setting of the aircraft, a power capability of the aircraft, a speed-brake position on the aircraft, a landing gear setting of the aircraft, a flap setting of the aircraft, and an engine health of the aircraft.<br>
+6.
+(Previously Presented) The avionics system of claim 1, wherein the energy state model of the aircraft is based in part on curve fit of specific excess power (PS) for an idle power throttle setting (PSIDLE) and a full power throttle setting (PSMAX).<br>
+<br>
+<br>
+<br>
+<br>
+7.    (Previously Presented) The avionics system of claim 1, wherein the first measured value of the flight characteristic of the aircraft comprises a first True Airspeed (TAS) and wherein the second measured value of the flight characteristic of the aircraft comprises a second True Airspeed (TAS).<br>
+<br>
+8.    (Cancelled).<br>
+9.
+(Currently Amended) The avionics system of claim [[8]] SVG
+{EMBED HERE}
+0.140.117 wherein the one or more data processors are configured to execute the instructions to determine the specific excess power error (PSerror) according to:<br>
+(TASnew - TASold) *(TASavg*60)/(dt*32.2) +VVI- PSpredicted = PSerror,<br>
+wherein TASnew is the first measured value, TASold is the second measured value,<br>
+TASavg is an average True Airspeed between the first position and the second position,<br>
+dt is a change in time between the first position and the second position, VVI is a vertical speed indicated by the aircraft, and PSpredicted is the predicted specific excess power of the aircraft.<br>
+<br>
+<br>
+10.   (Currently Amended) The avionics system of claim [[8]]    wherein the one or more data processors are configured to execute the instructions to categorize the PSerror as a type of error based on a trend in the PSerror over time by categorizing the PSerror as an incorrect weight type of error in response to a static PSerror.SVG
+{EMBED HERE}
+0.140.117<br>
+<br>
+11.   (Previously Presented) The avionics system of claim 10, wherein the one or more data processors are configured to execute the instructions to change the value describing a gross weight of the aircraft in response categorizing the PSerror as an incorrect weight type of error, and to change the value describing the gross weight of the aircraft by calculating a weight debit (GWdebit) according to:GWdebit = PSerror/AircraftConstant,<br>
+where AircraftConstant is specific to a model of aircraft.<br>
+12.   (Currently Amended) The avionics system of claim [[8]] SVG
+{EMBED HERE}
+0.140.117 wherein the one or more data processors are configured to execute the instructions to categorize the PSerror as a type of error based on a trend in the PSerror over time by categorizing the PSerror as a performance degradation error in response to the PSerror changing over time.<br>
+<br>
+<br>
+<br>
+<br>
+13.    (Previously Presented) An aircraft comprising:a sensor system configured for measuring a flight characteristic of the aircraft; and<br>
+an avionics system comprising a storage device for storing instructions and one or more data processors configured to execute the instructions to:<br>
+provide an energy state model of the aircraft, the energy state model implemented to provide predictions of specific excess power of the aircraft based at least in part on a configuration of the aircraft;<br>
+determine a first measured value of a flight characteristic of the aircraft at a first position of the aircraft using the sensor system;<br>
+execute at least one flight maneuver between the first position and a second position of the aircraft;<br>
+generate a predicted specific excess power (PSpredicted) of the aircraft at the second position based on the at least one flight maneuver and the energy state model;<br>
+determine a second measured value of the flight characteristic of the aircraft at the second position using the sensor system;<br>
+determine a specific excess power error (PSerror) of the aircraft at the second position based on the second measured value of the flight characteristic of the aircraft at the second position and the predicted specific excess power (PSpredicted) of the aircraft at the second position; and<br>
+generate an adjustment to the energy state model based on the specific excess power error (PSerror) of the aircraft at the second position.<br>
+<br>
+<br>
+<br>
+<br>
+14.   (Previously Presented) The aircraft of claim 13, wherein the energy state model of the aircraft includes a value describing a gross weight of the aircraft and wherein the adjustment to the energy state model is implemented by changing the value describing the gross weight of the aircraft.<br>
+<br>
+15.   (Previously Presented) The aircraft of claim 13, wherein the energy state model of the aircraft is based in part on curve fit of specific excess power (PS) for an idle power throttle setting (PSIDLE) and a full power throttle setting (PSMAX).<br>
+<br>
+16.   (Previously Presented) The aircraft of claim 13, wherein the first measured value of the flight characteristic of the aircraft comprises a first True Airspeed (TAS) and wherein the second measured value of the flight characteristic of the aircraft comprises a second True Airspeed (TAS).<br>
+<br>
+17.   (Previously Presented) The aircraft of claim 13, wherein the one or more data processors are configured to execute the instructions to determine the specific excess power error (PSerror) of the aircraft at the second position based on the second measured value of the flight characteristic of the aircraft at the second position and the predicted specific excess power (PSpredicted) of the aircraft at the second position according to:(TASnew - TASold) *(TASavg*60)/(dt*32.2) +VVI- PSpredicted = PSerror,<br>
+wherein TASnew is the first measured value, TASold is the second measured value,<br>
+TASavg is an average True Airspeed between the first position and the second position,<br>
+dt is a change in time between the first position and the second position, VVI is a vertical speed indicated by the aircraft, and PSpredicted is the predicted specific excess power of the aircraft at the second position.<br>
+<br>
+<br>
+<br>
+18.    (Previously Presented) The aircraft of claim 13, wherein the one or more data processors are configured to execute the instructions to categorize the PSerror as a type of error based on a trend in the PSerror over time by categorizing the PSerror as an incorrect weight type of error in response to a static PSerror.<br>
+<br>
+19.    (Previously Presented) The aircraft of claim 18, wherein the one or more data processors are configured to execute the instructions to change the value describing a gross weight of the aircraft in response categorizing the PSerror as an incorrect weight type of error, and to change the value describing the gross weight of the aircraft by calculating a weight debit (GWdebit) according to:GWdebit = PSerror/AircraftConstant,<br>
+where AircraftConstant is specific to a model of aircraft.<br>
+<br>
+20.    (Previously Presented) The aircraft of claim 13, wherein the one or more data processors are configured to execute the instructions to categorize the PSerror as a type of error based on a trend in the PSerror over time by categorizing the PSerror as a performance degradation error in response to the PSerror changing over time.
+</body></html>

@@ -1,0 +1,28 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claim 16 is rejected under 35 U.S.C. 102(a)(1) as being anticipated by Beblo (US 11933587 B1). Beblo discloses:
+16. An articulating motor mount assembly, comprising:
+a first frame segment (130) attachable to an airframe (12) of an aircraft;
+a second frame segment (240) rotatably coupled to the first frame segment in a plane oblique (at least when angled in Fig. 4) to a longitudinal axis of the first frame segment;
+wherein the first and second frame segments define an interior region (volume occupied by 222); and
+an actuator (“first and second primary electric motors operable for rotating in the body and head actuation modules”; Column 5 Line 22) positioned in the interior region and operative to rotate the second frame segment relative to the first frame segment.
+Claims 16 and 17 are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Okamoto (US 6976401 B2). Okamoto discloses:
+16. An articulating motor mount assembly, comprising:
+a first frame segment (portion to very left in Fig. 1) attachable to an airframe (can be secured to any solid frame) of an aircraft;
+a second frame segment (1+2) rotatably coupled to the first frame segment in a plane oblique (“B” to the left in Fig. 1) to a longitudinal axis of the first frame segment;
+wherein the first and second frame segments define an interior region (volume occupied motors in Fig. 1); and
+an actuator (12, not shown but the motor associated with the gear shown to the left in Fig. 1) positioned in the interior region and operative to rotate the second frame segment relative to the first frame segment.
+17. The articulating motor mount assembly of claim 16, further comprising a third frame (3) segment rotatably coupled to the second frame segment in a plane oblique (“B” to the right in Fig. 1) to a longitudinal axis of the second frame segment and a second actuator (12 of segment 1) positioned to rotate (about “P”) the third frame segment relative to the second frame segment.
+Allowable Subject Matter
+Claims 18-20 are objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Claims 1-15 are allowed.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to BRIAN M O'HARA whose telephone number is (571)270-5224. The examiner can normally be reached Monday - Friday, 9AM - 5PM eastern.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joshua Huson can be reached on 571-270-5301. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/BRIAN M O'HARA/Primary Examiner, Art Unit 3642

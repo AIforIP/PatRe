@@ -1,0 +1,104 @@
+<html><head></head><body><h3>Date: 2021-06-08</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+<br>
+1. A method for controlling a control interface of an exercise machine during the enjoy of a multimedia content, the method comprising: 
+<br>
+providing a multimedia content of a personal trainer preparatory to performing a set workout program on the exercise machine, which can be enjoyed by a user through a control interface of the exercise machine; 
+<br>
+associating configuration instructions of the exercise machine with the multimedia content, which can be read by a  data   processing  unit   of  the   exercise  machine, synchronized with playing of the multimedia content; 
+during the enjoy of the multimedia content, if an instant of playing time falls within a set time interval provided by the configuration instructions of the exercise machine, dynamically modifying, by the data processing unit of the exercise machine, based on the configuration instructions  of   the  exercise  machine,   the  control interface of the exercise machine so that it takes a respective operating configuration corresponding to the set time interval reached by the multimedPia content, in said respective operating configuration, showing the user, by the data processing unit on a display module of  the   control  interface,  temporary   controls  made available by the control interface and enabled to be used by the user through
+the  control  interface  in  said respective operating configuration; and 
+<br>
+setting, by the data processing unit, the exercise machine based on the temporary controls made available by the control interface and selected by the user through the 
+
+control   interface    in   said   respective   operating configuration.
+<br>
+
+<br>
+2. The method of claim 1, comprising, at starting playing the multimedia content, a step of dynamically modifying, by the data processing unit, based on the configuration instructions of the exercise machine read together with the playing of the multimedia content, the control interface so that it assumes a respective operating configuration to display fixed controls of a plurality of controls made available to the user on the display module of the control interface.
+<br>
+
+<br>
+3. The method of claim 1, wherein the step of dynamically modifying is performed, by the data processing unit, based on the configuration instructions of the exercise machine read together with the playing of the multimedia content, to modify the control interface so that it takes a respective operating configuration to display temporary controls representative of initial workout difficulty levels selectable by the user on the display module of the control interface.
+<br>
+
+<br>
+4. The method of claim 3, wherein the step of dynamically modifying  further  comprises a   step  of automatically setting, at the end of a time interval corresponding to the operating configuration in which the user can select an initial workout difficulty level, by the data processing unit, if the user has not made any selection, a first initial workout difficulty level.
+
+<br>
+5. The method of claim 3, wherein the step of dynamically modifying comprises a step of removing, by the data processing unit, once the initial workout difficulty level has been set, the temporary controls representative of initial workout difficulty levels selectable by the user on the display module.
+<br>
+
+<br>
+6. The method of claim 1, wherein the step of dynamically modifying is performed, by the data processing unit, based on the configuration instructions of the exercise machine read together with the playing of the multimedia content, to modify the control interface so that it assumes a respective operating configuration to display on the display module temporary controls representative of values selectable by the user of at least one first operating parameter of the exercise machine.
+<br>
+
+<br>
+7. The method of claim 6, wherein the step of dynamically modifying further comprises a step of indicating on the display module, by the data processing unit, based on the configuration instructions of the exercise machine read together with the playing of the multimedia content, which of  the  temporary  controls  representative  of  values selectable by the user of at least one first operating parameter of the exercise machine is suggested by the personal trainer in the multimedia content for a phase of the set workout program that the user is performing in the set time interval that the multimedia content is at.
+<br>
+
+8. The method of claim 6, wherein the step of dynamically modifying is performed, by the data processing unit, based 
+on the configuration instructions of the exercise machine read together with the playing of the multimedia content to dynamically modify the control interface so that it takes a respective operating configuration to display on the display module temporary controls representative of values selectable by the user of a second operating parameter of the exercise machine.
+<br>
+
+<br>
+9. The method of claim 8, wherein the step of dynamically modifying further comprises a step of indicating on the display module, by the data processing unit, based on the configuration instructions read together with the playing of the multimedia content, which of the temporary controls representative of values selectable by the user of a second operating parameter of the exercise machine is suggested by the personal trainer in the multimedia content for the phase of the set workout program that the user is performing in the set time interval that the multimedia content is at.
+<br>
+
+<br>
+10. The method of claim 6, wherein, at the end of the time interval corresponding to the operating configuration in which the user can select a value of said at least one first  operating  parameter,  the  step  of  dynamically modifying comprises a step of setting, by the data processing unit, the exercise machine as a function of the value of said at least one first operating parameter selected by the user.
+<br>
+
+11. The method of claim 8, wherein, at the end of the time interval corresponding to the operating configuration in 
+which the user can select a value of the second operating parameter, the step of dynamically modifying further comprises a step of setting, by the data processing unit, the exercise machine as a function of the value of the second operating parameter selected by the user.
+<br>
+
+<br>
+12. The method of claim 6, wherein the step of dynamically modifying comprises a step of shifting, by the data processing unit, once the value of the at least one first operating parameter has been set, the temporary controls representative of values selectable by the user of at least one first operating parameter towards outside of the display module so that they are partially visible.
+<br>
+
+<br>
+13. The method of claim 12, wherein the step of shifting, by the data processing unit, once the value of the at least one first operating parameter has been set, the temporary controls representative of values selectable by the user of at least one first operating parameter towards outside of the display module so that they are partially visible is performed by indicating the set value and/or leaving respective temporary controls enabled to pressure.
+<br>
+
+14. The method of claim 8, wherein the step of dynamically modifying comprises a step of shifting, by the data processing unit, once the value of the second operating parameter   has  been   set,   the   temporary  controls representative of values selectable by the user of a second operating parameter towards outside of the display module at a same time as the temporary controls representative of values selectable by the user of at least one first 
+operating parameter so that they are partially visible.
+<br>
+
+<br>
+15. The method of claim 14, wherein the step of shifting, by the data processing unit, once the value of the second operating parameter has been set, the temporary controls representative of values selectable by the user of a second operating parameter towards outside of the display module at the same time as the temporary controls representative of values selectable by the user of at least one first operating parameter so that they are partially visible is executed indicating the set values and/or leaving the respective temporary controls enabled to pressure.
+<br>
+
+<br>
+16. The method of claim 12, wherein the step of dynamically modifying further comprises a step of laterally shifting, by the data processing unit, the temporary controls representative of values selectable by the user of at least one first operating parameter towards inside of the display module enabling them to be pressed, in response to a touch made by the user anywhere on the display module.
+<br>
+
+<br>
+17. The method of claim 14, wherein the step of dynamically modifying further comprises a step of laterally shifting, by the data processing unit, the temporary controls representative of values selectable by the user of a second operating parameter towards inside of the display module at the same time as the temporary controls representative of values selectable by the user of at least one first operating parameter, enabling them to be pressed in response to a touch made by the user anywhere on the display module.
+
+<br>
+18. An exercise machine comprising: 
+<br>
+a data processing unit; 
+<br>
+a control interface, operationally connected to the data processing unit, comprising a display module; 
+<br>
+the data processing unit being configured to perform a method comprising: 
+<br>
+providing a multimedia    content of a personal trainer preparatory to performing a set workout program on the exercise machine, which can be enjoyed by a user through the control interface of the exercise machine; 
+<br>
+associating  configuration   instructions  of  the exercise machine with the multimedia content, which can be read by the data processing unit of the exercise machine, synchronized with playing of the multimedia content; 
+<br>
+during the enjoy of the multimedia content, if an instant of playing time falls within a set time interval provided by the configuration instructions of the exercise machine, dynamically modifying, based on the configuration instructions  of   the  exercise  machine,   the  control interface of the exercise machine so that it takes a respective operating configuration corresponding to the set time interval reached by the multimedia content, in said respective operating configuration, showing the user, on the display module of the control interface, temporary controls made available by the control interface and enabled to be used by the user through the control interface in said respective operating configuration; and 
+<br>
+setting the exercise machine based on the temporary controls made available by the control interface and selected by the user through the control interface in said respective operating configuration. 
+59
+60
+61
+62
+63
+64
+65
+</body></html>

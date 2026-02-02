@@ -1,0 +1,133 @@
+<html><head></head><body><h3>Date: 2022-10-10</h3>
+<p>CLAIMS</p>
+<p><u>What is claimed is:</u></p>
+<br>
+
+1.
+A method of controlling a virtual object in a virtual scene performed by a computer device, the method comprising: 
+<br>
+displaying a virtual scene picture including a first virtual object, the first virtual object including a first body part equipped with a first virtual prop and a second body part equipped with a second virtual prop; 
+<br>
+in response to receiving a first trigger operation on the first virtual object, controlling the first virtual object to perform a target action based on the first virtual prop equipped at the first body part of the first virtual object; and 
+<br>
+in response to receiving a second trigger operation within a specified duration after the first trigger operation is received, controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part of the first virtual object. 
+
+<br>
+
+2.
+The method according to claim 1, wherein the target action comprises a body part unfolding action and a body part folding action that are performed sequentially; and 
+<br>
+the specified duration is no longer than a duration for which the body part unfolding action is fully performed. 
+
+<br>
+
+3.
+The method according to claim 2, wherein the controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part of the first virtual object comprises: 
+<br>
+in response to receiving the second trigger operation within the specified duration after the first trigger operation is received, terminating the body part unfolding action performed based on the first virtual prop equipped at the first body part, and immediately controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part. 
+
+<br>
+
+4.
+The method according to claim 1, wherein the first virtual prop equipped at the first body part is different from the second virtual prop equipped at the second body part.
+
+<br>
+5.
+The method according to claim 1, further comprising: 
+<br>
+in response to receiving a third trigger operation, controlling the first virtual object to perform the target action in turn based on the virtual props respectively equipped at the first and second body parts of the first virtual object. 
+
+<br>
+
+6.
+The method according to claim 5, wherein the third trigger operation comprises a long press operation performed on a target control superimposed on an upper layer of the virtual scene picture.
+<br>
+
+7.
+The method according to claim 1, further comprising: 
+<br>
+modifying a target attribute value of a second virtual object based on the target action, the second virtual object being a virtual object located within an action range of the target action. 
+
+<br>
+
+8.
+The method according to claim 7, wherein the action range of the target action is dependent, at least in part, upon a corresponding virtual prop associated with the target action.
+<br>
+
+9.
+The method according to claim 1, wherein the first and second body parts comprise two hand parts, and the first and second virtual props are two glove virtual props.
+<br>
+
+<br>
+10.    A computer device, comprising a processor and a memory, the memory storing at least one instruction, and the at least one instruction being loaded and executed by the processor and causing the computer device to implement a method of controlling a virtual object in a virtual scene, the method comprising: 
+<br>
+displaying a virtual scene picture including a first virtual object, the first virtual object including a first body part equipped with a first virtual prop and a second body part equipped with a second virtual prop; 
+<br>
+in response to receiving a first trigger operation on the first virtual object, controlling the first virtual object to perform a target action based on the first virtual prop equipped at the first body part of the first virtual object; and 
+<br>
+in response to receiving a second trigger operation within a specified duration after the first trigger operation is received, controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part of the first virtual 
+
+object.
+<br>
+
+<br>
+11.    The computer device according to claim 10, wherein the target action comprises a body part unfolding action and a body part folding action that are performed sequentially; and 
+<br>
+the specified duration is no longer than a duration for which the body part unfolding action is fully performed. 
+
+<br>
+
+<br>
+12.    The computer device according to claim 11, wherein the controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part of the first virtual object comprises: 
+<br>
+in response to receiving the second trigger operation within the specified duration after the first trigger operation is received, terminating the body part unfolding action performed based on the first virtual prop equipped at the first body part, and immediately controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part. 
+
+<br>
+
+<br>
+13.    The computer device according to claim 10, wherein the first virtual prop equipped at the first body part is different from the second virtual prop equipped at the second body part.
+<br>
+
+<br>
+14.    The computer device according to claim 10, wherein the method further comprises: 
+<br>
+in response to receiving a third trigger operation, controlling the first virtual object to perform the target action in turn based on the virtual props respectively equipped at the first and second body parts of the first virtual object. 
+
+<br>
+
+<br>
+15.    The computer device according to claim 14, wherein the third trigger operation comprises a long press operation performed on a target control superimposed on an upper layer of the virtual scene picture.
+<br>
+
+<br>
+16.    The computer device according to claim 10, wherein the method further comprises: 
+<br>
+modifying a target attribute value of a second virtual object based on the target action, the second virtual object being a virtual object located within an action range of the target action. 
+<br>
+17.   The computer device according to claim 16, wherein the action range of the target action is dependent, at least in part, upon a corresponding virtual prop associated with the target action.
+<br>
+
+<br>
+18.   The computer device according to claim 10, wherein the first and second body parts comprise two hand parts, and the first and second virtual props are two glove virtual props.
+<br>
+
+<br>
+19.   A non-transitory computer-readable storage medium, storing at least one computer program, the computer program being loaded and executed by a processor of a computer device and causing the computer device to implement a method of controlling a virtual object in a virtual scene, the method comprising: 
+<br>
+displaying a virtual scene picture including a first virtual object, the first virtual object including a first body part equipped with a first virtual prop and a second body part equipped with a second virtual prop; 
+<br>
+in response to receiving a first trigger operation on the first virtual object, controlling the first virtual object to perform a target action based on the first virtual prop equipped at the first body part of the first virtual object; and 
+<br>
+in response to receiving a second trigger operation within a specified duration after the first trigger operation is received, controlling the first virtual object to perform the target action based on the second virtual prop equipped at the second body part of the first virtual object. 
+
+<br>
+
+<br>
+20.    The non-transitory computer-readable storage medium according to claim 19, wherein the target action comprises a body part unfolding action and a body part folding action that are performed sequentially; and 
+<br>
+the specified duration is no longer than a duration for which the body part unfolding action is fully performed. 
+031384-7473-US27
+031384-7473-US28
+031384-7473-US29
+031384-7473-US30
+</body></html>

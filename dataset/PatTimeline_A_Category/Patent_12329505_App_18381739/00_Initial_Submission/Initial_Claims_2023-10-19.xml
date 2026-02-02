@@ -1,0 +1,69 @@
+<html><head></head><body><h3>Date: 2023-10-19</h3>
+
+<h1>CLAIMS</h1>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.    A method of utilizing an oro-motor device to activate an audio device, the method comprising the steps of:providing an oro-motor device comprising a sensor and a depressible portion producing an output signal when said depressible portion is compressed yielding a first measured pressure over an age appropriate predetermined threshold applied to the depressible portion ;<br>
+responsive to said output signal, playing an age appropriate audio recording for a predetermined duration on an audio device; and<br>
+increasing the age appropriate predetermined threshold to a raised threshold proportionally to a difference between the first measured pressure to the depressible portion and the age appropriate predetermined threshold.<br>
+<br>
+2.    The method of claim 1, further comprising the step of signaling that the oro-motor device has had a second measured pressure below the age appropriate predetermined threshold applied to the depressible portion.<br>
+<br>
+3.    The method of claim 2, responsive to said signaling, lowering the age appropriate predetermined threshold to a lowered threshold proportionally to a difference between the first measured pressure application to the depressible portion and the age appropriate predetermined threshold.<br>
+<br>
+<br>
+<br>
+4.    The method of claim 1, further comprising the step of playing the age appropriate audio recording for the predetermined duration, wherein the predetermined duration is between 5 seconds to 25 seconds.<br>
+<br>
+5.    The method of claim 1, further comprising the step of limiting daily playing of the age appropriate audio recording to an age appropriate total duration, wherein the age appropriate total duration is between one half hour to about 1 hour.<br>
+<br>
+6.    The method of claim 1, wherein the playing an age appropriate audio recording comprises at least one of:playing a recording of a voice of a caretaker; and<br>
+providing and playing an age appropriate audio recording in a foreign language<br>
+<br>
+7.    The method of claim 1, wherein the providing the depressible portion comprises providing at least one of a nipple, a ball, and a mat..<br>
+<br>
+8.    A non-transitory computer readable medium storing machine executable instructions for utilizing an oro-motor device to activate an audio device comprising:a language system in electronic communication with the audio device, a sensing device comprising a sensor, and an interface, the interface configured to receive user data and the sensing device configured to send signals to the language system, the language system providing at least one of:<br>
+a first recommendation or a second recommendation for sensing device sensor<br>
+<br>
+<br>
+<br>
+usage;a sensor threshold and sensor readings of the sensing device;<br>
+a duration of audio output; and<br>
+specific parameters for audio output; and<br>
+the language system based upon the signal from the sensing device, indicating the sensor threshold has been exceeded, sends instructions to the audio device to emit an appropriate audio recording that conforms to the specific parameters for audio output for the assigned duration of audio output.<br>
+9.
+The non-transitory computer readable medium of claim 8wherein the language system instructs the interface to offer at least one of a default option, a non-native language option, and a non 1:1 read-song ratio to a user.<br>
+<br>
+10.    The non-transitory computer readable medium of claim 9 wherein responsive to the language system receiving instructions to provide the non-native language option, the language system provides non-native language songs and readings that conform to the identified specific parameters, and instructs the audio device to emit audio comprising the non-native language songs and readings for the assigned duration.<br>
+<br>
+11.    The non-transitory computer readable medium of claim 9 wherein responsive to the language system receiving instructions to provide the non 1:1 read-song ratio option, the language system generates a read-song mix that corresponds to a selected song to reading ratio, and instructs the audio device to emit audio comprising the read-song mix for the assigned duration.<br>
+<br>
+<br>
+<br>
+12.    The non-transitory computer readable medium of claim 9 wherein responsive to the language system receiving instructions to provide the default option, the language system generates a pre-recorded audio recording that corresponds to the default song to reading ratio and the default language, and instructs the audio device to emit audio comprising the default song to reading ratio and the default language for the assigned duration.<br>
+<br>
+13.    The non-transitory computer readable medium of claim 9 wherein responsive to the language system receiving instructions to provide the default option, the language system generates samples of appropriate subject matter to be recorded by a user, and sends instructions to the audio device to record the user reciting the samples to generate user recordings.<br>
+<br>
+14.    The non-transitory computer readable medium of claim 13, wherein the samples comprise user input data comprising at least one of a child's name, songs selected based upon a child's age, and readings selected based upon a child's age.<br>
+<br>
+15.    The non-transitory computer readable medium of claim 13, wherein the language system at least one of alters and combines the user recordings to conform to the specific parameters for audio output to comprise altered or combined user recordings, the altered or combined user recordings comprises the appropriate audio recording.<br>
+<br>
+16.   A language system comprising an audio device coupled an oro-motor device, the system comprising:<br>
+<br>
+the oro-motor device comprising a nipple housing a sensor, wherein the sensor produces an output signal when said nipple portion compressed to a pressure over a first measured pressure over an age appropriate predetermined threshold;<br>
+the audio device comprising a microcomputer in electrical communication with the oro-motor device, a microphone, a speaker, and an interface, the microcomputer comprising a language system, the language system responsive to a user input received via the interface, assigns a sensor threshold and sensor readings of the oro-motor device, assigns a duration of audio output, and identifies specific parameters for audio output, the language system based upon the output signal from   the oro-motor device indicating the age appropriate predetermined threshold has been exceeded, sends instructions to the audio device to emit an appropriate audio recording that conforms to the specific parameters for audio output for the assigned duration of audio output.<br>
+<br>
+17.   The language system of claim 16, wherein the specific parameters for audio output comprise at least one of an age dependent volume, an age dependent number of intervals per day and per week, and age appropriate content.<br>
+<br>
+18.   The language system of claim 16, wherein the language system raises the age appropriate predetermined threshold to a raised threshold proportionally to a difference between a first measured pressure application to the nipple portion and the age appropriate predetermined threshold.<br>
+<br>
+19.   The language system of claim 16, wherein the interface displays an option to emit audio comprising at least one of a default recording, a non-native language recording, and a<br>
+<br>
+<br>
+non-default read-song ratio recording to the user.<br>
+<br>
+20.   The language system of claim 16, wherein responsive to the user selecting the non- native language recording, the language system identifies non-native language songs and readings that conform to the identified specific parameters, and instructs the audio device to emit audio comprising the non-native language songs and readings for the assigned duration.<br>
+
+</body></html>

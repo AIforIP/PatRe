@@ -1,0 +1,20 @@
+<html><head></head><body><h3>Date: 2022-10-26</h3>
+<p>Attorney Docket No.: SYSM-001/02US 337597-2006 In the claims:</p>
+<br>
+
+1.
+A non-transitory computer readable storage medium with instructions executed by a processor to: 
+<br>
+obtain the relative speed between a first traffic object and a second traffic object; 
+<br>
+receive the separation distance between the first traffic object and the second traffic object; 
+<br>
+combine the relative speed and the separation distance to form a quantitative measure of hazard encountered by the first traffic object; 
+<br>
+repeat the obtain, receive and combine operations to form cumulative measures of hazard associated with the first traffic object; and 
+<br>
+analyze the cumulative measures of hazard to derive a first traffic object safety score for the first traffic object. 
+
+<p>21 276228411 v1</p>
+
+</body></html>

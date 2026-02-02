@@ -1,0 +1,226 @@
+<html><head></head><body>18592680
+
+   
+
+<u>REMARKS</u>
+
+   
+   <p>Claims 1–8, 10–18, and 20–22 are pending, with claims 1 and 11 being independent. Claims 1, 3, 5–7, 10–11, 13, 15–17, and 20 are amended. Claims 9 and 19 are canceled. Claims 21–22 are new.</p>
+   <p>In taking the foregoing actions, Applicant respectfully submits Applicant is not necessarily conceding in this application that these claims, as originally presented, are not patentable over the references cited by the U.S. Patent and Trademark Office (USPTO), as pertinent ones of the present claim amendments and cancellations are only for facilitating expeditious prosecution.  Applicant respectfully reserves the right to pursue the canceled claims and/or other claims in one or more continuing applications.</p>
+   <p>
+
+<u>Applicant-Initiated Interview Summary</u>
+
+   </p>
+   <p>A telephonic interview regarding the instant matter was conducted on July 25, 2025, between Examiner Evanisko and Applicant’s Representative, Oliver Han, Registration No. 72,864. Patentability under 35 U.S.C. § 101, § 102, and § 103 was discussed. Applicant thanks the Examiner for his time and consideration in conducting the interview. An agreement was reached that claim 1, as amended, overcomes the § 102 and § 103 rejections. No agreement was reached regarding patentability under § 101.</p>
+   <p>
+
+<u>Allowable Subject Matter</u>
+
+   </p>
+   <p>The Office states “[c]laims 9 and 19 would be allowed upon correction of the 101 rejection.” (Office Action, p. 9). Applicant thanks the Examiner for the identification of the allowable subject matter.</p>
+   <p>Solely in the interest of advancing prosecution, Applicant has amended independent claims 1 and 11 to include the allowable subject matter of claims 9 and 19, respectively. No new matter has been introduced.</p>
+   <p>
+
+<u>Rejection of the Claims under 35 U.S.C. § 112 </u>
+
+   </p>
+   <p>Claims 3, 5-7 10, 13, 15-17 and 20 stand rejected under 35 U.S.C. § 112(b) as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor regards as the invention.</p>
+   <p>Regarding claims 3 and 13, the Examiner asserts the recitation “a plurality of ECG readings” in line 3 is vague, as line 2 also uses this same phrase. (Office Action, p. 2). Further, the recitation “the plurality of ECG readings” in line 5 is vague as it is unclear if this is the plurality used in line 2 or the plurality used in line 3. Id.</p>
+   <p>In the interest of advancing prosecution of the present application and while not acquiescing to the Examiner’s assertions, claims 3 and 13 are amended to indicate that the recitations in lines 3 and 5 are the same as the recitation in line 2.</p>
+   <p>Regarding claims 5, 6, 15 and 16, the Examiner asserts the terms “general-use” and “reduced” are vague and relative as it is unclear what is considered “general-use” and what is reduced. Id. </p>
+   <p>In the interest of advancing prosecution of the present application and while not acquiescing to the Examiner’s assertions, claims 5, 6, 15 and 16 are amended to further define the terms “general-use” and “reduced.”</p>
+   <p>Regarding claims 7 and 17, the Examiner asserts the recitation “trained using data gathered…” is vague and sounds “more like a method step.” Id. Further, the Examiner asserts the terms “12 lead ECG data,” “echocardiography data” and “each 12-lead ECG datum” are vague as it is unclear if these terms are referencing the previous 12 lead and echo terms used in line 2 or are different elements. Id.</p>
+   <p>In the interest of advancing prosecution of the present application and while not acquiescing to the Examiner’s assertions, claims 7 and 17 are amended to show the terms “12 lead ECG data,” “echocardiography data” and “each 12-lead ECG datum” are referencing the previous 12 lead and echo terms used in line 2. Further, claim 7 is amended to add language acceptable for an apparatus claim. Applicant respectfully traverses the Examiner’s assertion that the recitation “trained using data gathered…” is vague and sounds more like a method claim, because claim 17 is a method claim.</p>
+   <p>Regarding claim 10, the Examiner asserts the recitation “is displayed at a display device” is vague and inferentially including the display device. Id.
+   </p>
+   <p>In the interest of advancing prosecution of the present application and while not acquiescing to the Examiner’s assertions, Applicant has amended claim 10 to recite “further comprises a display device,” as suggested by the Examiner.</p>
+   <p>Regarding claim 20, the Examiner asserts that the claim is in passive voice, and it is unclear if a further method step is being recited. Id.</p>
+   <p>In the interest of advancing prosecution of the present application and while not acquiescing to the Examiner’s assertions, Applicant has amended claim 20 to recite the claim in active voice.</p>
+   <p>Applicant respectfully submits that the rejections of the claims are now moot, and that the rejection of claims 3, 5-7, 10, 13, 15-17 and 20 under 35 U.S.C. § 112 be withdrawn.</p>
+   <p>
+
+<u>Rejection of claims under 35 U.S.C. § 101</u>
+
+   </p>
+   <p>Claims 1-20 stand rejected under 35 U.S.C. § 101 for allegedly being directed to an abstract idea without significantly more. (Office Action, pp. 3-7). More specifically, the Examiner asserts that the claims fall within the “Mental Processes” grouping.</p>
+   <p>Under the January 2019 Guidance, now incorporated in the June 2020 revision of Manual of Patent Examining Procedure (“MPEP”), the first step of the Alice Corp. Pty. Ltd/Mayo Collaborative Services test was revised.  MPEP 2106.04 [incorporating 2019 Revised Patent Subject Matter Eligibility Guidance, 84, Fed. Reg. 50, 52 (January 7, 2019)].  Revised Step 2A now focuses on (1) Whether the claim recites a judicial exception and (2) whether a recited judicial exception is integrated into a practical application.  Id.  Only if a claim recites a judicial exception and fails to integrate the exception into a practical application, further analysis pursuant to the second step (2B) in the Alice Corp. Pty. Ltd/Mayo Collaborative Services test is needed.  Id.</p>
+   <p>Applicant has amended claim 1 to recite:</p>
+   <p>An apparatus for artificial intelligence-supported diagnostic assessment, wherein the apparatus comprises:</p>
+   <p>at least a processor, wherein the processor is configured to:</p>
+   <p>receive a plurality of multi-channel sensor readings of physiological data;</p>
+   <p>generate training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels;</p>
+   <p>train a neural network using the plurality of diagnostic labels;</p>
+   <p>update the training data as a function of new training examples;</p>
+   <p>retrain the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded;</p>
+   <p>receive a time series input describing user physiological data from at least a sensor;</p>
+   <p>input the time series input into the trained neural network;</p>
+   <p>generate diagnostic data as a function of the time series input and the trained neural network, wherein the diagnostic data includes a classification under a plurality of groups, wherein the groups are comprised of:</p>
+   <p>normal LV function;</p>
+   <p>LVSD only;</p>
+   <p>LVDD only; and </p>
+   <p>Both LVSD and LVDD;</p>
+   <p>determine prognostic data as a function of the diagnostic data; and</p>
+   <p>output the prognostic data.</p>
+   <p>Independent claim 11 has been amended in a manner similar to independent claim 1.</p>
+   <p>Applicant submits that, according to MPEP 2106.04, independent claims 1 and 11, and their dependent claims, are allowable under step 2A and/or 2B of the eligibility analysis, as discussed further below in this paper.</p>
+   <p>
+
+<u>Step 2A, Prong One</u>
+
+   </p>
+   <p>Under Step 2A, Prong One, the Examiner alleges that selected limitations of Applicant’s claims fall within the abstract grouping of “Mental Processes.” More specifically, the Examiner asserts the claims recite “a mental concept of performing a series of steps to label cardiac data and receive new data to predict a cardiac condition.” (Office Action, p. 3).</p>
+   <p>
+
+<u>Mental Processes</u>
+
+   </p>
+   <p>“The courts consider a mental process (thinking) that "can be performed in the human mind, or by a human using a pen and paper" to be an abstract idea.” MPEP § 2106.04(a)(2).III. “Accordingly, the ‘mental processes’ abstract idea grouping is defined as concepts performed in the human mind, and examples of mental processes include observations, evaluations, judgments, and opinions.” Id. For the purposes of this abstract idea, “[t]he courts do not distinguish between mental processes that are performed entirely in the human mind and mental processes that require a human to use a physical aid (e.g., pen and paper or a slide rule) to perform the claim limitation.” Id. However, “[c]laims do not recite a mental process when they do not contain limitations that can practically be performed in the human mind, for instance when the human mind is not equipped to perform the claim limitations.” Id. MPEP § 2106.04(a)(2).III.A.&nbsp; The MPEP provides an example cited in dicta of Synopsys, Inc. v. Mentor Graphics Corp., 839 F. 3D 1138, 1148 (Fed. Cir. 2016) as an example of a limitation that cannot be “practically performed in the human mind.”&nbsp; Id. In that cited portion of its decision, the Synopsis court reasoned that a claim does not recite a mental process where the “invention involves a several-step manipulation of data that, <u>except in its most simplistic form</u>, could not conceivably be performed in the human mind or with pencil and paper.”&nbsp; Synopsys, 839 F. 3D at 1148, citing TQP Development, LLC v. Intuit Inc., 2014 WL 651935 (E.D. Tex. Feb. 19, 2014) (emphasis added). Like the “several-step manipulation” cited in Synopsys, “update the training data as a function of new training examples, retrain the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded,” in claim 1 would generally involve acting on a large body of data to modify and create data structures that, unless improperly reduced its “most simplistic form,” could not be performed by a human being with the aid of pen and paper. Synopsys, 839 F.3D at 1148.</p>
+   <p>Applicant respectfully submits that the machine-learning processes are tied to a machine and cannot be practically performed in the human mind. Amended claim 1 includes Applicant’s neural network that is trained using a plurality of diagnostic labels. The training data comprising the plurality of diagnostic labels is updated as a function of new training examples, with the neural network being retrained as a function of the updated training data. The neural network is retrained when a preconfigured threshold of new training examples is exceeded. Further, MPEP guidance makes clear the necessary existence of boundaries for determination of a judicial exception under a mental process classification.</p>
+   <p>The MPEP states (emphasis added):</p>
+   <p>
+Claims do not recite a mental process when they do not contain limitations that can practically be performed in the human mind, for instance when the human mind is not equipped to perform the claim limitations. See SRI Int’l, Inc. v. Cisco Systems, Inc., 930 F.3d 1295, 1304 (Fed. Cir. 2019) (declining to identify the claimed collection and analysis of network data as abstract because "the human mind is not equipped to detect suspicious activity by using network monitors and analyzing network packets as recited by the claims"); CyberSource, 654 F.3d at 1376, 99 USPQ2d at 1699 (distinguishing Research Corp. Techs. v. Microsoft Corp., 627 F.3d 859, 97 USPQ2d 1274 (Fed. Cir. 2010), and SiRF Tech., Inc. v. Int’l Trade Comm’n, 601 F.3d 1319, 94 USPQ2d 1607 (Fed. Cir. 2010), as directed to inventions that ‘‘could not, as a practical matter, be performed entirely in a human’s mind’’). (MPEP 2106.04(a)(2)(III)(A)).</p>
+   <p>The Federal Circuit has held that for a “method [that] required the manipulation of computer data structures (e.g., the pixels of a digital image and a two-dimensional array known as a mask) and the output of a modified computer data structure (a halftoned digital image), the method could not, as a practical matter, be performed entirely in a human's mind.” Cybersource Corp. v. Retail Decisions, Inc., 654 F.3d 1366, 1376 (Fed. Cir. 2011). Here, claim 1 is directed to training a neural network, updating the training data as a function of new training examples, and retraining the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded. Therefore, Applicant submits that claim 1, much like the claims at issue in SiRF Tech. does not “’deal[] with ... a method that [could] be performed without a machine’ and that there [is] ‘no evidence... that the calculations [could] be performed entirely in the human mind.’” Cybersource Corp., 654 at 1376 citing SiRF Tech., 601 F.3d at 1331.</p>
+   <p>Additionally, in Ex Parte Adjaoute, the PTAB explored “claims [that] recite monitoring operation[s] of machines using neural networks, logic decision trees, confidence assessments, fuzzy logic, smart agent profiling, and case-based reasoning (Spec., Claims 1 and 8).” (No.
+2018-007443, pg. 10 (PTAB, Oct. 10, 2019)) (Informative). The PTAB held that “the ‘classifying’ steps of claims 1 and ‘modules’ of claim 8 when read in light of the Specification, recite a method and system difficult and challenging for non-experts due to their computational complexity. As such, we conclude that one of ordinary skill in the art would not find it practical to perform the aforementioned ‘classifying’ steps recited in claim 1 and function of the ‘modules’ recited in claim 8 mentally.” (Id. at 11.)</p>
+   <p>As referenced above, the apparatus recited by claim 1 includes a trained neural network that is “difficult and challenging for non-experts” due to its complexity, as explained in the specification as filed. For instance, a “neural network” also known as an artificial neural network, is a network of “nodes,” or data structures having one or more inputs, one or more outputs, and a function determining outputs based on inputs. Such nodes may be organized in a network, such as without limitation a convolutional neural network, including an input layer of nodes, one or more intermediate layers, and an output layer of nodes. Connections between nodes may be created via the process of "training" the network, in which elements from a training dataset are applied to the input nodes, a suitable training algorithm (such as Levenberg-Marquardt, conjugate gradient, simulated annealing, or other algorithms) is then used to adjust the connections and weights between nodes in adjacent layers of the neural network to produce the desired values at the output nodes. (Specification at para. [0047]). Accordingly, much like the claims in In Re Adjaoute, the use of Applicant’s claimed trained neural network could not be practically performed in the human mind.</p>
+   <p>Furthermore, Applicant submits that the limitations as recited in claim 1 cannot practically be performed in the human mind much like examples 39 listed in the Subject Matter Eligibility Examples: Abstract Ideas issued January 2019 or the claims in SRI Int’l, Inc. v. Cisco, Sys., Inc. 930 F.3d 1295 (Fed. Cir. 2019).</p>
+   <p>For example, Example 39 presents an allowable claim that recites (Subject Matter Eligibility Examples: Abstract Ideas, pgs. 8–9, Emphasis Added):</p>
+   <p>collecting a set of digital facial images from a database; </p>
+   <p>applying one or more transformations to each digital facial image including mirroring, rotating, smoothing, or contrast reduction to create a modified set of digital facial images; </p>
+   <p>
+<u>creating a first training set comprising the collected set of digital facial images, the modified set of digital facial images, and a set of digital non-facial images; </u>
+   </p>
+   <p>
+<u>training the neural network in a first stage using the first training set; </u>
+   </p>
+   <p>
+<u>creating a second training set for a second stage of training comprising the first training set and digital non-facial images that are incorrectly detected as facial images after the first stage of training; </u>
+   </p>
+   <p>
+<u>and training the neural network in a second stage using the second training set.</u>
+   </p>
+   <p>The Explanation in the Guidance states:</p>
+   <p>The claim does not recite any of the judicial exceptions enumerated in the 2019 PEG. For instance, the claim does not recite any mathematical relationships, formulas, or calculations. While some of the limitations may be based on mathematical concepts, the mathematical concepts are not recited in the claims. <u>Further, the claim does not recite a mental process because the steps are not </u>
+
+<u>practically performed</u>
+
+<u> in the human mind. Finally, the claim does not recite any method of organizing human activity such as a fundamental economic concept or managing interactions between people. Thus, the claim is eligible because it does not recite a judicial exception. </u>(Id. at pg. 9, Emphasis Added.).</p>
+   <p>Much like the claim presented in Example 39, Applicant’s claim 1 recites a first training set (training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels), training a neural network using the plurality of diagnostic labels, creating a second training set (updated training data as a function of new training examples), and retraining the neural network as a function of the updated training data. In light of this, Applicant submits that the recitations of claim 1 do not recite a mental process much like the recitations of Example 39 because they are “steps [that] are not practically performed in the human mind.”</p>
+   <p>Accordingly, Applicant submits that the instant disclosure does not disclose in claim 1, or any other claim, any abstract limitation that is directed to a mental process as suggested by the Examiner.</p>
+   <p>For at least the above reasons, Applicant submits that the Examiner has failed to establish a prima facie case of subject matter ineligibility and respectfully requests withdrawal of the Section 101 rejections.</p>
+   <p>
+
+<u>Step 2A Prong Two</u>
+
+   </p>
+   <p>Even though the claims do not recite an abstract idea as alleged by the Examiner, the claims recite additional elements that integrate the judicial exception into a practical application. Applicant respectfully traverses the Examiner’s assertion that the judicial exception is not integrated into a practical application because the generically recited computer elements (e.g. processor, display, etc.) do not add a meaningful limitation to the abstract idea because they amount to simply implementing the abstract idea on a computer, and displaying the results is considered insignificant extra-solution activity. (Office Action, p. 3).</p>
+   <p>Applicant respectfully traverses the assertion as the Office fails to evaluate whether claim 1 as a whole integrates the recited judicial exception into a practical application of the exception in Step 2A Prong Two. Enfish, LLC v. Microsoft Corp., 822 F.3d 1327 (Fed. Cir. 2016); See
+also MPEP §2106.04 (“examiners should consider the claim as a whole when performing the Step 2A analysis”).</p>
+   <p>The MPEP states that an Examiner must evaluate whether the claims, if directed to a judicial exception, are integrated into a practical application. Specifically, the MPEP states that “Examiners evaluate integration into a practical application by: (1) identifying whether there are any additional elements recited in the claim beyond the judicial exception(s); and (2) evaluating those additional elements individually and in combination to determine whether they integrate the exception into a practical application, using one or more of the considerations introduced in subsection I supra, and discussed in more detail in MPEP §§ 2106.04(d)(1), 2106.04(d)(2), 2106.05(a) through (c) and 2106.05(e) through (h).” M.P.E.P., 9e, § 2106.04(d). </p>
+   <p>The Examiner fails to consider the fact that the technologically complex system trains a neural network, updates training data, and retrains the neural network. Further, a “neural network” also known as an artificial neural network, is a network of “nodes,” or data structures having one or more inputs, one or more outputs, and a function determining outputs based on inputs. Such nodes may be organized in a network, such as without limitation a convolutional neural network, including an input layer of nodes, one or more intermediate layers, and an output layer of nodes. Connections between nodes may be created via the process of "training" the network, in which elements from a training dataset are applied to the input nodes, a suitable training algorithm (such as Levenberg-Marquardt, conjugate gradient, simulated annealing, or other algorithms) is then used to adjust the connections and weights between nodes in adjacent layers of the neural network to produce the desired values at the output nodes. (Specification at para. [0047]). </p>
+   <p>Furthermore, MPEP 2106.04(d) states that a “claim that integrates an alleged judicial exception into a practical application will apply, rely on, or use the judicial exception in a manner that imposes a meaningful limit on the judicial exception, such that the claim is more than a drafting effort designed to monopolize the judicial exception.”  The Federal Circuit has held that claims are not directed towards an abstract idea if the claim uses limited rules in a process specifically designed to achieve an improved technological result in conventional industry practice.  See
+McRo, Inc. v. Bandai Namco Games Am. Inc., 837 F.3d 1299, 1316 (Fed. Cir. 2016).</p>
+   <p>An apparatus for artificial intelligence-supported diagnostic assessment comprises “generating training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels; training a neural network using the plurality of diagnostic labels; updating the training data as a function of new training examples; and retraining the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded.” Hence, analogous to McRo, the use of the processor to generate training data, train the neural network, update the training data, and retrain the neural network, and meaningful inputs (correlation of the plurality of multi-channel sensor readings with a plurality of diagnostic labels, and new training examples) imposes limits to the claims beyond any judicial exception, which are not designed to monopolize the judicial exception. Further, in Ex Parte Donovan, the PTAB held that:</p>
+   <p>The machine learning application, on the other hand, is configured to generate an effective treatment model using population data according to a specific statistical functionality (linear discriminant analysis) and relying on particular inputs (e.g., data for each member of the population taken at two different times, data values corresponding to treatment resistance and health outcomes, and both measured and derived protein expression levels for a plurality of biomarkers ). Hence, as with the incorporation of particular “rules” in the claims of McRO, <u>we find that the specific operations and inputs employed by the recited machine learning application in generating an effective treatment model impose meaningful limits to the claims beyond any judicial exception</u>. </p>
+   <p>(Emphasis Added) (2017-005993 (PTAB 2019), Non-precedential). Similar to the claims in Donovan, amended claim 1 recites a specifically trained neural network, employing machine-learning based determination and generation techniques, with the use of training data and a plurality of diagnostic labels as inputs. Similarly to Donovan, Applicant asserts that these specific means are not merely directed to a result or effect that itself is the abstract idea, because claim 1 as a whole is limited to rules, such as “generating training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels; training a neural network using the plurality of diagnostic labels; updating the training data as a function of new training examples; and retraining the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded.” As such, the recited trained neural network imposes meaningful limits to the claims beyond any judicial exception. Applicant respectfully requests reconsideration without oversimplification of the claim and consideration of the claim as a whole.</p>
+   <p>Furthermore, in Ex Parte Baughman, the PTAB held that:</p>
+   <p> [t]he “function closure”-related software limitations recited in claim 1’s first step are integrated with the limitations that describe the abstract idea for generating answers to a question. Claim 1 uses the queries decomposed from the received function call to obtain “local hypothesis evidence,” and then uses that local hypothesis evidence along with “the set of non-local context evidence” for generating hypotheses. Taken as a whole, claim 1 recites a set of steps for a particular query-and hypothesis-based processing sequence and set of rules, executed by a QA system, that amounts to “us[ing] the limited rules in a process specifically designed to achieve an improved technological result in conventional industry practice,” i.e., to improve the technology of QA systems. See McRO, Inc. v. Bandai Namco Games America Inc., 837 F.3d 1299, 1316 (Fed. Cir. 1016); see 
+also id. at 1307–08, 1313–16 (explaining “that processes that automate tasks humans are capable of performing are patent eligible if properly claimed” (id. at 1313)). In view of the foregoing, we conclude claim 1 imposes meaningful limits on the application of the recited judicial exception for generating candidate answers to a question. These limitations, in combination, integrate the abstract idea into a practical application for the technology of QA systems. Thus, we agree with Appellant the Examiner erred in rejecting claims 1–20 under 35 U.S.C. § 101.2019-000665, pg. 8–9 (PTAB 2019).  </p>
+   <p>Like the claims in Baughman, amended claim 1 recites meaningful limits on the application of any alleged judicial exception and limitations analogous to the processing sequence in Baughman. The trained neural network is trained with a specific set of rules similar to what is taught in Baughman, such as training the neural network using the plurality of diagnostic labels, updating the training data as a function of new training examples, and retraining the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded. Therefore, Applicant submits that, like the claims in Baughman, the recitations of claim 1, in combination, integrate any alleged abstract idea into a practical application for the technology of artificial-intelligence supported diagnostic assessment. </p>
+   <p>Moreover, Applicant submits that claim 1 as amended is not directed to an abstract idea, because claim 1 as amended is directed to an improvement to a computer process. See
+McRo, 837 F.3dat 1310. A claim directed to an improvement to technology, including computer technology, is not directed to an abstract idea. Id. at 1316. Claims are “patent eligible [where] they ‘effect an improvement in [a] technology or technical field.’” Id. at 1310, quoting Alice Corp. v. CLS Bank Int’l, 134 S.Ct. 2347, 2359 (2014). Improvements to computer technology may include improvements in configuration of general purpose computers for specific purposes, such as computer animation. Id. (emphasis added). Here, claim 1 as amended is directed to the training/adjustment/modification of a neural network for artificial intelligence-supported diagnostic assessment.</p>
+   <p>Claim 1 as amended, recites an inventive concept, at least because the claim contains limitations such as non-conventional and non-generic arrangement of process steps, which amounts to a non-conventional and non-generic arrangement of process steps. See
+BASCOM Glob. Internet Servs., Inc. v. AT&amp;T Mobility, LLC, 827 F.3d 1341, 1350 (Fed. Cir. 2016). “Examiners should keep in mind that the courts have held computer-implemented processes to be significantly more than an abstract idea (and thus eligible), where generic computer components are able in combination to perform functions that are not merely generic.” May 4th USPTO Memorandum at p. 4; see also
+DDR Holdings, 773 F.3d at 1257. Further, “an inventive concept may be found in the non-conventional and non-generic arrangement” even of generic computer operations on a generic computing device. Bascom, 827 F.3d at 1350.</p>
+   <p>Considering this, Applicant submits that claim 1, or any other claim, is not directed to “the mental processes and methods of organizing human activity that § 101 is meant to exclude”, if any, and further is not directed to a judicial exception.  Therefore, Applicant respectfully asserts that the activities of claim 1, and other claims, do not recite the abstract idea of mental processes as exemplified by the teachings of the MPEP and the courts.</p>
+   <p>For at least these additional reasons, Applicant respectfully requests withdrawal of the Section 101 rejections.</p>
+   <p>
+
+<u>Step 2B</u>
+
+   </p>
+   <p>Though Applicant contends that amended claim 1 is not directed towards a judicial exception, if claim 1 is found to be directed towards a judicial exception, Applicant submits that amended claim 1 amounts to significantly more than the judicial exception under step 2B. MPEP 2106.05(II). </p>
+   <p>The 2019 Guidance states that “[i]t is possible that a claim that does not ‘integrate’ a recited judicial exception is nonetheless patent eligible. For example, the claim may recite additional elements that render the claim patent eligible even though a judicial exception is recited in a separate claim element.” 2019 Guidance, p. 56. Further, the 2019 Guidance states that “if a claim has been determined to be directed to a judicial exception under revised Step 2A, examiners should then evaluate the additional elements individually and in combination under Step 2B to determine whether they provide an inventive concept (i.e., whether the additional elements amount to significantly more than the exception itself. . . examiners should consider in Step 2B whether an additional element or combination of elements: Adds a specific limitation or combination of limitations that are not well-understood, routine, conventional activity in the field.” Id.</p>
+   <p>The Examiner alleges that claims 1 and 11 do not include additional elements that are sufficient to amount to significantly more than the judicial exception because:</p>
+   <p>“they amount to a general computer performing a calculation. The claims are directed to an abstract idea, i.e. implementing the idea of performing a series of steps to label cardiac data and receive new data to predict a cardiac condition based on the labeled data, such as may be done by a mental process, critical thinking, and/or paper and pencil, or done by a mathematical equation, with additional generic computer elements, or additional structure (e.g. processor, display, etc.) recited at a high level of generality that perform generic functions routinely used in the art, and do not add a meaningful limitation to the abstract idea because they would be routine in any computer implementation or in the relevant art. Thus, the recited generic computer components perform no more than their basic computer functions. These additional elements are well-understood, routine and conventional limitations (see cited document(s)) that amount to mere instructions or</p>
+   <p> elements to implement the abstract idea.”</p>
+   <p>(Office Action, p. 4). </p>
+   <p>Applicant respectfully disagrees and submits that the claims recite additional elements that amount to significantly more than the judicial exception (i.e., inventive concept).  This can be evidenced at least by the “practical application” and “improvement” analysis presented above in connection with Prong 2 of Step 2A.</p>
+   <p>Additionally, Applicant would like to point out that the claims recite details of how a solution to a problem is accomplished, practice a needed use of a computing device (e.g. to train the neural network, update the training date, and retrain the neural network) and are directed to a specific technical field (e.g. machine-learned enhanced improvements in artificial intelligence-supported diagnostic assessment). See MPEP 2106.05(f).</p>
+   <p>Applicant submits that claims 1 and 11 (and other claims), when analyzed as an ordered combination contain an inventive concept.  An inventive concept can be found in the non-conventional and non-generic arrangement of known conventional pieces. Bascom Global Internet Services v. AT&amp;T Mobility, 827, F.3d, 1341, 1350 (Fed. Cir. 2016). Claim 1 as a whole recites a unique apparatus for artificial intelligence-supported diagnostic assessment. A computing device is used to train a neural network, update training data, and retrain the neural network. The disclosure aims to better optimize cardiac disease assessment.</p>
+   <p>Additionally, as discussed below, Applicant’s claims amount to an “inventive concept” because they are not taught by the relevant art.</p>
+   <p>For at least these additional reasons, Applicant respectfully requests withdrawal of the § 101 rejections.</p>
+   <p>Independent claim 11 recites limitations similar to independent claim 1 and overcomes these rejections for at least the same reasons as discussed above with reference to claim 1.</p>
+   <p>Claims 2-10 depend directly or indirectly on claim 1 and thus recite all the same elements as claim 1. Claims 12-20 depend directly or indirectly from claim 11 and thus recite all the same elements as claim 11. Applicant therefore submits that claims 2-10 and 12-20 overcome these rejections for at least the same reasons as discussed above with reference to claims 1 and 11.</p>
+   <p>Therefore, Applicant respectfully requests reconsideration and withdrawal of the 35 U.S.C. §&nbsp;101 rejections of Applicant’s claims 1-20.</p>
+   <p>
+
+<u>Rejection of the Claims under 35 U.S.C. § 102</u>
+
+   </p>
+   <p>
+
+Chen
+
+   </p>
+   <p>Claims 1-5, 7, 11-15 and 17 stand rejected under 35 U.S.C. § 102 as allegedly being anticipated by “Artificial Intelligence-Enabled Electrocardiography Predicts Left Ventricular Dysfunction and Future Cardiovascular Outcomes: A Retrospective Analysis” to Chen et al. (hereinafter “Chen”). Applicant respectfully traverses the rejection.</p>
+   <p>
+<u>Claim 1</u>
+   </p>
+   <p>As agreed to in the above-noted interview, claim 1 has been amended to recite:</p>
+   <p>An apparatus for artificial intelligence-supported diagnostic assessment, wherein the apparatus comprises:</p>
+   <p>at least a processor, wherein the processor is configured to:</p>
+   <p>receive a plurality of multi-channel sensor readings of physiological data;</p>
+   <p>generate training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels;</p>
+   <p>train a neural network using the plurality of diagnostic labels;</p>
+   <p>update the training data as a function of new training examples;</p>
+   <p>retrain the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded;</p>
+   <p>receive a time series input describing user physiological data from at least a sensor;</p>
+   <p>input the time series input into the trained neural network;</p>
+   <p>generate diagnostic data as a function of the time series input and the trained neural network, wherein the diagnostic data includes a classification under a plurality of groups, wherein the groups are comprised of:</p>
+   <p>normal LV function;</p>
+   <p>LVSD only;</p>
+   <p>LVDD only; and </p>
+   <p>both LVSD and LVDD;</p>
+   <p>determine prognostic data as a function of the diagnostic data; and</p>
+   <p>output the prognostic data. </p>
+   <p>The Office does not assert that Chen discloses “wherein the diagnostic data includes a classification under a plurality of groups, wherein the groups are comprised of: normal LV function; LVSD only; LVDD only; and both LVSD and LVDD,” as amended independent claim 1 recites. Accordingly, Applicant respectfully submits that Chen does not disclose “wherein the diagnostic data includes a classification under a plurality of groups, wherein the groups are comprised of: normal LV function; LVSD only; LVDD only; and both LVSD and LVDD.” Therefore, Applicant respectfully submits that claim 1, as amended, is patentably distinguishable over Chen, for at least the reasons discussed above. Therefore, Applicant respectfully requests the withdrawal of the rejection.</p>
+   <p>
+<u>Claim 11</u>
+   </p>
+   <p>Claim 11 has been amended similarly to claim 1. As noted above, and agreed to in the above-noted interview, amended claim 1 is patentably distinguishable over Chen, for at least the reasons discussed above. As such, Applicant submits that claim 11 is also patentably distinguishable over Chen, for at least the reasons discussed above. Accordingly, Applicant respectfully requests the withdrawal of these rejections.</p>
+   <p>
+<u>Claims 2-5, 7, 12-15 and 17</u>
+   </p>
+   <p>Claims 2-5, 7, 12-15 and 17 depend, directly or indirectly, from amended claims 1 and 11, respectively. As noted above, amended claims 1 and 11 are patentably distinguishable over Chen, for at least the reasons discussed above. Accordingly, Applicant respectfully submits that claims 2-5, 7, 12-15 and 17 are also patentably distinguishable over Chen for at least the reasons discussed above. Therefore, Applicant respectfully requests the withdrawal of the rejection.</p>
+   <p>Accordingly, Applicant respectfully requests that the rejections of the claims under 35 U.S.C. § 102 be withdrawn.</p>
+   <p>
+
+<u>Rejection of the Claims under 35 U.S.C. § 103</u>
+
+   </p>
+   <p>
+
+Chen
+
+   </p>
+   <p>Claims 6, 8, 10, 16, 18 and 20 stand rejected under 35 U.S.C. § 103 as allegedly being unpatentable over Chen. Applicant respectfully traverses the rejection.</p>
+   <p>Claims 6, 8, 10, 16, 18 and 20 depend, directly or indirectly, from amended claims 1 and 11, respectively. As noted above, claims 1 and 11 are patentably distinguishable over Chen, for at least the reasons discussed above. Accordingly, Applicant submits that claims 6, 8, 10, 16, 18 and 20 are also patentably distinguishable over Chen, for at least the reasons discussed above. Therefore, Applicant respectfully submits the withdrawal of this rejection.</p>
+   <p>Accordingly, Applicant respectfully requests that the rejection of the claims under 35 U.S.C. § 103 be withdrawn.</p>
+   <p>
+
+<u>Conclusion</u>
+
+   </p>
+   <p>Accordingly, Applicant respectfully submits that all claims in the application are in a condition for allowance and respectfully solicits the prompt issuance of a Notice of Allowance.  The foregoing comments made with respect to the positions taken by the Examiner are not to be construed as acquiescence with other positions of the Examiner that may not have been explicitly contested. In addition, arguments presented herein for the patentability of a claim should not be understood as implying that no other reason for the patentability of the claim exists. If any issues remain, the Examiner is encouraged to call the undersigned practitioner at the number listed below.</p>
+   <p>Respectfully submitted,</p>
+   <p>Date: December 7, 2024 <u>/CHARLES DRESSER/  </u>
+   </p>
+   <p>Charles Dresser, Reg No. 70,797</p>
+   <p>CALDWELL INTELLECTUAL PROPERTY LAW</p>
+   <p>Customer No. 145340</p>
+   <p>E-Mail: charles@caldwelllaw.com</p>
+   <p>Tel: (207) 240-1203</p>
+
+</body></html>

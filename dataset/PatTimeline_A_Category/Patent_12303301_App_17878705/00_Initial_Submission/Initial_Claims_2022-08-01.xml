@@ -1,0 +1,148 @@
+<html><head></head><body><h3>Date: 2022-08-01</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1.    A neuromuscular sensing method comprising: 
+<br>
+transmitting an electrical stimulus from a distal end portion of an elongate stimulator extending within an intracorporeal treatment area of a subject; 
+<br>
+detecting an artificially induced response of at least two muscles of the subject in response to the transmitted electrical stimulus, each response detected by a respective sensor in mechanical communication with the muscle; 
+<br>
+transitioning a graphical user interface (GUI) displayed on a display from a first state to a second state; 
+<br>
+the first state indicating to the transmission of a stimulus with no artificially induced response detected; and 
+<br>
+the second state indicating the detection of the artificially induced response of the at least two muscles, and further identifying one of the at least two muscles as a primary muscle response. 
+
+<br>
+
+<br>
+2.    The neuromuscular sensing method of claim 1, wherein the second state further identifies at least one of the at least two muscles as an ancillary muscle response.
+<br>
+
+<br>
+3.    The neuromuscular sensing method of claim 2, wherein the GUI displays a graph of a sensed amplitude of the response of the muscle corresponding to the primary muscle response.
+<br>
+
+<br>
+4.    The neuromuscular sensing method of claim 2, further comprising displaying, via the GUI, a relative difference in magnitude between an amplitude of the primary muscle response and an amplitude of the ancillary muscle response.
+<br>
+
+5.    The neuromuscular sensing method of claim 4, wherein displaying the relative difference in magnitude comprises displaying a first element having a first size corresponding to the amplitude of the primary muscle response and displaying a second 
+ element having a second size corresponding to the amplitude of the ancillary muscle response
+<br>
+
+<br>
+6.    The neuromuscular sensing method of claim 5, wherein the first element comprises a first bar connecting an identification of the muscle corresponding to the primary muscle response with a central display area; 
+<br>
+wherein the second element comprises a second bar connecting an identification of the muscle corresponding to the ancillary muscle response with the central display area; and 
+<br>
+wherein the first size is a thickness of the first bar, and the second size is a thickness of the second bar. 
+
+<br>
+
+<br>
+7.    The neuromuscular sensing method of claim 1, further comprising transitioning the GUI from the first state to a third state, the third state indicating a detection of a spontaneous response of the at least two muscles, and further identifying one of the at least two muscles as a primary muscle response.
+<br>
+
+<br>
+8.    The neuromuscular sensing method of claim 1, further comprising displaying, via the GUI, a plurality of display elements, each display element corresponding to a different one of the at least two muscles of the subject; 
+<br>
+receiving an input from a user to select one of the plurality of display elements; 
+<br>
+displaying a graph of a sensed amplitude of a response of the muscle corresponding to the selected display element. 
+
+<br>
+
+<br>
+9.    The neuromuscular sensing method of claim 8, further comprising determining correspondence between each of the plurality of display elements and each of the at least two muscles of the subject.
+<br>
+
+<br>
+10.   The neuromuscular sensing method of claim 8, further comprising providing an indication, via the corresponding display element, if any a sensor in mechanical communication with a muscle is inoperative.
+<br>
+
+<br>
+11.   The neuromuscular sensing method of claim 8, wherein each of the respective sensors is a mechanical sensor; and 
+<br>
+wherein detecting an artificially induced response of the at least two muscles of the subject comprises monitoring the mechanical motion of each of the at least two muscles using the respective mechanical sensor in mechanical communication with the muscle. 
+
+<br>
+
+<br>
+12.   An intraoperative neural monitoring system comprising: 
+<br>
+a plurality of mechanical sensors, each operative to monitor a different muscle of a subject; 
+<br>
+an elongate stimulator operative to extend within an intracorporeal treatment area of a subject and to transmit an electrical stimulus from a distal end portion; 
+<br>
+a host system in communication with the plurality of mechanical sensors, the host system including a display and a processor, the processor configured to: 
+<br>
+receive an output signal from each of the mechanical sensors, the output signal corresponding to the movement of the monitored muscles of the subject; 
+<br>
+display a graphical user interface (GUI) via the display; 
+<br>
+detect an artificially induced response of at least two muscles of the subject in response to the electrical stimulus, each response detected from the received output signals; and 
+<br>
+transition the GUI from a first state to a second state in response to the detected artificially induced response of the at least two muscles; 
+<br>
+the first state indicating the transmission of a stimulus with no artificially induced response detected; and 
+<br>
+the second state indicating the detection of the artificially induced response of the at least two muscles, and further identifying one of the at least two muscles as a primary muscle response. 
+<br>
+
+<br>
+13.   The intraoperative neural monitoring system of claim 12, wherein the second state further identifies at least one of the at least two muscles as an ancillary muscle response.
+<br>
+
+<br>
+14.   The intraoperative neural monitoring system of claim 13, wherein the processor is further configured to display, via the GUI, a graph of a sensed amplitude of the response of the muscle corresponding to the primary muscle response.
+<br>
+
+<br>
+15.   The intraoperative neural monitoring system of claim 13, wherein the processor is further configured to display, via the GUI, a relative difference in magnitude between an amplitude of the primary muscle response and an amplitude of the ancillary muscle response.
+<br>
+
+<br>
+16.   The intraoperative neural monitoring system of claim 15, wherein the processor is further configured to display the relative difference in magnitude by displaying a first element having a first size corresponding to the amplitude of the primary muscle response and displaying a second element having a second size corresponding to the amplitude of the ancillary muscle response
+<br>
+
+<br>
+17.   The intraoperative neural monitoring system of claim 16, wherein the first element comprises a first bar connecting an identification of the muscle corresponding to the primary muscle response with a central display area; 
+<br>
+wherein the second element comprises a second bar connecting an identification of the muscle corresponding to the ancillary muscle response with the central display area; and 
+<br>
+wherein the first size is a thickness of the first bar, and the second size is a thickness of the second bar. 
+
+<br>
+
+<br>
+18.   The intraoperative neural monitoring system of claim 12, wherein the processor is further configured to detect a spontaneous response of at least two muscles of the subject, each response detected from the received output signals; and 
+
+ transition the GUI from the first state to a third state, the third state indicating the detection of a spontaneous response of the at least two muscles, and further identifVing one of the at least two muscles as a primary muscle response.
+<br>
+
+<br>
+19.   The intraoperative neural monitoring system of claim 12, wherein the processor is further configured to: 
+<br>
+display, via the GUI, a plurality of display elements, each display element corresponding to a different one of the plurality of mechanical sensors; 
+<br>
+receive an input from a user selecting one of the plurality of display elements; and 
+<br>
+display a graph of the output of the mechanical sensor corresponding to the selected display element. 
+
+<br>
+
+<br>
+20.   The intraoperative neural monitoring system of claim 12, wherein the processor is further configured to: 
+<br>
+detect one or more display elements that do not correspond to an operational mechanical sensor; and 
+<br>
+provide a visual indication of the one or more display elements that do not correspond to an operational mechanical sensor. 
+19
+20
+21
+22
+23
+</body></html>

@@ -1,0 +1,22 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+REASONS FOR ALLOWANCE
+The following is an examiner’s statement of reasons for allowance:
+None of the prior art of record teaches:
+change a mode of the aircraft from a full authority mode to a reduced authority mode in response to determining the detected face within the image is unauthorized; wherein the unauthorized user has full authority to control one or more user interface elements of the aircraft in the full authority mode; wherein the unauthorized user has reduced authority to control the one or more user interface elements of the aircraft in the reduced authority mode.
+There are many pieces of prior art that discuss flight deck security generally. Two of these are:
+EP2050671 which discusses changing aircraft authorizations based on modes
+WO03045782 which discusses preventing the control of an aircraft from the cockpit including disabling all normal cockpit control.
+The difference between these types of control override systems and the present claims is that the claims do this in response to facial recognition technology. While it would be possible to find another reference and combine it with the two pieces of art above, this would be improper because there would be no motivation to combine.
+To support this, please see the Cockpit Door NPL included on the PTO-892 form which states that in the future the cockpit could be secured by facial recognition technology. This reference is dated 2022, after the filing date of the present invention. There was nothing at the time that disclosed the specific way facial recognition technology could be used in relation to reducing or limiting operation of the airplane. Finding a generic facial recognition algorithm and applying it to the references listed above would be improper hindsight reasoning.
+The present claims are completely technical in nature and thus are not subject to a 35 U.S.C. 101 rejection. Changing a mode of the aircraft is not an abstract idea.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ARYAN E WEISENFELD whose telephone number is(571)272-6602. The examiner can normally be reached M-F 9-5.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Vivek Koppikar can be reached on 5712725109. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+ARYAN E. WEISENFELD
+Primary Examiner
+Art Unit 3689
+/ARYAN E WEISENFELD/Primary Examiner, Art Unit 3667

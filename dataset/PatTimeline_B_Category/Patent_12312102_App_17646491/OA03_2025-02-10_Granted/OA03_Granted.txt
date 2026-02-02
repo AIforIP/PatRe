@@ -1,0 +1,142 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Notice of Allowance
+Claims 1-19 are allowed.  All rejections are withdrawn.  The amendments after final dated 12-30-2024 are entered in full.
+Examiner’s Statement of Reasons For Allowance
+Although each element is known individually in the prior art, the prior art fails to disclose or suggest either individually or in combination with any other prior art of record the combination of elements of claims 1, 14 and 19   Any comment to the Examiner's Statement of Reasons for Allowance should be filed with the issue fee and should be labeled comments to the Examiner's Statement of Reasons for Allowance.
+The prior art fails to disclose or suggest either individually or together with any other prior art of record of “[a] controller for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft,
+wherein the normal operation includes moving towards a target in the keep-away zone, and
+wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and
+a failure of at least one component of the spacecraft,
+the controller comprising:
+at least one processor; and
+a memory having instructions stored thereon that,
+when executed by the at least one processor,
+cause the controller to:
+execute, during the normal operation of the spacecraft,
+a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep- away zone,
+wherein the state of the spacecraft includes
+a location of the spacecraft and
+at least one or a combination of
+a velocity and
+an acceleration of the spacecraft,
+wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft,
+wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft; and
+execute, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for
+the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the corresponding control invariant set”.
+The 724 publication discloses a keep away zone and barrier for a flight steering order. The 724 is silent as to wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft.
+The 724 is silent as to “[a] controller for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft,
+wherein the normal operation includes moving towards a target in the keep-away zone, and
+wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and
+a failure of at least one component of the spacecraft,
+the controller comprising:
+at least one processor; and
+a memory having instructions stored thereon that,
+when executed by the at least one processor,
+cause the controller to:
+execute, during the normal operation of the spacecraft,
+a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep- away zone,
+wherein the state of the spacecraft includes
+a location of the spacecraft and
+at least one or a combination of
+a velocity and
+an acceleration of the spacecraft,
+wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft,
+wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft; and
+execute, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for
+the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the corresponding control invariant set”.
+Chen teaches an abnormal operation detection. Chen is silent as to wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft.
+Chen is silent as to “[a] controller for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft,
+wherein the normal operation includes moving towards a target in the keep-away zone, and
+wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and
+a failure of at least one component of the spacecraft,
+the controller comprising:
+at least one processor; and
+a memory having instructions stored thereon that,
+when executed by the at least one processor,
+cause the controller to:
+execute, during the normal operation of the spacecraft,
+a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep- away zone,
+wherein the state of the spacecraft includes
+a location of the spacecraft and
+at least one or a combination of
+a velocity and
+an acceleration of the spacecraft,
+wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft,
+wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft; and
+execute, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for
+the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the corresponding control invariant set”.
+Berning teaches change constraints to avoid obstacles.  Berning is silent as to wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft.
+Berning is silent as to “[a] controller for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft,
+wherein the normal operation includes moving towards a target in the keep-away zone, and
+wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and
+a failure of at least one component of the spacecraft,
+the controller comprising:
+at least one processor; and
+a memory having instructions stored thereon that,
+when executed by the at least one processor,
+cause the controller to:
+execute, during the normal operation of the spacecraft,
+a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep- away zone,
+wherein the state of the spacecraft includes
+a location of the spacecraft and
+at least one or a combination of
+a velocity and
+an acceleration of the spacecraft,
+wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft,
+wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft; and
+execute, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for
+the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the corresponding control invariant set”.
+Goo teaches an region that is close to an obstacle that includes a safe RRT algorithm for an abort control command.  Goo is silent as to wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft.
+Goo is silent as to “[a] controller for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft,
+wherein the normal operation includes moving towards a target in the keep-away zone, and
+wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and
+a failure of at least one component of the spacecraft,
+the controller comprising:
+at least one processor; and
+a memory having instructions stored thereon that,
+when executed by the at least one processor,
+cause the controller to:
+execute, during the normal operation of the spacecraft,
+a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep- away zone,
+wherein the state of the spacecraft includes
+a location of the spacecraft and
+at least one or a combination of
+a velocity and
+an acceleration of the spacecraft,
+wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft,
+wherein the nominal control law solves at each time step,
+an optimization problem that minimizes
+a sum of squared distance of the spacecraft to the keep-away zone over time and
+an amount of energy expended by an open-loop control sequence subject to linear equality constraints describing evolution of a mean and a covariance matrix of a state and a measurement of the spacecraft; and
+execute, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for
+the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the corresponding control invariant set”.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to JEAN PAUL CASS whose telephone number is(571)270-1934. The examiner can normally be reached Monday to Friday 7 am to 7 pm; Saturday 10 am to 12 noon.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Scott A. Browne can be reached on 571-270-0151. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/JEAN PAUL CASS/Primary Examiner, Art Unit 3666

@@ -1,0 +1,146 @@
+<html><head></head><body><h3>Date: 2022-02-16</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+<br>
+1. A virtual prop control method. performed by an electronic device. the method comprising: 
+<br>
+displaying. in a target game application, a target virtual throw prop controlled by a first virtual operation object: 
+<br>
+controlling- based on a target throw operation being detected, the first virtual operation object to throw the target virtual throw prop. the target throw' operation being used for throwing the target virtual throw prop, setting a target region in the target game application as a damage detection region within a first predetermined duration, the target region comprising a point of fall to which the target virtual throw prop is thrown. the damage detection region being set to reduce hit points of at least one target virtual operation object located in the damage detection region, and the first virtual operation object and the at least one target virtual operation object respectively belonging to different virtual operation object sets: and 
+<br>
+continuously reducing hit points of a second virtual operation object within a second predetermined duration, based on the target region being the damage detection region and the second virtual operation object entering the target region. the at least one target virtual operation object comprising the second %irtual operation object. 
+
+<br>
+
+<br>
+2. The method according to claim I, wherein the continuously reducing comprises: 
+<br>
+continuously reducing the hit points of the second virtual operation object within the second predetermined duration after the second xirtual operation object enters the target region. based on the target <u>region</u> being the damage detection region. the second virtual operation object entering the target region, and the second virtual operation object not being set to continuously lose hit points within a third predetermined duration before entering the larget region, the third predetermined duration being equal to the second predetermined duration. 
+
+<br>
+
+<br>
+3. The method according to claim I, wherein the continuously reducing comprises: 
+<br>
+canceling continuous reduction of the hit points of the second virtual operation object witliin a fourth predetermined duration, based on the target region being the damage detection region, the second virtual operation object <u>entering</u> the target region, and the second virtual operation object being set to continuously lose hit points within the fourth predetermined duration before entering 
+
+the target region, and continuously reducing the hit points of the second virtual operation object within the second predetermined duration alter the second virtual operation object enters the target region.
+<br>
+
+<br>
+4. The method according to claim 1. wherein the continuously reducing comprises: 
+<br>
+continuously reducing the hit points of the second virtual operation object x  ithin a target duration after the second N irtual operation object enters the target region, based on the target region being the damage detection region, the second virtual operation object entering the larget region, and the second virtual operation object being set to continuously lose the hit points within a fifth predetermined duration before entering the target region. the target duration being a sum of the second predetermined duration and a remaining duration, the remaining duration being a remaining duration in the fifth predetermined duration when the second virtual operation object enters the target region. 
+
+<br>
+
+<br>
+5. The method according to claim 1, wherein the continuously reducing comprises: 
+<br>
+continuing to reduce the hit points ol the second virtual operation object, based on the second virtual operation object moving outside the target region and the second predetermined duration after the second virtual operation object enters :ie target iegioi not ending. 
+
+<br>
+
+<br>
+6. The method according to claim 1. wherein the controlling comprises: 
+<br>
+setting a state of the target virtual throw prop to a throw ready state, based on a first touch operation performed for a virtual throw button of the target virtual throw prop being detected. and displaying a throw route in the target game application: and 
+<br>
+controlling the first virtual operation object to throw the larget virtual throw prop according to the throw route. based on the target \ irtual throw prop being in the throw ready state and a second touch operation performed for the virtual throw button being detected, the target throx operation comprising the first touch operation and the second touch operation. 
+
+<br>
+
+<br>
+7. The method according to claim 6, wherein the displaying the throw route in the target game application comprises: 
+<br>
+29 
+
+displaying a first parabola from a first position to a second position in the target game application. and using the first parabola as the throw route, the first position being a position of the target virtual throw prop, and the second position being a predicted point of fall of the target virtual throw prop.
+<br>
+
+<br>
+8. The method according to claim 7, further comprising: 
+<br>
+displaying a second parabola from a third position to the second position in the target game application. based on the position of the target virtual throw prop being adjusted li-om the first position to the third position, the throw route being changed from the first parabola into the second parabola; or 
+<br>
+displaying a third parabola from the first position to a fourth position in the target game application. based on the predicted point of fall of the target virtual throw prop being adjusted from the second position to the fourth position, the throw route being changed from the first parabola into the third parabola; or 
+<br>
+displaying a fourth parabola from a fifth position to a sixth position in the target game application, based on the position of the target virtual throw prop being adjusted from the first position to the fifth position and the predicted point of fall of the target virtual throw prop being adjusted from the second position to the sixth position, the throw route being changed from the first parabola into the fourth parabola. 
+
+<br>
+
+<br>
+9. A virtual prop control apparatus, comprising: 
+<br>
+at least one memory configured to store program code: and 
+<br>
+at least one processor configured to read the program code and operate as instructed by the program code, the program code comprising: 
+<br>
+irst displaying code configured to cause the at least one processor to display, in a target game application. a target virtual throw prop controlled by a first irtual operation object; 
+<br>
+first controlling code configured to cause the at least one processor to control, based on a target throw operation being detected, the first virtual operation object to throw the target virtual throw prop, the target throw operation being used for throwing the target virtual throw prop: 
+<br>
+first setting code configured to cause the at least one processor to set a tariet re-ion in the 
+
+target game application as a damage detection region within a first predetermined duration, the target region comprising a point of fall to which the target virtual throe prop is thrown, the damage detection region being set to change an attribute of at least one target virtual operation object located in the damage detection region, and the first irtual operation object and the at least one target virtual operation object respectively belonging to different virtual operation object sets: and 
+<br>
+first changing code configured to cause the at least one processor to continuously change an attribute of a second virtual operation object within a second predetermined duration. based on the target region being the damage detection region and the second virtual operation object entering the target region. the at least one target virtual operation object comprising the second virtual operation object. 
+
+<p>I 0 The apparatus according to claim 9, wherein the first changing code comprises: second changing code configured to cause the at least one processor to continuously change the attribute of the second virtual operation object within the second predetermined duration after the second virtual operation object enters the target region, based on the target region being the damage detection region, the second virtual operation object entering the target region, and the second virtual operation object not being sel 1o continuously lose the hit points within a third predetermined duration before entering the target region. the third predetermined duration being equal to the second predetermined duration.</p>
+<p>I I The apparatus according to claim 9. wherein the first changing code comprises: third changing code configured to cause the at least one processor to cancel continuous changing of the attribue of the second virtual operation object within a fourth predetermined duration. based on the target region being the damage detection region. the second virtual operation object entering the target region, and the second virtual operation object being set to continuously lose the hit points within the Iourth predetermined duration before entering the target region. and continuously change the attribute of the second %irtual operation object within the second predetermined duration after the second N irtual operation object enters the target region.</p>
+<br>
+
+<br>
+12. The apparatus according to claim 9. wnerein the first changing code comprises: 
+<br>
+fourth changing code configured to cause the at least one processor to continuously change the 3] 
+
+attribute of the second virtual operation object within a target duration after the second virtual operation object enters the target region, based on the target region being the damage detection region, the second virtual operation object entering the target region, and the second N irtual operation object being set to continuously change the attribute of the second %irtual operation object within a fifth predetermined duration before entering the target region. wherein the target duration is obtained as a sum of the second predetermined duration and a remaining duration. the remaining duration being a remaining duration in the fifth predetermined duration when the second virtual operation object enters the target region.
+<br>
+
+<br>
+13. The apparatus according to claim 9. wherein the first changing code comprises: 
+<br>
+fifth changing code configured to cause the at least one processor to continue to change the attribute of the second virtual operation object based on the second virtual operation object moving outside the target renion and the second predetermined duration after the second %irtual operation object enters the target region has not ending. 
+
+<br>
+
+<br>
+14. The apparatus according to claim 9. wnerein lihe first controlling code comprises: 
+<br>
+second setting code configured to cause the at least one processor to set a state of the target virtual throw prop to a throw ready state. based on a first touch operation performed for a virtual throw button of the target virtual throw prop being detected, and display a throw route in the target game application: and 
+<br>
+second controlling code configured to cause the at least one processor to control the First virtual operation object to throw the target virtual throw prop according to the throw route. based on the target virtual throw prop being in the throw ready state and a second touch operation performed for the virtual throw button being detected, the target throw operation comprising the first touch operation and the second touch operation. 
+
+<br>
+
+<br>
+15. The apparatus according to claim 14, wherein the displaying the throw route in the Iarget game application comprises: 
+<br>
+displaying a first parabola from a first position to a second position in the target game application, and using the first parabola as the throw route. 
+
+<p>32
+the first position being a position of the target virtual throw prop. and the second position being a predicted point of fall of the target virtual throw prop.</p>
+<p>10, The apparatus according to claim 15, wherein the program code further comprises: second displaying code configured to cause the at least one processor to display a second parabola from a third position to the second position in the target game application, based on the position of the target virtual throw prop being adjusted from the first position to the third position. the throw route being changed from the first parabola into the second parabola: or third displaying code configured to cause :he at least one processor to display a third parabola from the first position to a fourth position in the target game application. based on the predicted point of fall of the target virtual throw prop being adjusted from the second position to the fourth position, the throw route being changed from the first parabola into the third parabola: or fourth displaying code configured to cause the at least one processor to display a fourth parabola from a fifth position to a sixth position in the target game application, based on the position of the target \ irtual throw prop being adjusted from the first position to the fifth position and the predicted point of fall of the target virtual throw prop being adjusted from the second position to the sixth position, the throw route being changed from the first parabola into the fourth parabola.</p>
+<br>
+
+<br>
+17. The apparatus according to claim 9, wierein the attribute of the at least one target virtual operation object located in the damage detection region or the attribute of the second virtual operation object is hit points.
+<br>
+
+<br>
+18. The apparatus according to claim 9, wnerein the attribute of the at least one target virtual operation object located in the damage detection region or the attribute of the second virtual operation object is mana points.
+<br>
+
+<br>
+19. The apparatus according to claim 9, wherein the attribute of the at least one target virtual operation object located in the damage detection region or the attribute of the second virtual operation object is energy value.
+<br>
+20, A non-transitory computer-readable storage medium, storing a program that is executable by at least one processor to perform: 
+<br>
+displaying. in a target game application, a target virtual throw prop controlled by a first virtual operation object, controlling, based on a target throw operation being detected. the first virtual operation object to throw the target virtual throw prop, the target throw operation being used for throwing the target virtual throw prop: 
+<br>
+setting a target region in the target game application as a damage detection region within a first predetermined duration, the target region comprising a point of fall to which the target \ iitrual throw prop is thrown. the damage detection region being set to reduce hit points of at least one target virtual operation object located in the damage detection region, and the first virtual operation object and the at least one target virtual operation object respectively belonging to different virtual operation object sets: and 
+<br>
+continuously reducing hit points of a second virtual operation object within a second predetermined duration, based on the target region being the damage detection region and the second virtual operation object entering the target region. the at least one target virtual operation object comprising the second virtual operation object 34 
+</body></html>

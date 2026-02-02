@@ -1,0 +1,313 @@
+<html><head></head><body><h3>Date: 2021-08-12</h3>
+<h1>SLEEP APNEA SYNDROME DETERMINATION APPARATUS, SLEEP APNEA</h1>
+<h1>SYNDROME DETERMINATION METHOD, AND SLEEP APNEA SYNDROME</h1>
+<h1>DETERMINATION PROGRAM</h1>
+<h1>TECHNICAL FIELD</h1>
+
+<p>[0001]</p>
+<p>The present disclosure relates to a sleep apnea syndrome determination apparatus, a sleep apnea syndrome determination method, and a sleep apnea syndrome determination program. This application claims priority on Japanese Patent Application No. 2019-023217 filed on February 13, 2019, the entire content of which is incorporated herein by reference.</p>
+
+<h1>BACKGROUND ART</h1>
+
+<p>[0002]</p>
+<p>Sleep apnea syndrome (SAS) is a disease in which respiration stops or the respiratory volume decreases during sleep (hereinafter, this state is also referred to as apnea). Specifically, sleep apnea syndrome is a symptom in which apnea occurs not less than 30 times during 7-hour sleep, or not less than 5 times per hour. Apnea means an airflow stop state of not less than 10 seconds that occurs during sleep.</p>
+
+<h1>CITATION LIST</h1>
+<h1>[PATENT LITERATURE]</h1>
+
+<p>[0003]</p>
+<p>PATENT LITERATURE 1: Japanese Laid-Open Patent Publication No. 2016- 214491</p>
+
+ 
+<h1>SUMMARY OF INVENTION</h1>
+
+<p>[0004]</p>
+<p>In PATENT LITERATURE 1, a heart rate variability (HRV) index is calculated from heart rate data, of a subject, that is obtained by a heart rate measuring instrument, and on the basis of the heart rate variability index, whether the subject has apnea, hypopnea, or normal respiration is identified for each predetermined period during sleep. Accordingly, temporal variation of the respiratory state of the subject can be known.</p>
+<p>[0005]</p>
+<p>SAS brings about excessive drowsiness and decrease in concentration power during daytime, and thus, can be a risk factor of traffic accidents. In addition, it is known that SAS can be a cause of various lifestyle diseases and severe conditions thereof and can cause cardiovascular disorder, glucose metabolism disorder, lipid metabolism disorder, and the like. Therefore, it is desired that whether or not the subject has SAS is determined with high accuracy.</p>
+<p>[0006]</p>
+<p>Therefore, the inventors of the present application have applied the technique of determining the respiratory state for each predetermined period during a sleeping period as in PATENT LITERATURE 1, thereby further proposing a technique that enables high accuracy determination of whether or not the subject has SAS.</p>
+<p>[0007]</p>
+<p>According to an embodiment, a sleep apnea syndrome determination apparatus includes: a processing unit configured to, by using RRI data indicating a heart rate interval (R-R Interval: RRI) in a sleeping period of a subject, determine whether or not the subject has sleep apnea syndrome. The processing unit is configured to operate so as to generate a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period, calculate, from a value that is outputted as a result of inputting the feature vector to a recurrent neural 
+network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period, and determine whether or not the subject has sleep apnea syndrome, on the basis of the index.</p>
+<p>[0008]</p>
+<p>A sleep apnea syndrome determination method according to another embodiment is for, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome. The sleep apnea syndrome determination method includes: a step of generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period; a step of calculating, from a value that is outputted as a result of inputting the feature vector to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and a step of determining whether or not the subject has sleep apnea syndrome, on the basis of the index.</p>
+<p>[0009]</p>
+<p>A <u>non-transitory computer storage medium encoded with a </u>sleep apnea syndrome determination program according to another embodiment is configured to cause a computer to execute a process of, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome. The sleep apnea syndrome determination program <del>includes<u>c</u></del><u>auses the computer to execute</u>: a step of generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period; a step of calculating, from a value that is outputted as a result of inputting the feature vector to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an 
+index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and a step of determining whether or not the subject has sleep apnea syndrome, on the basis of the index.</p>
+
+<h1>BRIEF DESCRIPTION OF DRAWINGS</h1>
+
+<p>[0010]</p>
+<p>FIG. 1 shows an outline of a configuration of a system including a sleep apnea determination apparatus (hereinafter, determination apparatus) according to an embodiment.</p>
+<p>FIG. 2(aA) shows an example of an electrocardiographic signal.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.16
+3.35
+</p>
+<p>HG. 3 illustrates a feature vector.</p>
+<p>HG. 4 is a flow chart showing a flow of a determination process performed in the determination apparatus.</p>
+<p>HG. 5 shows determination conditions of respective techniques evaluated in an evaluation test by the inventors.</p>
+<p>HG. 6 shows attributions of subjects in the evaluation test.</p>
+<p>HG. 7A shows a determination result according to a first technique in the evaluation test.</p>
+<p><u>H</u><u>G. 7</u><u>B</u><u> shows a determination result according to a first technique in the evaluation test.</u></p>
+<p>HG. 8A shows a determination result according to a second technique in the evaluation test.</p>
+<p><u>H</u><u>G. 8</u><u>B</u><u> shows a determination result according to a second technique in the evaluation test.</u></p>
+<p>HG. 9A shows a determination result according to a third technique in the 
+evaluation test.</p>
+<p><u>H</u><u>G. 9</u><u>B</u><u> shows a determination result according to a third technique in the evaluation test.</u></p>
+<p>HG. 10A shows a determination result according to a fourth technique in the evaluation test.</p>
+<p><u>H</u><u>G. </u><u>10B</u><u> shows a determination result according to a fourth technique in the evaluation test.</u></p>
+<p>HG. 1 A shows a determination result according to a fifth technique in the evaluation test.</p>
+<p><u>H</u><u>G. </u><u>1</u><u> B shows a determination result according to a fifth technique in the evaluation test.</u></p>
+<p>HG. 12 shows evaluation values of the determination result according to each technique in the evaluation test.</p>
+DESCRIPTION OF EMBODIMENTS
+<p>[0011]</p>
+<p>[1. Outline of sleep apnea syndrome determination apparatus, sleep apnea syndrome determination method, and sleep apnea syndrome determination program] [0012]</p>
+<p>(1) A sleep apnea syndrome determination apparatus included in the present embodiment includes: a processing unit configured to, by using RRI data indicating a heart rate interval (R-R Interval: RRI) in a sleeping period of a subject, determine whether or not the subject has sleep apnea syndrome. The processing unit is configured to operate so as to generate a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period, calculate, from a value that is outputted as a result of inputting the feature vector 
+to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period, and determine whether or not the subject has sleep apnea syndrome, on the basis of the index.</p>
+<p>[0013]</p>
+<p>As a result of an evaluation test performed by the inventors of the present application, it has been verified that, when a recurrent neural network is adopted as the identification model, the determination accuracy is significantly improved when compared with a case where an index value calculated from the heart rate intervals is inputted to an identification model other than the recurrent neural network. Therefore, this sleep apnea syndrome determination apparatus can determine an SAS patient with high accuracy.</p>
+<p>[0014]</p>
+<p>(2) Preferably, the recurrent neural network has learned through machine learning in advance so as to output, in response to the feature vector having been inputted, a value indicating a sleep state in the identification target period. As a result of the evaluation test performed by the inventors of the present application, the following has been verified. That is, when a feature vector that includes a plurality of heart rate intervals in the identification target period is used as an input value, and a recurrent neural network that has learned through machine learning in advance so as to output, in response to the feature vector having been inputted, a value indicating a sleep state in the identification target period is adopted, the determination accuracy is significantly improved when compared with a case where an index value calculated from the heart rate intervals is inputted to an identification model other than the recurrent neural network. Therefore, this sleep apnea syndrome determination apparatus can determine an SAS patient with high accuracy.</p>
+
+ <p>[0015]</p>
+<p>(3) Preferably, the recurrent neural network is LSTM (Long Short-Term Memory).</p>
+<p>As a result of an evaluation test performed by the inventors of the present application using LSTM, which is known to have high performance among recurrent neural networks, it has been verified that using LSTM as the recurrent neural network further improves the determination accuracy.</p>
+<p>[0016]</p>
+<p>(4) Preferably, the identification target period has a fixed period length, and the feature vector is a variable length vector formed as a time series of a group of pieces of RRI data respectively indicating the plurality of heart rate intervals in the identification target period. As a result of the evaluation test performed by the inventors of the present application, it has been verified that using the feature vector having a variable length improves the determination accuracy when compared with using the feature vector having a fixed length.</p>
+<p>[0017]</p>
+<p>(5) Preferably, when inputting the feature vector to the recurrent neural network, the processing unit is not configured to input, to the recurrent neural network, the feature vector that has been generated from the plurality of heart rate intervals that include a heart rate interval greater than a threshold indicating an abnormal value of a heart rate interval. Accordingly, only a feature vector generated from only the heart rate intervals that have been determined as having normal values as a result of determination (normal value determination) of whether or not the input value is a normal value, is inputted to the recurrent neural network. As a result of the evaluation test performed by the inventors of the present application, it has been verified that the determination accuracy is more improved by performing the normal value determination.</p>
+<p>[0018]</p>
+<p>(6) Preferably, the generating of the feature vector includes standardizing a value 
+of each of the plurality of heart rate intervals. Accordingly, individual differences among subjects are eliminated, and the determination accuracy can be improved.</p>
+<p>[0019]</p>
+<p>(7) Preferably, the index is a ratio of the period of the apnea state to the sleeping period, and in the determining step, when the ratio is greater than a threshold indicating sleep apnea syndrome, the subject is determined to have sleep apnea syndrome. Accordingly, whether or not the subject has SAS can be easily determined.</p>
+<p>[0020]</p>
+<p>(8) A sleep apnea syndrome determination method included in the present embodiment is for, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome. The sleep apnea syndrome determination method includes: a step of generating a feature vector including a plurality of heart rate intervals in an identification target period in the sleeping period; a step of inputting the feature vector to a recurrent neural network having learned through machine learning in advance so as to output, in response to a feature vector having been inputted, a value indicating a sleep state in an identification target period that corresponds to a plurality of heart rate intervals included in the feature vector; a step of calculating, from a value, for each identification target period, that is outputted from the recurrent neural network in response to the input, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and a step of determining whether or not the subject has sleep apnea syndrome, on the basis of the index. This method is the determination method performed in the sleep apnea syndrome determination apparatus according to (1) to (7).</p>
+<p>Therefore, this method exhibits the same effects as those of the sleep apnea syndrome determination apparatus according to (1) to (7).</p>
+<p>[0021]</p>
+
+ <p>(9) A <u>non-transitory computer storage medium encoded with a </u>sleep apnea syndrome determination program included in the present embodiment is configured to cause a computer to execute a process of, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome. The sleep apnea syndrome determination program <del>includ</del><del>e</del><del>s<u>c</u></del><u>auses the computer to execute</u>: a step of generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period; a step of inputting the feature vector to a recurrent neural network having learned through machine learning in advance so as to output, in response to a feature vector having been inputted, a value indicating a sleep state in an identification target period that corresponds to a plurality of heart rate intervals included in the feature vector; a step of calculating, from a value, for each identification target period, that is outputted from the recurrent neural network in response to the input, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and a step of determining whether or not the subject has sleep apnea syndrome, on the basis of the index. With this program, a computer can be caused to function as the sleep apnea syndrome determination apparatus according to (1) to (7). Therefore, this program exhibits the same effects as those of the sleep apnea syndrome determination apparatus according to (1) to (7).</p>
+<p>[0022]</p>
+<p>[2. Examples of sleep apnea syndrome determination apparatus, sleep apnea syndrome determination method, and sleep apnea syndrome determination program] [0023]</p>
+<p>A system 100, shown in FIG. 1, including a sleep apnea determination apparatus 1 according to the present embodiment includes the sleep apnea determination apparatus (hereinafter, referred to as a "determination apparatus") 1 and a heart rate measuring instrument 2. The determination apparatus 1 and the heart rate measuring instrument 2 are communicable 
+with each other. The communication may be wireless communication or may be wired communication.</p>
+<p>[0024]</p>
+<p>The heart rate measuring instrument 2 is a small, light-weight wearable terminal that is attached to the body of a subject P and that is for measuring the heart rate of the subject P. The heart rate measuring instrument 2 has connected thereto a plurality of (three in FIG. 1) electrodes 21A that are attached to the body surface of the subject P. The three electrodes 21A are, for example, a positive electrode, a negative electrode, and a ground electrode. An example of the wearable terminal functioning as the heart rate measuring instrument 2 is a smartwatch that has a heart rate measuring function. The wearable terminal itself may function as the determination apparatus 1 and the heart rate measuring instrument 2.</p>
+<p>[0025]</p>
+<p>In FIG. 2A(a), the vertical axis represents electric potential and the horizontal axis represents time. When a heart rate is measured by using the electrodes 21A, electric potential change in the form of P to T waves cyclically appears in an electrocardiographic signal as shown in FIG. 2A(a). A peak that has a highest electric potential in the electric potential change in a unit cycle is referred to as an R wave, and the ventricular myocardium contracts at the timing of the R wave. The heart rate measuring instrument 2 transmits heart rate data to the determination apparatus 1. An example of the heart rate data is RRI data. The RRI data indicates an RRI (R-R Interval).</p>
+<p>[0026]</p>
+<p>The RRI is a feature value obtained from the R wave. The RRI data corresponding to the electrocardiographic signal in FIG. 2A(-a) indicates the RRI, which is each interval between the R waves, in a rectangular pulse train in which "1" is set for the period (a period in which a signal intensity I exceeds a predetermined intensity threshold Ith) that 
+corresponds to the R wave in the electrocardiographic signal, and "0" is set for the other periods, as shown in FIG. 2B(b).</p>
+<p>[0027]</p>
+<p>The determination apparatus 1 receives RRI data in a sleeping period of the subject P transmitted from the heart rate measuring instrument 2, and executes a determination process by using the RRI data, thereby determining whether or not the subject P has sleep apnea syndrome.</p>
+<p>[0028]</p>
+<p>As another example, the heart rate data transmitted from the heart rate measuring instrument 2 may be data that indicates a numerical value group that represents an electrocardiographic waveform or the electrocardiographic waveform itself. In this case, the determination apparatus 1 calculates the RRI from the data received from the heart rate measuring instrument 2, and uses the calculated RRI in the determination process described later.</p>
+<p>[0029]</p>
+<p>As shown in FIG. 1, the determination apparatus 1 is implemented as a computer including a processing unit 10 and a storage device 20. The storage device 20 is connected to the processing unit 10. The processing unit 10 is a CPU (Central Processing Unit), for example. The determination apparatus 1 also includes a communication unit 30 for performing communication with the heart rate measuring instrument 2. The communication unit 30 may be a communication mechanism for short-range wireless communication such as Bluetooth (registered trademark), or may be a communication mechanism for wireless LAN (Local Area Network). The communication unit 30 is connected to the processing unit 10. The communication unit 30 functions as an input unit for inputting heart rate data from the heart rate measuring instrument 2.</p>
+<p>[0030]</p>
+
+ <p>Preferably, the computer implementing the determination apparatus 1 is a mobile terminal, such as a smartphone or a tablet, for example. This is preferable because the mobile terminal of the subject P can be utilized as the determination apparatus 1. The mobile terminal may be a wearable device such as a smartwatch. The determination apparatus 1 may be implemented by a plurality of computers. For example, the determination apparatus 1 may be implemented as a combination of a plurality of mobile terminals. An example of the plurality of mobile terminals is a smartphone and a smartwatch.</p>
+<p>[0031]</p>
+<p>The computer implementing the determination apparatus 1 may be a server computer on a network such as the Internet. In this case, the RRI data transmitted from the heart rate measuring instrument 2 of the subject P is transmitted to the server computer via a network such as the Internet. When the server computer determines whether or not the subject has sleep apnea syndrome, the server computer may notify a terminal (mobile terminal, etc.) of the subject P via the network.</p>
+<p>[0032]</p>
+<p>The storage device 20 of the determination apparatus 1 has stored therein a computer program 21 for causing the processing unit 10 to execute the determination process. As a result of the processing unit 10 executing the computer program 21, the computer functions as the determination apparatus 1.</p>
+<p>[0033]</p>
+<p>The determination process is a process of determining whether or not the subject P has sleep apnea syndrome, by using the RRI data in the sleeping period of the subject P. The determination process includes a generation process, an identification process, and a calculation process.</p>
+<p>[0034]</p>
+
+ <p>The generation process is a process of generating a feature vector from an RRI data group of a predetermined period in a sleeping period. The feature vector is used as an input value in the identification process described later, and is a single vector obtained by putting together a plurality of features indicating the sleep state of the subject in the aforementioned predetermined period. The processing unit 10 functions as a generation unit 11, which executes the generation process. That is, a prescribed period is set as an identification target period, which is a target period for the identification process described later, and RRIs from an electrocardiographic waveform measured in the identification target period are arranged in time series, to obtain a feature vector.</p>
+<p>[0035]</p>
+<p>The number of RRIs measured in the identification target period, which is a fixed period, is not a constant number. Thus, the number of elements of the feature vector is variable. That is, the feature vector that is generated is a variable length vector. When the electrocardiographic waveform shown in FIG. 3 has been measured by the heart rate measuring instrument 2 with respect to periods T1, T2, and RRI data has been obtained, the generation unit 11 generates feature vectors FV1, FV2 in the periods T1, T2 as shown below.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.5
+1.6
+</p>
+<p>[0036]</p>
+<p>Preferably, the generation process includes a normal value determination process of determining whether or not each RRI has a normal value. The generation unit 11 includes a normal value determination unit 12, which executes the normal value determination process. The normal value determination unit 12 has stored therein in advance a threshold (e.g., 2000 msec) for RRI, and compares each RRI with the threshold to determine whether the RRI is abnormal or normal. An abnormal value of the RRI occurs due to a factor such as artifact, for 
+example. The generation unit 11 generates a feature vector only for, among the identification target periods in the sleeping period, an identification target period in which all the RRIs included therein have been determined to be normal, and the generation unit 11 does not generate a feature vector for an identification target period in which even a single abnormal RRI is included. Alternatively, among generated feature vectors, a feature vector of an identification target period in which even a single RRI has been determined to be abnormal is not used as a feature vector in the determination process. As a result of the normal value determination, each generated feature vector does not include an abnormal value. That is, only feature vectors that are each composed of RRIs having normal values are used in the determination process. As a result, determination accuracy can be improved.</p>
+<p>[0037]</p>
+<p>As the feature vector generation method, a method of generating a feature vector by using a fixed number of consecutive RRIs may be adopted. In this case, the number of elements of the feature vector is constant, and the feature vector has a fixed length. In contrast, the identification target period has a variable length.</p>
+<p>[0038]</p>
+<p>In this case, when an abnormal value due to a premature beat is included in the fixed number of consecutive RRIs, the premature beat itself is counted as one heartbeat. Therefore, the identification target period corresponding to the fixed number of RRIs becomes shorter than the identification target period when the premature beat does not occur.</p>
+<p>[0039]</p>
+<p>When taking this into consideration, in the determination apparatus 1, it is preferable to, rather than to use a fixed number of RRIs, generate a feature vector having a variable length from a plurality of consecutive RRIs included in an identification target period that is a fixed-length period, and use the generated feature vector in the determination process.</p>
+
+ <p>In a case where the feature vector has a variable length, a recurrent neural network (hereinafter, also referred to as RNN) in which a variable length vector can be inputted is used as an identification model.</p>
+<p>[0040]</p>
+<p>Preferably, the generation process includes a standardization process of standardizing an RRI group of each identification target period. The generation unit 11 includes a standardization processing unit 13, which executes the standardization process. The standardization process is, for example, a normalization process, and is a process in which, for example, an RRI group of the identification target period is converted, by using the formula below, to data in which the mean of the RRIs in a predetermined period is 0 and the variance thereof is 1. Accordingly, individual differences among subjects are eliminated, and the determination accuracy can be improved.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.14
+0.69
+</p>
+<p>(xi represents each RRI, p represents a mean value, and o represents a standard deviation).</p>
+<p>[0041]</p>
+<p>As another example of the feature vector, a vector composed of a plurality of HRV indexes is also conceivable. The HRV indexes can be two or more indexes among (1) to (11) below, for example. As an example, identification of the sleep state using the HRV index is performed in a determination technique in which: whether the subject has apnea or normal respiration is identified for each time period during sleep; and temporal variation indicating whether the subject has apnea or normal respiration is obtained. This determination technique uses, as an example of an identification model, a support vector machine that discriminates between an apnea state and a normal respiration state when given an HRV index.</p>
+<p>(1) mean NN: Mean of RRI.</p>
+
+ <p>(2) SDNN: Standard deviation of RRI.</p>
+<p>(3) Total Power: Total power spectrum of RRI.</p>
+<p>(4) RMSSD: Square root of the mean value of the square of the difference between the n-th RRI and the n+1-th RRI. When the variation of RRI is large, the value becomes large, and RMSSD serves as an index of activity of the autonomic nervous system.</p>
+<p>(5) NN50: The number of cases in which the difference between the n-th RRI and the n+1-th RRI exceeds 50 milliseconds. Ordinary RRI variation is not greater than 50 milliseconds, and NN50 serves as an index of significant variation.</p>
+<p>(6) pNN50: Proportion of the value of NN50 to the number of all R waves. NN50 is the number of times, and thus, in general, when the window width is long, NN50 has a large value. When pNN50 is taken into consideration, the proportion of occurrence of large variation can be grasped.</p>
+<p>(7) LF: Power spectrum in a frequency band of an LF band (0.04 Hz to 0.15 Hz). LF is mainly used as an index of activity of the sympathetic nervous system.</p>
+<p>(8) HF: Power spectrum in a frequency band of an HF band (0.15 Hz to 0.4 Hz). HF is mainly used as an index of activity of the parasympathetic nervous system.</p>
+<p>(9) LF/HF: The ratio between LF and HF, defined as LF/HE LF/HF is considered to be the ratio of the activity states between the sympathetic nervous system and the parasympathetic nervous system. LF/HF has a large value when the sympathetic nerve is dominant, and has a small value when the parasympathetic nerve is dominant.</p>
+<p>(10) LFnu: Corrected LF defined as LF/(LF+HF). LFnu emphasizes change in sympathetic nerve activity.</p>
+<p>(11) HFnu: Corrected HF defined as HF/(LF+HF). HFnu emphasizes change in parasympathetic nerve activity.</p>
+<p>[0042]</p>
+
+ <p>Here, each RRI is a value directly obtained from an electrocardiographic waveform of the subject, and consecutive RRIs can be said to be a value group directly representing the feature of the electrocardiographic waveform in the sleeping period of the subject. The inventors analyzed that since each HRV index is an index calculated from RRIs and a value relevant to RRIs, the HRV index does not provide direct representation when compared with RRIs. Therefore, based on this analysis, the inventors decided to generate a feature vector from RRIs themselves, and to use the generated feature vector in the identification process described later. Accordingly, a more direct feature of the electrocardiographic waveform than when a feature vector generated from the HRV indexes is used will be used in the identification process described later. As a result, the determination accuracy can be improved.</p>
+<p>[0043]</p>
+<p>The identification process is a process of identifying, for each identification target period, whether the sleep state is an apnea state or a normal state. The processing unit 10 functions as an identification unit 14, which executes the identification process. The identification unit 14 includes an identification model 15. The identification model 15 has learned through machine learning in advance so as to output, in response to a feature vector having been inputted, a value indicating a sleep state in an identification target period that corresponds to the feature vector.</p>
+<p>[0044]</p>
+<p>For example, when the feature vectors FV1, FV2 shown in FIG. 3 are each assumed to be a learning feature vector, the identification model 15 has learned so as to output, for example, "1" indicating an apnea state and "0" indicating a normal respiration state, in response to an input of each of the feature vectors FV1, FV2. The apnea state means a state of apnea or hypopnea. The state of apnea is defined as a state where ventilation stops for not less than 10 seconds. The state of hypopnea is defined as a state where a state of 50% or more 
+decrease of a respiration airflow continues for not less than 10 seconds. Accordingly, for each identification target period, an output of a value indicating a respiratory state is obtained.</p>
+<p>[0045]</p>
+<p>In the determination apparatus 1, a recurrent neural network (RNN) is used as the identification model 15. Examples of RNN include Simple RNN (simple recurrent neural network), LSTM (Long Short-Term Memory), GRU (Gated Recurrent Unit), Bi-directional RNN, Attention RNN, and QRNN (Quasi-Recurrent neural network).</p>
+<p>[0046]</p>
+<p>Another example of the identification model different from RNN is SVM (Support Vector Machine). SVM is used in the above-mentioned PATENT LITERATURE 1.</p>
+<p>Therefore, it is also conceivable to use, as the identification model 15, a model, such as SVM, that is not RNN.</p>
+<p>[0047]</p>
+<p>Here, RNN is, among neural networks, a model in which an output of a certain layer in a middle layer from an input value to an output value is used as an input for a middle layer from the next input value to output value. In other words, RNN is a neural network that has a recurrent structure in which an output of a neural network is used as an input of another network. In RNN, middle layers are linearly connected to each other along time series. Therefore, in RNN, an input value at a certain time point influences an output value for an input value after the time point. That is, RNN is a model that performs prediction on the basis of past data, in other words, performs learning based on time series data. This is different from a model, such as SVM, that is not RNN.</p>
+<p>[0048]</p>
+<p>In this regard, in the determination apparatus 1, a feature vector configured by arranging RRIs of each identification target period in time series is inputted to the identification 
+model 15. Therefore, an input value to the identification model 15 has temporal continuity. Since consecutive RRIs are values that consecutively represent the sleep state of the subject, the consecutive RRIs have relevance in terms of time series. Thus, the inventors reached a conclusion that, when such a feature vector is used, RNN that performs learning based on time series data outputs a value corresponding to continuous vital reaction with higher accuracy, than a model, such as SVM, that is not RNN. Therefore, the inventors decided to use RNN as the identification model 15.</p>
+<p>[0049]</p>
+<p>The identification unit 14 inputs a feature vector for each predetermined period in the sleeping period to the identification model 15, and obtains an output of a value for each identification target period from the identification model 15. The value for each identification target period is, for example, "1" representing the apnea state and "0" representing the normal respiration state described above.</p>
+<p>[0050]</p>
+<p>In the calculation process, an index based on a ratio between a period of the apnea state and a period of the normal respiration state in the sleeping period is calculated. The processing unit 10 functions as a calculation unit 16, which executes the calculation process. The index is, for example, an AS (Apnea/Sleep) ratio A, which is represented by the formula below and which is the ratio of a period ta of the apnea state to a sleeping period t. The period ta of the apnea state is the total of identification target periods identified as corresponding to the apnea state. The index is not limited to the AS ratio. Another example of the index may be a ratio of a period of the apnea state to a period of the normal respiration state.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.13
+0.95
+</p>
+<p>[0051]</p>
+<p>In the determination process, whether or not the subject P has SAS is determined 
+on the basis of comparison between the calculated index value (AS ratio) A of the index and a threshold TH that allows determination of SAS. The processing unit 10 functions as a determination unit 17, which performs this determination. When the AS ratio A is not less than the threshold TH (A&gt;TH), the determination unit 17 determines that the subject P has SAS. When the AS ratio A is less than the threshold TH (A<th)), the="" determination="" unit="" 17="" determines="" that="" subject="" p="" does="" not="" have="" sas.="" use="" of="" as="" ratio="" a="" facilitates="" whether="" or="" has="" sas.<="">
+</th)),></p><p>[0052]</p>
+<p>A user (subject P) of the system 100 attaches the heart rate measuring instrument 2 to the body, disposes the determination apparatus 1 at a position, such as bedside, where the determination apparatus 1 can communicate with the heart rate measuring instrument 2, and sleeps. Then, in the determination apparatus 1, whether or not the subject P has SAS is determined according to the method shown in the flow chart in FIG. 4.</p>
+<p>[0053]</p>
+<p>With reference to FIG. 4, RRI data of the subject P measured by the heart rate measuring instrument 2 is inputted to the determination apparatus 1 (step 5101). Measurement of the heart rate by the heart rate measuring instrument 2 is performed until the subject P wakes up. In step 5101, RRI data is inputted until the subject P wakes up.</p>
+<p>[0054]</p>
+<p>The processing unit 10 of the determination apparatus 1 generates a feature vector by arranging pieces of RRI data of each identification target period in time series (step S103). At this time, the processing unit 10 compares each value (RRI) indicated by the RRI data with a threshold stored in advance, and determines whether or not the value is a normal value (step S1031). Then, with respect to each identification target period in which the values are all normal values, the processing unit 10 generates a feature vector. In addition, the processing 
+unit 10 normalizes the RRIs in the identification target period (step S1033), and generates a feature vector using the normalized RRIs.</p>
+<p>[0055]</p>
+<p>The processing unit 10 inputs the feature vector generated for each identification target period, to the identification model 15, which is a recurrent neural network (step S105). Accordingly, as an output value from the recurrent neural network, a value indicating whether the sleep state is the apnea state or the normal respiration state can be obtained for each identification target period.</p>
+<p>[0056]</p>
+<p>The processing unit refers to the period ta of the apnea state with respect to the entire sleeping period t, and calculates an AS ratio A, which is the proportion of the period ta of the apnea state to the entire sleeping period t (step S107). When the AS ratio A is not less than the threshold TH stored in advance (A&gt;TH) (YES in step S109), the processing unit 10 outputs a determination result that the subject P has SAS (SAS patient) (step 5111). When the AS ratio A is less than the threshold TH (A<th) (no="" in="" step="" s109),="" the="" processing="" unit="" 10="" outputs="" a="" determination="" result="" that="" subject="" p="" is="" normal="" (non-sas="" patient)="" (step="" s113).<="">
+</th)></p><p>[0057]</p>
+<p>In a case where the determination apparatus 1 is connected to an output apparatus such as a display apparatus, the determination result in step S111 or step S113 may be transmitted to the output apparatus. Accordingly, the determination result indicating whether or not the subject P has SAS can be known through an output such as a display on the output apparatus. Alternatively, the determination result may be transmitted from the communication unit 30 to another apparatus. Examples of another apparatus include a wearable terminal of the subject P, a server apparatus of a medical institution, and the like. Accordingly, the determination result indicating whether or not the subject P has SAS can be known by use of the 
+other apparatus.</p>
+<p>[0058]</p>
+<p>[3. Evaluation test] [0059]</p>
+<p>The inventors conducted an evaluation test using clinical data in order to evaluate performance of the determination method (hereinafter, referred to as "proposed technique") of sleep apnea syndrome according to the above embodiment. In the evaluation test, determination of SAS or not was performed according to a first technique to a fifth technique under the determination conditions shown in FIG. 5. The first technique to the third technique are proposed techniques and the fourth technique and the fifth technique are determination methods as comparison examples used as references for the evaluation.</p>
+<p>[0060]</p>
+<p>In FIG. 5, an "input value" indicates a value used as an input to the identification model, and an "identification model" indicates an identification model used for identifying the sleep state in a predetermined period. An "input method" indicates an RRI measurement method used in generation of a feature vector.</p>
+<p>[0061]</p>
+<p>In the first technique to the third technique, as the "input value", the feature vector was generated from RRI data and inputted to an identification model that was a recurrent neural network (RNN). The identification model of each of the first technique and the third technique was LSTM among RNNs. For the identification model of the second technique, Simple RNN was used as another example of RNN. The feature vector in each of the first technique and the second technique was a variable length vector that used consecutive RRIs obtained from a fixed identification target period. The length of the identification target period was set to 60 seconds.</p>
+<p>[0062]</p>
+
+ <p>The feature vector in the third technique was a fixed length vector that used a fixed number of consecutive RRIs. The fixed number was set to 60 of immediately before the calculation. In the first technique to the third technique, for obtainment of the feature vector, normal value determination was performed on RRIs, and a feature vector obtained from RRIs of each identification target period of which the RRIs were all normal values was inputted to the identification model.</p>
+<p>[0063]</p>
+<p>The fourth technique was a determination technique using a support vector machine (SVM), adopted in PATENT LITERATURE 1 above, that discriminates between the apnea state and the normal respiration state when given an HRV index. The fifth technique was a technique in which the identification model used in the fourth technique was changed from SVM to RNN used in the proposed techniques. The fifth technique was also a technique in which the input value to the identification model was changed from RRI in the first technique to the HRV index.</p>
+<p>[0064]</p>
+<p>In the fourth technique and the fifth technique, the HRV index, which was different from RRI, was inputted to the identification model. The HRV index inputted to the identification model was all of (1) to (11) described above.</p>
+<p>[0065]</p>
+<p>The identification model of the fourth technique was SVM, which was different from RNN, as described in PATENT LITERATURE 1. In the fourth technique, as described in PATENT LITERATURE 1, the heart rate for three minutes was measured and a feature vector formed from a plurality of HRV indexes calculated at each calculation was inputted to SVM. At this time, in the fourth technique, normal value determination regarding the measured heart rate was not performed.</p>
+
+ <p>[0066]</p>
+<p>In the fifth technique, similar to the generation of the feature vector according to the first technique, a continuous HRV index was calculated from consecutive RRIs measured in a first fixed period (here, 180 seconds) to be used as a feature vector, and the feature vector was inputted to LSTM for each second fixed period (60 seconds). Also in the fifth technique, normal value determination was performed on the measured RRIs, and an HRV index obtained from RRIs of each fixed period of which the RRIs were all normal values was inputted to the identification model.</p>
+<p>[0067]</p>
+<p>Through the first technique to the fifth technique, results shown in FIG. 7A to FIG. 1 B were obtained, respectively. <u>FIG. 7A, 8A, 9A, </u><u>10</u><u>A, and </u><u>1</u><u> </u><u>A</u><del>In</del> <del>e</del><del>ach figur</del><del>e</del><del>, th</del><del>e</del> <del>left</del> <del>drawing</del> shows the AS ratio of each subject during learning performed by the identification model, <u>respectively, </u>and <u>FIG. 7</u><u>B</u><u>, 8</u><u>B</u><u>, 9</u><u>B,</u><u> </u><u>10B</u><u>, and </u><u>1</u><u> B</u><del>the right drawing</del> shows the AS ratio of each subject as a determination result obtained by using the learned identification model <u>respectively</u>. During the learning performed by the identification model, a threshold of the AS ratio between the SAS patient and the non-SAS patient was set. This threshold was used in the determination process.</p>
+<p>[0068]</p>
+<p>Learning and determination of the identification model were performed by using electrocardiographic measurement results of a group of subjects whose attributions are shown in FIG. 6. The subjects whose RRI data was measured and used in learning by the identification model according to each determination method were composed of 13 SAS patients and 18 non- SAS patients. The subjects whose RRI data was measured and used in the determination process were composed of 11 SAS patients and 17 non-SAS patients. An "AHI (Apnea Hypopnea Index) shown in FIG. 6 is an index of severity of SAS, and is defined as the number 
+of times of occurrence of the apnea state of not less than 10 seconds per hour. When AHI&gt;15, SAS is diagnosed.</p>
+<p>[0069]</p>
+<p>From the determination results shown <del>on the right</del> in <del>FI</del><del>G</del>.<del> 7 to FIG</del>. <del>11</del><u>FIG.7</u><u>B,</u> <u>8B</u><u>, 9</u><u>B,</u><u> </u><u>10B</u><u>, and </u><u>11B</u>, evaluation values in each test were calculated as shown in FIG. 12. The evaluation values shown in FIG. 12 are a sensitivity SE, a specificity SP, a positive reaction predictive value PO, and a negative reaction predictive value NE, which are represented by formulas (1) to (4) below. In formulas (1) to (4), "a" represents the number of subjects who are SAS patients and "positive", "b" represents the number of subjects who are non-SAS patients and "positive", "c" represents the number of subjects who are SAS patients and "negative", and "d" represents the number of subjects who are non-SAS patients and "negative". Here, the "positive" is defined as corresponding to a subject whose AS ratio is greater than the threshold" (e.g., AS&gt;threshold TH, or AS&gt;threshold TH), and the negative" is defined as corresponding to a subject whose AS ratio is smaller than the threshold (e.g., AS<threshold th,="" or="" as<threshold="" th).<="" p="">
+</threshold></p><p>
+SVG
+
+{EMBED HERE}
+
+1.23
+2.34
+</p>
+<p>
+[0070]
+With reference to FIG. 12, when the first technique to the third technique are compared with the fourth technique, the evaluation values of the first technique to the third technique are each higher than those of the fourth technique. The fourth technique is a determination technique, in PATENT LITERATURE 1 above, that uses a support vector machine that discriminates between the apnea state and the normal respiration state when given an HRV index. Therefore, the first technique to the third technique each have a determination accuracy 
+higher than that of the conventional determination technique. That is, it has been verified that the determination method (the first technique to the third technique) that performs a determination process using an identification result obtained by inputting, to RNN, a feature vector composed of RRIs consecutive in time series is more effective than the conventional determination method using an identification result obtained by inputting the HRV index to SVM.</p>
+<p>[0071]</p>
+<p>In particular, the first technique and the second technique each have a very high accuracy, with each evaluation value exceeding 90%. Further, the first technique has a significantly high accuracy, with all evaluation values being 100%. That is, when LSTM, in particular, among RNNs is used as the identification model, the determination accuracy can be significantly improved. Therefore, it has been verified that the first technique and the second technique are especially effective when compared with the conventional determination method.</p>
+<p>[0072]</p>
+<p>It should be noted that the third technique is a technique in which the generation method of the feature vector is changed from the variable length vector in the first technique vector to a fixed length vector. When the evaluation values of these techniques are compared, the values according to the first technique are significantly higher than those according to the third technique. Therefore, the determination accuracy is higher when the variable length vector is used as the feature vector than when the fixed length vector is used as the feature vector. Therefore, it has been verified that, as the feature vector, the variable length vector is more effective than the fixed length vector.</p>
+<p>[0073]</p>
+<p>The evaluation values of the first technique and the second technique among the first technique to the third technique are each significantly higher than those of the fifth 
+technique, and thus, the first technique and the second technique each have a higher determination accuracy than the fifth technique. Therefore, it has been verified that, even if the identification model is changed from SVM to RNN in the fourth technique, the first technique and the second technique, which are the proposed techniques, are especially effective.</p>
+<p>[0074]</p>
+<p>The first technique and the fifth technique are different from each other only in that the input to the LSTM as the identification model is RRI and the HRV index, respectively. The evaluation values of the first technique are all significantly higher than those of the fifth technique, and thus, the first technique has a higher determination accuracy than the fifth technique. Therefore, it has been verified that, as the input to LSTM, RRI is more effective than the HRV index. Further, as for the second technique, since the identification model is Simple RNN, which is an RNN but different from the RNN used in the first technique, the second technique has a slightly lower determination accuracy than the first technique, but the evaluation values of the second technique are all higher than those of the fifth technique. Therefore, it has been verified that, as the input, RRI is more effective than the HRV index not only for LSTM but also for RNN.</p>
+<p>[0075]</p>
+<p>The present invention is not limited to the above embodiment and various modifications can be made.</p>
+REFERENCE SIGNS LIST
+<p>[0076]</p>
+<p>1 sleep apnea determination apparatus (determination apparatus) 2 heart rate measuring instrument 10 processing unit 
+11 generation unit</p>
+<p>12 normal value determination unit</p>
+<p>13 standardization processing unit</p>
+<p>14 identification unit</p>
+<p>15 identification model</p>
+<p>16 calculation unit</p>
+<p>17 determination unit 20 storage device 21 computer program 21A electrode 30 communication unit 100 system</p>
+<p>A AS ratio</p>
+<p>FV1 feature vector</p>
+<p>FV2 feature vector</p>
+<p>I signal intensity</p>
+<p>P subject</p>
+<p>T1 period</p>
+<p>T2 period</p>
+<p>TH threshold</p>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</body></html>

@@ -1,0 +1,26 @@
+<html><head></head><body><h3>Date: 2022-12-05</h3>
+ What is claimed is:
+<br>
+
+<br>
+1. A brake abnormality detection system in a twin-motor- driven robot including a master shaft of a servomotor equipped with an excitation brake, and a slave shaft of a servomotor equipped with an excitation brake, which are connected with a manipulator output shaft via respective decelerators, the brake abnormality detection system comprising: 
+<br>
+an operation controller configured to give a fine operation command to the master shaft in a state in which the servomotors are excited and the respective excitation brakes of the master shaft and the slave shaft are released; and 
+<br>
+an abnormality detector configured to perform detection of an abnormality of the excitation brake of the slave shaft by detecting an operation amount of the slave shaft that is obtained when the slave shaft is finely operated in accordance with the fine operation command to the master shaft in a controlled manner, and comparing the operation amount with a reference value. 
+
+<br>
+
+<br>
+2. The brake abnormality detection system in a twin-motor- driven robot according to claim 1, wherein the fine operation command is at a level of being absorbed into the decelerators and the manipulator output shaft, and not causing the slave shaft to perform physical following.
+<br>
+
+3. A brake abnormality detection method in a twin-motor- 
+driven robot including a master shaft of a servomotor equipped with an excitation brake, and a slave shaft of a servomotor equipped with an excitation brake, which are connected with a manipulator output shaft via respective decelerators, the brake abnormality detection method comprising: 
+<br>
+giving a fine operation command to the master shaft in a state in which the servomotors are excited and the respective excitation brakes of the master shaft and the slave shaft are released; and 
+<br>
+performing detection of an abnormality of the excitation brake of the slave shaft by detecting an operation amount of the slave shaft that is obtained when the slave shaft is finely operated in accordance with the fine operation command to the master shaft in a controlled manner, and comparing the operation amount with a reference value. 
+12
+13
+</body></html>

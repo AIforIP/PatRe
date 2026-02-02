@@ -1,0 +1,141 @@
+<html><head></head><body><h3>Date: 2022-09-27</h3>
+<p><u>AMENDMENTS TO THE CLAIMS:</u></p>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<p><u>Listing of Claims:</u></p>
+<br>
+
+<br>
+1. (Original) A method of determining the steering angle of a landing gear assembly of an aircraft, the method comprising the steps of: 
+<br>
+scanning the landing gear assembly with a lidar system to generate a set of three- dimensional position data points, wherein each position data point comprises a set of three orthogonal position values; 
+<br>
+generating a two-dimensional image from the set of three-dimensional position data points, by converting a position value of each of the three-dimensional position data points to an image property value of a set of image property values; 
+<br>
+identifying a boundary of an area of the two-dimensional image of which each position data point has the same image property value, wherein the area corresponds to a component of the landing gear assembly; 
+<br>
+determining the steering angle of the landing gear assembly from the shape and/or orientation of the identified boundary. 
+
+<br>
+
+<br>
+2. (Original) A method as claimed in claim 1, wherein the three orthogonal position values of the position data point are a horizontal position value, a vertical position value and a depth position value.
+
+<br>
+
+<br>
+3. (Original) A method as claimed in claim 2, wherein the depth position value is indicative of a position along a line from the lidar system to the landing gear assembly.
+
+<br>
+
+<br>
+4. (Currently Amended) A method as claimed in <del>claim</del> <del>2</del><del> or</del> <del>3</del><del>c</del><u>laim</u> <u>2</u>, wherein the converted position value is the depth position value.
+<br>
+
+<br>
+5. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the landing gear assembly comprises one or more wheels, and the lidar system is mounted above the one or more wheels of the landing gear assembly.
+
+<br>
+
+<br>
+6. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the image property value for a position data point is the colour value.
+
+<br>
+
+<br>
+7. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein each image property value of the set of image property values corresponds to a range of the converted position values, and the converted position value of a three-dimensional position data point is converted an image property value of the set of image property values when the converted position value is in the range of converted position values corresponding to the image property value.
+
+<br>
+
+<br>
+8. (Original) A method as claimed in claim 7, wherein the landing gear assembly comprises a torque link, and wherein an image property value of the set of image property values has a range of converted position values within which the torque link of the landing gear assembly is positioned when the landing gear assembly is extended.
+
+<br>
+
+<br>
+9. (Currently Amended) A method as claimed in <del>claim</del> <del>7</del><del> or</del> <del>8</del><del>c</del><u>laim</u> <u>7</u>, wherein the landing gear assembly comprises one or more wheels, and wherein an image property value of the set of image property values has a range of converted position values within which the one or more wheels of the landing gear assembly are positioned when the landing gear assembly is extended.
+
+<br>
+
+<br>
+10. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the lidar system is positioned in the aircraft so that the lidar system scans the landing gear assembly from above.
+
+<br>
+
+11. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, further comprising, prior to the step of generating the two-dimensional image from the set of three- 
+  dimensional position data points, the step of removing three-dimensional position data points from the set of three-dimensional position data points that have a converted position value greater than a threshold value.
+
+<br>
+
+<br>
+12. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, further comprising, prior to the step of generating the two-dimensional image from the set of three- dimensional position data points, the step of removing three-dimensional position data points from the set of three-dimensional position data points that have a converted position value less than a threshold value.
+
+<br>
+
+<br>
+13. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the steering angle of the landing gear assembly is determined from the orientation of the identified boundary by determining a best-fit line for the boundary.
+
+<br>
+
+<br>
+14. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the landing gear assembly comprises a torque link, and wherein the area of which the boundary is identified corresponds to the torque link of the landing gear assembly.
+
+<br>
+
+<br>
+15. (Currently Amended) A method as claimed in <del>any preceding claimc</del><u>laim</u> <u>1</u>, wherein the landing gear assembly is the nose landing gear assembly.
+
+<br>
+
+<br>
+16. (Currently Amended) An aircraft comprising: 
+<br>
+a landing gear assembly; 
+<br>
+a lidar system arranged to scan the landing gear assembly and generate a set of three-dimensional position data points, wherein each position data point comprises a set of three orthogonal position values; and 
+<br>
+a computer system arranged to determine, from the set of three-dimensional position data points, the steering angle of the landing gear assembly in accordance with <del>the method of any of claims</del> 
+<br>
+<del>1 to</del> <del>15</del><u>a method comprising the steps of:</u> 
+
+  <u>scanning the landing gear assembly with a lidar system to generate a set of three- dimensional position data points, wherein each position data point comprises a set of three orthogonal position values;</u> 
+<br>
+<u>generating a two-dimensional image from the set of three-dimensional position data points, by converting a position value of each of the three-dimensional position data points to an image property value of a set of image property values;</u> 
+<br>
+<u>identifying a boundary of an area of the two-dimensional image of which each position data point has the same image property value, wherein the area corresponds to a component of the landing gear assembly;</u> 
+<br>
+<u>determining the steering angle of the landing gear assembly from the shape and/or orientation of the identified boundary</u>. 
+
+<br>
+
+<br>
+17. (Original) An aircraft as claimed in claim 16, wherein the landing gear assembly is the nose landing gear assembly.
+
+<br>
+
+<br>
+18. (Currently Amended) A non-transitory computer readable medium comprising computer-readable program code for determining the steering angle of a landing gear assembly of an aircraft, the computer-readable program code arranged, when executed in a computer system of an aircraft comprising: 
+<br>
+a landing gear assembly; and 
+<br>
+a lidar system arranged to scan the landing gear assembly and generate a set of three-dimensional position data points, wherein each position data point comprises a set of three orthogonal position values; 
+<br>
+to cause the computer system to determine, from the set of three-dimensional position data points, the steering angle of the landing gear assembly in accordance with <del>the method of any of claims</del> 
+<br>
+<del>1 to 15</del><u>a method comprising the steps of:</u> 
+<br>
+<u>scanning the landing gear assembly with a lidar system to generate a set of three- dimensional position data points, wherein each position data point comprises a set of three orthogonal position values;</u> 
+<br>
+<u>generating a two-dimensional image from the set of three-dimensional position data</u> 
+
+  <u>points, by converting a position value of each of the three-dimensional position data points to an image property value of a set of image property values</u><u>;</u> 
+<br>
+<u>identifying a boundary of an area of the two-dimensional image of which each position data point has the same image property value, wherein the area corresponds to a component of the landing gear assembly</u><u>;</u> 
+<br>
+<u>determining the steering angle of the landing gear assembly from the shape and/or orientation of the identified boundary</u>. 
+<br>
+-4-
+-5-
+-6-
+-7-
+-8-
+</body></html>

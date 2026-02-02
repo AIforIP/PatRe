@@ -1,0 +1,141 @@
+<html><head></head><body><h3>Date: 2022-01-03</h3>
+ <u>WHAT IS CLAIMED IS:</u>
+<br>
+
+<br>
+1. An automated valet parking system that causes an autonomous driving vehicle in a parking place to autonomously travel toward a target parking space and causes the autonomous driving vehicle to be automatically parked in the target parking space, the system comprising: 
+<br>
+a first movement permission area setting unit configured to set a movement permission area for autonomous traveling that includes a part of a traveling path along which the autonomous driving vehicle reaches the target parking space and does not include the target parking space, 
+<br>
+based on positional information of the autonomous driving vehicle, positional information of the target parking space, and parking place map information; 
+<br>
+a first movement permission area instruction unit configured to, when the movement permission area for autonomous traveling is set, 
+<br>
+instruct the autonomous driving vehicle about the movement permission area for autonomous traveling; 
+<br>
+a second movement permission area setting unit configured to, when it is determined that the autonomous driving vehicle has arrived near the target parking space or when notification of a start of the 
+<br>
+automated valet parking for the target parking space is sent from the autonomous driving vehicle, set a movement permission area for automated valet parking that includes the target parking space and a part of the traveling path near the target parking space based on the positional information of the autonomous driving vehicle, the positional information of the target parking space, and the parking place map information; and 
+
+ a second movement permission area instruction unit configured to, when the movement permission area for automated valet parking is set, instruct the autonomous driving vehicle about the movement permission area for automated valet parking.
+
+<br>
+
+<br>
+2. The automated valet parking system according to claim 1, wherein the second movement permission area setting unit is configured to set the movement permission area for automated valet parking including a head swing region in which the autonomous driving vehicle is parked in the target parking space by moving backward.
+<br>
+
+<br>
+3. The automated valet parking system according to claim 1, wherein the second movement permission area setting unit is configured to, when the autonomous driving vehicle that performs the automated valet parking does not fit in the target parking space by moving forward once, set the movement permission area for automated valet parking including a turn-back region in which the autonomous driving vehicle fits in the target parking space by turn-back movement.
+<br>
+
+4. The automated valet parking system according to claim 1, wherein the second movement permission area setting unit is configured to set the movement permission area for automated valet parking including a following vehicle entrance prohibition region in which entrance of a following autonomous driving vehicle that is performing the autonomous traveling and follows the autonomous driving vehicle 
+ which is an instruction target of the movement permission area for automated valet parking is prohibited, and 
+<br>
+perform control such that the following autonomous driving vehicle does not enter the movement permission area for automated valet 
+<br>
+parking.
+<br>
+
+<br>
+5. The automated valet parking system according to claim 1, wherein the second movement permission area setting unit is configured to, when a general vehicle parked to protrude from a parking frame of the parking place is recognized from a detection result of a parking place sensor provided in the parking place, set the movement permission area for automated valet parking not to include the general vehicle.
+<br>
+
+<br>
+6. The automated valet parking system according to claim 2, wherein the second movement permission area setting unit is configured to set the movement permission area for automated valet parking including a following vehicle entrance prohibition region in which entrance of a following autonomous driving vehicle that is performing the autonomous traveling and follows the autonomous driving vehicle which is an instruction target of the movement permission area for automated valet parking is prohibited, and 
+<br>
+perform control such that the following autonomous driving vehicle does not enter the movement permission area for automated valet 
+<br>
+parking.
+<br>
+
+<br>
+7. The automated valet parking system according to claim 3, wherein the second movement permission area setting unit is configured to set the movement permission area for automated valet parking including a following vehicle entrance prohibition region in which entrance of a following autonomous driving vehicle that is performing the autonomous traveling and follows the autonomous driving vehicle which is an instruction target of the movement permission area for automated valet parking is prohibited, and 
+<br>
+perform control such that the following autonomous driving vehicle does not enter the movement permission area for automated valet parking.
+<br>
+
+<br>
+8. The automated valet parking system according to claim 2, wherein the second movement permission area setting unit is configured to, when a general vehicle parked to protrude from a parking frame of the parking place is recognized from a detection result of a parking place sensor provided in the parking place, set the movement permission area for automated valet parking not to include the general vehicle.
+
+<br>
+
+<br>
+9. The automated valet parking system according to claim 3, wherein the second movement permission area setting unit is configured to, when a general vehicle parked to protrude from a parking frame of the parking place is recognized from a detection result of a parking place sensor provided in the parking place, set the movement permission area for automated valet parking not to include the general vehicle.
+<br>
+
+<br>
+10. The automated valet parking system according to claim 4, wherein the second movement permission area setting unit is configured to, when a general vehicle parked to protrude from a parking frame of the parking place is recognized from a detection result of a parking place sensor provided in the parking place, set the movement permission area for automated valet parking not to include the general vehicle.
+<br>
+
+<br>
+11. A control method of an automated valet parking system that causes an autonomous driving vehicle in a parking place to autonomously travel toward a target parking space and causes the autonomous driving vehicle to be automatically parked in the target parking space, the method comprising: 
+<br>
+setting a movement permission area for autonomous traveling 
+<br>
+that includes a part of a traveling path along which the autonomous driving vehicle reaches the target parking space and does not include the target parking space based on positional information of the autonomous driving vehicle, positional information of the target parking space, and 
+<br>
+parking place map information; 
+<br>
+instructing the autonomous driving vehicle about the movement permission area for autonomous traveling when the movement permission area for autonomous traveling is set; 
+<br>
+setting a movement permission area for automated valet parking that includes the target parking space and a part of the traveling path near 
+the target parking space based on the positional information of the autonomous driving vehicle, the positional information of the target 
+ parking space, and the parking place map information when it is determined that the autonomous driving vehicle has arrived near the target parking space or when notification of a start of the automated valet parking for the target parking space is sent from the autonomous driving vehicle; and 
+<br>
+instructing the autonomous driving vehicle about the movement permission area for automated valet parking when the movement permission area for automated valet parking is set. 
+
+<br>
+
+<br>
+12. An autonomous driving vehicle that receives an instruction related to the automated valet parking from the automated valet parking system according to claim 1, the vehicle comprising: 
+<br>
+an automated valet parking executable determination unit configured to determine whether or not the automated valet parking of 
+the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is executable based on vehicle body information of the autonomous driving vehicle and the movement permission area for automated valet parking when an instruction about the movement permission area for automated valet parking is received from  the second movement permission area instruction unit of the automated valet parking system, wherein the automated valet parking executable determination unit is configured to, when it is determined that the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is not executable, notify the automated valet parking system that the 
+ automated valet parking for the target parking space is not executable.
+<br>
+
+<br>
+13. An autonomous driving vehicle that receives an instruction related to the automated valet parking from the automated valet parking system according to claim 2, the vehicle comprising: 
+<br>
+an automated valet parking executable determination unit configured to determine whether or not the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is executable 
+<br>
+based on vehicle body information of the autonomous driving vehicle and the movement permission area for automated valet parking when an instruction about the movement permission area for automated valet parking is received from the second movement permission area instruction unit of the automated valet parking system, wherein the automated valet parking executable determination unit is configured to, when it is determined that the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is not executable, notify the automated valet parking system that the automated valet parking for the target parking space is not executable.
+<br>
+
+<br>
+14. An autonomous driving vehicle that receives an instruction related to the automated valet parking from the automated valet parking system according to claim 3, the vehicle comprising: 
+an automated valet parking executable determination unit configured to determine whether or not the automated valet parking of 
+ the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is executable based on vehicle body information of the autonomous driving vehicle and the movement permission area for automated valet parking when an instruction about the movement permission area for automated valet parking is received from the second movement permission area instruction unit of the automated valet parking system, wherein the automated valet parking executable determination unit is configured to, when it is determined that the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is not executable, notify the automated valet parking system that the automated valet parking for the target parking space is not executable.
+<br>
+
+<br>
+15. An autonomous driving vehicle that receives an instruction related to the automated valet parking from the automated valet parking system according to claim 4, the vehicle comprising: 
+<br>
+an automated valet parking executable determination unit configured to determine whether or not the automated valet parking of 
+the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is executable based on vehicle body information of the autonomous driving vehicle and the movement permission area for automated valet parking when an instruction about the movement permission area for automated valet parking is received from  the second movement permission area instruction unit of the automated valet parking system, 
+ wherein the automated valet parking executable determination unit is configured to, when it is determined that the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is not executable, notify the automated valet parking system that the automated valet parking for the target parking space is not executable.
+<br>
+
+<br>
+16. An autonomous driving vehicle that receives an instruction related to the automated valet parking from the automated valet parking system according to claim 5, the vehicle comprising: 
+<br>
+an automated valet parking executable determination unit configured to determine whether or not the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is executable 
+<br>
+based on vehicle body information of the autonomous driving vehicle and the movement permission area for automated valet parking when an instruction about the movement permission area for automated valet parking is received from the second movement permission area instruction unit of the automated valet parking system, wherein the automated valet parking executable determination unit is configured to, when it is determined that the automated valet parking of the autonomous driving vehicle for the target parking space by moving in the movement permission area for automated valet parking is not executable, notify the automated valet parking system that the automated valet parking for the target parking space is not executable.
+46
+47
+48
+49
+50
+51
+52
+53
+54
+
+5
+10
+15
+20
+25
+</body></html>

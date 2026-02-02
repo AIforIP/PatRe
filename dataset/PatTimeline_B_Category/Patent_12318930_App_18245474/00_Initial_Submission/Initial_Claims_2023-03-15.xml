@@ -1,0 +1,62 @@
+<html><head></head><body>18245474
+
+   CLAIMS
+   
+
+<br>
+
+Claim 1. A module robot comprising: 
+a first link; 
+a second link movably linked to the first link; and 
+a fluid pressure cylinder configured to move the first link and the second link relative to each other, wherein 
+the first link has a cylinder block in which a cylinder chamber of the fluid pressure cylinder is formed.
+<br>
+
+Claim 2. The module robot according to claim 1, wherein 
+the module robot is configured by coupling a plurality of modules, 
+the modules each has the first link, the second link, and the fluid pressure cylinder, and 
+two of the modules are coupled by connecting the first link or the second link of a first module with the first link or the second link of a second module, the first module being one of the two modules, and the second module being other of the two modules.
+<br>
+
+Claim 3. The module robot according to claim 2, wherein 
+the cylinder block of the first module is connectable with the first link or the second link of the second module.
+<br>
+
+Claim 4. The module robot according to claim 1, wherein 
+the module robot is configured of a plurality of modules, the modules being formed so as to be partially integrated.
+<br>
+
+Claim 5. The module robot according to claim 1, wherein 
+the fluid pressure cylinder is a liquid pressure cylinder, and 
+a pump port connectable to a liquid pressure source and a tank port connectable to a tank are formed in at least two surfaces among a plurality of outer surfaces of the cylinder block.
+<br>
+
+Claim 6. The module robot according to claim 5, wherein 
+the cylinder block is formed with a passage configured to connect the pump port and the tank port with the cylinder chamber.
+<br>
+
+Claim 7. The module robot according to claim 2, wherein 
+the fluid pressure cylinder is a liquid pressure cylinder, 
+a pump port connectable to a liquid pressure source and a tank port connectable to a tank are formed in at least two surfaces among a plurality of outer surfaces of the cylinder block, and 
+the module further has: 
+a state-quantity detector configured to detect a state quantity of the module; 
+a control valve configured to control communication between the cylinder chamber and the pump port and the tank port; and 
+a controller configured to control motion of the module by controlling operation of the control valve based on a detection result from the state-quantity detector.
+<br>
+
+Claim 8. The module robot according to claim 1, wherein 
+the fluid pressure cylinder is a liquid pressure cylinder, 
+a supply-discharge port selectively connectable to a liquid pressure source and a tank is formed in an outer surface of the cylinder block, and 
+the cylinder block is formed with a passage configured to connect the supply-discharge port with the cylinder chamber.
+<br>
+
+Claim 9. The module robot according to claim 2, wherein 
+the module robot is configured by coupling at least two of the modules, the modules being identical.
+<br>
+
+Claim 10. The module robot according to claim 3, wherein 
+the cylinder block of the first module is formed with a joint hole into which a joint tool is inserted, the joint tool being configured to connect the cylinder block with the first link or the second link of the second module.
+
+   
+
+</body></html>

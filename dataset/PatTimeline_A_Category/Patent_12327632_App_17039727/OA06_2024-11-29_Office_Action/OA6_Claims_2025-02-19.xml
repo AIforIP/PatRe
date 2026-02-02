@@ -1,0 +1,98 @@
+<html><head></head><body><h3>Date: 2025-02-19</h3>
+
+<h1><u>CLAIM AMENDMENTS</u></h1>
+<p>This listing of the claims will replace all prior versions and listings of claims in this application.</p><br>
+1.
+(Currently Amended) A computer-implemented method of updating a patient record in a medical database, the method comprising:<br>
+receiving an image depicting a display screen of a patient monitoring system, wherein the image depicting the display screen of the patient <u>monitoring system </u>contains a depiction of displaying at least one vital signs data value of <del>said </del><u>a</u><u></u>patient;<br>
+<u>extracting a vital signs data value from the received image by evaluating at least one </u><u>reg</u><u>ion of interest of the received ima</u><u>g</u><u>e by ap</u><u>plving</u><u> a mask stored in a data stora</u><u>ge,</u><u> the at least one re</u><u>g</u><u>ion of interest comprisin</u><u>g</u><u> the vital signs data value, wherein the mask is configured to align with the at least one region of interest of the display screen of the patient </u><u>moni</u><u>torin</u><u>g</u><u> system</u><del> evaluating at least one region of interest of said image comprising one of said vital signs data values to extract said one vital signs data value from said image;</del><br>
+updating the patient record with the extracted <del>at least one v</del>ital signs data value; and<br>
+storing the image in a database such that the image is associated with the updated patient record.<br>
+2.
+(Currently Amended) The computer-implemented method of claim 1, further comprising generating an indicator value of an actual physical state of <del>said </del><u>t</u><u>he </u>patient from the extracted <del>at least one v</del>ital signs data value and updating the patient record with the generated indicator value.<br>
+3.
+(Currently Amended) The computer-implemented method of claim 1, <del>wherein the database</del> wherein the image is stored is the medical database.<br>
+<br>
+<br>
+<br>
+4.
+(Currently Amended) The computer-implemented method of claim 1, further comprising:<br>
+displaying the extracted <del>at least one v</del>ital signs data value on a display device to a user;<br>
+receiving a verification command from <del>said </del><u>the</u><u></u>user; and<br>
+updating the patient record with the extracted <del>at least one </del>vital signs data value and storing the image in <u>at least one of </u>the medical database <del>and/</del>or the database in response to the received verification command.<br>
+5.
+(Currently Amended) The computer-implemented method of claim 1, wherein evaluating<del> said </del><u>the</u><u></u><u>image</u> to extract the<del> at least one </del>vital signs data value from a region of interest in <del>said </del><u>the</u> image comprises:<br>
+identifying [[a]] the region of interest comprising [[a]] the vital signs data value in <del>said </del><u>the</u> image;<br>
+extracting the vital signs data value from the identified region of interest;<br>
+matching the extracted vital signs data value to a particular vital sign of the patient by comparing <del>said </del><u>the</u><u></u>vital signs data value against a library of expectation values of data values for different vital signs; and<br>
+updating a vital signs record of a vital sign in the patient record matched to the extracted vital signs data value with <del>said </del><u>the</u><u></u>extracted vital signs data value.<br>
+6.
+(Currently Amended) The computer-implemented method of claim 1, wherein <del>said </del><u>the</u> image is at least one photographic image or a screen capture.<br>
+7.
+(Currently Amended) The computer-implemented method of claim 1, further comprising receiving identification information of a person responsible for generating <del>said </del><u>the</u><u></u><u>image</u> and<br>
+<br>
+<br>
+<br>
+associating at least one of the stored at least one vital signs data value and the stored image with the received identification information.<br>
+<br>
+8-12. (Cancelled)911<br>
+<br>
+<br>
+13.    (Currently Amended) A non-transitory computer readable medium storing instructions that, when executed by one or more processors, cause the one or more processors to:receive an image depicting a display screen of a patient monitoring system, wherein the image depicting the display screen of the patient <u>monitori</u><u>ng</u><u> system </u>contains a depiction of displaying at least one vital signs data value o<del>f said </del>apatient;<br>
+<u>extract a vital si</u><u>g</u><u>ns data value from the received image by evaluating at least one re</u><u>g</u><u>ion of interest of the received image by applying a mask stored in a data storage</u><u>,</u><u> the at least one re</u><u>gi</u><u>on of interest comprisin</u><u>g</u><u> the vital si</u><u>g</u><u>ns data value, wherein the mask is configured to align with the at least one re</u><u>g</u><u>ion of interest of the display screen of the </u><u>p</u><u>atient monitorin</u><u>g</u><u> system</u><u>:</u><br>
+<del>evaluate at least one region of interest of said image comprising one of said vital signs data values to extract said one vital signs data value from said image;</del><br>
+update <del>the </del>a patient record with the extracted <del>at least one v</del>ital signs data value; and<br>
+store the image in a database such that the image is associated with the updated patient record.<br>
+<br>
+14.    (Canceled)<br>
+<br>
+15.    (Currently Amended) A system for updating a patient record in a medical database, the system comprising:one or more processors;<br>
+<br>
+<br>
+<br>
+a camera communicatively coupled to the one or more processors;<br>
+a display screen <u>of a patient monitorin</u><u>g sy</u><u>stem, the displa</u><u>y</u><u> screen </u>communicatively coupled to the one or more processors;<br>
+a data storage comprising a mask configured to align with a region of interest of [[a]] the display screen of [[a]] the patient monitoring system; and<br>
+a memory communicatively coupled to the one or more processors, the memory comprising instructions for:receiving an image depicting the display screen of the patient monitoring system,<br>
+wherein the image depicting the display screen of the patient <u>monitori</u><u>ng sy</u><u>stem </u>contains a depiction of displaying at least one vital signs data value of <del>said </del>apatient;extracting a vital signs data value from the received image by evaluating at least one region of interest of the received image by applying the mask from the data storage, the at least one region of interest comprising the vital signs data value;<br>
+updating the patient record with the extracted <del>at l</del><del>e</del><del>ast one v</del>ital signs data value; and<br>
+storing the image in a database such that the image is associated with the updated patient record.<br>
+<br>
+16.    (New) The non-transitory computer readable medium of claim 13, wherein the instructions, when executed by the one or more processors, further cause the one or more processors to:<br>
+generate an indicator value of an actual physical state of the patient from the extracted vital signs data value and updating the patient record with the generated indicator value.<br>
+<br>
+17.    (New) The non-transitory computer readable medium of claim 13, wherein the image is stored is the medical database.<br>
+<br>
+<br>
+<br>
+18.    (New) The non-transitory computer readable medium of claim 13, wherein the instructions, when executed by the one or more processors, further cause the one or more processors to:display the extracted vital signs data value on a display device to a user;<br>
+receive a verification command from the user; and<br>
+update the patient record with the extracted vital signs data value and storing the image in at least one of the medical database or the database in response to the received verification command.<br>
+<br>
+19.    (New) The non-transitory computer readable medium of claim 13, wherein, to evaluate the image to extract the vital signs data value from a region of interest in the image, the instructions, when executed by the one or more processors, further cause the one or more processors to:identify the region of interest comprising the vital signs data value in the image;<br>
+extract the vital signs data value from the identified region of interest;<br>
+match the extracted vital signs data value to a particular vital sign of the patient by comparing the vital signs data value against a library of expectation values of data values for different vital signs; and<br>
+update a vital signs record of a vital sign in the patient record matched to the extracted vital signs data value with the extracted vital signs data value.<br>
+<br>
+20.    (New) The non-transitory computer readable medium of claim 13, wherein the image is at least one photographic image or a screen capture.<br>
+<br>
+21.    (New) The non-transitory computer readable medium of claim 13, further comprising receiving identification information of a person responsible for generating the image and associating at least one of the at least one vital signs data value and the stored image with the received identification information.<br>
+<br>
+<br>
+<br>
+22.    (New) The system of claim 15, wherein the memory further comprises instructions for:<br>
+generating an indicator value of an actual physical state of the patient from the extracted vital signs data value and updating the patient record with the generated indicator value.<br>
+<br>
+23.    (New) The system of claim 15, wherein the image is stored is the medical database.<br>
+<br>
+24.    (New) The system of claim 15, wherein the memory further comprises instructions for:displaying the extracted vital signs data value on a display device to a user;<br>
+receiving a verification command from the user; and<br>
+updating the patient record with the extracted vital signs data value and storing the image in at least one of the medical database or the database in response to the received verification command.<br>
+<br>
+25.    (New) The system of claim 15, wherein, to evaluate the image to extract the vital signs data value from a region of interest in the image, the memory further comprises instructions for:identifying the region of interest comprising the vital signs data value in the image;<br>
+extracting the vital signs data value from the identified region of interest;<br>
+matching the extracted vital signs data value to a particular vital sign of the patient by comparing the vital signs data value against a library of expectation values of data values for different vital signs; and<br>
+updating a vital signs record of a vital sign in the patient record matched to the extracted vital signs data value with the extracted vital signs data value.<br>
+<br>
+26.    (New) The system of claim 15, wherein the image is at least one photographic image or a screen capture.
+</body></html>

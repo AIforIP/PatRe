@@ -1,0 +1,64 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with Mr. Mark Atkinson on 3/4/2025.
+The application has been amended as follows:
+1. (Currently Amended) A method of robotic assembly, comprising:
+measuring a first feature of a first subcomponent;
+fitting the first feature to a corresponding feature of a computer-aided design (CAD) model of the first subcomponent;
+determining a fixture location of the first subcomponent based on the fitting;
+receiving a first target location indicating where a first robot is to position the fixture location of the first subcomponent, the first target location proximal to a second target location indicating where a second robot is to position a second feature of a second subcomponent such that the first subcomponent and the second subcomponent form a component when coupled together with the fixture location of the first subcomponent in the first target location and the second feature of the second subcomponent in the second target location;
+calculating a first calculated location of the fixture location;
+measuring a first measured location of the fixture location;
+determining a first transformation matrix between the first calculated location and the first measured location; and
+repositioning the fixture location to the first target location using the first robot, the repositioning based on the first transformation matrix.
+20. (Currently Amended) A system for robotic assembly, comprising:
+a first subcomponent comprising a first feature;
+a first robot;
+a second robot; and
+a control unit coupled to the first robot and the second robot, wherein the control unit includes a processor configured to:
+measure the first feature,
+fit the first feature to a corresponding feature of a computer-aided design (CAD) model of the first subcomponent,
+determine a fixture location of the first subcomponent based on the fit of the first feature to the corresponding feature,
+receive a first target location indicating where the first robot is to position the fixture location of  the first subcomponent, the first target location proximal to a second target location indicating where the second robot is to position a second feature of a second subcomponent such that the first subcomponent and the second subcomponent form a component when coupled together with the fixture location of the first subcomponent in the first target location and the second feature of the second subcomponent in the second target location,
+calculate a first calculated location of the fixture location,
+measure a first measured location of the fixture location,
+determine a first transformation matrix between the first calculated location and the first measured location, and
+reposition the fixture location to the first target location using the first robot, the repositioning based on the first transformation matrix.
+41. (Currently Amended) A robotic assembly control unit, comprising:
+at least one processor; and
+a memory coupled to the at least one processor, the memory including instructions configuring the control unit to:
+measure a first feature of a first subcomponent,
+fit the first feature to a corresponding feature of a computer-aided design (CAD) model of the first subcomponent,
+determine a fixture location of the first subcomponent based on the fit of the first feature to the corresponding feature,
+receive a first target location indicating where a first robot is to position the fixture location of a first subcomponent, the first target location proximal to a second target location indicating where a second robot is to position a second feature of a second subcomponent such that the first subcomponent and the second subcomponent form a component when coupled together with the fixture location of the first subcomponent in the first target location and the second feature of the second subcomponent in the second target location,
+calculate a first calculated location of the fixture location,
+measure a first measured location of the fixture location,
+determine a first transformation matrix between the first calculated location and the first measured location, and
+reposition the fixture location to the first target location using the first robot, the repositioning based on the first transformation matrix.
+42. (Currently Amended) A non-transitory computer-readable medium storing computer executable code for robotic assembly, the code, when executed by a processor, causing the processor to:
+measure a first feature of a first subcomponent,
+fit the first feature to a corresponding feature of a computer-aided design (CAD) model of the first subcomponent,
+determine a fixture location of the first subcomponent based on the fit of the first feature to the corresponding feature,
+receive a first target location indicating where a first robot is to position the fixture location of the first subcomponent, the first target location proximal to a second target location indicating where a second robot is to position a second feature of a second subcomponent such that the first subcomponent and the second subcomponent form a component when coupled together with the fixture location of the first subcomponent in the first target location and the second feature of the second subcomponent in the second target location,
+calculate a first calculated location of the fixture location,
+measure a first measured location of the fixture location,
+determine a first transformation matrix between the first calculated location and the first measured location, and
+reposition the fixture location to the first target location using the first robot, the repositioning based on the first transformation matrix.
+47. (Canceled)
+58. (Canceled)
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance:
+The prior art of record fails to teach or suggest, alone or in combination, measuring a first feature of a first subcomponent; fitting the first feature to a corresponding feature of a computer-aided design (CAD) model of the first subcomponent; determining a fixture location of the first subcomponent based on the fitting; receiving a first target location indicating where a first robot is to position the fixture location of the first subcomponent; and to calculate a first calculated location of the fixture location,  measure a first measured location of the fixture location, determine a first transformation matrix between the first calculated location and the first measured location, and reposition the fixture location to the first target location using the first robot, the repositioning based on the first transformation matrix, in combination with the remaining limitations as set forth in claim 1 and similarly in each respective independent claim.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to VINCENT W CHANG whose telephone number is(571)270-1214. The examiner can normally be reached (M-F) 10:00 am - 6:00 pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Mohammad Ali can be reached on 571-272-4105. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/VINCENT WEN-LIANG CHANG/
+Examiner
+Art Unit 2119
+/MOHAMMAD ALI/Supervisory Patent Examiner, Art Unit 2119

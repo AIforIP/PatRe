@@ -1,0 +1,8 @@
+<html><head></head><body><h3>Date: 2021-09-22</h3>
+<p><u>Abstract:</u></p>
+<p>The present invention provides a system for implementing a logistic regression classification mechanism to measure and assess a depth of anesthesia of an animal subject based on electroencephalography (EEG), which includes a signal pre-processor, an epoch generator, a feature extractor, a classifier, and a predictor. Related method of how to pre-process the raw data of EEG signal, epoch generation thereof, feature extraction from each epoch, classification based on extracted features, and prediction of different states of the animal subject based on a prediction decision mechanism is also provided. Classification accuracy of the present invention for 1-second and 10% overlapping epochs is about 94% with an average total system delay of about 12  s and low on-chip power consumption. The present system is entirely optimized, which leads to a 100% accurate channel prediction after a 7-second run-time on average.</p>
+<p>Docket No. P2096US00 22</p>
+5
+10
+15
+</body></html>

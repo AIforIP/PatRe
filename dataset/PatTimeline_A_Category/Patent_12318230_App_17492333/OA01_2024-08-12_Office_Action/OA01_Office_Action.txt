@@ -1,0 +1,46 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 3, 6, 7, 13, and 14 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Regarding claim 3, line 3, the term preferably renders the claim indefinite because it is unclear whether the limitation(s) following the term are part of the claimed invention.  See MPEP § 2173.05(d).
+There is no clear antecedent basis for “the probe section” as recited in claims 6, 13, and 14 or “the supply section” as recited in claims 13 and 14.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claim(s) 1-8, 10, 11, 14, and 15, as understood, is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Krieger (US-5,830,183).
+Krieger shows an endoscopic instrument comprising an instrument body (20) including a flexible section (34) that can be wound in at least one winding (see Fig. 3), a holding device (22) including a gripper with a tube-shaped center part (32) and a radially extending, arcuate latch (26) as best shown in Figures 7 and 8.
+Regarding claim 2, the instrument body includes a supply section (36, 38) and a flexible probe section (34).
+In regard to claim 4, the entire holding device (22) can be formed from a single molded polymeric material (see col. 4, lines 9 and 10).
+Regarding claim 5, a portion of the gripper includes a base (24) that rotatably supports the latch (26).
+Claim(s) 1-9, 11, 14, and 15, as understood, is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Poulsen (US-5,309,604).
+Poulsen shows an instrument body comprising a flexible section (18) that can be wound in at least one winding (see Fig. 4) and a holding device (22) including a tube-shaped center part (30) rotatably and slidably mounted on the instrument body and latch portions (32, 40) extending a radial distance from the center part and over at least a portion of the circumference of the center part.
+In regard to claims 2 and 3, the instrument includes a flexible probe section (18) and a supply section (16).
+Regarding claim 4, the holding device is made from a rigid plastic material (see col. 4, line 67 – col. 5, line 1).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim(s) 12 and 13, as understood, is/are rejected under 35 U.S.C. 103 as being unpatentable over Poulsen (US-5,309,604) in view of Alden et al. (US-5,364,355).
+The center part of Poulsen’s holding device shows a circular opening (30) for attaching to a flexible portion (18) having a round cross-section.
+In contrast, the patent to Alden et al. shows a holding device (18) having a base (24) that is configured for attachment to an instrument (17) having a non-round cross section (see the opening 20 in Figures 2 and 3).
+It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to form the opening of Poulsen’s holding device with concave undulations, similar to that shown in Figures 2 and 3 of the Alden et al. patent, so that instruments of different cross-sections could be securely held within the resulting opening.
+Priority
+Receipt is acknowledged of certified copies of papers required by 37 CFR 1.55.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+The publications to Chu (US-2019/0346643) and Smith et al. (US-2016/0074628) both show a holding device for gripping multiple flexible windings of a medical instrument.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to DEAN J KRAMER whose telephone number is (571)272-6926. The examiner can normally be reached Monday-Friday 7:30-4:00.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Gene Crawford can be reached on 571-272-6911. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/DEAN J KRAMER/                                                                                                                   Primary Examiner, Art Unit 3651
+DEAN J. KRAMER
+Primary Examiner
+Art Unit 3651
+Djk
+8/7/2024

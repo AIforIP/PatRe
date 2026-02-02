@@ -1,0 +1,88 @@
+<html><head></head><body>18544121
+
+   CLAIMS
+   
+
+<br>
+
+1. An exterior aircraft light, comprising:
+a light source having a first electrode and a second electrode;
+a light source support for supporting the light source;
+wherein the light source support comprises conductive traces for supplying electric energy to the light source;
+wherein the light source support comprises a first group of electric contact areas, which are spaced from each other and which are electrically connected with each other, and a second group of electric contact areas, which are spaced from each other and which are electrically connected with each other;
+wherein the first group of electric contact areas and the second group of electric contact areas form an extended electric contact structure that allows for the light source to be positioned on the light source support in a plurality of different positions; and
+wherein the first electrode of the light source is soldered to a subset of the first group of electric contact areas and wherein the second electrode of the light source is soldered to a subset of the second group of electric contact areas.
+<br>
+
+2.  The exterior aircraft light according to claim 1, 
+wherein the electric contact areas of the first group are arranged in a first row of electric contact areas; and
+wherein the electric contact areas of the second group are arranged in a second row of electric contact areas; 
+wherein the first row of electric contact areas and the second row of electric contact areas are in particular arranged side-by-side.
+<br>
+
+3.  The exterior aircraft light according to claim 1, 
+wherein the electric contact areas of the first group are arranged in a first two-dimensional matrix pattern of electric contact areas;
+and/or
+wherein the electric contact areas of the second group are arranged in a second two-dimensional matrix pattern of electric contact areas;
+wherein the first two-dimensional matrix pattern of electric contact areas and the second two-dimensional matrix pattern of electric contact areas are in particular arranged side-by-side.
+<br>
+
+4.  The exterior aircraft light according to claim 1,
+wherein the first group of electric contact areas and/or the second group of electric contact areas are stripe-shaped, wherein the first group of electric contact areas and/or the second group of electric contact areas are in particular parallel stripes;
+and/or
+wherein the first group of electric contact areas and/or the second group of electric contact areas are square-shaped or circular.
+<br>
+
+5.  The exterior aircraft light according to claim 1, wherein the electric contact areas of the first group and the electric contact areas of the second group are provided as solder pads.
+<br>
+
+6.  The exterior aircraft light according to claim 1, 
+wherein the electric contact areas of the first group and the electric contact areas of the second group have in at least one direction an extension (a, b) in the range of between 0.1&nbsp;mm and 0.3&nbsp;mm, in particular in the range of between 0.1&nbsp;mm and 0.2&nbsp;mm; 
+and/or 
+wherein adjacent electric contact areas of the first group and adjacent electric contact areas of the second group are spaced by a distance (d) of between 0.1&nbsp;mm and 0.3&nbsp;mm, in particular spaced by a distance (d) of between 0.1&nbsp;mm and 0.2&nbsp;mm.
+<br>
+
+7.  The exterior aircraft light according to claim 1, wherein the electric contact areas of the first group are electrically connected with each other within the light source support or on a back side of the light source support and/or wherein electric contact areas of the second group are electrically connected with each other within the light source support or on the back side of the light source support.
+<br>
+
+8.  The exterior aircraft light according to claim 1,
+further comprising at least one optical element that is arranged over the light source for shaping a light output of the exterior aircraft light,
+wherein light from the light source contributes differently to the light output of the exterior aircraft light for the plurality of different positions on the light source support.
+<br>
+
+9.  The exterior aircraft light according to claim 8, 
+wherein the light output of the exterior aircraft light has a main light emission direction; and 
+wherein a first angle between the main light emission direction and the light source support, measured when the light source is arranged at a first end region of the first and second groups of electric contact areas, differs from a second angle between the main light emission direction and the light source support, measured when the light source is arranged at a second end region of the first and second groups of electric contact areas, by between 20° and 30°. 
+<br>
+
+10.  The exterior aircraft light according to claim 8, 
+wherein the exterior aircraft light is a wing-mounted forward navigation light;
+wherein the light output of the forward navigation light has a cut-off angle (γ) with respect to the light source support, and 
+wherein a first cut-off angle (γ), present when the light source is arranged at a first end region of the first and second groups of electric contact areas, differs from a second cut-off angle (γ), present when the light source is arranged at a second end region of the first and second groups of electric contact areas, by between 20° and 30°. 
+<br>
+
+11.  An exterior aircraft light, comprising:
+a plurality of light sources, each having a respective first electrode and a respective second electrode;
+a plurality of first groups of electric contact areas, wherein the electric contact areas of each first group are spaced from each other and are electrically connected with each other, and a plurality of second groups of electric contact areas, wherein the electric contact areas of each second group are spaced from each other and are electrically connected with each other;
+wherein a respective first group of electric contact areas and a respective second group of electric contact areas form a respective extended electric contact structure that allows for a respective light source to be positioned on the light source support in a plurality of different positions; and
+wherein the first electrode of the respective light source is soldered to a respective subset of the respective first group of electric contact areas and wherein the second electrode of the respective light source is soldered to a respective subset of the respective second group of electric contact areas.
+<br>
+
+12.  The exterior aircraft light according to claim 1, wherein the exterior aircraft light is a forward navigation light or a white strobe anti-collision light or a red-flashing beacon light or a landing light or a take-off light or a multi-function light, providing the functionalities of at least two of a forward navigation light and a white strobe anti-collision light  and a red-flashing beacon light , or a multi-function light, providing the functionalities of a landing light and a take-off light.
+<br>
+
+13.  An aircraft, such as an airplane or a rotorcraft, comprising the at least one exterior aircraft light according to claim 1.
+<br>
+
+14.   A method of assembling an exterior aircraft light, comprising:
+providing a light source having a first electrode and a second electrode;
+providing a light source support for supporting the light source, wherein the light source support comprises a first group of electric contact areas, which are spaced from each other and which are electrically connected with each other, and a second group of electric contact areas, which are spaced from each other and which are electrically connected with each other, wherein the first group of electric contact areas and the second group of electric contact areas form an extended electric contact structure;
+soldering the first electrode of the light source to a subset of the first group of electric contact areas and soldering the second electrode of the light source to a subset of the second group of electric contact areas, thus fixing the light source to the light source support at a selected position.
+<br>
+
+15.  The method according to claim 14, wherein the exterior aircraft light is a wing-mounted forward navigation light and wherein the method comprises:
+determining a wing angle (α1, α2) of an aircraft wing with respect to an aircraft fuselage; selecting the position of the light source on the light source support depending on the determined wing angle (α1, α2).
+
+   
+
+</body></html>

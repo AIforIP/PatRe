@@ -1,0 +1,121 @@
+<html><head></head><body><h3>Date: 2024-06-28</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS:</u></h1>
+<p>This listing of claims replaces all prior versions and listings of claims in the application:</p>
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<br>
+<br>
+1 to 20. (Canceled)219<br>
+<br>
+<br>
+21. (Currently Amended) A method of obtaining a stiffness of a gear of a joint on a robotic arm, where the joint is connectable to at least one other joint on the robotic arm, where the joint comprises a motor having a motor axle, where the motor axle is configured to rotate an output axle through the gear, and where the method comprises:<br>
+applying torque to the motor axle using the motor;<br>
+obtaining an angular position of the motor axle;<br>
+obtaining an angular position of the output axle,<br>
+<del>determining the stiffness of the gear based on at least the angular position of the motor axle, the angular position of the output axle, and a dynamic model of the robotic arm, where the dynamic model defines a relationship between forces acting on the robotic arm and resulting accelerations of the robotic arm;</del>obtaining a deflection of the gear based on the angular position of the motor axle and the angular position of the output axle;<br>
+obtaining a flexibility torque of the gear at the deflection of the gear based on at least the angular position of the motor axle, the angular position of the output <u>a </u><del></del><del>axles </del>and <del>the </del><u>a</u> dynamic model <u>of the robotic arm, where the dynamic model defines a relationship between forces acting on the robotic arm and resulting accelerations of the robotic arm;</u><br>
+performing operations repetitively, the operations comprising:<br>
+applying a new torque to the motor axle using the motor;<br>
+obtaining a new angular position of the motor axle;<br>
+obtaining a new angular position of the output axle;<br>
+<br>
+<br>
+<br>
+obtaining a new deflection of the gear based on the new angular position of the motor axle and the new angular position of the output axle; and<br>
+obtaining a new flexibility torque of the gear at the new deflection of the gear based on at least the new angular position of an<u>t</u><u>he</u> motor axle, the new angular position of <u>the</u> output axle, and <u>the</u> dynamic model; <del>and</del><br>
+<del>for each repetition, </del>storing <del>the ne</del><del>w</del><del></del><u>each </u>deflection of the gear and <del>the ne</del><del>w</del><del></del><u>each</u> flexibility torque of the gear at <del>the ne</del><del>w</del><del></del><u>a corresponding </u>deflection of the gear; <del>and</del><br>
+fitting, to a mathematical function, the flexibility <u>torques </u><del>torque </del>and <u>deflections</u><del> deflection </del>of the gear <u>that were stored </u><del>obtained by repeating the operations</del>, where the mathematical function comprises a polynomial function <del>obtained </del><u>that is </u>based on a recursive least squares estimation;<u> and</u><br>
+<u>determining the stiffness of the </u><u>g</u><u>ear based on the mathematical function.</u><br>
+<br>
+22. (Canceled)<br>
+<br>
+23. (Previously Presented) The method of claim 21, wherein applying the torque to the motor axle results in movement of at least a part of the robotic arm.<br>
+<br>
+24. (Currently Amended) The method of claim 21, further comprising:<br>
+comparing the stiffness of the gear <del>with </del>to prior knowledge of the stiffness of gear; and<br>
+providing a status of the gear based on a result of the comparing.<br>
+<br>
+25. (Previously Presented) The method of claim 21, wherein the dynamic model comprises information modeling a parallel spring and damper coupling between the motor axle and the output axle.<br>
+<br>
+26. (Previously Presented) The method of claim 21, where the robotic arm comprises joints including the joint comprising the gear, where a combination of the joints are for connecting a base and a tool flange, and wherein the method further comprises:<br>
+<br>
+<br>
+<br>
+controlling the joint based on the dynamic model and the stiffness of the gear.<br>
+<br>
+27. (Previously Presented) The method of claim 26, further comprising:<br>
+modifying the dynamic model based on the stiffness of the gear.<br>
+<br>
+28. (Currently Amended) A method of obtaining a stiffness of a gear of a joint on a robotic arm, where the joint is connectable to at least one other joint on the robotic arm, where the joint comprises a motor having a motor axle, where the motor axle is configured to rotate an output axle through the gear, and where the method comprises:<br>
+applying torque to the motor axle using the motor;<br>
+obtaining an angular position of the motor axle;<br>
+obtaining an angular position of the output axle;<br>
+<del>determining the stiffness of the gear based on at least the angular position of the motor axle, the angular position of the output axle, and a dynamic model of the robotic arm, </del><del>w</del><del>here the dynamic model defines a relationship between forces acting on the robotic arm and resulting accelerations of the robotic arm;</del><br>
+obtaining a deflection of the gear based on the angular position of the motor axle and the angular position of the output axle;<br>
+obtaining a flexibility torque of the gear at the deflection of the gear based on at least the angular position of the motor axle, the angular position of the output <u>a </u><del></del><del>axles </del>and <del>the </del><u>a</u> dynamic <u>model, where the dynamic model defines a relationship between forces acting on the robotic arm and resulting accelerations of the robotic arm;</u><br>
+performing operations repetitively, the operations comprising:applying a new torque to the motor axle using the motor;<br>
+obtaining a new angular position of the motor axle;<br>
+obtaining a new angular position of the output axle;<br>
+obtaining a new deflection of the gear based on the new angular position of the motor axle and the new angular position of the output axle; and<br>
+<br>
+<br>
+<br>
+obtaining a new flexibility torque of the gear at the new deflection of the gear based on at least the new angular position of an<u>t</u><u>he</u> motor axle, the new angular position of <u>the</u> output axle, and <u>the</u> dynamic model; <del>and</del><br>
+<del>for each repetition, </del>storing <del>the ne</del><del>w</del><del></del><u>each </u>deflection of the gear and <del>the ne</del><del>w</del><del></del><u>each</u> flexibility torque of the gear at <del>the ne</del><del>w</del><del></del><u>a corresponding </u>deflection of the gear; <del>and</del><br>
+fitting, to a mathematical function, the flexibility <u>torques </u><del>torque </del>and the <del>deflection</del><u> deflections </u>of the gear <u>that were stored </u><del>obtained</del>;<u> and </u><del>by the repeating operations, where</del><u> determining </u>the stiffness of the gear is based on a slope of <del>the </del>flexibility torque relative to<del> the </del>deflection of the <u>gear, the slope being based on the mathematical function.</u><br>
+<br>
+29. (Canceled)<br>
+<br>
+30. (Previously Presented) The method of claim 28, wherein applying the torque to the motor axle results in movement of at least a part of the robotic arm.<br>
+<br>
+31. (Currently Amended) The method of claim 28, further comprising:<br>
+comparing the stiffness of the gear <del>w</del><del>ith </del>to prior knowledge of the stiffness of gear; and<br>
+providing a status of the gear based on a result of the comparing.<br>
+<br>
+32. (Previously Presented) The method of claim 28, wherein the dynamic model comprises information modeling a parallel spring and damper coupling between the motor axle and the output axle.<br>
+<br>
+33. (Previously Presented) The method of claim 28, where the robotic arm comprises joints including the joint comprising the gear, where a combination of the joints are for connecting a base and a tool flange, and wherein the method further comprises:<br>
+controlling the joint based on the dynamic model and the stiffness of the gear.<br>
+<br>
+34. (Previously Presented) The method of claim 33, further comprising:<br>
+<br>
+<br>
+<br>
+modifying the dynamic model based on the stiffness of the gear.<br>
+<br>
+35. (Currently Amended) A method of obtaining a stiffness of a gear of a joint on a robotic arm, where the joint is connectable to at least one other joint on the robotic arm, where the joint comprises a motor having a motor axle, where the motor axle is configured to rotate an output axle through the gear, and where the method comprises:<br>
+applying torque to the motor axle using the motor, where <del>the </del>applying ef the torque to the motor axle <del>resulting </del><u>results </u>in rotation of the motor axle and the output axle;<br>
+obtaining an angular position of the motor axle;<br>
+obtaining an angular position of the output axle[[,]] <del>and determining the stiffness of the gear based on at least the angular position of the motor axle, the angular position of the output axle, and a dynamic model of the robotic arm, </del><del>w</del><del>here the dynamic model defines a relationship bet</del><del>w</del><del>een forces acting on the robotic arm and resulting accelerations of the robotic arm;</del><br>
+obtaining a deflection of the gear based on the angular position of the motor axle and the angular position of the output axle;<br>
+obtaining a flexibility torque of the gear at the deflection of the gear based on at least the angular position of the motor axle, the angular position of the output <u>a </u><del></del><del>axles </del>and <del>the </del><u>a</u> dynamic <u>model, where the dynamic model defines a relationship between forces acting on the robotic arm and resulting accelerations of the robotic arm;</u><br>
+fitting, to a mathematical function, the flexibility torque and the deflection of the gear<u> that were </u>obtained, where the mathematical function comprises a polynomial function <del>obtained</del><u> that is </u>based on a recursive least squares estimation;er<u> determining </u>the stiffness of the gear is based on a slope <u>that is based on the mathematical function </u><del>of the flexibility torque relative to the deflection of the gear or the stiffness of the gear is based on a slope of the flexibility torque relative to the deflection of the gear</del>.<br>
+<br>
+36. (Canceled)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+37. (Previously Presented) The method of claim 35, wherein applying the torque to the motor axle results in movement of at least a part of the robotic arm.<br>
+<br>
+38. (Currently Amended) The method of claim 35, <u>further comprising: </u><del>w</del><del>herein determining the stiffness of the gear comprises</del> repeating operations comprising:applying <del>ne</del><del>w </del><u>t</u><u>he</u> torque to the motor axle using the motor;<br>
+obtaining <del>a ne</del><del>w</del><del></del><u>the</u> angular position of the motor axle;<br>
+obtaining <del>a ne</del><del>w</del><del></del><u>the</u> angular position of the output axle;<br>
+obtaining <del>a ne</del><del>w</del><del></del><u>the</u> deflection of the gear based on the <del>ne</del><del>w</del><del></del>angular position of the motor axle and the <del>ne</del><del>w</del><del></del>angular position of the output axle; and<br>
+obtaining <del>a ne</del><del>w</del><del></del><u>the</u> flexibility torque of the gear at the <del>ne</del><del>w</del><del></del>deflection of the gear based on at least the <del>ne</del><del>w</del><del></del>angular position of an<u>t</u><u>he</u> motor axle, the <del>ne</del><del>w</del><del></del>angular position of <u>the</u> output axle, and <u>the</u> dynamic model; and<br>
+for each repetition <u>of the operations,</u> storing the <del>ne</del><del>w</del><del></del>deflection of the gear and the <del>ne</del><del>w</del> flexibility torque of the gear at the <del>ne</del><del>w</del><del></del>deflection of the gear;<br>
+<u>wherein each deflection of the </u><u>g</u><u>ear and each flexibility tor</u><u>q</u><u>ue of the </u><u>g</u><u>ear is fit to the mathematical function.</u><br>
+<br>
+39. (Currently Amended) The method of claim 38, further comprising:<br>
+comparing the stiffness of the gear <del>w</del><del>ith </del>to prior knowledge of the stiffness of gear; and<br>
+providing a status of the gear based on a result of the comparing.<br>
+<br>
+40. (Currently Amended) The method of claim 35[[1]], where the robotic arm comprises joints including the joint comprising the gear, where a combination of the joints are for connecting a base and a tool flange, and wherein the method further comprises:<br>
+controlling the joint based on the dynamic model and the stiffness of the gear.<br>
+<br>
+41. (Currently Amended) The method of claim 40 [[42]], further comprising:<br>
+<br>
+Filed    : March 12, 2021 Page
+:8of10 modifying the dynamic model based on the stiffness of the gear.
+</body></html>

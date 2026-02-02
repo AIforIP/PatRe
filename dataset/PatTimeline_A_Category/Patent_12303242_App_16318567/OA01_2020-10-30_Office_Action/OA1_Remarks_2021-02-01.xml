@@ -1,0 +1,36 @@
+<html><head></head><body><h3>Date: 2021-02-01</h3>
+<p><u>REMARKS </u><u>/</u><u> DISCUSSION OF ISSUES</u></p><p>Claims 1-2, 5-10, and 12-23 are pending in the application. Claims 15-23 are newly added.</p><p>The applicants thank the Examiner for acknowledging the claim for priority and receipt of certified copies of all the priority documents, and for determining that the drawings are acceptable.</p><p>Claims are amended for non-statutory reasons: to correct one or more</p><p>informalities, remove figure label numbers, and/or to replace European-style claim phraseology with American-style claim language. No new matter is added.</p><p>Applicants' FIG. 3 is amended herein to correct the mislabeling of the x-axis as "MAP" (mean arterial pressure), and correctly labeling it as "Force". For clarity, the specification is also amended herein to reflect that FIG. 3 represents the correlation as a function of the force applied. Support for this correction is found at page 6, lines 30-34 (emphasis added):</p><p>"FIG. 3 shows a graph indicating a correlation between a strength of the</p><p>pulsatile AC component PC of the output of the photo detector and a mean arterial pressure MAP. In particular, the relation between the strength of the AC component of the output signal of the photo detector and the mean arterial pressure under different force levels applied to the vital signs sensor are</p><p>depicted."</p>
+<p>The Examiner rejects claims 1-2, 5-10, and 12-14 under 35 U.S.C. 102 over Asada et al. (USPA 2007/0055163, hereinafter Asada).</p><p>The applicants respectfully traverse this rejection in view of amended claims 1 and 9.</p><p>Asada does not disclose extracting information regarding a <u>blood volume </u><u>p</u><u>ulse from an AC com</u><u>p</u><u>onent </u>of an output signal of the PPG sensor.</p><p>Claims 1 and 9 are amended herein to specifically recite that the blood volume pulse information is extracted from the AC component of the PPG sensor signal. Newly added independent claim 18 also includes this feature.</p><p>Consistent with the conventional use of   SVG
+{EMBED HERE}
+1.102.68 the terms AC and DC components of a signal,
+the AC component of the PPG sensor signal is
+illustrated as the dotted line that 'rides upon' the
+solid line (DC component) of FIG. 2 of the
+FIG. 2</p><p>applicants' drawings.</p><p>The applicants disclose that a strong correlation exists between the AC component of the PPG signal and the user's blood pressure.</p><p>"As can be seen from FIG. 3, the strength of the AC component of the output</p><p>signal of the photo detector highly correlates with the mean arterial pressure MAP starting with force levels at 15 N or stronger. As can be seen from FIG. 3, the</p><p>best result is obtained at a force of 17.25 N with a correlation of r=0.87.</p><p>"FIG. 4 shows a scatter plot between the mean arterial pressure and the AC</p><p>component AC of the output signal of the photo detector. FIG. 4 therefore shows a correlation diagram between the mean arterial pressure and the value of the AC component of the photo detector at an applied force of 17.25 N."</p><p>(Specification, page 7, lines 1-8.)</p><p>Asada, on the other hand, discloses that the user's blood pressure is correlated with a height of the PPG sensor at which a peak value of the PPG signal is found.</p><p>"The blood pressure measurement device has a processor that receives the</p><p>plethysmographic signals from the sensor and derives an arterial pressure from the value of externally applied pressure and the height at which a peak</p><p>plethysmographic signal is obtained" (Asada [0015], emphasis added.)</p>
+<p>Asada's FIG. 4C clearly illustrates Asada's determination of the maximum PPG signal amplitude at 414, then calculating the ABP (Arterial Blood Pressure) based on this maximum/peak PPG signal at 416.</p><p>"Once the PPG signal amplitudes are measured the peak PPG amplitude is</p><p>determined 414. Like the calibration <u>method above, spurious data points and</u></p><p>oscillations between beats of the heart SVG
+{EMBED HERE}
+2.2072.83 may be removed from   the peak 41
+plethysmographic signal amplitude. If the PPG signal has a peak at the</p><p>transmural height, then  the  ABP  iS  41
+
+equal to the previously calibrated MAP.</p><p>However, if the peak PPG signal is at a
+different height, then the ABP  is equal  41
+
+to the constant external pressure applied to the extremity plus <u>th</u><u>e</u></p><p>hydrostatic  pressure, which  can  be  41
+
+found by solving Eqn. 4 with the new</p><p>height 416." (Asada [0076], emphasis
+FIG. 4C
+SVG
+{EMBED HERE}
+0.2330.1178</p><p>added.)</p><p>The AC component of the PPG signal corresponds to the changing volume of blood for each pulse of the user's heart. Asada specifically teaches techniques for removing this AC component from the PPG signal to improve the process of determining peak values of the PPG signal.</p><p>"PPG amplitude measurements are obtained by applying a peak detection</p><p>algorithm to each calibration data set. Once the beat-by-beat amplitudes arecalculated, spurious data points are removed by appl SVG
+{EMBED HERE}
+0.671.823 window median filter to the data. The PPG/ABP relatio
+oscillations such as r<u>h</u>y<u>t</u>h<u>m</u>i<u>c</u> <u>v</u>a<u>r</u>i<u>a</u>t<u>i</u>o<u>n</u>s<u> </u>i<u>n</u> <u>m</u>i<u>c</u>r<u>o</u>c<u>i</u>
+A moving window averaging is performed to elimina
+several beats, but other signal processing alternatives exist, including band-pass filtering or fitting a spline, as methods of removing PPG baseline oscillations that are not directly due to oscillations in the ABP, and any such signal processing</p><p>is within the scope of the present invention. (Asada [0068], emphasis added.)</p><p>Because Asada does not disclose extracting information regarding a blood volume pulse from an AC component of an output signal of the PPG sensor, and specifically teaches that this AC component should be eliminated from the PPG signal before determining the user's blood pressure, the applicants respectfully maintain that</p>
+<p>claims 1-2, 5-10, and 12-14 are patentable under 35 U.S.C. 102 over Asada, and respectfully request the Examiner's reconsideration of this rejection.</p><p>In view of the foregoing, the applicants respectfully request that the Examiner withdraw the rejections of record, allow all the pending claims, and find the application to be in condition for allowance. If any points remain in issue that may best be resolved through a personal or telephonic interview, the Examiner is respectfully requested to contact the undersigned at the telephone number listed below.</p><p>Respectfully submitted,</p><p>Please direct all correspondence to:  <u>/Robert M. McDermott</u><u>/</u> Corporate Counsel
+Robert M. McDermott, Attorney</p><p>PHILIPS IP&amp;S
+Registration Number 41,508</p><p>465 Columbus Avenue, Suite 340
+patents@lawyer.com</p><p>Valhalla, NY 10595
+804-493-0707</p>
+
+</body></html>

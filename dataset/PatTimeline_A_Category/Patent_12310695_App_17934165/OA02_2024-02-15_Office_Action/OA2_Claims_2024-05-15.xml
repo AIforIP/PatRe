@@ -1,0 +1,34 @@
+<html><head></head><body><h3>Date: 2024-05-15</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>The following listing of claims replaces all prior versions thereof. Changes are shown below in highlighted form, where insertions appear as underlined text (e.g., <u>insertions)</u> while deletions appear as strikethrough text (e.g., <del>deletions</del>) or double brackets (e.g., [[deletions]]).</p><br>
+<br>
+1.-15. (Canceled)214<br>
+<br>
+<br>
+16. (Currently Amended) A method for displaying a health parameter of a user, the method comprising:measuring, with an optical sensor, raw data responsive to detection of an interaction of emitted light with a skin of a user;<br>
+determining one or more physiological measurements from the measured raw data acquired by the optical sensor with a <del>native </del><u>first</u><u></u>software;<br>
+downloading a <del>third party</del><u>second </u>software, wherein the <del>third </del><u>second </u><del>party</del> software is configured to execute one or more post-processing functions on the determined one or more physiological measurements;<br>
+providing an option in a graphical user interface <u>of the first software</u> presented on <del>the </del><u>a</u><u></u>display for a user to select the <del>native software or the third party</del><u> second </u>software for a determination of a health parameter;<br>
+<u>receivin</u><u>g</u><u> an indication that the second software was selected from the option in the graphical user interface</u><u>;</u><br>
+enabling the <del>third party</del><u>second </u>software to execute <u>the</u><u></u>one or more post- processing functions on the determined one or more physiological parameters based on the selection of the <del>third party</del><u>second </u>software, wherein the one or more<del> post processing </del><u>post-processing </u>functions are configured to determinate the health parameter; and<br>
+displaying the health parameter according to a display layout corresponding to the<del> third party</del><u>second </u>software on a display.<br>
+<br>
+17. (Currently Amended) The method of Claim 16, further comprising generating a<del> standard </del>format for the determined one or more physiological parameters to enable the one or more <del>post- processing</del><u>post-processing </u>functions by the <del>third party</del><u>second </u>software.<br>
+<br>
+<br>
+<br>
+18. (Currently Amended) The method of Claim 16, wherein the determination of the one or more physiological measurements is <del>decoupled </del><u>separate </u>from the post-processing functions.<br>
+<br>
+19. (Previously Presented) The method of Claim 16, wherein the post-processing functions include producing alerts on the display.<br>
+<br>
+20. (Currently Amended) The method of Claim 16, wherein the health parameter is proprietary to the <u>second</u><del>third party </del>software.<br>
+<br>
+21. (Currently Amended) The method of Claim 16, further comprising displaying the health parameter<u> as determined by the second software </u>and <del>native software processed</del>the<u> one or more physiological measurements as determined by the first software </u><del>parameters</del> simultaneously on the display.<br>
+<br>
+22. (Currently Amended) The method of Claim 16, further comprising running the <del>third</del><u> second </u><del>party </del>software simultaneously with the <del>native </del><u>fi</u><u>rst </u>software.<br>
+<br>
+23. (Currently Amended) The method of Claim 16, wherein the <del>third party</del><u>second</u> software is configured to operate with the <del>native </del><u>first </u>software or in conjunction with a virtual machine.<br>
+<br>
+24. (Currently Amended) The method of Claim 16, wherein the health parameter comprises a <del>proprietary </del>wellness <u>indicator specific to the second software.</u>
+</body></html>

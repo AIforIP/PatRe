@@ -1,0 +1,258 @@
+<html><head></head><body><h3>Date: 2021-05-28</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+<br>
+1.    A method of controlling a rotor system of a tiltrotor aircraft comprising: 
+<br>
+automatically changing a rotor speed of the rotor system of the tiltrotor aircraft while moving the rotor system from a first position and a first rotor speed to a second position and 
+<br>
+a second rotor speed over a time period in accordance with an acceleration-rate profile that varies over the time period using a controller communicably coupled to the rotor system of the tiltrotor aircraft.
+<br>
+
+2.
+The method of claim 1, further comprising receiving a signal at the controller to change the rotor system from the first position to the second position.
+<br>
+
+3.
+The method of claim 1, wherein: 
+<br>
+the first position of the rotor system corresponds to a takeoff-and-landing mode or a hover mode, and the second position corresponds to a cruise mode; or 
+<br>
+the first position of the rotor system corresponds the cruise mode, and the second position of the rotor system corresponds to the takeoff-and-landing mode or the hover mode.
+<br>
+
+4.
+The method of claim 1, wherein: 
+<br>
+the first position of the rotor system is generally parallel to a yaw axis of the tiltrotor 
+<br>
+aircraft, and the second position is generally parallel to a roll axis of the tiltrotor aircraft; or 
+<br>
+the first position of the rotor system is generally parallel to the roll axis of the tiltrotor aircraft, and the second position of the rotor system is generally parallel to the yaw axis of the tiltrotor aircraft. 
+
+<br>
+
+5.
+The method of claim 1, further comprising determining the acceleration-rate profile based on one or more operational parameters comprising one or more of a rotor system performance parameter, an aircraft operational mode parameter, an aircraft characteristic parameter, or an environmental parameter.
+<br>
+
+6.
+The method of claim 5, further comprising determining the one or more operational parameters based on one or more sensors communicably coupled to the controller, one or more flight controls communicably coupled to the controller, or one or more signals from one or more remote devices communicably coupled to the controller.
+<br>
+
+7.
+The method of claim 1, wherein the acceleration-rate profile comprises a multi- segment linear profile, a curved profile, a stair-stepped profile, or a combination thereof.
+<br>
+
+8.
+The method of claim 1, wherein the acceleration-rate profile comprises at least one curved segment and at least one linear segment.
+<br>
+
+9.
+The method of claim 1, wherein the acceleration-rate profile comprises an increasing acceleration rate for a first portion of the time period, a constant acceleration rate for a second portion of the time period, and a decreasing acceleration rate for a third portion of the time period.
+<br>
+
+<br>
+10.   The method of claim 1, wherein the rotor speed is changed over the time period according to a portion of the time period remaining in the time period or a difference between an actual rotor speed and a reference rotor speed.
+
+<br>
+
+<br>
+11.   The method of claim 1, wherein the acceleration-rate profile is implemented using to a control law based on a reference rotor speed and an actual rotor speed.
+<br>
+
+<br>
+12.   The method of claim 11, wherein the control law comprises a variable acceleration command based on a portion of the time period remaining in the time period or a difference between the actual rotor speed and the reference rotor speed.
+<br>
+
+<br>
+13.   The method of claim 1, wherein the controller is an analog device, a digital device, or 
+<br>
+a combination thereof. 
+<br>
+
+<br>
+14.   The method of claim 1, wherein the rotor speed is changed using the controller and at least one of a collective governor or a throttle governor.
+<br>
+
+<br>
+15.   The method of claim 1, wherein the rotor speed is changed by changing a reference rotor speed.
+<br>
+
+<br>
+16.   An apparatus for controlling a rotor system of a tiltrotor aircraft, comprising: 
+<br>
+a controller operably coupled to the rotor system and operably configured to automatically change a rotor speed of the rotor system of the tiltrotor aircraft while moving 
+the rotor system from a first position and a first rotor speed to a second position and a second 
+ rotor speed over a time period in accordance with an acceleration-rate profile that varies over the time period.
+<br>
+
+<br>
+17.   The apparatus of claim 16, further comprising one or more control devices or one or more remote devices communicably coupled to the controller that operably configured to send or receive a signal to change the rotor system from the first rotor speed to the second rotor speed.
+<br>
+
+<br>
+18.   The apparatus of claim 17, wherein the one or more control devices comprise a collective governor or a throttle governor.
+<br>
+
+<br>
+19.   The apparatus of claim 16, wherein: 
+<br>
+the first position of the rotor system corresponds to a takeoff-and-landing mode or a hover mode, and the second position corresponds to a cruise mode; or 
+<br>
+the first position of the rotor system corresponds the cruise mode, and the second position of the rotor system corresponds to the takeoff-and-landing mode or the hover mode.
+<br>
+
+<br>
+20.    The apparatus of claim 16, wherein: 
+<br>
+the first position of the rotor system is generally parallel to a yaw axis of the tiltrotor 
+<br>
+aircraft, and the second position is generally parallel to a roll axis of the tiltrotor aircraft; or 
+<br>
+the first position of the rotor system is generally parallel to the roll axis of the tiltrotor aircraft, and the second position of the rotor system is generally parallel to the yaw axis of the tiltrotor aircraft. 
+
+<br>
+
+<br>
+21.    The apparatus of claim 16, wherein the controller determines the acceleration-rate profile based on one or more operational parameters comprising one or more of a rotor system performance parameter, an aircraft operational mode parameter, an aircraft characteristic parameter, or an environmental parameter.
+<br>
+
+<br>
+22.    The apparatus of claim 21, wherein the one or more operational parameters are based on one or more sensors communicably coupled to the controller, one or more flight controls communicably coupled to the controller, or one or more signals from one or more remote devices communicably coupled to the controller.
+<br>
+
+<br>
+23.    The apparatus of claim 16, wherein the acceleration-rate profile comprises a multi- segment linear profile, a curved profile, a stair-stepped profile, or a combination thereof.
+<br>
+
+<br>
+24.    The apparatus of claim 16, wherein the acceleration-rate profile comprises at least one curved segment and at least one linear segment.
+<br>
+
+<br>
+25.    The apparatus of claim  16, wherein the acceleration-rate profile comprises an increasing acceleration rate for a first portion of the time period, a constant acceleration rate for a second portion of the time period, and a decreasing acceleration rate for a third portion of the time period.
+<br>
+
+<br>
+26.    The apparatus of claim 16, wherein the controller changes the rotor speed over the time period according to a portion of the time period remaining in the time period or a difference between an actual rotor speed and a reference rotor speed.
+
+<br>
+
+<br>
+27.    The apparatus of claim 16, further comprising one or more sensors communicably coupled to the controller and the rotor system.
+<br>
+
+<br>
+28.    The apparatus of claim 16, wherein the controller implements the acceleration-rate profile using a control law based on a reference rotor speed and an actual rotor speed.
+<br>
+
+<br>
+29.    The apparatus of claim 28, wherein the control law comprises a variable acceleration command based on a portion of the time period remaining in the time period or a difference between the actual rotor speed and the reference rotor speed.
+
+<br>
+
+<br>
+30.    The apparatus of claim  16, wherein the controller is an analog device, a digital device, or a combination thereof.
+<br>
+
+<br>
+31.    The apparatus of claim  16, wherein the rotor speed is changed by changing a reference rotor speed.
+<br>
+
+<br>
+32.    A tiltrotor aircraft, comprising: 
+<br>
+a fuselage; 
+<br>
+one or more engines coupled to the fuselage; 
+<br>
+a rotor system coupled to the one or more engines; and 
+<br>
+a controller operably coupled to the rotor system  and operably configured to automatically change a rotor speed of the rotor system of the tiltrotor aircraft while moving the rotor system from a first position and a first rotor speed to a second position and a second rotor speed over a time period in accordance with an acceleration-rate profile that varies over the time period.
+
+<br>
+
+<br>
+33.    The tiltrotor aircraft of claim 32, further comprising one or more control devices or one or more remote devices communicably coupled to the controller that are operably configured to send or receive a signal to change the rotor system from the first rotor speed to the second rotor speed.
+
+<br>
+
+<br>
+34.    The tiltrotor aircraft of claim 33, wherein the one or more control devices comprise a collective governor or a throttle governor.
+<br>
+
+<br>
+35.    The tiltrotor aircraft of claim 32, wherein: 
+<br>
+the first position of the rotor system corresponds to a takeoff-and-landing mode or a hover mode, and the second position corresponds to a cruise mode; or 
+<br>
+the first position of the rotor system corresponds the cruise mode, and the second position of the rotor system corresponds to the takeoff-and-landing mode or the hover mode. 
+
+<br>
+
+<br>
+36.    The tiltrotor aircraft of claim 32, wherein: 
+<br>
+the first position of the rotor system is generally parallel to a yaw axis of the tiltrotor aircraft, and the second position is generally parallel to a roll axis of the tiltrotor aircraft; or 
+<br>
+the first position of the rotor system is generally parallel to the roll axis of the tiltrotor aircraft, and the second position of the rotor system is generally parallel to the yaw axis of 
+<br>
+the tiltrotor aircraft.
+<br>
+
+37.    The tiltrotor aircraft of claim 32, wherein the controller determines the acceleration- rate profile based on one or more operational parameters comprising one or more of a rotor 
+ system performance parameter, an aircraft operational mode parameter, an aircraft characteristic parameter, or an environmental parameter.
+<br>
+
+<br>
+38.    The tiltrotor aircraft of claim 37, wherein the one or more operational parameters are based on one or more sensors communicably coupled to the controller, one or more flight controls communicably coupled to the controller, or one or more signals from one or more remote devices communicably coupled to the controller.
+<br>
+
+<br>
+39.    The tiltrotor aircraft of claim 32, wherein the acceleration-rate profile comprises a multi-segment linear profile, a curved profile, a stair-stepped profile, or a combination thereof.
+<br>
+
+<br>
+40.    The tiltrotor aircraft of claim 32, wherein the acceleration-rate profile comprises at least one curved segment and at least one linear segment.
+
+<br>
+
+<br>
+41.    The tiltrotor aircraft of claim 32, wherein the acceleration-rate profile comprises an increasing acceleration rate for a first portion of the time period, a constant acceleration rate for a second portion of the time period, and a decreasing acceleration rate for a third portion of the time period.
+
+<br>
+
+<br>
+42.    The tiltrotor aircraft of claim 32, wherein the controller is an analog device, a digital device, or a combination thereof.
+<br>
+
+<br>
+43.    The tiltrotor aircraft of claim  32, further comprising one or more sensors communicably coupled to the controller and the rotor system.
+<br>
+
+<br>
+44.    The tiltrotor aircraft of claim 32, wherein the controller implements the acceleration- rate profile using a control law based on a reference rotor speed and an actual rotor speed.
+<br>
+
+<br>
+45.    The tiltrotor aircraft of claim 44, wherein the control law comprises a variable acceleration command based on a portion of the time period remaining in the time period or a difference between the actual rotor speed and the reference rotor speed.
+<br>
+
+<br>
+46.    The tiltrotor aircraft of claim 32, wherein the rotor speed is changed by changing a reference rotor speed.
+19
+20
+21
+22
+23
+24
+5
+10
+15
+20
+25
+30
+35
+</body></html>

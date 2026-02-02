@@ -1,0 +1,118 @@
+<html><head></head><body><h3>Date: 2024-06-19</h3>
+<p><u>Claim Listing:</u></p><br>
+<br>
+1-59. (Canceled)258<br>
+<br>
+<br>
+60. (Previously Presented) A system, comprising:<br>
+a plurality of sensors configured to monitor physiological signals from an individual that has undergone a medical procedure on an anatomical feature;<br>
+a physiological signal processing system configured to analyze the physiological signals and extract features from the physiological signals which are indicative of a function of the anatomical feature following the medical procedure on the anatomical feature; and<br>
+a feature analysis system configured to analyze the extracted features and predict a risk of the individual developing a post-procedural dysfunction of the anatomical feature as a result of the medical procedure on the anatomical feature.<br>
+<br>
+61. (Previously Presented) The system of claim 60, wherein the sensors comprise at least one of (i) sensor devices that are worn by the individual, and (ii) sensor patches that are coupled to the individual's skin.<br>
+<br>
+62. (Previously Presented) The system of claim 60, wherein the physiological signal processing system is configured to extract features from the physiological signals that are obtained over a target monitoring period following the medical procedure, wherein the target monitoring period is one of: (i) less than an hour, (ii) about an hour, (iii) multiple hours, (iv) about a day, (v) multiple days, (vi) about a week, and (viii) multiple weeks, and wherein the physiological signals are obtained and analyzed one of continuously and intermittently during the target monitoring period.<br>
+<br>
+63. (Withdrawn) The system of claim 60, wherein:<br>
+the medical procedure comprises a structural heart procedure;<br>
+the physiological signals comprise an electrocardiogram signal;<br>
+the physiological signal processing system is configured to analyze the electrocardiogram signal and extract a plurality of features indicative of intracardiac conduction over a plurality of cardiac cycles, wherein the plurality of extracted features comprise one or more of (i) waveform<br>
+<br>
+features comprising one or more of P-waves, T-waves, QRS-waves, U-waves, R-R intervals, PR timing intervals, QT timing intervals, QRS timing intervals, ST segments, and PR segments, and<br>
+(ii) morphological features of the waveform features; andthe morphological features of the waveform features comprise one or more of a waveform shape, a waveform contour, a waveform amplitude, a waveform width, a waveform phase, a waveform polarity, a notch, a local inversion, a ripple, an amplitude change, relative timing or polarity inversion thereof, a perturbation, a repetitive perturbation, a low amplitude, high frequency wavelet, and a wavelet that repeats along with essentially a same period as a parent waveform.<br>
+<br>
+64. (Withdrawn) The system of claim 63, wherein:<br>
+the physiological signals further comprise one or more secondary physiological signals comprising an electromyogram signal, a respiratory rhythm signal, blood pressure signal, blood pressure surrogate waveform signal, a heart movement signal, a body movement signal, a phonogram, and a cardiac output signal; and<br>
+the physiological signal processing system is configured to:time synchronize the electrocardiogram signal with the one or more secondary physiological signals;<br>
+organize the cardiac cycles of the electrocardiogram signal into self-similar groups based on the time synchronized signals; and<br>
+extract and compare the plurality of features of cardiac cycles within the same self-similar group.<br>
+<br>
+65. (Previously Presented) The system of claim 60, wherein the feature analysis system is configured to:<br>
+compute a trend line for at least one extracted feature of the plurality of extracted features based on time series data collected for the at least one extracted feature;<br>
+compare the computed trend line with known trend lines for the at least one extracted feature as determined from a cohort patient population;<br>
+risk stratify the computed trend line based on a result of comparing of the computed trend line with the known trend lines; and<br>
+<br>
+render and display at least one of the time series data and the computed trend line for the at least one extracted feature on a display system.<br>
+<br>
+66. (Previously Presented) The system of claim 65, wherein the feature analysis system is configured to:<br>
+risk stratify the computed trend line into one of a plurality of zones comprising a low-risk zone, an increasing risk zone, and a high-risk zone; and<br>
+generate an alert notification when an extracted feature is determined to enter into a high- risk zone.<br>
+<br>
+67. (Previously Presented) The system of claim 65, wherein the feature analysis system is configured to:<br>
+process time series data of at least one extracted feature of the plurality of extracted features using a neural network; and<br>
+classify a risk profile of the at least one extracted feature based on processing results of the time series data applied to the neural network.<br>
+<br>
+68. (Withdrawn) A system, comprising:<br>
+a plurality of sensors configured to monitor electrocardiogram signals of an individual that has undergone a structural heart procedure;<br>
+a signal processing system configured to extract features from the electrocardiogram signals which are indicative of intracardiac conduction over a plurality of cardiac cycles, wherein the extracted features comprise waveform features comprising one or more of P-waves, T-waves, QRS-waves, and U-waves; and<br>
+a feature analysis system configured to analyze the extracted features and predict a risk of the individual developing a heart dysfunction during a monitoring period subsequent to the structural heart procedure.<br>
+<br>
+69. (Withdrawn) The system of claim 68, wherein the feature analysis system is configured to:<br>
+compute a trend line for at least one extracted feature of the plurality of extracted features<br>
+<br>
+based on time series data collected for the at least one extracted feature;compare the computed trend line with known trend lines for the at least one extracted feature as determined from a cohort patient population;<br>
+risk stratify the computed trend line into one of a plurality of zones comprising a low-risk zone, an increasing risk zone, and a high-risk zone, based on a result of comparing of the computed trend line with the known trend lines; and<br>
+render and display at least one of the time series data and the computed trend line for the at least one extracted feature on a display system.<br>
+<br>
+70. (Withdrawn) The system of claim 68, wherein:<br>
+the signal processing system is configured to determine a PR-timing interval between P and R waves over the plurality of cardiac cycles; and<br>
+the feature analysis system is configured to:determine a trend of the PR-timing intervals over at least a portion of the monitoring period subsequent to the structural heart procedure; and<br>
+predict a risk of the individual developing a heart dysfunction during the monitoring period subsequent to the structural heart procedure in response to determining that the trend of the PR-timing interval indicates an increase in the PR- timing interval by more than a predetermined percentage subsequent to the structural heart procedure.<br>
+<br>
+71. (Withdrawn) The system of claim 68, wherein:<br>
+the signal processing system is configured to:determine a PR-timing interval between P and R waves over the plurality of cardiac cycles;<br>
+determine an R-R interval between successive cardiac cycles of the plurality of cardiac cycles; and<br>
+normalize the PR-timing intervals between successive cardiac cycles based on the determined R-R intervals between successive heartbeats to thereby generate a time series of normalized PR-timing intervals; and<br>
+the feature analysis system is configured to:<br>
+<br>
+determine a trend of the normalized PR-timing intervals over at least a portion of the monitoring period subsequent to the structural heart procedure; and predict a risk of the individual developing a heart dysfunction during the monitoring period subsequent to the structural heart procedure in response to determining that the trend of the normalized PR-timing intervals indicates an increase in the normalized PR-timing interval by more than a predetermined percentage subsequent to the structural heart procedure.<br>
+<br>
+72. (Withdrawn) The system of claim 68, wherein:<br>
+the signal processing system is configured to determine one or more intracardiac conduction events from microfeatures associated with one or more of the P-waves and QRS- waves; and<br>
+the feature analysis system is configured to determine a trend of the determined intracardiac conduction events over at least a portion of the monitoring period subsequent to the structural heart procedure.<br>
+<br>
+73. (Withdrawn) The system of claim 68, wherein:<br>
+the signal processing system is configured to determine a QS-timing interval over the plurality of cardiac cycles; and<br>
+the feature analysis system is configured to:determine a trend of the QS-timing intervals over at least a portion of the monitoring period subsequent to the structural heart procedure; and<br>
+predict a risk of the individual developing a heart dysfunction during the monitoring period subsequent to the structural heart procedure in response to determining that the trend of the QS-timing intervals indicates an increase in the QS-timing interval by more than a predetermined percentage subsequent to the structural heart procedure.<br>
+<br>
+74. (Withdrawn) The system of claim 68, wherein:<br>
+the signal processing system is configured to:determine a QS-timing interval between P and S waves over the plurality of<br>
+<br>
+<br>
+cardiac cycles;determine an R-R interval between successive cardiac cycles of the plurality of cardiac cycles; and<br>
+normalize the QS-timing intervals between successive cardiac cycles based on the determined R-R intervals between successive heartbeats to thereby generate a time series of normalized QS-timing intervals; and<br>
+the feature analysis system is configured to:determine a trend of the normalized QS-timing intervals over at least a portion of the monitoring period subsequent to the structural heart procedure; and predict a risk of the individual developing a heart dysfunction during the monitoring period subsequent to the structural heart procedure in response to determining that the trend of the normalized QS-timing intervals indicates an increase in the normalized QS-timing interval by more than a predetermined percentage subsequent to the structural heart procedure.<br>
+<br>
+75. (Withdrawn) The system of claim 68, wherein:<br>
+the sensors are configured to monitor one or more secondary physiological signals comprising an electromyogram signal, a respiratory rhythm signal, blood pressure signal, blood pressure surrogate waveform signal, a heart movement signal, a body movement signal, a phonogram, and a cardiac output signal; and<br>
+the physiological signal processing system is configured to:time synchronize the electrocardiogram signals with the one or more secondary physiological signals;<br>
+organize the cardiac cycles of the electrocardiogram signals into self-similar groups based on the time synchronized signals; and<br>
+compare the extracted features of cardiac cycles within the same self-similar group.<br>
+<br>
+76. (Withdrawn) A system, comprising:<br>
+a plurality of sensors configured to monitor electrocardiogram signals, respiratory rhythm signals, torso posture, and an activity level of an individual over a plurality of respiratory cycles<br>
+<br>
+of the individual during a monitoring period;a signal processing system configured to:<br>
+parse the monitoring period into one or more regions wherein the monitored activity level is determined to be below a threshold level;<br>
+determine groups of similarly classified cardiac cycles of the electrocardiogram signals which fall within the parsed regions, based on a time synchronization of each cardiac cycle within the respiratory cycles and the torso posture of the individual;<br>
+extract waveform features in each group of similarly classified cardiac cycles in each of the parsed regions;<br>
+determine a trend in changes of the extracted waveform feature of each group of similarly classified cardiac cycles;<br>
+compare the determined trends to known trends in changes of the extracted waveform feature for developing a heart dysfunction as determined from a cohort patient population; and<br>
+predict a risk level of the individual developing the heart dysfunction based on a result of comparing the determined trends to the known trends.<br>
+<br>
+77. (Withdrawn) The system of claim 76, wherein the signal processing system is configured to:<br>
+utilize a neural network to compare the determined trends to the known trends in changes of the extracted waveform features, wherein the neural network is trained using a training dataset of the extracted waveform features obtained from the cohort patient population; and<br>
+analyze processing results of the neural network to predict the risk level of the individual developing the heart dysfunction.<br>
+<br>
+78. (Withdrawn) The system of claim 76, wherein the heart dysfunction comprises one or more of arrhythmia, atrial fibrillation, a heart block, an atrioventricular (AV) node block, a first- degree AV block, a second-degree AV block, a type 2 second-degree AV block, a third-degree AV block, a right bundle branch block, a left bundle branch block, angina, myocardial infarction, cardiogenic shock, cardiac arrest, and respiratory arrest.<br>
+<br>
+<br>
+79. (Withdrawn) The system of claim 76, wherein:<br>
+the sensors are configured to monitor cardiac movement of the individual, wherein the cardiac movement comprises one or more of: a ventricular movement; an atrial movement; a left- heart contraction; a right-heart contraction; a left-heart expansion; a right-heart expansion; a valve closure; an aortic valve closure; a mitral valve closure; a tricuspid valve closure; and a pulmonic heart closure; and<br>
+the signal processing system is configured to:extract one or more features associated with said cardiac movement, wherein the extracted waveform features comprise P-waves;<br>
+determine event features comprising a P-wave onset event and a valve closure event;<br>
+combine the determined event features to generate time series event data for a P- wave to valve-closure delay; and<br>
+determine a trend of the P-wave to valve-closure delay time series event data.<br>
+
+</body></html>

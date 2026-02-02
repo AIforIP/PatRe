@@ -1,0 +1,19 @@
+Detailed Action
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance:
+Garvin et al (US 2013/109767 A1) generally discloses video game targeting system.
+Regarding representative claim 1 however, no identified prior art reference discloses or fairly suggests the claimed limitations, most notably:
+a candidate virtual character representing a virtual character to being aimed at by an aiming mark, and the aiming mark being for marking an aimed target of the master virtual character during shooting; displaying the aiming mark on a first virtual character of the at least two candidate virtual characters; and switching to display the aiming mark on a second virtual character of the at least two candidate virtual characters in response to a first switching operation on the aimed target; wherein the at least two candidate virtual characters comprise a third virtual character, and the method further comprises in response to a second switching operation on the aimed target, switching back to display the aiming mark on the first virtual character in lieu of the third virtual character
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to Steve Rowland whose telephone number is(469) 295-9129. The examiner can normally be reached M-Th 10-8.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Dmitry Suhol can be reached on (571) 272-4430. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/STEVE ROWLAND/Primary Examiner, Art Unit 3715
+Examiner’s Amendment
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.  The application has been amended as follows:
+In claim 18, please replace
+“display the aiming mark on the first virtual character;”
+with
+--display the aiming mark on the first virtual character.--

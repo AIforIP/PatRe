@@ -1,0 +1,7 @@
+<html><head></head><body><h3>Date: 2022-11-07</h3>
+
+<h1>ABSTRACT</h1>
+
+<p>Systems and aircraft are provided. An avionics system includes a storage device and one or more data processors. The storage device stores instructions for monitoring an actual performance of the aircraft. The one or more data processors are configured to execute the instructions to: determine a first measured value of a flight characteristic of the aircraft at a first position of the aircraft; execute at least one flight maneuver between the first position and a second position of the aircraft; generate a predicted energy change between the first position and the second position based on the at least one flight maneuver and an energy state model; determine a second measured value of the flight characteristic of the aircraft at the second position; and generate an adjustment to the energy state model based on the first measured value, the second measured value, and the predicted energy change.</p>
+15
+</body></html>

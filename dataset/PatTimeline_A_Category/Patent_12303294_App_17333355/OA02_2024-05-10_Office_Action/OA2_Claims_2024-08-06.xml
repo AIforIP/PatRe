@@ -1,0 +1,42 @@
+<html><head></head><body><h3>Date: 2024-08-06</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>The listing of claims provided below will replace all prior versions, and listings, of claims in the application.</p><br>
+<br>
+1. (Currently Amended) A monitor pad, including: a pad cover, a padding, a microphone and a transmission circuit,<br>
+wherein the microphone is positioned in the padding and is adapted to detect body information of a person proximate to the monitor pad, and the transmission circuit is adapted to transmit the body information to an external processing device,<br>
+further comprising: a power receiving coil and a rectifier circuit,<br>
+wherein the transmission circuit includes a wireless transmission device,<br>
+wherein, the power receiving coil is adapted to receive an external electromagnetic signal, the rectifier circuit is adapted to convert the external electromagnetic signal into a direct current for provision to the microphone and the wireless transmission device, and<br>
+wherein at least a part of the power receiving coil provides an antenna of the wireless transmission device <del>in a way</del><u>such that the power receiving coil generates power for the microphone and the wireless transmission device in response to an interrogation signal sent to the monitor pad by an external interrogator.</u><br>
+<br>
+2. (Original) The monitor pad according to claim 1, wherein the monitor pad is foldable, and the length of the monitor pad is less than or equal to 420 mm and the width of the monitor pad is less than or equal to 297 mm.<br>
+<br>
+3. (Original) The monitor pad according to claim 1, wherein the body information is selected from the group consisting of a person's heartbeat signal and a breathing vibration signal.<br>
+<br>
+<br>
+<br>
+4. (Original) The monitor pad according to claim 1, wherein a non-slip structure is provided on one side of the pad cover, the non-slip structure includes at least one non-slip strip, and the non-slip strip comprises silicone or rubber.<br>
+<br>
+5. (Previously Presented) The monitor pad according to claim 1, further comprising:<br>
+a packing line and a packing locking structure, so that when the monitor pad is packed up, the packing line is adapted to tighten the monitor pad towards a packing position, and the packing locking structure is adapted to lock the packing line at a tightening position.<br>
+<br>
+6. (Original) The monitor pad according to claim 1, wherein the transmission circuit includes a connector, wherein the microphone is connected to the connector, and the connector is adapted to connect with the processing device to send the body information to the processing device.<br>
+<br>
+7. (Previously Presented) The monitor pad according to claim 1, further comprising:<br>
+a battery, wherein, the microphone and the wireless transmission device are connected to the battery to receive power, and the microphone is connected to the wireless transmission device to transmit the body information to the processing device via the wireless transmission device.<br>
+<br>
+8. (Previously Presented) The monitor pad according to claim 7, wherein the battery is a rechargeable battery, the -direct current is supplied to the rechargeable battery to charge the battery.<br>
+<br>
+9. (canceled).<br>
+<br>
+10. (Original) A body status monitoring system, including:<br>
+<br>
+<br>
+the monitor pad according to claim 1;<br>
+an external processing device; and<br>
+a network server,<br>
+wherein the monitor pad is adapted to detect body information of a person and send the detected body information to an external processing device, and the external processing device is adapted to forward the body information to the network server to analyze the body information.<br>
+<br>
+11. (Previously Presented) The monitor pad according to claim 1, further comprising a convex portion provided in a middle area of a front surface of the monitor pad and adapted to match a curved contour of an user.
+</body></html>

@@ -1,0 +1,54 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Allowable Subject Matter
+The following is a statement of reasons for the indication of allowable subject matter:
+As per the Double patenting rejection: Applicant filed a Terminal Disclaimer over parent Patent No. US 11,072,434 ; dated 02/20/2025 and approved. Therefore, the rejection of claims 1-46 under non-statutory Double Patenting have been withdrawn.
+As per the prior art rejection:
+In regard to the amended independent claims 1, 16 & 32; FISHER et al., US 20160229547 A1, teaches METHOD AND APPARATUS FOR CONTROLLING A TURBOPROP ENGINE,  taken either individually or in combination with other prior art of record fails to teach or render obvious “A method of/ An apparatus for (controlling a rotor assembly of) / a tiltrotor aircraft comprising: automatically changing a rotor speed of the rotor assembly of the tiltrotor aircraft while moving the rotor assembly or a pylon thereof from a first rotor position and a first rotor speed to a second rotor position and a second rotor speed over a time period in accordance with an acceleration-rate profile that varies over the time period using a controller communicably coupled to the rotor assembly of the tiltrotor aircraft”; as inventive differences emphasized in claim 1 with common inventive steps of claim 16 & 32.
+Further prosecution of the amended claims revealed that some of the claim elements may not have been disclosed by any prior art as a whole. There are some prior art which provides “rotor speed/position control”, with addressing some of the claimed limitations, however, fail to teach or render obvious ALL claim elements, especially “automatically changing a rotor speed of the rotor assembly of the tiltrotor aircraft while moving the rotor assembly or a pylon from a first rotor position and a first rotor speed to a second rotor position and a second rotor speed over a time period” providing either alone or in combination with other prior art of record, neither thought nor suggested by any such combination; in regard to the independent claims 1, 16 & 32 limitations.
+Therefore; Applicant's arguments, see Applicant Arguments/Remarks pages 1-5, filed on 02/20/2025, with respect to claims 1-46 have been fully considered and are persuasive; the rejection of claims 1-46 under 35 U.S.C. U.S.C. § 103 have been withdrawn.
+Some of the closest prior art found on search which all are fail to disclose above limitations;
+FISHER; Edward Aaron et al., US 20160229547 A1, METHOD AND APPARATUS FOR CONTROLLING A TURBOPROP ENGINE;Remarks: Discloses a control system for a motor including a rotor comprises a sensorless sensor module that includes a saliency-based estimator module that generates a first rotor position signal based on saliency and a back electromotive force (emf) estimator module that generates a second rotor position signal based on back emf. A selector selects the first rotor position signal for rotor speeds below a first rotor speed and the second rotor position signal for rotor speeds above the first rotor speed. A rotor position sensor senses a position of the rotor and generates a third rotor position signal. However, fails to disclose the claim elements at step 1 above.
+Barnes; Greg W. et al., US 20070118254 A1, AUTOMATIC DUAL ROTOR SPEED CONTROL FOR HELICOPTERS;
+Remarks: Discloses a flight control system for a helicopter having a main rotor and a tail rotor includes an automatic dual rotor speed control which automatically transition between a high rotor speed and a lower rotor speed based upon received flight information. However, fails to disclose the claim elements at step 1 above.
+ELFEKY; Mahmoud Abdelmagid et al., US 20170217584 A1, SYSTEM AND METHOD OF OPERATION OF TWIN-TILTROTOR HELICOPTER;
+Remarks: Discloses an air vehicle system and a method for control of a twin-tiltrotor helicopter (TTH) lifted and propelled by two rotors mounted symmetrically with respect to the fuselage. The flight computer is configured to send control parameters to each of the two rotors, the control parameters including a rotational speed, a first tilt angle about a first axis of the two axes of the respective rotor, and a second tilt angle about a second axis of the two axes of the respective rotor. However, fails to disclose the claim elements at step 1 above.
+As a result, claims  1-46 are allowed;
+Claims 1, 16 & 32 are allowed independent claims.
+Claims 2-15 are allowed due to dependencies to the allowed claim 1.
+Claims 17-31 are allowed due to dependencies to the allowed claim 16.
+Claims 33-46 are allowed due to dependencies to the allowed claim 32.
+Invention Drawings:
+PNG
+media_image1.png
+452
+786
+media_image1.png
+Greyscale
+PNG
+media_image2.png
+588
+784
+media_image2.png
+Greyscale
+PNG
+media_image3.png
+572
+882
+media_image3.png
+Greyscale
+PNG
+media_image4.png
+630
+836
+media_image4.png
+Greyscale
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee. Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance”.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to Jalal C CODUROGLU whose telephone number is(408)918-7527. The examiner can normally be reached Monday -Friday 8-6 PT.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Hunter Lonsberry can be reached on 571-272-7298. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/Jalal C CODUROGLU/Examiner, Art Unit 3665
+/DONALD J WALLACE/Primary Examiner, Art Unit 3665

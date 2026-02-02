@@ -1,0 +1,61 @@
+<html><head></head><body><h3>Date: 2023-09-01</h3>
+
+<h1>CLAIMS</h1>
+<br>
+<br>
+1.    Aircraft solid state power controller for controlling the supply of electric power in an aircraft, the aircraft solid state power controller comprising:<br>
+a solid state power switching device for switching the electric power, the solid state power switching device comprising an input node, an output node and a control node;<br>
+a first bypass diode, wherein a first node of the first bypass diode is electrically connected to the input node of the solid state power switching device and wherein a second node of the first bypass diode is electrically connected to the control node of the solid state power switching device; and<br>
+a switchable bypass, wherein a first node of the switchable bypass is electrically connected to the input node of the solid state power switching device, and wherein a second node of the switchable bypass is electrically connected to the output node of the solid state power switching device,<br>
+wherein the switchable bypass comprises:a second bypass diode; and<br>
+a bypass switch,<br>
+wherein the second bypass diode and the bypass switch are serially electrically connected with each other so that an electric bypass current (Ibypass) flowing through the second bypass diode is switchable by switching the bypass switch on and off; and<br>
+wherein the aircraft solid state power controller further comprises a bypass controller, which is configured for switching the bypass switch on and off.<br>
+<br>
+<br>
+2.
+The aircraft solid state power controller according to     The aircraft solid state power controller according to <br>
+wherein the solid state power switching device is field-effect transistor, in particular a metal-oxide-semiconductor field-effect transistor,<br>
+wherein the first node of the first bypass diode is electrically connected to one of the source and the drain of the field-effect transistor, and the second node of the first bypass diode is electrically connected to the gate of the field-effect transistor; and<br>
+wherein the first node of the switchable bypass is electrically connected to one of the source and the drain of the field-effect transistor, and wherein a second node of the switchable bypass is electrically connected the other of the source and the drain of the field-effect transistor.<br>
+3.
+The aircraft solid state power controller according to claim 1, wherein the first and second bypass diodes are Zener diodes or TVS diodes, which are connected to be operated in their respective blocking directions, wherein the first bypass diode has in particular a first breakdown voltage (Ubreaki) in the range of 1000 V to 3000 V, and wherein the second bypass diode has in particular a second breakdown voltage (Ubreak2) in the range of 1500 V to 2000 V.<br>
+4.
+The aircraft solid state power controller according to claim 1, wherein the bypass switch is a semiconductor switch.<br>
+5.
+The aircraft solid state power controller according to claim 5, wherein the bypass switch is a FET, a MOSFET or an IGBT.<br>
+6.
+The aircraft solid state power controller according to claim 1, wherein the bypass controller is configured for driving the bypass switch time-controlled.<br>
+7.
+The aircraft solid state power controller according to claim 5, wherein the bypass controller is configured for switching the bypass switch off a predetermined period of time (AT) after the solid state power switching device has been switched off, wherein the predetermined period of time (AT) is in the range of between 100 ps and 10ms.<br>
+<br>
+<br>
+8.
+The aircraft solid state power controller according to claim 1, further comprising a voltage sensor for measuring a voltage (Ubypass) between the input node and the output node of the solid state power switching device or a voltage (Ubypass) between the two nodes of the second bypass diode, wherein the bypass controller is configured for driving the bypass switch based on the voltage (Ubypass) measured by the voltage sensor.<br>
+9.
+The aircraft solid state power controller according to claim 7, wherein the bypass controller is configured for switching off the bypass switch if the voltage (Ubypass) measured by the voltage sensor has dropped below a predefined threshold voltage (Uth) of 1500 V.<br>
+<br>
+10.   The aircraft solid state power controller according to claim 1, wherein the solid state power switching device and the second bypass diode are configured to withstand electric powers of at least 250 kW.<br>
+<br>
+11.   The aircraft solid state power controller according to claim 1, wherein the aircraft solid state power controller is a solid state power switching device, are configured for controlling electric voltages in the range of 1500 V to 3000 V.<br>
+<br>
+12.   The aircraft solid state power controller according to claim 1, wherein the solid state power switching device is for switching electric currents in the range of 1000 A to 2000 A.<br>
+<br>
+13.   The aircraft solid state power controller according to claim 1, wherein the solid state power switching device is configured for switching electric powers of at least 250 kW.<br>
+<br>
+14.   An aircraft electric power supply system comprising:<br>
+at least one electric power supply, which is configured for supplying electric power;<br>
+at least one electric load; and<br>
+at least one aircraft solid state power controller according to claim 1, which is 18<br>
+<br>
+configured for controlling the electric power that is supplied from the at least one electric power supply to the at least one electric load.<br>
+<br>
+15.   An aircraft comprising:<br>
+at least one aircraft solid state power controller according to claim 1.<br>
+<br>
+16.   A method of switching off an aircraft solid state power controller according to claim 1, wherein the method includes:<br>
+switching on the bypass switch for bypassing the solid state power switching device via the second bypass diode;<br>
+switching off the solid state power switching device;<br>
+switching off the bypass switch a predetermined amount of time (AT) after the solid state power switching device has been switched off;<br>
+or measuring the voltage (Ubypass) between the input node and the output node of the solid state power switching device or a voltage (Ubypass) between the two nodes of the second bypass diode and comparing the measured voltage (Ubypass) with a predefined threshold voltage (Uth); and switching off the bypass switch if the measured voltage (Ubypass) is below the predefined threshold voltage (Uth).
+</body></html>

@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2023-03-24</h3>
+<p>33590/59023</p>
+<h1>ABSTRACT</h1>
+<p>The present process of controlling an industrial robot includes steps consisting of calculating, in the modules implemented by the central unit, a time-dependent composite setpoint defining articular forces and velocities, according to a target trajectory and to an operating mode; calculating, in modules implemented by the central unit, a behavior matrix which describes a desired behavior of the robot arm, defining directions along which the calculated composite setpoint is to be applied; calculating, in a module implemented by the in auxiliary unit, an articular force setpoint for controlling the axis controller module; and calculating, in the axis controller module implemented by the auxiliary unit, the control setpoints for the power units according to the articular force setpoint.</p><p>29</p></body></html>

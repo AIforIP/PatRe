@@ -1,0 +1,172 @@
+<html><head></head><body><h3>Date: 2022-06-29</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1. A vehicle control method applied to a terminal control device in a vehicle, wherein the terminal control device is in communication connection to a human-machine interface device, the vehicle comprises a plurality of executive mechanisms, and the method comprises: 
+<br>
+when a start instruction for a target function is monitored, receiving current gesture data sent by the human-machine interface device; and 
+<br>
+when the current gesture data meets a preset condition, generating a target control instruction according to the current gesture data, and sending the target control instruction to a 
+<br>
+target executive mechanism  for the target executive mechanism to execute an operation corresponding to the current gesture data.
+<br>
+
+<br>
+2. The vehicle control method according to claim 1, wherein a recommended gesture corresponding to each sub-function is stored in the vehicle; and the step of, when the start instruction for the target function is monitored, receiving the current gesture data sent by the human-machine interface device, comprises: 
+<br>
+when the start instruction for the target function is monitored, sending the recommended gesture corresponding to each sub-function in the target function to the human-machine interface device for the human-machine interface device to display; and 
+<br>
+receiving the current gesture data sent by the human-machine interface device.
+<br>
+
+<br>
+3. The vehicle control method according to claim 1, wherein a recommended gesture corresponding to each sub-function is stored in the vehicle; and the current gesture data comprises a gesture parameter; and 
+<br>
+the step of, when the current gesture data meets the preset condition, generating the target control instruction according to the current gesture data, and sending the target control instruction to the target executive mechanism, comprises: 
+<br>
+reconstructing an actual gesture according to the current gesture data; 
+<br>
+acquiring the recommended gesture corresponding to each sub-function in the target 
+<br>
+function; and 
+<br>
+if a difference value between the actual gesture and the recommended gesture is within a first preset range, generating the target control instruction according to the recommended gesture, and sending the target control instruction to the target executive mechanism. 
+<br>
+
+<br>
+4. The vehicle control method according to claim 3, wherein the current gesture data further comprises a preliminary gesture, and the preliminary gesture is a gesture determined by the human-machine interface device based on the acquired gesture operation; and 
+<br>
+the step of, acquiring the recommended gesture corresponding to each sub-function in the 
+<br>
+target function, comprises: 
+<br>
+if a difference value between the preliminary gesture and the actual gesture is within a second preset range, acquiring the recommended gesture corresponding to each sub-function in the target function. 
+
+<br>
+
+<br>
+5. The vehicle control method according to claim 1, wherein a recommended gesture corresponding to each sub-function is stored in the vehicle; and when the recommended gesture corresponding to each sub-function in the target function is a periodic gesture, the step of, when the current gesture data meets the preset condition, generating the target control instruction according to the current gesture data, and sending the target control instruction to the target executive mechanism, comprises: 
+<br>
+determining expected gesture data according to the gesture data acquired last time and the recommended gesture corresponding to each sub-function in the target function; and 
+<br>
+if a difference value between the current gesture data and the expected gesture data is within a third preset range, generating the target control instruction according to the current gesture data, 
+<br>
+and sending the target control instruction to the target executive mechanism.
+<br>
+
+<br>
+6. The vehicle control method according to claim 1, wherein before the step of, when the start instruction for the target function is monitored, receiving the current gesture data sent by the human-machine interface device, the method further comprises: 
+<br>
+when receiving wake-up gesture data sent by the human-machine interface device, determining a recommended function according to the wake-up gesture data, and sending recommended information of the recommended function to the human-machine interface device for the human-machine interface device to display; and 
+<br>
+when a confirmation operation for the recommended information is monitored, determining 
+<br>
+that the recommended function is the target function, and generating the start instruction for the target function.
+<br>
+
+7. The vehicle control method according to claim 6, wherein a start gesture corresponding to each function is stored in the vehicle, and the recommended information comprises a target 
+ start gesture for the recommended function; and the step of, when the confirmation operation for the recommended information is monitored, determining that the recommended function is the target function, and generating the start instruction for the target function, comprises: 
+<br>
+when monitoring that a difference value between the actual gesture operation for the 
+<br>
+recommended information and the target start gesture is within a fourth preset range, determining that the recommended function is the target function, and generating the start instruction for the target function.
+<br>
+
+<br>
+8. The vehicle control method according to claim 1, wherein the current gesture data comprises a gesture position, a moving speed, a moving speed or a moving shape, wherein: 
+<br>
+the moving shape comprises a curved surface diameter and a curved surface center. 
+
+<br>
+
+<br>
+9. A vehicle control method applied to a human-machine interface device, wherein the human-machine interface device is in communication connection to a terminal control device in a vehicle, the vehicle comprises a plurality of executive mechanisms, and the method comprises: 
+<br>
+when a start instruction for a target function is monitored, monitoring a gesture operation; 
+<br>
+generating current gesture data according to the gesture operation; and 
+<br>
+sending the current gesture data to the terminal control device for the terminal control device to generate a target control instruction according to the current gesture data when the 
+<br>
+current gesture data meets a preset condition, and send the target control instruction to a target executive mechanism for the target executive mechanism to execute an operation corresponding to the current gesture data.
+<br>
+
+<br>
+10. The vehicle control method according to claim 9, wherein the step of, generating the current gesture data according to the gesture operation, comprises: 
+<br>
+determining a gesture parameter according to the gesture operation; 
+<br>
+determining a preliminary gesture according to the gesture parameter; and 
+<br>
+generating the current gesture data from the gesture parameter and the preliminary gesture. 
+
+<br>
+
+<br>
+11. A vehicle control apparatus applied to a terminal control device in a vehicle, wherein the terminal control device is in communication connection to a human-machine interface device, the vehicle comprises a plurality of executive mechanisms, and the apparatus comprises: 
+<br>
+a receiving module configured for, when a start instruction for a target function is monitored, receiving current gesture data sent by the human-machine interface device; and 
+
+ an instruction module configured for, when the current gesture data meets a preset condition, generating a target control instruction according to the current gesture data, and sending the target control instruction to a target executive mechanism for the target executive mechanism to execute an operation corresponding to the current gesture data.
+
+<br>
+
+<br>
+12. A vehicle control apparatus applied to a human-machine interface device, wherein the human-machine interface device is in communication connection to a terminal control device in a vehicle, the vehicle comprises a plurality of executive mechanisms, and the apparatus comprises: 
+<br>
+a monitoring module configured for, when a start instruction for a target function is monitored, monitoring a gesture operation; 
+<br>
+a data generating module configured for generating current gesture data according to the gesture operation; and 
+<br>
+a sending module configured for sending the current gesture data to the terminal control 
+<br>
+device for the terminal control device to generate a target control instruction according to the current gesture data when the current gesture data meets a preset condition, and send the target control instruction to a target executive mechanism for the target executive mechanism to execute an operation corresponding to the current gesture data.
+<br>
+
+<br>
+13. A vehicle control system comprising a human-machine interface device and a terminal control device of a vehicle, wherein: 
+<br>
+when a start instruction for a target function is monitored, the human-machine interface device monitors a gesture operation; 
+<br>
+the human-machine interface device generates current gesture data according to the gesture 
+<br>
+operation; 
+<br>
+the human-machine interface device sends the current gesture data to the terminal control device; 
+<br>
+the terminal control device receives the current gesture data sent by the human-machine interface device; and 
+<br>
+when the current gesture data meets a preset condition, the terminal control device generates a target control instruction according to the current gesture data, and sends the target control instruction to a target executive mechanism for the target executive mechanism to execute an operation corresponding to the current gesture data.
+<br>
+
+<br>
+14. A computing-processing device, comprising: 
+
+ a memory in which a computer-readable code is stored; and 
+<br>
+one or more processors, wherein when the computer-readable code is executed by the one or more processors, the computing-processing device executes the vehicle control method according to any one of claims 
+<br>
+1 to 8, or executes the vehicle control method according to claim 9 or 10.
+<br>
+
+<br>
+15. A   computer program    comprising  a  computer-readable  code, wherein the computer-readable code, when being executed on a computing-processing device, causes the computing-processing device to execute the vehicle control method according to any one of claims 1 to 8, or execute the vehicle control method according to claim 9 or 10.
+<br>
+
+<br>
+16. A computer-readable medium, wherein the computer-readable medium stores the computer program according to claim 15.
+28
+29
+30
+31
+32
+5
+5
+10
+15
+15
+20
+25
+30
+</body></html>

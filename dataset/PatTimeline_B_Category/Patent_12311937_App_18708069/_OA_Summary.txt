@@ -1,0 +1,10 @@
+Total Office Actions: 3
+Application Number: 18708069
+Patent Number: 12311937
+
+OA Timeline:
+  OA1: 2024-09-17 - Office_Action
+  OA2: 2025-01-30 - Office_Action
+  OA3: 2025-04-01 - Office_Action
+
+Final Status: Office_Action

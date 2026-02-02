@@ -1,0 +1,167 @@
+<html><head></head><body><h3>Date: 2021-09-10</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1.    A method comprising: 
+<br>
+estimating a multi-dimensional representation of physiological characteristics in tissue using physiological characteristics computed from measurements of a plurality of channels of an optical sensor; 
+<br>
+processing the multi-dimensional representation; 
+<br>
+in accordance with a determination that the multi-dimensional representation includes a region that meets one or more criteria indicative of a spatially localized measurement inconsistency: 
+<br>
+computing an estimated physiological characteristic from the multi- dimensional representation excluding the region. 
+
+<br>
+
+2.
+The method of claim 1, further comprising: 
+<br>
+in accordance with a determination that the multi-dimensional representation does not include the region that meets the one or more criteria: 
+<br>
+computing the estimated physiological characteristic from the multi- dimensional representation. 
+
+<br>
+
+3.
+The method of claim 1, wherein estimating the multi-dimensional representation comprises: 
+<br>
+estimating a physiological characteristic value for each voxel in a three- dimensional (3D) representation based on relative contributions of the physiological characteristics from the plurality of channels of the optical sensor in accordance with expected distributions based on photon interactions within the tissue for the plurality of channels. 
+
+<br>
+
+4.
+The method of claim 3, wherein the relative contributions of the physiological characteristics from the plurality of channels are weighted in accordance with quality metrics of the plurality of channels, and wherein the relative contributions of the physiological characteristics from the plurality of channels are estimated to constrain  
+ differences in the physiological characteristics between proximate voxels in the 3D representation.
+<br>
+
+5.
+The method of claim 1, wherein processing the multi-dimensional representation comprises: 
+<br>
+thresholding a 3D representation to generate a binary 3D representation; 
+<br>
+extracting features of the binary 3D representation; and 
+<br>
+classifying whether the 3D representation includes the region that meets the one or more criteria using the extracted features. 
+
+<br>
+
+6.
+The method of claim 5, wherein the features of the binary representation include geometric features.
+<br>
+
+7.
+The method of claim 6, wherein the geometric features include a compactness feature, a contiguity feature, a convexity feature or a depth feature.
+<br>
+
+8.
+An electronic device comprising: 
+<br>
+an optical sensor including a plurality of channels; and 
+<br>
+a processor coupled to the optical sensor programmed to: 
+<br>
+estimate a multi-dimensional representation of physiological characteristics in tissue using physiological characteristics computed from measurements of a plurality of channels of an optical sensor; 
+<br>
+process the multi-dimensional representation; 
+<br>
+in accordance with a determination that the multi-dimensional representation includes a region that meets one or more criteria indicative of a spatially localized measurement inconsistency: 
+<br>
+compute an estimated physiological characteristic from the multi- dimensional representation excluding the region. 
+<br>
+
+9.
+The electronic device of claim 8, the processor further programmed to: 
+<br>
+in accordance with a determination that the multi-dimensional representation does not include the region that meets the one or more criteria: 
+<br>
+compute the estimated physiological characteristic from the multi- dimensional representation. 
+
+<br>
+
+<br>
+10.    The electronic device of claim 8, wherein estimating the multi-dimensional representation comprises: 
+<br>
+estimating a physiological characteristic value for each voxel in a three- dimensional (3D) representation based on relative contributions of the physiological characteristics from the plurality of channels of the optical sensor in accordance with expected distributions based on photon interactions within the tissue for the plurality of channels. 
+
+<br>
+
+<br>
+11.    The electronic device of claim 10, wherein the relative contributions of the physiological characteristics from the plurality of channels are weighted in accordance with quality metrics of the plurality of channels, and wherein the relative contributions of the physiological characteristics from the plurality of channels are estimated to constrain differences in the physiological characteristics between proximate voxels in the 3D representation.
+<br>
+
+<br>
+12.    The electronic device of claim 8, wherein processing the multi-dimensional representation comprises: 
+<br>
+thresholding a 3D representation to generate a binary 3D representation; 
+<br>
+extracting features of the binary 3D representation; and 
+<br>
+classifying whether the 3D representation includes the region that meets the one or more criteria using the extracted features. 
+
+<br>
+
+<br>
+13.    The electronic device of claim 12, wherein the features of the binary representation include geometric features.
+<br>
+
+<br>
+14.   The electronic device of claim 13, wherein the geometric features include a compactness feature, a contiguity feature, a convexity feature or a depth feature.
+<br>
+
+<br>
+15.   A non-transitory computer readable storage medium storing instructions, which when executed by an electronic device including an optical sensor including a plurality of channels and processing circuitry, cause the processing circuitry to: 
+<br>
+estimate a multi-dimensional representation of physiological characteristics in tissue using physiological characteristics computed from measurements of a plurality of channels of an optical sensor; 
+<br>
+process the multi-dimensional representation; 
+<br>
+in accordance with a determination that the multi-dimensional representation includes a region that meets one or more criteria indicative of a spatially localized measurement inconsistency: 
+<br>
+compute an estimated physiological characteristic from the multi- dimensional representation excluding the region. 
+
+<br>
+
+<br>
+16.   The non-transitory computer readable storage medium of claim 15, the processor further programmed to: 
+<br>
+in accordance with a determination that the multi-dimensional representation does not include the region that meets the one or more criteria: 
+<br>
+compute the estimated physiological characteristic from the multi- dimensional representation. 
+
+<br>
+
+<br>
+17.   The non-transitory computer readable storage medium of claim 15, wherein estimating the multi-dimensional representation comprises: 
+<br>
+estimating a physiological characteristic value for each voxel in a three- dimensional (3D) representation based on relative contributions of the physiological characteristics from the plurality of channels of the optical sensor in accordance with expected distributions based on photon interactions within the tissue for the plurality of channels. 
+<br>
+
+<br>
+18.    The non-transitory computer readable storage medium of claim 17, wherein the relative contributions of the physiological characteristics from the plurality of channels are weighted in accordance with quality metrics of the plurality of channels, and 
+<br>
+wherein the relative contributions of the physiological characteristics from the plurality of channels are estimated to constrain differences in the physiological characteristics between proximate voxels in the 3D representation. 
+
+<br>
+
+<br>
+19.    The non-transitory computer readable storage medium of claim 15, wherein processing the multi-dimensional representation comprises: 
+<br>
+thresholding a 3D representation to generate a binary 3D representation; 
+<br>
+extracting features of the binary 3D representation; and 
+<br>
+classifying whether the 3D representation includes the region that meets the one or more criteria using the extracted features. 
+
+<br>
+
+<br>
+20.    The non-transitory computer readable storage medium of claim 19, wherein the features of the binary representation include geometric features.
+47
+48
+49
+50
+51
+4846-9455-0766, v. 1
+</body></html>

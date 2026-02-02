@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2020-09-18</h3>
+
+<h1>ABSTRACT</h1>
+<p>Systems and methods for collision avoidance using object models are provided. In one aspect, a robotic medical system, includes a platform, one or more robotic arms coupled to the platform, a console configured to receive input commanding motion of the one or more robotic arms, a processor, and at least one computer-readable memory in communication with the processor. The processor is configured to control movement of the one or more robotic arms in a workspace based on the input received by the console, receive an indication of one or more objects are within reach of the one or more robotic arms, and update the model to include a representation of the one or more objects in the workspace.</p><p>-49-</p></body></html>

@@ -1,0 +1,139 @@
+<html><head></head><body><h3>Date: 2025-01-21</h3>
+
+<h1><u>CLAIMS</u></h1>
+<p><u>Claim Listin</u><u>g</u><u> Summary</u></p>
+<h1>Claims pending</h1>
+<p>* Before this Response: Claims 1-26* After this Response: Claims 1-7, 9-20, and 22-26 Non-Elected, Canceled, or Withdrawn claims: 8 and 21 Amended claims: 1-2, 5, 9-13, 16, 19, 22-23, and 25 New claims: None</p>
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.    (Currently Amended) A method for <del>a</del><del>ssis</del><del>ting</del><u>imaging a region of interest of a patient</u>for-a medical procedure <u>performed thereon</u><del>on a patient</del>, wherein the method comprises, under the control of a computing device :<br>
+acquiring, by the computing device, a luminescence image of a field of view containing [[a]]the region of interes<del>t for the medical procedure of the patient</del>, the region of interest comprising at least one target body of the medical procedure containing a luminescence substance, and one or more foreign objects different from the region of interest, the luminescence image comprising a plurality of luminescence values representative of a luminescence light being emitted by the luminescence substance at corresponding luminescence locations of the field of view,<br>
+acquiring, by the computing device, an auxiliary image of the field of view, the auxiliary image comprising a plurality of auxiliary values representative of an auxiliary light, different from the luminescence light, being received from corresponding auxiliary locations of the field of view,<br>
+<del>identifying</del>segmenting, by the computing device, <u>the auxiliary values of the auxiliary image semantically into at least one region of interest class defining </u>an auxiliary informative region <del>of the auxiliary image r</del>epresentative of the region of interest without the foreign objects<del> according to a content of the auxiliary image </del><u>and one or more foreign object classes defining a non-informative region representative of the foreign objects,</u> identifying, by the computing device, <u>the luminescence values of the luminescence image defining </u>a luminescence informative region <del>of the luminescence image </del>corresponding<br>
+<br>
+<br>
+<br>
+to the auxiliary values of the auxiliary informative region of the auxiliary image, generating, by the computing device, a processed luminescence image by processing the luminescence image limited to the luminescence informative region, the processing of the processed luminescence image comprising a plurality of processed luminescence values being based on the luminescence values of the luminescence informative region, wherein the processed luminescence image provides for facilitating an identification of a further representation of the target body thereinfacilitating an identification thereof, and<br>
+outputting, by the computing device, an output image based on the processed luminescence image.<br>
+<br>
+2.    (Currently Amended) The method according to claim 1, wherein <del>the method is for assisting </del><u>the medical procedure is </u>a surgical procedure<del> on the patient</del>, said outputting the output image comprising:<br>
+displaying, by the computing device, the output image substantially in real-time with said acquiring the luminescence image.<br>
+<br>
+3.    (Previously Presented) The method according to claim 2, wherein the region of interest is a surgical cavity of the patient.<br>
+<br>
+4.    (Previously Presented) The method according to claim 1, wherein at least part of the foreign objects overlaps the region of interest.<br>
+<br>
+5.    (Currently Amended) The method according to claim 1, wherein the foreign objects comprise one or more medical <del>instruments</del>implements, one or more hands, <del>one or more medical tools, </del>one or more body-parts of the patient not of interest for the medical procedure and/or background materials.<br>
+<br>
+6.    (Previously Presented) The method according to claim 1, wherein the auxiliary image is a reflectance image, the auxiliary light is a visible light and the auxiliary values are representative of the visible light being reflected by the corresponding auxiliary locations of the field of view illuminated by a white light.<br>
+<br>
+7.    (Previously Presented) The method according to claim 1, wherein the luminescence substance is a luminescence agent being pre-administered to the patient before performing the<br>
+<br>
+<br>
+<br>
+<br>
+method.<br>
+<br>
+8.    Cancelled.<br>
+<br>
+9.    (Currently Amended) The method according to claim g1, wherein said segmenting the<u> auxiliary values of </u>the auxiliary image comprises:<br>
+segmenting, by the computing device, <u>the auxiliary values of </u>the auxiliary image semantically with a neural network.<br>
+<br>
+10.   (Currently Amended The method according to claim <u>8</u><u>L</u> wherein said segmenting the<u> auxiliary values of </u>the auxiliary image <del>(205R) </del>comprises:<br>
+determining, by the computing device, one or more feature maps for corresponding features of <u>the auxiliary values of </u>the auxiliary image, each of the feature maps comprising corresponding feature values of the auxiliary locations, and<br>
+segmenting, by the computing device, <u>the auxiliary values of </u>the auxiliary image semantically by applying a classification algorithm to the feature values of the feature maps.<br>
+<br>
+11.   (Currently Amended) The method according to claim 1, wherein said <del>identifying the auxiliary informative region</del><u>segmentin</u><u>g</u><u> the auxiliary values of the auxiliary image </u>comprises, when the auxiliary image comprises one or more disconnected portions completely surrounded by the auxiliary informative region:<br>
+assigning, by the computing device, the disconnected portions to the auxiliary informative region.<br>
+<br>
+12.   (Currently Amended) The method according to claim 1, wherein the method comprises:<br>
+pre-processing, by the computing device, the auxiliary image before said <del>identifying the auxiliary informative region</del><u>se</u><u>g</u><u>menting the auxiliary values of the auxiliary image </u>by applying a histogram equalization to <u>the auxiliary values of </u>the auxiliary image in response to a brightness indicator of the auxiliary image being comprised between a darkness threshold, indicative of a feasibility of said <del>identifying the auxiliary informative region</del><u>segmentin</u><u>g</u><u> the auxiliary values of the auxiliary image,</u> and a brightness threshold, higher than the darkness threshold.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+13.   (Currently Amended) The method according to claim 1, wherein said <del>identifying the auxiliary informative region</del><u>segmentin</u><u>g</u><u> the auxiliary values of the auxiliary image </u>comprises:<br>
+identifying, by the computing device, the auxiliary informative region further according to a<del> content</del><u>the luminescence values </u>of the luminescence image.<br>
+<br>
+14.   (Previously Presented) The method according to claim 1, wherein said generating the processed luminescence image comprises:<br>
+auto-scaling, by the computing device, the luminescence informative region according to the luminescence values of the luminescence informative region.<br>
+<br>
+15.   (Previously Presented) The method according to claim 14, wherein said auto-scaling the luminescence informative region comprises:<br>
+determining, by the computing device, a luminescence range of the luminescence values of the luminescence informative region, and<br>
+converting, by the computing device, the luminescence values of the luminescence informative region according to a mapping function mapping the luminescence range to a display range for displaying the luminescence image.<br>
+<br>
+16.   (Currently Amended) The method according to <u>claim </u><u>1</u><u>:</u><del>claim 1,</del> wherein said generating the processed luminescence image comprises:thresholding, by the computing device, the luminescence informative region according to the luminescence values of the luminescence informative region thereby partitioning the luminescence informative region into a target segment representative of the target body and a non-target segment representative of a rest of the region of interest different from the target body, and wherein said outputting the output image comprises:<br>
+outputting, by the computing device, the output image by highlighting the target segment with respect to the non-target segment.<br>
+<br>
+17.   (Previously Presented) The method according to claim 16, wherein said thresholding the luminescence informative region comprises:<br>
+determining, by the computing device, a threshold value according to a statistical distribution of the luminescence values of the luminescence informative, and<br>
+assigning, by the computing device, each of the luminescence locations of the luminescence<br>
+<br>
+<br>
+<br>
+informative region to the target segment or to the non-target segment according to a comparison of the corresponding luminescence value with the threshold value.<br>
+<br>
+18.   (Previously Presented) The method according to claim 16, wherein said thresholding the luminescence informative region comprises:<br>
+calculating, by the computing device, one or more target statistical parameters of the luminescence values of the target segment and/or one or more non-target statistical parameters of the luminescence values of the non-target segment, and<br>
+updating, by the computing device, the luminescence values of the target segment each according to the target statistical parameters and/or the non-target statistical parameters.<br>
+<br>
+19.   (Currently Amended) The method according to <del>claim </del><del>1</del><del>,</del><u>claim 1</u><u>:</u><br>
+wherein the method comprises:determining, by the computing device, corresponding optical values, of at least one optical parameter relating to the luminescence light, for the auxiliary locations of the auxiliary image limited to the auxiliary informative region according to a content thereof, and<br>
+wherein said generating the processed luminescence image comprises:equalizing, by the computing device, the luminescence values of the luminescence informative region according to the optical values.<br>
+<br>
+20.    (Previously Presented) The method according to claim 1, wherein the luminescence substance is a fluorescence substance, the luminescence image being a fluorescence image and the luminescence values being representative of a fluorescence light emitted by the fluorescence substance at the corresponding luminescence locations illuminated by an excitation light thereof.<br>
+<br>
+21.    Cancelled.<br>
+<br>
+22.    (Currently Amended) A computer program product comprising one or more <u>non- transitory </u>computer readable storage media having program instructions collectively stored on the readable storage media, the program instructions readable by a computing device to cause the computing device to perform <del>the</del>a method <del>of claim </del><del>i</del><u>for ima</u><u>ging</u><u> a region of interest</u><br>
+<br>
+<br>
+<br>
+<br>
+of a patient for a medical procedure performed thereon, wherein the method comprises:<br>
+<u>acq</u><u>uirin</u><u>g</u><u> a luminescence ima</u><u>g</u><u>e of a field of view containin</u><u>g</u><u> the re</u><u>g</u><u>ion of interest, the re</u><u>g</u><u>ion of interest comprisin</u><u>g</u><u> at least one tar</u><u>g</u><u>et body of the medical procedure containin</u><u>g a</u><u> luminescence substance, and one or more forei</u><u>g</u><u>n objects different from the re</u><u>g</u><u>ion of interest, the luminescence ima</u><u>g</u><u>e comprisin</u><u>g</u><u> a plurality of luminescence values representative of a luminescence li</u><u>g</u><u>ht bein</u><u>g</u><u> emitted by the luminescence substance at correspondin</u><u>g</u><u> luminescence locations of the field of view,</u><br>
+<u>acq</u><u>uirin</u><u>g</u><u> an auxiliary ima</u><u>g</u><u>e of the field of view, the auxiliary ima</u><u>g</u><u>e comprisin</u><u>g</u><u> a plurality of auxiliary values representative of an auxiliary li</u><u>g</u><u>ht, different from the luminescence li</u><u>g</u><u>ht, bein</u><u>g</u><u> received from correspondin</u><u>g</u><u> auxiliary locations of the field </u><u>of view,</u><br>
+<u>seg</u><u>mentin</u><u>g</u><u> the auxiliary values of the auxiliary ima</u><u>g</u><u>e semantically into at least one re</u><u>g</u><u>ion of interest class definin</u><u>g</u><u> an auxiliary informative re</u><u>g</u><u>ion representative of the re</u><u>g</u><u>ion of interest without the forei</u><u>g</u><u>n objects and one or more forei</u><u>g</u><u>n object classes definin</u><u>g a</u><u> non-informative re</u><u>g</u><u>ion representative of the forei</u><u>g</u><u>n objects,</u><br>
+<u>identifyin</u><u>g</u><u> the luminescence values of the luminescence ima</u><u>g</u><u>e definin</u><u>g</u><u> a luminescence informative re</u><u>g</u><u>ion correspondin</u><u>g</u><u> to the auxiliary values of the auxiliary informative </u><u>reg</u><u>ion of the auxiliary ima</u><u>ge,</u><br>
+<u>g</u><u>eneratin</u><u>g</u><u> a processed luminescence ima</u><u>g</u><u>e by processin</u><u>g</u><u> the luminescence ima</u><u>g</u><u>e limited to the luminescence informative re</u><u>g</u><u>ion, the processed luminescence ima</u><u>g</u><u>e comprisin</u><u>g a</u><u> plurality of processed luminescence values bein</u><u>g</u><u> based on the luminescence values of the luminescence informative re</u><u>g</u><u>ion, wherein the processed luminescence ima</u><u>ge</u><u> provides a further representation of the tar</u><u>g</u><u>et body facilitatin</u><u>g</u><u> an identification thereof, and</u><br>
+<u>outputtin</u><u>g</u><u> an output ima</u><u>g</u><u>e based on the processed luminescence ima</u><u>ge.</u><br>
+<br>
+23.   (Currently Amended) A computing device <u>for ima</u><u>ging</u><u> a re</u><u>g</u><u>ion of interest of a patient for a medical procedure performed thereon, wherein the computin</u><u>g</u><u> device </u>comprises<del>ing means configured for performing the </del><del>s</del><del>tep</del><del>s</del><del> of the method according to </del><del>claim 1</del>:<br>
+<u>a luminescence drive for ac</u><u>q</u><u>uirin</u><u>g</u><u> a luminescence ima</u><u>g</u><u>e of a field of view containin</u><u>g</u><u> the </u><u>reg</u><u>ion of interest, the re</u><u>g</u><u>ion of interest comprisin</u><u>g</u><u> at least one tar</u><u>g</u><u>et body of the medical procedure containin</u><u>g</u><u> a luminescence substance, and one or more forei</u><u>gn</u><br>
+<br>
+<br>
+<br>
+<u>objects different from the region of interest, the luminescence image comprising a plurality of luminescence values representative of a luminescence light being emitted by the luminescence substance at corresponding luminescence locations of the field of view</u><u>,</u><br>
+<u>an auxiliary drive for acquiring an auxiliary image of the field of view, the auxiliary image comprising a plurality of auxiliary values representative of an auxiliary li</u><u>g</u><u>ht, different from the luminescence light, being received from corresponding auxiliary locations of the field of view,</u><br>
+<u>a se</u><u>g</u><u>menter for se</u><u>g</u><u>mentin</u><u>g</u><u> the auxiliary values of the auxiliary image semantically into at least one region of interest class defining an auxiliary informative region representative of the region of interest without the foreign ob</u><u>j</u><u>ects and one or more forei</u><u>g</u><u>n ob</u><u>j</u><u>ect classes defining a non-informative re</u><u>g</u><u>ion representative of the forei</u><u>gn</u><u> objects,</u><br>
+<u>an adapter for identifyin</u><u>g</u><u> the luminescence values of the luminescence ima</u><u>g</u><u>e definin</u><u>g a</u><u> luminescence informative re</u><u>g</u><u>ion correspondin</u><u>g</u><u> to the auxiliary values of the auxiliary informative re</u><u>g</u><u>ion of the auxiliary ima</u><u>ge,</u><br>
+<u>a processor for </u><u>g</u><u>eneratin</u><u>g</u><u> a processed luminescence ima</u><u>g</u><u>e by processin</u><u>g</u><u> the luminescence ima</u><u>g</u><u>e limited to the luminescence informative re</u><u>g</u><u>ion, the processed luminescence ima</u><u>g</u><u>e comprisin</u><u>g</u><u> a plurality of processed luminescence values bein</u><u>g</u><u> based on the luminescence values of the luminescence informative re</u><u>g</u><u>ion, wherein the processed luminescence ima</u><u>g</u><u>e provides a further representation of the tar</u><u>g</u><u>et body facilitatin</u><u>g</u><u> an identification thereof, and</u><br>
+<u>an output drive for outputtin</u><u>g</u><u> an output ima</u><u>g</u><u>e based on the processed luminescence ima</u><u>ge.</u><br>
+<br>
+24.   (Previously Presented) An imaging system comprising:<br>
+the computing device ofthe computing device of<br>
+an illumination unit for applying an excitation light adapted to exciting the luminescence substance to the field of view, and<br>
+an acquisition unit for acquiring the luminescence image and the auxiliary image.<br>
+<br>
+25.   (Currently Amended) A medical procedure<u> for performin</u><u>g</u><u></u>on a <u>patient, the medical procedure </u>comprising:<br>
+<del>imaging a field of vie</del><del>w</del><del> containing a region of interest for the medical procedure of the</del><br>
+<br>
+<br>
+<br>
+<del>patient, the region of interest comprising at least one target body of the medical procedure containing a luminescence substance, and one or more foreign objects different from the region of interest according to the method of </del><del>claim 1 to </del><del>output the output image, and</del><br>
+<u>acq</u><u>uiring, by a computing device, a luminescence image of a field of view containing the region of interest, the region of interest comprisin</u><u>g</u><u> at least one target body of the medical procedure containing a luminescence substance, and one or more foreign objects different from the region of interest, the luminescence image comprising a plurality of luminescence values representative of a luminescence light being emitted by the luminescence substance at corresponding luminescence locations of the field of view</u><u>,</u><br>
+<u>acq</u><u>uirin</u><u>g,</u><u> by the computing device, an auxiliary image of the field of view</u><u>,</u><u> the auxiliary image comprising a plurality of auxiliary values representative of an auxiliary light, different from the luminescence light, being received from corresponding auxiliary locations of the field of view,</u><br>
+<u>seg</u><u>mentin</u><u>g</u><u>, by the computing device, the auxiliary values of the auxiliary image semantically into at least one region of interest class defining an auxiliary informative region representative of the region of interest without the foreign objects and one or more foreign object classes defining a non-informative region representative of the forei</u><u>g</u><u>n objects</u><u>,</u><br>
+<u>identifyin</u><u>g</u><u>, by the computing device, the luminescence values of the luminescence image defining a luminescence informative region corresponding to the auxiliary values of the auxiliary informative region of the auxiliary image,</u><br>
+<u>g</u><u>eneratin</u><u>g</u><u>, by the computing device, a processed luminescence image by processing the luminescence image limited to the luminescence informative region, the processed luminescence image comprising a plurality of processed luminescence values bein</u><u>g</u><u> based on the luminescence values of the luminescence informative region, wherein the processed luminescence image provides a further representation of the target body facilitating an identification thereof, outputting, by the computing device, an output image based on the processed luminescence image, and</u><br>
+performing the medical procedure with an assistance of the output image.<br>
+<br>
+<br>
+<br>
+Atty/Agent: Bryan A. Santarelli<br>
+<br>
+26.    (Original) The medical procedure according to claim 25, wherein the medical procedure comprises:<br>
+administering a luminescence agent containing the luminescence substance to the patient.
+</body></html>

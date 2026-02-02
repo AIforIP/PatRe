@@ -1,0 +1,87 @@
+<html><head></head><body><h3>Date: 2022-05-27</h3>
+<h1>REMARKS</h1>
+
+<p>This communication is responsive to the Office Action dated March 28, 2022. Applicant has not amended the claims. Claims 1-31 remain pending.</p>
+
+<h1><u>Claim Re</u><u>i</u><u>ection Under 35 U.S.C. 101</u></h1>
+
+<p>The Office Action rejected claims 1-31 under 35 U.S.C. § 101 based on an assertion that these claims are directed to non-statutory subject matter.</p>
+<p>The Subject Matter Eligibility Analysis</p>
+<p>To evaluate whether a claim is patentable under 35 U.S.C. § 101, the Office should evaluate the claim under the Subject Matter Eligibility (SME) analysis.1 Under step 1 of the SME analysis, the Office should determine whether the claim is directed to one of the four categories of patentable subject matter - process, machine, manufacture, and composition of matter.2 If the claim is directed to one of the four categories, the SME analysis proceeds to step 2A.3 Under step 2A of the subject matter of the SME analysis, the Office should determine whether the claim is directed to a law of nature, a natural phenomenon, or an abstract idea.4 When the claim is not directed to a law of nature, a natural phenomenon, or an abstract idea, the claim is eligible subject matter under 35 U.S.C. § 101. If the Office determines that a claim is directed to a law of nature, a natural phenomenon, or an abstract idea, the SME analysis advances to step 2B.5 Under step 2B, the Office must determine whether the claim recites additional elements that amount to significantly more than the judicial exception.6 When the claim recites additional elements that amount to significantly more than the judicial exception, the claim is eligible subject matter under 35 U.S.C. § 101, even when the claim is directed to an abstract idea.7</p>
+
+<h1>1 MPEP 2106 III.</h1>
+<h1>2 MPEP 2106 III.</h1>
+<h1>3 MPEP 2106 III.</h1>
+<h1>4 MPEP 2106 III.</h1>
+
+<p>s MPEP 2106 III.</p>
+
+<h1>6 MPEP 2106 III.</h1>
+<h1>2 MPEP 2106 III.</h1>
+ <p>Step 1 of the SME Analysis</p>
+<p>The Office acknowledged that the independent claims 1, 13, and 23 are directed towards "a system and method for identifying premature ventricular contraction (PVC) based on slope intervals and correlation values between a current ventricular depolarization, a preceding adjacent ventricular depolarization, and a subsequent adjacent ventricular depolarization meeting predefined slope or correlation criteria; determining a PVC detection quantification; and communication circuitry that transmits PVC detection quantification data to a user computing device."' Consequently, the SME analysis proceeds to Step 2A.</p>
+<p>Step 2A of the SME Analysis</p>
+<p>The Office must apply a two-pronged analysis for determining whether a claim is patentable under step 2A.9 Under prong one of the two-pronged analysis, the MPEP states that the Office should "evaluate whether the claim recites a judicial exception."10 More specifically, the MPEP advises that abstract ideas fall within at least one of three enumerated groupings - <u>mathematical concepts, certain methods of organizing human activity, and mental processes</u>." If the claim recites a judicial exception, the claim requires further analysis under prong two. With respect to prong two, the MPEP states that the Office "should evaluate whether the claim as a whole <u>integrates the recited judicial exception into a practical application of the exception</u>."12 If the claim as a whole integrates the recited judicial exception into a practical application of the exception, the claim is <u>not directed to the judicial exception</u>, and the claim is patentable under 35 U.S.C. § 101.</p>
+<p>Prong One Analysis</p>
+<p>With respect to prong one of Step 2A, the Office asserted that the independent claims recite limitations which fall within the mental processes groupings of abstract ideas.13 More specifically, the Office asserted that the independent claims covers performance of the method steps in the mind, but for the recitation of generic sensors (i.e. electrodes) and processing and 8 Final Office Action dated March 28, 2022, pg. 4.</p>
+
+<h1>9 MPEP 2106.04 II A</h1>
+
+10 MPEP 2106.04 II A(1).
+<p>" MPEP 2106.04(a).</p>
+12 MPEP 2106.04 II A(2).
+<p>13 See Final Office Action dated March 28, 2022, pgs. 4-5.</p>
+
+ <p>communication circuitry."" Additionally, the Office asserted that "identifying PVC can include a healthcare professional visually identifying ventricular depolarizations, a maximum and minimum slope point, an interval from the maximum slope point to the minimum slope point, and identify PVC if the slope intervals satisfy predetermined slope criteria. Determining a PVC detection quantification can include a healthcare professional quantifying the amount of PVC, and communicating it to the patient or another user."15 Applicant submits that claim 1 does not fall within the mental processes grouping. Applicant addresses each grouping individually below.</p>
+<u>Claim 1 does not fall within the mental processes grouping of abstract ideas.</u>
+<p>When a claim includes one or more limitations that cannot practically be performed by the human mind, the claim does not recite a mental process.16 The claims in SRIInt'l, Inc. v.</p>
+<p>Cisco Systems, Inc. involved steps for detecting suspicious network activity based on analysis of network packets.17 The Federal Circuit held that a human mind is not capable of analyzing network packets in order to identify suspicious activity.18 Furthermore, the Federal Circuit held in SiRF Tech., Inc. v. Int'l Trade Comm 'n calculating an absolute position of a GPS receiver based on satellite signals cannot be performed by a human mind.19 The claims in SRI Int'l, Inc and SiRF Tech., Inc. involved complex calculations that ultimately lead the Federal Circuit to determine that the claims did not recite mental processes.</p>
+<p>Claim 1 does not fall within the mental processes grouping of abstract ideas, because the steps of "for each of the plurality of ventricular depolarizations, identify a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point; for each of the plurality ventricular depolarizations as a current ventricular depolarization: determine that the intervals from the maximum slope point to the minimum slope point for the current ventricular depolarization, a preceding adjacent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent adjacent ventricular depolarization of the plurality of ventricular depolarizations satisfy one or more slope criteria; and determine that the current ventricular depolarization is a premature ventricular contraction (PVC) depolarization 14 Final Office Action dated March 28, 2022, pg. 5.</p>
+<p>15 Final Office Action dated March 28, 2022, pg. 5.</p>
+<p>16 SRIInt'l, Inc. v. Cisco Systems, Inc., 930 F.3d 1295 (Fed. Cir. 2019); MPEP 2106.04(a)(2) III A.</p>
+<p>12 SRIInt'l, Inc. v. Cisco Systems, Inc., 930 F.3d 1295, 1301 (Fed. Cir. 2019); MPEP 2106.04(a)(2) III A. 18 SRIInt'l, Inc. v. Cisco Systems, Inc., 930 F.3d 1295, 1304 (Fed. Cir. 2019); MPEP 2106.04(a)(2) III A.</p>
+<p>19 SiRF Tech., Inc. v. Int'l Trade Comm'n, 601 F.3d 1319, 1333 (Fed. Cir. 2010); MPEP 2106.04(a)(2) III A.</p>
+
+ <p>based on the intervals from the maximum slope point to the minimum slope point satisfying the one or more slope criteria; and determine a PVC detection quantification for the patient based on the determinations that the plurality of ventricular depolarizations are PVCs" are complex determinations that do not merely involve simple comparisons.</p>
+<p>For example, although cardiac electrogram signals are conventionally used to measure cardiac activity, a cardiac electrogram signal includes rapid and complex slope changes. It is not feasible for a human to visually identify, with sufficient accuracy for medical purposes, maximum and minimum slope points in the cardiac electrogram signal. Nor is it feasible for a human to calculate, in the mind or with pencil and paper, the slope of the cardiac electrogram or satisfaction of the slope criteria because cardiac electrograms are not simple mathematical functions that can be trivially differentiated. Rather, cardiac electrograms are Fourier series that are far more complicated than the quadratic expressions typically in a Calculus textbook. As such, these limitations of claim 1 are substantially similar to calculating an exact position of a GPS receiver based on satellite signals and analyzing thousands of network packets in order to identify suspicious network activity, examples which the Federal Circuit has held to be unfeasible for a human.</p>
+<p>Thus, claim 1 does not recite an abstract idea falling into any of the enumerated categories of abstract ideas, so claim 1 does not recite an abstract idea.</p>
+<p>Prong Two Analysis</p>
+<p>Applicant maintains that claim 1 does not recite an abstract idea. However, even if claim 1 recites an abstract idea, which Applicant does not concede, claim 1 as a whole <u>integrates the recited </u><u>j</u><u>udicial exception into a practical application of the alleged abstract idea</u>.</p>
+<p>A claim that integrates an abstract idea into a practical application of the abstract idea relies on the abstract idea in a manner that imposes a meaningful limit on the abstract idea.20 Claim 1 integrates processing circuitry configured to "identify a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point," and "determine that the intervals from the maximum slope point to the minimum slope point... satisfy one or more slope criteria" into the practical application of detecting PVC. Thus, claim 1 <u>does not seek to monopolize every single method for detecting PVC</u>. Rather, claim 1 20 MPEP 2106.04(d).</p>
+
+ <p>recites a specific technique of <u>detecting and quantifying PVC</u>. This use of slope points and slope criteria imposes a meaningful limit on the alleged abstract idea.</p>
+<p>In the Office Action, the Office asserted:</p>
+<p>Claims 1 and 23 recite the additional elements of a "plurality of electrodes", "processing circuitry", and "communication circuitry", and claim 13 recites a "plurality of electrodes" and transmitting data ... to a user computing device", which are being interpreted as generic processors and electrodes. However, these elements are recited at a high level of generality (i.e. as generic electrodes performing the generic function of data gathering (e.g. sensing cardiac electrogram), and as generic processing and communication circuitry to perform the generic function of identifying slope and correlation, determining if then slope and correlation meet certain criteria, and transmitting the data to a user) such that they amount to no more than mere instructions to apply the exception using generic computer components.21</p>
+<p>Applicant respectfully disagrees with the Office's characterization that identifying slope and correlation, determining if the slope and correlation meet certain criteria, and transmitting the data to a user are generic and therefore not meaningful limitations. For example, MPEP 2106.05(e) provides:</p>
+<p>Classen Immunotherapies Inc. v. Biogen IDEC provides another example of claims that recited meaningful limitations. 659 F.3d 1057, 100 USPQ2d 1492 (Fed. Cir.</p>
+<p>2011) (decision on remand from the Supreme Court, which had vacated the lower court's prior holding of ineligibility in view of Bilski v. Kappos, 561 U.S. 593, 95 USPQ2d 1001 (2010)). In Classen, the claims recited methods that gathered and analyzed the effects of particular immunization schedules on the later development of chronic immune-mediated disorders in mammals in order to identify a lower risk immunization schedule, and then immunized mammalian subjects in accordance with the identified lower risk schedule (thereby lowering the risk that the immunized subject would later develop chronic immune-mediated diseases). 659 F.3d at 1060-61; 100 USPQ2d at 1495-96. <u>Although the analysis step was an abstract mental process that collected and compared known information, the immunization step was meaningful because it integrated the results of the analysis into a specific and tangible method that resulted in the method "moving from abstract scientific principle to specific application." </u>659 F.3d at 1066-68; 100 USPQ2d at 1500-01.</p>
+<p>The step of immunizing a patient based on the results of an analysis is generic, yet the immunization step was still held to be meaningful in that it moved the method "from abstract scientific principle to specific application." Accordingly, in the same way that the immunization step in Classen is meaningful, transmitting PVC detection quantification data to a user 21 Final Office Action dated March 28, 2022, pg. 6.</p>
+
+ <p>computing device amounts to a meaningful limitation. For example, transmitting PVC detection quantification data to a user computing device may enable chronic, ambulatory monitoring of PVC burden, cardiac wellness, and risk of sudden cardiac death.22</p>
+<p>For at least these reasons, even if claim 1 recites an abstract idea, which Applicant does not concede, claim 1 as a whole <u>integrates the recited judicial exception into a practical application of the alleged abstract idea</u>.</p>
+<p>Step 2B of the SME Analysis</p>
+<p>Applicant submits that claim 1 is not directed to an abstract idea. But even if claim 1 is directed to an abstract idea, which Applicant does not concede, claim 1 recites additional elements that amount to significantly more than the alleged abstract idea. In determining whether a claim recites additional elements that amount to significantly more than an abstract idea, the Office should (1) identify any additional elements recited in the claim that are beyond the abstract idea, and (2) evaluate those additional elements individually and in combination to <u>determine whether they contribute to an inventive concept</u>.23</p>
+<p>Regarding Step 2B, the Office asserted that "the additional elements when considered individually and in combination are not enough to qualify as significantly more than the abstract idea... [T]he additional elements of using electrodes and processing and communication circuitry to perform the steps of identifying cardiac electrogram and determining PVC <u>amounts to no more than mere instructions to apply the exception using generic computer components</u>. Mere instructions to apply an exception using a generic computer component cannot provide an inventive concept."24 Applicant respectfully submits that the processing circuitry configured to determine a PVC detection quantification for the patient based on the determinations that the plurality of ventricular depolarizations are PVCs," in view of the whole of the claim, constitutes significantly more than the alleged judicial exception. Therefore, even if claim 1 is directed to an abstract idea, claim 1 recites additional elements that amount to significantly more than the alleged abstract idea.</p>
+<p>22 See, e.g., Applicant's specification, ¶¶ [0026], [0027]</p>
+23 MPEP 2106.05 II.
+<p>24 Final Office Action dated March 28, 2022, pg. 5.</p>
+
+ <p>For at least these reasons, amended independent claim 1 recites patentable subject matter under 35 U.S.C. § 101. Although not identical in scope to amended independent claim 1, amended independent claims 13 and 23 recite features that are similar to those of amended independent claim 1. Thus, claims 1-31 recite patentable subject matter under 35 U.S.C. § 101. Applicant therefore respectfully requests withdrawal of this rejection.</p>
+
+CONCLUSION
+<p>All claims in this application are in condition for allowance. Applicant respectfully requests reconsideration and prompt allowance of all pending claims.</p>
+<p>Applicant does not concede that the subject matter encompassed by the claims prior to this Response is unpatentable over the art cited by the Office. While several distinctions have been noted over the art of record, Applicant notes that there may be several other limitations that are neither taught nor suggested by the art of record. Applicant expressly reserves all rights and arguments with respect to distinctions not explicitly noted herein. Indeed, Applicant traverses the rejections and preserves all rights and arguments. To the extent that any particular statement or argument by the Office has not been explicitly addressed herein, the same should not be construed as an acquiescence or admission by the Applicant that such statements or arguments by the Office are accurate and proper.</p>
+<p>Please charge any additional fees or credit any overpayment to deposit account number 50-1778. The Examiner is invited to telephone the below-signed attorney to discuss this application.</p>
+<p>Date:
+  By:</p>
+<p><u>May 27, 2022 /Zachary Y. Zhou/</u>SHUMAKER &amp; SIEFFERT, P.A.
+Name: Zachary Y. Zhou, Reg No. 79,187Telephone: (651) 286.8064</p>
+15
+16
+17
+18
+19
+20
+21
+22
+</body></html>

@@ -1,0 +1,25 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with Jeremy Miller on 12/18/2024.
+The application has been amended as follows:
+CLAIMS:
+47.	An apparatus, comprising:
+a positioning element sized and shaped to be capable of registering with the size and shape of a particular anatomic location on a chest of a patient, such that the positioning element can be repeatedly and stably positionable on the body of the patient with respect to the anatomic location;
+a reference structure connected to or integrated with the positioning element, the reference structure having known spatial characteristics and being positionable with respect to the neck of the patient by positioning of  a locator object;
+an imaging assembly coupled to and spaced from the positioning element, the imaging assembly configured to capture imaging data of at least a portion of a neck of the patient and at least a portion of the reference structure; and
+a processor operatively coupled to the imaging assembly, the processor configured to determine a jugular venous pressure (JVP) height relative to an anatomical feature of the patient based on the imaging data and the known spatial characteristics of the reference structure.
+Allowable Subject Matter
+Claims 47-66 are allowed.
+REASONS FOR ALLOWANCE
+The following is an examiner’s statement of reasons for allowance: The claims contain subject matter that is not found in the art. Such subject mater includes a positioning and reference elements sized and shaped to be capable of registering with the size and shape of a particular anatomic location on a chest of a patient, such that the positioning element can be repeatedly and stably positionable on the body of the patient; wherein the device is coupled to an imaging assembly and processor configured to determine a jugular venous pressure (JVP) relative to an anatomical feature of the patient.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to SKYLAR LINDSEY CHRISTIANSON whose telephone number is(571)272-0533. The examiner can normally be reached Monday-Friday, 7:30-5:30 EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Gary Jackson can be reached on (571) 272-4697. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/S.L.C./Examiner, Art Unit 3792
+/LYNSEY C Eiseman/Primary Examiner, Art Unit 3796

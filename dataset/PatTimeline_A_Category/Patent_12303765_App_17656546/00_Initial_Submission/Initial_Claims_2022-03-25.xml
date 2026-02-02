@@ -1,0 +1,199 @@
+<html><head></head><body><h3>Date: 2022-03-25</h3>
+<p>Claims:</p>
+<br>
+
+<br>
+1.    A method, comprising: 
+<br>
+retrieving, by a computing system, historical hole-by-hole data for a plurality of holes for plurality of golf tournaments for a plurality of players, wherein the historical hole-by-hole data comprises a yardage of each hole and a par associated with each hole; 
+<br>
+clustering, by the computing system, the plurality of holes into a plurality of clusters of hole types; 
+<br>
+generating, by the computing system, a strokes gained metric for each hole type of the hole-by-hole data for each player; 
+<br>
+adjusting, by the computing system, the strokes gained metric for each hole type based on a field of strength metric associated with each tournament, the field of strength metric representing a strength of a player field in a given tournament; and 
+<br>
+generating, by the computing system, a ranking of the plurality of players based on the adjusted strokes gained metric. 
+
+<br>
+
+<br>
+2.    The method of claim 1, wherein generating, by the computing system, the ranking of the plurality of players based on the adjusted strokes gained metric comprises: 
+<br>
+generating a first ranking corresponding to a first adjusted strokes gained metric for a first hole type; and 
+<br>
+generating a second ranking corresponding to a second adjusted strokes gained metric for a second hole type. 
+
+<br>
+
+<br>
+3.    The method of claim 2, wherein the adjusted strokes gained metric is a function of the first adjusted strokes gained metric and the second adjusted strokes gained metric.
+<br>
+
+<br>
+4.    The method of claim 1, wherein generating, by the computing system, the ranking of the plurality of players based on the adjusted strokes gained metric comprises: 
+<br>
+applying a decay factor to the strokes gained metrics, wherein the decay factor provides more weight to more recent strokes gained metrics. 
+
+<p>16</p>
+
+<br>
+
+<br>
+5.    The method of claim 1, further comprising: 
+<br>
+receiving, by the computing system, information for an upcoming tournament, wherein the information comprises hole data for each target hole and a target field of players; 
+<br>
+accessing, by the computing system, adjusted strokes gained metrics for each target player in the target field of players; and 
+<br>
+generating, by the computing system, a projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player. 
+
+<br>
+
+<br>
+6.    The method of claim 5, wherein generating, by the computing system, the projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player comprises: 
+<br>
+generating a likelihood of each target player making a cut at the upcoming tournament. 
+
+<br>
+
+<br>
+7.    The method of claim 5, wherein generating, by the computing system, the projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player comprises: 
+<br>
+generating a projected adjusted strokes gained metric for each target player; and 
+<br>
+ranking each target player based on the adjusted strokes gained metric. 
+
+<br>
+
+<br>
+8.    A non-transitory computer readable medium comprising one or more sequences of instructions, which, when executed by one or more processors, causes a computing system to perform operations comprising: 
+<br>
+retrieving, by the computing system, historical hole-by-hole data for a plurality of holes for plurality of golf tournaments for a plurality of players, wherein the historical hole-by-hole data comprises a yardage of each hole and a par associated with each hole; 
+<br>
+clustering, by the computing system, the plurality of holes into a plurality of clusters of hole types; 
+<br>
+generating, by the computing system, a strokes gained metric for each hole type of the historical hole-by-hole data for each player; 
+<br>
+17 
+
+ adjusting, by the computing system, the strokes gained metric for each hole type based on a field of strength metric associated with each tournament, the field of strength metric representing a strength of a player field in a given tournament; and 
+<br>
+generating, by the computing system, a ranking of the plurality of players based on the adjusted strokes gained metric. 
+
+<br>
+
+9.
+The non-transitory computer readable medium of claim 8, wherein generating, by the computing system, the ranking of the plurality of players based on the adjusted strokes gained metric comprises: 
+<br>
+generating a first ranking corresponding to a first adjusted strokes gained metric for a first hole type; and 
+<br>
+generating a second ranking corresponding to a second adjusted strokes gained metric for a second hole type. 
+
+<br>
+
+<br>
+10.   The non-transitory computer readable medium of claim 9, wherein the adjusted strokes gained metric is a function of the first adjusted strokes gained metric and the second adjusted strokes gained metric.
+<br>
+
+<br>
+11.   The non-transitory computer readable medium of claim 8, wherein generating, by the computing system, the ranking of the plurality of players based on the adjusted strokes gained metric comprises: 
+<br>
+applying a decay factor to the strokes gained metrics, wherein the decay factor provides more weight to more recent strokes gained metrics. 
+
+<br>
+
+<br>
+12.   The non-transitory computer readable medium of claim 8, further comprising: 
+<br>
+receiving, by the computing system, information for an upcoming tournament, wherein the information comprises hole data for each target hole and a target field of players; 
+<br>
+accessing, by the computing system, adjusted strokes gained metrics for each target player in the target field of players; and 
+<br>
+generating, by the computing system, a projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player. 
+
+<p>18</p>
+
+<br>
+
+<br>
+13.   The non-transitory computer readable medium of claim 12, wherein generating, by the computing system, the projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player comprises: 
+<br>
+generating a likelihood of each target player making a cut at the upcoming tournament. 
+
+<br>
+
+<br>
+14.   The non-transitory computer readable medium of claim 12, wherein generating, by the computing system, the projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player comprises: 
+<br>
+generating a projected adjusted strokes gained metric for each target player; and 
+<br>
+ranking each target player based on the adjusted strokes gained metric. 
+
+<br>
+
+<br>
+15.   A system, comprising: 
+<br>
+a processor; and 
+<br>
+a memory having programming instructions stored thereon, which, when executed by the processor, causes the system to perform operations comprising: 
+<br>
+retrieving historical hole-by-hole data for a plurality of holes for plurality of golf tournaments for a plurality of players, wherein the historical hole-by-hole data comprises a yardage of each hole and a par associated with each hole; 
+<br>
+clustering the plurality of holes into a plurality of clusters of hole types; 
+<br>
+generating a strokes gained metric for each hole type of the historical hole-by-hole data for each player; 
+<br>
+adjusting the strokes gained metric for each hole type based on a field of strength metric associated with each tournament, the field of strength metric representing a strength of a player field in a given tournament; and 
+<br>
+generating a ranking of the plurality of players based on the adjusted strokes gained metric. 
+
+<br>
+
+<br>
+16.   The system of claim 15, wherein generating the ranking of the plurality of players based on the adjusted strokes gained metric comprises: 
+<br>
+19 
+
+ generating a first ranking corresponding to a first adjusted strokes gained metric for a first hole type; and 
+<br>
+generating a second ranking corresponding to a second adjusted strokes gained metric for a second hole type. 
+
+<br>
+
+<br>
+17.   The system of claim 15, wherein generating the ranking of the plurality of players based on the adjusted strokes gained metric comprises: 
+<br>
+applying a decay factor to the strokes gained metrics, wherein the decay factor provides more weight to more recent strokes gained metrics. 
+
+<br>
+
+<br>
+18.   The system of claim 15, wherein the operations further comprise: 
+<br>
+receiving information for an upcoming tournament, wherein the information comprises hole data for each target hole and a target field of players; 
+<br>
+accessing adjusted strokes gained metrics for each target player in the target field of players; and 
+<br>
+generating a projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player. 
+
+<br>
+
+<br>
+19.   The system of claim 18, wherein generating the projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player comprises: 
+<br>
+generating a likelihood of each target player making a cut at the upcoming tournament. 
+
+<br>
+
+<br>
+20.    The system of claim 18, wherein generating the projected performance metric for each target player based on the hole data and the adjusted strokes gained metrics for each target player comprises: 
+<br>
+generating a projected adjusted strokes gained metric for each target player; and 
+<br>
+ranking each target player based on the adjusted strokes gained metric. 
+
+<p>20</p>
+EAST\ 89447670.2
+</body></html>

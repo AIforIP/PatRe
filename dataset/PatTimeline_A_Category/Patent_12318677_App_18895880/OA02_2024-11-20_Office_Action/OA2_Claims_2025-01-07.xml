@@ -1,0 +1,184 @@
+<html><head></head><body><h3>Date: 2025-01-07</h3>
+
+<h1>Listing of Claims:</h1>
+<p><u>AMENDMENTS TO THE CLAIMS</u>The claims are amended as follows and will replace all previous versions and listings of claims:</p><br>
+<br>
+1.    (Previously Presented) A mobile device for facilitating an umpire of a baseball game, the mobile device comprising:<br>
+a processor;<br>
+a memory electrically coupled with the processor;<br>
+a user interface electrically coupled with the processor;<br>
+a haptic feedback device electrically coupled with the processor; and a wireless transceiver electrically coupled with the processor, wherein the processor is configured for:<br>
+receiving a start pitch clock selection via the user interface;<br>
+upon receiving the start pitch clock selection via the user interface, transmitting a start pitch clock device message via the wireless transceiver to an access point;<br>
+receiving a start pitch clock access point acknowledgment message from the access point;<br>
+upon receiving the start pitch clock access point acknowledgment message, momentarily activating the haptic feedback device, wherein:<br>
+the access point is electrically coupled with a scoreboard controller; and the access point is configured for at least one of:<br>
+starting an external pitch clock timer on the scoreboard controller upon receiving the start pitch clock device message; and starting an internal pitch clock timer within the access point upon receiving the start pitch clock<br>
+<br>
+<br>
+<br>
+device message;<br>
+receiving a batter-must-be-in-box message from the access point; and momentarily activating the haptic feedback device upon receiving the batter-must-be-in-box message, wherein the batter-must-be-in-box message is transmitted from the access point based on a first time interval after receiving the start pitch clock device message.<br>
+2.
+(Previously Presented) The mobile device of claim 1, wherein:<br>
+the user interface includes a pitch-clock momentary switch;<br>
+the processor is further configured for receiving the start pitch clock selection via the pitch-clock momentary switch; and<br>
+the first time interval is associated with a league pitch clock time requirement.<br>
+3.
+(Previously Presented) The mobile device of claim 2, wherein:<br>
+the user interface includes a no-runners-on-base-pitch-clock momentary switch and a runners-on- base-pitch-clock momentary switch;<br>
+the processor is further configured for receiving the start pitch clock selection via either the no- runners-on-base-pitch-clock-momentary switch or the runners-on-base-pitch-clock momentary switch;<br>
+upon receiving the start pitch clock selection via the no-runners-on-base-pitch-clock-momentary switch, the first time interval becomes associated with a league no-runners-on-base pitch clock time requirement; and<br>
+upon receiving the start pitch clock selection via the runners-on-base-pitch-clock-momentary switch, the first time interval becomes associated with a league runners-on-base pitch clock time<br>
+<br>
+<br>
+<br>
+requirement.<br>
+<br>
+4.    (Previously Presented) The mobile device of claim 1, wherein the processor is further configured for:<br>
+receiving a pitch clock expiration message from the access point; and momentarily activating the haptic feedback device upon receiving the pitch clock expiration message, wherein the pitch clock expiration message is transmitted from the access point based on a second time interval after receiving the start pitch clock device message.<br>
+<br>
+5.    (Previously Presented) The mobile device of claim 4, wherein the second time interval is associated with a league pitch clock time requirement.<br>
+<br>
+6.    (Previously Presented) The mobile device of claim 4, wherein:<br>
+the second time interval is associated with a league no-runners-on-base pitch clock time requirement; and<br>
+the second time interval is associated with a league runners-on-base pitch clock time requirement.<br>
+7.
+(Currently Amended) The mobile device of claim 1, wherein the processor is further configured for:<br>
+receiving a start between-inning clock selection via the user interface;<br>
+upon receiving the start between-inning clock selection via the user interface, transmitting a start between-inning clock device message via the wireless transceiver to the access point;<br>
+<br>
+<br>
+<br>
+receiving a start between-inning clock access point acknowledgment message from the access point; and<br>
+upon receiving the start between-inning clock access point acknowledgment message, momentarily activating the haptic feedback device, wherein the access point is further configured for at least one of:<br>
+starting an external between-inning clock timer on the scoreboard controller upon receiving the start <del>between inning</del><u>between-inning </u>clock device message; and starting an internal between-inning clock timer within the access point upon receiving the start between inning clock device message.<br>
+8.
+(Previously Presented) The mobile device of claim 7, wherein the processor is further configured for:<br>
+receiving a between-inning warning message from the access point; and momentarily activating the haptic feedback device upon receiving the between-inning warning message, wherein the between-inning warning message is transmitted from the access point based on a third time interval after receiving the start between-inning clock device message.<br>
+9.
+(Previously Presented) The mobile device of claim 8, wherein:<br>
+the user interface includes a between-inning clock momentary switch;<br>
+the processor is further configured for receiving the start between-inning clock selection via between-inning clock momentary switch; and the third time interval is associated with a league between-inning clock time requirement.<br>
+<br>
+<br>
+<br>
+<br>
+10.    (Previously Presented) The mobile device of claim 8, wherein the processor is further configured for:<br>
+receiving a between-inning expiration message from the access point; and momentarily activating the haptic feedback device upon receiving the between-inning expiration message, wherein:<br>
+the between-inning expiration message is transmitted from the access point based on a fourth time interval after receiving the start between-inning clock device message; and the fourth time interval is associated with a league between-inning clock time requirement.<br>
+<br>
+11.    (Previously Presented) The mobile device of claim 10, wherein the processor is further configured for:<br>
+receiving a start between-batter clock selection via the user interface;<br>
+upon receiving the start between-batter clock selection via the user interface, transmitting a start between-batter clock device message via the wireless transceiver to the access point;<br>
+receiving a start between-batter clock access point acknowledgment message from the access point; and<br>
+upon receiving the start between-batter clock access point acknowledgment message, momentarily activating the haptic feedback device, wherein the access point is further configured for at least one of:<br>
+starting an external between-batter clock timer on the scoreboard controller upon receiving the start between-batter clock device message; and starting an internal between-batter clock timer within the access point upon receiving the start between-batter clock device message.<br>
+<br>
+<br>
+<br>
+<br>
+12.    (Previously Presented) The mobile device of claim 11, wherein the processor is further configured for:<br>
+receiving a between-batter warning message from the access point; and momentarily activating the haptic feedback device upon receiving the between-batter warning message, wherein the between-batter warning message is transmitted from the access point based on a fifth time interval after receiving the start between-batter clock device message.<br>
+<br>
+13.    (Previously Presented) The mobile device of claim 12, wherein:<br>
+the user interface includes a between-batter clock momentary switch;<br>
+the processor is further configured for receiving the start between-batter clock selection via between-batter clock momentary switch; and the fifth time interval is associated with a league between-batter clock time requirement.<br>
+<br>
+14.    (Previously Presented) The mobile device of claim 12, wherein the processor is further configured for:<br>
+receiving a between-batter expiration message from the access point; and momentarily activating the haptic feedback device upon receiving the between-batter expiration message, wherein:<br>
+the between-batter expiration message is transmitted from the access point based on a sixth time interval after receiving the start between-batter clock device message; and the sixth time interval is associated with a league between-batter clock time requirement.<br>
+<br>
+<br>
+<br>
+<br>
+15.    (Currently Amended) An access point for facilitating a plurality of umpires of a baseball game, the access point comprising:<br>
+a processor;<br>
+a memory electrically coupled with the processor;<br>
+a user interface electrically coupled with the processor;<br>
+a scoreboard controller interface electrically coupled with the processor; and a wireless transceiver electrically coupled with the processor, wherein:<br>
+the wireless transceiver is configured for transmitting and receiving signals from a plurality of mobile devices operated by the plurality of umpires;<br>
+the processor is configured for:<br>
+receiving a start pitch clock device message via the wireless transceiver from each mobile device of the plurality of mobile devices;<br>
+upon receiving the start pitch clock device message from any one of the plurality of mobile devices, transmitting a start pitch clock access point acknowledgment message via the wireless transceiver to the plurality of mobile devices, wherein each mobile device of the plurality of mobile devices is configured for momentarily activating a haptic feedback device upon receiving the start pitch clock access point acknowledgment message;<br>
+receiving a reset pitch clock device message via the wireless transceiver from each mobile device of the plurality of mobile devices;<br>
+upon receiving the reset pitch clock device message from any one of the plurality of mobile devices, transmitting a reset pitch clock access point acknowledgment message via the wireless transceiver to the plurality of mobile devices, wherein each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon<br>
+<br>
+<br>
+<br>
+receiving the reset pitch clock access point acknowledgment message;<br>
+receiving a start between-inning clock device message via the wireless transceiver from each mobile device of the plurality of mobile devices;<br>
+upon receiving the start between-inning clock device message from any one of the plurality of mobile devices, transmitting a start between-inning clock access point acknowledgment message via the wireless transceiver to the plurality of mobile devices, wherein each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the start between-inning clock access point acknowledgment message;<br>
+receiving a batter-must-be-in-box scoreboard message from the scoreboard controller interface;<br>
+and upon receiving the batter-must-be-in-box scoreboard message, transmitting a batter-must-be-in- box access point message via the wireless transceiver to the plurality of mobile devices, wherein:<br>
+each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the batter-must-be-in-box access point message; and the batter-must-be-in-box scoreboard message is transmitted from the scoreboard controller interface based on a first time interval after receiving a start pitch clock access point message;<br>
+the processor is further configured for at least one of:<br>
+starting an external pitch clock timer on a scoreboard controller via the scoreboard controller interface upon receiving the start pitch clock device message; and starting an internal pitch clock timer within the access point upon receiving the start pitch clock device message[[.]];<br>
+the processor is further configured for at least one of:<br>
+resetting the external pitch clock timer on the scoreboard controller via the scoreboard controller<br>
+<br>
+<br>
+<br>
+interface upon receiving the reset pitch clock device message; and resetting the internal pitch clock timer within the access point upon receiving the reset pitch clock device message;<br>
+and the processor is further configured for at least one of:<br>
+starting an external between-inning clock timer on the scoreboard controller via the scoreboard controller interface upon receiving the start between-inning clock device message; and starting an internal between-inning clock timer within the access point upon receiving the start between-inning clock device message.<br>
+<br>
+16.    (Previously Presented) The access point of claim 15, wherein the first time interval is approximately ten seconds.<br>
+<br>
+17.    (Previously Presented) The access point of claim 15, wherein the processor is further configured for:<br>
+receiving a pitch clock expiration scoreboard message from the scoreboard controller interface;<br>
+and upon receiving the pitch clock expiration scoreboard message, transmitting a pitch clock expiration access point message via the wireless transceiver to the plurality of mobile devices, wherein:<br>
+each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the pitch clock expiration access point message; and the pitch clock expiration scoreboard message is transmitted from the scoreboard controller<br>
+<br>
+<br>
+<br>
+based on a second time interval after receiving the start pitch clock access point message.<br>
+<br>
+18.   (Previously Presented) The access point of claim 17, wherein the second time interval is approximately twenty seconds.<br>
+<br>
+19.   (Previously Presented) The access point of claim 17, wherein the processor is further configured for:<br>
+receiving a between-inning warning scoreboard message from the scoreboard controller interface; and<br>
+upon receiving the between-inning warning scoreboard message, transmitting a between-inning warning access point message via the wireless transceiver to the plurality of mobile devices, wherein:<br>
+each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the between-inning warning access point message;<br>
+and the between-inning warning scoreboard message is transmitted from the scoreboard controller based on a third time interval after receiving a between-inning clock access point message.<br>
+<br>
+20.    (Previously Presented) The access point of claim 19, wherein the third time interval is approximately ninety seconds.<br>
+<br>
+21.    (Previously Presented) The access point of claim 19, wherein the processor is further configured for:<br>
+<br>
+<br>
+<br>
+receiving a between-inning expiration scoreboard message from the scoreboard controller interface; and<br>
+upon receiving the between-inning expiration scoreboard message, transmitting a between-inning expiration access point message via the wireless transceiver to the plurality of mobile devices, wherein:<br>
+each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the between-inning expiration access point message;<br>
+and the between-inning expiration scoreboard message is transmitted from the scoreboard controller based on a fourth time interval after receiving the between-inning clock access point message.<br>
+<br>
+22.    (Previously Presented) The access point of claim 21, wherein the fourth time interval is approximately one hundred twenty seconds.<br>
+<br>
+23.    (Previously Presented) The access point of claim 21, wherein:<br>
+the processor is further configured for:<br>
+receiving a start between-batter clock device message via the wireless transceiver from each mobile device of the plurality of mobile devices; and upon receiving the start between-batter clock device message from any one of the plurality of mobile devices, transmitting a start between-batter clock access point acknowledgment message via the wireless transceiver to the plurality of mobile devices, wherein each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the start between-batter clock access point acknowledgment message;<br>
+<br>
+<br>
+<br>
+and the processor is further configured for at least one of:<br>
+starting an external between-batter clock timer on the scoreboard controller via the scoreboard controller interface upon receiving the start between-batter clock device message; and starting an internal between-batter clock timer within the access point upon receiving the start between-inning clock device message.<br>
+<br>
+24.    (Previously Presented) The access point of claim 23, wherein the processor is further configured for:<br>
+receiving a between-batter warning scoreboard message from the scoreboard controller interface;<br>
+and upon receiving the between-batter warning scoreboard message, transmitting a between-batter warning access point message via the wireless transceiver to the plurality of mobile devices, wherein:<br>
+each mobile device of the plurality of mobile devices is configured for momentarily activating their haptic feedback device upon receiving the between-batter warning access point message;<br>
+and the between-batter warning scoreboard message is transmitted from the scoreboard controller based on a fifth time interval after receiving a between-batter clock access point message.<br>
+<br>
+25.    (Previously Presented) The access point of claim 24, wherein the fifth time interval is approximately twenty-two seconds.<br>
+<br>
+<br>
+<br>
+26.    (Previously Presented) The access point of claim 24, wherein the processor is further configured for:<br>
+receiving a between-batter expiration scoreboard message from the scoreboard controller interface; and<br>
+upon receiving the between-batter expiration scoreboard message, transmitting a between-batter expiration access point message via the wireless transceiver to the plurality of mobile devices, wherein:<br>
+each mobile device of the plurality of mobile devices may be configured for momentarily activating their haptic feedback device upon receiving the between-batter expiration access point message; and<br>
+the between-batter expiration scoreboard message is transmitted from the scoreboard controller based on a sixth time interval after receiving the between-batter clock access point message.<br>
+<br>
+27.    (Previously Presented) The access point of claim 26, wherein the sixth time interval is approximately thirty seconds.
+</body></html>

@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2022-10-04</h3>
+
+<h1>ABSTRACT</h1>
+<p>Methods, apparatus and systems for enhanced wireless monitoring of vital signs are described. In one example, a described system comprises: a transmitter configured to transmit a wireless signal through a wireless channel of a venue; a receiver configured to receive the wireless signal through the wireless channel; and a processor. The received wireless signal differs from the transmitted wireless signal due to the wireless channel that is impacted by a periodic motion of a vital sign of an object in the venue. The processor is configured for: obtaining a time series of channel information (CI) of the wireless channel based on the received wireless signal, computing a two dimensional (2D) decomposition of the time series of CI (TSCI), enhancing the 2D decomposition, and monitoring the periodic motion of the vital sign based on the enhanced 2D decomposition.</p><p>85</p></body></html>

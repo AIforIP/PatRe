@@ -1,0 +1,192 @@
+<html><head></head><body><h3>Date: 2022-10-28</h3>
+<p>CLAIMS</p>
+<p><u>What is claimed is:</u></p>
+<br>
+
+<br>
+1.    A virtual prop control method performed by a computer device, the method comprising: 
+<br>
+displaying, in response to an equipment operation on a virtual shelter prop, the virtual shelter prop at a first position of a controlled virtual object in a virtual scene, the virtual shelter prop being used for sheltering the controlled virtual object; 
+<br>
+determining a corresponding behavior type of the controlled virtual object in response to detecting a behavior of the controlled virtual object in the virtual scene; and 
+<br>
+displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene based on the corresponding behavior type of the controlled virtual object. 
+
+<br>
+
+2.
+The method according to claim 1, wherein the equipment operation on a virtual shelter prop comprises any one of the following: 
+<br>
+a pickup operation on the virtual shelter prop in the virtual scene; and 
+<br>
+a trigger operation on a target equipment control for controlling the controlled virtual object to perform an equipment operation on a virtual shelter prop. 
+
+<br>
+
+3.
+The method according to claim 1, wherein the displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene based on the corresponding behavior type of the controlled virtual object comprises: 
+<br>
+determining, based on the behavior type of the controlled virtual object, a motion parameter corresponding to the behavior type, the motion parameter being used for indicating a movement path of the virtual shelter prop in the virtual scene; and 
+<br>
+displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene according to the motion parameter. 
+
+<br>
+
+4.
+The method according to claim 1, wherein the virtual shelter prop comprises an observation window for displaying an observable partial virtual scene.
+<br>
+
+5.
+The method according to claim 1, wherein the controlled virtual object is equipped with a target virtual prop for launching an attack on other virtual objects; 
+
+after the displaying, in response to an equipment operation on a virtual shelter prop, the virtual shelter prop at a first position of a controlled virtual object in a virtual scene, the method further comprises: 
+<br>
+determining an interaction type corresponding to the controlled virtual object in response to an interaction operation initiated by the controlled virtual object to the other virtual objects using the target virtual prop; and 
+<br>
+updating a display state of the virtual shelter prop in the virtual scene based on the interaction type. 
+
+<br>
+
+6.
+The method according to claim 5, wherein the updating a display state of the virtual shelter prop in the virtual scene based on the interaction type comprises any one of the following: 
+<br>
+moving the virtual shelter prop from the first position to a second position of the controlled virtual object for display in response to the interaction type being a first interaction type, and displaying that the virtual shelter prop at the second position does not shelter the target virtual prop; and 
+<br>
+erecting the target virtual prop at a reference position of the virtual shelter prop in response to the interaction type being a second interaction type, and zooming in and displaying the virtual shelter prop. 
+
+<br>
+
+7.
+The method according to claim 1, wherein the method further comprises: 
+<br>
+determining a hit region on the virtual shelter prop in response to an operation of hitting the virtual shelter prop of the controlled virtual object, different hit regions on the virtual shelter prop corresponding to different damage information and hit effects, the hit effects comprising an audio effect and a visual effect; 
+<br>
+determining damage information of the virtual shelter prop based on the hit region on the virtual shelter prop; and 
+<br>
+displaying a hit effect corresponding to the hit region in the virtual scene. 
+
+<br>
+
+8.
+The method according to claim 1, wherein the method further comprises: 
+<br>
+triggering, in response to a distance between the controlled virtual object and other virtual objects being smaller than or equal to a reference distance, the controlled virtual 
+
+object to attack the other virtual objects using the virtual shelter prop.
+<br>
+
+9.
+A computer device, comprising one or more processors and one or more memories, the one or more memories storing at least one computer program, the at least one computer program being loaded and executed by the one or more processors to cause the computer device to implement a virtual prop control method comprising: 
+<br>
+displaying, in response to an equipment operation on a virtual shelter prop, the virtual shelter prop at a first position of a controlled virtual object in a virtual scene, the virtual shelter prop being used for sheltering the controlled virtual object; 
+<br>
+determining a corresponding behavior type of the controlled virtual object in response to detecting a behavior of the controlled virtual object in the virtual scene; and 
+<br>
+displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene based on the corresponding behavior type of the controlled virtual object. 
+
+<br>
+
+<br>
+10.   The computer device according to claim 9, wherein the equipment operation on a virtual shelter prop comprises any one of the following: 
+<br>
+a pickup operation on the virtual shelter prop in the virtual scene; and 
+<br>
+a trigger operation on a target equipment control for controlling the controlled virtual object to perform an equipment operation on a virtual shelter prop. 
+
+<br>
+
+<br>
+11.   The computer device according to claim 9, wherein the displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene based on the corresponding behavior type of the controlled virtual object comprises: 
+<br>
+determining, based on the behavior type of the controlled virtual object, a motion parameter corresponding to the behavior type, the motion parameter being used for indicating a movement path of the virtual shelter prop in the virtual scene; and 
+<br>
+displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene according to the motion parameter. 
+
+<br>
+
+<br>
+12.   The computer device according to claim 9, wherein the virtual shelter prop comprises an observation window for displaying an observable partial virtual scene.
+<br>
+
+<br>
+13.   The computer device according to claim 9, wherein the controlled virtual object is equipped with a target virtual prop for launching an attack on other virtual objects; 
+
+after the displaying, in response to an equipment operation on a virtual shelter prop, the virtual shelter prop at a first position of a controlled virtual object in a virtual scene, the method further comprises: 
+<br>
+determining an interaction type corresponding to the controlled virtual object in response to an interaction operation initiated by the controlled virtual object to the other virtual objects using the target virtual prop; and 
+<br>
+updating a display state of the virtual shelter prop in the virtual scene based on the interaction type. 
+
+<br>
+
+<br>
+14.    The computer device according to claim 13, wherein the updating a display state of the virtual shelter prop in the virtual scene based on the interaction type comprises any one of the following: 
+<br>
+moving the virtual shelter prop from the first position to a second position of the controlled virtual object for display in response to the interaction type being a first interaction type, and displaying that the virtual shelter prop at the second position does not shelter the target virtual prop; and 
+<br>
+erecting the target virtual prop at a reference position of the virtual shelter prop in response to the interaction type being a second interaction type, and zooming in and displaying the virtual shelter prop. 
+
+<br>
+
+<br>
+15.    The computer device according to claim 9, wherein the method further comprises: 
+<br>
+determining a hit region on the virtual shelter prop in response to an operation of hitting the virtual shelter prop of the controlled virtual object, different hit regions on the virtual shelter prop corresponding to different damage information and hit effects, the hit effects comprising an audio effect and a visual effect; 
+<br>
+determining damage information of the virtual shelter prop based on the hit region on the virtual shelter prop; and 
+<br>
+displaying a hit effect corresponding to the hit region in the virtual scene. 
+
+<br>
+
+<br>
+16.    The computer device according to claim 9, wherein the method further comprises: 
+<br>
+triggering, in response to a distance between the controlled virtual object and other virtual objects being smaller than or equal to a reference distance, the controlled virtual 
+
+object to attack the other virtual objects using the virtual shelter prop.
+<br>
+
+<br>
+17.   A non-transitory computer-readable storage medium, storing at least one computer program, the at least one computer program being loaded and executed by a processor of a computer device to cause the computer device to implement a virtual prop control method comprising: 
+<br>
+displaying, in response to an equipment operation on a virtual shelter prop, the virtual shelter prop at a first position of a controlled virtual object in a virtual scene, the virtual shelter prop being used for sheltering the controlled virtual object; 
+<br>
+determining a corresponding behavior type of the controlled virtual object in response to detecting a behavior of the controlled virtual object in the virtual scene; and 
+<br>
+displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene based on the corresponding behavior type of the controlled virtual object. 
+
+<br>
+
+<br>
+18.   The non-transitory computer-readable storage medium according to claim 17, wherein the displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene based on the corresponding behavior type of the controlled virtual object comprises: 
+<br>
+determining, based on the behavior type of the controlled virtual object, a motion parameter corresponding to the behavior type, the motion parameter being used for indicating a movement path of the virtual shelter prop in the virtual scene; and 
+<br>
+displaying that the virtual shelter prop moves with the controlled virtual object in the virtual scene according to the motion parameter. 
+
+<br>
+
+<br>
+19.   The non-transitory computer-readable storage medium according to claim 17, wherein the controlled virtual object is equipped with a target virtual prop for launching an attack on other virtual objects; 
+<br>
+after the displaying, in response to an equipment operation on a virtual shelter prop, the virtual shelter prop at a first position of a controlled virtual object in a virtual scene, the method further comprises: 
+<br>
+determining an interaction type corresponding to the controlled virtual object in response to an interaction operation initiated by the controlled virtual object to the other virtual objects using the target virtual prop; and 
+
+updating a display state of the N irtual shelter prop in the virtual scene based on the interaction type.
+<br>
+
+<br>
+20.    The non-transitory computer-readable storage medium according to claim 19, wherein the updating a display state of the virtual shelter prop in the virtual scene based on the interaction type comprises any one of the following: 
+<br>
+moving the virtual shelter prop from the first position to a second position of the controlled virtual object for display in response to the interaction type being a first interaction type, and displaying that the virtual shelter prop at the second position does not shelter the target virtual prop; and 
+<br>
+erecting the target virtual prop at a reference position of the virtual shelter prop in response to the interaction type being a second interaction type, and zooming in and displaying the virtual shelter prop. 
+031384-7420-US31
+031384-7420-US32
+031384-7420-US33
+031384-7420-US34
+031384-7420-US35
+031384-7420-US36
+</body></html>

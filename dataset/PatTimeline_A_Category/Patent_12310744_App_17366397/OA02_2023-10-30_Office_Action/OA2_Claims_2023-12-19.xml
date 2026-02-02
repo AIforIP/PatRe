@@ -1,0 +1,100 @@
+<html><head></head><body><h3>Date: 2023-12-19</h3>
+
+<h1>Listing of Claims:</h1>
+<p><u>AMENDMENTS TO THE CLAIMS</u>This listing of claims will replace all prior versions and listings of claims in the application.</p><br>
+<br>
+Claim 1 (Previously Presented)    A method comprising:receiving, with one or more processors, information representative of a bioelectrical brain signal of a patient;<br>
+selecting a first frequency band of interest of the bioelectrical brain signal from a plurality of predetermined frequency bands,<br>
+wherein the predetermined frequency bands include two or more of a delta band, a theta band, an alpha band, a beta band, a gamma band, or a high gamma band, and<br>
+wherein the first frequency band of interest includes a first plurality of frequency sub-bands;<br>
+after selecting the first frequency band of interest, selecting a first set of two or more frequency sub-bands from the first plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the first set is narrower than the first frequency band of interest;<br>
+selecting a second frequency band of interest of the bioelectrical brain signal from the plurality of predetermined frequency bands, wherein the second frequency band of interest includes a second plurality of frequency sub-bands;<br>
+after selecting the second frequency band of interest, selecting a second set of two or more frequency sub-bands from the second plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the second set is narrower than the second frequency band of interest;<br>
+determining, with the one or more processors, a first biomarker indicative of a first patient state, wherein determining the biomarker comprises, after selecting the first set of two or more frequency sub-bands, determining a first characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the first set indicative of the first patient state, wherein the first characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the first set, and wherein the<br>
+<br>
+<br>
+predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value or a peak width greater than or equal to a second threshold value;determining, with the one or more processors, a second biomarker indicative of a second patient state, wherein determining the second biomarker comprises, after selecting the second set of two or more frequency sub-bands, determining a second characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the second set indicative of the second patient state, wherein the second characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the second set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value or a peak width greater than or equal to a second threshold value; and<br>
+controlling, by the one or more processors, therapy delivery by a medical device to the patient based on the determined first and second biomarkers.<br>
+<br>
+Claim 2 (Original)   The method of claim 1, further comprising storing the first and second biomarkers in a memory of a device.<br>
+<br>
+Claim 3 (Original)   The method of claim 1, wherein the first and second characteristics of the bioelectrical brain signal each comprise a spectral pattern of the bioelectrical brain signal in the respective first or second set of two or more frequency sub-bands of the respective first or second frequency band of interest.<br>
+<br>
+Claim 4 (Original)   The method of claim 1, wherein the two or more frequency sub-bands of the first set comprises a first frequency sub-band of the first plurality of frequency sub-bands of the first frequency band of interest and a second frequency sub-band of the first plurality of frequency sub-bands of the first frequency band of interest, and wherein the first characteristic of the bioelectrical brain signal comprises a shift in a power distribution between the first frequency sub-band and the second frequency sub-band.<br>
+<br>
+<br>
+ Claim 5 (Original)   The method of claim 1, wherein the first characteristic of the bioelectrical brain signal comprises a change in a peak frequency within the two or more frequency sub-bands of the first set.<br>
+<br>
+Claims 6 and 7 (Canceled)<br>
+<br>
+<br>
+Claim 8 (Original)   The method of claim 1, wherein the first characteristic of the bioelectrical brain signal comprises a width or a variability of the two or more frequency sub-bands of the first set exhibiting a relatively high or low level of activity.<br>
+<br>
+Claim 9 (Original)   The method of claim 1, wherein the first frequency band of interest and the second frequency band of interest are the same frequency band of the plurality of predetermined frequency bands.<br>
+<br>
+Claim 10 (Original) The method of claim 1, wherein the first frequency band of interest and the second frequency band of interest are different frequency bands of the plurality of predetermined frequency bands.<br>
+<br>
+<br>
+ Claim 11 (Previously Presented)   A system comprising:a medical device configured to deliver therapy to a patient;<br>
+a sensing module configured to sense a bioelectrical brain signal of the patient; and<br>
+one or more processors configured to:<br>
+select a first frequency band of interest of the bioelectrical brain signal from a plurality of predetermined frequency bands,<br>
+wherein the predetermined frequency bands include two or more of a delta band, a theta band, an alpha band, a beta band, a gamma band, or a high gamma band, and<br>
+wherein the first frequency band of interest includes a first plurality of frequency sub-bands,<br>
+after selecting the first frequency band of interest, select a first set of two or more frequency sub-bands from the first plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the first set is narrower than the first frequency band of interest,<br>
+select a second frequency band of interest of the bioelectrical brain signal from the plurality of predetermined frequency bands, wherein the second frequency band of interest includes a second plurality of frequency sub-bands,<br>
+after selecting the second frequency band of interest, select a second set of two or more frequency sub-bands from the second plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the second set is narrower than the second frequency band of interest,<br>
+determine a first biomarker indicative of a first patient state by, after selecting the first set of two or more frequency sub-bands, at least determining a first characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the first set indicative of the first patient state, wherein the first characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the first set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value, a peak width greater than or equal to a second threshold value;<br>
+<br>
+<br>
+determine a second biomarker indicative of a second patient state by, after selecting the second set of two or more frequency sub-bands, at least determining a second characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the second set indicative of the second patient state, wherein the second characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the second set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value, a peak width greater than or equal to a second threshold value; and<br>
+control therapy delivery by the medical device to the patient based on the determined first and second biomarkers.<br>
+<br>
+Claim 12 (Original) The system of claim 11, further comprising a memory, wherein the one or more processors are configured to store the first and second biomarkers in the memory.<br>
+<br>
+Claim 13 (Previously Presented)   The system of claim 11, wherein the first characteristic of the bioelectrical brain signal comprises a spectral pattern of the bioelectrical brain signal in the two or more frequency sub-bands of the first set.<br>
+<br>
+Claim 14 (Original)  The system of claim 11, wherein the first set of two or more frequency sub-bands comprises a first frequency sub-band of the first plurality of frequency sub-bands of the frequency band of interest and a second frequency sub-band of the first plurality of frequency sub-bands of the frequency band of interest, and wherein the first-characteristic of the bioelectrical brain signal comprises a shift in a power distribution between the first frequency sub-band and the second frequency sub-band.<br>
+<br>
+Claim 15 (Original)  The system of claim 11, wherein the first characteristic of the bioelectrical brain signal comprises a change in a peak frequency within the two or more frequency sub-bands of the first set.<br>
+<br>
+Claim 16 (Canceled)<br>
+<br>
+<br>
+<br>
+Claim 17 (Canceled)<br>
+<br>
+Claim 18 (Original) The system of claim 11, wherein the first characteristic of the bioelectrical brain signal comprises a width or a variability of the two or more frequency sub-bands of the first set exhibiting a relatively high or low level of activity.<br>
+<br>
+Claim 19 (Original) The system of claim 11, wherein the first frequency band of interest and the second frequency band of interest are the same frequency band of the plurality of predetermined frequency bands.<br>
+<br>
+Claim 20 (Original) The system of claim 11, wherein the first frequency band of interest and the second frequency band of interest are different frequency bands of the plurality of predetermined frequency bands.<br>
+<br>
+<br>
+ Claim 21 (Previously Presented)   A system comprising:means for sensing a bioelectrical brain signal of a patient;<br>
+means for selecting a first frequency band of interest and a second frequency band of interest of the bioelectrical brain signal from a plurality of predetermined frequency bands,<br>
+wherein the predetermined frequency bands include two or more of a delta band, a theta band, an alpha band, a beta band, a gamma band, or a high gamma band,<br>
+wherein the first frequency band of interest includes a first plurality of frequency sub-bands, and<br>
+wherein the second frequency band of interest includes a second plurality of frequency sub-bands;<br>
+means for selecting, after selecting the first frequency band of interest, a first set of two or more frequency sub-bands from the first plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the first set is narrower than the first frequency band of interest;<br>
+means for selecting, after selecting the second frequency band of interest, a second set of two or more frequency sub-bands from the second plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the second set is narrower than the second frequency band of interest;<br>
+means for, after selecting the first set of two or more frequency sub-bands, determining a first biomarker indicative of a first patient state, wherein the first biomarker comprises a first characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the first set, wherein the first characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the first set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value or a peak width greater than or equal to a second threshold value;<br>
+<br>
+<br>
+means for, after selecting the two or more frequency sub-bands, determining a second biomarker indicative of a second patient state, wherein the second biomarker comprises a second characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the second set, wherein the second characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the second set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value or a peak width greater than or equal to a second threshold value; and<br>
+means for controlling therapy delivery by a medical device to the patient based on the determined first and second biomarkers.<br>
+<br>
+Claim 22 (Previously Presented) A non-transitory computer readable storage medium comprising instructions that, when executed by one or more processors, cause the one or more processors to:receive information representative of a bioelectrical brain signal of a patient;<br>
+select a first frequency band of interest and a second frequency band of interest of the bioelectrical brain signal from a plurality of predetermined frequency bands,<br>
+wherein the predetermined frequency bands include two or more of a delta band, a theta band, an alpha band, a beta band, a gamma band, or a high gamma band,<br>
+wherein the first frequency band of interest includes a first plurality of frequency sub-bands, and<br>
+wherein the second frequency band of interest includes a second plurality of frequency sub-bands;<br>
+after selecting the first frequency band of interest, select a first set of two or more frequency sub-bands from the first plurality of frequency sub-bands e, wherein each of the two or more frequency sub-bands of the first set is narrower than the first frequency band of interest;<br>
+after selecting the second frequency band of interest, select a second set of two or more frequency sub-bands from the second plurality of frequency sub-bands, wherein each of the two or more frequency sub-bands of the second set is narrower than the second frequency band of interest;<br>
+<br>
+<br>
+after selecting the first set of two or more frequency sub-bands, determine a first biomarker indicative of a first patient state, wherein the first biomarker comprises a first characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the first set, wherein the first characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the first set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value or a peak width greater than or equal to a second threshold value; and<br>
+after selecting the second set of two or more frequency sub-bands, determine a second biomarker indicative of a second patient state, wherein the second biomarker comprises a second characteristic of the bioelectrical brain signal within the two or more frequency sub-bands of the second set, wherein the second characteristic comprises a predetermined characteristic of a distribution of a signal strength within the two or more frequency sub-bands of the second set, and wherein the predetermined characteristic of the distribution comprises one or more of a peak width less than or equal to a first threshold value or a peak width greater than or equal to a second threshold value;<br>
+control therapy delivery by a medical device to the patient based on the determined first and second biomarkers.<br>
+
+</body></html>

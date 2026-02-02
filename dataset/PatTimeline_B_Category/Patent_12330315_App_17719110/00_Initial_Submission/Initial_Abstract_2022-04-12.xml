@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-04-12</h3>
+<h1>ABSTRACT OF THE DISCLOSURE</h1>
+
+<p>In a method of operation of a robot, the robot identifies a set of candidate actions that may be performed by the robot, and collects, for each candidate action of the set of candidate actions, a respective set of ancillary data. The robot transmits a request for instructions to a tele-operation system that is communicatively coupled to the robot. The request for instructions includes each candidate action and each respective set of ancillary data. The robot receives, and executes, the instructions from the tele-operation system. The robot updates a control model, based at least in part on each candidate action, each respective set of ancillary data, and the instructions, to increase a level of autonomy of the robot. The robot may transmit the request for instructions to the tele-operation system in response to determining the robot is unable to select a candidate action to perform in furtherance of an objective.</p>
+33
+</body></html>

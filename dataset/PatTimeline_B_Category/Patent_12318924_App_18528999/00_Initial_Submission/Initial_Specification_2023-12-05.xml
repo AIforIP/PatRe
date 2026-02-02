@@ -1,0 +1,92 @@
+<html><head></head><body><h3>Date: 2023-12-05</h3>
+
+<h1>ROBOTIC ARM AND MODULARIZED SEGMENT</h1>
+
+<h1>CROSS-REFERENCE TO RELATED APPLICATION</h1>
+<p>[0001]
+The present application claims priority of Canadian patent application Serial No.</p><p>3,184,938, filed December 23, 2022, the content of which is hereby incorporated by reference in its entirety.</p>
+<h1>TECHNICAL FIELD</h1>
+<p>[0002]
+The present disclosure relates to robotic arms and parts thereof.</p>
+<h1>BACKGROUND</h1>
+<p>[0003]
+Existing general-purpose high Degree of Freedom (DoF) robotic arms are usually</p><p>assembled by a large number of small, complex and distinct parts, which usually requires commercial infrastructures to manufacture.</p><p>[0004]
+Those limitations often lead to hard-coded design, which is infeasible to be</p><p>customized for particular use-cases, and difficult to assemble, repair and modify. Thus these arms may be prohibitively expensive for personal or educational usage. SUMMARY</p><p>[0005]
+What is disclosed is a segment for a robotic arm. The modularized design allows</p><p>for different configurations (i.e. versions or builds) to be customized for various use-cases. [0006]
+The robotic arm can be built by one or many segments, each capable of</p><p>performing both Roll (X axis) and Pitch (Y axis) rotations. One may use a one-segment arm for a sun-tracking smart solar panel, or a many-segments arm for a snake-mimicking robot. [0007]
+The segment for a robotic arm includes a shaft having a first end and a second end;</p><p>a first joint housing having a first recess and a second recess and a second joint housing having a first cavity and a second cavity. The first recess is engageable with the first cavity to form a first socket and the second recess is engageable with the second cavity to form a second socket. The first socket is engageable with the first end of a shaft to facilitate movement along a longitudinal (roll) axis, and the second socket is engageable with a second end of the shaft to facilitate movement along a lateral (pitch) axis.</p><p>[0008]
+In some embodiments, any one of the first joint housing, first recess or second</p><p>recess may be dimensionally similar to the second joint housing, first cavity or second cavity, respectively.</p>
+<p>[0009]
+In other embodiments, there may be a first actuator for rotating the shaft along a</p><p>longitudinal axis and a second actuator for rotating the shaft along a lateral axis. [0010]
+According to another embodiment, there is provided a robotic arm comprising at</p><p>least one of the segments described above. In other embodiments, the number of segments may be two, three, or four or more.</p><p>[0011]
+The foregoing summary is not intended to summarize each potential embodiment</p><p>or every aspect of the subject matter of the present disclosure. [0012]
+These and other aspects of the device and method are set out in the claims, which</p><p>are incorporated here by reference.</p>
+<h1>BRIEF DESCRIPTION OF THE DRAWINGS</h1>
+<p>[0013]
+All figures of the present disclosure illustrate exemplary, non-limiting</p><p>embodiments. Embodiments will now be described with reference to the figures, in which like reference characters denote like elements, by way of example, and in which: [0014]
+FIG. 1 is a perspective view of a robotic arm having three segments, according to</p><p>one embodiment.</p><p>[0015]
+FIG. 2 is a perspective view of a robotic arm having a four segments, according to</p><p>another embodiment</p><p>[0016]
+FIG. 3a is a perspective view of a shaft for a robotic arm segment, according to</p><p>another embodiment.</p><p>[0017]
+FIG. 3b is a top plan view of the shaft of FIG. 3a.</p><p>[0018]
+FIG. 4a is a perspective view of a first joint housing for a robotic arm segment,</p><p>according to another embodiment.</p><p>[0019]
+FIG. 4b is a top plan view of the half socket of FIG. 4a.</p><p>[0020]
+FIG. 5a is a perspective view of a shaft, according to another embodiment</p><p>[0021]
+FIG. 5b is a top plan view of the shaft of FIG. 5a.</p><p>[0022]
+FIG. 6a is a perspective view of a first joint housing, according to another</p><p>embodiment.</p><p>[0023]
+FIG. 6b is a top plan view of the first joint housing of FIG. 6a.</p><p>[0024]
+FIG. 7a is a perspective view of a second joint housing, according to the</p><p>embodiment of FIG. 6a.</p><p>[0025]
+FIG. 7b is a top plan view of the second joint housing of FIG. 7a.</p>
+<p>[0026]
+FIG. 8a is a perspective view of the parts of a segment arranged for 3D printing,</p><p>according to another embodiment.</p><p>[0027]
+FIG. 8b is a top plan view of the parts of FIG. 8a.</p><p>[0028]
+FIG. 9a is a perspective view of a detachable shaft, according to another</p><p>embodiment.</p><p>[0029]
+FIG. 9b is another perspective view of the detachable shaft of FIG. 9a.</p><p>[0030]
+FIG. l0a is a perspective view of a segment without a second joint housing,</p><p>according to another embodiment.</p><p>[0031]
+FIG. lOb is a perspective view of the segment of FIG. 10a, with a second joint</p><p>housing attached.</p><p>[0032]
+FIG. 11 is a perspective view of a robotic arm having three segments, according</p><p>to another embodiment.</p><p>[0033]
+FIG. 12 is a perspective view of a robotic arm having ten segments, according to</p><p>another embodiment.</p><p>[0034]
+FIG. 13 is a schematic diagram  of a robotic arm, according to another</p><p>embodiment.</p><p>[0035]
+FIG. 14a is a perspective view of an end effector, according to another</p><p>embodiment.</p><p>[0036]
+FIG. 14b is a side view of the end effector of FIG. 14a.</p>
+<h1>DETAILED DESCRIPTION</h1>
+<p>[0037]
+The present disclosure will now be described, by way of example only, with</p><p>reference to the accompanying drawings.</p><p>[0038]
+Immaterial modifications may be made to the embodiments described here</p><p>without departing from what is covered by the claims. [0039]
+FIG. 1 shows a three-segment configuration robotic arm 100, consisting of</p><p>segments 110, 120, 130. The bottom end of shaft 140 may be used to secure the arm to a foundation, while the top end of shaft 150 may be connected to an end-effector, or vice versa. Each segment may have extension structures 160, which can be used to secure actuators. [0040]
+Although each segment may have different configurations such as actuator</p><p>geometry, the length of shaft or exterior shapes of joints may benefit from sharing a common</p><p>connection-interface between the joints and shafts. Because of this, each of the segments 110, 120, and 130 can be rearranged in any order.</p><p>[0041]
+FIG. 2 shows a four-segment robotic arm 200. Compared to arm 100, while both</p><p>having 6-DoF, this configuration has longer reach, and allows for more flexibility. [0042]
+FIG. 3a and FIG. 3b show a shaft 300 from a perspective and top-plan view,</p><p>respectively. At a first end of shaft 300, there is a sphere shaped structure 310 which can function as a bearing to restrict translation motion while allowing rotation in a longitudinal axis (also known as roll). At a second end of shaft 300, there is a cylinder shaped structure 320 which functions as a bearing for rotation along a lateral axis (also known as pitch). [0043]
+FIG. 4a and FIG. 4b show a first joint housing 400 from a perspective and top- plan view, respectively. The first joint housing has a first recess 410 and a second recess 420 which partially match the geometry of the sphere shaped structure 310 and cylinder shaped structure 320 from FIG. 3a and FIG. 3b.</p><p>[0044]
+The first joint housing 400 may comprise one half or a portion of a full joint unit.</p><p>There may be a second joint housing (not shown) having mirroring or substantially similar dimensions and shape as that of the first joint housing, having first and second cavities on opposed ends that correspond to the first and second recesses on the first joint housing, with the first cavity being dimensionally similar to the first recess, and the second cavity being dimensionally similar to the second recess.</p><p>[0045]
+The first joint housing and second joint housing may be combined such that the</p><p>first recess of the first joint housing and the first cavity of the second joint housing form a first socket, and the second recess of the first joint housing and the second cavity of the second joint housing form a second socket. The first socket may be used to house the sphere-shaped structure 310 of the shaft in FIGs. 3a and 3b to allow for movement in a roll axis, and the second socket may be used to house the cylinder shaped structure 320 of the shaft in FIGs. 3a and 3b to allow movement along a pitch axis.</p><p>[0046]
+The enclosure of the first joint housing and the second joint housing around the</p><p>shaft may also prevent the shaft from dislocating from the joint, while allowing movement. [0047]
+The shape and dimensions of the joint and shafts may vary. For example, in the</p><p>illustrated embodiment shown in FIGs. 4a and 4b, the cross section of the joint 400 is round,</p><p>resulting in a round exterior. In other embodiments, the exterior can take any shape, such as the hexagonal shaped segments shown in FIG. 2.</p><p>[0048]
+FIG. 5a and 5b, FIG. 6a and 6b, and FIG. 7a and 7b  illustrate alternative</p><p>embodiments, which may be variations on the designs from FIG. 3a and 3b, and FIG. 4a and 4b. [0049]
+These embodiments may be adapted to work with real-world hardware. In the</p><p>embodiments shown throughout this disclosure, the actuator holders are configured to fit DS5160/5180/51150 servo motors. In some embodiments, actuators can be of other specifications, such as SG90, MG90s, or other types, such as stepper or hydraulic motors. In those cases, geometry of the holders may change accordingly, along with optional supporting structures.</p><p>[0050]
+FIG. 5a and FIG. 5b show shaft 500 according to another embodiment. On the</p><p>pitch-side, a portion of the shaft 500 is hollowed out, creating a holder 510 to mount a Pitch-side servo motor. Similarly, holder 512 could be used to mount an actuator for Roll. 818b and 819b in FIGs. 8a and 8b shows holders having a similar design. [0051]
+When manufacturing using 3D printers, supporting structure is often required to</p><p>print overhanging structures. Optionally, to mitigate the labor intensive removal process of supporting materials, the four lots 520 are included optional openings to make 3D printing and installation easier. For example, they may reduce the supporting materials needed by the bolt sockets of couplings or horn discs. The opening tunnel 522 can be used to insert screwdrivers when installing shaft bolts.</p><p>[0052]
+FIG. 6a and FIG. 6b show perspective and top plan views of a first joint housing</p><p>600, according to yet another embodiment. The structure 624a extends outwards and can be used for mounting a Pitch actuator. The hollowed structure 625a can be used for mounting a Roll actuator.</p><p>[0053]
+FIG. 7a and FIG. 7b show the other second joint housing 700. The structures 724b</p><p>and 725b of second joint housing 700 mirror 624a and 625a of first joint housing 600 from FIGs. 6a and 6b. When assembled together, the structures can be used for mounting actuators to the joint. In this embodiment, the servo's body may be secured to the joint using bolts and nuts using sockets 629a and 729b, while the bottom of the servo's body is exposed. In some embodiments, structures may fully enclose actuators and wirings, so that the robotic arm is water resistant.</p>
+<p>[0054]
+To build a segment, the two joint housings 600 and 700 can be used to enclose a</p><p>shaft (for example, shaft 300 as shown in FIG. 3 or shaft 500 as shown in FIG. 5) at one or both ends, by connecting joint-Roll to shaft-Roll and joint-Pitch to shaft-Pitch. In this exemplary embodiment, four pairs of concave placeholders 626a and convex placeholders 726b were created to prevent the two joint housings from sliding. Meanwhile, the two joint housings can be secured together by installing bolts and nuts in holder pairs of 630a to 730b and 631a to 731b. In some embodiments, the half-joints can be secured using other methods, such as latches, screws or soldering.</p><p>[0055]
+In some embodiments, one or both actuators and their holders may be omitted,</p><p>and the joint would be fixed against the corresponding shafts, potentially reducing weight and cost with potentially reduced functionality.</p><p>[0056]
+Parts from any of FIGs. Sa, Sb, 6a, 6c, 7a and 7c can be assembled together into a</p><p>segment, to replace any of segments 110, 120, 130 from FIG. 1. [0057]
+FIGs. 8A and 8B shows another embodiment of a segment having three parts.</p><p>Instead of the sphere-shaped bearing 310 from FIGs. 3A and 3B, a cylinder 820 may be used. The three parts consist of a shaft 800 flanked by two joint housings 810 and 812. The three parts are placed side by side, arranged in directions where most hollow spaces are facing upwards, which may facilitate 3D printing in that the three parts can be printed together. As previously discussed above, 818b and 819b show areas within the shaft 800 that can be used to mount actuators.</p><p>[0058]
+In some embodiments, a shaft may also be manufactured as two corresponding</p><p>parts, being detachable or separable within the section between the two ends, then assembled together using methods such as latches or screws, or using corresponding plug-aperture configuration on each end. This may be used to facilitate ad-hoc assembly of segments. An example of this embodiment is shown in FIG. 9a and FIG. 9b, with a first shaft portion 900 being joinable to a second shaft portion 950 to form a full shaft. The plug 902 of first shaft portion 900 can be used to securely engage the aperture 952 found on the second shaft portion 950. [0059]
+FIGs. l0a and lOb show an assembled segment 1000 with two actuators or motors.</p><p>In FIG. 10a, shafts 1010 and 1020, and motors 1030 and 1040 are mounted within a first joint housing 1050. In FIG. lOb, a second joint housing 1060 is used to enclose the shafts 1010 and</p><p>1020 to complete the segment. Multiple nuts and bolts may be used to join first joint housing 1050 to second joint housing 1060.</p><p>[0060]
+FIG. 11 shows an embodiment of a robotic arm 1100 having three segments</p><p>installed with actuators such as dummy servo motors 1150a, b and c. installed. FIG. 12 shows another embodiment of a robotic arm 1200 having 10 segments, also with actuators installed throughout.</p><p>[0061]
+FIG. 12 shows a schematic diagram of a multi-segment robotic arm. For</p><p>embodiments that use servo actuators, the power source may be a DC power supply, while power/signal transmitters can be jumper cables. For other embodiments that uses hydraulic actuators, the power source could be a hydraulic pump, while the transmitters can be pipes. The controller can be software deployed to computers, such as cloud servers, desktop, raspberry pi, arduino, or other system-on-a-chip (SoC). At each end of the robotic arm may be other structures such as a base mount or end-effector.</p><p>[0062]
+FIG. 14a and FIG. 14b show a gripper (end-effector) 1400 decorated as a dragon</p><p>head, which has a rotatable jaw 1410. The gripper can be manufactured as one whole 3D printing model. The jaw may be mounted with a servo motor 1420, and other end 1450 of the gripper may be connected to a detachable or separable shaft. [0063]
+One end of a shaft may leverage its geometry to function as a bearing for</p><p>performing Roll, while the other end for Pitch. The two ends of a joint may have sockets of the matching geometry for receiving the shafts, optionally, with lubrication or smaller bearings. In the most basic form, this geometry can be a cylinder or sphere. Multiple segments can then be chained together by connecting joint-Roll to shaft-Roll and joint-Pitch to shaft-Pitch. [0064]
+Instead of using pulleys and belts to transmit force, actuators have their main</p><p>bodies directly mounted on joints, while their shaft or coupling may be mounted on shafts of the robotic arms.</p><p>[0065]
+Meanwhile each segment may be configured independently to meet various</p><p>functional requirements, for example, depending on the desired reach, weight, torque, actuator specifications, joints and shafts can be customized with a suitable length, material composition, density, diameter, exterior-shape, actuator socket shape, and so on.</p>
+<p>[0066]
+Therefore a 6-DoF robotic arm can be built using 3 interchangeable segments,</p><p>each built by two half-joints and one shaft, assembled together using commonly available hardware, such as standardized bolts and motors. [0067]
+In some embodiments, additional augmentation may be introduced, for instance,</p><p>structures to secure wiring, tunnels to inject lubrication, placeholders, sockets for screws, bolts, bearings, hinges, latches or reinforcing rods.</p><p>[0068]
+In other embodiments, both joint housings and shafts can be cut into multiple</p><p>sections, each manufactured separately, then assembled together. Those sections may be manufactured together with foundation or end-effectors as one whole object. [0069]
+In other embodiments, additional actuators may be placed in positions mirroring</p><p>the first and second actuators, providing larger torque and balancing the weight distribution. Holders for the additional actuators may be added to the mirroring position of the joint accordingly.</p><p>[0070]
+Likewise, unless otherwise stated herein, certain components of the assembly may</p><p>be manufactured and/or molded together in a unitary one-piece construction and/or may be manufactured and/or molded apart from one another in multiple pieces for subsequent assembly with one another.</p><p>[0071]
+The foregoing description has been presented for the purpose of illustration and is</p><p>not intended to be exhaustive or to limit the invention to the precise form disclosed. [0072]
+In the claims, the word "comprising" is used in its inclusive sense and does not</p><p>exclude other elements being present. The indefinite articles "a" and "an" before a claim feature do not exclude more than one of the features being present. Each one of the individual features described here may be used in one or more embodiments and is not, by virtue only of being described here, to be construed as essential to all embodiments as defined by the claims.</p>
+
+</body></html>

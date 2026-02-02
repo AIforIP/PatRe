@@ -1,0 +1,22 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Allowable Subject Matter
+Claims 16-35 allowed.
+The following is an examiner’s statement of reasons for allowance:
+The closest references found during Examiner’s search of the prior art was US 2017/0325725 to Shah et al., US 2016/0338733 A1 to Shah et al., US 2013/0245412 A1 to Rong et al., and US 2018/0199873 A1 to Wang et al. These references, alone or in combination with one another or any other prior art reference, fail to anticipate or render obvious the invention of claims 16, 27, and 32, including or similarly including, in combination with all other claim elements,
+“…a sensor having a proximal end and a distal end separated by a sensor straight, the distal end including a flex being terminated at a terminal end, the terminal end being within the interior of the piercing member, the sensor straight being adjacent to the exterior of the piercing member, the flex including a first layer, a second layer, and a third layer,
+wherein the first layer is composed of an insulator,
+wherein the second layer is disposed between the first and third layers,
+wherein the second layer is composed of an electrical conductor,
+wherein the second layer has a first width, a second width, and a third width,
+wherein the first width has a first width value, wherein the third width has the first width value,
+wherein the second width is located intermediate of the first and third widths, .
+wherein the second width has a second width value less than the first width value.”
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to Eric Messersmith whose telephone number is(571)270-7081. The examiner can normally be reached M-F, 830am-5pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, JACQUELINE CHENG can be reached on 571-272-5596. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/ERIC J MESSERSMITH/Primary Examiner, Art Unit 3791

@@ -1,0 +1,101 @@
+<html><head></head><body><h3>Date: 2023-03-29</h3>
+<p>CLAIMS</p>
+<p>What is claimed is:</p>
+<br>
+
+<br>
+1. A method of determining a collision-free space for a robotic welding system, the method comprising: 
+<br>
+fixing a location of a part to be welded in a 3D coordinate space of a robotic welding system; 
+<br>
+moving an arm of the robotic welding system around the part within the 3D coordinate space; 
+<br>
+recording data corresponding to positions and orientations of the arm in the 3D coordinate space as the arm is moved within the 3D coordinate space around the part; 
+<br>
+translating the data to swept volumes of data within the 3D coordinate space; and 
+<br>
+merging the swept volumes of data to generate 3D geometry data representing a continuous collision-free space within the 3D coordinate space. 
+
+<br>
+
+<br>
+2. The method of claim 1, further comprising planning a collision-free motion path of the arm through the 3D coordinate space using at least the 3D geometry data representing the continuous collision-free space.
+<br>
+
+<br>
+3. The method of claim 1, further comprising planning a collision-free air motion path within the 3D coordinate space from an end point of a first weld seam of the part to a start point of a second weld seam of the part using position data of the end point, position data of the start point, and the 3D geometry data representing the continuous collision-free space.
+<br>
+
+<br>
+4. The method of claim 1, further comprising planning a collision-free welding path within the 3D coordinate space from a start point of a weld seam of the part to an end point of the weld seam of the part using at least position data of the start point, position data of the end point, and the 3D geometry data representing the continuous collision-free space.
+<br>
+
+<br>
+5. The method of claim 1, wherein the arm of the robotic welding system is represented by the robotic welding system as data of 3D geometric volumes that occupy space within the 3D coordinate space.
+
+<br>
+6. The method of claim 1, wherein moving the arm of the robotic welding system around the part within the 3D coordinate space is accomplished manually by a user.
+<br>
+
+<br>
+7. The method of claim 1, wherein moving the arm of the robotic welding system around the part within the 3D coordinate space is accomplished automatically by a controller of the robotic welding system running a collision-free space search algorithm.
+<br>
+
+<br>
+8. The method of claim 1, wherein the recording, translating, and merging are accomplished by a controller of the robotic welding system running a collision-free space determination algorithm.
+<br>
+
+<br>
+9. The method of claim 1, wherein the data corresponding to the positions and the orientations of the arm in the 3D coordinate space are represented by x, y, z location data and roll, pitch, yaw orientation data corresponding to joints of the arm.
+<br>
+
+<br>
+10. The method of claim 1, wherein coordinate transformation mathematics is performed by a controller of the robotic welding system to accomplish the translating and the merging.
+<br>
+
+<br>
+11. A method of determining a collision-free space for a robotic welding system, the method comprising: 
+<br>
+moving a positioner mechanism in coordination with moving an arm of a robotic welding system through a 3D space of a welding environment, wherein the robotic welding system has coordinated kinematic control of the arm and the positioner mechanism; 
+<br>
+recording higher-dimensional joint space data corresponding to combined positions and orientations of joints of the arm and joints of the positioner mechanism as the arm and the positioner mechanism are moved in coordination through the 3D space; and 
+<br>
+mapping the higher-dimensional joint space data to a continuous higher-dimensional volume space data that represents 3D volumes occupied by at least the arm and the positioner mechanism, during the moving, wherein the continuous higher-dimensional volume space data represents collision-free configurations of at least the arm and the positioner mechanism. 
+<br>
+12. The method of claim 11, further comprising planning a collision-free motion path of the arm and the positioner mechanism through the 3D space using at least the continuous higher-dimensional volume space data representing the collision-free configurations.
+<br>
+
+<br>
+13. The method of claim 11, further comprising planning a collision-free air motion path within the 3D space from an end point of a first weld seam of a part, being held by the positioner mechanism, to a start point of a second weld seam of the part using position data of the end point, position data of the start point, and the continuous higher-dimensional volume space data representing the collision-free configurations.
+<br>
+
+<br>
+14. The method of claim 11, further comprising planning a collision-free welding path within the 3D space from a start point of a weld seam of a part, being held by the positioner mechanism, to an end point of the weld seam of the part using at least position data of the start point, position data of the end point, and the continuous higher-dimensional volume space data representing the collision-free configurations.
+<br>
+
+<br>
+15. The method of claim 11, wherein the arm of the robotic welding system and the positioner mechanism are represented within the robotic welding system as data of 3D geometric volumes that occupy the 3D space.
+<br>
+
+<br>
+16. The method of claim 11, wherein moving the arm of the robotic welding system in coordination with the positioner mechanism within the 3D space is accomplished automatically by a controller of the robotic welding system running a collision-free space search algorithm.
+<br>
+
+<br>
+17. The method of claim 11, wherein the recording and mapping are accomplished by a controller of the robotic welding system running a collision-free space determination algorithm.
+<br>
+
+<br>
+18. The method of claim 11, wherein the higher-dimensional joint space data corresponding to combined positions and orientations of joints of the arm and joints of the positioner mechanism are represented by x, y, z location data and roll, pitch, yaw orientation data.
+
+<br>
+19. The method of claim 11, wherein coordinate transformation mathematics is performed by a controller of the robotic welding system to accomplish the mapping.
+<br>
+
+<br>
+20. The method of claim 11, wherein the arm is holding a welding tool and the positioner mechanism is holding a part to be welded.
+24
+25
+26
+27
+</body></html>

@@ -1,0 +1,9 @@
+<html><head></head><body>18883733
+
+   
+   
+ABSTRACT
+   
+   <p>The present disclosure relates generally to high voltage systems. In one embodiment, a balancing and measuring circuit is disclosed, comprising: a first capacitor electrically coupled between a first voltage and a chassis voltage, wherein the first voltage is greater than the chassis voltage; a second capacitor electrically coupled between a second voltage and the chassis voltage, wherein the second voltage is less than the chassis voltage; a first circuit associated with the first capacitor; and a second circuit associated with the second capacitor, wherein the first circuit and the second circuit each comprise: a resistive element; a switching element; a voltage circuit configured to generate a reference voltage; and a controller configured to monitor a voltage of a reference capacitor and to control the switching element based on the monitored voltage, wherein the resistive element and the switching element are connected in series.</p>
+
+</body></html>

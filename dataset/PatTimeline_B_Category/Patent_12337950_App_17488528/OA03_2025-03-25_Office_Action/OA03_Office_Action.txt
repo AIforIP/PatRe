@@ -1,0 +1,56 @@
+EXAMINER’S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+The application has been amended as follows:
+1. (Currently Amended) A control system for an aircraft, the control system comprising:
+a pilot input device configured to receive a pilot input;
+a first sensor positioned on a landing gear of the aircraft, the first sensor configured to sense a force on the landing gear; and
+a controller in communication with the pilot input device and the first sensor, the controller configured to
+receive the pilot input via the pilot input device,
+receive a sensed force on the landing gear via the first sensor,
+calculate an output command based at least on the pilot input and the force on the landing gear, wherein the controller calculates the output command by calculating a correction factor, wherein the pilot input and the sensed force on the landing gear are inputs used to calculate the correction factor, and
+transmit the output command to control the aircraft,
+wherein the controller determines the correction factor using a PID control mode when the aircraft is in a landed flight state.
+11. (Currently Amended) A method of controlling an aircraft, the method comprising:
+receiving, by an electronic processor, a pilot input including a setpoint;
+receiving, by the electronic processor, a first signal from a first sensor positioned on a landing gear of the aircraft;
+calculating, by the electronic processor, a first correction factor wherein the setpoint and the first signal are inputs used to calculate the first correction factor;
+determining, by the electronic processor, an output command based on the first correction factor, the output command including instructions for controlling the aircraft; and
+transmitting, by the electronic processor, the output command to control the aircraft,
+wherein, when the aircraft is in a landed flight state, determining the output command includes determining the output command using a PID control mode.
+17. (Currently Amended) A control system for an aircraft, the control system comprising:
+a pilot input device configured to receive a pilot input;
+a plurality of sensors, each of the plurality of sensors positioned on a corresponding landing gear of the aircraft and configured to sense a parameter on the corresponding landing gear; and
+a controller in communication with the plurality of sensors, the controller configured to calculate an output command based on the pilot input and the sensed parameters of the landing gear, the output command including instructions for controlling a rotor of the aircraft,
+wherein the controller calculates the output command by calculating a correction factor wherein the pilot input and the sensed parameters on the landing gear are inputs used to calculate the correction factor, and
+wherein, when the aircraft is in a landed flight state, the controller is configured to determine the correction factor using a PID control mode.
+21. (Currently Amended) The control system of claim [[3]]1, wherein the correction factor includes a first component and a second component, wherein the first component is calculated using the PID control mode, and wherein the second component is calculated using a PD control mode.
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Prosecution History
+Claims 1-20 were originally filed 09/29/2021.
+Claims 21 and 22 have since been added to the claim set by applicant.
+Claims 1, 7-8, 10-11, and 17 have since been amended by applicant.
+Claims 2-3, 13, and 18-19 have since been canceled by applicant.
+Claims 1, 4-12, 14-17, and 20-22 are pending and allowed.
+Allowable Subject Matter
+Claims 1, 4-12, 14-17, and 20-22 are allowed over the prior art of record.
+The following is an Examiner’s statement of reasons for allowance:
+The closest prior art of record is Vallart et al. US 20160327958 (“Vallart”), Romana et al. US 20170008619 (“Romana”), White EP 3208190 (“White”), Waltner et al. US 20180305038 (“Waltner”), Seydoux et al. US 20110049290 (“Seydoux”), and Thomas US 20210271267 (“Thomas”).
+Vallart discloses a control system for a rotorcraft that uses inputs provided by a pilot and detected forces applied to landing gear units to determine PID control adjusters to implement control laws for driving the rotors of the rotorcraft when the rotorcraft is in an in flight state or a touching state, however, when the rotorcraft is in a landed state, the control system implements a new control law that is different from those applied by the PID adjusters with a direct or proportional law that may not include an integrating adjuster.
+Romana teaches a controller for an aircraft steering system that adjusts a steering command based on undesired moments detected on the nose landing gear.
+White teaches a rotor moment control system that uses weight on wheel sensors to detect whether an aircraft is resting on the ground.
+Waltner teaches a touchdown control system for an aircraft that includes an attitude sensor positioned on the aircraft.
+Seydoux teaches a system for controlling flight of an aircraft using a proportional derivative controller.
+Thomas teaches a system for controlling an aerial vehicle that is capable of measuring an attitude orientation of the aerial vehicle and determining compensations/corrections to be forwarded to an attitude controller in order to achieve a desired attitude.
+As to independent claims 1, 11, and 17, the prior art of record, taken individually or in combination, fails to teach or suggest the following claimed subject matter:
+“wherein the controller determines the correction factor using a PID control mode when the aircraft is in a landed state”
+Claims 4-10 and 21-22 depend from claim 1, Claims 12 and 14-16 depend from claim 11, and Claim 20 depends from claim 17, and are therefore allowable.
+Any comments considered necessary by Applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee. Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to MICHAEL J HERRERA whose telephone number is(571)270-5271. The examiner can normally be reached M-F 10:00 AM to 6:00 PM EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, FADEY JABR can be reached on (571)272-1516. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/M.J.H./Examiner, Art Unit 3668
+/Thomas Ingram/Primary Examiner, Art Unit 3668

@@ -1,0 +1,5 @@
+<html><head></head><body><h3>Date: 2022-10-10</h3>
+
+<h1>ABSTRACT</h1>
+<p>This application discloses a method for interactive plot jumping, a method for displaying an interactive plot interface, an apparatus, and a device. The method includes obtaining current node information comprising a first plot path that reaches a current node and a plot parameter of the current node, the current node indicating a plot where a user is currently located; obtaining target node information in response to a plot jump instruction for a target node, the plot jump instruction instructing a plot to jump from the current node to the target node; performing path splicing on the first plot path and the historical plot path to obtain a spliced plot path that conforms to a plot logic rule and satisfies a plot parameter condition, the spliced plot path leading to the target node; and updating the plot parameter corresponding to the target node based on the spliced plot path.</p><p>2 1PCT57 1/US
+56</p></body></html>

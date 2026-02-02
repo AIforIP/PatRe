@@ -1,0 +1,18 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Status of Claims
+2.	This Office Action is in response to the applicant’s RCE filed on December 19, 2024. Claims 1-24 have been allowed for the reasons set forth below.
+Response to Amendment
+3.	Applicant’s response after the final rejection of the last Office Action is persuasive, and the final rejection is withdrawn.
+Reasons for Allowance
+4.	Claims 1-24 are allowed over the prior art of record. The following is a statement of reasons for the indication of allowable subject matter:
+5.	The closest prior art of record is Suzuki et al, JP 2009-83647 A, in view of Kim et al. US 2018/0093663, hereinafter referred to as Suzuki and Kim, respectively.
+6.	Regarding independent claim 1, the closest prior art of record taken either individually or in combination with other prior art of record fails to disclose, suggest, or teach:
+receive, from a travelling assistance unit that performs an assistance operation of assisting travelling of the vehicle based on the object information, related information, the related information being related to the assistance operation performed by the travelling assistance unit; obtain a priority region assistance operation that is currently being performed by the travelling assistance unit based on the related information; determine storage priority of the object information in the object information storage unit based on the priority region assistance operation; and manage a storage state of the object information in the object information storage unit based on the storage priority, wherein the travelling assistance unit performs the assistance operation of assisting travelling of the vehicle based on the object information.
+7.	Claims 2-12 depend from claim 1 and are therefore allowed.
+8.	Claim 13 presents the same limitations as claim 1 and it is therefore allowed for the same reasons.
+9.	Claims 14-24 depend from claim 13 and are therefore allowed.
+10.	Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee. Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to LUIS A MARTINEZ BORRERO whose email is luis.martinezborrero@uspto.gov and telephone number is (571)272-4577.  The examiner can normally be reached on M-F 8:00-5:00. If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, HUNTER LONSBERRY can be reached on (571) 272-7298.  The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300. Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/LUIS A MARTINEZ BORRERO/Primary Examiner, Art Unit 3665

@@ -1,0 +1,52 @@
+<html><head></head><body>18775083
+
+   
+   
+WHAT IS CLAIMED IS:
+   
+   
+
+<br>
+
+1. A recliner automatic fastening system configured to automatically fasten a cushion of a car seat and a nut of a back frame, the system comprising:
+an articulated robot installed along a conveyor line of a car seat;
+a vision check part checking a position of a nut temporarily fastened to the car seat using 2D vision sensing and then notifying the position to the articulated robot, and performing vision sensing on the nut that has been fastened;
+a nut fastening part installed on the articulated robot, and fastening the nut when it moves to the position of the nut that is temporarily fastened by the articulated robot; and
+a fastening check part checking whether the nut is normally fastened using sensing data obtained by performing vision sensing on the fastened nut received from the vision check part.
+<br>
+
+2. The recliner automatic fastening system of claim 1, wherein the nut fastening part fastens the nut until it reaches a preset torque value.
+<br>
+
+3. The recliner automatic fastening system of claim 1, wherein the fastening check part checks an exposed length of a protruding end of a bolt that has been fastened by the nut fastening part using sensing data received from the vision check part and then deduces a final fastening position of the nut.
+<br>
+
+4. The recliner automatic fastening system of claim 1, wherein the vision check part performs 2D vision sensing on a nut fastening process of the nut fastening part and then transmits a sensed result to the fastening check part in real time.
+<br>
+
+5. The recliner automatic fastening system of claim 4, wherein the fastening check part checks whether a joint of the articulated robot is distorted or the car seat is twisted during fastening of the nut, using sensing data received from the vision check part in real time, and when it is checked that the joint of the articulated robot is distorted or the car seat is twisted, the fastening check part stops fastening the nut fastening part, re-executes 2D vision sensing by the vision check part, and then re-executes fastening by the nut fastening part.
+<br>
+
+6. The recliner automatic fastening system of claim 1, wherein the fastening check part checks whether the nut is normally fastened, based on a fastening torque value of the nut and a position of the articulated robot.
+<br>
+
+7. The recliner automatic fastening system of claim 1, wherein the fastening check part identifies a type of the nut using an insertion depth of the nut, which is detected through 2D vision sensing from a side of the nut using the vision check part.
+<br>
+
+8. The recliner automatic fastening system of claim 1, wherein the fastening check part identifies the type of the nut using a shape of the nut in a fastened state, which is detected through 2D vision sensing using the vision check part.
+<br>
+
+9. A recliner automatic fastening method using a recliner automatic fastening system of claim 1, the method comprising:
+a nut insertion step in which a nut fastening part enters a position where a nut is temporarily fastened by an articulated robot;
+a fastening step in which the temporarily fastened nut is fastened to a final fastening position by the nut fastening part; and
+a fastening completion step in which the fastening check part checks whether the nut is normally fastened using sensing data that is acquired through vision sensing using the vision check part, when the nut fastening part is completely moved to an expected position by the articulated robot.
+<br>
+
+10. The recliner automatic fastening method of claim 9, wherein, in the nut insertion step, a case where the nut fastening part is under-inserted or over-inserted compared to a predetermined insertion depth is recognized as an error, so that re-insertion of the nut fastening part is attempted after vision re-photography is performed using the vision check part.
+<br>
+
+11. The recliner automatic fastening method of claim 9, wherein, in the fastening step, a change in position of the articulated robot and a change in torque value of the nut fastening part are measured, and, when the torque value change of the nut fastening part is measured in a state where a change in position of the articulated robot is less than expected to a final fastening position of the nut, it is determined that fastening is not completely achieved due to presence of foreign matter.
+
+   
+
+</body></html>

@@ -1,0 +1,116 @@
+<html><head></head><body><h3>Date: 2024-06-12</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>This listing of claims replaces all prior versions and listings of claims in the application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<p>1-28 (Cancelled)</p><p>Filed
+:  January 25, 2024</p><br>
+<br>
+29.    (New) A device comprising:<br>
+a substrate configured to support a subject;<br>
+a plurality of non-contact sensors configured to capture acoustic signals and second signals with respect to the subject;<br>
+an audio interface; and<br>
+a processor in communication with the plurality of sensors and the audio interface, the processor configured to:<br>
+determine one or more biosignals from one or more of (i) the acoustic signals or (ii) the second signals to monitor a health status of the subject;<br>
+detect presence of speech in the acoustic signals; and<br>
+detect a verbal command in the speech,<br>
+wherein, in response to not detecting presence of the verbal command, the processor is configured to perform a sleep disordered breathing (SDB) analysis.<br>
+<br>
+30.    (New) The device of claim 29, wherein the processor is further configured to:<br>
+digitize the acoustic signals to obtain digitized acoustic signals, and encrypt the digitized acoustic signals by at least one of: filtering the digitized acoustic signals to a lower and narrower frequency than a frequency of the digitized acoustic signals, masking the digitized acoustic signals using a mask template or an encryption key, and transforming the digitized acoustic signals using a mathematical formula.<br>
+<br>
+31.    (New) The device of claim 29, wherein the processor is further configured to:<br>
+<br>
+<br>
+<br>
+identify a context of the speech upon detection of the verbal command; and<br>
+perform at least one of:<br>
+initiate an interactive session, via the audio interface, with the subject or an entity associated with the subject based on the verbal command and the context of the speech; and<br>
+determine a responsive action based on the verbal command and the context of the speech.<br>
+<br>
+32.   (New) The device of claim 29, wherein the audio interface is further configured to recognize and respond to the verbal command from a designated individual.<br>
+<br>
+33.   (New) The device of claim 29, wherein the processor is further configured to:<br>
+compare the acoustic signals against a dictionary of electronic commands to identify unrelated conversations to discard.<br>
+<br>
+34.    (New) The device of claim 29, wherein the plurality of non-contact sensors are configured to capture second signals from an action of the subject with respect to the substrate, and the processor is further configured to perform at least one of cardiac analysis, respiratory analysis, and motion analysis based on the second signals to monitor the health status of the subject.<br>
+<br>
+35.   (New) The device of claim 34, wherein the SDB analysis comprises breathing disturbances analysis, and wherein, when performing the breathing disturbances analysis to monitor the health status of the subject, the processor is further configured to:<br>
+fuse the second signals and the acoustic signals based on one or more similarity metrics to generate fusion signals;<br>
+detect the SDB using at least one of: (iii) the fusion signals, (iv) the second signals, or (v) the acoustic signals; and<br>
+determine a responsive action to detection of the SDB.<br>
+<br>
+36.   (New) The device of claim 35, wherein the responsive action is one or more of:<br>
+<br>
+Filed
+:   January 25, 2024<br>
+an audible tone;<br>
+an audible message;<br>
+a trigger for a home automation device;<br>
+a trigger for a speech assistant device;<br>
+a call to an entity or emergency services;<br>
+marking data for future access;<br>
+a database entry; and<br>
+a health check.<br>
+<br>
+37.    (New) The device of claim 35, wherein the processor is further configured to determine an intensity, magnitude, duration, and type of the SDB.<br>
+<br>
+38.    (New) The device of claim 29, wherein, in response to detecting the presence of the verbal command, the audio interface is configured to interactively communicate with at least one of the subject or an entity associated with the subject based on at least one of an action needed due to the health status of the subject and the verbal command.<br>
+<br>
+39.    (New) A system comprising:<br>
+a speech capable device configured to communicate with at least one of a subject or an entity associated with the subject;<br>
+an apparatus in communication with the speech capable device, the apparatus comprising:<br>
+a substrate configured to support the subject;<br>
+a plurality of non-contact sensors configured to capture acoustic signals with respect to the subject and second signals from subject actions with respect to the substrate;<br>
+a processor in connection with the plurality of non-contact sensors, the processor configured to:<br>
+monitor a health status of the subject based on one or more of (i) the second signals; or (ii) the acoustic signals;<br>
+detect presence of speech in the acoustic signals; and<br>
+detect a verbal command in the speech, wherein, in response to not detecting presence of<br>
+<br>
+<br>
+<br>
+<br>
+the verbal command, the speech capable device is configured to perform a sleep disordered breathing (SDB) analysis.<br>
+<br>
+40.    (New) The system of claim 39, wherein the processor is further configured to:<br>
+digitize the acoustic signals to obtain digitized acoustic signals, and encrypt the digitized acoustic signals by at least one of: filtering the digitized acoustic signals to a lower and narrower frequency than a frequency of the digitized acoustic signals, masking the digitized acoustic signals using a mask template or an encryption key, and transforming the digitized acoustic signals using a mathematical formula.<br>
+<br>
+41.    (New) The system of claim 39, wherein the processor is further configured to:<br>
+compare the acoustic signals against a dictionary of electronic commands to identify unrelated conversations to discard;<br>
+determine the presence of the verbal command;<br>
+identify a context of the speech upon detection of the verbal command; and<br>
+perform at least one of:<br>
+initiate an interactive session, via the speech capable device, with the at least one of the subject or the entity based on the verbal command and the context of the speech; and<br>
+determine a responsive action based on the verbal command and the context of the speech.<br>
+<br>
+42.    (New) The system of claim 39, wherein the speech capable device is further configured to recognize and respond to the verbal command from a designated individual.<br>
+<br>
+43.    (New) The system of claim 39, wherein the processor is further configured to:<br>
+perform respiratory analysis based on the second signals;<br>
+compare the acoustic signals against a dictionary of electronic commands to identify unrelated conversations to discard;<br>
+fuse the second signals and the acoustic signals based on one or more similarity metrics to generated fusion signals in response to not detecting the presence of the verbal command;<br>
+<br>
+Filed
+:   January 25, 2024<br>
+detect the SDB using at least one of: (iii) the fusion signals, (iv) the second signals, or (v) the acoustic signals; and<br>
+determine a responsive action to detection of the SDB.<br>
+<br>
+44.    (New) The system of claim 43, wherein the processor is further configured to determine an intensity, magnitude, duration, and type of the SDB.<br>
+<br>
+45.    (New) The system of claim 43, wherein the responsive action is one or more of:<br>
+an audible tone;<br>
+an audible message;<br>
+a trigger for a home automation device;<br>
+a trigger for a speech assistant device;<br>
+a call to an entity or emergency services;<br>
+marking data for future access;<br>
+a database entry; and<br>
+a health check.<br>
+<br>
+46.    (New) A device comprising:<br>
+a substrate configured to support a subject;<br>
+a plurality of non-contact sensors configured to capture signals with respect to the subject;<br>
+a processor in connection with the plurality of sensors, the processor configured to:determine biosignals from the signals to monitor a health status of the subject;<br>
+detect presence of speech in an acoustic signal; and<br>
+detect a verbal command in the speech, wherein, in response to not detecting presence of the verbal command, the processor is configured to perform a sleep disordered breathing (SDB) analysis.
+</body></html>

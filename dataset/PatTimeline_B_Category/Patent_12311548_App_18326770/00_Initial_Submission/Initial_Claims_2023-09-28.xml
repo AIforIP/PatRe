@@ -1,0 +1,59 @@
+<html><head></head><body><h3>Date: 2023-09-28</h3>
+<p>IN THE CLAIMS</p><br>
+1.
+(currently amended) A computerized method for controlling movement of an end effector having a robotic wrist, the method comprising the following operations performed by a computer system:<br>
+producing sensor measurements of force or torque in a transmission that mechanically couples the robotic wrist to an actuator, wherein the sensor measurements are cable force measurements;<br>
+estimating joint friction in a joint of the robotic wrist, based on the cable force measurements, <del>using a first closed form mathematical expression that relates</del><u>by relating </u>the cable force measurements to a joint friction variable; and<br>
+performing control tasks to control movement of the end effector, by using the estimated joint friction<del> to compensate for tracking error of the end effector</del>.<br>
+2.
+(original) The method of claim 1 wherein performing control tasks comprises generating one or more control signals which control how the actuator is energized to move the robotic wrist.<br>
+3.
+(original) The method of claim 2 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission.<br>
+4.
+(currently amended) The method of claim 2 wherein using the estimated joint friction to<del> compensate for tracking error </del>comprises<u> computing a tracking error of the end effector based on the joint friction variable</u><u>;</u><u> and</u><br>
+adjusting the one or more control signals based on the tracking error.<br>
+5.
+(currently amended) The method of claim 4 further comprising computing the tracking error using a <del>second closed form </del>mathematical expression that relates the joint friction variable to the tracking error.<br>
+6.
+(currently amended) The method of claim 4 wherein <u>relating the cable force measurements to the joint friction variable comprises relating </u><del>the first closed form mathematical expression relates </del>a plurality of cable tension variables to a plurality of joint friction torque<br>
+<br>
+<br>
+variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+7.
+(currently amended) The method of claim 1 wherein the end effector comprises <del>a pair of pivoting jaws </del><u>a pivoting jaw </u>having a jaw angle <del>between them </del>and being mechanically coupled to the wrist to be driven by the actuator, and the tracking error refers to the jaw angle.<br>
+8.
+(original) The method of claim 7 wherein the joint friction variable represents friction at the joint of the wrist.<br>
+9.
+(original) The method of claim 8 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission that mechanically couples the robotic wrist to the actuator.<br>
+10.
+(currently amended) The method of claim 1 wherein <del>the first closed form mathematical expression relates</del><u>relating the cable force measurements to the joint friction variable comprises relating </u>a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+11.
+(currently amended) An article of manufacture comprising a computer-readable storage medium having stored therein instructions that configure a processor to:<br>
+produce sensor measurements of force or torque in a transmission, wherein the transmission mechanically couples a robotic wrist of an end effector to an actuator so the actuator can drive a joint of the robotic wrist and the sensor measurements are cable force measurements;<br>
+estimate joint friction in the joint of the robotic wrist based on the cable force measurements, <del>using a first closed form mathematical expression that relates</del><u>by relating </u>the cable force measurements to a joint friction variable; and<br>
+perform control tasks to control movement of the end effector, by using the estimated joint friction<del> to compensate for tracking error of the end effector</del>.<br>
+12.
+(currently amended) The article of manufacture of claim 11 wherein the computer- readable storage medium has stored therein <del>further </del>instructions that configure the processor to <u>u</u><u>se</u><u> the estimated join friction by computing a tracking error of the end-effector based on the joint</u><br>
+<br>
+<br>
+<u>friction variable</u><del>compute the tracking error using a second closed form mathematical expression that relates the joint friction variable to the tracking error</del>.<br>
+13.
+(currently amended) The article of manufacture of <del>claim 11</del><del></del><u>claim 12 </u>wherein the processor <u>performs the control tasks by generating one or more control si</u><u>g</u><u>nals which control how the actuator is ener</u><u>g</u><u>ized to move the robotic wrist, based on the tracking error</u><del>estimates the joint friction by applying the cable force measurements to the first closed form mathematical expression</del>.<br>
+14.
+(original) The article of manufacture of claim 13 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission.<br>
+15.
+(currently amended) The article of manufacture of claim 13 wherein the <u>processor relates the cable force measurements to the join friction variable by relating </u><del>first closed form mathematical expression relates </del>a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+16.
+(currently amended) The article of manufacture of claim 13 wherein the end effector comprises <del>a pair of pivoting jaws</del><u>a jaw </u>having a jaw angle <del>between them </del>and being mechanically coupled to the robotic wrist, and the tracking error refers to the jaw angle.<br>
+17.
+(original) The article of manufacture of claim 16 wherein the joint friction variable represents friction at the joint of the robotic wrist.<br>
+18.
+(original) The article of manufacture of claim 17 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission that mechanically couples the robotic wrist to the actuator.<br>
+19.
+(currently amended) The article of manufacture of claim 11 wherein <u>processor relates the cable force measurements to the joint friction variable comprises by relating </u><del>the first closed form mathematical expression relates </del>a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+<br>
+<br>
+20.
+(currently amended) The article of manufacture of 19 wherein the computer-readable storage medium has stored therein further instructions that configure the processor to <u>use the estimated joint friction by computing a tracking error of the end effector based on the joint friction variable</u><del>compute the tracking error using a second closed form mathematical expression that relates the joint friction variable to the tracking error</del>.<br>
+
+</body></html>

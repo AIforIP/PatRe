@@ -1,0 +1,91 @@
+<html><head></head><body><h3>Date: 2025-02-12</h3>
+
+<h1><u>Listing of Claims:</u></h1>
+
+<h1>What is claimed is:</h1>
+<p><u>Amendments to the Claims</u>This listing of claims will replace all prior versions and listings of claims in the subject application.</p><br>
+<br>
+Claim 1 (Currently Amended):   A system comprising:an optical fibre assembly configured to measure one or more physiological parameters of an individual; and<br>
+a pressure sensor configured to measure a contact pressure of the optical fibre assembly on the individual;<br>
+wherein the pressure sensor comprises:<br>
+an optical fibre comprising:a transducer fibre Bragg gratingi[[and ]] a matrix,_[[;]] wherein the transducer fibre Bragg grating is embedded in the matrix[[;]] and the matrix is configured to cause longitudinal strain in the transducer fibre Bragg grating in response to the matrix being subject to a transverse load;<u></u><u>and</u><br>
+<u>a temperature compensation fibre Bra</u><u>gg g</u><u>ratin</u><u>g</u><u> received in a clearance fit in a cavity of a ri</u><u>g</u><u>id support member isolatin</u><u>g</u><u> the temperature compensation fibre Bra</u><u>gg</u><u> gratin</u><u>g</u><u> from a transverse load</u><u>;</u><br>
+wherein the optical fibre assembly is configured to measure the physiological parameter only when contact pressure of the optical fibre assembly measured by the pressure sensor is determined to be within a predefined range;<u> and</u><br>
+<u>wherein the temperature compensation fibre Bra</u><u>gg g</u><u>ratin</u><u>g</u><u> is free to expand and contract independently of the ri</u><u>g</u><u>id support member.</u><br>
+<br>
+Claim 2 (Cancelled)<br>
+<br>
+<br>
+<br>
+<br>
+Claim 3 (Previously Presented): The system of claim 1, wherein the optical fibre of the pressure sensor further comprises a strain compensation fibre Bragg grating or wherein the matrix containing the transducer fibre Bragg grating comprises an elongated longitudinal section relative to a length of the transducer fibre Bragg grating.<br>
+<br>
+Claim 4 (Cancelled).<br>
+<br>
+Claim 5 (Previously Presented): The system of claim 1, wherein the optical fibre comprises a plurality of transducer fibre Bragg gratings, each of the plurality of fibre Bragg gratings embedded in a respective matrix.<br>
+<br>
+Claim 6 (Previously Presented): The system of claim 5, wherein each of the plurality of transducer fibre Bragg gratings has a corresponding strain compensation fibre Bragg grating; or wherein the matrix of each of the plurality of transducer fibre Bragg gratings comprises an elongated longitudinal section relative to a length of the transducer fibre Bragg grating.<br>
+<br>
+Claim 7 (Previously Presented): The system of claim 1, wherein one or more optical fibres of the optical fibre assembly is embedded in a second matrix such that the ends of the one or more optical fibres of the optical fibre assembly are able to transmit light to or receive light from the individual when an outer surface of the matrix is in contact with the individual, and/or wherein one or more optical fibres of the optical fibre assembly is embedded in a second matrix such that the ends of the one or more optical fibres of the optical fibre assembly are exposed to gas emitted from the individual;wherein the second matrix is the same as or different than matrix in which the transducer fibre Bragg grating is embedded.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Claim 8 (Previously Presented): The system of claim 7, wherein:i) the one or more optical fibres of the optical fibre assembly are embedded in the same matrix as the matrix in which a transducer fibre Bragg grating of the optical fibre of the pressure sensor is embedded; or ii) the matrix in which the one or more optical fibres of the optical fibre assembly are embedded is connected to a matrix in which a transducer fibre Bragg grating of the optical fibre of the pressure sensor is embedded; and/or wherein the matrix in which the one or more optical fibres of the optical fibre assembly are embedded comprises scattering elements configured to diffusely scatter light from the optical fibres, or wherein the system comprises a scattering layer configured to be disposed between the matrix in which the one or more optical fibres of the optical fibre assembly are embedded and the individual, wherein the scattering layer is configured to diffusely scatter light from the optical fibres.<br>
+<br>
+Claim 9 - 10 (Cancelled).<br>
+<br>
+<br>
+Claim 11 (Previously Presented): The system of claim 1, wherein the optical fibre assembly is configured to measure blood oxygen saturation of an individual when in contact with the individual, the optical fibre assembly comprising:a first optical fibre configured to deliver light to the individual at a first wavelength;<br>
+a second optical fibre configured to deliver light to the individual at a second wavelength; and<br>
+a third optical fibre configured to receive light reflected from the individual at both the first and second wavelength; and/or wherein the optical fibre assembly is configured to measure C02 emitted from the skin of the individual when in contact with the individual, the optical fibre assembly comprising:<br>
+<br>
+<br>
+<br>
+a fourth optical fibre with a tip that is configured with reflectance properties that vary in response to C02 and which is exposed to gases emitted from the skin of the individual.<br>
+<br>
+Claim 12 (Cancelled).<br>
+<br>
+Claim 13 (Withdrawn):  A handheld probe comprising the system of claim 1.<br>
+<br>
+Claim 14 (Currently Amended): A textile comprising the system of claim 1, <u>comprisin</u><u>g</u><u> a plurality of the optical fibres </u><del>wherein the optical fibres of the optical fibre assembly are </del>integrated with the textile by knitting, weaving, embroidering or threading the optical fibres into the textile.<br>
+<br>
+Claim 15 (Original):   The textile of claim 14, wherein the optical fibre of the pressure sensor is integrated with the textile by knitting, weaving, embroidering or threading the optical fibre into the textile.<br>
+<br>
+Claim 16 (Withdrawn):  A compression bandage or compression garment comprising the textile of claim 14.<br>
+<br>
+Claim 17 (Previously Presented): A loose fitting garment comprising the textile of claim 14, wherein the optical fibre assembly is configured to measure the one or more physiological parameters only when an appropriate pressure is applied.<br>
+<br>
+Claim 18 (Original):   The loose fitting garment of claim 17, wherein the appropriate pressure is between from 5 kPa to 15 kPa.<br>
+<br>
+Claim 19 (Currently Amended): A method of monitoring a physiological parameter of an individual, the method comprising:<br>
+<br>
+<br>
+<br>
+applying an optical fibre assembly to an individual;<br>
+measuring the physiological parameter using the optical fibre assembly; and<br>
+measuring a contact pressure of the optical fibre assembly on the individual using a pressure sensor;<br>
+wherein the pressure sensor comprises:<br>
+an optical fibre comprising a transducer fibre Bragg grating;<br>
+wherein the transducer fibre Bragg grating is embedded in a matrix,[[; and<br>
+]]the matrix is configured to cause longitudinal strain in the transducer fibre Bragg grating in response to the matrix being subject to a transverse load; and<u>a temperature compensation fibre Bra</u><u>gg g</u><u>ratin</u><u>g</u><u> received in a clearance fit in a cavity of a ri</u><u>g</u><u>id support member isolatin</u><u>g</u><u> the temperature compensation fibre Bra</u><u>gg</u><u> grating from a transverse load</u><u>;</u><br>
+wherein the physiological parameter is measured using the optical fibre assembly only when contact pressure of the optical fibre assembly measured by the pressure sensor is determined to be within a predefined range;<u> and</u><br>
+<u>wherein the temperature compensation fibre Bra</u><u>gg</u><u> grating is free to expand and contract independently of the rigid support member.</u><br>
+<br>
+Claim 20 (Cancelled):<br>
+<br>
+Claim 21 (Currently Amended): The method of claim <u>19</u><u>, </u>[[21, ]]wherein the predefined range of contact pressure of the optical fibre assembly is between from 5 kPa to 15 kPa.<br>
+<br>
+Claim 22 (Previously Presented): The method of claim 19, wherein the optical fibre assembly and the pressure sensor are integrated with a textile, the method comprising applying the textile to the individual to measure the physiological parameter and the contact pressure.<br>
+<br>
+<br>
+<br>
+<br>
+Claim 23 (Original):
+The method of claim 22, wherein applying the textile to the individual comprises at least one of the individual i) wearing the textile, ii) lying on the textile, iii) sitting on the textile, iv) resting part of their body on the textile, and/or v) performing an activity whilst at least part of their body is in contact with the textile.<br>
+Claim 24 (Withdrawn):
+The method of claim 19, wherein the optical fibre assembly and the pressure sensor are incorporated into a handheld probe.<br>
+<br>
+Claim 25 (Previously Presented): The system of claim 1, wherein the predefined range of contact pressure of the optical fibre assembly is between from 5 kPa to 15 kPa.
+</body></html>

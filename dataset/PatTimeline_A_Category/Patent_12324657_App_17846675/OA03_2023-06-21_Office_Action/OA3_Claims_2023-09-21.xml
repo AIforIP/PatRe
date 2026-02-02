@@ -1,0 +1,67 @@
+<html><head></head><body><h3>Date: 2023-09-21</h3>
+<p><u>AMENDMENTS</u><u>TO</u><u>CLAIMS</u>This listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+<br>
+1. (Withdrawn) A system for diagnosing animal diseases using auscultation analysis, said system comprising:<br>
+a wireless electronic digital stethoscope for recording auscultated lung sounds obtained from the animal in the form of digital sound data;<br>
+a processor for processing the digital sound data;<br>
+computer coded instructions for manipulating the digital sound data through incorporation of at least one algorithm used to calculate a value, said algorithm utilizing selected frequencies of the auscultated sounds;<br>
+a database for storing data reflective of diagnosis that correspond to the values obtained from the algorithm; and<br>
+a user display incorporated on the digital stethoscope for displaying information reflective of a state of health of the animal.<br>
+<br>
+2. (Withdrawn) A system, as claimed in claim 1, wherein:<br>
+said processor is integrated within a housing on the digital stethoscope, said housing for holding said processor and said user display therein.<br>
+<br>
+3. (Withdrawn) A system, as claimed in claim 1, wherein:<br>
+selected frequencies are removed from the recorded sounds as noise.<br>
+<br>
+4. (Withdrawn) A system, as claimed in claim 1, wherein:<br>
+a first test sound is recorded to confirm the stethoscope is recording sound that falls within pre-determined parameters including parameters for expected frequency ranges and amplitudes.<br>
+<br>
+5. (Withdrawn) A system, as claimed in claim 1, wherein:<br>
+said digital stethoscope includes a wireless audio digital recording unit, said unit having a curved paddle recording element, and a rotatable handle connected to the paddle.<br>
+<br>
+6. (Withdrawn) A system, as claimed in claim 1, wherein:<br>
+said paddle includes at least one sensor including a multi channel microphone incorporated therein for detecting and transmitting auscultated sounds to the processor.<br>
+<br>
+7. (Withdrawn) A method for diagnosing animal diseases using auscultation analysis, said method comprising:<br>
+recording auscultated sounds from an animal by an electronic digital stethoscope and converting the sounds to digital data;<br>
+converting the digital data to data in a frequency domain;<br>
+separating data in the frequency domain into predetermined desired groups of amplitudes and frequencies forming converted data;<br>
+applying an algorithm to the converted data to generate at least one of a value or visual indication that corresponds to a state of health of the animal;<br>
+providing an integral display on the digital stethoscope; and<br>
+generating an output on the display for observation by a user indicating to the user a status of health of the animal.<br>
+<br>
+8. (Currently Amended) A system for gathering information regarding an animal and using the information for determining a state of health of the animal, said system comprising:<br>
+a stethoscope for recording auscultated lung sounds obtained from the animal in the form of digital sound data;<br>
+a processor for processing the digital sound data;<br>
+computer coded instructions for manipulating the digital sound data through incorporation of at least one algorithm used to calculate a value, said algorithm utilizing selected frequencies of the auscultated sounds, said algorithm generating a first set of data;<br>
+said first set of data recorded in a database of said processor and said first set of data reflective of a diagnosis that corresponds to the values obtained from the algorithm;<br>
+a user display incorporated on the stethoscope for displaying information reflective of a state of health of the animal corresponding to the diagnosis and to additional health information;<br>
+at least one field device wirelessly communicating with the stethoscope, said field device including at least one of a RFID reader, a diagnostic device, and a temperature probe;<br>
+a second set of data obtained from the field device as prompted by a query from the stethoscope, wherein the second set of data corresponds to additional data obtained from the field device for the animal, and the first and second data sets collectively are provided to the user display corresponding to the additional health information; <u>and</u><br>
+<del>wherein said value is a numerical lung score compared to threshold values that correspond to respiratory conditions indicating the health status of the animal's respiratory condition expressed in a scaled lung score</del><u> wherein said value is a numerical lun</u><u>g</u><u> score that is compared to threshold values, and these threshold values are expressed as corresponding scaled lun</u><u>g</u><u> scores that are defined as corresponding to respiratory conditions indicatin</u><u>g</u><u> the health status of the animal's respiratory condition.</u><br>
+<br>
+9. (Original) A system, as claimed in Claim 8, wherein:<br>
+said processor and said computer coded instructions are within a remote computer, and said stethoscope communicates wirelessly with said remote computer by transmitting the digital sound data to the remote computer and receiving the diagnosis and additional health information for display on the user display.<br>
+<br>
+10. (Original) A system, as claimed in Claim 8, wherein:<br>
+said processor and said computer coded instructions are incorporated within an integrated recording and display unit of the stethoscope.<br>
+<br>
+11. (Withdrawn) A wireless audio digital recording unit especially adapted for auscultation analysis, comprising:<br>
+a paddle including at least one sensor for detecting sound, said paddle having a curved shape;<br>
+an extension pole rotatably connected to said paddle;<br>
+a sensor including one or more multi-channel microphones incorporated therein for detecting and transmitting auscultated sounds as digitized data; and<br>
+a wireless adapter for transmitting the sounds as digitized data.<br>
+<br>
+12. (Withdrawn) A unit, as claimed in Claim 11, further including:<br>
+an integrated recording and display unit, said unit including a health status indicator including at least one of a plurality of health indicator lights or a user display; and<br>
+wherein said health status indicator provides a health status of an animal based upon an auscultation analysis that has taken place with sounds recorded by the unit upon the animal, the analysis including use of at least one algorithm, said algorithm utilizing selected frequencies of the recorded sounds, said algorithm generating a set of data corresponding to an indication of a health state of the animal and made observable to a user on said health status indicator.<br>
+<br>
+13. (Currently Amended) A system for diagnosing animal diseases using auscultation analysis, said system comprising being especially adapted for auscultation analysis of lungs sounds of a non-human animal, comprising:<br>
+(a) a stethoscope comprising: a housing including an integrated recording and display unit, said integrated recording and display unit including; (i) a processor in said housing for processing digital sound data of the lungs sounds of the non-human animal received by auscultation, (ii) computer coded instructions for manipulating the digital sound data through incorporation of at least one numerical algorithm that calculates at least one numerical value, said numerical algorithm utilizing selected frequencies of auscultated lung sounds of the non-human animal, and said housing including a health status indicator and wherein said health status indicator provides a health status of the non-human animal based upon an auscultation analysis that has taken place with auscultated lung sounds recorded by the stethoscope upon the non-human animal;<br>
+<del>wherein the at least one numerical value is a calculated numerical lung score compared to threshold values that correspond to respiratory conditions indicating the health status of the non</del><del>-</del><del> human animal</del>'<del>s respiratory condition expressed in a scaled lung score;</del><br>
+<u>wherein said at least one numerical value is a numerical lun</u><u>g</u><u> score that is compared to threshold values, and these threshold values are expressed as corresponding scaled lun</u><u>g</u><u> scores that are defined as corresponding to respiratory conditions indicating the health status of the animal's respiratory condition</u><u>;</u><br>
+wherein the respiratory condition is made visible by a plurality of lights that are either illuminated or not illuminated, wherein if the lights are illuminated, the lights indicate the health status and if not illuminated, the lights do not indicate the health status; and<br>
+(b) a user display incorporated on the stethoscope for displaying information reflective of a state of health of the animal; and<br>
+(c) at least one field device wirelessly communicating with the stethoscope, said field device including at least one of a RFID reader, a diagnostic device, and a temperature probe.
+</body></html>

@@ -1,0 +1,88 @@
+<html><head></head><body>18666116
+
+   
+
+<u>REMARKS</u>
+
+   
+   <p>Claims 1-20 are pending in the present patent application of which claims 1 and 11 are independent claims.  Claims 1-3, 5-13 and 15-20 are amended in this paper.  No claims are canceled in this paper.  No claims are added in this paper.  Thus, by way of the current amendments, claims 1-20 would remain pending in the present application.</p>
+   <p>In taking the foregoing actions, Applicant respectfully submits Applicant is not necessarily conceding in this application that these claims, as originally presented, are not patentable over the references cited by the U.S. Patent and Trademark Office (USPTO), as pertinent ones of the present claim amendments and cancellations are only for facilitating expeditious prosecution.  Applicant respectfully reserves the right to pursue any of the prior versions of the claims, any canceled claims and/or other claims in one or more continuing applications and/or at a later date.</p>
+   <p>Other than any claim amendments discussed further below, claims 1-3, 5, 6, 8-13, 15, 16 and 18-20 have also been amended, as shown above, to correct any noted typographical-type errors, and/or to establish proper antecedent and/or dependency basis, and/or for readability and/or consistency purposes. No new matter has been introduced.</p>
+   <p>
+
+<u>Applicant-Initiated Interview Summary</u>
+
+   </p>
+   <p>A telephonic interview (“the interview”) regarding the instant matter was conducted on August 2, 2024 between Primary Examiner Baisakhi Roy and Applicant’s representative Khurram Rahman, Registration No. 70,147.  Patentability under 35&nbsp;U.S.C. §&nbsp;103, and potential claim amendments were discussed.  Applicant thanks the Examiner for her time and consideration in conducting the interview.</p>
+   <p>A tentative agreement was reached that claim 1, as amended herein, patentably distinguishes over the cited references.  However, the Examiner indicated that she would conduct an updated search.</p>
+   <p>
+
+<u>Claim Rejections Under 35&nbsp;U.S.C. §&nbsp;103</u>
+
+   </p>
+   <p>
+
+Sipe
+
+   </p>
+   <p>Claims 1-5, 7, 12, 10-15, 17 and 20 stand rejected under 35&nbsp;U.S.C. §&nbsp;103 as allegedly being unpatentable over U.S. Patent Appl. Publ. No. 2023/0395248 Al to Sipe et al. (hereinafter “Sipe”). (Office Action, p. 2).  Applicant respectfully traverses these rejections.</p>
+   <p>In this case, in the interest of advancing prosecution and to further distinguish over the cited art, Applicant has amended claim 1, which is directed to an apparatus for generating cardiac catheterization data, to recite, (emphasis added):</p>
+   <p>at least a processor; and</p>
+   <p>a memory communicatively connected to the at least a processor, wherein the memory contains instructions configuring the at least a processor to:</p>
+   <p>receive a plurality of cardiogram <u>training</u> data examples;</p>
+   <p>
+<u>sanitize the plurality of cardiogram training data examples, wherein sanitizing the plurality of cardiogram training data examples comprises:</u>
+   </p>
+   <p>
+<u>identifying one or more cardiogram training data examples of the plurality of cardiogram training data examples which are outliers; and</u>
+   </p>
+   <p>
+<u>removing the one or more cardiogram training data examples from the plurality of cardiogram training data examples;</u>
+   </p>
+   <p>train a catheter data predictor using the <u>sanitized</u> plurality of cardiogram <u>training</u> data examples;</p>
+   <p>input a plurality of cardiogram data signals;</p>
+   <p>generate a plurality of catheterization parameters from the cardiogram data signals and the catheter data predictor; and</p>
+   <p>display the plurality of catheterization parameters.</p>
+   <p>As also agreed to at the interview, Applicant submits that at least such an arrangement of “sanitizing the plurality of cardiogram training data examples compris[ing] … identifying one or more cardiogram training data examples of the plurality of cardiogram training data examples which are outliers … and removing the one or more cardiogram training data examples from the plurality of cardiogram training data examples” is not disclosed, taught, or suggested, by Sipe.  Support for the amendments to claim 1 can be found in the Application-as-originally-filed, for example, support may be found at, at least, at paragraph numbers [0040] and [0041] of the specification.  Independent claim 11 has been amended in a manner similar to independent claim 1.  In view of the amendments to independent claims 1 and 11, dependent claims 2, 3, 7, 10, 12, 13, 17 and 20 have also been amended, as shown above.  No new matter has been introduced.</p>
+   <p>Sipe is directed to determining a cardiac condition measure of a patient wearing a wearable medical device based on machine learning analysis.  However, Sipe fails to disclose, teach, or suggest, at least the above claimed arrangement of “sanitizing the plurality of cardiogram training data examples compris[ing] … identifying one or more cardiogram training data examples of the plurality of cardiogram training data examples which are outliers … and removing the one or more cardiogram training data examples from the plurality of cardiogram training data examples” as recited in amended claim 1, and as also discussed at the interview.</p>
+   <p>Sipe teaches the following at paragraph number [0086]:</p>
+   <p>[0086]  In some implementations, a combination engine 304 combines the cardiac condition measures 104a through 104n to determine a combined cardiac condition measure 306. The combination engine 304, in some examples, may mathematically combine the cardiac condition measures 104a through 104n to determine an average or median value. Further, the combination engine 304 may discard one or more data points of the cardiac condition measures 104a through 104n as being outlier measures exceeding a range of anticipated values. For example, if a certain one of the cardiac condition measures 104a through 104n is less than and/or greater than a threshold distance from a median value of the cardiac condition measures 104a through 104n, that cardiac condition measure may be removed from consideration in determining the combined cardiac condition measures 306. In other examples, any cardiac condition measure 104a through 104n outside of a predetermined range of values or exceeding a threshold range from a previously determined combined cardiac condition measure 306 (e.g., from an hour prior, a day prior, etc.) may be discarded as outlying data.</p>
+   <p>However, this “outlier” refers to cardiac condition measures 104 which are outputs to of a machine learning engine (e.g., see FIG. 1A of Sipe) when it is used and completely distinct from any training data.  In stark contrast, Applicants’ claim 1 recites, in part, ““sanitizing the plurality of cardiogram training data examples compris[ing] … identifying one or more cardiogram training data examples of the plurality of cardiogram training data examples which are outliers … and removing the one or more cardiogram training data examples from the plurality of cardiogram training data examples” in which “outliers” are removed from training data prior to training “a catheter data predictor” and as such, clearly before use of the predictor to generate outputs, such as, “a plurality of catheterization parameters.”</p>
+   <p>As such, Applicant submits that Sipe fails to disclose, teach, or suggest, each and every element of claim 1 and that claim 1 is thus allowable.</p>
+   <p>Independent claim 11, as amended, recites limitations analogous or similar to those of independent claim 1 and overcomes this rejection for at least the same reasons as discussed above with reference to claim 1. As such, Applicant submits that claim 11 is also allowable.</p>
+   <p>Each of claims 2-5, 7, 10, 12-15, 17 and 20 depends, directly or indirectly, from claim 1 or claim 11.  As discussed above, claims 1 and 11 are patentably distinguishable over Sipe for at least the reasons discussed above.  Accordingly, Applicant respectfully submits that claims 2-5, 7, 10, 12-15, 17 and 20 are patentably distinguishable over Sipe for at least the reasons discussed above, and because of the unique combinations of limitations recited therein.</p>
+   <p>Accordingly, Applicant respectfully requests reconsideration and withdrawal of the 35&nbsp;U.S.C. §&nbsp;103 rejections of claims 1-5, 7, 10-15, 17 and 20.</p>
+   <p>
+
+Sipe / Khosousi
+
+   </p>
+   <p>Claims 6, 9, 16 and 19 stand rejected under 35&nbsp;U.S.C. §&nbsp;103 as allegedly being unpatentable over Sipe in view of U.S. Patent Appl. No. 2020/0205745 Al to Khosousi et al. (hereinafter “Khosousi”).  (Office Action, p. 4).  Applicant respectfully traverses these rejections.</p>
+   <p>Claims 6 and 9 depend, directly or indirectly, from claim 1 and claims 16 and 19 depend, directly or indirectly, from claim 11.  As discussed above, claims 1 and 11 are patentably distinguishable over Sipe for at least the reasons discussed above.  Furthermore, Khosousi fails to cure the deficiencies of Sipe.  Accordingly, Applicant respectfully submits that claims 1 and 11, as amended, and claims 6, 9, 16 and 19 are patentably distinguishable over Sipe and Khosousi, individually or in combination, for at least the reasons discussed above, and because of the unique combinations of limitations recited therein.</p>
+   <p>Therefore, Applicant respectfully requests reconsideration and withdrawal of these 35&nbsp;U.S.C. §&nbsp;103 rejections of claims 6, 9, 16 and 19.</p>
+   <p>
+
+Sipe / Neumann
+
+   </p>
+   <p>Claims 8 and 18 stand rejected under 35&nbsp;U.S.C. §&nbsp;103 as allegedly being unpatentable over Sipe in view of U.S. Patent Appl. No. 2020/0315527 Al to Neumann (hereinafter “Neumann”).  (Office Action, p. 4).  Applicant respectfully traverses these rejections.</p>
+   <p>Claim 8 depends, directly or indirectly, from claim 1 and claim 18 depends, directly or indirectly, from claim 11.  As discussed above, claims 1 and 11 are patentably distinguishable over Sipe for at least the reasons discussed above.  Furthermore, Neumann fails to cure the deficiencies of Sipe.  Accordingly, Applicant respectfully submits that claims 1 and 11, as amended, and claims 8 and 18 are patentably distinguishable over Sipe and Neumann, individually or in combination, for at least the reasons discussed above, and because of the unique combinations of limitations recited therein.</p>
+   <p>Therefore, Applicant respectfully requests reconsideration and withdrawal of these 35&nbsp;U.S.C. §&nbsp;103 rejections of claims 8 and 18.</p>
+   <p>As such, Applicant respectfully requests reconsideration and withdrawal of all 35&nbsp;U.S.C. §&nbsp;103 rejections of the claims.</p>
+   <p>
+
+<u>Conclusion</u>
+
+   </p>
+   <p>Accordingly, Applicant respectfully submits that all claims in the application are in a condition for allowance and respectfully solicits the prompt issuance of a Notice of Allowance.  The foregoing comments made with respect to the positions taken by the Examiner are not to be construed as acquiescence with other positions of the Examiner that may not have been explicitly contested.  In addition, arguments presented herein for the patentability of a claim should not be understood as implying that no other reason for the patentability of the claim exists.  If any issues remain, the Examiner is encouraged to call the undersigned practitioner at the number listed below.</p>
+   <p>Respectfully submitted,</p>
+   <p>Date: December 26, 2024  <u>/KHURRAM RAHMAN/</u>
+   </p>
+   <p>Khurram Rahman, Reg No. No. 70,147</p>
+   <p>Charles Dresser, Reg No. 70,797</p>
+   <p>CALDWELL INTELLECTUAL PROPERTY LAW</p>
+   <p>Customer No. 145340</p>
+   <p>E-Mail: charles@caldwelllaw.com</p>
+   <p>Tel: (207) 240-1203</p>
+
+</body></html>

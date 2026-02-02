@@ -1,0 +1,25 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Allowable Subject Matter
+This communication is in response to applicant’s response to a Non-Final Rejection Office Action submitted on February 06, 2025.
+Information Disclosure Statements
+The information disclosure statement (IDS) submitted on February 06, 2025 is being considered by the examiner.
+Terminal Disclaimers Accepted/Approved
+The Electronic Terminal Disclaimer filed on February 06, 2025 disclaiming the terminal portion/s of any patent granted on this application, which would extend beyond the expiration date of U.S. Patents No. 10,327,713 B2, No. 10,667,762 B2, No. 11,096,631 B2, No. 11,596,365 B2 and No. 11,969,269 B2 have been accepted. The Terminal Disclaimers have been recorded.
+Reason for Allowance
+Claim 2-19 are allowable.
+The following is an examiner’s statement of reasons for allowance:
+As to claim 2, no prior arts have been found that individually or in combination with other prior art/s to fairly show, disclose or suggest the claimed limitations as recited in dependent claim 2, comprising limitations: each card comprising a plurality of holes and an order marker, wherein the plurality of holes on each card are arranged in a different order, wherein when the set of cards are stacked on top of each other in a specific order, using the order marker on each card as a guide, only some holes of all the cards in the set align to form a pattern, i.e. in the particular manner it is claimed in the context of the whole claim is not disclosed, taught or suggested in the prior art(s).
+As to claims 3-19 directly/indirectly depend from allowed claim 1 and therefore are allowed for the same reason/s.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee. Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure. The following cited arts are further to show the state of art.
+U.S. Publication No. 2006/0148398 A1 of Ruch et al, discloses an air vent and method for assembling an air vent are provided. In one embodiment an air vent includes a wall comprising a first wall segment which lies along a first plane and a second wall segment which lies along a second plane where the first plane is distinct from the second plane. The air vent also includes at least one opening disposed between the first segment and the second segment of the wall.
+U.S. Publication No. 2009/0124868 A1 of Barnett et al, discloses a portable, lightweight, trauma treatment and patient monitoring device. The device comprises a base having a top surface and a pair of housings each having an inner surface. The housings are in pivotal communication with the base to enable selective articulation between a closed orientation and an open orientation. In the closed orientation, the inner surfaces of the housings are substantially parallel to the top surface of the base. In the open orientation, the pair of housings are in spaced opposed relation to each other and the inner surfaces are substantially perpendicular to the top surface of the base. The device also includes at least one bay located within at least one of the pair of housings. The bay is capable of receiving at least one medical monitoring/treatment device.
+Correspondence
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to SISAY YACOB whose telephone number is(571)272-8562. The examiner can normally be reached Monday - Friday 10:30-07:00 ET.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, BRIAN A ZIMMERMAN can be reached on (571) 272-3059. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/SISAY YACOB/						February 20, 2025           Primary Examiner, Art Unit 2686

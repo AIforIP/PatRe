@@ -1,0 +1,59 @@
+<html><head></head><body><h3>Date: 2024-05-30</h3>
+
+<h1><u>CLAIMS</u></h1>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1. A device for measuring internal blood pressure and mapping an internal surface of a vessel carrying a fluid, the device comprising:(a) an optical sensor emitting light of a known wavelength and capturing light reflected from the emitted light, the sensor located in a housing having a deformable membrane, wherein the emitted light reflects off of the membrane;<br>
+(b) a signal conditioner processing detection of the reflected light to generate electrical signals proportional to corresponding amounts of deformation of the membrane caused by pressure changes in the vessel deforming the membrane;<br>
+(c) a computing device calculating pressure readings in the vessel by correlating corresponding amounts of deformation to a total fluid pressure in the vessel using the electrical signals; and<br>
+(d) a memory for storing a plurality of pressure readings calculated at regular intervals, wherein the computing device further correlates membrane deformation to pressure wave information and determines vessel attributes following statistical analysis of pressure changes among the plurality of pressure readings.<br>
+<br>
+2. The device of claim 1, wherein the total fluid pressure within the vessel includes a first pressure component produced by a heart muscle and a second pressure component from a vessel attribute.<br>
+<br>
+<br>
+3. The device of claim 2, wherein the computing device correlating the amount of deformation to a total fluid pressure in the vessel comprises subtracting the first pressure component from the calculated total pressure.<br>
+<br>
+4. The device of claim 1, wherein the computing device performs a zero calibration function prior to the correlating.<br>
+<br>
+5. The device of claim 1, wherein the computing device analyzes pressure wave data using methods of statistical analysis including Fast Fourier transformation (FFT).<br>
+<br>
+6. The device of claim 5, wherein the FFT statistical analysis assesses cardiovascular integrity from the optical sensor inserted alone, or as part of a medical device, into a cardiovascular structure.<br>
+<br>
+7. The device of claim 5, wherein the FFT statistical analysis assesses CSF or brain pressures from the optical sensor inserted alone, or as part of another medical device, into a brain or spinal subarachnoid space.<br>
+<br>
+8. The device of claim 1, further comprising a bridge emulator and a bridge excitation converter, wherein the bridge excitation converter generates a scaling reference signal for use by the bridge emulator to provide compensated analog bridge sense signals representing corresponding compensated and calibrated conversions of the electrical signals.<br>
+<br>
+<br>
+9. The device of claim 8, further comprising a bridge sense D/A converter, wherein the bridge sense D/A converter received the scaling reference signal and generates the compensated analog bridge sense signals.<br>
+<br>
+10. A system for detecting a vessel wall condition, the system comprising:(a) a first medical device placed on a proximal vessel or tissue location for measuring heart-produced pressure waves in the vessel or tissue;<br>
+(b) a second medical device placed in a distal vessel location for measuring second pressure waves that include a pressure component produced by a vessel condition located between the distal and proximal locations; and<br>
+(c) a computing device determining the vessel condition based on determining one or more differences between the heart-produced pressure waves and the second pressure waves.<br>
+<br>
+11. The system of claim 10, wherein the first and second medical devices each comprise one or more optical sensors providing the measuring.<br>
+<br>
+12. The system of claim 11, wherein the optical sensors emit light of a known wavelength and capture light reflected from the emitted light, each sensor comprising a housing having a deformable membrane, wherein emitted light reflecting off of the membrane.<br>
+<br>
+13. The system of claim 12, further comprising a signal conditioner processing detection of the reflected light to generate electrical signals proportional to corresponding amounts of deformation of the membrane caused by pressure changes in the vessel deforming the membrane.<br>
+<br>
+<br>
+14. The system of claim 13, further comprising a computing device calculating pressure readings in the vessel by correlating the corresponding amounts of deformation to a total fluid pressure in the vessel using the electrical signals.<br>
+<br>
+15. The system of claim 14, wherein the computing device performs a statistical analysis of the calculated pressure readings.<br>
+<br>
+16. The system of Claim 15, wherein the statistical analysis comprises Fast Fourier Transform (FFT) on the calculated pressure readings.<br>
+<br>
+17. The system of Claim 15, wherein the statistical analysis allows for the vessel condition to be imaged or otherwise graphically displayed.<br>
+<br>
+18. A system for detecting a vessel wall condition of a vessel, the system comprising:(a) a medical device located in a vessel and measuring fluid pressure waves as the medical device advances through the vessel;<br>
+(b) a computing device receiving data representing the measured fluid pressure waves and determining the vessel wall condition based on changing fluid pressure wave data as the medical device advances through the vessel; and<br>
+(c) a measurement device providing to the computing device a position of the medical device during each measuring of fluid pressure waves as the medical device advances through the vessel.<br>
+<br>
+<br>
+<br>
+19. The system of claim 18, wherein the computing device performs a statistical analysis of the data representing the measured fluid pressure waves.<br>
+<br>
+20. The system of Claim 19, wherein the statistical analysis comprises Fast Fourier Transform (FFT).
+</body></html>

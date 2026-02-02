@@ -1,0 +1,62 @@
+<html><head></head><body><h3>Date: 2024-05-15</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS:</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<br>
+<br>
+1. - 14. (Canceled).213<br>
+<br>
+<br>
+15. (New) A computer implemented method for determining a vascular endothelium functionality of an artery of a person, the method comprising the steps of:acquiring measurement data associated with a series of electrical measurements obtained by an electrical impedance spectroscopy device using at least one pair of electrodes attached to a skin portion of a limb of the person along a portion of an artery under assessment, the electrical measurements being obtained over a period of time at different frequencies while the impedance spectroscopy device operates an ischemic cuff positioned on the limb of the person between a normal state, where no pressure is applied on the limb of the person, an ischemic state, where a desired pressure is applied on the limb of the person to restrict the flow of blood in the artery under assessment, and a hyperaemic state, where the pressure applied during the ischemic state is released;<br>
+extracting, from the measurement data, an impedance time series associated with the impedance changes of a medium intervening between each pair of electrodes, the medium comprising the portion of the artery, surrounding tissue, the skin portion, and blood flowing in the artery during the normal state, ischemic state, and hyperaemic state;<br>
+filtering the impedance time series in the frequency domain to extract at least a low pass frequency, LPF, component waveform and a band limited frequency, BPF, component waveform for each pair of electrodes; and<br>
+determining the vascular endothelium functionality of the artery of the person by performing the steps of:<br>
+processing the LPF and BPF component waveforms obtained from each pair of electrodes to extract a set of biomarker parameter values, each biomarker parameter being indicative of a particular aspect of the endothelium functionality of the artery of the person; and<br>
+<br>
+determining, based on the biomarker parameter values, an endothelium functionality index indicative of the vascular endothelium functionality of the artery of the person.<br>
+<br>
+16.  (New) The method of claim 15, wherein the step of determining the vascular endothelium functionality further comprises the step of comparing the endothelium functionality index with a reference index.<br>
+<br>
+17.  (New) The method of claim 15, wherein extracting the set of biomarker parameter values comprises the step of:detecting from the measurement data the impedance time series corresponding to each electrode pair used by the impedance spectroscopy device to take the electrical measurements; and<br>
+wherein if more than one pair of electrodes is detected performing the step of:<br>
+determining the value of each biometric parameter in the set by averaging the corresponding biometric parameter values obtained from the LPF and BPF component waveforms extracted from each detected pair of electrodes.<br>
+<br>
+18.  (New) The method of claim 15, wherein the step of extracting a set of biomarker parameter values comprises the step of determining a biomarker parameter value mn as a change in an impedance value of the LPF component waveform measured during a transition of the ischemic cuff from the normal state to the ischemic state.<br>
+<br>
+19.  (New) The method of claim 15, wherein the step of extracting a set of biomarker parameter values comprises the step of determining a biomarker parameter value mv as a ratio between:a change in an impedance value of the LPF component waveform measured during a transition of the ischemic cuff from the normal state to the ischemic state, and<br>
+a change in an impedance value of the LPF component waveform measured during a transition of the ischemic cuff from the ischemic state to the hyperaemic state.<br>
+<br>
+<br>
+20.  (New) The method of claim 15, wherein the step of extracting a set of biomarker parameter values comprises the step of determining a biomarker parameter value mr as a gradient of an impedance value of the LPF component waveform measured during a transition of the ischemic cuff from the normal state to the ischemic state.<br>
+<br>
+21. (New) The method of claim 15, wherein the step of extracting a set of biomarker parameter values comprises the step of determining a biomarker parameter value mias a ratio between:an amplitude value of the BPF component waveform measured during the operation of the ischemic cuff in the ischemic state; and<br>
+an amplitude value of the BPF component waveform measured during the operation of the ischemic cuff in the normal state.<br>
+<br>
+22. (New) The method of Claim 15, wherein the step of extracting a set of biomarker parameter values comprises the step of determining a biomarker parameter value mw as a ratio between:an amplitude value of a Continuous Wavelet Transform, CWT, of the BPF component waveform extracted from measurement data obtained during measured during the operation of the ischemic cuff in the hyperaemic state, and<br>
+an amplitude value of a CWT of the BPF component waveform extracted from measurement data obtained during measured during the operation of the ischemic cuff in the normal state.<br>
+23.  (New) The method of claim 18, wherein the step of determining an endothelium functionality index comprises determining the endothelium functionality index as:SVG
+{EMBED HERE}
+0.3874.417<br>
+index-<br>
+<br>
+24.  (New) The method of claim 15, wherein the step of extracting the impedance time series comprises the step of:<br>
+filtering the measurement data using a digital zero-phase filter to obtain filtered data comprising an Infinite Impulse Response, IIR, Butterworth filter.<br>
+<br>
+25.  (New) The method of claim 24, wherein the step of extracting the impedance time series further comprises:digitally processing the filtered data to obtain recovered data by performing the steps of:<br>
+generating an envelope signal of the filtered data by calculating absolute data of the filtered data;<br>
+digitally filtering the envelope signal using a digital low-pass filter with a standard cut-off frequency of 100Hz to obtain the recovered data, wherein the digital low-pass filter is Chebyshev Type I IIR filter; and<br>
+processing the recovered data to determine the impedance time series.<br>
+<br>
+26.  (New) A system for determining vascular endothelium functionality of an artery of a person comprising:an ischemic cuff configured to be positioned on a limb of the person;<br>
+an electrical impedance spectroscopy device configured to obtain a series of electrical measurements over a period of time at different frequencies associated with the endothelium functionality of an artery under assessment, the impedance spectroscopy device comprising at least one pair of electrodes configured to be attached to a skin portion of the limb of a person along a portion of the artery under assessment to obtain the series of electrical measurements of the medium intervening between each pair of electrodes, the medium comprising the portion of the artery, surrounding tissue, the skin portion, and blood flowing in the artery during the normal state, ischemic state, and hyperaemic state,<br>
+wherein the impedance spectroscopy device is configured to operate,<br>
+during obtaining the series of electrical measurements from the at least one pair of electrodes, the ischemic cuff between a normal state, where no pressure is applied on the limb of the person, an ischemic state, where a pressure is applied<br>
+on the limb of the person to restrict the flow of blood in the artery under assessment, and a hyperaemic state, where the pressure applied during the ischemic state is released;<br>
+a processing unit communicatively coupled to the impedance spectroscopy device and configured to perform the method of claim 15; and<br>
+a display configured to display the endothelium functionality index determined by the processing unit, which is indicative of the vascular endothelium functionality of the artery of the person and/or the results of a comparison between the determined endothelium functionality index and a reference endothelium functionality index.<br>
+<br>
+27.  (New) The system of claim 26, wherein the impedance spectroscopy device comprises a first pair of electrodes and a second pair of the electrodes, wherein the second pair of electrodes is placed between the first pair of electrodes.<br>
+<br>
+28.  (New) A computer program product comprising instructions which, when the program is executed by a computer, causes the computer to perform the method of claim 15.
+</body></html>

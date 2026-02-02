@@ -1,0 +1,46 @@
+<html><head></head><body><h3>Date: 2025-02-10</h3>
+
+<h1><u>LISTING OF CLAIMS</u></h1>
+<br>
+<br>
+1-30. (Canceled)229<br>
+<br>
+<br>
+31.   (Previously Presented) A wireless device comprising:a detection circuit configured to identify a component, of a multichannel input audio signal, according to a field-of-view, and wherein the detection circuit is configured to detect a common element in at least two channels of the multichannel input audio signal; and<br>
+an adjustment circuit configured to suppress the component of the audio signal to generate an output audio signal according to a characteristic of the component.<br>
+<br>
+32.   (Previously Presented) The wireless device of claim 31, wherein the wireless device comprises a controller circuit configured to provide settings for controlling an adjustment applied via the adjustment circuit, wherein the settings are determined according to the identification of the component via the detection circuit.<br>
+<br>
+33.   (Previously Presented) The wireless device of claim 32, wherein the controller circuit is configured to determine the settings.<br>
+<br>
+34.   (Previously Presented) The wireless device of claim 32, wherein the adjustment circuit is configured to apply the adjustment to enhance a perception of the one or more other components.<br>
+<br>
+35.   (Previously Presented) A system comprising:a wireless device configured to:<br>
+identify a component, of a multichannel input audio signal, according to a field-of-view; and<br>
+suppress the component of the audio signal to generate an output audio signal, wherein:<br>
+<br>
+<br>
+the suppression is processed according to a characteristic of the component,<br>
+an audio processing circuit is configured to identify the component according to an identification of an element of the multichannel input audio signal, and the element is a common element of at least two channels.<br>
+<br>
+36.  (Previously Presented) The system of claim 35, wherein the wireless device is configured to enhance a perception of at least one other component.<br>
+<br>
+37.  (Previously Presented) The system of claim 35, wherein the system comprises an audio output component configured to convey the output audio signal.<br>
+<br>
+38.  (Previously Presented) The system of claim 37, wherein the audio output component comprises a speaker.<br>
+<br>
+39.  (Previously Presented) A method comprising:in a wireless device:<br>
+identifying a component, of a multichannel input audio signal, according to a field-of-view and according to an element of the multichannel input audio signal; and<br>
+suppressing the component of the audio signal to generate an output audio signal, wherein:<br>
+the suppression is processed according to a characteristic of the component, and<br>
+the element is a common element of at least two channels.<br>
+<br>
+40.  (Previously Presented) The method of claim 39, wherein the method comprises enhancing a perception of at least one other component.<br>
+<br>
+<br>
+41.   (Previously Presented) A wireless device comprising:a detection circuit configured to identify a component, of a multichannel input audio signal, according to a field-of-view;<br>
+an adjustment circuit configured to suppress the component of the audio signal to generate an output audio signal according to a characteristic of the component; and<br>
+a controller circuit configured to provide settings for controlling the adjustment applied via the adjustment circuit, wherein the settings are determined according to the identification of the component via the detection circuit, and wherein the controller circuit is configured to determine the settings.<br>
+<br>
+42.   (Previously Presented) The wireless device of claim 41, wherein the adjustment circuit is configured to apply an adjustment to enhance a perception of the one or more other components.
+</body></html>

@@ -1,0 +1,65 @@
+<html><head></head><body><h3>Date: 2021-08-12</h3>
+<p>CLAIMS</p>
+<br>
+
+1.
+A sleep apnea syndrome determination apparatus comprising a processing unit configured to, by using RRI data indicating a heart rate interval (R-R Interval: RRI) in a sleeping period of a subject, determine whether or not the subject has sleep apnea syndrome, wherein the processing unit is configured to operate so as to generate a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period, calculate, from a value that is outputted as a result of inputting the feature vector to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period, and 
+<br>
+determine whether or not the subject has sleep apnea syndrome, on the basis of the index. 
+
+<br>
+
+2.
+The sleep apnea syndrome determination apparatus according to claim 1, wherein the recurrent neural network has learned through machine learning in advance so as to output, in response to the feature vector having been inputted, a value indicating a sleep state in the identification target period.
+<br>
+
+3.
+The sleep apnea syndrome determination apparatus according to claim 1 or 2, wherein the recurrent neural network is LSTM (Long Short-Term Memory).
+
+<br>
+4.
+The sleep apnea syndrome determination apparatus according to any one of claims 1 to 3, wherein the identification target period has a fixed period length, and 
+<br>
+the feature vector is a variable length vector formed as a time series of a group of pieces of RRI data respectively indicating the plurality of heart rate intervals in the identification target period. 
+
+<br>
+
+5.
+The sleep apnea syndrome determination apparatus according to any one of claims 1 to 4, wherein when inputting the feature vector to the recurrent neural network, the processing unit is not configured to input the feature vector that has been generated from the plurality of heart rate intervals that include a heart rate interval greater than a threshold indicating an abnormal value of a heart rate interval.
+<br>
+
+6.
+The sleep apnea syndrome determination apparatus according to any one of claims 1 to 5, wherein the generating of the feature vector includes standardizing a value of each of the plurality of heart rate intervals.
+<br>
+
+7.
+The sleep apnea syndrome determination apparatus according to any one of claims 1 to 6, wherein the index is a ratio of the period of the apnea state to the sleeping period, and 
+<br>
+the determining includes determining that, when the ratio is greater than a threshold indicating sleep apnea syndrome, the subject has sleep apnea syndrome. 
+<br>
+8.
+A sleep apnea syndrome determination method for, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome, the sleep apnea syndrome determination method comprising: 
+<br>
+a step of generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period; 
+<br>
+a step of calculating, from a value that is outputted as a result of inputting the feature vector to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and 
+<br>
+a step of determining whether or not the subject has sleep apnea syndrome, on the basis of the index. 
+
+<br>
+
+9.
+A sleep apnea syndrome determination program configured to cause a computer to execute a process of, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome, the sleep apnea syndrome determination program comprising: 
+<br>
+a step of generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period; 
+<br>
+a step of calculating, from a value that is outputted as a result of inputting the feature vector to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and 
+<br>
+a step of determining whether or not the subject has sleep apnea syndrome, on the 
+
+basis of the index.
+29
+30
+31
+32
+</body></html>

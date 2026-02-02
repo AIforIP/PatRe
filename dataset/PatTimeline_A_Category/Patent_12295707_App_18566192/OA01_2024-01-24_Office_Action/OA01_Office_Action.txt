@@ -1,0 +1,54 @@
+PNG
+media_image1.png
+172
+172
+media_image1.png
+Greyscale
+United States Patent and Trademark Office
+Commissioner for Patents
+United States Patent and Trademark Office
+P.O. Box 1450
+Alexandria, VA 22313-1450
+www.uspto.gov
+In re Application of
+Andrew M. L. Smith, et al.
+Application No.: 18/566,192
+Deposited: December 1, 2023
+Attorney Docket No.: 22112NP
+For: APPARATUSES, SYSTEMS, AND METHODS FOR CAPTURING A VIDEO OF A HUMAN PATIENT SUITABLE FOR MONITORING A CARDIAC, RESPIRATORY OR CARDIORESPIRATORY CONDITION
+: DECISION ON REQUEST TO
+: PARTICIPATE IN THE PATENT
+: PROSECUTION HIGHWAY
+: PROGRAM AND PETITION
+: TO MAKE SPECIAL UNDER
+: 37 CFR 1.102(a)
+This is a decision on the request to participate in the Patent Prosecution Highway (PPH) program and the petition under 37 CFR 1.102(a), filed December 1, 2023, to make the above-identified application special.
+The request and petition are DISMISSED.
+Discussion
+A grantable request to participate in the PPH pilot program and petition to make special require:
+1.   The U.S. application for which participation in the Global/IP5 PPH pilot program is requested must have the same earliest date, whether this is the priority date or filing date, as that of a corresponding national or regional application filed with another Global/IP5 PPH participating office or a corresponding PCT international application for which one of the Global/IP5 PPH participating offices was the International Searching Authority (ISA) or the International Preliminary Examining Authority (IPEA);
+2.	Applicant must:
+a.	Ensure all the claims in the U.S. application must sufficiently correspond or be amended to sufficiently correspond to the allowable/patentable claim(s) in the corresponding Office of Earlier Examination (OEE) application and
+b.	Submit a claims correspondence table in English;
+3.	Examination on the merits of the U.S. application has not begun;
+4.	Applicant must submit:
+a.	Documentation of prior office action:
+i.	a copy of the office action(s) just prior to the “Decision to Grant a Patent” from each of the Global/IP5 PPH participating office application(s) containing the allowable/patentable claim(s) or
+ii.    if the allowable/patentable claims(s) are from a “Notification of Reasons     for Refusal” then the Notification of Reasons for Refusal or
+iii.	 if the Global/IP5 PPH participating office application is a first action allowance then no office action from the Global/IP5 PPH participating office is necessary should be indicated on the request/petition form or
+iv.  the latest work product in the international phase of the OEE PCT application;
+b.	An English language translation of the Global/IP5 PPH participating office action or work product from (4)(a)(i)-(ii) or (iv) above; and
+5.	Applicant must submit:
+a.	An IDS listing the documents cited by the Global/IP5 PPH participating office examiner in the Global/IP5 PPH participating office action or work product (unless already submitted in this application) and
+b.	Copies of the documents except U.S. patents or U.S. patent application publications (unless already submitted in this application).
+Conditions (1) and (3)-(5) above are considered to have been met.  However, the request to participate in the PPH pilot program and petition does not comply with condition (2).
+Regarding the requirement of condition (2), the claims correspondence table lists U.S. Claims
+1, 41-44 and 47-64 as corresponding to allowable/patentable claims 40-44 and 47-64.  However, U.S. Claims 43 and 44 do not correspond to OEE Claims 43 and 44, a review of the OEE work product indicates that claims 43 and 44 are not allowable/patentable claims.  It is applicant’s responsibility to compare and identify claims corresponding between the US application and the OEE application.  Accordingly, the claims currently in the U.S. application must sufficiently correspond to the allowable/patentable claim(s) in the corresponding OEE application and a new claims correspondence table must be submitted if necessary.
+Applicant is given ONE opportunity within a time period of ONE MONTH or THIRTY DAYS, whichever is longer, from the mailing date of this decision to correct the deficiencies.  NO EXTENSION OF TIME UNDER 37 CFR 1.136 IS PERMITTED.  If the deficiencies are not corrected within the time period given, the application will await action in its regular turn.
+Response must be filed via the Patent Center using the document description: Petition to make special under Patent Pros Hwy.  Any preliminary amendments and IDS submitted with the PPH documents must be separately indexed as a preliminary amendment and IDS, respectively.
+Telephone inquiries concerning this decision should be directed to the undersigned at (571)
+272-1058.  All other inquiries concerning the examination or status of the application is accessible in the Patent Center at https://patentcenter.uspto.gov.
+/Angela Walker/
+Angela Walker
+Paralegal Specialist
+Office of Petitions

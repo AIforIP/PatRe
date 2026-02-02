@@ -1,0 +1,9 @@
+Total Office Actions: 2
+Application Number: 17761318
+Patent Number: 12336846
+
+OA Timeline:
+  OA1: 2024-09-11 - Office_Action
+  OA2: 2025-02-06 - Final_Rejection
+
+Final Status: Final_Rejection

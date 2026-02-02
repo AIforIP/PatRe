@@ -1,0 +1,30 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Examiner Notes that the fundamentals of the rejections are based on the broadest reasonable interpretation of the claim language. Applicant is kindly invited to consider the reference as a whole. References are to be interpreted as by one of ordinary skill in the art rather than as by a novice. See MPEP 2141. Therefore, the relevant inquiry when interpreting a reference is not what the reference expressly discloses on its face but what the reference would teach or suggest to one of ordinary skill in the art.
+Response to Amendment and/or Argument
+Applicant’s amendments (amendment filed on 24 December 2024 along with supplemental amendment filed on 08 January 2025) and/or arguments with respect to the Claim Rejections of Claims 4 and 8 under 35 U.S.C. 112(b) as set forth in the office action 19 November 2024 have been considered and are persuasive. Therefore, the Claim Rejections of Claims 4 and 8 under 35 U.S.C. 112(b) as set forth in the office action 19 November 2024 have been withdrawn.
+Applicant’s amendments (amendment filed on 24 December 2024 along with supplemental amendment filed on 08 January 2025) and/or arguments with respect to the Claim Rejections of Claims 1, 14 and 20 under 35 U.S.C. 103 as set forth in the office action 19 November 2024 have been considered and are persuasive. Therefore, the Claim Rejections of Claims 1, 14 and 20 under 35 U.S.C. 103 as set forth in the office action 19 November 2024 have been withdrawn.
+Allowable Subject Matter
+Claims 1-20 are allowed.
+The following is an examiner’s statement of reasons for allowance:
+The closest prior art Stern et al. (“Dissipation of stop-and-go waves via control of autonomous vehicles: field experiment”) discloses a PI controller with saturation to mitigate stop-and-go waves by controlling longitudinal movements of the connected vehicles by estimating desired speed using connected vehicle data such that for small gaps the host vehicle should follow the lead vehicle speed to avoid dangerous situation, while for large gaps, the host vehicle should catch up to the lead vehicle.
+Further, prior art Kwon et al. (US 2022/0363279 A1) discloses a method for combating a stop-and-go wave problem using deep reinforcement learning based on autonomous vehicles learning a policy which enables the autonomous vehicle to drive at a closest velocity to a constant velocity based on state information.
+In regards to the independent claim 1 (similarly claims 14 and 20), prior arts Stern and Kwon taken either individually or in combination with each other or other prior art of records, fails to teach or render obvious the claim limitations as recited in claim 1 (and similarly claims 14 and 20):
+a calculations module including instructions that, when executed by the processor, cause the processor to:
+determine a time, during a deceleration phase or an acceleration phase of a stop-and-go cycle of a preceding vehicle, when a preceding vehicle speed will equal a desired speed of an ego vehicle; and
+determine, in response to the time being during:
+the deceleration phase, that a gap, between the preceding vehicle and the ego vehicle, will be smaller than a desired maximum gap, or
+the acceleration phase, that the gap will be larger than a desired minimum gap; and
+an actuation module including instructions that, when executed by the processor, cause the processor to change an ego vehicle speed to optimize a model of a cruise control system to correct the gap by:
+adding a product of a gain multiplied by a difference to the model as a gap maintaining term,
+adding, in response to a condition in which an absolute value of a difference of the desired speed subtracted from the preceding vehicle speed being less than a threshold, at least one term to the model, or
+changing, in the model, a product of a gain multiplied by a first difference to account for a period of the stop-and-go cycle.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to DANA F ARTIMEZ whose telephone number is(571)272-3410. The examiner can normally be reached M-F: 9:00 am-3:30 pm EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Faris S. Almatrahi can be reached on (313) 446-4821. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/DANA F ARTIMEZ/Examiner, Art Unit 3667
+/FARIS S ALMATRAHI/Supervisory Patent Examiner, Art Unit 3667

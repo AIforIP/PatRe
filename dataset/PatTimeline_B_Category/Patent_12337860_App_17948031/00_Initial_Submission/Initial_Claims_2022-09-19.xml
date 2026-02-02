@@ -1,0 +1,132 @@
+<html><head></head><body><h3>Date: 2022-09-19</h3>
+<p>Claims</p>
+<br>
+
+<br>
+1.   A method of configuring a vehicle to integrate an accessory comprising: 
+<br>
+generating for display a graphical user interface allowing the user to specify one or more high-level accessory-related rules relating to the operation of a vehicle equipped with the accessory; 
+<br>
+receiving user-specified high-level accessory-related rules entered by the user via the graphical user interface translating the rules into a lower-level accessory-related configuration readable by an accessory interface unit adapted for communication with sensors or actuators associated with the vehicle accessory; 
+<br>
+providing the lower-level accessory-related configuration to the accessory interface unit; 
+<br>
+whereby the accessory interface unit cooperates with the sensors or actuators associated with the vehicle accessory to operate the vehicle accessory in accordance with the high-level accessory-related rules. 
+
+<br>
+
+<br>
+2.   The method of claim 1, further comprising translating the accessory-related rules to a low-level driver console configuration file for specifying the appearance of one or more GUI elements on the console providing an operator of the vehicle with one or both of control of the vehicle accessory and visibility of the status of the vehicle accessory.
+<br>
+
+<br>
+3.   The method of claim 1, further comprising storing the high-level accessory- related rules in persistent storage accessible to users tasked with configuring other vehicles with the accessory.
+<br>
+
+<br>
+4.   The method of claim 3, further comprising: 
+<br>
+retrieving one or more high-level accessory-related rules from the persistent storage; 
+<br>
+generating a graphical user interface for editing the accessory-related rules; 
+
+ receiving user edits of the retrieved accessory-related rules; 
+<br>
+storing the edited accessory-related rules in the persistent storage accessible to users tasked with configuring other vehicles with the accessory. 
+
+<br>
+
+<br>
+5.   The method of claim 1, further comprising generating for display a graphical user interface enabling the modification of a stored high-level accessory-related rule.
+<br>
+
+<br>
+6.   The method of claim 1 wherein providing the lower-level accessory-related configuration to the accessory interface unit comprising transmitting the accessory-related configuration to the accessory interface unit over an external communication link to the vehicle.
+<br>
+
+<br>
+7.   The method of claim 1 wherein the high-level accessory related rules comprise event-action rules or condition-action rules.
+<br>
+
+<br>
+8.   The method of claim 7 wherein the high-level accessory related rules comprise condition-action rules in which the condition includes a parameter from a sensor associated with the accessory.
+<br>
+
+<br>
+9.   The method of claim 7 wherein the action comprises operating an actuator to change the state of the accessory.
+<br>
+
+<br>
+10. The method of claim 1 further comprising simulating the operation of a vehicle equipped with the accessory, the simulation comprising generating a software model of the accessory-equipped vehicle operating in accordance with the accessory-related rules entered by the user.
+<br>
+
+<br>
+11. The method of claim 10 further comprising: 
+<br>
+generating for display an initial state of an accessory-equipped vehicle; 
+
+ generating a graphical user interface allowing a user to enter user-specified events or conditions; 
+<br>
+receiving user-specified events or conditions; 
+<br>
+determine a resultant state of the accessory-equipped vehicle subject to user-specified events or conditions when operating in accordance with the user-specified rules; and 
+<br>
+Display a resultant state of the accessory-equipped vehicle. 
+
+<br>
+
+<br>
+12. A system comprising control circuitry configured to: 
+<br>
+Display a graphical user interface allowing the user to specify one or more high-level accessory-related rules relating to the operation of a vehicle equipped with the accessory; 
+<br>
+receive user-specified high-level accessory-related rules entered by the user via the graphical user interface; and 
+<br>
+translate the received user-specified high-level accessory-related rules into a lower-level accessory-related configuration. 
+
+<br>
+
+<br>
+13.   A system according to claim 12 in which: 
+<br>
+the system comprises an embedded system, the embedded system further comprising: 
+<br>
+a controller area network port connectable to a vehicle controller area network; 
+<br>
+one or more accessory ports connectable to electrical systems of respective accessories; 
+<br>
+a processor; 
+<br>
+the control circuitry being further configured to: 
+<br>
+store the lower-level accessory-related configuration; 
+<br>
+interpret the lower-level accessory-related configuration to generate a control signal on one of the ports in response to a sensor signal received on the accessory port, or to cause the generation of a control signal on the accessory port in response to a sensor signal received on one of the other ports. 
+<br>
+
+<br>
+14. A system according to claim 13 in which the received sensor signal is indicative of a driver input on an accessory control element displayed on the driver console.
+<br>
+
+<br>
+15. A system according to claim 13 in which the output control signal controls the output of an accessory state display element on the driver console.
+<br>
+
+<br>
+16. A computer-readable medium tangibly embodying instructions executable by a processor to: 
+<br>
+Display a graphical user interface allowing the user to specify one or more high- level accessory-related rules relating to the operation of a vehicle equipped with the accessory; 
+<br>
+receive user-specified high-level accessory-related rules entered by the user via the graphical user interface; 
+<br>
+translate the user-specified rules into a lower-level accessory-related configuration readable by an accessory interface unit adapted for communication with sensors or actuators associated with the vehicle accessory; 
+<br>
+provide the lower-level accessory-related configuration to the accessory interface unit; 
+<br>
+whereby the accessory interface unit cooperates with the sensors or actuators associated with the vehicle accessory to operate the vehicle accessory in accordance with the high-level accessory-related rules. 
+
+<br>
+
+<br>
+17. A vehicle comprising a system according to claim 12.
+</body></html>

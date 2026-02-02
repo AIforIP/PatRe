@@ -1,0 +1,88 @@
+<html><head></head><body><h3>Date: 2020-01-16</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1. A method comprising: 
+<br>
+deriving, from radio frequency based data, pseudo sensor data representative of at least an activity 
+<br>
+of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency based data into the pseudo sensor data; and 
+<br>
+providing the pseudo sensor data. 
+
+<br>
+
+<br>
+2. The method of claim 1, wherein the radio frequency based data is generated from radio frequency signals reflected from at least the user.
+<br>
+
+<br>
+3. The method of any of claims 1-2, wherein the pseudo sensor data represents data derived from the radio frequency based data, rather than data obtained directly from a sensor that generates native sensor data indicative of the activity of the user.
+
+<br>
+
+<br>
+4. The method of claim 3, wherein the sensor is coupled to, and/or included in, a user equipment associated with the user, wherein the sensor and/or the user equipment is worn by the user or not worn by the user.
+<br>
+
+<br>
+5. The method of any of claims 3-4, wherein the pseudo sensor data is provided to an application to enable the application to process the pseudo sensor data and the native sensor data to enable tracking the activity of the user.
+<br>
+
+<br>
+6. The method of claim 5, wherein the pseudo sensor data and the native sensor data provide a stream of data to the application to enable tracking the activity of the user, and/or wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part by the sensor not being able to generate the native sensor data representative of the activity of the user.
+<br>
+
+<br>
+7. The method of claim 6, wherein the sensor is not able to generate the native sensor data, when the sensor is not worn by the user and/or the user equipment is being charged.
+<br>
+
+<br>
+8. The method of any of claims 3-7, wherein the pseudo sensor data is derived in response to an indication that the user equipment and/or the sensor is not providing native sensor data for the user.
+
+<br>
+
+<br>
+9. The method of any of claims 5-8, wherein the application comprises a health and fitness tracker application, and wherein the user equipment comprises a health and fitness tracker.
+
+<br>
+
+<br>
+10. The method of any of claims 2-9, wherein the machine learning model comprises a neural network, a linear regression model, a regression neural network, and/or a regression learning technique, and wherein the machine learning model is configured by machine learning based on at least reference radio frequency based data and reference sensor data collected from at least one reference user performing activities comprising walking, running, jumping, gesturing, standing, and/or sitting.
+<br>
+
+<br>
+11. The method of any of claims 2-10, wherein the native sensor data comprises accelerometer data, gyroscope data, and/or barometer data, wherein the pseudo sensor data comprises pseudo accelerometer data, pseudo gyroscope data, and/or pseudo barometer data, and wherein the radio frequency based data is generated from radar signals reflected from at least the user.
+<br>
+
+<br>
+12. An apparatus including at least one processor and at least one memory including program code, which when executed, causes a method of any of claims 1-11 to be performed.
+
+<br>
+
+<br>
+13. A non-transitory computer-readable storage medium including program code, which when executed causes a method of any of claims 1-11 to be performed.
+<br>
+
+<br>
+14. An apparatus comprising; 
+<br>
+ 
+<br>
+means for deriving, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency-based data into the pseudo sensor data; and 
+<br>
+means for providing the pseudo sensor data. 
+
+<br>
+
+<br>
+15. The apparatus of claim 14 further comprising means for performing a method of any of claims 1-11.
+5
+10
+15
+20
+25
+30
+35
+</body></html>

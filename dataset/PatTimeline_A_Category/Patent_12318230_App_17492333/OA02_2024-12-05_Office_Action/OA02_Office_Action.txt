@@ -1,0 +1,41 @@
+DETAILED ACTION
+The amendment filed November 12, 2024 and the remarks presented therewith have been carefully considered.  However, they are not deemed to be fully persuasive. The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Claim Objections
+Claim 1 is objected to because of the following informalities:  In line 7 of claim 1, it appears that the word –part—should be inserted immediately after the word “center” in order to remain consistent with previously recited claim terminology.  Appropriate correction is required.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claims 1-9, 11, and 14 are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Poulsen (US-5,309,604).
+Poulsen shows an instrument body comprising a flexible section (18) that can be wound in at least one winding (see Fig. 4) and a holding device (22) including a gripper with a tube-shaped center part (30) rotatably and slidably mounted on the instrument body and latch portions (32, 40) extending a radial distance from the center part and over at least a portion of the circumference of the center part.
+In regard to claims 2 and 3, the instrument includes a flexible probe section (18) and a supply section (16).
+Regarding claim 4, the holding device is made from a rigid plastic material (see col. 4, line 67 – col. 5, line 1).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claims 12 and 13 are rejected under 35 U.S.C. 103 as being unpatentable over Poulsen (US-5,309,604) in view of Alden et al. (US-5,364,355).
+The center part of Poulsen’s holding device shows a circular opening (30) for attaching to a flexible portion (18) having a round cross-section.
+In contrast, the patent to Alden et al. shows a holding device (18) having a base (24) that is configured for attachment to an instrument (17) having a non-round cross section (see the opening 20 in Figures 2 and 3).
+It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to form the opening of Poulsen’s holding device with concave undulations, similar to that shown in Figures 2 and 3 of the Alden et al. patent, so that instruments of different cross-sections could be securely held within the resulting opening.
+Claim 10 is rejected under 35 U.S.C. 103 as being unpatentable over Poulsen (US-5,309,604) in view of Smith et al. (US-2016/0074628).
+As noted above in section 3, Poulsen’s holding device is movably secured on the instrument body rather than being mounted in a non-displaceable manner as called for in claim 10.
+The Smith et al. publication shows a holding device for receiving multiple windings of a flexible hose or the like.  The holding device can be movably mounted on the instrument body or permanently fixed to the body (see paragraph [0031]).
+It would have been obvious to a person having ordinary skill in the art before the effective filing date of the claimed invention to fixedly attach the Poulsen holding device to its instrument body, as taught by Smith et al., in order to permanently have access to the holding device with that particular instrument.
+Response to Arguments
+Regarding the 35 U.S.C. 102(a)(1) rejection of claims 1-9, 11, and 14, it is pointed out that the curved holding spaces (32 and 40) of the Poulsen latch are both configured to maintain their concave or “open” configuration due to the natural biasing characteristics of the plastic material from which the holding device is made.
+Applicant’s arguments with respect to claim 10 have been considered but are moot because the new ground of rejection relies on the Smith et al. publication (US-2016/0074628) for teaching a permanent fixed attachment of a holding device to an instrument body.  The Smith et al. publication was not applied in the prior rejection of record for any teaching or matter specifically challenged in the argument.
+Allowable Subject Matter
+Claim 15 is allowed.
+Conclusion
+Applicant's amendment necessitated the new ground(s) of rejection presented in this Office action.  Accordingly, THIS ACTION IS MADE FINAL.  See MPEP § 706.07(a).  Applicant is reminded of the extension of time policy as set forth in 37 CFR 1.136(a).
+A shortened statutory period for reply to this final action is set to expire THREE MONTHS from the mailing date of this action.  In the event a first reply is filed within TWO MONTHS of the mailing date of this final action and the advisory action is not mailed until after the end of the THREE-MONTH shortened statutory period, then the shortened statutory period will expire on the date the advisory action is mailed, and any extension fee pursuant to 37 CFR 1.136(a) will be calculated from the mailing date of the advisory action.  In no event, however, will the statutory period for reply expire later than SIX MONTHS from the date of this final action.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to DEAN J KRAMER whose telephone number is (571)272-6926. The examiner can normally be reached Monday-Friday 7:30-4:00.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Gene Crawford can be reached on 571-272-6911. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/DEAN J KRAMER/                                                                                                                  Primary Examiner, Art Unit 3651
+DEAN J. KRAMER
+Primary Examiner
+Art Unit 3651
+Djk
+11/24/2024

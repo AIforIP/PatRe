@@ -1,0 +1,59 @@
+<html><head></head><body><h3>Date: 2024-10-25</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims replaces all prior versions of the claims.</p><br>
+<br>
+1.   (Currently Amended) A method, comprising:detecting by a processing node that a transport has parked at a first location of an event;<br>
+determine by the processing node a pickup location where the transport is to be located at a pickup time, wherein the pickup location and the pickup time are based on a time of a conclusion of the event obtained from a device of an occupant of the transport; and<br>
+in response to the processing node receiving a modified pickup time for the conclusion of the event from the device, causing [[by]] the processing node the transport to move to a second location intermediate<del> between </del>the first location and the pickup location at the modified pickup<u> time, wherein the second location is closer to the </u><u>p</u><u>icku</u><u>p</u><u> location than the first location.</u><br>
+<br>
+2.   (Previously Presented) The method of claim 1, further comprising:causing the transport to move to the pickup location when the device approaches the pickup location.<br>
+<br>
+3.   (Previously Presented) The method of claim 1, wherein the detecting that the transport has parked at the first location further comprises:detecting that the transport has parked at the first location based on video data received from at least one camera.<br>
+<br>
+4.   (Previously Presented) The method of claim 1, wherein the detecting that the transport has parked at the first location further comprises:<br>
+<br>
+detecting that the transport has parked at the first location based on a change in an operation status of the transport.<br>
+<br>
+5.   (Previously Presented) The method of claim 1, wherein the detecting that the transport has parked at the first location further comprises:detecting that the transport has parked at the first location based on a sensor of the transport indicating that the occupant of the transport has exited the transport.<br>
+<br>
+6.   (Previously Presented) The method of claim 1, comprising:receiving an agreement to move the transport from the device.<br>
+<br>
+7.   (Previously Presented) The method of claim 1, comprising:determining the second location based on one or more vehicles vacating a parking spot between the first location and the pickup location.<br>
+<br>
+8.   (Currently Amended) A system, comprising:a processor that, when executing instructions stored in a memory, is configured to:<br>
+determine a pickup location where the transport is to be located at a pickup time, wherein the pickup location and the pickup time are based on a time of a conclusion of the event obtained from a device of an occupant of the transport; and<br>
+in response to a modified pickup time for the conclusion of the event being received from the device, cause the transport to move to a second location intermediate <del>between </del>the first location and the pickup location at the modified pickup <u>time, wherein the second location is closer to the pickup location than the first location.</u><br>
+<br>
+<br>
+9.   (Previously Presented) The system of claim 8, wherein the processor is further configured to:cause the transport to move to the pickup location when the device approaches the pickup location.<br>
+<br>
+10. (Previously Presented) The system of claim 8, wherein when the processor detects that the transport has parked at the first location, the processor is further configured to:detect that the transport has parked at the first location based on video data from at least one camera.<br>
+<br>
+11. (Previously Presented) The system of claim 8, wherein when the processor detects that the transport has parked at the first location, the processor is further configured to:detect that the transport has parked at the first location based on a change in an operation status of the transport.<br>
+<br>
+12. (Previously Presented) The system of claim 8, wherein when the processor detects that the transport has parked at the first location, the processor is further configured to:detect that the transport has parked at the first location based on a sensor of the transport indicating that the occupant of the transport has exited the transport.<br>
+<br>
+13. (Previously Presented) The system of claim 8, wherein the processor is further configured to:receive an agreement to move the transport from the device associated with the transport.<br>
+<br>
+<br>
+<br>
+14. (Previously Presented) The system of claim 8, wherein the processor is further configured to:determine the second location based on one or more vehicles vacating a parking spot between the first location and the pickup location.<br>
+<br>
+15. (Currently Amended) A non-transitory computer-readable medium comprising instructions that, when executed by a processor, cause the processor to perform:detecting that a transport has parked at a first location of an event;<br>
+determine a pickup location where the transport is to be located at a pickup time, wherein the pickup location and the pickup time are based on a time of a conclusion of the event obtained from a device of an occupant of the transport; and<br>
+in response to receiving a modified pickup time for the conclusion of the event from the device, causing the transport to move to a second location intermediate <del>between </del>the first location and the pickup location at the modified pickup <u>time, wherein the second location is closer to the pickup location than the first location.</u><br>
+<br>
+16. (Previously Presented) The non-transitory computer-readable medium of claim 15, wherein the instructions further cause the processor to perform comprising:causing the transport to move to the pickup location when the device approaches the pickup location.<br>
+<br>
+17. (Previously Presented) The non-transitory computer-readable medium of claim 15, wherein the detecting that the transport has parked at the first location further comprises:<br>
+<br>
+detecting that the transport has parked at the first location based on video data received from at least one camera.<br>
+<br>
+18. (Previously Presented) The non-transitory computer-readable medium of claim 15, wherein the detecting that the transport has parked at the first location further comprises:detecting that the transport has parked at the first location based on a change in an operation status of the transport.<br>
+<br>
+19. (Previously Presented) The non-transitory computer-readable medium of claim 15, wherein the detecting that the transport has parked at the first location further comprises:detecting that the transport has parked at the first location based on a sensor of the transport indicating that the occupant of the transport has exited the transport.<br>
+<br>
+20. (Previously Presented) The non-transitory computer-readable medium of claim 15, wherein the detecting that the transport has parked at the first location further comprises:determining the second location based on one or more vehicles vacating a parking spot between the first location and the pickup location.<br>
+
+</body></html>

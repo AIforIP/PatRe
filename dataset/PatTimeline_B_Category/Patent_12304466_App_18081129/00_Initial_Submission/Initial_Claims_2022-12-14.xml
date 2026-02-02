@@ -1,0 +1,180 @@
+<html><head></head><body><h3>Date: 2022-12-14</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+<br>
+1. A vehicle comprising: 
+<br>
+a lidar installed on the vehicle to secure an external field of view of the vehicle, the lidar configured to obtain lidar data for detecting an object in the external field of view; and 
+<br>
+a controller including at least one processor configured to process the lidar data and configured to perform an avoidance control or a warning control based on processed results, wherein the controller is further configured to: 
+<br>
+generate a plurality of virtual lines in a moving direction of the vehicle within an entire width of the vehicle, obtain a plurality of contour points of the object by processing the lidar data, and 
+<br>
+determine a collision risk for the avoidance control or the warning control based on a number of crossing points between the plurality of virtual lines and the plurality of contour points. 
+
+<br>
+
+<br>
+2. The vehicle of claim 1, wherein the controller is further configured to: 
+<br>
+generate a first equation for the plurality of virtual lines, generate a second equation for the contour points, and 
+<br>
+obtain the number of crossing points based on the first equation and the second equation. 
+
+<br>
+
+<br>
+3. The vehicle of claim 2, wherein the controller is further configured to: 
+<br>
+output "1" for a first index when the number of obtained crossing points is equal to or greater than a predetermined number and output zero "0" for the first index when the number of obtained crossing points is less than the predetermined number. 
+
+<br>
+
+<br>
+4. The vehicle of claim 3, wherein the controller is further configured to: 
+<br>
+obtain a minimum height and a maximum height of the plurality of contour points of the object, 
+
+output "1" for a second index when the minimum height is less than total height of the vehicle or the maximum height is greater than a predetermined height, and 
+<br>
+output zero "0" for the second index when the minimum height is greater than the total height of the vehicle or the maximum height is less than the predetermined height. 
+
+<br>
+
+<br>
+5. The vehicle of claim 4, wherein the controller is further configured to perform the avoidance control when both the output value of the first index and the output value of the second index are 1.
+<br>
+
+<br>
+6. The vehicle of claim 1, wherein, the controller is further configured to: 
+<br>
+when a plurality of crossing points is present, decide on a crossing point closest to the vehicle among the plurality of crossing points and perform the avoidance control based on the closest crossing point. 
+
+<br>
+
+<br>
+7. The vehicle of claim 4, wherein the controller is further configured to: 
+<br>
+when a plurality of crossing points is present, decide on a crossing point closest to the vehicle among the plurality of crossing points and obtain a time to collision (TTC) with the closest crossing point, output "1" for a third index when the TTC is equal to or less than a predetermined time, and 
+<br>
+output zero "0" for the third index when the TTC is greater than the predetermined time. 
+
+<br>
+
+<br>
+8. The vehicle of claim 7, wherein the controller is further configured to perform the avoidance control when both the output value of the first index and the output value of the third index are 1.
+<br>
+
+<br>
+9. The vehicle of claim 5, wherein the controller is further configured to: 
+<br>
+when a plurality of crossing points is present, decide on a crossing point closest to the vehicle among the plurality of crossing points and obtain a time to collision (TTC) with the closest crossing point, output "1" for a third index when the TTC is equal to or less than a 
+
+predetermined time, output zero "0" for the third index when the TTC is greater than the predetermined time, and 
+<br>
+perform the avoidance control when the output value of the first index, the output value of the second index, and the output value of the third index are all 1. 
+
+<br>
+
+<br>
+10. The vehicle of claim 9, wherein the controller is further configured to set the predetermined time to a larger value as a lateral position of the closest crossing point is farther away from the center of the vehicle.
+<br>
+
+<br>
+11. A method of controlling a vehicle that includes a lidar configured to obtain lidar data and a controller configured to perform an avoidance control or a warning control based on the lidar data, the method comprising: 
+<br>
+generating, by the controller, a plurality of virtual lines in a moving direction of the vehicle within a full width of the vehicle; 
+<br>
+obtaining, by the controller, a plurality of contour points of an object by processing the lidar data; 
+<br>
+obtaining, by the controller, a number of crossing points between the plurality of virtual lines and the plurality of contour points; and 
+<br>
+determining, by the controller, a collision risk for the avoidance control or the warning control based on the number of crossing points. 
+
+<br>
+
+<br>
+12. The method of claim 11, further comprising: 
+<br>
+generating a first equation for the plurality of virtual lines; 
+<br>
+generating a second equation for the plurality of contour points; and 
+<br>
+obtaining the number of crossing points based on the first equation and the second equation. 
+
+<br>
+
+<br>
+13. The method of claim 12, further comprising: 
+<br>
+outputting "1" for a first index when the number of obtained crossing points is equal to or greater than a predetermined number; and 
+<br>
+outputting zero "0" for the first index when the number of obtained crossing points is less than the predetermined number. 
+<br>
+14. The method of claim 13, further comprising: 
+<br>
+obtaining a minimum height and a maximum height of the plurality of contour points of the object; 
+<br>
+outputting 1" for a second index when the minimum height is less than total height of the vehicle or the maximum height is greater than a predetermined height; 
+<br>
+and outputting zero "0" for the second index when the minimum height is greater than the total height of the vehicle or the maximum height is less than the predetermined height. 
+
+<br>
+
+<br>
+15. The method of claim 14, further comprising: 
+<br>
+determining the collision risk; and 
+<br>
+performing the avoidance control when both the output value of the first index and the output value of the second index are 1. 
+
+<br>
+
+<br>
+16. The method of claim 11, further comprising: 
+<br>
+determining the collision risk; and 
+<br>
+when a plurality of crossing points is present, deciding on a crossing point closest to the vehicle among the plurality of crossing points and performing the avoidance control based on the closest crossing point. 
+
+<br>
+
+<br>
+17. The method of claim 14, further comprising: 
+<br>
+when a plurality of crossing points is present, deciding on a crossing point closest to the vehicle among the plurality of crossing points and obtaining a time to collision (TTC) with the closest crossing point; 
+<br>
+outputting 1" for a third index when the TTC is equal to or less than a predetermined time; and 
+<br>
+outputting zero "0" for the third index when the TTC is greater than the predetermined time. 
+
+<br>
+
+<br>
+18. The method of claim 17, further comprising: 
+<br>
+determining an avoidance risk; and 
+
+performing the avoidance control when both the output value of the first index and the output value of the third index are "1".
+<br>
+
+<br>
+19. The method of claim 15, further comprising: 
+<br>
+when a plurality of crossing points is present, deciding on a crossing point closest to the vehicle among the plurality of crossing points and obtaining a time to collision (TTC) with the closest crossing point, outputting "1" for a third index when the TTC is equal to or less than a predetermined time; 
+<br>
+outputting zero "0" for the third index when the TTC is greater than the predetermined time; and 
+<br>
+performing the avoidance control when the output value of the first index, the output value of the second index, and the output value of the third index are all "1". 
+
+<br>
+
+<br>
+20. The method of claim 19, wherein the predetermined time is set to a larger value as a lateral position of the closest crossing point is farther away from the center of the vehicle.
+20
+21
+22
+23
+24
+</body></html>

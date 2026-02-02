@@ -1,0 +1,17 @@
+Total Office Actions: 10
+Application Number: 16677623
+Patent Number: 12336837
+
+OA Timeline:
+  OA1: 2020-01-22 - Office_Action
+  OA2: 2020-07-23 - Office_Action
+  OA3: 2021-07-09 - Final_Rejection
+  OA4: 2022-03-22 - Office_Action
+  OA5: 2022-10-25 - Final_Rejection
+  OA6: 2023-05-24 - Office_Action
+  OA7: 2023-12-04 - Final_Rejection
+  OA8: 2024-05-22 - Office_Action
+  OA9: 2024-09-04 - Final_Rejection
+  OA10: 2025-03-17 - Office_Action
+
+Final Status: Office_Action

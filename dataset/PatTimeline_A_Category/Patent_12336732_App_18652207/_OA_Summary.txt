@@ -1,0 +1,9 @@
+Total Office Actions: 2
+Application Number: 18652207
+Patent Number: 12336732
+
+OA Timeline:
+  OA1: 2024-12-17 - Final_Rejection
+  OA2: 2025-03-05 - Granted
+
+Final Status: Granted

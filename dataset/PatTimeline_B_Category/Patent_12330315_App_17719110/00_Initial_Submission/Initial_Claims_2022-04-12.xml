@@ -1,0 +1,97 @@
+<html><head></head><body><h3>Date: 2022-04-12</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1.   A method of operation of a robot, the method performed by the robot, the method comprising: 
+<br>
+identifying a set of candidate actions that may be performed by the robot; 
+<br>
+collecting, for each candidate action of the set of candidate actions, a respective set of ancillary data; 
+<br>
+transmitting a request for instructions to a tele-operation system, the tele- operation system communicatively coupled to the robot, the request for the instructions which includes each candidate action of the set of candidate actions and each respective set of ancillary data; 
+<br>
+receiving the instructions from the tele-operation system; 
+<br>
+executing the instructions; and 
+<br>
+updating a control model of the robot, based at least in part on each candidate action of the set of candidate actions, each respective set of ancillary data, and the instructions, to increase a level of autonomy of the robot. 
+
+<br>
+
+<br>
+2.    The method of claim 1, the robot comprising one or more sensors, wherein the identifying a set of candidate actions that may be performed by the robot includes sensing, by the one or more sensors, at least one of an external event or an external condition and identifying the set of candidate actions in response to sensing the at least one of an external event or an external condition.
+<br>
+
+<br>
+3.   The method of claim 1, further comprising receiving, from the tele- operation system, an objective to be completed by the robot, wherein the identifying a set of candidate actions that may be performed by the robot includes identifying a set of candidate actions that may be performed by the robot in furtherance of the objective.
+<br>
+
+<br>
+4.    The method of claim 3, wherein the transmitting a request for instructions to a tele-operation system includes transmitting the request for instructions to the tele-operation system in response to determining the robot is unable to select a candidate action of the set of candidate actions to perform in furtherance of the objective.
+
+<br>
+5.   The method claim 4, further comprising scoring each candidate action of the set of candidate actions, wherein the scoring each candidate action of the set of candidate actions includes assigning a respective probability to each candidate action, the respective probability being based at least in part on a respective expectation of progress, achievable by each candidate action, towards the objective.
+<br>
+
+<br>
+6.    The method of claim 5, further comprising ranking each candidate action in an order of preference, the order of preference being based at least in part on the respective probability of each candidate action.
+<br>
+
+<br>
+7.   The method of claim 6, wherein the transmitting a request for instructions to a tele-operation system, the request for the instructions which includes each candidate action of the set of candidate actions and each respective set of ancillary data includes transmitting a request for instructions to a tele-operation system, the request for the instructions which includes each respective probability and the order of preference.
+<br>
+
+<br>
+8.   The method of claim 6, further comprising determining whether a respective probability meets a predetermined probability criterion.
+<br>
+
+<br>
+9.   The method of claim 6, further comprising determining whether a difference between a first respective probability and a second respective probability meets a predetermined difference criterion.
+<br>
+
+<br>
+10.  The method of claim 1, the robot being a semi-autonomous robot characterized by a level of autonomy, the level of autonomy being determined at least in part by the control model, the method further comprising comparing the level of autonomy of the robot to a threshold level of autonomy, the threshold level of autonomy above which the robot is operable to autonomously select a candidate action of the set of candidate actions to perform, wherein the transmitting a request for instructions to a tele-operation system includes transmitting the request for instructions to the tele-operation system in response to determining the level of autonomy of the robot is lower than the threshold level of autonomy.
+
+<br>
+11.  The method of claim 10, further comprising, in response to determining the level of autonomy of the robot meets or exceeds the threshold level of autonomy, performing one of the candidate actions of the set of candidate actions.
+<br>
+
+<br>
+12.  The method of claim 11, further comprising receiving, from the tele- operation system, an objective to be completed by the robot, wherein the identifying a set of candidate actions that may be performed by the robot includes identifying a set of candidate actions that may be performed by the robot in furtherance of the objective.
+<br>
+
+<br>
+13.  The method of claim 12, further comprising determining the threshold level of autonomy, wherein the determining the threshold level of autonomy includes assigning a respective probability to each candidate action, the respective probability being based at least in part on a respective expectation of progress, achievable by each candidate action, towards the objective.
+<br>
+
+<br>
+14.  The method of claim 13, further comprising ranking each candidate action in an order of preference, the order of preference being based at least in part on the respective probability.
+<br>
+
+<br>
+15.  The method of claim 14, wherein the determining the level of autonomy of the robot is lower than the threshold level of autonomy includes determining the respective probability of each candidate action in the set of candidate actions fails to satisfy at least one predetermined criterion.
+<br>
+
+<br>
+16.  The method of claim 1, the robot comprising one or more sensors and a data repository, the collecting, for each candidate action of the set of candidate actions, a respective set of ancillary data includes at least one of collecting a first subset of the respective set of ancillary data by the one or more sensors or extracting a second subset of the respective set of ancillary data from the data repository.
+<br>
+
+<br>
+17.  The method of claim 1, wherein the transmitting a request for instructions to a tele-operation system includes transmitting a request for the tele-operation system to determine which candidate action the robot should perform.
+
+<br>
+18.  The method of claim 1, the robot comprising a motion actuator, wherein executing the instructions includes causing, by the motion actuator, the robot to execute a movement.
+<br>
+
+<br>
+19.  The method of claim 1, wherein the updating a control model, based at least in part on each candidate action of the set of candidate actions, each respective set of ancillary data, and the instructions includes increasing a level of autonomy of the robot from a first level of autonomy to a second level of autonomy, the second level of autonomy being higher than the first level of autonomy.
+<br>
+
+<br>
+20.   The method of claim 1, further comprising identifying, by the robot, an objective to be completed by the robot, wherein the identifying a set of candidate actions that may be performed by the robot includes identifying a set of candidate actions that may be performed by the robot in furtherance of the objective.
+29
+30
+31
+32
+</body></html>

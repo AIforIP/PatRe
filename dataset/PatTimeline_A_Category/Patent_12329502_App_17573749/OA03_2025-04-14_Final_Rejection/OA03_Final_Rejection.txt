@@ -1,0 +1,24 @@
+DETAILED ACTION
+Claims 1-7 are pending and hereby under examination.
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Election/Restrictions
+This application is in condition for allowance except for the presence of claims 5-6 directed to an invention non-elected without traverse.  Accordingly, claims 5-6 have been cancelled.
+Response to Arguments
+The amendments to the claim objection in the reply filed 03/25/2025 are acknowledged. The Applicant has clarified how the elliptical member is attached to the belt-like body. The objection is hereby withdrawn.
+The amendments to the 35 U.S.C. §112(b) rejection in the reply filed 03/25/2025 are acknowledged. Applicant amended claim 1 by updating the method language “provided to” to structural language “attached” and “included in”. Consistent with Applicant’s remarks, the amendments have addressed the issues set forth in the rejection and the rejection is hereby withdrawn.
+Allowable Subject Matter
+The following is an examiner’s statement of reasons for allowance:
+As outlined in the Non-Final Rejection filed 12/27/2024, claims 1 and 7 indicated allowable subject matter for reasons reiterated in the paragraph below.
+Regarding claims 1 and 7, the closest prior art of Yokoyama (JP 2013034791 - cited by Applicant) discloses a sphygmomanometer cuff comprised of an inner and outer cloth with an expansion bag, a ring-shaped member, a retaining tube and fasteners. The prior art of record does not disclose an end opening nor a retaining member with the specific structure of a flexible projection part with flat, plate-like support parts that is welded to the back surface of the outer fabric in the end opening. Vivenzio (US 8652057) discloses a blood pressure cuff with an opening of the first sheet. However, the socket inserted into the opening is not similar in structure to the claimed retaining member welded to the cuff.
+Additionally, Nakanishi (US 20100268100) discloses a blood pressure measurement apparatus with an “anti-drop” member made of resin to prevent the loop from falling out (Fig. 3, element 36). While the prior art such as Nakanishi teaches ways of preventing the two ends of the cuff from detaching, the prior art fails to teach the claimed retaining member and its corresponding structure.
+Therefore, the prior art of record does not read on the claims nor does it provide sufficient obviousness rationale to modify the teachings together to read on the claims.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Claims 1-4 and 7 are allowed.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to NOAH MICHAEL HEALY whose telephone number is(703)756-5534. The examiner can normally be reached Monday - Friday 8:30am - 5:30pm ET.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Jason Sims can be reached on (571)272-7540. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/ERIC F WINAKUR/Primary Examiner, Art Unit 3791
+/NOAH M HEALY/Examiner, Art Unit 3791

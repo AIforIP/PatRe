@@ -1,0 +1,179 @@
+<html><head></head><body><h3>Date: 2023-02-16</h3>
+ <u>CLAIMS</u> What we claim is:
+<br>
+
+<br>
+1. A method comprising: 
+<br>
+identifying, by a processor, a maximum distance bound based on one or more objects around a vehicle; 
+<br>
+for each of a plurality of candidate trajectories for the vehicle: 
+<br>
+determining, by the processor, a velocity from the maximum distance bound at an ending time of the candidate trajectory; 
+<br>
+determining, by the processor, an available distance for the candidate trajectory as a function of the determined velocity at the ending time of the candidate trajectory and a comfort deceleration parameter; 
+<br>
+determining, by the processor, a target velocity for the candidate trajectory as a function of the available distance for the candidate trajectory, a difference between a distance at the ending time of the candidate trajectory and a distance of the maximum distance bound at the ending time of the candidate trajectory, and the comfort deceleration parameter; and 
+<br>
+determining, by the processor, a velocity difference between the target velocity and a final velocity of the candidate trajectory at the ending time of the candidate trajectory; 
+<br>
+selecting, by the processor, a first candidate trajectory of the plurality of candidate trajectories based on the velocity difference of the first candidate trajectory and the velocity differences of the other candidate trajectories of the plurality of candidate trajectories; and 
+<br>
+operating, by the processor, the vehicle based on the selected first candidate trajectory. 
+
+<br>
+
+<br>
+2. The method of claim 1, further comprising identifying, by the processor, the one or more objects around the vehicle; 
+<br>
+generating, by the processor, one or more maximum distance bounds based on the one or more identified objects; and 
+<br>
+consolidating the one or more generated maximum distance bounds into the maximum distance bound. 
+<br>
+
+<br>
+3. The method of claim 1, wherein identifying the one or more objects comprises identifying, by the processor, one or more static or dynamic objects from images or LiDAR.
+<br>
+
+<br>
+4. The method of claim 1, wherein determining the velocity difference between the target velocity and the final velocity of the candidate trajectory at the ending time comprises: 
+<br>
+comparing, by the processor, the target velocity with the determined velocity for the ending time of the candidate trajectory; and 
+<br>
+selecting, by the processor, the target velocity responsive to determining the target velocity is lower than the determined velocity for the ending time of the candidate trajectory. 
+
+<br>
+
+<br>
+5. The method of claim 1, wherein the plurality of candidate trajectories comprise minimum jerk trajectories.
+<br>
+
+<br>
+6. The method of claim 1, wherein identifying the one or more objects comprises identifying, by the processor, the one or more objects using one or more of camera system data, LiDAR system data, GNSS data, or IMU system data.
+<br>
+
+<br>
+7. The method of claim 1, wherein determining the target velocity comprises: 
+<br>
+determining, by the processor, a total distance as a sum of the available distance for the candidate trajectory and the difference between the distance at the ending time of the candidate trajectory and the distance of the maximum distance bound at the ending time of the candidate trajectory; and 
+<br>
+determining, by the processor, the target velocity as a function of the total distance and the comfort deceleration parameter. 
+
+<br>
+
+<br>
+8. The method of claim 7, wherein the comfort deceleration parameter is a first deceleration parameter, and wherein determining the target velocity comprises: 
+<br>
+determining, by the processor, a first target velocity as a function of the total distance and the comfort deceleration parameter, and, separately, a second target velocity using a ramp function on the total distance. 
+<br>
+
+<br>
+9. The method of claim 8, wherein the determining the target velocity for the candidate trajectory comprises: 
+<br>
+selecting, by the processor, the first target velocity as the target velocity for the candidate trajectory responsive to determining the first target velocity is lower than the second target velocity. 
+
+<br>
+
+<br>
+10. The method of claim 1, wherein each of the plurality of candidate trajectories corresponds to a distance of the vehicle compared to an initial position of the vehicle when performing the method over time.
+<br>
+
+<br>
+11. The method of claim 1, comprising: 
+<br>
+retrieving, by the processor, the plurality of candidate trajectories from memory by sampling, by the processor, trajectory velocities and durations for a defined range and step of time. 
+
+<br>
+
+<br>
+12. A system comprising: 
+<br>
+memory; and 
+<br>
+one or more processors, wherein the one or more processors are configured to: 
+<br>
+identify a maximum distance bound based on one or more objects around a vehicle; 
+<br>
+for each of a plurality of candidate trajectories for the vehicle: 
+<br>
+determining a velocity from the maximum distance bound at an ending time of the candidate trajectory; 
+<br>
+determining an available distance for the candidate trajectory as a function of the determined velocity at the ending time of the candidate trajectory and a comfort deceleration parameter; 
+<br>
+determining a target velocity for the candidate trajectory as a function of the available distance for the candidate trajectory, a difference between a distance at the ending time of the candidate trajectory and a distance of the maximum distance bound at the ending time of the candidate trajectory, and the comfort deceleration parameter; and 
+<br>
+determining a velocity difference between the target velocity and a final velocity of the candidate trajectory at the ending time of the candidate trajectory; 
+ 
+ selecting a first candidate trajectory of the plurality of candidate trajectories based on the velocity difference of the first candidate trajectory and the velocity differences of the other candidate trajectories of the plurality of candidate trajectories; and 
+<br>
+operating the vehicle based on the selected first candidate trajectory. 
+
+<br>
+
+<br>
+13. The system of claim 12, wherein the one or more processors are further configured to: 
+<br>
+identify the one or more objects around the vehicle; 
+<br>
+generate one or more maximum distance bounds based on the one or more identified objects; and 
+<br>
+consolidate the one or more generated maximum distance bounds into the maximum distance bound. 
+
+<br>
+
+<br>
+14. The system of claim 12, wherein the one or more processors are configured to identify the one or more objects by identifying one or more static or dynamic objects from images or LiDAR.
+<br>
+
+<br>
+15. The system of claim 12, wherein each of the plurality of candidate trajectories corresponds to a distance of the vehicle compared to an initial position of the vehicle over time.
+<br>
+
+<br>
+16. The system of claim 12, wherein the one or more processors are further configured to: 
+<br>
+retrieve the plurality of candidate trajectories from memory by sampling trajectory velocities and durations for a defined range and step of time. 
+
+<br>
+
+<br>
+17. The system of claim 12, wherein the plurality of candidate trajectories comprise minimum jerk trajectories.
+<br>
+
+<br>
+18. A method comprising: 
+<br>
+identifying, by a processor, a maximum distance bound based on one or more objects around a vehicle; 
+<br>
+for each of a plurality of candidate trajectories for the vehicle: 
+<br>
+determining, by the processor, a velocity from the maximum distance bound at an ending time of the candidate trajectory; 
+ 
+ determining, by the processor, a target velocity for the candidate trajectory based on the determined velocity for the candidate trajectory and a difference between a distance at the ending time of the candidate trajectory and a distance of the maximum distance bound at the ending time of the candidate trajectory; and 
+<br>
+determining, by the processor, a velocity difference between the target velocity and a final velocity of the candidate trajectory at the ending time of the candidate trajectory; 
+<br>
+selecting, by the processor, a first candidate trajectory of the plurality of candidate trajectories based on the velocity difference of the first candidate trajectory and the velocity differences of the other candidate trajectories of the plurality of candidate trajectories; and 
+<br>
+operating, by the processor, the vehicle based on the selected first candidate trajectory. 
+
+<br>
+
+<br>
+19. The method of claim 18, further comprising identifying, by the processor, the one or more objects around the vehicle; 
+<br>
+generating, by the processor, one or more maximum distance bounds based on the one or more identified objects; and 
+<br>
+consolidating the one or more generated maximum distance bounds into the maximum distance bound. 
+
+<br>
+
+<br>
+20. The method of claim 18, wherein identifying the one or more objects comprises identifying, by the processor, one or more static or dynamic objects from images or LiDAR.
+29
+30
+31
+32
+33
+4889-9567-9311.1
+</body></html>

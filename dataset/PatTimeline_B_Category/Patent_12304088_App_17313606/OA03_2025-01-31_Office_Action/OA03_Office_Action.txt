@@ -1,0 +1,25 @@
+DETAILED ACTION
+EXAMINER’S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in a telephone interview with Mr. Wuennenberg on 1/13/2024.
+The application has been amended as follows:
+Please cancel withdrawn claims 15- 20.
+Allowable Subject Matter
+Claims 1- 14 are allowed.
+Examiner’s interpretation
+The deformable membrane is of more specific type/ particular machine and not a generic membrane which is used for defining of an enclosure that is configured to be filled with a medium, and comprises a filter layer on a surface of the deformable membrane configured to assist in detection of a deformation of the deformable membrane (see fig. 1 reproduced below). The adjusting of the pressure based on the similarity value presents the eligibility under 35 USC 101 as a practical application since it overrides any errors which may cause undesirable results, such as incorrectly detecting a type of object, inability to detect a type of object, incorrectly detecting a pose of an object, inability to detect a pose of an object, incorrectly detecting a geometry of an object, inability to detect a geometry of an object, and the like according to paragraph [0049] of the specification.
+PNG
+media_image1.png
+556
+514
+media_image1.png
+Greyscale
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Inquiry
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to Manuchehr Rahmjoo whose telephone number is 571-272- 7789.  The examiner can normally be reached on 8 AM- 5 pm.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Chineyere Wills-Burns can be reached on 571-272- 9752.  The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free).
+Manuchehr Rahmjoo
+/Manuchehr Rahmjoo/
+Primary Examiner, AU 2667
+Manuchehr.Rahmjoo@uspto.gov

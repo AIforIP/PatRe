@@ -1,0 +1,26 @@
+DETAILED ACTION
+1.	This Office Action is sent in response to Applicant’s communication received on 08/17/2023 for application number 18/451,264. The Office herby acknowledges receipt of the following and placed of record in file: Specification, Drawings, Abstract, Oath/Declaration, and claims.
+Notice of Pre-AIA  or AIA  Status
+2.	The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Priority
+3.	Acknowledgment is made of applicant’s claim for foreign priority under 35 U.S.C. 119 (a)-(d). The certified copy has been filed.
+REASONS FOR ALLOWANCE
+4.	The following is an examiner's statement of reasons for allowance: The instant invention is related to technology field of machine vision, and more particularly to an automatic target image acquisition and calibration system for application in a defect inspection system.
+Prior art was found for the claims as follows:
+Stubbs et al., [US Pub. No.: 2017/0080566 A1] discloses a robotic manipulators may be used to manipulate objects. Manipulation data about manipulations performed on objects may be generated and accessed. This data may be analyzed to generate a profile indicating how an object may be manipulated. A portion of the profile may be transmitted to a particular robotic manipulator. For example, the portion may be based on a manipulation capability of the robotic manipulator. In turn, the robotic manipulator may use the portion of the profile to manipulate the object.
+5.	Applicant uniquely claimed a distinct feature in the instant invention, which are not found in the prior art, either singularly or in combination. The claims are allowable because the prior art fails to disclose the following claim features “…conduct a camera moving operation, so as to control the robotic arm to move the second camera to make one of N inspection surfaces of the article be in a second photographing region of the second camera, where N is an integer; conduct a photographing operation, so as to control the second camera to photograph the inspection surface of the article, thereby obtaining one article image; repeat the foregoing camera moving operation and the foregoing photographing operation N-1 times, so as to obtain a total of N article images; apply a feature extracting process to the N article images so as to generate N feature images; and conduct a feature matching operation, so as to determine whether said feature image contains at least one defect feature that matches at least one of a plurality of reference defect features”.
+This feature is not found or suggested in the prior art.
+6.	Any comments considered necessary by applicant must be submitted no later
+than the payment of the issue fee and, to avoid processing delays, should preferably
+accompany the issue fee. Such submissions should be clearly labeled “Comments on
+Statement of reasons for Allowance.”
+7.	Claims 1-10 are allowed.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to HOWARD D BROWN JR whose telephone number is(571)272-4371. The examiner can normally be reached Monday - Friday 7:30AM - 5:00PM EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Sathyanarayanan Perungavoor can be reached on 5712727455. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+HOWARD D. BROWN JR
+Primary Examiner
+Art Unit 2488
+/HOWARD D BROWN JR/Examiner, Art Unit 2488

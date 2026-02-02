@@ -1,0 +1,37 @@
+DETAILED ACTION
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given by Charles A. Thomas in a phone call on November 20th, 2024.
+The application has been amended as follows:
+Claim 1, lines 3-4, “the head has been amended to —a head—
+Claim 1, line 6, “a head of an individual; has been amended to —the head of the individual; and—
+Claim 1, line 16, “directions;” has been amended to —directions; and—
+Claim 1, line 19, “a computed brain angle metric has been amended to —the computed brain angle metric—
+Claim 7, line 2, “the rotational deformation” has been amended to —a rotational deformation—
+Claim 8, lines 4-6, “k and c are a stiffness and damping values of the system, and θbrain and θskull represent angles of a brain and a skull” has been amended to —k and c are a stiffness and damping values of the system, respectively, and θbrain and θskull represent angles of a brain and a skull, respectively—
+Claim 13, line 3, “a probability of concussive event” has been amended to —a probability of the concussive event—
+Claim 14, line 2, “the percent likelihood” has been amended to —a percent likelihood—
+Claim 14, lines 2-3, “a concussive event” has been amended to —the concussive event—
+Claim 21, line 13, “model and the computer system has been amended to —model and a computer system—
+Claim 21, line 18, “whether a brain angle metric has been amended to —whether the brain angle metric—
+Claim 27, line 2, “the rotational deformation” has been amended to —a rotational deformation—
+Claim 28, lines 4-6, “k and c are a stiffness and damping values of the system, and θbrain and θskull represent angles of a brain and a skull” has been amended to —k and c are a stiffness and damping values of the system, respectively, and θbrain and θskull represent angles of a brain and a skull, respectively—
+Claim 33, lines 1-2, “the regression model: has been amended to —the regression model is:—
+Claim 33, line 3, “a probability of concussive event” has been amended to —a probability of the concussive event—
+Claim 34, line 2, “the percent likelihood” has been amended to —a percent likelihood—
+Claim 34, lines 2-3, “a concussive event” has been amended to —the concussive event—
+EXAMINER REASONS FOR ALLOWANCE
+Claims 1, 5-8, 11, 13-14, 21, 25-28, 31, 33-34, and 81-84 are allowed.
+The following is an examiner’s statement of reasons for allowance:
+Independent claim 1 recites, inter alia, “…compute in real time, utilizing the captured brain angle measurements as input in a mathematical mass-spring-damper model, a brain angle metric for the one or more anatomical directions…”. The added limitations overcome the prior art of record and would require an unreasonable combination of references that would not suffice for a realistic case of obviousness.
+The closest references found during Examiner’s search of the prior art were Benzel et al (U.S. Publication No. 2012/0220893), Kuo et al (U.S. Publication No. 2017/0156635), Howard et al (U.S. Patent No. 9,129,499), Kirovski et al (U.S. Patent No. 8,761,437), and Gonzales et al (U.S. Publication No. 2017/0238850). None of these references, alone or in combination with one other or any prior art reference, would anticipate or render obvious the invention of claim 1 including “…compute in real time, utilizing the captured brain angle measurements as input in a mathematical mass-spring-damper model, a brain angle metric for the one or more anatomical directions…” in combination with all other claim elements.
+Applicant's remarks and amendments with respect to the rejections under 35 U.S.C. 112(b) have been fully considered and are persuasive.
+Applicant's remarks and amendments with respect to the rejections under 35 U.S.C. 101 have been fully considered and are persuasive.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to CHANEL J JHIN whose telephone number is(571) 272-2695.  The examiner can normally be reached on Monday-Friday 9:00AM-5:00PM.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Alexander Valvis can be reached on 571-272-4233.  The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see https://ppair-my.uspto.gov/pair/PrivatePair. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/CHANEL J JHIN/Examiner, Art Unit 3791
+/CHRISTINE H MATTHEWS/Primary Examiner, Art Unit 3791

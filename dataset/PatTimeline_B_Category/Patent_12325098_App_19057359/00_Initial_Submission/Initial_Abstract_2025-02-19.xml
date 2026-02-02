@@ -1,0 +1,11 @@
+<html><head></head><body>ABST
+19057359
+
+1
+3
+
+2025-02-19
+Abstract The present invention discloses a multi-task machining process on-line monitoring method and system based on cloud-edge collaboration, comprising multi-source sensing terminals, edge computing platforms and a cloud server.
+Each multi-source sensing terminal uses sensing equipment to obtain multi- source heterogeneous signals such as spindle vibration signals and acoustic emission signals generated in a machining process and transmit the signals to a controller of each edge computing platform; the edge computing platform is used for periodically collecting and processing the signals, synchronously monitoring cutting vibration, tool wear, tool breakage and machining surface quality in combination with intelligent prediction models, and uploading monitoring data to the cloud server; the cloud server is used for storing the monitoring data of each edge computing platform into the cloud database, and updating the intelligent prediction models regularly with global data to improve the generalization ability of the models.
+28 
+</body></html>

@@ -1,0 +1,64 @@
+<html><head></head><body>18069127
+
+   CLAIMS
+   
+
+<br>
+
+Claim 1.  A continuum robot control system for controlling a continuum robot that includes a bendable portion having a plurality of bending sections bent by being driven by a wire, a base configured to support the bendable portion, and a driving unit configured to drive the wire, the continuum robot control system comprising:
+following calculating means for calculating a target bending angle and a target rotational angle of a following bending section of the plurality of bending sections on the basis of a target bending angle and a target rotational angle of a distal-most bending section of the plurality of bending sections and a displacement of the base in a direction of movement of the continuum robot, the distal-most bending section being located farthest from the base, the following bending section being located between the distal-most bending section and the base;
+following operating means for receiving a target bending angle and a target rotational angle of the following bending section by being operated;
+following switching means for performing a switching operation for selecting the target bending angle and the target rotational angle of the following bending section obtained from the following calculating means or the target bending angle and the target rotational angle of the following bending section obtained from the following operating means; and
+computing means for computing, on the basis of the target bending angle and the target rotational angle of the following bending section selected by the following switching means, a drive displacement by which the driving unit drives the wire in the following bending section.
+<br>
+
+Claim 2.  The continuum robot control system according to Claim 1, wherein in a case where an operator's contact with the following operating means is detected, the following switching means performs a switching operation for selecting the target bending angle and the target rotational angle of the following bending section obtained from the following operating means.
+<br>
+
+Claim 3.  The continuum robot control system according to Claim 1, further comprising:
+storage means for storing the target bending angle and the target rotational angle of the distal-most bending section;
+distal-most calculating means for calculating the target bending angle and the target rotational angle of the distal-most bending section on the basis of the target bending angle and the target rotational angle of the distal-most bending section stored in the storage means and the target bending angle and the target rotational angle of the following bending section received by the following operating means;
+distal-most operating means for receiving a target bending angle and a target rotational angle of the distal-most bending section by being operated; and
+distal-most switching means for performing a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section obtained from the distal-most calculating means or the target bending angle and the target rotational angle of the distal-most bending section obtained from the distal-most operating means,
+wherein the computing means further computes, on the basis of the target bending angle and the target rotational angle of the distal-most bending section selected by the distal-most switching means, a drive displacement by which the driving unit drives the wire in the distal-most bending section; and
+in a case where an operator's contact with the following operating means is detected, the distal-most switching means performs a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section obtained from the distal-most calculating means.
+<br>
+
+Claim 4.  The continuum robot control system according to Claim 1, wherein the bendable portion includes at least a first following bending section and a second following bending section; and
+the following operating means includes first following operating means and second following operating means corresponding to the first following bending section and the second following bending section, respectively,
+wherein the continuum robot control system further comprises control gain means for multiplying, by a control gain, a target bending angle and a target rotational angle of the second following bending section obtained from the second following operating means, and
+wherein in a case where an operator's contact with the second following operating means is detected, the following switching means performs a switching operation for selecting, as a target bending angle and a target rotational angle of the second following bending section, the target bending angle and the target rotational angle of the second following bending section obtained from the second following operating means, and performs a switching operation for selecting, as a target bending angle and a target rotational angle of the first following bending section, the target bending angle and the target rotational angle of the second following bending section multiplied by the control gain by the control gain means.
+<br>
+
+Claim 5.  The continuum robot control system according to Claim 1, further comprising:
+storage means for storing the target bending angle and the target rotational angle of the distal-most bending section;
+base determining means for determining whether the base is moving forward or backward on the basis of the displacement of the base;
+distal-most operating means for receiving the target bending angle and the target rotational angle of the distal-most bending section by being operated; and
+distal-most switching means for performing a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section stored in the storage means or the target bending angle and the target rotational angle of the distal-most bending section obtained from the distal-most operating means,
+wherein the computing means further computes, on the basis of the target bending angle and the target rotational angle of the distal-most bending section selected by the distal-most switching means, a drive displacement by which the driving unit drives the wire in the distal-most bending section; and
+in a case where the base determining means determines that the base is moving backward, the distal-most switching means performs a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section stored in the storage means.
+<br>
+
+Claim 6.  The continuum robot control system according to Claim 1, further comprising distal-most operating means for receiving the target bending angle and the target rotational angle of the distal-most bending section by being operated,
+wherein the following calculating means calculates the target bending angle and the target rotational angle of the following bending section by using the target bending angle and the target rotational angle of the distal-most bending section obtained from the distal-most operating means.
+<br>
+
+Claim 7.  The continuum robot control system according to Claim 6, wherein the following operating means and the distal-most operating means each include a motor, an operating lever driven by the motor, and an angular sensor.
+<br>
+
+Claim 8.  A continuum robot control method for controlling a continuum robot that includes a bendable portion having a plurality of bending sections bent by being driven by a wire, a base configured to support the bendable portion, and a driving unit configured to drive the wire, the continuum robot control method comprising:
+a following calculating step of calculating a target bending angle and a target rotational angle of a following bending section of the plurality of bending sections on the basis of a target bending angle and a target rotational angle of a distal-most bending section of the plurality of bending sections and a displacement of the base in a direction of movement of the continuum robot, the distal-most bending section being located farthest from the base, the following bending section being located between the distal-most bending section and the base;
+a following operating step of receiving a target bending angle and a target rotational angle of the following bending section by being operated;
+a following switching step of performing a switching operation for selecting the target bending angle and the target rotational angle of the following bending section obtained in the following calculating step or the target bending angle and the target rotational angle of the following bending section obtained in the following operating step; and
+a computing step of computing, on the basis of the target bending angle and the target rotational angle of the following bending section selected in the following switching step, a drive displacement by which the driving unit drives the wire in the following bending section.
+<br>
+
+Claim 9.  A non-transitory storage medium storing at least one program that operates to cause a computer to perform a continuum robot control method for controlling a continuum robot that includes a bendable portion having a plurality of bending sections bent by being driven by a wire, a base configured to support the bendable portion, and a driving unit configured to drive the wire, the continuum robot control method comprising:
+a following calculating step of calculating a target bending angle and a target rotational angle of a following bending section of the plurality of bending sections on the basis of a target bending angle and a target rotational angle of a distal-most bending section of the plurality of bending sections and a displacement of the base in a direction of movement of the continuum robot, the distal-most bending section being located farthest from the base, the following bending section being located between the distal-most bending section and the base;
+a following operating step of receiving a target bending angle and a target rotational angle of the following bending section by being operated;
+a following switching step of performing a switching operation for selecting the target bending angle and the target rotational angle of the following bending section obtained in the following calculating step or the target bending angle and the target rotational angle of the following bending section obtained in the following operating step; and
+a computing step of computing, on the basis of the target bending angle and the target rotational angle of the following bending section selected in the following switching step, a drive displacement by which the driving unit drives the wire in the following bending section.
+
+   
+
+</body></html>

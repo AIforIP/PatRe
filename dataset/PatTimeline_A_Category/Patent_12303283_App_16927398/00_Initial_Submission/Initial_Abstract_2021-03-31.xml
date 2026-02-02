@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2021-03-31</h3>
+
+<h1>ABSTRACT</h1>
+<p>The present invention provides a neurological disorders decision support system</p><p>that can assist an examiner to diagnose an examinee. The neurological disorders decision support system includes a user module, a screening module, an intelligent calculation module and a diagnosis module. The user module sends an inquiry to the</p><p>examinee, receives a response message from the examinee, and retrieves a physiological characteristic signal of the examinee. The screening module executes a neurological examination application program to indicate to the examinee to obtain physiological characteristic signals. The screening module outputs response messages and physiological characteristic signals for the intelligent calculation module to execute</p><p>an algorithm to generate an analysis report. The analysis report assists the examiner for diagnosis, and sends a diagnosis notification to the user module through the diagnosis module. The invention also provides a neurological disorders decision support method.</p><p>23</p>5
+10
+</body></html>

@@ -1,0 +1,9 @@
+<html><head></head><body><h3>Date: 2022-05-27</h3>
+<h1>SYSTEMS AND METHODS FOR ENABLING PREDICTIVE ASSISTANCE</h1>
+<h1>DURING GAMEPLAY</h1>
+<h1><u>ABSTRACT</u></h1>
+
+<p>A method for providing assistance during gameplay is described. The method includes accessing a profile model associated with a user account of a user. The profile model is used to generate one or more predictive indicators based on a plurality of game contexts of one or more games. The method further includes receiving a request for accessing a game for a game session via the user account and generating assistance input for the user responsive to the one or more predictive indicators that the user will be unable to complete a task in the game. The task is associated to a game context. The assistance input is provided before the user performs the task.</p>
+ASP/NVP
+SONYP62752PATENT APPLICATION
+</body></html>

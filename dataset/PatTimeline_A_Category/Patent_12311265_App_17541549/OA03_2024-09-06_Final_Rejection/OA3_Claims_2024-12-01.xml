@@ -1,0 +1,92 @@
+<html><head></head><body><h3>Date: 2024-12-01</h3>
+
+<h1>IN THE CLAIMS</h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1>Listing of Claims:</h1>
+<br>
+<br>
+1.    (Currently amended) A method for determining a real-world environment in which a first user is located, comprising:receiving a plurality of sets of audio data generated from sounds emitted in a plurality of real-world environments, wherein each of the plurality of real-world environments has a different combination of objects;<br>
+<u>extracting a plurality of features from the plurality of sets of audio data, wherein the plurality of features include a plurality of amplitudes of the plurality of sets of audio data, a plurality of fre</u><u>q</u><u>uencies of the plurality of sets of audio data, and a plurality of sense directions in which the sounds are sensed</u><u>;</u><br>
+<u>classifying the plurality of features to output associations between the plurality of features and a plurality of types of the plurality of real-world environments, the objects within the plurality of real-world environments, a plurality of arrangements of the objects, and a plurality of states of the objects within the plurality of real-world environments</u><u>;</u><br>
+receiving input data regarding the plurality of real-world environments;<br>
+training an artificial intelligence (A) model based on the plurality of sets of audio data generated from the sounds in the plurality of real-world environments and based on the input data regarding the plurality of real-world <u>environments, wherein said training the A</u><u>l</u><u> model includes:</u><u>providing, to the A</u><u>l</u><u> model, the associations between the plurality of features and the plurality of types of the plurality of real-world environments, the objects within the plurality of real-world environments, the plurality of arrangements of the objects, and the plurality of states of the objects within the plurality of real-world environments</u><u>;</u><u> and</u><br>
+<u>determining, by the A</u><u>l</u><u> model, a plurality of probabilities based on the associations between the plurality of features and the plurality of types of the plurality of real-world environments, the objects within the plurality of real-world</u><br>
+<br>
+<br>
+<u>environments, the plurality of arrangements of the objects, and the plurality of states of the objects within the plurality of real-world environments;</u> and<br>
+applying the Al model to audio data captured from the real-world environment surrounding the first user to determine that a type of the real-world environment <u>in which the first user is located </u>includes one of an indoor environment and an outdoor environment.<br>
+<br>
+2.    (Canceled)<br>
+<br>
+3.   (Canceled)<br>
+<br>
+4.    (Previously presented) The method of claim 1, further comprising:receiving an indication of the type of the real-world environment to be simulated;<br>
+accessing, based on the type of the real-world environment to be simulated, the audio data captured from the real-world environment;<br>
+providing the audio data captured from the real-world environment to a client device for outputting a sound corresponding to the type of the real-world environment.<br>
+<br>
+5.    (Previously presented) The method of claim 1, wherein the plurality of sets of audio data include audio data that is generated from sounds emitted from one or more of the objects in the plurality of real-world environments and sounds that reflected from remaining of the objects.<br>
+<br>
+6.    (Previously presented) The method of claim 1, wherein the input data includes data identifying the objects in the plurality of real-world environments or image data captured by cameras in the plurality of real-world environments or a combination thereof.<br>
+<br>
+7.    (Original) The method of claim 1, wherein the plurality of sets of audio data is captured when a second user moves from one location to another.<br>
+<br>
+8.    (Original) The method of claim 1, wherein the plurality of sets of audio data is captured when a plurality of users including a second user and a third user are at a location.<br>
+<br>
+<br>
+<br>
+<br>
+9.    (Previously presented) The method of claim 1, further comprising applying the AI model to the audio data captured from the real-world environment surrounding the first user to identify one or more objects within the real-world environment surrounding the first user or one or more states of the one or more objects or an arrangement of the one or more objects or a combination thereof.<br>
+<br>
+10. (Currently amended) A server for determining a real-world environment in which a user is located, comprising:a processor configured to:<br>
+receive, via a computer network, a plurality of sets of audio data generated from sounds emitted in a plurality of real-world environments, wherein each of the plurality of real-world environments has a different combination of objects;<br>
+<u>extract a plurality of features from the plurality of sets of audio data, wherein the plurality of features include a plurality of amplitudes of the plurality of sets of audio data, a plurality of fre</u><u>q</u><u>uencies of the plurality of sets of audio data, and a plurality of sense directions in which the sounds are sensed</u><u>;</u><br>
+<u>classify the plurality of features to output associations between the plurality of features and a plurality of types of the plurality of real-world environments, the objects within the plurality of real-world environments, a plurality of arrangements of the objects, and a plurality of states of the objects within the plurality of real-world environments</u><u>;</u><br>
+receive, via the computer network, input data regarding the plurality of real- world environments;<br>
+train an artificial intelligence (AI) model based on the plurality of sets of audio data generated from the sounds in the plurality of real-world environments and based on the input data regarding the plurality of real-world <u>environments, wherein to train the A</u><u>I</u><u> model, the processor is configured to:</u><u>provide, to the A</u><u>I</u><u> model, the associations between the plurality of features and the plurality of types of the plurality of real-world environments, the objects within the plurality of real-world environments, the plurality of arrangements of the objects, and the plurality of states of the objects within the plurality of real-world environments</u><u>;</u><u> and</u><br>
+<br>
+<br>
+<u>determine</u><u>,</u><u> using the A</u><u>I</u><u> model, a plurality of probabilities based on the associations between the plurality of features and the plurality of types of the plurality of real-world environments, the objects within the plurality of real- world environments, the plurality of arrangements of the objects, and the plurality of states of the objects within the plurality of real-world environments;</u> and<br>
+apply the AI model to audio data captured from the real-world environment surrounding [[a]] the user to determine that a type of the real-world environment <u>in which the user is located </u>includes one of an indoor environment and an outdoor environment; and<br>
+a memory device coupled to the processor.<br>
+<br>
+11.  (Canceled)<br>
+<br>
+12.  (Canceled)<br>
+<br>
+13.  (Currently amended) The server of claim   [[12]] 10, wherein the processor is configured to:receive an indication of [[a]] <u>the</u> type of the real-world environment to be simulated;<br>
+access, based on the type of the real-world environment to be simulated, the audio data captured from the real-world environment;<br>
+provide the audio data captured from the real-world environment to a client device for outputting a sound corresponding to the type of the real-world environment.<br>
+<br>
+14.  (Previously presented) The server of claim 10, wherein the plurality of sets of audio data include audio data that is generated from sounds emitted from one or more of the objects in the plurality of real-world environments and sounds that are reflected from remaining of the objects.<br>
+<br>
+15.  (Previously presented) The server of claim 10, wherein the input data includes data identifying the objects in the plurality of real-world environments or image data captured by cameras in the plurality of real-world environments or a combination thereof.<br>
+<br>
+<br>
+<br>
+<br>
+16.  (Previously presented) The server of claim 10, wherein the processor is configured to apply the AI model to the audio data captured from the real-world environment surrounding the user to identify one or more objects within the real-world environment surrounding the user or one or more states of the one or more objects or an arrangement of the one or more objects or a combination thereof.<br>
+<br>
+17. (Currently amended) A system for determining a real-world environment in which a user is located, comprising:a plurality of client devices configured to:<br>
+generate a plurality of sets of audio data generated from sounds emitted in a plurality of real-world environments, wherein each of the plurality of real-world environments has a different combination of objects; and<br>
+receive input data regarding the plurality of real-world environments; and<br>
+a server coupled to the plurality of client devices, wherein the server is configured to:<br>
+receive the plurality of sets of audio data from the plurality of client devices via a computer network;<br>
+<u>extract a plurality of features from the plurality of sets of audio data, wherein the plurality of features include a plurality of amplitudes of the plurality of sets of audio data, a plurality of fre</u><u>q</u><u>uencies of the plurality of sets of audio data, and a plurality of sense directions of sensing the sounds</u><u>;</u><br>
+<u>classify the plurality of features to output associations between the plurality of features and a plurality of types of the plurality of real-world environments, the objects within the plurality of real-world environments, a plurality of arrangements of the objects, and a plurality of states of the objects within the plurality of real-world environments</u><u>;</u><br>
+receive the input data regarding the plurality of real-world environments from the plurality of client devices via the computer network;<br>
+train an artificial intelligence (AI) model based on the plurality of sets of audio data generated from the sounds in the plurality of real-world environments and based on the input data regarding the plurality of real-world <u>environments, wherein to train the A</u><u>I</u><u> model, the server is configured to:</u><br>
+<br>
+<br>
+<u>provide, to the A</u><u>I</u><u> model, the associations between the plurality of features and the plurality of types of the plurality of real-world environments, the objects within the plurality of real-world environments, the plurality of arrangements of the objects, and the plurality of states of the objects within the plurality of real-world environments</u><u>;</u><u> and</u><br>
+<u>determine, using the A</u><u>I</u><u> model, a plurality of probabilities based on the associations between the plurality of features and the plurality of types of the plurality of real-world environments, the objects within the plurality of real- world environments, the plurality of arrangements of the objects, and the plurality of states of the objects within the plurality of real-world environments;</u><br>
+and apply the AI model to audio data captured from the real-world environment surrounding [[a]] the user to determine that a type of the real-world environment <u>in which the user is located </u>includes one of an indoor environment and an outdoor environment.<br>
+<br>
+18.  (Canceled)<br>
+<br>
+19.  (Canceled)<br>
+<br>
+20.  (Currently amended) The system of claim [[19]] 17, wherein the server is configured to:receive an indication of [[a]] <u>the</u> type of the real-world environment to be simulated;<br>
+access, based on the type of real-world environment to be simulated, the audio data captured from the real-world environment;<br>
+provide the audio data captured from the real-world environment to a client device for outputting a sound corresponding to the type of real-world environment.<br>
+
+</body></html>

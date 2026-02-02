@@ -1,0 +1,104 @@
+<html><head></head><body><h3>Date: 2025-02-27</h3>
+<p>Response dated February 27, 2025 Reply to Office Action dated December 30, 2024<u> IN THE CLAIMS:</u></p><p>The listing of claims will replace all prior versions, and listings, of claims in the application.</p><br>
+<br>
+1.    (Currently Amended) A computing system, comprising:<br>
+memory storing computer program instructions for a multi-target robotic process automation (RPA) designer application; and<br>
+at least one processor configured to execute the computer program instructions, wherein the computer program instructions are configured to cause the at least one processor to:(a) configure an RPA project in accordance with a target platform configuration comprising a plurality of target platforms,<br>
+(b) configure multiple versions of one or more activities for the respective target platform for the respective version, or (c) both (a) and (b),<u></u><u>and</u><br>
+<u>generate a multi-target automation that implements an RPA workflow on the plurality of target platforms, wherein the RPA project comprises the RPA workflow, and</u><br>
+<u>the RPA workflow comprises a plurality of activities.</u><br>
+<br>
+2.    (Currently Amended) The computing system of claim 1, wherein the computer program instructions are further configured to cause the at least one processor to:<br>
+(d) receive the target platform configuration for the RPA project,<br>
+<br>
+<br>
+(e) receive the multiple target platform versions of the one or more activities of [[an]]the RPA workflow, or (f) both (d) and (e),<br>
+after creation by an RPA developer.<br>
+<br>
+3.    (Original) The computing system of claim 1, wherein the target platform configuration is or comprises a global scope for the RPA project that generates activities for the plurality of different target platforms automatically within a scope of the RPA workflow.<br>
+4.
+(Original) The computing system of claim 1, wherein when a target platform is not designated, the computer program instructions are further configured to cause the at least one processor to:<br>
+automatically designate a global scope for the RPA project that generates activities for the plurality of different target platforms automatically within a scope of the RPA workflow without manual selection of the multiple target platforms.<br>
+<br>
+5.    (Currently Amended) The computing system of claim 1, wherein the computer program instructions are further configured to cause the at least one processor to:<br>
+<del>generate a multi-target automation implementing the RPA workflow on the plurality of target platforms; and</del><br>
+execute and validate the multi-target automation on the plurality of target platforms via respective RPA robots.<br>
+<br>
+<br>
+<br>
+<br>
+6.    (Original) The computing system of claim 5, wherein the validation of the multi- target automation comprises running the respective automation by the respective RPA robot on each target platform of the plurality of target platforms and validating that the multi-target automation functions as intended on each target platform of the plurality of target platforms.<br>
+<br>
+7.    (Original) The computing system of claim 5, wherein when the validation of the multi-target automation is successful, the computer program instructions are further configured to cause the at least one processor to:<br>
+publish automations for the plurality of target platforms for production use in a user interface (UI) object library of a UI object repository.<br>
+<br>
+8.    (Original) The computing system of claim 1, wherein the RPA project is a previously created RPA project, and the computer program instructions are further configured to cause the at least one processor to:<br>
+detect that the previously created RPA project is not a multi-target RPA project; and<br>
+automatically convert the previously created RPA project to accommodate one or more additional target platforms, a plurality of platform-specific versions of the one or more activities, or both.<br>
+<br>
+9.    (Original) The computing system of claim 1, wherein the RPA workflow comprises a plurality of activities that comprise a tag, a variable, an array, or another descriptor or data structure that specifies one or more target platforms for the respective activity.<br>
+<br>
+<br>
+<br>
+<br>
+10.   (Original) The computing system of claim 1, wherein the multi-target RPA designer application comprises a project target platform designation option that provides target platform options.<br>
+<br>
+11.   (Original) The computing system of claim 1, wherein the multi-target RPA designer application comprises an activity target platform designation option that provides target platform options for activities.<br>
+<br>
+12.   (Currently Amended) A non-transitory computer-readable medium storing a computer program for a multi-target robotic process automation (RPA) designer application, wherein the computer program is configured to cause at least one processor to:<br>
+configure an RPA project in accordance with a target platform configuration comprising a plurality of target <u>platforms</u><u>, </u><u>and</u><br>
+<u>generate a multi-target automation that implements an RPA workflow on the plurality of target platforms, wherein the RPA project comprises the RPA workflow, and</u><br>
+<u>the RPA workflow comprises a plurality of activities.</u><br>
+<br>
+13.   (Original) The non-transitory computer-readable medium of claim 12, wherein the target platform configuration is or comprises a global scope for the RPA project that generates activities for the plurality of different target platforms automatically within a scope of the RPA workflow.<br>
+<br>
+<br>
+<br>
+<br>
+14.   (Original) The non-transitory computer-readable medium of claim 12, wherein when a target platform is not designated, the computer program instructions are further configured to cause the at least one processor to automatically designate a global scope for the RPA project that generates activities for the plurality of different target platforms automatically within a scope of the RPA workflow.<br>
+<br>
+15.   (Currently Amended) The non-transitory computer-readable medium of claim 12, wherein the computer program is further configured to cause the at least one processor to:<br>
+<del>generate a multi-target automation implementing the RPA workflow on the plurality of target platforms; and</del><br>
+execute and validate the multi-target automation on the plurality of target platforms via respective RPA robots.<br>
+<br>
+16.   (Original) The non-transitory computer-readable medium of claim 15, wherein the validation of the multi-target automation comprises running the automation by the respective RPA robot on each target platform of the plurality of target platforms and validating that the automation functions as intended on each target platform of the plurality of target platforms.<br>
+<br>
+17.   (Original) The non-transitory computer-readable medium of claim 15, wherein when the validation of the multi-target automation is successful, the computer program<br>
+<br>
+<br>
+<br>
+instructions are further configured to cause the at least one processor to publish the multi-target automation for production use in a user interface (UI) object library of a UI object repository.<br>
+<br>
+18.   (Original) The non-transitory computer-readable medium of claim 12, wherein the RPA project is a previously created RPA project, and the computer program is further configured to cause the at least one processor to:<br>
+detect that the previously created RPA project is not a multi-target RPA project; and<br>
+automatically convert the previously created RPA project to accommodate one or more additional target platforms.<br>
+<br>
+19.   (Original) The non-transitory computer-readable medium of claim 12, wherein the multi-target RPA designer application comprises a project target platform designation option that provides target platform options.<br>
+<br>
+20.   (Currently Amended) A computer-implemented method, comprising:<br>
+configuring multiple versions of one or more activities for a respective target platform of a plurality of target platforms, by a multi-target robotic process automation (RPA) designer application;<u></u><u>and</u><br>
+<u>generating a multi-target automation that implements an RPA workflow of the RPA project on the plurality of target platforms, by the multi-target RPA designer application, wherein the RPA project comprises the RPA workflow, and</u><br>
+<br>
+<br>
+<u>the RPA workflow comprises a plurality of activities.</u><br>
+<br>
+21.   (Currently Amended) The computer-implemented method of claim 20, further comprising:<br>
+<del>generating a multi-target automation implementing an RPA workflow of the RPA project on the plurality of target platform</del><del>s</del><del>, by the multi-target RPA designer application; and</del><br>
+executing and validating the multi-target automation on the plurality of target platforms via respective RPA robots, by the multi-target RPA designer application.<br>
+<br>
+22.   (Original) The computer-implemented method of claim 21, wherein the validation of the multi-target automation comprises running the automation by the respective RPA robot on each target platform of the plurality of target platforms and validating that the multi-target automation functions as intended on each platform of the plurality of target platforms.<br>
+<br>
+23.   (Previously Presented) The computer-implemented method of claim 20, wherein when validation of the multi-target automation is successful, the computer-implemented method further comprises:<br>
+publishing the multi-target automation for production use in a user interface (UI) object library of a UI object repository, by the multi-target RPA designer application.<br>
+<br>
+<br>
+<br>
+<br>
+24.   (Original) The computer-implemented method of claim 20, wherein the RPA project is a previously created RPA project, and the computer-implemented method further comprises:<br>
+detecting that the previously created RPA project is not a multi-target RPA project, by the multi-target RPA designer application; and<br>
+automatically converting the previously created RPA project to accommodate a plurality of platform-specific versions of the one or more activities, by the multi-target RPA designer application.<br>
+<br>
+25.   (Original) The computer-implemented method of claim 20, wherein an RPA workflow of the RPA project comprises a plurality of activities that comprise a tag, a variable, an array, or another descriptor or data structure that specifies one or more target platforms for the respective activity.<br>
+<br>
+26.   (Original) The computer-implemented method of claim 20, wherein the multi- target RPA designer application comprises an activity target platform designation option that provides target platform options for activities.
+</body></html>

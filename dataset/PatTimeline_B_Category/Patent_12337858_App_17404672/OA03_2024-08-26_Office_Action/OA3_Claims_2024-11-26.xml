@@ -1,0 +1,65 @@
+<html><head></head><body><h3>Date: 2024-11-26</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<br>
+<br>
+1.    (Currently amended) A system for providing a connected service, comprising:a portable device and a vehicle terminal, each including a processor, wherein <u>first user</u> information <u>and second user information are </u>is-input into the portable device and the vehicle terminal; and<br>
+a server including a processor and configured to:<br>
+receive the <u>first </u><u>user</u> information from one or more of the portable device and the terminal and determine whether the received <u>first </u>user information is recognizable; and<br>
+determine whether to store the <u>first user</u> information as a new data set based on the number of times the <u>first </u><u>user</u> information is received in response to determining that the<u></u><u>first </u><u>user</u> information is unrecognizable,<br>
+wherein the <u>first </u><u>user</u> information includes vehicle setting values and attribute information linked to the vehicle setting values,<br>
+wherein the attribute information includes vehicle setting functions and key IDs respectively matched to the vehicle setting functions,<br>
+wherein the server informs the one or more of the portable device and the vehicle terminal that the new data set is stored when the <u>first </u>user information is stored as the new data set;<br>
+wherein the vehicle setting functions include a function of controlling an electronic device in a vehicle within predetermined range;<br>
+wherein the vehicle terminal is configured to automatically set the vehicle based on the new data set stored in the server when it is received from the server that the new data set is stored, and allow al[n]] user to use information automatically set on the vehicle without any additional input;<br>
+<u>wherein the portable device and the vehicle terminal are further configured to transmit the second user information to the server after bein</u><u>g</u><u> informed that the new data set is stored in the </u><u>server; </u><u>and</u><br>
+<br>
+<br>
+<u>wherein the second user information includes vehicle settin</u><u>g</u><u> value linked attribute information that only includes the Key IDs.</u><br>
+<br>
+2-3. (Canceled)<br>
+<br>
+4.
+(Currently amended) The system of claim 1, wherein the server is configured to determine whether the number of times unrecognizable <u>first</u><u></u>user information is received exceeds a predetermined number of times in response to determining that the received <u>first </u><u>user</u> information is unrecognizable.<br>
+5.
+(Currently amended) The system of claim 4, wherein the server is configured to determine to store the <u>fir</u><u>st </u>user information as the new data set in response to determining that the number of times the unrecognizable <u>first </u><u>user</u> information is received exceeds the predetermined number of times.<br>
+<br>
+6-7. (Canceled)<br>
+<br>
+8.
+(Currently amended) The system of claim <u>-71,</u>wherein the server is configured to recognize the <u>second </u>user information received from the one or more of the portable device and the vehicle terminal based on the information stored in the server.<br>
+9.
+(Original) The system of claim 8, wherein the vehicle terminal is configured to receive vehicle setting values recognized from the server, and set a vehicle with the received vehicle setting values.<br>
+<br>
+10.   (Currently amended) A method for providing a connected service, comprising:receiving, by a controller including a processor, <u>first </u><u>user</u> information from one or more of a portable device and a vehicle terminal;<br>
+<br>
+<br>
+receiving, by a server including a processor, the <u>first </u><u>user</u> information from the one or more of the portable device and the terminal, and determining whether the received <u>first </u><u>user</u> information is recognizable; and<br>
+determining, by the controller, whether to store the <u>first </u><u>user</u> information as a new data set based on the number of times the user information is received in response to determining that the user information is unrecognizable,<br>
+wherein the <u>f</u><u>irst </u><u>user</u> information includes vehicle setting values and attribute information linked to the vehicle setting values,<br>
+wherein the attribute information includes vehicle setting functions and key IDs respectively matched to the vehicle setting functions,<br>
+wherein the server informs the one or more of the portable device and the vehicle terminal that the new data set is stored when the <u>first </u><u>user</u> information is stored as the new data set;<br>
+wherein the vehicle setting functions include a function of controlling an electronic device in a vehicle within predetermined range; and<br>
+wherein the vehicle terminal is configured to automatically set the vehicle based on the new data set stored in the server when it is received from the server that the new data set is stored, and allow ajn]] user to use information automatically set on the vehicle without any additional input;<br>
+<u>wherein the portable device and the vehicle terminal are configured to transmit second user information to the server after being informed that the new data set is stored in the server</u><u>;</u><u> and</u><br>
+<u>wherein the second user information includes vehicle setting value linked attribute information that only includes the Key IDs.</u><br>
+<br>
+11-12. (Canceled)<br>
+<br>
+<br>
+13.   (Currently amended) The method of claim 10, further comprising:determining whether the number of times unrecognizable <u>first </u>user information is received exceeds a predetermined number of times in response to determining that the received <u>first </u>user information is unrecognizable.<br>
+<br>
+<br>
+<br>
+<br>
+14.    (Currently amended) The method of claim 13, further comprising:determining to store the <u>f</u><u>irst </u>user information as the new data set in response to determining that the number of times the unrecognizable <u>first</u><u></u><u>user</u> information is received exceeds the predetermined number of times.<br>
+<br>
+15-16. (Canceled)<br>
+<br>
+<br>
+17.   (Currently amended) The method of claim 16, further comprising:recognizing the <u>second user</u> information received from the one or more of the portable device and the vehicle terminal based on the information stored in the server.<br>
+<br>
+18.   (Original) The method of claim 17, further comprising:receiving, by the vehicle terminal, vehicle setting values recognized from the server, and setting a vehicle with the received vehicle setting values.<br>
+<br>
+
+</body></html>

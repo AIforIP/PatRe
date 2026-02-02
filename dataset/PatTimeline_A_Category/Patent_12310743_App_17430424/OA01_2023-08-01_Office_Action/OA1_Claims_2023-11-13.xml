@@ -1,0 +1,59 @@
+<html><head></head><body><h3>Date: 2023-11-13</h3>
+<p><u>Listing of Claims:</u></p><p>This listing of claims will replace all prior versions, and listings, of claims in the application.</p><br>
+<br>
+1.    (Currently Amended) A sleep apnea syndrome determination apparatus comprising:<u>a heart rate measurin</u><u>g</u><u> instrument configured to be attached to a body of a subject, wherein the heat rate measuring instrument measures an electrocardiographic signal of the subject using a plurality of electrodes and RRI data indicating a heart rate interval (R-R Interval</u><u>;</u><br>
+<u>RRI) of about a second based on the electrocardiographic signal</u><u>;</u><u>a memory</u><u>;</u><br>
+a processing unit <u>coupled to the memory and </u>configured to, by using the RRI data<del> indicating a heart rate interval (R-R Interval: RRI) </del>in a sleeping period of a <u>subject, wherein the sleeping period is at least two hours,</u> determine whether or not the subject has sleep apnea syndrome,<br>
+<u>wherein each of the RRI data is received from the heat rate measuring instrument connected to the processing unit, and</u><br>
+wherein the processing unit <u>performs operations comprising </u><del>is configured to operate so as to</del><u> receiving each of the RRI data from the heart rate measuring instrument via a communication unit coupled to the processing unit,</u><u>comparing each of the RRI data to a normal value threshold related to RRI,</u><br>
+<u>determining whether each of the RRI data is a normal RRI value based on the comparison,</u><br>
+<del>generate </del><u>instantaneously generating </u>a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period, <u>wherein the feature vector is a variable length vector formed as a time series of a group of pieces of the normal RRI data having normal values respectively indicating the plurality of heart rate intervals in an identification target period</u><br>
+<br>
+<br>
+<br>
+having a fixed period length of about 60 seconds,<u>inputting the variable length vector formed as the time series of the group of pieces of the normal RRI data as the feature vector to the processing unit operating as a recurrent neural network trained through machine learning in advance so as to output, in response to the feature vector having been inputted, a value indicating a sleep state in the identification target period,</u><br>
+<del>calculate </del><u>calculating</u><u>,</u> from <u>the</u>[[a]] value that is outputted as a result of inputting<u> each of </u>the feature <u>vectors generated for the sleeping period </u><del>vector </del>to [[a]] <u>the</u> recurrent neural network and that is obtained for each identification target period <u>within the sleeping period </u>that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period, and<br>
+<del>determine </del>determining whether or not the subject has sleep apnea syndrome, on the basis of the index <u>as compared to a threshold related to the sleep apnea syndrome,</u><br>
+<u>wherein the recurrent neural network is a Long Short-Term Memory (LSTM) network configured to input the variable length feature as the feature vector.</u><br>
+<br>
+2.    (Cancelled)<br>
+<br>
+3.    (Cancelled)<br>
+4.
+(Cancelled)<br>
+<br>
+5.    (Cancelled)<br>
+<br>
+6.    (Previously Presented) The sleep apnea syndrome determination apparatus according to<br>
+<br>
+<br>
+<br>
+ claim 1, wherein the generating of the feature vector includes standardizing a value of each of the plurality of heart rate intervals.<br>
+<br>
+7.    (Currently Amended) The sleep apnea syndrome determination apparatus according to claim 1, wherein the index is a ratio of the period of the apnea state to the sleeping period, andthe determining includes determining that, when the ratio is greater than [[a]] threshold indicating sleep apnea syndrome, the subject has sleep apnea syndrome.<br>
+<br>
+8.    (Currently Amended) A sleep apnea syndrome determination method for, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome, the sleep apnea syndrome determination method comprising:<u>a step of receivin</u><u>g</u><u> the RR</u><u>I</u><u> data from a heart rate measuring instrument attached to a body of the subject, wherein the heart rate measurin</u><u>g</u><u> instrument measures an electrocardio</u><u>g</u><u>raphic signal of the subject using a plurality of electrodes and RR</u><u>I</u><u> data indicating a heart rate interval (R-R Interval</u><u>;</u><u> RR</u><u>I)</u><u> of about a second based on the electrocardiographic signal for a sleeping period of the subject, wherein the sleeping period is at least two hours</u><u>;</u><br>
+<u>a step of receiving each of the RR</u><u>I</u><u> data from the heart rate measuring instrument via a communication unit connected to a processing unit</u><u>;</u><br>
+<u>a step of comparing each of the RR</u><u>I</u><u> data to a normal value threshold related to RR</u><u>I;</u><br>
+<u>a step of determining whether each of the RR</u><u>I</u><u> data is a normal RR</u><u>I</u><u> value based on the comparison</u><u>;</u><br>
+a step of <u>instantaneously </u>generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping <u>period, wherein the feature vector is a variable</u><br>
+<br>
+<br>
+<br>
+<u>length vector formed as a time series of a group of pieces of the normal RRI data having normal values respectively indicating the plurality of heart rate intervals in an identification target period having a fixed period length of about 60 seconds;</u><u>a step of inputting the variable length vector formed as the time series of the group of pieces of the normal RRI data as the feature vector to the processing unit operating as a recurrent neural network trained through machine learning in advance so as to output, in response to the feature vector having been inputted, a value indicating a sleep state in the identification target period, wherein the recurrent neural network is a Long Short-Term Memory (LSTM) network configured to input the variable length feature as the feature vector</u><u>;</u><br>
+a step of calculating, from the [[a]] value that is outputted as a result of inputting <u>each of</u> the feature <del>vector </del><u>vectors generated for the sleeping period </u>to <u>the</u>[[a]] recurrent neural network and that is obtained for each identification target period <u>within the sleeping period </u>that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; [[and]] a step of determining whether or not the subject has sleep apnea syndrome, on the basis of the index <u>as compared to a threshold related to the sleep apnea syndrome</u><u>;</u><u> and</u><br>
+<u>a step of displaying a result of determining whether the subject has sleep apnea syndrome on a display apparatus coupled to the processing unit.</u><br>
+<br>
+9.    (Currently Amended) A sleep apnea syndrome determination program configured to cause a computer to execute a process of, by using RRI data indicating a heart rate interval in a sleeping period of a subject, determining whether or not the subject has sleep apnea syndrome, the sleep apnea syndrome determination program comprising:<u>a step of receiving the RRI data from a heart rate measuring instrument attached to a body of the subject, wherein the heart rate measuring instrument measures an electrocardiographic</u><br>
+<br>
+<br>
+<br>
+<u>signal of the subject using a plurality of electrodes and RRI data indicating a heart rate interval (R-R Interval</u><u>;</u><u> RRI) of about a second based on the electrocardiographic signal for a sleeping period of the subject, wherein the sleeping period is at least two hours</u><u>;</u><u>a step of receiving each of the RRI data from the heart rate measuring instrument via a communication unit connected to a processing unit</u><u>;</u><br>
+<u>a step of comparing each of the RRI data to a normal value threshold related to RR</u><u>I;</u><br>
+<u>a step of determining whether each of the RRI data is a normal RRI value based on the comparison</u><u>;</u><br>
+a step of <u>instantaneously </u>generating a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping <u>period, wherein the feature vector is a variable length vector formed as a time series of a group of pieces of the normal RRI data having normal values respectively indicating the plurality of heart rate intervals in an identification target period having a fixed period length of about 60 seconds;</u><br>
+<u>a step of inputting the variable length vector formed as the time series of the group of pieces of the normal RRI data as the feature vector to the processing unit operating as a recurrent neural network trained through machine learning in advance so as to output, in response to the feature vector having been inputted, a value indicating a sleep state in the identification target period, wherein the recurrent neural network is a Long Short-Term Memory (LSTM) network configured to input the variable length feature as the feature vector</u><u>;</u><br>
+a step of calculating, from the [[a]] value that is outputted as a result of inputting <u>each of</u> the feature <u>vectors generated for the sleeping period </u><del>vector </del>to <u>the</u>[[a]] recurrent neural network and that is obtained for each identification target period <u>within the sleeping period </u>that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; [[and]] a step of determining whether or not the subject has sleep apnea syndrome, on the basis of<br>
+<br>
+Amdt. dated November 13, 2023 Reply to Office Action of August 1, 2023 the index as compared to a threshold related to the sleep apnea syndrome; and<u>a step of displayin</u><u>g</u><u> a result of determinin</u><u>g</u><u> whether the subject has sleep apnea syndrome on a display apparatus coupled to the processin</u><u>g</u><u> unit.</u>
+</body></html>

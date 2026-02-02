@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-12-09</h3>
+<p>ttorney  oc. o.
+-    -</p>
+<h1>ABSTRACT</h1>
+<p>A system for maintaining a range of a gap between an ego vehicle and a preceding vehicle can include a processor and a memory. The memory can store a calculations module and an actuation module. The calculations module can cause the processor to determine a time, during a deceleration phase or an acceleration phase of a stop-and-go cycle of the preceding vehicle, when a preceding vehicle speed will equal a desired speed of the ego vehicle. The calculations module can cause the processor to determine: (1) in response to the time being during the deceleration phase, that the gap will be smaller than a desired maximum gap or (2) in response to the time being during the acceleration phase, that the gap will be larger than a desired minimum gap. The actuation module can cause the processor to change an ego vehicle speed to correct the gap.</p><p>{01253090}
+43</p></body></html>

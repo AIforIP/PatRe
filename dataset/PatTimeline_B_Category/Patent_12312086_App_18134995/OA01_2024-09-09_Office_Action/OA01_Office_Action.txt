@@ -1,0 +1,42 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+Claims 1-20 are rejected under 35 U.S.C. 103 as being unpatentable over McMillan [US 20200339266 A1] in view of Hera [EP 3106343 A1].
+As for claim 1, McMillan discloses an aircraft seat controller feedback system (see Abstract), comprising:
+a user interface device (paragraphs 0005, 0006, and 0008), comprising:
+a control panel operatively associated with an aircraft seat (Figures 6a, 6b);
+one or more buttons integrated within the control panel, wherein each button of the one or more buttons is configured to indicate a controllable feature within an aircraft to a user (Figs 6a, 6b);
+one or more sensors coupled to the one or more buttons, wherein the one or more sensors are configured for distinguishable detection of a user input, wherein the user input includes at least one of a user touch, press, or hold (paragraphs 0058 and 0064; touch screen sensors associated with the PED for detecting user selections); and
+a controller (12) communicatively coupled to the user interface device, wherein the controller is configured to generate one or more signals in response to an interaction with the user interface device (paragraphs 0058-0062),
+wherein the controller is configured to transmit one or more feedback signals (paragraph 0066),
+wherein the controller is configured to transmit one or more activation signals to one or more components of the aircraft seat in response to a user press (paragraphs 0064-0065).
+McMillan does not specifically disclose that the controller is configured to transmit one or more feedback signals to one or more feedback devices in response to a user touch. In an analogous art for a vehicle control and feedback device, Hera discloses that it was known in the art for a controller to transmit one or more feedback signals to one or more feedback devices in response to a user input (paragraphs 0002-0008, 0012-0013, and 0022-0025).  Having each of the references on hand, it would have been obvious to the skilled artisan to modify the invention of McMillan to include the feedback in response to a user input as taught by Hera.  The modification would have resulted in a system wherein a user would receive feedback about the state of a component and/or even the button press itself upon manipulating the PED.  This would have been helpful because it would have provided the user with immediate stimuli for making further adjustments, troubleshooting, and/or any other desirable information left to the artisan.
+As for claim 2, the claim is interpreted and rejected using the same reasoning as claim 1 above.  McMillian discloses that the PED screen is a feedback device. Further, Hera discloses audible feedback.  The skilled artisan would have had good reason to purse the known options for providing audible feedback, including providing audible feedback via a headset or headphones.
+As for claims 3-5, the claim is interpreted and rejected using the same reasoning as claim 2 above.
+As for claim 6, Hera discloses the visual feedback includes at least one message displayed on the display screen indicating the feature associated with the selected one or more buttons (paragraph 0022-0023).  Hera shows that additional feedback indicating a feature such as a current state of a controlled temperature can be provided as feedback.
+Claim 7 is interpreted and rejected using the same reasoning as claim 6 above.
+As for claim 8, neither McMillan nor Hera specifically discloses an enhanced accessibility mode.  However, examiner takes official notice that it was known in the art for personal electronic devices to include enhanced accessibility modes.  Since McMillan discloses the use of a PED it would have been obvious to the skilled artisan to modify the invention to operate in an accessibility mode so that an impaired user would able to take advantage of accessibility features to aid in controlling his/her seat controls.
+Claim 9 is interpreted and rejected using the same reasoning as claim 1 above.
+As for claim 10¸ McMillan discloses that the one or more components of the aircraft seat include at least one of an actuator of an aircraft seat, an in-flight entertainment system, a temperature setting of a passenger seating system, or a power output source (paragraphs 0064-0065 and Figs 6a. 6b).
+As for claim 11, the claim is interpreted and rejected using the same reasoning as claim 1 above.  McMillan discloses that the user interface device could be embedded in an armrest (paragraph 0004).  However, McMillan discloses that the placement of the armrest may not be the most efficient.  As such, embedding the user interface device in the armrest of an aircraft seat is viewed as a matter of engineering preference that would be left to the artisan.
+Claims 12-17 are interpreted and rejected using the same reasoning as claims 2-7 above.
+Claim 18 is interpreted and rejected using the same reasoning as claim 8 above.
+Claims 19-20 are interpreted and rejected using the same reasoning as claims 9-10 above.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure. Each of the cited references show vehicle seating and entertainment control systems that were known in the art at the time of filing the instant application.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ERIC M BLOUNT whose telephone number is (571)272-2973. The examiner can normally be reached M-F 9:00a - 5:30p.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Quan Wang can be reached on 571-272-3114. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+ERIC M. BLOUNT
+Primary Examiner
+Art Unit 2684
+/Eric Blount/            Primary Examiner, Art Unit 2685

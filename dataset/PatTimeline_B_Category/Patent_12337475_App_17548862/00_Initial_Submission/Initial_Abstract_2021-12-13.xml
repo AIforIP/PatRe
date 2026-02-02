@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2021-12-13</h3>
+<p>72</p>
+<h1>ABSTRACT</h1>
+<p>The repair welding system includes an inspection device and a welding device.</p><p>The inspection device determines whether there is a defective portion in a welded portion. In a case that there is the defective portion in the welded portion, the inspection device</p><p>extracts at least defect type information of the defective portion and inspection coordinate system defective portion position information, converts the inspection coordinate system defective portion position information into position information corresponding to a coordinate system of the welding robot and generates welding coordinate system defective portion position information, and transmits the defect type information and the welding coordinate</p><p>system defective portion position information to the welding device. The welding device instructs execution of a repair welding on the defective portion based on the defect type</p><p>information and the welding coordinate system defective portion position information.</p>5
+10
+</body></html>

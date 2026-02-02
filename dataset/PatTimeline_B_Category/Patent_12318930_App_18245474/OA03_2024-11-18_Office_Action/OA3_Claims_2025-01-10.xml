@@ -1,0 +1,40 @@
+<html><head></head><body><h3>Date: 2025-01-10</h3>
+
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<p><u>AMENDMENT TO THE CLAIMS:</u></p><p>No claims are hereby amended. The following listing of claims is included to facilitate the examination.</p><br>
+<br>
+1. (Previously Presented):  A modular robot, comprising a plurality of modules that are coupled together, wherein each of the plurality of modules includes:a first link;<br>
+a second link movably linked to the first link; and<br>
+a liquid pressure cylinder configured to move the first link and the second link relative to each other by a working fluid that is supplied to a cylinder chamber from a liquid pressure source located outside the plurality of modules and is discharged from the cylinder chamber to a tank located outside the plurality of modules, wherein the first link includes a cylinder block in which the cylinder chamber of the liquid pressure cylinder is formed, the cylinder block having a plurality of outer surfaces, and at least two of the plurality of outer surfaces of the cylinder block each have both a pump port connectable to the liquid pressure source and a tank port connectable to the tank.<br>
+<br>
+2. (Previously Presented):  The modular robot according to claim 1, wherein the plurality of modules includes a first module and a second module that are coupled by connecting the first link or the second link of the first module to the first link or the second link of the second module.<br>
+<br>
+3. (Previously Presented):  The modular robot according to claim 2, wherein the cylinder block of the first module is connectable to the first link or the second link of the second module.<br>
+<br>
+4. (Previously Presented):  The modular robot according to claim 1, wherein the plurality of modules are partially integrated.<br>
+<br>
+<br>
+<br>
+5. (Canceled)<br>
+<br>
+6. (Previously Presented):  The modular robot according to claim 1, wherein the cylinder block includes a supply passage connecting the pump port to the cylinder chamber and a discharge passage connecting the tank port to the cylinder chamber.<br>
+<br>
+7. (Previously Presented):  The modular robot according to claim1, wherein each module further includes:a state-quantity detector configured to detect a state quantity of the module;<br>
+a control valve configured to control communication between the cylinder chamber, and one of the pump ports and one of the tank ports of the at least two of the plurality of outer surfaces of the cylinder block; and<br>
+a controller configured to control motion of the module by controlling operation of the control valve based on a detection result from the state-quantity detector.<br>
+<br>
+8. (Previously Presented):  The modular robot according to claim 1, wherein,at least one of the plurality of outer surfaces of the cylinder block has at least two supply-discharge ports in total, one of which is selectively connectable to one of the liquid pressure source or the tank, and another one of which is selectively connectable to the other one of the liquid pressure source or the tank, and<br>
+the cylinder block includes at least two passages, respectively connecting respective ones of the at least two supply-discharge ports to the cylinder chamber.<br>
+<br>
+9. (Previously Presented):  The modular robot according to claim 2, wherein the first and second modules are identical to each other.<br>
+<br>
+10. (Previously Presented): The modular robot according to claim 3, wherein<br>
+<br>
+<br>
+the cylinder block of the first module has a joint hole into which a joint tool is inserted, the joint tool being configured to connect the cylinder block of the first module to the first link or the second link of the second module.<br>
+<br>
+11. (Previously Presented): The modular robot according to claim 7, wherein in each module, the state quantity detected by the state-quantity detector is at least one of a stroke amount of the liquid pressure cylinder, a relative rotational angle between the first link and the second link thereof, a pressure in the liquid pressure cylinder, a load acting on the liquid pressure cylinder, a stroke speed of the liquid pressure cylinder, or a flow amount of the working fluid supplied to the liquid pressure cylinder.<br>
+<br>
+12 (Previously Presented): The modular robot according to claim 8, wherein the at least two supply-discharge ports are different from the pump and tank ports in each module.<br>
+
+</body></html>

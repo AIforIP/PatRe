@@ -1,0 +1,19 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Response to Arguments
+Applicant’s arguments, see pages 10, filed 23 December 2024, with respect to 112 rejections for claims 1-29  have been fully considered and are persuasive in view of amendment.  The 112 rejections of 24 September 2024 has been withdrawn.
+Reasons for Allowance
+Claims 1-29 are allowed.
+The following is an examiner’s statement of reasons for allowance.
+The following prior art previously made of record is considered pertinent to the reasons for indicating allowable subject matter:
+Bosua (US2021/0244308) discloses most of the claimed feature of arrangement of analyte sensors with different geometries.
+However, the prior art previously and currently made of record fails to disclose or make obvious the structure limitations of figures 7 and 8 in combination with the rest of the limitations of independent claim(s) 1, 9, and 17.  There is no reason absent hindsight to have combined and modified teachings of the cited references before the effective filing date of the claimed invention for a user to modify and combine with other prior arts in order to produce the claimed invention.  Furthermore, such a configuration allows adjustable positions to configure multiple antennas in a desired configuration as in figures 7 and 8, advantages claimed by present invention.
+Therefore, claim(s) 1,9, and 17 overcome(s) previously and currently cited prior art and is/are found to be allowable.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to PATRICIA J PARK whose telephone number is(571)270-1788. The examiner can normally be reached Monday-Thursday 8 am - 3 pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Pascal Bui-Pho can be reached on 571-272-2714. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/PATRICIA J PARK/Primary Examiner, Art Unit 3798

@@ -1,0 +1,37 @@
+<html><head></head><body><h3>Date: 2024-05-21</h3>
+
+<h1>CLAIMS</h1>
+<br>
+<br>
+[Claim 1] (Amended) A travel assistance method for a vehicle using a processor that executes autonomous lane change control, the processor operating to:when performing a route-following lane change that is a lane change for traveling along a set travel route, determine whether or not the route-following lane change can be assisted with the autonomous lane change control; and<br>
+when determining that the route-following lane change cannot be assisted with the autonomous lane change control, notify a driver that a lane change with the autonomous lane change control cannot be made, and prohibit the autonomous lane change control from assisting a lane change in a direction opposite to a direction in which the vehicle moves during the route-following lane change, even in a case of satisfying execution conditions that enable a lane change with the autonomous lane change control.<br>
+<br>
+[Claim 2] (Amended) The travel assistance method for a vehicle according to claim 1, wherein the processor operates to:when determining whether or not the route-following lane change can be assisted with the autonomous lane change control, determine whether or not to satisfy the execution conditions;<br>
+when determining that the execution conditions are satisfied, determine that the route- following lane change can be assisted with the autonomous lane change control; and<br>
+when determining that the execution conditions are not satisfied, determine that the route-following lane change cannot be assisted with the autonomous lane change control.<br>
+<br>
+[Claim 3] The travel assistance method for a vehicle according to claim 2, wherein the execution conditions include a condition that high-precision map information is available for a road on which the vehicle travels from start to completion of the lane change with the autonomous lane change control.<br>
+<br>
+[Claim 4] The travel assistance method for a vehicle according to claim 2 or 3, wherein the execution conditions include at least one of:a condition that a radius of curvature of a road on which the vehicle travels from start to completion of the lane change with the autonomous lane change control is a predetermined value or more;<br>
+a condition that the road is not registered in high-precision map information as a road<br>
+<br>
+<br>
+on which the lane change with the autonomous lane change control cannot be made;a condition that a traveling speed of the vehicle is within a predetermined range; and a condition that a behavior of the vehicle is within a range in which the behavior can be controlled with the autonomous lane change control during execution of the lane change with the autonomous lane change control.<br>
+<br>
+[Claim 5] The travel assistance method for a vehicle according to claim 4, wherein the range is set at least by one of acceleration, deceleration, and lateral acceleration of the vehicle.<br>
+<br>
+[Claim 6]  The travel assistance method for a vehicle according to any one of claims 2 to 5, wherein the execution conditions include at least one of:a condition that when a road on which the vehicle travels after completion of the route- following lane change merges with a different road ahead of the vehicle in its traveling direction, a distance from a completion position of the route-following lane change to a merging position of the roads is a predetermined distance or less, and a speed limit of the road which the vehicle enters is set lower than a speed limit of the road on which the vehicle has being traveling when starting the route-following lane change; and<br>
+a condition that when an intersection is present ahead of the vehicle in its traveling direction on the road on which the vehicle travels after completion of the route-following lane change, a distance from the completion position of the route-following lane change to the intersection is a predetermined distance or less.<br>
+<br>
+[Claim 7] (Amended) A travel assistance device for a vehicle, comprising:a determination unit configured to, when performing a route-following lane change that is a lane change for traveling along a set travel route, determine whether or not the route- following lane change can be assisted with autonomous lane change control; and<br>
+an assistance unit configured to, when the determination unit determines that the route-following lane change cannot be assisted with the autonomous lane change control, notify a driver that a lane change with the autonomous lane change control cannot be made, and prohibit the autonomous lane change control from assisting a lane change in a direction opposite to a direction in which the vehicle moves during the route-following lane change, even in a case of satisfying execution conditions that enable a lane change with the autonomous lane change control.<br>
+<br>
+[Claim 8] (Added)    The travel assistance method for a vehicle according to any one of<br>
+<br>
+ claims 1 to 6, wherein when determining that the route-following lane change cannot be assisted with the autonomous lane change control, the processor does not execute overtaking assist control even in a case of satisfying a condition for starting the overtaking assist control for overtaking a preceding vehicle with an autonomous travel by autonomous travel control.<br>
+<br>
+[Claim 9] (Added)    The travel assistance method for a vehicle according to any one of claims 1 to 6 and 8, wherein when determining that the route-following lane change cannot be assisted with the autonomous lane change control, the processor does not execute the lane change with the autonomous lane change control caused by the driver's operation.<br>
+<br>
+[Claim 10] (Added)   The travel assistance method for a vehicle according to any one of claims 1 to 6, 8, and 9, wherein the processor operates to:when performing the route-following lane change, determine whether or not the route- following lane change can be assisted with the autonomous lane change control from a shape of a road that is preliminarily registered in map information; and<br>
+when determining that the route-following lane change cannot be assisted with the autonomous lane change control from the shape of the road, not execute the lane change with the autonomous lane change control from a current position of the vehicle to a position at which the vehicle can no longer execute the lane change with the route-following lane change.<br>
+</body></html>

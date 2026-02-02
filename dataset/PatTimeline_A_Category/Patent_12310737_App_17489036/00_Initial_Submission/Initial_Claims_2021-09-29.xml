@@ -1,0 +1,175 @@
+<html><head></head><body><h3>Date: 2021-09-29</h3>
+ CLAIMS We claim:
+<br>
+
+<br>
+1.   A method of processing cardiac information, comprising: 
+<br>
+receiving an activation waveform comprising a set of activation waveform data of a plurality of signal sections collected at a plurality of locations; 
+<br>
+receiving a set of window parameters comprising a range of window size; 
+<br>
+for each of the plurality of signal sections, determining a set of confidence values, each confidence value corresponding to a window size, by iterating through a plurality of window sizes in the range of window size; 
+<br>
+for each window size of the plurality of window sizes, selecting a position of a central window, the central window having the each window size; 
+<br>
+calculating a set of correlations, each of the set of correlations being a correlation of the activation waveform in the central window and the activation waveform in a shifted window, the shifted window being a sample window shifted from the central window and having the each window size; and 
+<br>
+determining one of the set of confidence values based on the set of correlations; and 
+<br>
+comparing the set of confidence values to select a designated confidence value and a selected window size corresponding to the designated confidence value; and 
+<br>
+determining one of a plurality of local cycle lengths for the each of the plurality of signal sections based on the selected window size; and 
+<br>
+generating a representation of the plurality of local cycle lengths. 
+
+<br>
+
+<br>
+2.   The method of claim 1, wherein the representation is at least one of a histogram, a scatter plot, and a graphical representation of the plurality of local cycle lengths overlaid on a cardiac map.
+<br>
+
+<br>
+3.   The method of claim 1, further comprising: 
+<br>
+receiving an input of a parameter of the representation of the plurality of local cycle lengths; and 
+<br>
+adjusting the representation of the plurality of local cycle lengths based on the input. 
+
+<br>
+
+<br>
+4.   The method of claim 1, wherein the plurality of locations are selected based on an input.
+<br>
+
+<br>
+5.    The method of claim 4, wherein the input indicates a probe location in the heart chamber, and wherein the plurality of locations are within a predetermined radius from the probe location.
+<br>
+
+<br>
+6.   The method of claim 1, further comprising: 
+<br>
+for each signal section of the plurality signal sections, determining one of a plurality local duty cycles based on the activation waveform of a selected central window having the selected window size, wherein the selected central window is corresponding to the designated confidence value. 
+
+<br>
+
+<br>
+7.   The method of claim 6, further comprising: 
+<br>
+generating a representation of the plurality of duty cycles, wherein the representation is at least one of a histogram, a scatter plot and a graphical representation of the plurality of local duty cycles overlaid on a cardiac map. 
+
+<br>
+
+<br>
+8.   The method of claim 6, further comprising: 
+<br>
+receiving an input of a parameter of the representation of the plurality local duty cycles; and 
+<br>
+adjusting the representation of the plurality local duty cycles based on the input. 
+
+<br>
+
+<br>
+9.   The method of claim 1, further comprising: 
+ 
+  for each signal section of the plurality of signal sections, determining one of a plurality of section confidence values based on the set of confidence values.
+<br>
+
+<br>
+10.  The method of claim 9, further comprising: 
+<br>
+for each signal section of the plurality of signal sections, determining one of a plurality of section confidence values based on the designated backward confidence value, the designated forward confidence value, the selected backward window size, and the selected forward window size. 
+
+<br>
+
+<br>
+11.  The method of claim 9, wherein each of the set of confidence values is based on an amplitude of the activation waveform in the central window of the selected window size and the set of correlations.
+<br>
+
+<br>
+12.  The method of claim 9, further comprising: 
+<br>
+generating a representation of the plurality of section confidence values, wherein the representation is at least one of a histogram, a scatter plot and a graphical representation of the plurality of local duty cycles overlaid on a cardiac map. 
+
+<br>
+
+<br>
+13.  The method of claim 12, further comprising: 
+<br>
+receiving an input of a parameter of the representation of the plurality section confidence values; and 
+<br>
+adjusting the representation of the plurality section confidence values based on the input. 
+
+<br>
+
+<br>
+14.  The method of claim 1, further comprising: 
+<br>
+generating a representation of the set of annotation waveform data overlaid on a cardiac map; 
+<br>
+receiving an input associated with the plurality of local cycle lengths; 
+<br>
+updating the annotation waveform based on the input; and 
+ 
+  updating the representation of the set of annotation waveform data overlaid on the cardiac map.
+<br>
+
+<br>
+15.  A system for processing cardiac information, the system comprising: 
+<br>
+a processing unit configured to: 
+<br>
+receive an activation waveform comprising a set of activation waveform data of a plurality of signal sections collected at a plurality of locations; 
+<br>
+receive a set of window parameters comprising a range of window size; 
+<br>
+for each of the plurality of signal sections, determine a set of confidence values, each confidence value corresponding to a window size, by iterating through a plurality of window sizes in the range of window size; 
+<br>
+for each window size of the plurality of window sizes, select a position of a central window, the central window having the each window size; 
+<br>
+calculate a set of correlations, each of the set of correlations being a correlation of the activation waveform in the central window and the activation waveform in a shifted window, the shifted window being a sample window shifted from the central window and having the each window size; and 
+<br>
+determine one of the set of confidence values based on the set of correlations; and 
+<br>
+compare the set of confidence values to select a designated confidence value and a selected window size corresponding to the designated confidence value; and 
+<br>
+determine one of a plurality of local cycle lengths for the each of the plurality of signal sections based on the selected window size; and 
+<br>
+generate a representation of the plurality of local cycle lengths. 
+<br>
+
+<br>
+16.  The system of claim 15, wherein the representation is at least one of a histogram, a scatter plot, and a graphical representation of the plurality of local cycle lengths overlaid on a cardiac map.
+<br>
+
+<br>
+17.  The system of claim 15, the processing unit is further configured to: 
+<br>
+receive an input of a parameter of the representation of the plurality of local cycle lengths; and 
+<br>
+adjust the representation of the plurality of local cycle lengths based on the input. 
+
+<br>
+
+<br>
+18.  The system of claim 17, wherein the input indicates a probe location in the heart chamber, and wherein the plurality of locations are within a predetermined radius from the probe location.
+<br>
+
+<br>
+19.  The system of claim 15, further comprising: 
+<br>
+for each signal section of the plurality signal sections, determining one of a plurality local duty cycles based on the activation waveform of a selected central window having the selected window size, wherein the selected central window is corresponding to the designated confidence value. 
+
+<br>
+
+<br>
+20.  The system of claim 19, further comprising: 
+<br>
+generating a representation of the plurality of duty cycles, wherein the representation is at least one of a histogram, a scatter plot and a graphical representation of the plurality of local duty cycles overlaid on a cardiac map. 
+57
+58
+59
+60
+61
+US.134747784.01
+</body></html>

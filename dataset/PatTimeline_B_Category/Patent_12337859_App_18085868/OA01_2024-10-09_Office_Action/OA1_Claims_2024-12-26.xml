@@ -1,0 +1,126 @@
+<html><head></head><body><h3>Date: 2024-12-26</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of the claims in this application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<br>
+<br>
+1.    (Currently Amended) A method of personalizing a speed limiter for a vehicle, the method comprising:causing the speed limiter to be activated;<br>
+<u>presenting a speed limiter user interface element to a user on a visual user interface</u><u>;</u><br>
+<u>when a user selects the speed limiter user interface element, cause a menu to be presented to the user on the visual user interface, the menu including a plurality of speed limiter personalization options including at least two of: a traffic sign-based option, a</u><u></u><u>map-based option, a user defined option, a recommendation option, and an auto brake setting option</u><u>;</u><br>
+receiving a user input<u> corresponding to a selected one of the speed limiter personalization </u><u>opt</u><u>ions</u><del> on a user interface, the user input including a speed limiter personalization setting</del>; and<br>
+causing the <u>selected one of the </u>speed limiter personalization <del>setting </del><u>options </u>to be implemented.<br>
+<br>
+2.    (Currently Amended) The method of claim 1, <u>wherein, when the selected one of </u>the speed limiter personalization <u>options is the traffic sign-based option, </u><del>setting includes traffic sign speed limit recognition, and wherein </del><u>the</u><u></u>causing <del>the speed limiter personalization options to be implemented </del>includes:acquiring visual data of a driving environment of the vehicle;<br>
+analyzing the visual data to detect whether a speed limit sign is present in the visual data;<br>
+responsive to detecting a speed limit sign in the visual data, determining a speed limit based on the speed limit sign; and<br>
+adjusting the speed limiter based on the speed limit determined based on the speed limit sign.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+3.    (Currently Amended) The method of claim 1, <u>wherein, when the selected one of </u>the speed limiter personalization <u>options is the map-based option, </u><del>setting includes map</del><del>-</del><del>based speed limit recognition, and wherein </del><u>the</u><u></u>causing <del>the speed limiter personalization setting to be implemented </del>includes:determining a current location of the vehicle on a map;<br>
+determining whether the map includes speed limit information for the current location of the vehicle; and<br>
+responsive to determining that the map includes speed limit information for the current location of the vehicle, adjusting the speed limiter based on the speed limit information for the current location of the vehicle.<br>
+<br>
+4.    (Currently Amended) <u>A method of personalizing a speed limiter for a vehicle, the method compr</u><u>i</u><u>sin</u><u>g:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input including a speed limiter personalization setting, </u><del>The method of</del><del> claim 1, </del><del>wherein </del>the speed limiter personalization setting<u> including </u><del>includes </del>traffic sign speed limit recognition and map-based speed limit<u> recognition</u><u>[[,]];</u><u> and</u><br>
+<u>causing the speed limiter personalization setting to be implemented including:</u><del> and wherein causing the speed limiter personalization setting to be implemented includes:</del>acquiring visual data of a driving environment of the vehicle;<br>
+analyzing the visual data to detect whether a speed limit sign is present in the visual data;<br>
+responsive to detecting that a speed limit sign is present in the visual data:<br>
+determining a speed limit based on the speed limit sign; and adjusting a setting of the speed limiter based on the determined speed limit; and<br>
+responsive to determining that a speed limit sign is not present in the visual data:<br>
+determining a current location of the vehicle on a map;<br>
+<br>
+<br>
+<br>
+determining whether the map includes speed limit information for the current location of the vehicle; and<br>
+responsive to determining that the map includes speed limit information for the current location of the vehicle, adjusting a setting of the speed limiter based on the speed limit information for the current location of the vehicle.<br>
+<br>
+5.    (Currently Amended) The method of claim 1, <u>wherein, when the selected one of </u>the speed limiter personalization <del>setting includes a </del><u>options is the user</u> defined <u>o</u><u>pt</u><u>ion, </u><del>setting of the speed limiter</del><del>.</del><del></del><u>the causing includes:</u><u>receiving a user input including a user defined setting of the speed limiter</u><u>;</u><u> and</u><br>
+<u>adj</u><u>ustin</u><u>g</u><u> the speed limiter based on the user defined setting.</u><br>
+<br>
+6.    (Currently Amended) <u>A method of personalizing a speed limiter for a vehicle, the method compr</u><u>i</u><u>sin</u><u>g:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input including a user defined setting of the speed limiter, </u><del>The method of</del><del> claim 5, </del><del>wherein </del>the user defined setting <del>of the speed limiter</del>is-bing<u></u>a speed limit distance trigger before a reduced speed limit zone, whereby <del>the user can select </del>when the speed limiter will be triggered before the reduced speed limit zone<u> is selectable by the user</u><u>;</u><u> and</u><br>
+<u>causing the user defined setting to be implemented.</u><br>
+<br>
+7.    (Currently Amended) <u>A method of personalizing a speed limiter for a vehicle, the method compr</u><u>i</u><u>sin</u><u>g:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input including a user defined setting of the speed limiter, </u><del>The method of</del><del> claim 5, </del><del>wherein </del>the user defined setting <del>of the speed limiter</del>is-beig<u></u>a brake setting, whereby <del>a user can select whether to brake sharply or softly </del><u>a degree of braking </u>upon triggering the speed <u>limiter is selectable by the user</u><u>;</u><u> and</u><br>
+<u>causing the user defined setting to be implemented.</u><br>
+<br>
+<br>
+<br>
+<br>
+8.    (Currently Amended) <u>A method of personalizing a speed limiter for a vehicle, the method compr</u><u>i</u><u>sin</u><u>g:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input being </u><del>The method of</del><del> claim 1, </del><del>wherein the speed limiter personalization setting is for </del>a recommendation-based speed limiter suggestion by an artificial intelligence <u>mode</u><u>l;</u><u> and</u><br>
+<u>causing the recommendation-based speed limiter su</u><u>gg</u><u>estion to be implemented.</u><br>
+<br>
+9.    (Canceled)<br>
+<br>
+10.   (Currently Amended) A system for personalizing a speed limiter for a vehicle, the system comprising:a <u>visual </u>user interface; and<br>
+<del>one or more processors </del><u>a processor </u>operatively connected to the <u>visual </u>user interface<del>, the one or more processors being </del><u>a</u><u>nd </u><u>programmed</u> to initiate executable operations comprising:causing the speed limiter to be activated;<br>
+<u>presenting a speed limiter user interface element to a user on a visual user </u><u>inte</u><u>rface</u><u>;</u><br>
+<u>when a user selects the speed limiter user interface element, cause a menu to be presented to the user on the visual user interface, the menu including a plurality of speed limiter personalization options including at least two of: a traffic sign-based option, a map-based option, a user defined option, a recommendation option, and an auto brake setting option</u><u>;</u><br>
+receiving a user input <u>corresponding to a selected one of the speed limiter personalization options</u><del> on the user interface, the user input including a speed limiter personalization setting</del>; and<br>
+causing the <u>selected one of the </u>speed limiter personalization <del>setting </del><u>options </u>to be implemented.<br>
+<br>
+<br>
+<br>
+<br>
+11.   (Currently Amended) The system of claim 10, <u>wherein, when the selected one of </u>the speed limiter personalization <u>options is the traffic sign-based option, </u><del>setting includes traffic sign speed limit recognition, and wherein </del><u>the</u><u></u>causing <del>the speed limiter personalization setting to be implemented </del>includes:acquiring visual data of a driving environment of the vehicle;<br>
+analyzing the visual data to detect whether a speed limit sign is present in the visual data;<br>
+responsive to detecting a speed limit sign in the visual data, determining a speed limit based on the speed limit sign; and<br>
+adjusting the speed limiter based on the speed limit determined based on the speed limit sign.<br>
+<br>
+12.   (Currently Amended) The system of claim 10, <u>wherein, when the selected one of </u>the speed limiter personalization <u>options is the map-based option, </u><del>setting includes map</del><del>-</del><del>based speed limit recognition, and wherein </del><u>the</u><u></u>causing <del>the speed limiter personalization setting to be implemented </del>includes:determining a current location of the vehicle on a map;<br>
+determining whether the map includes speed limit information for the current location of the vehicle; and<br>
+responsive to determining that the map includes speed limit information for the current location of the vehicle, adjusting the speed limiter based on the speed limit information for the current location of the vehicle.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+13.   (Currently Amended) <u>A s</u><u>y</u><u>stem for personalizing a speed limiter for a vehicle, the s</u><u>y</u><u>stem compr</u><u>i</u><u>sin</u><u>g:</u><u>a user interface</u><u>;</u><u> and</u><br>
+<u>a processor operatively connected to the user interface and programmed to initiate executable operations comprising:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on the user interface, the user input being a speed limiter personalization setting including </u><del>The system of</del><del> claim 10, </del><del>wherein the speed limiter personalization setting includes </del>traffic sign speed limit recognition and map-based speed limit recognition[[,]];<u> and</u><br>
+causing the speed limiter personalization setting to be implemented <u>including: </u><del>and wherein causing the speed limiter personalization setting to be implemented includes:</del>acquiring visual data of a driving environment of the vehicle analyzing the visual data to detect whether a speed limit sign is present in the visual data;<br>
+responsive to detecting that a speed limit sign is present in the visual data:<br>
+determining a speed limit based on the speed limit sign; and adjusting a setting of the speed limiter based on the determined speed limit; and<br>
+responsive to determining that a speed limit sign is not present in the visual data:<br>
+determining a current location of the vehicle on a map;<br>
+determining whether the map includes speed limit information for the current location of the vehicle; and<br>
+responsive to determining that the map includes speed limit information for the current location of the vehicle, adjusting a setting of the speed limiter based on the speed limit information for the current location of the vehicle.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+14.   (Currently Amended) The system of claim 10, wherein the speed limiter personalization<del> setting includes a o</del><u>ptions is the </u>user defined <u>o</u><u>pt</u><u>ion, </u><del>setting of the speed limiter</del><del>.</del><del></del><u>the causing includes:</u><u>receiving a user input including a user defined setting of the speed limiter</u><u>;</u><u> and</u><br>
+<u>adj</u><u>ustin</u><u>g</u><u> the speed limiter based on the user defined setting.</u><br>
+<br>
+15.   (Currently Amended) <u>A s</u><u>y</u><u>stem for personalizing a speed limiter for a vehicle, the s</u><u>y</u><u>stem compr</u><u>i</u><u>sin</u><u>g:</u><u>a user interface</u><u>;</u><u> and</u><br>
+<u>a processor operatively connected to the user interface and programmed to initiate executable operations comprising:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input including a user defined setting of the speed limiter, </u><del>The system of</del><del> claim 14, </del><del>wherein </del>the user defined setting of<del> the speed limiter is b</del><u>eing </u>a speed limit distance trigger before a reduced speed limit zone,<br>
+whereby <del>the user can select </del>when the speed limit will be triggered before the reduced speed limit zone<u> is selectable by the user</u><u>;</u><u> and</u><u>causing the user defined setting to be implemented.</u><br>
+<br>
+16.   (Currently Amended) <u>A s</u><u>y</u><u>stem for personalizing a speed limiter for a vehicle, the s</u><u>y</u><u>stem compr</u><u>i</u><u>sin</u><u>g:</u><u>a user interface</u><u>;</u><u> and</u><br>
+<u>a processor operatively connected to the user interface and programmed to initiate executable operations comprising:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input including a user defined setting of the speed limiter, </u><del>The system of</del><del> claim 15, </del><del>wherein </del>the user defined setting ef<del> the speed limiter is </del><u>being </u>a brake setting, whereby <del>a user can select </del>a degree of braking upon triggering the speed <u>limiter is selectable by the user</u><u>;</u><u> and</u><br>
+<u>causing the user defined setting to be implemented.</u><br>
+<br>
+Amendment A<br>
+<br>
+<br>
+17.   (Currently Amended) <u>A s</u><u>y</u><u>stem for personalizing a speed limiter for a vehicle, the s</u><u>y</u><u>stem compr</u><u>i</u><u>sin</u><u>g:</u><u>a user interface</u><u>;</u><u> and</u><br>
+<u>a processor operatively connected to the user interface and programmed to initiate executable operations comprising:</u><u>causing the speed limiter to be activated</u><u>;</u><br>
+<u>receiving a user input on a user interface, the user input being </u><del>The system of</del><del> claim 10, </del><del>wherein the speed limiter personalization setting is for </del>a recommendation-based speed limiter suggestion by an artificial intelligence <u>mode; and</u><br>
+<u>causing the recommendation-based speed limiter su</u><u>gg</u><u>estion to be implemented.</u><br>
+<br>
+18.   (Canceled)<br>
+<br>
+19.   (Currently Amended) The system of claim 10, <del>wherein the user interface is a visual user interface, </del>wherein the visual user interface is one of:a graphical user interface presented on a display; and<br>
+a projection presented on a surface.<br>
+<br>
+20.    (Original) The system of claim 19, wherein the visual user interface the visual user interface is located within a vehicle.
+</body></html>

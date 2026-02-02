@@ -1,0 +1,98 @@
+<html><head></head><body><h3>Date: 2025-01-07</h3>
+
+<h1><u>AMENDMENTS</u> <u>TO</u> <u>THE</u> <u>CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application:</p><br>
+<br>
+1. (Currently Amended) A method for displaying a virtual scene, performed by a <u>mobile</u> terminal, comprising:<br>
+<u>displaying, by a processor of</u><u>the mobile terminal,</u> a virtual scene image <u>of</u><u>a multipla</u><u>yer</u><u> online battle arena (MOBA) game</u> on a terminal screen <u>of</u><u>the mobile terminal,</u> the virtual scene image comprising a controlled virtual object in a virtual scene, the controlled virtual object being a virtual object currently controlled by the <u>terminal, and the MOBA game comprising a first camp based at an upper right corner of</u><u>the virtual scene and a second camp based at a lower left corner of</u><u>the virtual scene;</u><br>
+<u>displaying the controlled virtual object at a central position of</u><u>the terminal screen in response to that the controlled virtual object belongs to the second camp</u><u>;</u> and<br>
+displaying the controlled virtual object at a target position of the terminal screen [[when]]<u> in response to that</u> the controlled virtual object belongs to [[a]] the first camp, <del>the first camp being a camp located at an upper right of the virtual scene, </del>the target position being shifted to an upper right position relative to [[a]] <u>the</u> central position of the terminal screen.<br>
+<br>
+2. (Original) The method according to claim 1, further comprising:<br>
+displaying an operation control in a lower left part of the terminal screen;<br>
+wherein the virtual object is controlled in response to a user touch operation on the operation control.<br>
+<br>
+<br>
+3. (Currently Amended) The method according to claim 1, wherein the displaying the controlled virtual object at [[a]] the target position of the terminal screen [[when]] <u>in response to </u><u>that</u> the controlled virtual object belongs to [[a]] the first camp comprises:<br>
+obtaining a target offset and a first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp, the target offset being used for adjusting a position of the controlled virtual object displayed on the terminal screen;<br>
+determining a second scene position according to the target offset and the first scene position; and<br>
+moving a camera lens, wherein a lens projection point is moved to the second scene position, and the controlled virtual object is displayed at the target position of the terminal screen, the camera lens being used for photographing the virtual scene to obtain the virtual scene image displayed on the terminal screen, the lens projection point being a scene position corresponding to the camera lens in the virtual scene.<br>
+<br>
+4. (Original) The method according to claim 3, wherein the obtaining a target offset and a first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp comprises:<br>
+obtaining the first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp; and<br>
+obtaining the target offset according to a scene region to which the first scene position belongs, the target offset being an offset corresponding to the scene region.<br>
+Application No. 17747878<br>
+<br>
+5. (Original) The method according to claim 3, wherein the obtaining a target offset and a first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp comprises:<br>
+obtaining the first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp;<br>
+obtaining a third scene position of a target virtual object meeting a target condition, the target virtual object belonging to the second camp; and<br>
+determining the target offset according to the first scene position and the third scene position.<br>
+<br>
+6. (Original) The method according to claim 5, wherein the target condition comprises at least one of:<br>
+a distance from the controlled virtual object is less than a first distance;<br>
+virtual hit points are less than or equal to a hit point threshold; and<br>
+a latest attack by the controlled virtual object has been received.<br>
+<br>
+7. (Original) The method according to claim 5, wherein the obtaining a third scene position of a target virtual object meeting a target condition comprises:<br>
+obtaining at least one virtual object belonging to the second camp within a target range centered on the first scene position;<br>
+determining a virtual object meeting the target condition in the at least one virtual object as the target virtual object; and<br>
+obtaining the third scene position of the target virtual object.<br>
+<br>
+<br>
+8. (Original) The method according to claim 3, wherein the determining a second scene position according to the target offset and the first scene position comprises:<br>
+determining a sum of the target offset and the first scene position as the second scene position.<br>
+<br>
+9. (Original) The method according to claim 3, wherein the moving a camera lens comprises:<br>
+obtaining lens attribute information, the lens attribute information indicating at least one of a moving speed and a moving manner of the camera lens; and<br>
+moving the camera lens according to the lens attribute information.<br>
+<br>
+10. (Currently Amended) The method according to claim 1, wherein the displaying the controlled virtual object at [[a]] the target position of the terminal screen [[when]] <u>in response to </u><u>that</u> the controlled virtual object belongs to [[a]] the first camp comprises:<br>
+obtaining a target distance when the controlled virtual object belongs to the first camp, the target distance being a distance between a current scene position of the controlled virtual object and an initial position corresponding to the first camp; and<br>
+displaying the controlled virtual object at the target position of the terminal screen in response to the target distance being greater than a distance threshold.<br>
+<br>
+<br>
+11. (Currently Amended) The method according to claim 1, wherein the displaying the controlled virtual object at [[a]] the target position of the terminal screen [[when]] <u>in response to </u><u>that</u> the controlled virtual object belongs to [[a]] the first camp comprises:<br>
+obtaining a target duration when the controlled virtual object belongs to the first camp, the target duration being a duration in which the controlled virtual object is generated; and<br>
+displaying the controlled virtual object at the target position of the terminal screen in response to the target duration being greater than a duration threshold.<br>
+<br>
+12. (Currently Amended) An apparatus for displaying a virtual scene, comprising a memory and a processor coupled to the memory, the processor being configured to:<br>
+display a virtual scene image <u>of a multiplayer online battle arena (MOBA) </u><u>g</u><u>ame </u>on a terminal screen <u>of the mobile terminal,</u> the virtual scene image comprising a controlled virtual object in a virtual scene, the controlled virtual object being a virtual object currently controlled by a <u>terminal, and the MOBA </u><u>g</u><u>ame comprising a first camp based at an upper right corner of the virtual scene and a second camp based at a lower left corner of the virtual scene;</u><br>
+<u>display the controlled virtual object at a central position of the terminal screen in response to that the controlled virtual object belongs to the second camp; </u>and<br>
+display the controlled virtual object at a target position of the terminal screen [[when]] <u>in response to that </u>the controlled virtual object belongs to [[a]] the first camp, <del>the first camp being a camp located at an upper right of the virtual scene, </del>the target position being shifted to an upper right position relative to [[a]] the central position of the terminal screen.<br>
+<br>
+<br>
+13. (Original) The apparatus according to claim 12, wherein the processor is further configured to:<br>
+obtain a target offset and a first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp, the target offset being used for adjusting a position of the controlled virtual object displayed on the terminal screen;<br>
+determine a second scene position according to the target offset and the first scene position; and<br>
+move a camera lens, wherein a lens projection point is moved to the second scene position, and the controlled virtual object is displayed at the target position of the terminal screen, the camera lens being used for photographing the virtual scene to obtain the virtual scene image displayed on the terminal screen, the lens projection point being a scene position corresponding to the camera lens in the virtual scene.<br>
+<br>
+14. (Original) The apparatus according to claim 13, wherein the processor is further configured to obtain the first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp; and obtain the target offset according to a scene region to which the first scene position belongs, the target offset being an offset corresponding to the scene region.<br>
+<br>
+15. (Original) The apparatus according to claim 13, wherein the processor is further configured to perform:<br>
+obtaining the first scene position of the controlled virtual object in the virtual scene when the controlled virtual object belongs to the first camp;<br>
+Application No. 17747878 obtaining a third scene position of a target virtual object meeting a target condition, the target virtual object belonging to the second camp; and<br>
+determining the target offset according to the first scene position and the third scene position.<br>
+<br>
+16. (Original) The apparatus according to claim 15, wherein the target condition comprises at least one of:<br>
+a distance from the controlled virtual object is less than a first distance;<br>
+virtual hit points are less than or equal to a hit point threshold; and<br>
+a latest attack by the controlled virtual object has been received.<br>
+<br>
+17. (Original) The apparatus according to claim 15, wherein the obtaining a third scene position of a target virtual object meeting a target condition comprises:<br>
+obtaining at least one virtual object belonging to the second camp within a target range centered on the first scene position;<br>
+determining a virtual object meeting the target condition in the at least one virtual object as the target virtual object; and<br>
+obtaining the third scene position of the target virtual object.<br>
+<br>
+18. (Original) The apparatus according to claim 13, wherein the processor is further configured to:<br>
+determine a sum of the target offset and the first scene position as the second scene position.<br>
+<br>
+<br>
+19. (Original) The apparatus to claim 12, wherein the processor is further configured to:<br>
+display an operation control in a lower left part of the terminal screen;<br>
+wherein the virtual object is controlled in response to a user touch operation on the operation control.<br>
+<br>
+20. (Currently Amended) A non-transitory storage medium, configured to store at least one computer program, the at least one computer program, when being executed by a processor<u> of a mobile terminal,</u> causing the processor to perform:<br>
+displaying a virtual scene image <u>of a multiplayer online battle arena (MOBA) </u><u>g</u><u>ame </u>on a terminal screen <u>of the mobile terminal,</u> the virtual scene image comprising a controlled virtual object in a virtual scene, the controlled virtual object being a virtual object currently controlled by the <u>terminal, and the MOBA </u><u>g</u><u>ame comprising a first camp based at an upper right corner of the virtual scene and a second camp based at a lower left corner of the virtual scene;</u><br>
+<u>displayin</u><u>g</u><u> the controlled virtual object at a central position of the terminal screen in response to that the controlled virtual object belongs to the second camp; </u>and<br>
+displaying the controlled virtual object at a target position of the terminal screen [[when]]<u> in response to that </u>the controlled virtual object belongs to [[a]] the first camp, <del>the first camp being a camp located at an upper right of the virtual scene, </del>the target position being shifted to an upper right position relative to [[a]] <u>the</u> central position of the terminal screen.
+</body></html>

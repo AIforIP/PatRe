@@ -1,0 +1,7 @@
+<html><head></head><body><h3>Date: 2022-08-09</h3>
+<h1>ABSTRACT</h1>
+
+<p>A computing system including a processing circuit in communication with a robot and a camera having a field of view. The processing circuit obtains image information based on the objects in the field of view and a loading environment, the loading environment which includes loading areas, an object queue, and a buffer zone. The computing system is configured to use the obtained image information in motion planning operations for the retrieval and placement of objects from the object queue into the loading environment. Pallets provided within the loading environment (i.e., within the loading areas) are dedicated to receiving objects having corresponding object type identifiers. The computer system further uses the image information to determine the fill status of pallets existing within the loading environment, and whether new pallets need to be brought into the loading environment and/or swapped out with existing pallets to account for future planning and placement operations.</p>
+<p>4886-0181-9692, v. 2</p>
+Page 57 of 57
+</body></html>

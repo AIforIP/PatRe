@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2021-04-08</h3>
+<p>A0005708US01 (10259-141)</p>
+<h1>ABSTRACT</h1>
+<p>Systems and methods for monitoring patient movement are provided. A first dataset containing information about a first tracking device and a second tracking device may be received. A second dataset containing information about the first tracking device and the second tracking device may be received. The first dataset and the second dataset may be compared to determine if a relative pose of the first tracking device and the second tracking device has changed. A notification may be generated when the relative pose of the first tracking device and the second tracking device has changed.</p><p>33</p></body></html>

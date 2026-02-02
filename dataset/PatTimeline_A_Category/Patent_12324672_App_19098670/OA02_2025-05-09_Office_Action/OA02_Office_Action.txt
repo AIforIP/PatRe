@@ -1,0 +1,31 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA . Claims 1-20 are currently pending.
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with Kevin McCormick on 04/29/2025.
+The application has been amended as follows:
+Claim 10: A wearable electrocardiography monitor, comprising:
+a backing having a distal end and a proximal end, wherein the backing is configured to adhere to skin of a patient via an adhesive surface on the distal end and the proximal end;
+a monitor recorder comprising:
+a temperature sensor;
+a plurality of electrical contacts extending from the monitor recorder
+electronic circuitry comprising an electrocardiographic front end circuit to sense electrocardiographic signals via a distal electrocardiography electrode and a proximal electrocardiography electrode; and
+a feedback button disposed on a top surface of the monitor recorder, wherein the feedback button is configured to receive feedback from the patient;
+a receptacle fixed to the backing, wherein the receptacle is configured to receive the monitor recorder, wherein, when the monitor recorder engages the receptacle, the plurality of electrical contacts contact a plurality of electrical pads on the receptacle;
+a battery compartment configured to house a battery, wherein the battery compartment is formed on a bottom surface of the receptacle, wherein the battery compartment includes a spring, and wherein a pair of electrical pads of the plurality of the electrical pads electrically interface the battery to the monitor recorder; and a flexible circuit comprising:
+an inline resistor;
+a proximal circuit trace, wherein the proximal circuit trace electrically couples the distal electrocardiography electrode to a first electrical pad of the plurality of electrical pads; and
+a distal circuit trace, wherein the distal circuit trace electrically couples the distal electrocardiography electrode to a second electrical pad of the plurality of electrical pads.
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance:
+The closest prior art of record does not disclose nor render obvious the above claimed invention. The closest art, Baker, does not teach that a battery is within the receptacle that then goes on to receive the monitor recorder which ultimately contains the other electronic components. The battery of Baker is in a receptacle and compartment but not one that is capable of receiving a monitor recorder as claimed.
+Bay, US Publication 2015/0250422, teaches a compartment/cavity in the nonconductive receptacle that then is configured to receive a housing with the same claimed electronic components, however the skilled artisan would not have been inclined to place the battery in the compartment as per Figures 2-4 as there are already flexible circuits located there. Further including a battery within the non-conductive receptacle would not have been obvious with the housing (of the monitor) claimed as well without the use of the Applicant’s original disclosure as a blueprint for doing so.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to Brian M Antiskay whose telephone number is(571)270-5179. The examiner can normally be reached M-F 10am-6pm EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joseph Stoklosa can be reached at 571-272-1213. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/BRIAN M ANTISKAY/Examiner, Art Unit 3794
+/JOSEPH A STOKLOSA/Supervisory Patent Examiner, Art Unit 3794

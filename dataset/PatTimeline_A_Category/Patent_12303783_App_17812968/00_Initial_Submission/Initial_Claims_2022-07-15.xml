@@ -1,0 +1,170 @@
+<html><head></head><body><h3>Date: 2022-07-15</h3>
+<p><u>CLAIMS</u></p>
+<p>What is claimed is:</p>
+<br>
+
+<br>
+1.    A computer-implemented method of providing continuous gameplay in a multiplayer video game through an unbounded gameplay session that runs continuously until all players have exited the unbounded gameplay session, the method being implemented in a host computer having one or more physical processors programmed with computer program instructions that, when executed by the one or more physical processors, cause the host computer system to perform the method, the method comprising: 
+<br>
+initiating, by the host computer, the unbounded gameplay session with a set of matched players; 
+<br>
+adding, by the host computer, a new player to the unbounded gameplay session after the unbounded gameplay session has commenced; 
+<br>
+generating, by the host computer, a first score for at least a first player of the set of matched players and a second score for the new player, wherein the first score and the second score are each based on a time-based parameter; 
+<br>
+determining, by the host computer, whether a number player remaining in the unbounded gameplay session is below a threshold number of players; and 
+<br>
+terminating, by the host computer, the unbounded gameplay session responsive to a determination that the number of players remaining in the unbounded gameplay session is below the threshold number of players. 
+
+<br>
+
+<br>
+2.    The computer-implemented method of claim 1, the method further comprising: 
+<br>
+removing, by the host computer, the first player from the unbounded gameplay session; 
+<br>
+selecting, by the host computer, a replacement player to replace the first player based on one or more matchmaking parameters; and 
+<br>
+adding, by the host computer, the replacement player to play in the unbounded gameplay session. 
+<br>
+3.    The computer-implemented method of claim 2, the method further comprising: 
+<br>
+receiving, by the host computer, a request from the first player to rejoin the unbounded gameplay session; and 
+<br>
+adding, by the host computer, the first player to play in the unbounded gameplay session responsive to the request. 
+
+<br>
+
+<br>
+4.    The computer-implemented method of claim 1, wherein generating the first score comprises: 
+<br>
+determining, by the host computer, a performance of the first player, wherein the first score is based on the performance. 
+
+<br>
+
+<br>
+5.    The computer-implemented method of claim 4, wherein generating the first score comprises: 
+<br>
+determining, by the host computer, a virtual item used by the first player; and 
+<br>
+associating, by the host computer, the virtual item with the performance, wherein the first score is correlated with the virtual item. 
+
+<br>
+
+<br>
+6.    The computer-implemented method of claim 4, wherein generating the first score comprises: 
+<br>
+determining, by the host computer, a second player playing with the first player; and 
+<br>
+associating, by the host computer, the second player with the performance, wherein the first score is correlated with the second player. 
+<br>
+7.    The computer-implemented method of claim 1, the method further comprising: 
+<br>
+determining, by the host computer, a first team score for a first team of players from among players participating in the unbounded gameplay session and a second team score for a second team of players from among the players participating in the unbounded gameplay session, wherein the second team score is lower than the first team score; 
+<br>
+determining, by the host computer, a performance gap based on the first team score and the second team score; 
+<br>
+determining, by the host computer, a mismatch based on the performance gap; and 
+<br>
+identifying, by the host computer, an adjustment feature based on the mismatch. 
+
+<br>
+
+<br>
+8.    The computer-implemented method of claim 7, wherein the adjustment feature comprises an advantage for the second team.
+<br>
+
+<br>
+9.    The computer-implemented method of claim 8, wherein the advantage comprises an additional player for the second team, the method further comprising: 
+<br>
+identifying, by the host computer, the additional player to be added to the second team; 
+<br>
+and adding, by the host computer, the additional player to play with the second team in the unbounded gameplay session. 
+
+<br>
+
+<br>
+10.   The computer-implemented method of claim 7, wherein the adjustment feature comprises a disadvantage for the first team.
+<br>
+
+<br>
+11.   The computer-implemented method of claim 7, wherein determining the mismatch comprises: 
+<br>
+determining that the mismatch is not sufficiently large to encourage an uneven match, wherein the adjustment feature is identified to generate the uneven match. 
+<br>
+12.   The computer computer-implemented method of claim 7, wherein determining the mismatch comprises: 
+<br>
+determining that the mismatch is too large to encourage an even match, wherein the adjustment feature is identified to generate the even match. 
+
+<br>
+
+<br>
+13.   The computer-implemented method of claim 1, wherein the time-based parameter comprises a rate such that the first score and the second score each comprises a performance per unit of time.
+<br>
+
+<br>
+14.   The computer-implemented method of claim 1, wherein the time-based parameter comprises a latest time interval such that the first score and the second score each comprises a performance within the latest time interval.
+
+<br>
+15.   A system for providing continuous gameplay in a multiplayer video game through an unbounded gameplay session that runs continuously until all players have exited the unbounded gameplay session, the system comprising: 
+<br>
+a host computer comprising one or more physical processors programmed with one or more computer program instructions which, when executed, programs the computer system to: 
+<br>
+initiate the unbounded gameplay session with a set of matched players; 
+<br>
+add a new player to the unbounded gameplay session after the unbounded gameplay session has commenced; 
+<br>
+generate a first score for at least a first player of the set of matched players and a second score for the new player, wherein the first score and the second score are each based on a time- based parameter; 
+<br>
+determine whether a number of players remaining in the unbounded gameplay session falls below a threshold number of players; and 
+<br>
+terminate the unbounded gameplay session responsive to a determination that the number of players remaining in the unbounded gameplay session falls below the threshold number of players. 
+
+<br>
+
+<br>
+16.   The system of claim 15, wherein the host computer system is further programmed to: 
+<br>
+remove the first player from the unbounded gameplay session; 
+<br>
+select a replacement player to replace the first player based on one or more matchmaking parameters; and 
+<br>
+add the replacement player to play in the unbounded gameplay session. 
+
+<br>
+
+<br>
+17.   The system of claim 16, wherein the host computer system is further programmed to: 
+<br>
+receive a request from the first player to rejoin the unbounded gameplay session; and 
+<br>
+add the first player to play in the unbounded gameplay session responsive to the request. 
+<br>
+18.   The system of claim 15, wherein to generate the first score, the host computer system is further programmed to: 
+<br>
+determine a performance of the first player, wherein the first score is based on the performance. 
+
+<br>
+
+<br>
+1 9.  The system of claim 18, wherein to generate the first score, the host computer system is further programmed to: 
+<br>
+determine a virtual item used by the first player; and 
+<br>
+associate the virtual item with the performance, wherein the first score is correlated with the virtual item. 
+
+<br>
+
+<br>
+20.    The system of claim 18, wherein to generate the first score, the host computer system is further programmed to: 
+<br>
+determine a second player playing with the first player; and 
+<br>
+associate the second player with the performance, wherein the first score is correlated with the second player. 
+25
+26
+27
+28
+29
+30
+</body></html>

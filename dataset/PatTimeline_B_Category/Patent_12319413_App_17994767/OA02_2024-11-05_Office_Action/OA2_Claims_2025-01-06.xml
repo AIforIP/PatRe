@@ -1,0 +1,62 @@
+<html><head></head><body><h3>Date: 2025-01-06</h3>
+<p><u>AMENDMENTS TO THE CLAIMS</u>Replace all previous versions of the claims with the following listing.</p><br>
+1.    (Currently Amended)
+A passenger seat arrangement for a passenger aircraft, comprising:<br>
+a passenger seat assembly having at least one passenger seat;<br>
+an electrical energy supply system which has a first electronics housing, in which electrical power converter components are arranged, and a second electronics housing, in which electrical output connections for connecting electronic terminals are arranged; and<br>
+a multiplicity of sensors which are assigned to the passenger seat assembly and are coupled to a sensor data interface of the first electronics housing of the electrical energy supply system, wherein the multiplicity of sensors collect passenger-based sensor data,<br>
+wherein the electrical energy supply system has a sensor data processing device accommodated within the first electronics housing which is designed to preprocess the passenger-based sensor data acquired from the sensors via the sensor data interface and to forward said preprocessed passenger-based sensor data to a central sensor data evaluation apparatus of the passenger <u>aircraft</u><u>, </u><u>and</u><br>
+<u>wherein the multiplicity of sensors comprise an optical sensor installed in a backrest or a passenger service device of the at least one passenger seat which monitors at least one of seat position of the at least one passenger seat and eye movements of a passenger.</u><br>
+<br>
+2.    (Original)  The passenger seat arrangement according to claim 1, wherein the multiplicity of sensors comprise at least two of optical sensors, seat occupancy sensors, seat position sensors, temperature sensors, current sensors, voltage sensors, motion sensors or ultrasonic sensors.<br>
+<br>
+3.    (Previously Presented)   The passenger seat arrangement according to claim 1, wherein the sensor data processing device is also configured to receive environmental data from an environment of the passenger aircraft and to preprocess the passenger-based sensor data acquired from the sensors via the sensor data interface in conjunction with the received environmental data.<br>
+<br>
+<br>
+<br>
+4.    (Original)   The passenger seat arrangement according to claim 3, wherein the received environmental data comprise data relating to at least one of a geographical position of the passenger aircraft, an ambient temperature of the passenger aircraft, a departure point or destination of the passenger aircraft, a forecasted weather at the departure point or destination of the passenger aircraft or a local time of the passenger aircraft.<br>
+<br>
+5.    (Previously Presented)   The passenger seat arrangement according to    The passenger seat arrangement according to <br>
+wherein the electrical output connections of the second electronics housing comprise at least one of USB sockets, seat lighting connections of passenger seats, AC voltage connections or seat actuator connections, and<br>
+wherein the passenger-based sensor data acquired from the sensors via the sensor data interface comprise time-resolved usage data relating to at least one of the USB sockets, seat lighting connections, AC voltage connections or seat actuator connections.<br>
+<br>
+6.    (Original)   A passenger aircraft comprising:<br>
+a passenger cabin;<br>
+at least one electrical energy source;<br>
+a sensor data evaluation apparatus; and<br>
+at least one passenger seat arrangement according to claim 1 which is installed in a floor of the passenger cabin using a seat fastening rail and the second electronics housing of which is respectively connected to the at least one electrical energy source via electrical supply lines running along in or on the seat fastening rail.<br>
+<br>
+7.    (Original)   The passenger aircraft according to claim  6, further comprising an avionics server coupled to the first electronics housing of the electrical energy supply system and configured to forward environmental data from an environment of the passenger aircraft to the sensor data processing device.<br>
+<br>
+<br>
+<br>
+8.    (Original)  The passenger aircraft according to claim 6, wherein the multiplicity of sensors have sensors which are arranged in a passenger service unit above the passenger seat arrangement.<br>
+<br>
+9.    (Original)  The passenger aircraft according to claim 6, wherein the passenger seat arrangement has at least two passenger seats arranged beside one another.<br>
+<br>
+10.   (Previously Presented)  The passenger aircraft according to claim 9, wherein the passenger seat arrangement has a terminal of an on-board entertainment system, and the sensor data evaluation apparatus of the passenger aircraft is configured to evaluate acquired passenger-based sensor data from the sensor data processing device and, based on the evaluated sensor data, to transmit passenger-based display contents to the assigned terminal of an on-board entertainment system for each of the passenger seat arrangements.<br>
+<br>
+11.   (Original)  The passenger aircraft according to claim 6, wherein the sensor data processing device is connected to the sensor data evaluation apparatus of the passenger aircraft via data lines running along in or on the seat fastening rail.<br>
+12.   (Currently Amended)
+A method for passenger-based sensor data acquisition in a passenger seat arrangement in a passenger aircraft, comprising:<br>
+acquiring passenger-based sensor data by means of a multiplicity of sensors assigned to a passenger seat assembly having at least one passenger seat;<br>
+transmitting the acquired passenger-based sensor data via a sensor data interface of a first electronics housing, in which electrical power converter components are arranged, of an electrical energy supply system assigned to the passenger seat assembly;<br>
+preprocessing the sensor data acquired from the sensors via the sensor data interface by means of a sensor data processing device of the electrical energy supply system which is accommodated within the first electronics housing; and<br>
+forwarding the sensor data preprocessed by the sensor data processing device to a central sensor data evaluation apparatus of the passenger aircraft1<br>
+<br>
+<u>wherein the multiplicity of sensors comprise an optical sensor installed in a backrest or a passenger service device of the at least one passenger seat which monitors at least one of seat position of the at least one passenger seat and e</u><u>y</u><u>e movements of a passenger.</u><br>
+<br>
+13.   (Original)  The method according to claim 12, further comprising the step of acquiring environmental data from an environment of the passenger aircraft, which data are taken into account by the sensor data processing device when preprocessing the sensor data acquired from the sensors via the sensor data interface.<br>
+<br>
+14.   (Original)  The method according to claim 13, wherein the received environmental data comprise data relating to at least one of a geographical position of the passenger aircraft, an ambient temperature of the passenger aircraft, a departure point or destination of the passenger aircraft, a forecasted weather at the departure point or destination of the passenger aircraft or a local time of the passenger aircraft.<br>
+<br>
+15.   (Previously Presented)  The method according to claim 12, wherein the multiplicity of sensors comprise at least two of optical sensors, seat occupancy sensors, seat position sensors, temperature sensors, current sensors, voltage sensors, motion sensors or ultrasonic sensors.<br>
+<br>
+16.   (Previously Presented)  The passenger seat arrangement according to claim 1, wherein the electrical energy supply system supplies permanently installed electrical loads to at least one of a display of an on-board entertainment system, a seat lighting system of the at least one passenger seat, and a seat actuator of the at least one passenger seat.<br>
+<br>
+17.   (Cancelled)<br>
+<br>
+18.   (Previously Presented)  The passenger seat arrangement according to claim 1, wherein the multiplicity of sensors comprise a seat occupancy sensor which<br>
+<br>
+Reply to Office Action of November 5, 2024 measures the load on a seating surface of the at least one passenger seat in order to thereby determine whether there is a passenger on the at least one passenger seat and whether the passenger is carrying out movements.
+</body></html>

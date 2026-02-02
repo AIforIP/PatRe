@@ -1,0 +1,65 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Election/Restrictions
+Applicant’s election without traverse of Species A, Subspecies 2 in the reply filed on 09/03/2024 is acknowledged.
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 1-8 and 10 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Claim 1 recites the limitation the ply in line 5.  It is unclear if the limitation refers to the mineral origin ply or the organic ply.
+Claim 1 recites the limitation a peripheral edge in line 5.  It is unclear if the limitation refers to the previously recited peripheral edge, or is introducing a new peripheral edge.
+Claim 2 recites the limitation the plies of mineral material in line 2.  There is insufficient antecedent basis for this limitation in the claim.
+Claim 3 recites the limitation each of the inner plies in line 5.  There is insufficient antecedent basis for this limitation in the claim.
+Claims 4-8 and 10 are rejected as being dependent from a rejected base claim.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claims 1-4, 6-8, and 10 are rejected under 35 U.S.C. 102(a)(1) as being anticipated by McClain (US 2,293,656).
+In re. claim 1, McClain teaches an aircraft windshield (pg. 2, col. 1, ln. 45-50) comprising a window (Fig. VIII-XI) comprising at least one ply of material that is transparent and of mineral origin and having a peripheral edge (glass (47)) (pg. 4, col. 1, ln. 20-22), wherein at least one of the plies of the window made of mineral material is coated with a coating layer (16) of viscoelastic transparent organic material over an entire surface of the ply (polymerized vinyl butyral) (pg. 1, col. 2, ln. 24-27), including a peripheral edge thereof (Fig. VIII-XI).
+In re. claim 2, McClain teaches the aircraft windshield according to claim 1, wherein each of the plies (43, 47) made of mineral material of the window is coated with the viscoelastic transparent organic material (fig. X).
+In re. claim 3, McClain teaches the aircraft the windshield according to claim 1, wherein an outer ply made (43) of non-coated mineral material is provided (glass) (pg. 4, col. 1, ln. 30-36), of which an outer face is an outermost face of the window (fig. X), and an inner face (inner face of ply (43)) is attached to an outer face of an outermost coating layer (16) via a glue (glass bonded to the plastic) (pg. 4, col. 1, ln. 15-20), and wherein each of the inner plies (47) is coated with the viscoelastic transparent organic material (fig. X).
+In re. claim 4, McClain teaches the aircraft the aircraft windshield according to claim 1, wherein the coating layer forms a one-piece jacket (fig. X).
+In re. claim 6, McClain teaches the aircraft windshield according to claim 1, wherein the coating layer comprises an extension at all peripheral edges of the ply, the extension having a through-opening configured to receive a fastener (fig. X).
+In re. claim 7, McClain teaches the aircraft windshield according to claim 1, wherein the mineral material comprises glass (pg. 4, col. 1, ln. 20-22).
+In re. claim 8, McClain teaches an aircraft (pg. 2, col. 1, ln. 45-50) comprising a framework (41) forming part of a primary structure of the aircraft (pg. 4, col. 1, ln. 25-30), and a windshield associated with said framework according to claim 1 (figs. IX-XI).
+In re. claim 10, McClain teaches the aircraft according to claim 8, wherein the coating layer comprises an extension at all peripheral edges of the ply (fig. X), the extension having a through-opening configured to receive fixing means (fig. X), wherein the fixing means comprises a screw-nut (screw and nut shown) type which passes through the extension through the through-opening to tighten the coating layer and the at least one coated ply (fig. X).
+Claims 1-2, 4, and 7-8 are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Tondu (PCT/FR2020/052123, while US 2022/0410539 is referenced for convenience).
+In re. claim 1, Tondu teaches an aircraft windshield comprising a window (fig. 1) comprising at least one ply of material that is transparent and of mineral origin and having a peripheral edge (glass sheet (4)) (fig. 1), wherein at least one of the plies (1, 3) of the window made of mineral material is coated with a coating layer of viscoelastic transparent organic material (PMMA) over an entire surface of the ply (para [0049]), including a peripheral edge thereof (extends beyond peripheral edge in fig. 1).
+In re. claim 2, Tondu teaches the aircraft windshield according to claim 1, wherein each of the plies made of mineral material of the window is coated with the viscoelastic transparent organic material (plastic is transparent (para [0015]) and polymethyl methacrylate (PMMA) is a known viscoelastic material).
+In re. claim 4, Tondu teaches the aircraft windshield according to claim 1, wherein the coating layer forms a one-piece jacket (fig. 1).
+In re. claim 7, Tondu teaches the aircraft windshield according to claim 1, wherein the mineral material (4) comprises glass (para [0050]).
+In re. claim 8, Tondu teaches an aircraft comprising a framework forming part of a primary structure of the aircraft (helicopter) (para [0049]), and a windshield associated with said framework according to claim 1 (frame for vehicle) (para [0041]).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim 5 is rejected under 35 U.S.C. 103 as being unpatentable over McClain as applied to claim 1 above, and further in view of Uprety et al. (US 2017/0150659).
+In re. claim 5, McClain fails to disclose the coating layer is made of Opticor (registered trademark) material.
+Uprety teaches a coating layer (60) may be made of Opticor (registered trademark) material (para [0081]).
+Therefore, it would have been prima facie obvious to one having ordinary skill in the art at the time the invention was filed to have modified McClain to incorporate the teachings of Uprety to have the coating layer made of Opticor (registered trademark) material, for the predictable result of using a suitable material for its transmissive and protective properties (Uprety, para [0089]).
+Claim 5 is rejected under 35 U.S.C. 103 as being unpatentable over Tondu as applied to claim 1 above, and further in view of Uprety et al. (US 2017/0150659).
+In re. claim 5, Tondu fails to disclose the coating layer is made of Opticor (registered trademark) material.
+Uprety teaches a coating layer (60) may be made of Opticor (registered trademark) material (para [0081]).
+Therefore, it would have been prima facie obvious to one having ordinary skill in the art at the time the invention was filed to have modified Tondu to incorporate the teachings of Uprety to have the coating layer made of Opticor (registered trademark) material, for the predictable result of using a suitable material for its transmissive and protective properties (Uprety, para [0089]).
+Claims 6 and 10 are rejected under 35 U.S.C. 103 as being unpatentable over Tondu as applied to claims 1 and 8 respectively above, and further in view of McCarthy et al. (US 2015/0047275).
+In re. claim 6, Tondu teaches the aircraft windshield according to claim 1, wherein the coating layer comprises an extension at all peripheral edges of the ply (area beyond peripheral edge of glass sheet (4)) (fig. 1).
+Tondu fails to disclose the extension having a through-opening configured to receive a fastener.
+McCarthy teaches a viscoelastic transparent organic material (12) (para [0075) having a through-opening configured to receive a fastener (figs. 8-10).
+Therefore, it would have been prima facie obvious to one having ordinary skill in the art at the time the invention was filed to have modified Tondu to incorporate the teachings of McCarthy to have the extension with a through-opening configured to receive a fastener, for the predictable result of directly bolting the window to the vehicle (Tondu, para [0041]).
+In re. claim 10, Tondu teaches the aircraft according to claim 8, wherein the coating layer comprises an extension at all peripheral edges of the ply (area beyond peripheral edge of glass sheet (4)) (fig. 1).
+Tondu fails to disclose the extension having a through-opening configured to receive fixing means, wherein the fixing means comprises a screw-nut type which passes through the extension through the through-opening to tighten the coating layer and the at least one coated ply.
+McCarthy teaches a viscoelastic transparent organic material (12) (para [0075) having a through-opening configured to receive a fixing means (figs. 8-10), wherein the fixing means comprises a screw-nut type (78) (para [0092]) which passes through the extension through the through-opening to tighten the layers (fig. 10).
+Therefore, it would have been prima facie obvious to one having ordinary skill in the art at the time the invention was filed to have modified Tondu to incorporate the teachings of McCarthy to have the extension with a through-opening configured to receive a fastener, for the predictable result of directly bolting the window to the vehicle (Tondu, para [0041]).
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.  See PTO-892.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to CHRISTOPHER D. HUTCHENS whose telephone number is (571)270-5535. The examiner can normally be reached M-F 8-5.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Tien Dinh can be reached on 571-272-6899. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/C.D.H./
+Primary Examiner
+Art Unit 3647
+/Christopher D Hutchens/Primary Examiner, Art Unit 3647

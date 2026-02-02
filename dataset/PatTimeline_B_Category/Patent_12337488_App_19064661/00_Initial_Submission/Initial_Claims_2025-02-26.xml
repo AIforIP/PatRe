@@ -1,0 +1,71 @@
+<html><head></head><body><h3>Date: 2025-02-26</h3>
+
+<h1>WHAT IS CLAIMED IS:</h1>
+<br>
+<br>
+1. A method for improved hand-eye calibration based on a structured light camera, comprising:<br>
+step 1: establishing a pinhole camera model, and using a depth camera to detect a three- dimensional (3D) coordinate to obtain a physical coordinate of each point in an image coordinate system with a known depth relative to a camera coordinate system;<br>
+step 2: establishing a Denavit-Hartenberg (DH) model of a robotic arm, and moving the robotic arm to a determined coordinate using inverse kinematics;step 3: collecting n sets of point cloud data, applying depth scaling coefficients to the n sets of point cloud data to perform Singular Value Decomposition(SVD), and solving for an optimal depth scaling coefficient using a Nelder-Mead algorithm; wherein in the step 3, the robotic arm is driven using a given set of known joint angles, an end effector  SVG
+{EMBED HERE}
+0.1830.34 of the robotic arm is obtained using a kinematic model of the robotic arm, an axial difference Pt0a,of a checkerboard corner point at a specified position relative to the end effector of the robotic arm is manually measured, and  SVG
+{EMBED HERE}
+0.1870.337tol and Ptaol are combined to obtain PcaSe; the above operation is repeated to obtain a set of point cloud data relative to a base coordinate system of the robotic arm; the depth camera obtains a pixel coordinate of the checkerboard corner point at the specified position relative to the image coordinate system of the depth camera and a depth value of the checkerboard corner point relative to the camera coordinate system through corner detection, the pixel coordinate and the depth value are substituted into the pinhole camera model to obtain a 3D coordinate Pcaaera of the checkerboard corner point relative to the depth camera; the above operation is repeated to obtain a set of point clouds relative to the camera coordinate system, depth values of all point cloud data collected by the depth camera are processed through a first-order Kalman filter, and after the depth values measured by the depth camera are filtered and converged, complete point cloud data are calculated using an intrinsic parameter matrix of the depth camera;<br>
+in the step 3, the performing SVD includes: de-centering two sets of point cloud data, constructing a covariance matrix based on normalized two sets of point cloud data, decomposing the covariance matrix to obtain a matrix U, a matrix S, and a matrix V, and obtaining a calibration result by determining a rotation matrix R and a translation vector t based on a decomposition result;<br>
+analyzing and compensating for axial scaling of a depth of the depth camera; multiplying the depth value obtained by the depth camera by a scaling coefficient, such that the point cloud data of the checkerboard corner point is changed relative to the depth camera, multiplying the point cloud data collected by the depth camera and a mean value of the point cloud data by the scaling coefficient, and according to properties of the SVD, U and V remain unchanged, and S is scaled by a same factor as the covariance matrix:<br>
+[U  S * z_scale  V]= SVD(H')SVG
+{EMBED HERE}
+0.3330.053RSVG
+{EMBED HERE}
+0.371.043t'=Y
+in the step 3, the depth scaling coefficient, denoted as z_scale, is optimized based on the calibration result, and an error function is defined using the scaling coefficient as an independent variable:e(zscale)=Paase(R *   SVG
+{EMBED HERE}
+0.1770.463 + t') ;designating a coordinate of a calibration plate relative to the base coordinate system of the robotic arm as a true value, determining a calibration error by subtracting a calculation result of a measured coordinate of the depth camera and the calibration result from the true value, taking the independent variable of the error function as the depth scaling coefficient and combining the above equations to obtain an equation:e(zscale)=PAaseSVG
+{EMBED HERE}
+0.1530.313*pcalera*SVG
+{EMBED HERE}
+0.1872.147   determining a relationship between the error function and the depth scaling coefficient based on the combined equation, calculating a magnitude of an error, with an optimization objective being identifying a minimum value of the error; and using the Nelder-Mead algorithm to identify the minimum value and solving for the optimal depth scaling coefficient; and<br>
+step 4: completing the hand-eye calibration of the robotic arm based on the solved optimal depth scaling coefficient.<br>
+<br>
+2. The method for improved hand-eye calibration based on the structured light camera of claim 1, wherein the step 1 includes:<br>
+establishing a camera 3D coordinate system with a camera origin Oim as a coordinate origin to represent a 3D coordinate of a point in space, using a physical length as the unit;<br>
+establishing the image coordinate system with an image origin Opix as a coordinate origin to represent a pixel coordinate of a projection of the point in space on an imaging plane, using a pixel count as the unit; and<br>
+establishing an imaging coordinate system with an imaging origin Oxy as a coordinate origin to represent a two-dimensional (2D) coordinate of the projection of the point in space on the imaging plane, using the physical length as the unit.<br>
+<br>
+3. The method for improved hand-eye calibration based on the structured light camera of claim 2, wherein the camera 3D coordinate system and the imaging coordinate system are represented using the physical length as the unit, and the following equation is established basedSVG
+{EMBED HERE}
+0.5231.043SVG
+{EMBED HERE}
+0.5430.75<br>
+on the principle of similar triangles:SVG
+{EMBED HERE}
+0.7170.19X   = f SVG
+{EMBED HERE}
+0.330.117= f  SVG
+{EMBED HERE}
+0.1670.107 wherein x and y collectively denote a coordinate of a spatial point P in the imaging coordinate system, and X, Y, Z collectively denote a coordinate of the spatial point P in the camera 3D coordinate system;in the image coordinate system and the imaging coordinate system, a projection of the spatial point P is converted using the following equation:u=ax+cxv=/yy + cSVG
+{EMBED HERE}
+0.3330.053wherein u and v collectively denote a coordinate of the projection of the spatial point P in the image coordinate system, a and p denote a count of pixels corresponding to a unit of physical length in an x direction and a count of pixels corresponding to a unit of physical length in a y direction, respectively, and cx and cy collectively denote a coordinate of the imaging origin Oxy in the image coordinate system;combining the above two equations to obtain:  SVG
+{EMBED HERE}
+0.6131.053letaf=fx,SVG
+{EMBED HERE}
+0.1530.073f=fy then the combined equation is written in a matrix multiplication form:
+0
+f,
+0
+wherein K denotes the intrinsic parameter matrix of the depth camera; and the above equation is used to determine the physical coordinate of the each point in the image coordinate system with the known depth relative to the camera coordinate system, given that the intrinsic parameter matrix of the depth camera is known.<br>
+<br>
+4. The method for improved hand-eye calibration based on the structured light camera of claim 3, wherein in the step 2, a transformation relationship between links is represented using the DH model; a motion relationship between neighboring links is expressed as rotation of a link i around a Z axis in a coordinate system n relative to a link i-1; the DH model includes four parameters: d, a, a, and 0, which are defined as follows d, denotes a link length, which is a distance between a joint m and a neighboring joint m-1 along the Z axis of the coordinate system n;a1SVG
+{EMBED HERE}
+0.0730.107 denotes a link offset, which is a distance between the Z axis of the coordinate system n<br>
+<br>
+<br>
+and a Z axis of a coordinate system n-1 along an X axis of the coordinate system n-1;aci denotes a link twist angle, which is an angle between directions of the Z axes of the coordinate system n and the coordinate system n-1 along the X axis of the coordinate system n-1;<br>
+and 61 denotes a joint angle, which is an angle between a direction of an X axis of the coordinate system n and a direction of the X axis of the coordinate system n-1 along the Z axis of the coordinate system n.<br>
+<br>
+5. The method for improved hand-eye calibration based on the structured light camera of claim 4, wherein the transformation of neighboring links between coordinate systems is performed by:rotating the coordinate system n-1 around the X axis by  SVG
+{EMBED HERE}
+0.1170.337 translating the coordinate system n-1 along the X axis by  SVG
+{EMBED HERE}
+0.1170.33 rotating the coordinate system n-1 around the Z axis of the coordinate system n-1 by B; and translating the coordinate system n-1 around the Z axis of the coordinate system n-1 by di; and achieving complete overlap between the coordinate system n and the coordinate system n-1; wherein a homogeneous transformation matrix corresponding to a target pose is equal to a transformation matrix of the end effector of the robotic arm relative to the base coordinate system of the robotic arm; and<br>
+a set of equations is constructed, and the set of equations is solved to obtain a required joint angle to achieve the target pose.
+</body></html>

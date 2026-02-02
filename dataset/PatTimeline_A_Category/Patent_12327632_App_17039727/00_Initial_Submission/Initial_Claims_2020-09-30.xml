@@ -1,0 +1,122 @@
+<html><head></head><body><h3>Date: 2020-09-30</h3>
+<p>CLAIMS:</p>
+<br>
+
+1.
+A computer-implemented method of updating a patient record in a medical database, the method comprising, with a processor arrangement of an electronic device: 
+<br>
+receiving an image of a display screen of a patient monitoring system displaying at least one vital signs data value of said patient; 
+<br>
+evaluating at least one region of interest of said image comprising one of said vital signs data values to extract said one vital signs data value from said image; 
+<br>
+updating the patient record with the extracted at least one vital signs data value; and 
+<br>
+storing the image in a database such that the image is associated with the 
+<br>
+updated patient record.
+<br>
+
+2.
+The computer-implemented method of claim 1, further comprising generating an indicator value of an actual physical state of said patient from the extracted at least one vital signs data value and updating the patient record with the generated indicator value.
+
+<br>
+
+3.
+The computer-implemented method of claim 1, wherein the database, wherein the image is stored, is the medical database.
+<br>
+
+4.
+The computer-implemented method of claim 1, further comprising: 
+<br>
+displaying the extracted at least one vital signs data value on a display device to a user; 
+<br>
+receiving a verification command from said user; and 
+<br>
+updating the patient record with the extracted at least one vital signs data value and storing the image in the medical database and/or the database in response to the received 
+<br>
+verification command.
+<br>
+
+5.
+The computer-implemented method of claim 1, wherein evaluating said image to extract the at least one vital signs data value from a region of interest in said image comprises: 
+
+  identifying a region of interest comprising a vital signs data value in said image; 
+<br>
+extracting the vital signs data value from the identified region of interest; 
+<br>
+matching the extracted vital signs data value to a particular vital sign of the 
+<br>
+patient by comparing said vital signs data value against a library of expectation values of data values for different vital signs; and 
+<br>
+updating a vital signs record of a vital sign in the patient record matched to the extracted vital signs data value with said extracted vital signs data value. 
+
+<br>
+
+6.
+The computer-implemented method of claim 1, wherein said image is at least one photographic image or a screen capture.
+<br>
+
+7.
+The computer-implemented method of claim 1, further comprising receiving identification information of a person responsible for generating said image and associating at least one of the stored at least one vital signs data value and the stored image with the received identification information.
+<br>
+
+8.
+A computer-implemented method of generating at least one photographic image of a display screen of a patient monitoring system displaying at least one vital signs data value of a patient being monitored by said patient monitoring system with an electronic client device adapted to access a patient record of said patient, the electronic client device comprising a processor arrangement, a camera communicatively coupled to said processor arrangement, a display screen communicatively coupled to said processor arrangement and a data storage device storing a mask for aligning with a region of interest of the display screen of the patient monitoring system, the method comprising: 
+<br>
+retrieving the mask for aligning with the region of interest of the display screen of the patient monitoring system from the data storage device; 
+<br>
+displaying said mask on the display screen of the electronic client device as an overlay over a view of the display screen of the patient monitoring device through said 
+<br>
+camera to facilitate aligning said view with said mask by a user of the electronic client device; 
+<br>
+receiving a capturing command for capturing the at least one photographic image of said aligned view with said camera; and 
+
+  providing the captured at least one photographic image to a processor arrangement adapted to update said patient record in accordance with the method of claim 1.
+<br>
+
+9.
+The computer-implemented method of claim 8, wherein said mask forms part of a library of masks corresponding to respective regions of interest of the display screens of different patient monitoring systems stored in the data storage device, the method further comprising: 
+<br>
+receiving a user input identifying the patient monitoring system; and 
+<br>
+selecting the mask corresponding to the identified patient monitoring system from said 
+<br>
+library based on the received user input.
+<br>
+
+10.
+The computer-implemented method of claim 8, wherein said mask forms part of a library of masks corresponding to respective regions of interest of the display screens of different patient monitoring systems stored in the data storage device, the method further comprising: 
+<br>
+capturing an identification image of the patient monitoring system with the camera; 
+<br>
+identifying the patient monitoring system from said captured identification image; and 
+<br>
+selecting the mask corresponding to the identified patient monitoring system from said library.
+<br>
+
+11.
+The computer-implemented method of claim 8, wherein said mask comprises a plurality of visible sectors, each sector corresponding to a region of interest including a particular vital signs data value on the display screen of the patient monitoring system.
+<br>
+
+12.
+The computer-implemented method of claim 11, further comprising executing at least part of the method on the processor arrangement of the electronic client device.
+<br>
+
+13.
+A computer program product comprising a computer readable storage medium having computer readable program instructions embodied therewith for, when executed on a processor arrangement of an electronic device, cause the processor arrangement to implement the method of claim 1.
+
+<br>
+
+14.
+An electronic device comprising a processor arrangement adapted to execute the method of claim 1.
+<br>
+
+15.
+An electronic client device comprising a processor arrangement, a camera communicatively coupled to said processor arrangement, a display screen communicatively coupled to said processor arrangement and a data storage device for storing a mask for aligning with a region of interest of a display screen of a patient monitoring system, wherein the processor arrangement is adapted to execute the method of claim 1.
+5
+10
+15
+20
+25
+30
+</body></html>

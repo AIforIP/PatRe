@@ -1,0 +1,9 @@
+<html><head></head><body>19004061
+
+   
+   
+ABSTRACT
+   
+   <p>The present invention relates to method and system for controlling speed of vehicle by using GPS location, real-time traffic light status and machine learning techniques to recommend cruising speed to vehicle without stopping at the traffic lights. The method includes determining status of traffic lights located on route of traffic junctions and associated time period for status of traffic lights based on data received from sensors.  The method includes broadcasting status of traffic lights and associated time period.  The method includes calculating in real-time a recommended cruising speed of the vehicle based on GPS location associated with vehicle, status of traffic lights and associated time period, and a time period required by vehicle to arrive at the traffic lights using machine learning techniques.  The method includes providing in real-time the recommended cruising speed to vehicle.  The method includes adaptively controlling in real-time speed of vehicle to recommended cruising speed.</p>
+
+</body></html>

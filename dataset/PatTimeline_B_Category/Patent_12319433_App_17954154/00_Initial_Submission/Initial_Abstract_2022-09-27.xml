@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-09-27</h3>
+<p>Ting Yu AU
+
+Docket No.: AHB-5065-843</p><p>Preliminary Amendment</p>
+<h1>ABSTRACT OF THE DISCLOSURE</h1>
+<p>A method of determining the steering angle of a landing gear assembly of an aircraft is disclosed including scanning the landing gear assembly with a lidar system to generate a set of three- dimensional position data points, each position data point including a set of three orthogonal position values. A two-dimensional image from the set of three-dimensional position data points, by converting a position value of each of the three-dimensional position data points to an image property value of a set of image property values. A boundary of an area of the two-dimensional image of which each position data point has the same image property value is identified, where the area corresponds to a component of the landing gear assembly. The steering angle of the landing gear assembly is then determined from the shape and/or orientation of the identified boundary.</p><p>- 10 -</p></body></html>

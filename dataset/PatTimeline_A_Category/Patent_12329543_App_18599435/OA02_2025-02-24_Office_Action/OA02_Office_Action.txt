@@ -1,0 +1,20 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Allowable Subject Matter
+Claims 1-20 are allowed.
+The following is an examiner’s statement of reasons for allowance:
+None of the prior art made of record teaches determining an accuracy status of the extracted plurality of ECG parameters by comparing the plurality of preliminary ECG parameters to the extracted plurality of ECG parameters, wherein:
+the accuracy status further comprises a variable indicating accuracy of the plurality of preliminary ECG parameters;
+determining an accuracy status comprises using a scoring algorithm using a threshold to determine the accuracy status, wherein the accuracy status comprises one of a pass status and a fail status, and wherein the apparatus is configured to generate the threshold by:
+training a threshold classifier with training data correlating a plurality of annotations indicating abnormalities to a plurality of thresholds;
+inputting the analog ECG data into the threshold classifier; and
+outputting, by the threshold classifier, the threshold; and
+generating a quality diagnostic of the image of ECG data based on validation of the one or more digitized ECG signals, wherein the quality diagnostic represents a degree of quality of the image of ECG data.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to LEON VIET Q NGUYEN whose telephone number is(571)270-1185. The examiner can normally be reached Mon-Fri 11AM-7PM.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Gregory Morse can be reached on 571-272-3838. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/LEON VIET Q NGUYEN/Primary Examiner, Art Unit 2663

@@ -1,0 +1,72 @@
+<html><head></head><body><h3>Date: 2022-05-26</h3>
+<p>Claims</p>
+<br>
+
+<br>
+1. A vehicle control method, comprising: 
+<br>
+determining, based on first information, second information, and third information, whether a vehicle is performing a reverse parking maneuver; 
+<br>
+comparing a reversing speed with a predetermined first speed when the vehicle is performing the reverse parking maneuver; and 
+<br>
+if the reversing speed is higher than the predetermined first speed, outputting a first control signal to adjust the reversing speed such that the reversing speed is not higher than the predetermined first speed, wherein the first information comprises information indicating that the vehicle is in reverse gear, the second information indicates an environment surrounding the vehicle, and the third information indicates that the reversing speed is lower than a predetermined second speed, wherein the predetermined first speed is lower than the predetermined second speed. 
+
+<br>
+
+<br>
+2. The vehicle control method according to claim 1, wherein a suspension damping of a rear axle of the vehicle is further compared with a predetermined suspension damping when the vehicle is performing the reverse parking maneuver; and 
+<br>
+if the suspension damping of the rear axle is lower than the predetermined suspension damping, a second control signal is output to cause the suspension damping of the rear axle to increase. 
+
+<br>
+
+<br>
+3. The vehicle control method according to claim 2, wherein the second control signal is associated with the first control signal.
+<br>
+
+<br>
+4. The vehicle control method according to claim 1, wherein determining whether the vehicle is performing the reverse parking maneuver is further based on fourth information from an auto parking assist system, the fourth information indicating an auto parking state of the vehicle.
+<br>
+
+<br>
+5. The vehicle control method according to claim 1, wherein the first control signal adjusts the reversing speed in such a manner that a reversing distance of the vehicle meets a predetermined reversing distance.
+<br>
+
+<br>
+6. A vehicle control device, comprising: 
+<br>
+a determination apparatus configured to determine, based on first information, second information, and third information, whether a vehicle is performing a reverse parking maneuver, and generate a reverse parking signal when the vehicle is performing the reverse parking maneuver; 
+<br>
+a comparison apparatus configured to compare a reversing speed with a predetermined first speed based on the reverse parking signal; and 
+<br>
+an output apparatus configured to, if the reversing speed is higher than the predetermined first speed, output a first control signal to adjust the reversing speed such that the reversing speed is not higher than the predetermined first speed, wherein the first information comprises information indicating that the vehicle is in reverse gear, the second information indicates an environment surrounding the vehicle, and the third information indicates that the reversing speed is lower than a predetermined second speed, wherein the predetermined first speed is lower than the predetermined second speed. 
+
+<br>
+
+<br>
+7. The vehicle control device according to claim 6, wherein the comparison apparatus is further configured to compare a suspension damping of a rear axle of the vehicle with a predetermined suspension damping based on the reverse parking signal; 
+<br>
+the output apparatus is further configured to, if the suspension damping of the rear axle is lower than the predetermined suspension damping, output a second control signal to cause the suspension damping of the rear axle to increase. 
+
+<br>
+
+<br>
+8. The vehicle control device according to claim 7, further comprising: 
+
+ a coordinative control apparatus, configured to associate the second control signal with the first control signal.
+<br>
+
+<br>
+9. The vehicle control device according to claim 6, wherein the determination apparatus further determines whether the vehicle is performing the reverse parking maneuver based on the third information which is input from an auto parking module, the third information indicating an auto parking state of the vehicle.
+<br>
+
+<br>
+10. The vehicle control device according to claim 6, wherein the first control signal adjusts the reversing speed in such a manner that a reversing distance of the vehicle meets a predetermined reversing distance.
+<br>
+
+<br>
+11. A vehicle, comprising the vehicle control device according to claim 6.
+15
+16
+17
+</body></html>

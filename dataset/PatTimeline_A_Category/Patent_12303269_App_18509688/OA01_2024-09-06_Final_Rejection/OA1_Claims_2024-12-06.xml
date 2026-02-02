@@ -1,0 +1,65 @@
+<html><head></head><body><h3>Date: 2024-12-06</h3>
+
+<h1><u>Listing of Claims.</u></h1>
+<p><u>Amendments to Claims:</u></p><br>
+<br>
+1. - 15. (Cancelled)214<br>
+<br>
+<br>
+16.    (Currently Amended) A supplementary device comprising:a sensor configured to measure or determine an injection history of an injection device when the supplementary device is attached to the injection device, the injection history being indicative of a past injection of a medicament from the injection device for a patient;<br>
+a processor configured to determine future injection information based on the injection history, the future injection information being indicative of a time for a future injection of the medicament or a volume of the future injection; and<br>
+a wireless unit configured to transmit the future injection information to one or more external devices,<br>
+<u>wherein the supplementary device is configured to be releasabl</u><u>y</u><u> attached over a button of the injection device, and the sensor is configured to measure a position or a movement of the button.</u><br>
+<br>
+17.    (Previously Presented) The supplementary device of claim 16, wherein the supplementary device is configured to be releasably attached to a side of a housing of the injection device, and the sensor is configured to measure a position or a movement of a dose dial of the injection device.<br>
+<br>
+18.    (Previously Presented) The supplementary device of claim 16, wherein the supplementary device is configured to be releasably attached to a side of a housing of the injection device, and the sensor is configured to read a dose indicator of a dose dial of the injection device.<br>
+<br>
+19.    (Canceled)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+20.    (Previously Presented) The supplementary device of claim 16, wherein the sensor is configured to determine the injection history based on a position or a movement of one or more components of the injection device relative to the supplementary device.<br>
+<br>
+21.    (Previously Presented) The supplementary device of claim 20, wherein the sensor is configured to measure the position or the movement of the one or more components of the injection device relative to the supplementary device without requiring direct contact between the sensor and the one or more components.<br>
+<br>
+22.    (Previously Presented) The supplementary device of claim 16, wherein the one or more external devices are configured to transmit control signals to a vehicle for controlling one or more operations of the vehicle based on the future injection information.<br>
+<br>
+23.    (Previously Presented) The supplementary device of claim 22, wherein the one or more external devices comprise a smart key configured to transmit the control signals to the vehicle for controlling the one or more operations of the vehicle based on the future injection information, the one or more operations configured to be controlled when the patient is an occupant of the vehicle.<br>
+<br>
+24.    (Previously Presented) The supplementary device of claim 16, wherein the one or more external devices are configured to transmit information to a vehicle for providing an indication of the future injection information when the patient is an occupant in the vehicle.<br>
+<br>
+25.    (Previously Presented) The supplementary device of claim 16, comprising an alert system configured to provide an indication of the future injection information.<br>
+<br>
+26.    (Currently Amended) A supplementary device comprising:a first sensor configured to measure or determine an injection history of an injection device when the supplementary device is attached to the injection device;<br>
+<br>
+<br>
+<br>
+a processor configured to determine a due time for an injection of a medicament based on the injection history; and<br>
+a wireless unit configured to transmit the due time to one or more external devices,<br>
+<u>wherein the supplementary device is configured to be releasabl</u><u>y</u><u> attached over a button of the injection device, and the first sensor is configured to measure a position or a movement of the button.</u><br>
+<br>
+27.    (Previously Presented) The supplemental device of claim 26, wherein the one or more external devices are configured to determine a wellness of a patient based on the due time, the wellness being indicative of an impairment of the patient or an inability of the patient to drive a vehicle.<br>
+<br>
+28.    (Previously Presented) The supplementary device of claim 27, wherein the one or more external devices are configured to transmit control signals to the vehicle for controlling one or more operations of the vehicle based on the wellness of the patient.<br>
+<br>
+29.    (Previously Presented) The supplementary device of claim 28, wherein the one or more external devices are configured to determine a severity of the impairment of the patient, and the vehicle is configured to control the one or more operations of the vehicle based on the severity of the impairment.<br>
+<br>
+30.    (Previously Presented) The supplementary device of claim 29, wherein the one or more external devices are configured to determine the severity of the impairment by selecting a level of severity from at least three levels of severity.<br>
+<br>
+31.    (Previously Presented) The supplementary device of claim 27, comprising a second sensor configured to measure or determine information identifying the medicament, and the processor is configured to compare the information identifying the medicament to stored information to verify that the medicament is for the patient.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+32.    (Previously Presented) The supplementary device of claim 31, wherein the second sensor comprises a camera, a QR reader, or a barcode reader, and the information identifying the medicament of the injection device comprises a barcode or a QR code configured to be read by the camera, the QR reader, or the barcode reader of the supplementary device.<br>
+<br>
+33.    (Previously Presented) The supplementary device of claim 26, wherein the one or more external devices comprise one or more mobile devices configured to communicate with a vehicle for controlling one or more operations of the vehicle based on the due time.<br>
+<br>
+34.    (Previously Presented) The supplementary device of claim 33, wherein the injection history comprises a date and a time of a past injection and a volume of the medicament administered in the past injection.<br>
+<br>
+35.    (Previously Presented) The supplementary device of claim 26, comprising an alert system configured to provide an indication of the due time, the alert system comprising at least one of a speaker or a display.
+</body></html>

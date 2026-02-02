@@ -1,0 +1,51 @@
+<html><head></head><body><h3>Date: 2025-01-23</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>The following listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+<br>
+1.    (Currently Amended) A sphygmomanometer provided with an air system for blood pressure measurement and capable of performing air leakage testing on the air system, the air system comprising at least a cuff configured to surround a to-be-measured part, a pump connected to the cuff via a first fluid pipe, and a valve connected to the cuff via a second fluid pipe,<br>
+the sphygmomanometer comprising:<br>
+a processor;<br>
+a memory; and<br>
+a display, wherein the processor is configured to act as:<br>
+a main control unit to perform main control to make a first transition from a power-off state to a standby state in response to a power-on operation, to perform blood pressure measurement by driving the pump to feed an air to the cuff through the first fluid pipe to pressurize the cuff or driving the valve to exhaust the air from the cuff through the second fluid pipe to depressurize the cuff in response to a measurement start operation in the standby state, to make a second transition to the standby state after the blood pressure measurement, and to make a third transition to the power-off state in response to a power-off operation in the standby state;<br>
+an air leakage testing unit to perform, <u>during</u><u>after </u>the blood pressure measurement te<u> and before </u>the second transition, air leakage testing on the air system to obtain an air leakage testing result of the air leakage testing, and to cause the memory to store the air leakage testing result; and<br>
+<br>
+a notification control unit to perform notification control to control display contents on the display based on the air leakage testing result stored in the memory, wherein the air leakage testing result includes at least three air leakage levels of a first air leakage level as an acceptable level indicating that an air leakage amount of the air system is smaller than a predetermined first reference value, a third air leakage level as a failure level indicating that the air leakage amount of the air system is larger than a second reference value set greater than the first reference value, and a second air leakage level indicating that the air leakage amount of the air system corresponds to a value between the first reference value and the second reference value,<br>
+<u>the processor acting as </u>the notification control <del>in</del><del>cludes-</del><u>unit is configured:</u><br>
+when the air leakage testing result is the second air leakage level,<br>
+to <del>m</del><del>ake</del><del>-diiplI</del><del>ying-</del><u>display</u><u>,</u><u> during the first transition, </u>on the display, the air leakage testing result in a first display mode<del> during the first transition, </del><u>displaying a message to notify a replacement of the cuff or displaying a first icon corresponding to the air leakage testing result with blinking,</u><br>
+to <del>rma</del><del>ke</del>display, in the standby state, <del>displayi+lgr</del>on the display, that the blood pressure measurement is enabled without displaying the air leakage testing result or with displaying the air leakage testing result in a second display mode <del>m</del><del>ere-ineenspieuous-t</del><del>han the first display mode</del>,<br>
+to <del>make-ne</del><del>t-d</del><del>is</del><del>p</del><del>-layin</del><del>g</del><u>not display </u>the air leakage testing result during the blood pressure measurement and the second transition, and<br>
+to <del>make-displ-a</del><del>ying</del>display, on the display, the air leakage testing result in a first display mode during the third transition,<u> wherein when the displaying of the air leakage testing result in the first display mode is displaying the message, the displaying of the air leakage testing result in the second display</u><br>
+<br>
+<u>mo</u><u>de is displayin</u><u>g</u><u> a second icon c</u><u>o</u><u>rrespondin</u><u>g</u><u> to the air leakage testing result, and when the displayin</u><u>g</u><u> of the air leakage testing result in the first display mode is displayin</u><u>g</u><u> the first icon with blinking, the displayin</u><u>g</u><u> of the air leakage testing result in the second display mode is displayin</u><u>g</u><u> the first icon with being kept lit.</u><br>
+<br>
+2.    (Currently Amended) The sphygmomanometer according to claim 1, wherein when the air leakage testing result is the second air leakage level, <u>the processor actin</u><u>g</u><u></u><u>a</u><u>s </u>the notification control <del>i</del><del>neludes-</del><u>unit is c</u><u>o</u><u>nfi</u><u>g</u><u>ured, </u>during the first or third transition, to stop the displaying <u>of</u> the air leakage testing result in the first display mode, when a display stop operation is performed or a predetermined period elapses after having started <del>t</del><del>o-make</del><del></del><del>the-</del><del>d</del>isplaying the air leakage testing result in the first display mode.<br>
+<br>
+3.    (Currently Amended) The sphygmomanometer according to claim 1, wherein<u> the processor acting as </u>the notification control <del>in</del><del>cldes-</del><u>unit is configured</u><u>:</u><br>
+to <del>mak</del><del>e not displaying</del><u>not display </u>the air leakage testing result, during the first,<br>
+second and third transitions, when the air leakage testing result is the first air leakage level, and to <del>rake4i-playia</del><del>g</del>display,on the display, an indication that the blood pressure measurement is disabled, during the first, second and third transitions, when the air leakage testing result is the third air leakage level.<br>
+<br>
+4.    (Previously Presented) The sphygmomanometer according to claim 1, wherein the processor acting as the air leakage testing unit causes, each time the air leakage testing is performed on the air system, the memory to store the air leakage testing result of the air leakage testing.<br>
+<br>
+5.    (Currently Amended) The sphygmomanometer according to claim 1, wherein the cuff comprises a cuff unit having a cylindrical shape,<br>
+the cuff unit includes an outer peripheral member having a cylindrical shape, a winding air bag annularly disposed along an inner circumferential surface of the outer peripheral member, a curler formed of a flexible plate material curved and disposed along an inner circumferential surface of the winding air bag, the curler being reduced in diameter when the winding air bag is pressurized to expand radially inward, and a measurement air bag disposed along an inner circumferential surface of the  SVG
+{EMBED HERE}
+0.1330.427<del>-th</del><del>e-me</del><del>asaremet-air-bag-being</del><u> and c</u><u>o</u><u>nfi</u><u>g</u><u>ured to be </u>pressurized for the blood pressure measurement to compress an upper arm as the to-be-measured part, and<br>
+the processor acting as the air leakage testing unit obtains the air leakage testing result based on a pressure difference between a pressure in the winding air bag and a pressure in the measurement air bag at a time when a blood pressure calculation is completed in a depressurization process for the blood pressure measurement.<br>
+<br>
+6.    (Currently Amended) The sphygmomanometer according to claim 1, wherein the displaying <u>of</u> the air leakage testing result in the first display mode is <del>made-as-a</del><del></del><del>di-playiwg-fa-mesage-ntfyin-replacmet-o-f-the-u-ff </del><u>dis</u><u>play</u><u>ing the message, </u>and<br>
+the displaying ofithe air leakage testing result in the second display mode is <del>made-as-a</del><del></del><del>dskplwying-of-an-ieen-eerrespondingt-tthe-air-leakl</del><del>ge-t</del><del>esing-resal-</del><u>displaying the second</u><u> icon.</u><br>
+<br>
+7.    (Currently Amended) The sphygmomanometer according to claim 1, wherein the displaying of the air leakage testing result in the first display mode is <del>mad</del><del>e-as-a</del><del></del><del>disla-ying-whe</del><del>re-</del><del>an-iuew-e</del><del>rre</del><del>spondiag-tle-airle-alk</del><del>ge-t</del><del>e-sting-re-tlt-linls-d</del><u>isplaying the</u><u> first icon with blin</u><u>king</u><u>, </u>and<br>
+the displaying ofithe air leakage testing result in the second display mode is <del>m</del><del>ade-as-a</del><del> displaying where the icon is d</del><u>isplayin</u><u>g</u><u> the first icon with being </u>kept lit.<br>
+<br>
+8.    (Currently Amended) The sphygmomanometer according to claim 1, wherein<br>
+<br>
+the processor acting as the main control unit is further configured to perform to make, in response to a maintenance mode transition operation, a fourth transition from the power- off state to a maintenance mode where the measurement start operation is disabled and a maintenance of the sphygmomanometer is to be performed, and to make, in response to a setting mode transitionoperation, a fifth transition from the standby state to a setting mode where the measurement start operation is disabled and a setting for the sphygmomanometer is to be performed,<br>
+<u>the processor acting as </u>the notification control <del>includes u</del><u>nit is configured</u><u>:</u><br>
+to <del>make-net-displayin</del><del>g</del><u>not dis</u><u>p</u><u>lay </u>the air leakage testing result, during the fourth and fifth transitions, when the air leakage testing result is the first air leakage level,<br>
+to <del>ma</del><del>ke-di</del><del> splayin</del><del>g</del>display, on the display, the air leakage testing result in the first display mode, during the fourth and fifth transitions, when the air leakage testing result is the second air leakage level, and<br>
+to <del>rmake-isplayin</del><del>g</del>display, on the display, the indication that the blood pressure measurement is disabled, during the fourth and fifth transitions, when the air leakage testing result is the third air leakage level.
+</body></html>

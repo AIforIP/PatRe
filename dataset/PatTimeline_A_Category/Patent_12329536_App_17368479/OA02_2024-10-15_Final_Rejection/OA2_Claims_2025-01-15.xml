@@ -1,0 +1,70 @@
+<html><head></head><body><h3>Date: 2025-01-15</h3>
+
+<h1>CLAIM AMENDMENTS</h1>
+<p>1-9.  (Previously Cancelled)</p><br>
+<br>
+10.    (Currently Amended) A method for managing a turn protocol for a person, the method comprising:<br>
+providing the turn protocol for the person supported at least temporarily by a support surface, wherein the turn protocol defines a pressurization measure representing a pressurization of a particular body region and at least one pressurization threshold value,<br>
+receiving, at a processor, sensor signals from one or more sensors,<br>
+identifying, by the processor, based on the received sensor signals, when the person is in a pressurization position corresponding with the particular body region,<br>
+monitoring the pressurization measure over time, including (a) increasing the pressurization measure as a function of a first pressurization period spent on the support surface and in the pressurization position and (b) decreasing the pressurization <u>m</u><u>easure, at a first </u><u>dep</u><u>ressurization rate, </u>as a <u>proportional </u>function of a first depressurization period spent on the support surface but out of the pressurization position;<br>
+comparing the monitored pressurization measure to the at least one pressurization threshold value over time;<br>
+outputting turn protocol alerts based on the <del>e</del><del>omp-arison</del><del>s </del><u>comparison;</u><br>
+detecting, based on the received sensor signals, the person <del>h</del><del>as-e</del><del>xited </del><u>exitin</u><u>g</u><u></u>the support surface <u>and subse</u><u>q</u><u>uentl</u><u>y</u><u> return</u><u>ing</u><u> to the support surface, defin</u><u>in2</u><u> a second depressurization period spent off the support surface;</u> and<br>
+<del>auttat ieall-sus pending-th~e-ftu</del><del>rn-p</del><del>-rotoeaglerfs-in-respon</del><del>se-t</del><del>o-th~</del><del>e-d</del><del>eteetion-tha t</del><del></del><del>the-pers o-ha</del><del>s-e</del><del>-xited-the-support-surface</del><u> decreasing the pressurization measure, at a second depressurization rate, as a proportional function of the second depressurization period spent off the support surf</u><u>ace;</u><br>
+<u>wherein the second depressurization rate is greater than the first depressurization rate.</u><br>
+<br>
+<br>
+<br>
+11.   (Currently Amended) The method of claim 10, further comprising:<br>
+<del>after-</del><del>dete</del><del>eting-the-ersen-as-e-xited-the-sawpport-surfaeedeteeting-the-persen-kas</del><del></del><del>retu</del><del>rned-t</del><del>o-the-stuppo-srfaueeirbaed-nadditional-sensor-igals-from-he-one-or-rore</del><del></del><del>sensors;-and</del><u></u><u>automa</u><u>tic</u><u>a</u><u>lly suspending the turn pr</u><u>otoco</u><u>l alerts in res</u><u>po</u><u>nse to the detecti</u><u>o</u><u>n th</u><u>at</u><u> the person h</u><u>as</u><u> exited the </u><u>s</u><u>upport </u><u>surface; and</u><br>
+automatically resuming the turn protocol alerts in response to the detection that the person has returned to the support surface.<br>
+<br>
+12.   (Cancelled)<br>
+<br>
+13.   (Cancelled)<br>
+<br>
+14.   (Cancelled)<br>
+<br>
+15.   (Currently Amended) The method of claim 10, wherein the pressurization measure representing the pressurization of the particular body region comprises a pressurization[[timer]]<u>time </u>representing a duration spent in the pressurization position.<br>
+<br>
+16.   (Previously Presented) The method of claim 10, wherein the step of receiving the sensor signals from the one or more sensors comprises receiving the sensor signals fromthe one or more sensors provided in a sensor device affixed to the person or carried by an article worn by the person.<br>
+<br>
+17.   (Previously Presented) The method of claim 10, wherein the step of receiving the sensor signals from the one or more sensors comprises receiving acceleration data from one or more accelerometers.<br>
+<br>
+18.   (Cancelled)<br>
+<br>
+19.   (Cancelled)<br>
+<br>
+<br>
+<br>
+20.    (Currently Amended) A system for automated monitoring of a person, comprising:<br>
+a wearable sensor device body configured to be secured to the personor to an article worn by the person;<br>
+at least one sensor provided in the wearable sensor device body and configured to generate sensor signals regarding an orientation of the person; and<br>
+a processor configured to:receive sensor signals from the at least one sensor,<br>
+identify, based on the received sensor signals, when the person is in a pressurization position corresponding with a particular body region,<br>
+monitor [[the]]a pressurization measure over time, including (a) increasing the pressurization measure as a function of a first pressurization period spent on the support surface and in the pressurization position and (b) decreasing the pressurization <u>measure, at a first depressurizati</u><u>o</u><u>n rate, </u>as a <u>proportional </u>function a first depressurization period spent on the support surface but out of the pressurization position;<br>
+compare the monitored pressurization measure to [[the]] at least one pressurization threshold value over time;<br>
+output turn protocol alerts based on the<del>comparison</del><del>s </del><u>comparison;</u><br>
+detect, based on the received sensor signals, the person<del>h-as-exi</del><del>ted </del><u>exitin</u><u>g</u> the support surface <u>and subsequently returning to the support surf</u><u>a</u><u>ce, defining a second depressurization period spent off the support surface;</u> and<del>autnoratiea</del><del>lly</del><del>-supend-t</del><del>he-</del><del>turn-protoeo-La</del><del>ler</del><del>ts-in-respon</del><del>se-to-the-dete</del><del>etion</del><del></del><del>thate</del><del>the-</del>sperporaitethe- tr
+t-utrfaee<u> decrease the pressurization measure, at a second depressurizati</u><u>o</u><u>n rate, as a proportional functi</u><u>o</u><u>n of the second depressurizati</u><u>o</u><u>n peri</u><u>o</u><u>d spent off the support surface</u><u>;</u><br>
+<u>wherein the second depressurizati</u><u>o</u><u>n rate is greater than the first depressurizati</u><u>on </u><u>rate.</u><br>
+<br>
+<br>
+<br>
+21.    (Previously Withdrawn) The system of claim 20, wherein the processor is provided in the wearable sensor device body.<br>
+<br>
+22.    (Previously Presented) The system of claim 20, wherein the processor is remotefrom the wearable sensor device body and configured to receive the sensor signals from the at least one sensor via wireless communications.<br>
+<br>
+23.    (Currently Amended) The system of claim 20, wherein the processor is configured to:<br>
+<u>automatically suspend the turn protocol alerts in response to the detection that the person has exited the support surface</u><u>;</u><u> and</u><br>
+<del>a</del><del>fter-detee</del><del>ting-he-person-as-ekxited-the-tupo- srfaee deteethe--person--has</del><del></del><del>returned-</del><del>to-th</del><del>e-spprt-surfaeefrased-n-addtional-sensor-sigfals-from-the-o-ne-or--more</del><del></del><del>s-ensors;-and</del> resume the turn protocol alerts in response to the detection that the person has returned to the support surface.<br>
+<br>
+24.    (Cancelled)<br>
+<br>
+25.    (Cancelled)<br>
+<br>
+26.    (Cancelled)<br>
+<br>
+27.    (Currently Amended) The system of claim 20, wherein the pressurization measure representing the pressurization of the particular body region comprises a pressurization[[timer]]<u>time </u>representing a duration spent in the pressurization position.
+</body></html>

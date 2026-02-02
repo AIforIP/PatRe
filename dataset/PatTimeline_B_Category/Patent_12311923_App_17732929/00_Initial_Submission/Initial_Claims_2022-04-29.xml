@@ -1,0 +1,14 @@
+<html><head></head><body><h3>Date: 2022-04-29</h3>
+ What is claimed is:
+<br>
+
+1.
+A vehicle comprising: 
+<br>
+a surrounding information detector for detecting at least one of a position and a speed of an object around the vehicle, the object around the vehicle comprising a first vehicle ahead of the vehicle and a second vehicle behind the vehicle; 
+<br>
+a vehicle information sensor for detecting at least one of a speed and an acceleration of the vehicle; 
+<br>
+a controller configured to determine a probability of a forward collision with the first vehicle and a probability of a rear-end collision with the second vehicle based on outputted information of the surrounding information detector and the vehicle information sensor, determine a target forward collision speed and a target rear-end collision speed to minimize a sum of injuries to an occupant of the vehicle by the forward collision and injuries to the occupant by the rear-end collision, based on a calculated overall harm value, upon determination that there are the probabilities of the forward collision and the rear-end collision, and control breaking of the vehicle based on the target forward collision speed and the target rear-end collision speed. 
+78
+</body></html>

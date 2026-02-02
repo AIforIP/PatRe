@@ -1,0 +1,52 @@
+<html><head></head><body><h3>Date: 2025-02-18</h3>
+
+<h1><u>Listing of the Claims:</u></h1>
+<p>Reply to Office Action of November 18, 2024<u> Amendments to the Claims:</u></p><p>Without prejudice, this listing of the claims replaces all prior versions and listings of the claims in the present application:</p><br>
+<br>
+1. (Currently Amended) A method for <del>deriving a control variable for lateral guidance of </del>a motor vehicle <u>performed </u>using images of <u>a roadway captured by </u>at least one camera of the motor vehicle, <del>w</del><del>herein the at least one camera captures images of a road</del><del>w</del><del>ay, </del>the method comprising the following steps:<br>
+projecting a traffic lane of the roadway to be followed onto the images;<br>
+determining a travel trajectory of the motor vehicle in reference to the images based on a self-motion estimate;<del>and</del><br>
+projecting the determined travel trajectory onto the images; <del>and</del><br>
+deriving a control variable <del>for lateral guidance of the motor vehicle </del>from a comparison between the traffic lane projected onto the images and the determined travel trajectory projected onto the images;<u></u><u>and</u><br>
+<u>controlling a lateral guidance of the motor vehicle based on the derived control variable.</u><br>
+<br>
+2. (Original) The method according to claim 1, wherein the travel trajectory is determined using a single lane model and a ground plane estimate, the single lane model including an Ackermann model.<br>
+<br>
+3. (Currently Amended) The method according to claim 1, further comprising:<br>
+determining various time <u>values </u><del>constants </del>for a collision between the traffic lane and the travel trajectory from the projected traffic lane and the projected travel trajectory, the control variable being derived as a projection in the images for at least a portion of the various <del>points in</del> time <u>values.</u><br>
+<br>
+4. (Original) The method according to claim 1, wherein the control variable is derived by a line-by-line comparison between the projected traffic lane and the projected travel trajectory.<br>
+<br>
+<br>
+<br>
+Reply to Office Action of November 18, 2024<br>
+<br>
+5. (Currently Amended) The method according to claim 1, <u>wherein:</u><br>
+<u>the determined travel trajectory that is projected onto the images is </u><del>further comprising:</del><br>
+<del>determining </del>a trajectory vanishing point of the self-motion estimate <del>is determined, and projecting the trajectory vanishing point onto the images as the travel trajectory</del>;<u>the traffic lane that is projected on the images is represented as </u><del>determining </del>at least one lane vanishing point of the traffic lane <del>and projecting the at least one lane vanishing point of the traffic lane onto the images</del>; and <del>w</del><del>herein</del><u> the comparison by which </u>the control variable is derived <u>is made </u>by comparing the trajectory vanishing point and the at least one lane vanishing point.<br>
+<br>
+6. (Currently Amended) The method according to claim <u>5</u><u>,</u>wherein:<del>, </del><del>for a</del><u> the traffic lane is </u>curved;<del>traffic</del><u> the at least one </u>lane <u>vanishing point includes a respective associated lane vanishing point</u> [[,]] for each of a plurality of points along the traffic lanei<del>, an respective associated lane vanishing point is determined, </del>and<br>
+<u>the comparison by which </u>the control variable is derived <u>is made </u>by comparing the respective associated lane vanishing points with the trajectory vanishing point.<br>
+<br>
+7. (Original) The method according to claim 1, wherein the traffic lane to be followed is determined from the images using road boundary features.<br>
+<br>
+8. (Original) The method according to claim 1, wherein the traffic lane to be followed is determined by determining a drivable surface and/or using a geographic map and/or using semantic segmentation and/or by a comparison with trajectories of other vehicles.<br>
+<br>
+<br>
+<br>
+Reply to Office Action of November 18, 2024<br>
+<br>
+9. (Currently Amended) A non-transitory computer-readable storage medium on which is stored a computer program <u>that is executable by a computer or control device and that, when executed by the computer or control device, causes the computer or control device to perform a metho </u>for <del>deriving a control variable for lateral guidance of </del>a motor <u>vehicle, the method being performed </u>using images of <u>a roadway captured by </u>at least one camera of the motor vehicle,<del> wherein the at least one camera captures images of a roadway, the computer program, when executed by a computer or control device, causing the computer or control device to perform </del><u>the method comprising </u>the following steps:<br>
+projecting a traffic lane of the roadway to be followed onto the images;<br>
+determining a travel trajectory of the motor vehicle in reference to the images based on a self-motion estimate;<del>and</del><br>
+projecting the determined travel trajectory onto the images; <del>and</del><br>
+deriving a control variable <del>for lateral guidance of the motor vehicle </del>from a comparison between the traffic lane projected onto the images and the determined travel trajectory projected onto the images;<u> and</u><br>
+<u>controlling a lateral guidance of the motor vehicle based on the derived control variable.</u><br>
+<br>
+10. (Currently Amended) A motor vehicle, comprising:<br>
+at least one camera which, during operation, captures images of a roadway; and<br>
+a control device communicatively connected to the at least one camera, wherein the control device is <del>configured to derive a control variable for lateral guidance of a motor vehicle using images of the at least one camera of the motor vehicle, the control device </del>configured to:project <del>ing </del>a traffic lane of the roadway to be followed onto the images;determine a travel trajectory of the motor vehicle in reference to the images based on a self-motion estimate;<del>and</del><br>
+project <del>ing </del>the determined travel trajectory onto the images;<del>, </del><del>and</del>derive a control variable <del>for lateral guidance of the motor vehicle </del>from a comparison between the traffic lane projected onto the images and the determined travel trajectory projected onto the images;<u> and</u><br>
+<u>control a lateral guidance of the motor vehicle based on the derived control variable.</u><br>
+
+</body></html>

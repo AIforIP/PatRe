@@ -1,0 +1,85 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Response to Amendment
+The amendment submitted 09/22/2023 has been entered. Claims 1-12 remain pending. Claims 10-12 have been withdrawn from consideration. Claims 13-20 have been cancelled. New claims 21-28 have been entered.
+Response to Arguments
+Applicant's arguments filed 09/22/2023 have been fully considered and were found persuasive. However, the amendments to the claims have changed the scope of the claims necessitating new or modified grounds of rejection. Please see new or modified grounds of rejection below. See also section Allowable Subject Matter below.
+Claim Rejections - 35 USC § 102
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claim(s) 1-3 and 5-6 is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by EP 2357356 to Katz (see machine translation in file wrapper).
+(a) Regarding claim 1:
+(i) Katz discloses a tunable mass damper assembly (mass actuator 4, Fig 8) attachable to a rotor blade (1) configured to rotate about a rotor axis (Y axis, Figs 3/8), the tunable mass damper assembly comprising:
+a base configured to be attached to the rotor blade (whichever structure arm 25 and joint 26 are attached to, Fig 8); and
+a pendulum mass structure (mass 6, arm 25, Fig 8) comprising:
+a first end (end proximate join 26, Fig 8) rotatably coupled to the base about a pivot axis (joint 26, Fig 8) substantially perpendicular to a plane containing the rotor axis (Fig 8); and
+a second end (end proximate mass 6, Fig 8) configured to rotate freely about the pivot axis (Fig 8) in accordance with a rotational speed of the rotor blade about the rotor axis (positions 12-14, Fig 8; relative to rotational speed, Pars 0013/0015),
+the pendulum mass structure being configured to reduce vibratory forces of the rotor blade induced by a rotation of the rotor blade about the rotor axis (Par 0013), and
+an entirety of the pendulum mass structure being configured to be contained within and enclosed by the rotor blade (Fig 8).
+(b) Regarding claim 2:
+(i) Katz further discloses wherein an entirety of the base is configured to be positioned within and completely enclosed by the rotor blade (Fig 8).
+(c) Regarding claim 3:
+(i) Katz further discloses wherein the pendulum mass structure comprises a pendulum mass (mass 6) at the second end (Fig 8) and at least one pendulum arm (arm 25) at the first end (Fig 8), wherein a first arm end of the at least one pendulum arm is attached to the base (arm 25 attached to base at joint 26, Fig 8) and a second arm end of the at least one pendulum arm is attached to the pendulum mass (Fig 8).
+(d) Regarding claim 5:
+(i) Katz further discloses wherein the pendulum mass structure is configured to be positioned along a feathering axis of the rotor blade (mass moves towards/from upper and lower lateral surfaces 2/3, Fig 8).
+(e) Regarding claim 6:
+(i) Katz further discloses wherein the base is configured to be rigidly secured to the rotor blade (“cohesive”, i.e. integral, jointed or firmly clamped; Par 0055).
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim(s) 4 is/are rejected under 35 U.S.C. 103 as being unpatentable over EP 2357356 to Katz (see machine translation in file wrapper) in view of US 5639214 to Guimbal.
+(a) Regarding claim 4:
+(i) Katz further discloses wherein the at least one pendulum arm is rotatably attached to the base (rotates about pivot 26, Fig 8).
+(ii) Katz does not disclose wherein the at least one pendulum arm is rotatably attached to the mass.
+(iii) Guimbal is also in the field of damping (see title) and teaches:
+a tunable mass damper assembly (branches 215, spacer member 226, pendulous member 220; Fig 6);
+the tunable mass damper assembly comprising a base (branches 215), a pendulum arm (spacer member 226), and a mass (pendulous member 220),
+wherein the pendulum arm is rotatably attached to both the mass and the base (Fig 6).
+(iv) It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified the at least one pendulum arm as disclosed by Katz to be rotatably attached to the mass for the purpose of creating a double pendulum thereby avoiding the inertia of the at least one pendulum arm limiting the natural frequencies at which vibrations can be damped and allowing greater freedom in the choice of connecting structure of the at least one pendulum arm (Col 1 Lns 55-62).
+Claim(s) 7-9 is/are rejected under 35 U.S.C. 103 as being unpatentable over EP 2357356 to Katz (see machine translation in file wrapper).
+(a) Regarding claim 7:
+(i) Katz does not explicitly disclose wherein the base is configured to be movably secured to the rotor blade such that the base and the pendulum mass structure do not rotate with the rotor blade when the rotor blade rotates about a feathering axis to change a pitch angle.
+(ii) The Applicant has not disclosed any criticality nor any new or unexpected results from having the base movably secured as claimed and the mass damper assembly of Katz would operate equally well whether the base is rigidly or movably secured as claimed.
+(iii) It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified the base as disclosed by Katz to be movably secured as claimed as an obvious matter of design choice.
+(b) Regarding claims 8-9:
+(i) Katz further discloses wherein the tunable mass damper assembly is configured to be positioned within a rotor blade (Fig 8).
+(ii) Katz does not disclose wherein the rotor blade is part of a coaxial rotor system; nor wherein the rotor blade is part of a rigid rotor system.
+(iii) It has been held that apparatus claims cover what a device is, not what a device does (Hewlett-Packard Co.v.Bausch & Lomb Inc., 909 F.2d 1464, 1469, 15 USPQ2d 1525, 1528 [Fed. Cir. 1990]).  Further, a claim containing a recitation with respect to the manner in which a claimed apparatus is intended to be employed does not differentiate the claimed apparatus from a prior art apparatus if the prior art apparatus teaches all the structural limitations of the claim. (Ex parte Masham, 2 USPQ2d 1647 [Bd. Pat. App. & Inter. 1987]).
+(iii) Katz discloses all structural limitations of the claim and is fully capable of fulfilling the intended use as claimed.
+Claim(s) 21-25 is/are rejected under 35 U.S.C. 103 as being unpatentable over EP 2357356 to Katz (see machine translation in file wrapper) in view of US 2426130 to Wald.
+(a) Regarding claims 21-23:
+(i) Katz does not disclose:
+a center block, wherein the base and the pendulum mass structure are positioned within the center block;
+wherein the base is rotatably coupled to the center block; nor
+a first bearing block configured to statically coupled to the rotor blade, a second bearing block configured to statically couple to the rotor blade, wherein the center block is rotatably coupled to the first bearing block and the second bearing block.
+(ii) Wald is also in the field of rotor blades (see title) and teaches:
+a pendulum mass structure (damping means 30, Figs 2/4; weights 132/133, bar 134, Fig 6) attached to a base (outer race 37, Figs 4-5);
+a center block (ring 144, Fig 6), wherein the base and the pendulum mass structure are positioned within the center block (Fig 6);
+wherein the base is rotatably coupled to the center block (via pivot means 36, Fig 4; pivot rods 142, Fig 6); and
+a first bearing block configured to statically coupled to the rotor blade (both of pivot rods 140 must be received within some form of respective bearing block), a second bearing block configured to statically couple to the rotor blade (both of pivot rods 140 must be received within some form of respective bearing block), wherein the center block is rotatably coupled to the first bearing block and the second bearing block (via pivot rods 140; Col 3 Lns 49-53).
+(iii) It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified base and the pendulum mass structure as disclosed by Katz to be attached to a center block as taught by Wald for the purpose of damping oscillations and dynamic forces from “flapping” and “hunting” (Col 3 Lns 53-58).
+(b) Regarding claim 24:
+(i) Wald further teaches wherein the base is rotatably coupled to the rotor blade (base ring 144 rotatably coupled to the rotor blade via pivot pins 140, Fig 6).
+(c) Regarding claim 25:
+(i) Wald further teaches wherein the at least one pendulum arm comprises a first pendulum arm (portion of bar 135 extending from pivot rods 142 to weight 132, Fig 6) arranged substantially parallel (Fig 6) to a second pendulum arm (portion of bar 135 extending from pivot rods 142 to weight 133, Fig 6).
+Claim(s) 28 is/are rejected under 35 U.S.C. 103 as being unpatentable over EP 2357356 to Katz (see machine translation in file wrapper).
+(a) Regarding claim 28:
+(i) Katz further discloses wherein a first side of the pendulum mass is coupled to the at least one pendulum arm (side of mass 6 attached to arm 25, Fig 8) and a second side of the pendulum mass, the second side opposite the first side (side of mass 6 opposite arm 25, Fig 8).
+(ii) Katz does not explicitly disclose wherein a cross-section of the first side is larger than a cross-section of the second side of the pendulum mass.
+(iii) The Applicant has described no criticality, nor disclosed any new or unexpected results, from having the cross-section of the first side be larger than the cross-section of the second side and the prior art would perform the same using a mass of the same shape and relative proportions. Mere changes in shape or relative dimensions does not distinguish the claimed invention from the prior art, see MPEP 2144.04(IV).
+(iv) It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified the pendulum mass as disclosed by Katz to have a cross-section at the first side be larger than a cross-section of the second side as an obvious matter of design choice, see MPEP 2144.04(IV).
+Allowable Subject Matter
+Claims 26-27 objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims or if the allowable subject matter of claim 26 were incorporated into the independent claims.
+The closest prior art is EP 2357356 to Katz which substantially discloses the claimed invention. However, the prior art does not teach nor suggest wherein the base, the first pendulum arm, the second pendulum arm, and the pendulum mass form a four-bar linkage. Previously cited US 7470114 to Bonnet teaches wherein a pendulum arm comprises two pendulum arms (46, Fig 3); however, these pendulum arms are cantilever connected to base (34) and rigidly connected to mass (42) which does not form a four bar linkage.
+Conclusion
+Applicant's amendment necessitated the new ground(s) of rejection presented in this Office action.  Accordingly, THIS ACTION IS MADE FINAL.  See MPEP § 706.07(a).  Applicant is reminded of the extension of time policy as set forth in 37 CFR 1.136(a).
+A shortened statutory period for reply to this final action is set to expire THREE MONTHS from the mailing date of this action.  In the event a first reply is filed within TWO MONTHS of the mailing date of this final action and the advisory action is not mailed until after the end of the THREE-MONTH shortened statutory period, then the shortened statutory period will expire on the date the advisory action is mailed, and any extension fee pursuant to 37 CFR 1.136(a) will be calculated from the mailing date of the advisory action.  In no event, however, will the statutory period for reply expire later than SIX MONTHS from the date of this final action.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to JUSTIN A PRUITT whose telephone number is (571)272-8383. The examiner can normally be reached T-F 8:30am - 6:30pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Woody Lee can be reached on (571) 272-1051. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/JUSTIN A PRUITT/Examiner, Art Unit 3745
+/WOODY A LEE JR/Supervisory Patent Examiner, Art Unit 3745

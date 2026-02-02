@@ -1,0 +1,7 @@
+<html><head></head><body>18599435
+
+   
+   Abstract of the Disclosure:
+   <p>An apparatus and method for generating a quality diagnostic of analog ECG (electrocardiogram) data. The apparatus includes at least a processor and a memory communicatively connected to the at least a processor, wherein the memory contains instructions configuring the at least a processor to receive ECG data, extract a plurality of ECG parameters from the ECG data, convert the ECG data to one or more digitized ECG signals, validate the digitized ECG signals, wherein validating includes classifying the plurality of digitized ECG signals to a plurality of preliminary ECG parameters and determining an accuracy status of the extracted plurality of ECG parameters by comparing the plurality of preliminary ECG parameters to the extracted plurality of ECG parameters, and generate a quality diagnostic of the ECG data based on validation of the digitized ECG signals.</p>
+
+</body></html>

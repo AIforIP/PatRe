@@ -1,0 +1,67 @@
+DETAILED CORRESPONDENCE
+Allowable Subject Matter
+Claim(s) 2-6, 8-12 and 14-18 would be allowable if (#1) rewritten to overcome all pending objection(s) and all pending rejection(s) set forth in this Office action; and (#2) rewritten to include all of the limitations of the base claim and any intervening claims.
+Priority Status
+Foreign priority benefit under 35 U.S.C. 119 (a)-(d) is acknowledged.
+Status of Claims
+Claim(s) 1-18 is/are examined in this office action.
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+Judicial Exception Claim Rejections - 35 USC § 101
+35 U.S.C. 101 reads as follows:
+Whoever invents or discovers any new and useful process, machine, manufacture, or composition of matter, or any new and useful improvement thereof, may obtain a patent therefor, subject to the conditions and requirements of this title.
+Claim(s) 1-18 is/are rejected under 35 U.S.C. 101 because the claimed invention is directed to abstract idea without significantly more. (See MPEP § 2106.)
+Step 1 of the eligibility analysis asks: Is the claim to a process, machine, manufacture or composition of matter?
+YES for Claim(s) 1-18.
+STEP 2A PRONG ONE asks does the claim recite an abstract idea, law of nature, or natural phenomenon?
+YES, because Claim(s) 7 recite(s) the following limitation(s):
+predicting a target pose of a vehicle changed to a second lane based on a current pose of the vehicle on a first lane in response to a trigger of changing the vehicle from the first lane to the second lane – (The claimed limitation is directed to the act of predicting. This step is considered at least one of observations, evaluations, judgments, and opinions; and/or a mathematical concept and therefore a Mental Process.); and
+determining a lane changing preparation pose of the vehicle on the first lane based on the target pose and at least one parameter of the vehicle – (The claimed limitation is directed to the act of determining. This step is considered at least one of observations, evaluations, judgments, and opinions; and/or a mathematical concept and therefore a Mental Process.)
+YES, because Claim(s) 1 and 13 recite the same subject matter as Claim 7 and therefore analyzed in the same manner.
+STEP 2A PRONG TWO asks does the claim recite additional elements that integrate the judicial exception into a practical application?
+NO, because Claim(s) 1 recites the same subject matter as Claims 7 and 13 and therefore analyzed in the same manner.
+NO, Claim(s) 7 recite(s) the following additional elements:
+at least one processor; and
+a memory.
+NO, Claim(s) 13 recite(s) the following additional elements:
+A non-transitory computer-readable storage medium having computer instructions stored thereon, wherein the computer instructions are configured to cause a computer to perform.
+The above limitations are recited at a high level of generality, i.e., as generic computer hardware. These generic limitations are no more than mere instructions to apply the exception using generic computer components (e.g., at least one processor; a memory; and A non-transitory computer-readable storage medium having computer instructions stored thereon, wherein the computer instructions are configured to cause a computer to perform). Accordingly, these additional elements do not integrate the abstract idea into a practical application because they do not impose any meaningful limits on practicing the abstract idea. As a result, Claim(s) 1, 7 and 13 is/are directed to the abstract idea.
+Additionally, The Examiner refers to The Berkheimer Memorandum1 for submitting more evidence into the prosecution regarding what subject matter is/are well known in the technology.  The Berkheimer Memorandum specifies The Examiner shall show one or more of the follow items:
+“A citation to an express statement in the specification or to a statement made by an applicant during prosecution that demonstrates the well-understood, routine, conventional nature of the additional element(s).” See Section III (A) (1).
+“A citation to one or more of the court decisions discussed in MPEP § 2106.05(d)(II) as noting the well-understood, routine, conventional nature of the additional element(s).” See Section III (A) (2).
+“A citation to a publication that demonstrates the well-understood, routine, conventional nature of the additional element(s).” See Section III (A) (3).
+“A statement that the examiner is taking official notice of the well-understood, routine, conventional nature of the additional element(s).” See Section III (A) (4).
+In this particular case, The Examiner provides one or more item(s) as required from Section III:
+“It is well known in the art to provide a vehicle display screen located within the vehicle.” (US 20130224721 A1)
+“Client-Server and network communication is well-known in the art of computers and networking.” (US 20050021745 A1, ¶ 52)
+“The electronic control unit 23 comprises a microprocessor including a central processing unit (CPU), a random access memory (RAM), a read-only memory (ROM), an A/D converter, and an input/output interface, all not shown, but well-known in the art.” (US 4741163)
+“As is well-known in the art, software is stored on a computer-readable storage medium (including compact disc, computer diskette, and computer memory, etc.) with code, or instructions, which, when read and executed by a computer, causes the computer to perform a process or task.” (US 20120226548 A1, ¶ 20)
+“Conventionally, an in-vehicle microphone device mounted on a vehicle interior, for example, a vehicle interior ceiling, is widely known.” (JP 2016105557 A)
+STEP 2B asks: Does the claim recite additional elements that amount to significantly more than the judicial exception?
+NO for Claim(s) 1, 7 and 13. As discussed with respect to Step 2A Prong Two, the additional elements in the claims amount to no more than mere instructions to apply the exception using generic computer components. The same analysis applies here in 2B, i.e., mere instructions to apply an exception using generic computer components cannot integrate a judicial exception into a practical application at Step 2A or provide an inventive concept in Step 2B. Therefore, Claim(s) 1, 7 and 13 is/are ineligible.
+Dependent Claim(s) 2-6, 8-12 and 14-18 merely describe further “determining” steps. As such, Claim(s) 2-6, 8-12 and 14-18 are also ineligible because they do not include additional elements that are sufficient to amount to significantly more than the judicial exception.
+As a result, Claim(s) 1-18 is/are rejected under 35 U.S.C. § 101 as being directed to non-statutory subject matter.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. § 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale or otherwise available to the public before the effective filing date of the claimed invention.
+Claim(s) 1, 7 and 13 is/are rejected under 35 U.S.C. § 102(a)(1) as being anticipated by US 20200241547 A1 (“Hashimoto”).
+Claim 1 repeats the subject matter of Claim 7 and rejected in like manner.
+For Claim 7, Hashimoto discloses an apparatus (e.g., autonomous driving system 2 from Fig. 2) for controlling lane changing (see at least Abstract, Fig. 2, 6 and 11 with associated text), comprising:
+at least one processor (see at least [0042]); and
+a memory communicatively connected to the at least one processor (see at least [0042]);
+wherein, the memory is stored with instructions executable by the at least one processor, and the instructions are executed by the at least one processor, to cause the at least one processor to perform (see at least [0042] – “The program stored in the ROM is loaded on the RAM and is executed by the CPU”):
+predicting a target pose (e.g., target trajectory) of a vehicle changed to a second lane (e.g., adjacent lane) based on a current pose of the vehicle on a first lane in response to a trigger of changing the vehicle from the first lane to the second lane (see at least Fig. 2, 6 and 11 with associated text; in particular, [0053] – “When changing the own vehicle travel lane to the adjacent lane is selected by the travel lane determination section 133, the trajectory calculation section 141 calculates a target trajectory in which the own vehicle is moved to the adjacent lane from the present own vehicle travel lane.”); and
+determining a lane changing preparation pose (e.g., changes the traveling state) of the vehicle on the first lane based on the target pose and at least one parameter (e.g., at least one of the drive system, the braking system and the steering system)of the vehicle (see at least Fig. 2, 6 and 11 with associated text; in particular, [0041] – “The actuator 8 is a device that operates in response to an operation signal from the control device 100, and changes the traveling state of the vehicle by the operation. ” and [0053] – “The control section 140 calculates an operation amount of the actuator 8 of at least one of the drive system, the braking system and the steering system based on the target trajectory calculated in the trajectory calculation section 141.”).
+Claim 13 repeats the subject matter of Claim 7 and rejected in like manner.
+Communications via The Internet and Authorization
+MPEP § 502.03 II, “Without a written authorization by applicant in place, the USPTO will not respond via Internet email to any Internet correspondence which contains information subject to the confidentiality requirement as set forth in 35 U.S.C. 122. A paper copy of such correspondence and response will be placed in the appropriate patent application by the examiner. except for correspondence that only sets up an interview time, all correspondence between the office and the applicant including applicant’s representative must be placed in the appropriate patent application. If an email contains any information beyond scheduling an interview, such as an interview agenda, it must be placed in the application. THE WRITTEN AUTHORIZATION MAY BE SUBMITTED VIA EFS-WEB, MAIL, OR FAX. It cannot be submitted by email.”
+Contact Information
+Primary Examiner Calvin Cheung’s contact information is listed at the bottom, and he is best reached MONDAY-THURSDAY, 0700-1700 ET. If attempts to reach the primary by telephone are unsuccessful, the primary’s supervisor, MARC BURGESS, is available at telephone number (571) 272-9385.
+Applicants are encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice for scheduling an examiner interview that will be performed over telephone or video conferencing (using a USPTO supplied web-based collaboration tool).
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/CALVIN CHEUNG/
+(571) 270-7041 phone number
+Calvin.Cheung@USPTO.GOV email and fax
+1 See https://www.uspto.gov/sites/default/files/documents/memo-berkheimer-20180419.PDF

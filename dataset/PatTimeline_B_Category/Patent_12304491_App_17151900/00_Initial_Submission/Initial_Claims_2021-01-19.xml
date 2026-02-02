@@ -1,0 +1,81 @@
+<html><head></head><body><h3>Date: 2021-01-19</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+<br>
+1. A vehicle control system comprising: 
+<br>
+a vehicle control device configured to control traveling of an autonomous driving vehicle; and 
+<br>
+a center device configured to communicate with the vehicle control device, wherein the center device includes a termination recognition unit configured to recognize that the autonomous driving vehicle terminates autonomous driving, a first setting unit configured to (i) set, when the termination recognition unit recognizes that the autonomous driving vehicle terminates the autonomous driving, a first stop position for stopping the autonomous driving vehicle as a target vehicle based on position information transmitted from the target vehicle that indicates the autonomous driving vehicle to terminate the autonomous driving and map information previously prepared and (ii) transmit the first stop position to the target vehicle, a passenger acquisition unit configured to acquire a type of a passenger of the target vehicle, and 
+<br>
+a relief setting unit configured to set a relief method for the passenger according to the type of the passenger and set a dialogue method for dialogue with the passenger according to the type of the passenger, the vehicle control device includes an inappropriateness reception unit configured to receive inappropriate information indicating that the autonomous driving is inappropriate for the autonomous driving vehicle, a second setting unit configured to set a second stop position for stopping the autonomous driving vehicle as the target vehicle, a stop acquisition unit configured to transmit at least the position information of the target vehicle to the center device and acquire the first stop position, and 
+<br>
+a stop control unit configured to cause the target vehicle to head to the second stop position and, in response to acquiring the first stop position, cause the target vehicle to head to the first stop position. 
+<br>
+
+<br>
+2. The vehicle control system according to claim 1, wherein the relief setting unit outputs an instruction to a relief vehicle to head to the first stop position, and 
+<br>
+the first setting unit sets the first stop position at a position intermediate between a present position of the relief vehicle and a present position of the target vehicle. 
+
+<br>
+
+<br>
+3. The vehicle control system according to claim 2, wherein the first setting unit sets the first stop position at a position temporally intermediate between a present position of the relief vehicle and a present position of the target vehicle.
+<br>
+
+<br>
+4. The vehicle control system according to claim 1, wherein when the type of the passenger includes a person requiring care, the first setting unit sets the first stop position at a predetermined position having space necessary for care.
+<br>
+
+<br>
+5. A vehicle control system comprising: 
+<br>
+a vehicle control device configured to control traveling of an autonomous driving vehicle; and 
+<br>
+a center device configured to communicate with the vehicle control device, wherein the center device includes a termination recognition unit configured to recognize that the autonomous driving vehicle terminates autonomous driving, a passenger acquisition unit configured to acquire a type of a passenger of a target vehicle, and 
+<br>
+a first setting unit configured to (i) set, when the termination recognition unit recognizes that the autonomous driving vehicle terminates the autonomous driving, a first stop position for stopping the autonomous driving vehicle as the target vehicle based on position information transmitted from the target vehicle that indicates the autonomous driving vehicle to terminate the 
+
+ autonomous driving and map information previously prepared and (ii) transmit the first stop position to the target vehicle, the vehicle control device includes an inappropriateness reception unit configured to receive inappropriate information indicating that the autonomous driving is inappropriate for the autonomous driving vehicle, a second setting unit configured to set a second stop position for stopping the autonomous driving vehicle as the target vehicle, a stop acquisition unit configured to transmit at least the position information of the target vehicle to the center device and acquire the first stop position, and 
+<br>
+a stop control unit configured to cause the target vehicle to head to the second stop position and, in response to acquiring the first stop position, cause the target vehicle to head to the first stop position, wherein when the type of the passenger includes a person requiring care, the first setting unit sets the first stop position at a predetermined position having space necessary for care. 
+
+<br>
+
+<br>
+6. A vehicle control device configured to control traveling of an autonomous driving vehicle, and configured to communicate with a center device, wherein the center device includes a termination recognition unit configured to recognize that the autonomous driving vehicle terminates autonomous driving, a first setting unit configured to (i) set, when the termination recognition unit recognizes that the autonomous driving vehicle terminates the autonomous driving, a first stop position for stopping the autonomous driving vehicle as a target vehicle based on position information transmitted from the target vehicle that indicates the autonomous driving vehicle to terminate the autonomous driving and map information previously prepared and (ii) transmit the first stop position to the target vehicle, a passenger acquisition unit configured to acquire a type of a passenger of the target vehicle, and 
+
+ a relief setting unit configured to set a relief method for the passenger according to the type of the passenger and set a dialogue method for dialogue with the passenger according to the type of the passenger, the vehicle control device comprising: 
+<br>
+an inappropriateness reception unit configured to receive inappropriate information indicating that the autonomous driving is inappropriate for the autonomous driving vehicle; 
+<br>
+a second setting unit configured to set a second stop position for stopping the autonomous driving vehicle as the target vehicle; 
+<br>
+a stop acquisition unit configured to transmit at least the position information of the target vehicle to the center device and acquire the first stop position; and 
+<br>
+a stop control unit configured to cause the target vehicle to head to the second stop position and, in response to acquiring the first stop position, cause the target vehicle to head to the first stop position. 
+
+<br>
+
+<br>
+7. A vehicle control device configured to control traveling of an autonomous driving vehicle, and configured to communicate with a center device, wherein the center device includes a termination recognition unit configured to recognize that the autonomous driving vehicle terminates autonomous driving, a passenger acquisition unit configured to acquire a type of a passenger of a target vehicle, and 
+<br>
+a first setting unit configured to (i) set, when the termination recognition unit recognizes that the autonomous driving vehicle terminates the autonomous driving, a first stop position for stopping the autonomous driving vehicle as the target vehicle based on position information transmitted from the target vehicle that indicates the autonomous driving vehicle to terminate the autonomous driving and map information previously prepared and (ii) transmit the first stop position to the target vehicle, the vehicle control device comprising: 
+<br>
+an inappropriateness reception unit configured to receive inappropriate 
+
+ information indicating that the autonomous driving is inappropriate for the autonomous driving vehicle; 
+<br>
+a second setting unit configured to set a second stop position for stopping the autonomous driving vehicle as the target vehicle; 
+<br>
+a stop acquisition unit configured to transmit at least the position information of the target vehicle to the center device and acquire the first stop position; and 
+<br>
+a stop control unit configured to cause the target vehicle to head to the second stop position and, in response to acquiring the first stop position, cause the target vehicle to head to the first stop position, wherein when the type of the passenger includes a person requiring care, the first setting unit sets the first stop position at a predetermined position having space necessary for care. 
+21
+22
+23
+24
+25
+</body></html>

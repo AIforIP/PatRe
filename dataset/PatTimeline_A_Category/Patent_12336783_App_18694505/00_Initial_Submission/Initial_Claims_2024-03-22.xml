@@ -1,0 +1,59 @@
+<html><head></head><body><h3>Date: 2024-03-22</h3>
+
+<h1>CLAIMS</h1>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.   A method of identifying the vascularity of cerebral tissue in a subject, the method comprising:inducing a first change in partial pressure of oxygen in arterial blood (APaO2) in the subject using a sequential gas delivery device;wherein inducing the first change in partial pressure of oxygen in arterial blood (APaO2) comprises targeting a first baseline partial pressure of oxygen in arterial blood (PaO2) in the subject and subsequently targeting a first signal partial pressure of oxygen in arterial blood (PaO2) in the subject;<br>
+and wherein the first signal partial pressure of oxygen in arterial blood (PaO2) is lower than the first baseline partial pressure of oxygen in arterial blood (PaO2);<br>
+determining a first change in magnetic signal (ASI) in a voxel of the subject's brain using a magnetic resonance imaging device while inducing the first change partial pressure of oxygen in arterial blood (APaO2);<br>
+inducing a second change in partial pressure of oxygen in arterial blood (APaO2) in the subject using the sequential gas delivery device;wherein inducing the second change in partial pressure of oxygen in arterial blood (APaO2) comprises targeting a second baseline partial pressure of oxygen in arterial blood (PaO2) in the subject and subsequently targeting a second signal partial pressure of oxygen in arterial blood (PaO2) in the subject; and<br>
+wherein the second signal partial pressure of oxygen in arterial blood (PaO2) is lower than the second baseline partial pressure of oxygen in arterial blood (PaO2), ; and<br>
+wherein the second baseline partial pressure of oxygen in arterial blood (PaO2) is<br>
+<br>
+lower than the first baseline partial pressure of oxygen in arterial blood (PaO2); determining a second change in magnetic signal (ASI) in the voxel of the subject's brain using the magnetic resonance imaging device while inducing the second change partial pressure of oxygen in arterial blood (APaO2);<br>
+comparing the first and second changes in magnetic signal (ASI); and<br>
+based on the comparison, outputting a signal at a user interface connected to the magnetic resonance imaging device, the signal indicating whether the voxel is extravascular or intravascular.<br>
+<br>
+2.   The method of claim 1 wherein the first change in partial pressure of oxygen in arterial blood (APaO2) is approximately equal to the second change in partial pressure of oxygen in arterial blood (APaO2).<br>
+<br>
+3.   The method of claim 2 wherein comparing the first and second changes in magnetic signal (ASI) comprises calculating a difference between the first and second changes in magnetic signal (ASI), the method further comprising:if the first change in magnetic signal (ASI) is approximately equal to the second change in magnetic signal (ASI), outputting a signal at the user interface indicating that the voxel is extravascular; and<br>
+if the second change in magnetic signal (ASI) is higher than the first change in magnetic signal (ASI), outputting a signal at the user interface indicating that the voxel is intravascular.<br>
+<br>
+4.   The method of claim 2 wherein comparing the first and second changes in magnetic signal (ASI) comprises dividing the second change in magnetic signal (ASI) by the first change in magnetic signal (ASI) to obtain a dividend, the method further comprising:if the dividend is approximately 1, outputting a signal at the user interface indicating that the voxel is extravascular; and<br>
+if the dividend is greater than approximately 1, outputting a signal at the<br>
+<br>
+user interface indicating that the voxel is intravascular.<br>
+<br>
+5.   The method of claim 4 further comprising:comparing the dividend to a pre-determined threshold,<br>
+if the dividend is less than or equal to the pre-determined threshold,<br>
+outputting a signal at the user interface indicating that the voxel contains a vein; and<br>
+if the dividend is greater than the pre-determined threshold, outputting a signal at the user interface indicating that the voxel contains an artery.<br>
+<br>
+6.   The method of claim 1 further comprising maintaining normocapnia while inducing the first and second changes in partial pressure of oxygen in arterial blood (APaO2).<br>
+<br>
+7.   The method of claim 2 wherein the first baseline partial pressure of oxygen in arterial blood (PaO2) is between 85 and 100 mmHg.<br>
+<br>
+8.   The method of claim 2 wherein the second baseline partial pressure of oxygen in arterial blood (PaO2) is between 75 and 85 mmHg.<br>
+<br>
+9.   A non-transitory machine-readable medium comprising instructions that, when executed by a processor, cause the processor to perform the method of any one of claims 1-9.<br>
+<br>
+10.  An apparatus for identifying the vascularity of cerebral tissue in a subject, the apparatus comprising:a sequential gas delivery device configured to control the partial pressure of oxygen in arterial blood in the subject;<br>
+a processor connected to the sequential gas delivery device and configured to control the sequential gas delivery device to induce a first and second change in partial pressure of oxygen in arterial blood (APaO2) in the subject;wherein inducing the first change in partial pressure of oxygen in arterial blood (APaO2) comprises targeting a first baseline partial pressure of oxygen in arterial blood (PaO2) in the subject and subsequently targeting a first signal partial pressure of oxygen in arterial blood<br>
+<br>
+(PaO2) in the subject;<br>
+wherein the first signal partial pressure of oxygen in arterial blood (PaO2) is lower than the first baseline partial pressure of oxygen in arterial blood (PaO2);<br>
+wherein inducing the second change in partial pressure of oxygen in arterial blood (A PaO2) comprises targeting a second baseline partial pressure of oxygen in arterial blood (PaO2) in the subject and subsequently targeting a second signal partial pressure of oxygen in arterial blood (PaO2) in the subject;<br>
+wherein the second signal partial pressure of oxygen in arterial blood (PaO2) is lower than the second baseline partial pressure of oxygen in arterial blood (PaO2); and<br>
+wherein the second baseline partial pressure of oxygen in arterial blood (PaO2) is lower than the first baseline partial pressure of oxygen in arterial blood (PaO2);<br>
+a sensor connected to the processor and configured to:<br>
+determine a first change in magnetic signal (ASI) in a voxel of the subject's brain while the sequential gas delivery device induces the first change partial pressure of oxygen in arterial blood (A PaO2); and<br>
+determine a second change in magnetic signal (ASI) in the voxel of the subject's brain while the sequential gas delivery device induces the second change partial pressure of oxygen in arterial blood (A PaO2);<br>
+wherein the processor is further configured to receive the first and second changes in magnetic signal (ASI) from the sensor and compare the first and second changes in magnetic signal (ASI); and<br>
+a user interface connected to the processor, the user interface configured to output a signal indicating whether the voxel is extravascular or intravascular, based on the comparison.<br>
+<br>
+11. The apparatus of claim 10 wherein the user interface is further configured to output a<br>
+<br>
+signal indicating whether the voxel contains an artery or a vein, based on the comparison.
+</body></html>

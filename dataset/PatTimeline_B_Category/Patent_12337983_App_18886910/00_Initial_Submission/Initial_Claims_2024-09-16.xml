@@ -1,0 +1,118 @@
+<html><head></head><body>18886910
+
+   
+   
+CLAIMS
+   
+   
+
+<br>
+
+1. A method of controlling an aircraft, comprising: 
+receiving first sensor data indicating at least one attribute of high voltage wiring of the aircraft; 
+receiving a state of operation of the aircraft; 
+determining a proximity of a temperature of the high voltage wiring to a temperature limit based on the first sensor data and the state of operation of the aircraft; and
+controlling at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit based on the determined proximity. 
+<br>
+
+2. The method of claim 1, wherein the at least one attribute comprises at least one of: a temperature of the high voltage wiring, a wing ambient temperature, or a current through the high voltage wiring. 
+<br>
+
+3. The method of claim 1, wherein the at least one attribute comprises a temperature of high voltage wiring received from a temperature sensor on the high voltage wiring, and wherein the high voltage wiring is configured to provide power to at least one of: an electric propulsion unit or a battery pack. 
+<br>
+
+4. The method of claim 1, wherein the at least one attribute comprises a wing ambient temperature and a current through the high voltage wiring. 
+<br>
+
+5. The method of claim 1, wherein the state of operation comprises at least one of a flight phase or an emergency condition status. 
+<br>
+
+6. The method of claim 5, wherein the state of operation comprises an emergency condition status indicating whether a battery back is providing backup power. 
+<br>
+
+7. The method of claim 1, wherein the state of operation comprises a flight phase comprising at least one of: hover, takeoff, or forward flight.
+<br>
+
+8. The method of claim 1, wherein the state of operation is based on at least one of: airspeed measurements, altitude measurements, ground speed measurements, propeller tilt angle measurements, or GPS measurements.
+<br>
+
+9. The method of claim 1, 
+wherein the state of operation comprises at least two upcoming flight phases; and 
+
+wherein determining the proximity to the temperature limit comprises considering an impact of the at least two upcoming flight phases on the high voltage wiring temperature.
+<br>
+
+10.   The method of claim 1, wherein the proximity to the temperature limit is determined based on at least one of a model or a lookup table. 
+<br>
+
+11. The method of claim 1, wherein the proximity to the temperature limit is based on a proximity to a curve proportional to (current of the high voltage wiring)^2 * (a temperature of the high voltage wiring). 
+<br>
+
+12. The method of claim 1, wherein the proximity to the temperature limit is determined based on a model or lookup table, and wherein inputs to the model or lookup table comprise: a temperature of the high voltage wiring, a current through the high voltage wiring, and a flight phase of the aircraft. 
+<br>
+
+13. The method of claim 1, wherein the proximity to the temperature limit is a time until the high voltage wiring temperature reaches the temperature limit. 
+<br>
+
+14. The method of claim 1, wherein determining the proximity to the temperature limit and controlling at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit is performed more than once while the aircraft is in flight. 
+<br>
+
+15. The method of claim 1, wherein controlling at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit comprises controlling a plurality of electric propulsion units according to a priority scheme. 
+<br>
+
+16. The method of claim 1, 
+wherein the high voltage wiring is configured to provide power to a first electric propulsion unit; and 
+wherein controlling at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit comprises reducing a thrust provided by the first electric propulsion unit in comparison to a second electric propulsion unit as the determined proximity to the temperature limit increases.  
+<br>
+
+ 17. The method of claim 1, wherein controlling at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit comprises de-rating a battery state of a battery pack associated with the high voltage wiring and controlling the at least one electric propulsion unit based on the de-rated battery state. 
+<br>
+
+18. The method of claim 17, wherein the de-rated battery state is a de-rated state of power of the battery pack associated with the high voltage wiring. 
+<br>
+
+19. The method of claim 1, wherein  
+wherein receiving first sensor data comprises receiving first sensor data for each of a plurality of high voltage wiring sections associated with a plurality of battery packs; 
+wherein determining the proximity to the temperature limit comprises determining a proximity of each high voltage wiring section to a respective temperature limit; and
+wherein controlling at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit comprises: 
+adjusting a battery state of each of the plurality of battery packs based on the proximity of its respective high voltage wiring section to the respective temperature limit, and
+allocating power across a plurality of electric propulsion units based on the adjusted battery pack states.   
+<br>
+
+20. The method of claim 19, further comprising: wherein each of the plurality of high voltage wiring sections comprises high voltage wiring feeding an electric propulsion unit. 
+<br>
+
+21. The method of claim 1, wherein controlling the at least one electric propulsion unit of the aircraft comprises managing the power draw of the at least one electric propulsion unit to prevent the electric propulsion unit from exceeding the temperature limit based on the determined proximity. 
+<br>
+
+22. The method of claim 1, wherein controlling the at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit comprises managing the power draw of each of a plurality of electric propulsion units of the aircraft to prevent each electric propulsion unit from exceeding the temperature limit based on the determined proximity, while maintaining stability of the aircraft. 
+<br>
+
+23. A system for controlling an aircraft comprising at least one processor configured to execute instructions to cause the system to: 
+receive first sensor data indicating at least one attribute of high voltage wiring of the aircraft; 
+
+receive a state of operation of the aircraft; 
+determine a proximity of a temperature of the high voltage wiring to a temperature limit based on the first sensor data and the state of operation of the aircraft; and
+control at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit based on the determined proximity. 
+<br>
+
+24. A computer-readable storage medium storing instructions which, when executed by at least one processor, cause the at least one processor to: 
+receive first sensor data indicating at least one attribute of high voltage wiring of the aircraft; 
+receive a state of operation of the aircraft; 
+determine a proximity of a temperature of the high voltage wiring to a temperature limit based on the first sensor data and the state of operation of the aircraft; and
+control at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit based on the determined proximity. 
+<br>
+
+25. An aircraft comprising: 
+a first sensor; 
+at least one electric propulsion unit;
+high voltage wiring; 
+at least one processor configured to execute instructions to cause the system to:
+receive sensor data from the first sensor indicating at least one attribute of the high voltage wiring; 
+receive a state of operation of the aircraft; 
+determine a proximity of a temperature of the high voltage wiring to a temperature limit based on the first sensor data and the state of operation of the aircraft; and
+control the at least one electric propulsion unit of the aircraft to avoid exceeding the temperature limit based on the determined proximity. 
+
+   
+
+</body></html>

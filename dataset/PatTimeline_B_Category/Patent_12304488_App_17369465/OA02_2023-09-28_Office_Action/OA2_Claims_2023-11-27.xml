@@ -1,0 +1,40 @@
+<html><head></head><body><h3>Date: 2023-11-27</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application:</p>
+<h1>LISTING OF CLAIMS:</h1>
+<br>
+<br>
+1.    (currently amended): A vehicle control device configured to control a vehicle, comprising:<br>
+an information provision device configured to provide information to a driver of the vehicle;<br>
+a processor, during automated driving control of the vehicle, configured to:perform the automated driving control by automatically performing a driving operation of the vehicle relating to a driving plan of the vehicle control device, the automated driving control comprising operations relating to at least one of acceleration,<br>
+steering, and braking, according to the driving plan;provide, through the information provision device to the driver, a driving event that is to occur at a point ahead in a direction of advance from a current point, based on an automated driving plan;<br>
+judge a suitability of a driver driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving<del> event; and</del><del></del><u>event;</u><br>
+provide the driver with judgment information indicating that the driver not perform the driver driving operation, based on the judging of the suitability determining that performing the driver driving operation is unsuitable according to the driving plan being executed by the vehicle control device;<u> and</u><br>
+<br>
+<u>when the driver driving operation correspondin</u><u>g</u><u> to the drivin</u><u>g</u><u> event is a lane chan</u><u>g</u><u>e, provide to the driver, to</u><u>g</u><u>ether with lane chan</u><u>g</u><u>e inhibitin</u><u>g</u><u> information, distance information from the current point to a point where a lane to be changed to is to at least one of disappear due to a lane reduction and be unable to be driven.</u><br>
+2.
+(currently amended): The vehicle control device according to claim 1, wherein:<br>
+the driver driving operation corresponding to the driving event is <del>a lane t</del><u>he lane </u>change, and the processor is further configured to provide to the driver, as the judgment information,<u></u><u>the </u>lane change inhibiting information indicating that the lane to be changed to is unable to be driven on at the point before the point of the driving event.<br>
+<br>
+3.    (previously presented): The vehicle control device according to claim 2, wherein the processor is further configured to:<br>
+display, on an information display screen visible to the driver, as the lane change inhibiting information, a specialized icon showing that the lane to be changed to is to at least one of disappear due to the lane reduction and be unable to be driven on at the point before the point of the driving event.<br>
+<br>
+4.    (previously presented): The vehicle control device according to claim 2, wherein the processor is further configured to:<br>
+<br>
+display, on an information display screen visible to the driver, as the lane change inhibiting information, the lane to be changed to is to at least one of disappear due to the lane reduction and be unable to be driven on at the point before the point of the driving event.<br>
+<br>
+5.    (canceled).<br>
+6.
+(currently amended): An information provision method providing a driver through an information provision device mounted in a vehicle with a driving event which is to occur at a point ahead in a direction of advance from a current point based on a driving plan prepared during automated driving where a driving operation of the vehicle is automatically performed that relates to the driving plan, the driving operation comprising operations relating to at least one of acceleration, steering, and braking, according to the driving plan,<br>
+the information provision method comprising:judging a suitability of a driver driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving<del> event; and</del><br>
+<u>event;</u>providing the driver with judgment information indicating that the driver not perform the driver driving operation, based on the judging of the suitability determining that performing the driver driving operation is unsuitable according to the driving plan being performed;<u> and</u><u>when the driver drivin</u><u>g</u><u> operation correspondin</u><u>g</u><u> to the drivin</u><u>g</u><u> event is a lane change, providing to the driver, together with lane change inhibiting information,</u><br>
+<br>
+<u>distance information from the current point to a point where a lane to be changed to is to at least one of disappear due to a lane reduction and be unable to be driven.</u><br>
+<br>
+7.    (currently amended): A non-transitory computer-readable recording medium storing a computer-executable program that, when executed by at least one processor of a device, cause the device to:<br>
+provide a driver through an information provision device mounted in a vehicle with a driving event which is to occur at a point ahead in a direction of advance from a current point based on a driving plan prepared during automated driving where a driving operation of the vehicle is automatically performed that relates to the driving plan, the driving operation comprising operations relating to at least one of acceleration, steering, and braking, according to the driving plan;<br>
+judge a suitability of a driver driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving<del> event; and</del><del></del><u>event;</u><br>
+provide the driver through the information provision device with judgment information indicating that the driver not perform the driver driving operation, based on the judging of the suitability determining that performing the driver driving operation is unsuitable, according to the driving plan being performed;<u> and</u><br>
+<u>when the driver driving operation corresponding to the driving event is a lane change, provide to the driver, together with lane change inhibiting information, distance information from the current point to a point where a lane to be changed to is to at least one of disappear due to a lane reduction and be unable to be driven.</u>
+</body></html>

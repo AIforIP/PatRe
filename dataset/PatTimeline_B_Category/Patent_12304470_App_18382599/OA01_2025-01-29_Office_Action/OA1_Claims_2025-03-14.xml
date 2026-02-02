@@ -1,0 +1,37 @@
+<html><head></head><body><h3>Date: 2025-03-14</h3>
+
+<h1><u>Listing of Claims:</u></h1>
+<p><u>AMENDMENTS TO THE CLAIMS</u>This listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+<br>
+1. (Currently Amended) A cabin management apparatus configured to manage a cabin of a vehicle, the cabin management apparatus comprising:a communication interface;<br>
+an output interface; and<br>
+a <u>processor </u><del>controller, wherein the controller is </del>configured to:<br>
+receive, by the communication interface, emergency stop information for the vehicle;<br>
+receive, by the communication interface, a degree of automated controllability over a door of the vehicle; and<br>
+provide, by the output interface based on the emergency stop information, a different notification depending on the degree of automated controllability over the door,<br>
+<u>wherein the de</u><u>g</u><u>ree of automated controllability includes:</u><u>a first state in which the door is automatically opened or closed based on a control command</u><u>,</u><br>
+<u>a second state in which the door cannot be automatically controlled, and is opened or closed by pressing a button provided in the cabin, and</u><br>
+<u>a third state in which the door is not operable, and has to be manually opened or closed.</u><br>
+<br>
+2. (Original) The cabin management apparatus according to claim 1, wherein the emergency stop information includes information on whether the door of the vehicle needs to be opened or closed.<br>
+<br>
+3. (Currently Amended) The cabin management apparatus according to claim 1, wherein the<u> processor </u><del>controller </del>is configured to:determine, based on the degree of automated controllability over the door, whether to need work by a passenger in the cabin to open or close the door; and<br>
+provide a different notification depending on whether to need the work by the passenger.<br>
+<br>
+<br>
+<br>
+4. (Currently Amended) The cabin management apparatus according to claim
+1, further comprising an acquisition interface,<br>
+wherein the <u>processor </u><del>controller </del>is configured to:<br>
+acquire, via the acquisition interface, passenger information regarding one or more passengers in the cabin;<br>
+determine, based on the passenger information, presence or absence of a passenger who is expected to be able to open or close the door manually, among the one or more passengers; and<br>
+provide a different notification depending on the presence or absence of the passenger who is expected to be able to open or close the door manually.<br>
+<br>
+5. (Currently Amended) The cabin management apparatus according to claim 4, wherein the<u> processor </u><del>controller </del>is configured, upon determining the absence of the passenger who is expected to be able to open or close the door manually, to transmit, by the communication interface, a request to move the vehicle to a point at which the door of the vehicle is easily opened or closed.<br>
+<br>
+6. (New) The cabin management apparatus according to claim 3, wherein the processor is configured to:in the first state, determine that the work by the passenger is not needed, and provide a first notification that passengers in the cabin should wait for the door to open automatically; and<br>
+in the second or third state, determine that the work by the passenger is needed, and provide a second notification that requests cooperation from the passengers.<br>
+<br>
+7. (New) The cabin management apparatus according to claim 4, wherein the processor is configured to:based on determining that there is a passenger who is expected to be able to open or close the door manually, among the one or more passengers of the vehicle, provide a first notification that requests cooperation from the passenger; and<br>
+based on determining that there is no passenger who is expected to be able to open or close the door manually, among the one or more passengers of the vehicle, provide a second notification that asks the one or more passengers to wait for arrival of help.<br>
+</body></html>

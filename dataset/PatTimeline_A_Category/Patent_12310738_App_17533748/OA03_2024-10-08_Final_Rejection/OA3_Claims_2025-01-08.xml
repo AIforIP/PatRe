@@ -1,0 +1,62 @@
+<html><head></head><body><h3>Date: 2025-01-08</h3>
+<p><u>IN THE CLAIMS</u>No claims are amended, canceled or added herein. The presently-pending claims are provided below.</p><br>
+1.
+(Previously Presented) A method, comprising:<br>
+sensing neural activity in a patient using at least one electrode to provide an electrical waveform indicative of the sensed neural activity, wherein the electrical waveform includes signal features with feature values and different sensed neural activity correspond to different feature values in the electrical waveform;<br>
+determining a color output for display on a user interface based on the feature values for electrical waveform indicative of the sensed neural activity, the color output being determined by transforming the feature values to the color output using a stored mapping function for mapping the feature values to the color output from a plurality of different colors corresponding to a plurality of the different feature values for the different sensed neural activity, wherein the different colors include at least one of different hue values, different saturation values, or different brightness values; and<br>
+displaying the color output on the user interface to provide a visual indication of the sensed neural activity to a user using the different colors corresponding to the different feature values.<br>
+2.
+(Original) The method of claim 1, wherein the different colors include at least different hue values and different saturation values for different sensed neural activity.<br>
+3.
+(Original) The method of claim 1, wherein the different colors include at least different hue values and different brightness values for different sensed neural activity.<br>
+4.
+(Original) The method of claim 1, wherein the different colors include at least different saturation values and different brightness values for different sensed neural activity.<br>
+<br>
+<br>
+<br>
+<br>
+5.
+(Original) The method of claim 1, wherein determining the color output includes determining at least different hue values, different saturation values and different brightness values for different sensed neural activity.<br>
+6.
+(Original) The method of claim 1, wherein determining the color output includes determining at least one of different hue values, different saturation values, or different brightness values based on whether the sensed activity is efferent or afferent neural activity.<br>
+7.
+(Original) The method of claim 1, further comprising determining a pixel position for the color output based on the sensed neural activity.<br>
+8.
+(Original) The method of claim 1, wherein the user interface is part of a neural stimulation programmer.<br>
+9.
+(Original) The method of claim 1, wherein the user interface is part of a patient device.<br>
+<br>
+10.    (Original) The method of claim 1, wherein the different sensed neural activity includes differences in at least one of amplitude or frequency.<br>
+<br>
+11.    (Original) The method of claim 1, wherein the different sensed neural activity includes differences in at least both amplitude and frequency.<br>
+<br>
+12.    (Original) The method of claim 1, further comprising determining an audio output for the user interface based on the sensed neural activity, and producing the audio output on the user interface to provide an indication of the sensed neural activity to a user.<br>
+<br>
+13.    (Original) The method of claim 12, wherein the audio output includes a different frequency or a different group of frequencies to represent different feature values in the sensed neural activity.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+14.    (Original) The method of claim 12, wherein the audio output includes different instrument families to represent different feature values in the sensed neural activity.<br>
+<br>
+15.    (Original) The method of claim 1, further comprising a haptic output for the user interface based on the sensed neural activity, and producing the haptic output on the user interface to provide an indication of the sensed neural activity to a user.<br>
+<br>
+16.    (Previously Presented) A system, comprising:a neural activity sensor configured to use at least one electrode to sense neural activity and provide an electrical waveform indicative of the sensed neural activity, wherein the electrical waveform includes signal features with feature values and different sensed neural activity correspond to different feature values in the electrical waveform;<br>
+a user interface;<br>
+a controller configured to determine a color output for display on the user interface based on the feature values for electrical waveform indicative of the sensed neural activity, the controller including a memory and a mapping function stored in the memory for mapping the feature values to the color output from a plurality of different colors corresponding to a plurality of the different feature values, the controller being configured to determine the color output using the stored mapping function by transforming the feature values to the color output, wherein the different colors include at least one of different hue values, different saturation values, or different brightness values; and<br>
+the user interface being configured to display the color output to provide a visual indication of the feature values for the sensed neural activity to a user.<br>
+<br>
+17.    (Original) The system of claim 16, wherein the different colors include:at least different hue values and different saturation values for different sensed neural activity;<br>
+at least different hue values and different brightness values for different sensed neural activity; or<br>
+<br>
+<br>
+<br>
+at least different saturation values and different brightness values for different sensed neural activity.<br>
+<br>
+18.    (Original) The system of claim 16, wherein the controller is configured to determine a pixel position for the color output based on the sensed neural activity, and the user interface is configured to produce the color output at the pixel position.<br>
+<br>
+19.    (Original) The system of claim 16, wherein the user interface is part of a neural stimulation programmer or part of a patient device.<br>
+<br>
+20.    (Original) The system of claim 16, wherein the different sensed neural activity includes differences in at least both amplitude and frequency.
+</body></html>

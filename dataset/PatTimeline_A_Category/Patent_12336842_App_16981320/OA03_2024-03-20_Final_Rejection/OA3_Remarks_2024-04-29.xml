@@ -1,0 +1,40 @@
+<html><head></head><body><h3>Date: 2024-04-29</h3>
+<p>SVG
+{EMBED HERE}
+0.376.543Remarks</p><p>Claims 1-6 and 8-18 are pending in this application. The various parts of the Office Action (and other matters, if any) are discussed below under appropriate headings.</p>
+<h1>Claim Rejections - 35 U.S.C. § 103</h1>
+<p>Claims 1-6 and 8-16 stand rejected as anticipated by U.S. 2017/0245776 ("Kurtz"). Claims 17 and 18 stand rejected as unpatentable over Kurtz in view of U.S. 2013/0204155 ("Brull"). Applicant asks the Examiner to reconsider and withdraw the rejection(s) for at least the following reasons.</p><p>Claim 1 has been amended to include the subject matter of claims 17 and 18. Consequently, the rejection of amended claim 1 is discussed below in view of the rejection of claims 17 and 18.</p><p>Independent Claim 1</p><p>Amended claim 1 recites a "method performed by an anesthetizing monitoring unit configured to generate an improved evoked electromyography response signalSVG
+{EMBED HERE}
+0.160.797
+The method "generat[es] a single stimuli signal (SstimuIi) using theanesthetizing monitoring unit." The "single stimuli signal (SstimuIi) comprises a single pulse and is configured to stimulate a motor nerve of a patient."</p><p>The method "output[s] the generated single stimuli signal (Sstimuii) to stimulating electrodes on the patient using an output port of the anesthetizing monitoring unit." The method also "receiv[es] a single evoked electromyography, EMG, response signal (SResponse) from receiving electrodes on the patient at an input port of the anesthetizing monitoring unit, having a duration (TResponse), in response to the transmitted stimuli signal (SstimuIi)." The method "estimat[es] a periodic noise waveform (SPeriodic), having the duration (TResponse), by using temporal segments of a noise signal (SNoise)."</p><p>The "temporal segments of the noise signal (SNoise) used during the estimating of the periodic noise waveform (SPeriodic) are detected during a time interval (TNoise) not</p><p>Page 6 of 10</p><p>Application No. 16/981,320</p><p><u>Docket No. BRNN16PUS</u><u>O1</u></p><p>overlapping with a stimuli signal interval (Tstimuius) of the single stimuli signal (Sstimuii) and not overlapping with the duration of the response signal (TResponse)."</p><p>The method further includes "generating the improved response signal  SVG
+{EMBED HERE}
+0.160.70 bysubtracting the noise waveform from the response signal (SResponse)." The improvedresponse signal  SVG
+{EMBED HERE}
+0.160.697 is stored in a memory in the anesthetizing monitoring unit,and the improved response signal  SVG
+{EMBED HERE}
+0.160.697 is presented on a display in theanesthetizing monitoring unit.</p><p>Analysis: Amended Claim 1 Rejection</p><p>The cited reference combination does not disclose -as set forth in amended claim 1- "estimating a periodic noise waveform (SPeriodic), having the duration (TResponse), by using temporal segments of a noise signal (SNoise)."</p><p>In the Office Action, the Examiner points to Brull as disclosing amended claim 1's estimating a periodic noise waveform. In particular, the Examiner points to Brull, paragraph 0022, which reads as follows:</p><p>"For <u>purp</u><u>oses of determinin</u><u>g</u><u> the am</u><u>p</u><u>litude </u>of the evoked muscle</p><p>response, the <u>start of the evoked muscle response </u>is optio SVG
+{EMBED HERE}
+0.5031.073 SVG
+{EMBED HERE}
+0.2871.10by locating the time at which the level of muscle electrical a
+the
+f electrical noise in the subject prior to s
+the
+immediately following completion of the evoked</p><p>response. The baseline level of electrical noise is the background noise</p><p>and may include all ambient, intrinsic and extrinsic noise. The amplitude is</p><p>determined as the difference in measured voltage from the baseline level</p><p>to the positive or negative peak of the evoked muscle response caused by</p><p>stimulating the motor nerve." (Emphasis added.)</p><p>Brull does not disclose estimating a periodic noise waveform using temporal segments of a noise signal. While Brull mentions a baseline noise level in paragraph 0022, Brull is silent regarding how this baseline noise level is determined. At most, Brull describes determining an amplitude value, but is silent regarding estimating a periodic noise waveform.</p><p>Page 7 of 10</p><p>SVG
+{EMBED HERE}
+0.3376.543Brull's baseline level indicates a fixed level or value, not a waveform. In this way, Brull teaches against the claimed invention that is based on the realization that a dominant part of the signal is periodic noise varying significantly over time, but having a periodic character exploited by the invention. (See, e.g., current application, page 7.)</p><p>As argued in the previous rejection, Kurtz teaches averaging multiple responses SResponse received during the time period TResponse. That is, Kurtz describes receiving multiple responses including noise and signal, and averaging these responses. Kurtz is silent regarding a waveform.</p><p>RESPONSE5</p>
+<h1>TIME</h1>
+<p>SVG
+{EMBED HERE}
+2.1533.84Kurtz teaches averaging the sum of amplitude <u>a</u><u>nd </u>noise of "multiple time-based data series". This implies that a period of time over, e.g., five responses must elapse before an amplitude value is obtained. Kurtz therefore also teaches calculating a fixed level or value not reflecting the dynamic variation of noise.</p><p>Additionally, it is not clear how Brull can be applied to Kurtz. If Brull and Kurtz were combined, the resulting method would not calculate an aggregated amplitude value from RESPONSE 1-5 and then subtract a fixed level or value representing noise from that aggregated amplitude value.</p><p>In the claimed subject matter, the noise is determined as waveforms in the period "between" a stimuli pulse and a response signal RESPONSE 1-5. As can be seen from</p><p>Page 8 of 10</p><p>Application No. 16/981,320SVG
+{EMBED HERE}
+0.186.543the example below, the periodic noise waveform varies over time, and each response signal in the current application is improved by a dedicated noise waveform estimation for each response signal RESPONSE 1-5 based on a group of segments of the periodic noise signal SEGM 1-5.</p><p>SVG
+{EMBED HERE}
+1.973.27
+SES</p><p>This improves each individual response signal compared to Kurtz's aggregating the compounded measurements of noise and signal. That is, an improved amplitude value of the response signal is generated for each response signal.</p><p>This further reduces the delay in amplitude values compared to Kurtz, where all of the multiple time-based data series needs to be obtained before processing by weighted average can be performed. Further, the present disclosure has the advantage of better performance when the assumption of quasi-stationary noise over the period of the weighted averaging is not true. The present disclosure then adapts to the noise at each received response SResponse.</p><p>For at least the above reason, the cited reference combination does not disclose the subject matter of amended claim 1. Withdrawal of the rejection is respectfully requested.</p>
+<h1>Conclusion</h1>
+<p>In view of the foregoing, Applicant requests issuance of a notice of allowance. Should the Examiner feel that a telephone interview would be helpful to facilitate favorable</p><p>Page 9 of 10</p><p>Application No. 16/981,320SVG
+{EMBED HERE}
+0.186.543prosecution of the above-identified application, the undersigned invites the Examiner to contact the undersigned at the telephone number provided below. The absence in this reply of any comments on any contentions set forth in the Office Action should not be construed to be an acquiescence therein. Rather, no comment is needed since the rejections should be withdrawn for at least the foregoing reasons.</p><p>Respectfully submitted, RENNER, OTTO, BOISSELLE &amp; SKLAR, LLPBy  SVG
+{EMBED HERE}
+0.373.053 1621 Euclid Avenue, 19th FloorCleveland, Ohio 44115(216) 736-3183</p><p>Page 10 of 10</p></body></html>

@@ -1,0 +1,93 @@
+<html><head></head><body><h3>Date: 2025-02-13</h3>
+
+<h1><u>Listing of claims:</u></h1>
+<p><u>Amendments to Claims:</u></p><p>This listing of claims will replace all prior versions, and listings, of claims in the Application.</p><br>
+<br>
+1. (Currently Amended)   A device for assessing anesthesia of an animal subject in real-time from electroencephalography (EEG) measurements of the animal subject during application of anesthesia, the device comprising:a signal pre-processor comprising a first filter with a first filtering frequency band, a second filter with a second filtering frequency band, and a down-sampler to pre-process sequentially an incoming measured EEG signal from the EEG measurements of the animal subject;wherein the pre-processing comprises:<br>
+removing unwanted signals and noise from the incoming measured EEG signal using the first filter and the second filter to generate a filtered incoming measured EEG signal; and<br>
+down-sampling the filtered incoming measured EEG signal by the down- sampler to generate a down-sampled filtered incoming measured EEG signal;<br>
+an epoch generator configured to generate an epoch signal containing epochs of 1-second epoch duration each and 10% overlapping of consecutive epochs;wherein the epoch generator comprises a two-input multiplexer, an address generator, and a memory;<br>
+wherein the two-input multiplexer is configured to:<br>
+receive the down-sampled filtered incoming measured EEG signal, a feedback of the epoch signal, and a selector input from the address generator; and generate a multiplexer output from the down-sampled filtered incoming measured EEG signal or the feedback of the epoch signal based on the selector input;<br>
+wherein the address generator comprises:<br>
+<br>
+a slow counter configured to generate write addresses, and count from a slow counter start count to a slow counter end count in repeating slow count cycles; and<br>
+a fast counter configured to generate read addresses, and count from a fast counter start count to a fast counter end count in repeating fast count cycles that starts after each of the slow count cycles;<br>
+wherein the slow counter is further configured to repeat each of the slow count cycles after each of the fast count cycles;<br>
+wherein the fast counter is further configured to repeat each of the fast count cycles after each of the slow count cycles;<br>
+wherein the address generator is further configured to:generate the selector input to the multiplexer to generate the multiplexer output from the down-sampled filtered incoming measured EEG signal during each of the slow count cycles and from the feedback of the epoch signal during each of the fast count cycles;<br>
+wherein the epoch generator is configured to:receive the multiplexer output, the write addresses, and the read addresses;<br>
+store the received multiplexer output as data according to the received write addresses; and<br>
+retrieve data according to the received read addresses and output the retrieved data as a memory output;<br>
+wherein the epoch generator is configured to generate <u>the epoch signal </u>and output the epoch signal from the memory output;<br>
+a feature extractor configured to:receive the epoch signal from the epoch generator;<br>
+extract a derivative feature of the received epoch signal by computing a mean of accumulated squared-differences among the epochs in the received epoch signal <u>and a derivative of each of the epochs of the received epoch signal;</u> and<br>
+extract a variance feature of the received epoch signal by computing a square root of an average squared-deviation of the epochs in the received epoch signal <u>and a variance of each of the epochs of the received epoch signal;</u><br>
+<br>
+a classifier configured to:perform a feature mapping on the derivative feature and the variance feature to their original values and their squared values; and<br>
+set a classification boundary from output of the feature mapping to generate a classifier output <u>for each of the epochs of the received epoch signal,</u> the classifier output being either that the animal subject is awake or that the animal subject is anesthetized;<br>
+and a predictor comprising a predictor circuit configured to:accumulate a plurality of the <del>classifier's </del><u>classifier </u>outputs <u>corresponding to the epochs of the epoch signal;</u><br>
+<del>compute a decision value from the accumulated classifier</del>'<del>s outputs;</del><br>
+<del>determine a level of anesthesia of the animal subject from the decision value; </del>and<br>
+predict <u>a likelihood of </u>the animal <del>subject's </del><u>subject being under </u>anesthesia<del> condition </del><u>st</u><u>ate </u>from <del>a plurality of determined levels of anesthesia of the animal subject</del> the accumulated classifier outputs.<br>
+<br>
+2. (Previously Presented)  The system of claim 1, wherein the first filter of the signal pre- processor is configured to filter the incoming measured EEG signal at the first filtering frequency band to reduce a power-line interference of the incoming measured EEG signal.<br>
+<br>
+3. (Currently Amended)    The system of claim 1, wherein the second filter of the signal pre- processor is configured to <del>band-pass </del><u>low-pass </u>filter the incoming measured EEG signal at the second filtering frequency band to remove signal components in the incoming measured EEG signal that do not fall within [[a]] <u>an</u> electroencephalography frequency band of interest; and wherein the second filtering frequency band is within <del>a range of 0-250 </del>250 Hz.<br>
+<br>
+4. (Previously Presented)  The system of claim 1, wherein the incoming measured EEG signal is down sampled at least ten times after being subjected to the second filter using the down-sampler.<br>
+<br>
+5. (Canceled)<br>
+<br>
+<br>
+6. (Currently Amended)   The system of claim 1, wherein the computing of a mean of accumulated squared-differences among <del>different </del><u>the</u> epochs in the received epoch signal comprises:computing a difference between two consecutive epochs of the epochs in the received epoch signal and a square of the difference to obtain a squared difference;<br>
+repeating the computation to obtain a squared difference for each pair of consecutive epochs in the received epoch signal;<br>
+accumulating all of the squared differences obtained; and<br>
+determining the mean of the accumulated squared differences.<br>
+<br>
+7. (Previously Presented)  The system of claim 1, wherein the computing of a square root of an average squared-deviation of the epochs in the received epoch signal comprises:obtaining an absolute epoch value of each of the epochs in the received epoch signal;<br>
+accumulating all of the absolute epoch values obtained;<br>
+determining a mean of the accumulated absolute epoch values;<br>
+computing a difference between each of the absolute epoch values and the mean of the accumulated absolute epoch values and a square of each difference to obtain squared deviations;<br>
+computing an average of all of the squared deviations for all of the absolute epoch values;<br>
+and computing a square root of the average of all of the squared deviations.<br>
+<br>
+8. (Canceled)<br>
+<br>
+9. (Currently Amended)   The system of claim 1, wherein the predictor is configured to accumulate the plurality of the determined levels of anesthesia in terms of percentage and constrain an <del>output </del>value <u>of each of the determined levels of anesthesia </u>as a decision score between 0 and 1 with respect to a percentage of the anesthesia level of the animal subject, wherein a 100% anesthesia corresponds to the decision score of 1, while a 0% anesthesia corresponds to the decision score of 0.<br>
+<br>
+<br>
+10. (Currently Amended)   A method for determining depth of anesthesia (DOA) of an animal subject in real-time from electroencephalography (EEG) measurements, the method comprising:detecting and measuring an EEG signal of the animal subject using an EEG electrode;<br>
+filtering the EEG signal to remove unwanted signals and noise;<br>
+down-sampling the filtered EEG signal for reducing data size and accelerating subsequent processing without losing essential features of the EEG signal for subsequent classification;<br>
+generating from the down-sampled EEG signal an epoch signal containing epochs of 1- second epoch duration each and 10% overlapping of consecutive epochs;<br>
+extracting a derivative feature of the epoch signal by computing a mean of accumulated squared-differences among the epochs in the epoch signal <u>and a derivative of each of the epochs of the received epoch signal;</u><br>
+extracting a variance feature of the epoch signal by computing a square root of an average squared-deviation of the epochs in the epoch signal <u>and a variance of each of the epochs of the received epoch signal;</u><br>
+mapping the derivative feature and the variance feature to their original values and their squared values to generate mapped derivative features and mapped variance features for enhancing distinguishability of classification boundary and classification accuracy;<br>
+<u>generating a classifier output for each of the epochs of the received epoch signal by</u> classifying <u>each of </u>the <u>epochs of the received </u>epoch signal using the mapped derivative feature and the mapped variance feature as either that the animal subject is awake or that the animal subject is anesthetized, the classifier output value is a probability value of the animal subject is under anesthetized state <del>given the current epoch</del>; and<br>
+accumulating a plurality of the classifier output values for consecutive classified epochs and using the plurality of the classifier output values to predict a likelihood <del>percentage </del>of the animal subject being under anesthetized state.<br>
+<br>
+11. (Currently Amended)   The method of claim 10, further comprising:<del>increasing </del>the <del>prediction probability of </del><u>predicted </u>likelihood <del>that </del><u>of</u> the animal subject<del> will be </del><u>being </u>under anesthetized state in a successive epoch <u>is increased </u>if the animal subject has been under anesthetized state continuously in previous consecutive epochs; and<br>
+<br>
+<del>decreasing </del>the <del>prediction probability of </del><u>predicted </u>likelihood <del>that </del><u>of</u> the animal subject<del> with be </del><u>being </u>under anesthetized state in a successive epoch <u>is decreased </u>if the animal subject has been under awake state continuously in previous consecutive epochs.<br>
+<br>
+12. (Currently Amended)  The method of claim 10, further comprising:generating a confident prediction of the animal subject <del>will be </del><u>being </u>under awake state if the <del>prediction probability is at or below 25% </del><u>predicted </u>likelihood of the animal subject <del>will be</del><u> being </u>under <del>awake </del><u>anesthetized </u>state <u>is at or below 25%;</u> and<br>
+generating a confident prediction of the animal subject <del>will be </del><u>being </u>under anesthetized state if the <del>prediction probability is at or above 75% </del><u>predicted </u>likelihood of the animal subject<del> will be </del><u>being </u>under anesthetized state <u>is</u><u></u><u>at or above 75%.</u><br>
+<br>
+13. (Currently Amended)  The method of claim 10, wherein the filtering of the EEG signal to remove unwanted signals and noise <del>comprising </del><u>comprises:</u><u>low-pass </u>filtering the EEG signal at a filtering frequency band to remove signal components in the EEG signal that do not fall within [[a]] an electroencephalography frequency band of interest; and<br>
+wherein the filtering frequency band is within <del>a range of 0-250 </del>250 Hz.<br>
+<br>
+14. (Previously Presented)  The method of claim 10, wherein the computing of a mean of accumulated squared-differences among different epochs in the epoch signal comprises:computing a difference between two consecutive epochs of the epochs in the epoch signal and a square of the difference to obtain a squared difference;<br>
+repeating the computation to obtain a squared difference for each pair of consecutive epochs in the epoch signal;<br>
+accumulating all of the squared differences obtained; and<br>
+determining the mean of the accumulated squared differences.<br>
+<br>
+15. (Previously Presented)  The method of claim 10, wherein the computing of a square root of an average squared-deviation of the epochs in the epoch signal comprises:obtaining an absolute epoch value of each of the epochs in the epoch signal;<br>
+<br>
+accumulating all of the absolute epoch values obtained;<br>
+determining a mean of the accumulated absolute epoch values;<br>
+computing a difference between each of the absolute epoch values and the mean of the accumulated absolute epoch values and a square of each difference to obtain squared deviations;<br>
+computing an average of all of the squared deviations for all of the absolute epoch values;<br>
+and computing a square root of the average of all of the squared deviations.<br>
+
+</body></html>

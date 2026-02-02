@@ -1,0 +1,55 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Election/Restrictions
+Applicant elects claims 20-25 with traverse.
+Applicant's election with traverse of claims 20-25 in the reply filed on 30July2021 is acknowledged.  It is noted that Applicant has not specified what the grounds of traversal are for the claims, therefore this is not found persuasive.
+The requirement is still deemed proper and is therefore made FINAL.
+Claims 20-25 are the current claims hereby under examination.
+Specification
+The lengthy specification has not been checked to the extent necessary to determine the presence of all possible minor errors. Applicant’s cooperation is requested in correcting any errors of which applicant may become aware in the specification.
+Claim Objections
+Claims 20 and 23 are objected to because of the following informalities:
+Claim 20 should apparently read --the sensor mounting unit to adhere the sensor mounting unit to a skin surface…--
+Claim 23 should apparently read --wherein the sensor electronics hardware…--
+Appropriate correction is required.
+Claim Rejections - 35 USC § 102
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claim(s) 20, 22-24 is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Bohm (US 20120078071 A1).
+The claims are directed towards an analyte sensor system comprising:
+an analyte sensor;
+a sensor mounting unit, the analyte sensor coupled to the sensor mounting unit; and
+an adhesive pad coupled to the sensor mounting unit to mount to adhere the sensor mounting unit to a skin surface of a host; and
+a first heating element positioned to provide heat to the skin surface of the host when the analyte sensor is inserted.
+Regarding claim 20, Bohm teaches an analyte sensor system comprising (Paragraph [0116]): an analyte sensor (Paragraph [0116] and Fig. 2C, element 10); a sensor mounting unit (Paragraph [0143] and Fig. 2B, element 240), the analyte sensor coupled to the sensor mounting unit (Paragraph [0143]); and an adhesive pad coupled to the sensor mounting unit to mount to adhere the sensor mounting unit to a skin surface of a host (Paragraph [0146] and Fig. 2B, element 250); and a first heating element positioned to provide heat to the skin surface of the host when the analyte sensor is inserted (Paragraph [0273]).
+Regarding claim 22, Bohm teaches further comprising sensor electronics hardware (Paragraph [0143] and Figs. 2B and 2C, element 12), wherein the sensor electronics hardware is configured to provide power to the first heating element (Paragraph [0273] – Because the heating element is controlled by the sensor system and the sensor electronics controls the sensor system, that means that the sensor electronics will provide power to the first heating element).
+Regarding claim 23, Bohm teaches wherein the electronics hardware is configured to perform operations comprising: detecting that the analyte sensor has been inserted into a host (Paragraph [0143]); beginning to provide power to the first heating element (Paragraph [0273] – Because the heating element is controlled by the sensor system and the sensor electronics controls the sensor system, that means that the sensor electronics will provide power to the first heating element); and after a first time period, ceasing to provide power to the first heating element (When the sensor electronics is cut off, the sensor electronics will no longer provide power to the heating element).
+Regarding claim 24, Bohm teaches further comprising a sensor electronics unit installable to the sensor mounting unit (Paragraph [0143]), wherein the sensor electronics unit is configured to begin providing power to the first heating element after being installed to the sensor mounting unit (Paragraph [0273] – Because the heating element is controlled by the sensor system and the sensor electronics controls the sensor system, that means that the sensor electronics will provide power to the first heating element).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+Claim 21 is/are rejected under 35 U.S.C. 103 as being unpatentable over Bohm (US 20120078071 A1), as discussed in claim 20 above, in view of Holmes (US 20160235366 A1).
+Regarding claim 21, Bohm fails to teach wherein the heating element comprises at least a first reactant that reacts in the presence of air to generate heat.
+Holmes teaches wherein a heating element comprises at least a first reactant that reacts in the presence of air to generate heat (Paragraph [0172] of Holmes).
+Holmes is analogous art as it teaches a method of obtaining physiological data from a subject.
+It would have been obvious to one having ordinary skill in the art to modify the system of Bohm to have the heating element comprising at least a first reactant that reacts in the presence of air to generate heat, as taught by Holmes. This would have been modified as this is simple substitution of one known element (the heating element generating heat by a first reactant reacting with the presence of air) for another known element (the heating element generating heat by electrical connection) in order to obtain predictable results (heating the skin of a subject in order to improve sensor performance).
+Claim 25 is/are rejected under 35 U.S.C. 103 as being unpatentable over Bohm (US 20120078071 A1), as discussed in claim 20 above, further in view of Lee (US 20160058380 A1).
+Regarding claim 25, Bohm teaches an adhesive pad as mentioned in claim 20 above, but fails to explicitly teach wherein the adhesive pad comprises a permeability-enhancing substance.
+Lee teaches an adhesive pad comprises a permeability-enhancing substance (Paragraphs [0141]-[0142] and [0144] of Lee).
+Lee is analogous art as it teaches an analyte sensor system.
+It would have been obvious to one having ordinary skill in the art to modify the system of Bohm to have an adhesive pad comprising a permeability-enhancing substance, as taught by Lee. This would have been modified in order to easily remove the adhesive pad from the host's skin (Paragraph [0141] of Lee).
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure. Estes (US 20130245981 A1 - cited by Applicant) and Brister (US 20060020187 A1 - cited by Applicant) teaches an analyte sensor system comprising an analyte sensor, a sensor mounting unit with an analyte sensor coupled to it, and an adhesive pad. Simpson (US 20150289788 A1) teaches an analyte sensor system comprising: an analyte sensor; a sensor mounting unit, the analyte sensor coupled to the sensor mounting unit; and an adhesive pad coupled to the sensor mounting unit to mount to adhere the sensor mounting unit to a skin surface of a host; and a first heating element positioned to provide heat to the skin surface of the host when the analyte sensor is inserted.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to TYRA F BOOKHART whose telephone number is (571)272-7130.  The examiner can normally be reached on M-F 8-5 EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Jason Sims can be reached on (571) 272-7540.  The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see https://ppair-my.uspto.gov/pair/PrivatePair. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/T.F.B./            Examiner, Art Unit 3791
+/ETSUB D BERHANU/            Primary Examiner, Art Unit 3791

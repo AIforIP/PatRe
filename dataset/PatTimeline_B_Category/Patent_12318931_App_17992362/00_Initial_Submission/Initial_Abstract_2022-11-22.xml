@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2022-11-22</h3>
+<p>764974 (A17153WOUS)</p><p>18</p>
+<h1>ABSTRACT OF THE DISCLOSURE</h1>
+<p>A robot application development system and method includes a robot application unit that determines a robot application, which defines the industrial robot in a robot workspace. An input interface receives robot application information. An object data interface receives work piece information. A gripper finger design unit determines a gripper finger design. The robot application unit determines the robot application using the robot application information. The gripper finger design unit determines the gripper finger design using the work piece information and the robot application information.</p></body></html>

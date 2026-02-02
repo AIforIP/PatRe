@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2023-08-17</h3>
+
+<h1>ABSTRACT</h1>
+<p>An automatic target image acquisition and calibration system for application in</p><p>a defect inspection system is disclosed. During the defect inspection system working normally, the automatic target image acquisition and calibration system is configured to find a recognition structure from an article under inspection, and then determines</p><p>a relative position and a relative 3D coordinate if the article. Therefore, a robotic arm is controlled to carry a camera to precisely face each of a plurality of inspected surfaces of the article, such that a plurality of article images are acquired by the camera. It is worth explaining that, during the defect inspection of the article, there is no need to modulate an image acquiring height and an image acquiring angle of</p><p>the camera and an illumination of a light source.</p><p>18</p>5
+10
+</body></html>

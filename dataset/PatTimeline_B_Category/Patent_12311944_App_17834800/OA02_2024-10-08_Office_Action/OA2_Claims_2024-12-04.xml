@@ -1,0 +1,69 @@
+<html><head></head><body><h3>Date: 2024-12-04</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<br>
+1.
+(Previously Presented): A method for restrained movement of a vehicle comprising a drive unit for accelerating the vehicle, and a braking unit for braking the vehicle, comprising:<br>
+generating a restraining drive torque via the drive unit;<br>
+generating a braking torque, via the braking unit, to compensate for the restraining drive torque and thereby generating a restraining torque in the vehicle; and<br>
+braking the vehicle by reducing the restraining drive torque; and<br>
+reducing the restraining torque by reducing the braking torque and the restraining drive torque, wherein the braking torque is reduced with a smaller torque reduction gradient than the restraining drive torque during the braking of the vehicle.<br>
+2.
+(Original): The method according to claim 1, further comprising accelerating the vehicle via an acceleration drive torque before generating the restraining torque.<br>
+3.
+(Original): The method according to claim 2, wherein generating the restraining torque comprises generating the restraining torque when the vehicle is at a standstill before accelerating the vehicle via the acceleration drive torque.<br>
+4.
+(Original): The method according to claim 1, further comprising modifying the braking torque depending on a variably set restraining drive torque and/or depending on a variably set acceleration drive torque.<br>
+5.
+(Original): The method according to claim 1, further comprising reducing the restraining torque when the vehicle is at a standstill.<br>
+<br>
+<br>
+<br>
+<br>
+6.    (Original): The method according to claim 1, further comprising accelerating the vehicle using an acceleration drive torque for a driving maneuver to position the vehicle in a predefined holding position at a speed lower than 10 km/h.<br>
+<br>
+7.    (Original): The method according to claim 1, wherein generating the restraining torque comprises generating the braking torque having a greater torque generating gradient than the restraining drive torque.<br>
+<br>
+8.    (Currently Amended ): The method according to claim <u>51,</u>wherein reducing the restraining torque comprises <u>dynamically ad</u><u>j</u><u>ustin</u><u>g</u><u> the braking tor</u><u>q</u><u>ue based on a slope on which the vehicle is moving</u><del>reducing the bra</del><del>k</del><del>ing torque with a lesser torque reduction gradient than the restraining drive torque</del>.<br>
+<br>
+9.    (Original): The method according to claim 5, wherein reducing the restraining torque comprises reducing the braking torque after reducing the restraining drive torque.<br>
+<br>
+10.   (Original): The method according to claim 1, wherein generating the restraining torque comprises generating the braking torque before generating the restraining drive torque.<br>
+<br>
+11.   (Previously Presented): An apparatus for restrained movement of a vehicle, comprising:a setting unit;<br>
+a drive unit, operatively coupled to the setting unit, for generating a restraining drive torque; and<br>
+a braking unit operatively coupled to the setting unit, for generating a braking torque to compensate for the restraining drive torque and generating a restraining torque in the vehicle,<br>
+wherein the setting unit is configured to:<br>
+brake the vehicle by reducing the restraining drive torque; and<br>
+reduce the restraining torque by reducing the braking torque and the restraining drive torque, wherein the braking torque is reduced with a smaller torque reduction gradient than the restraining drive torque during the braking of the vehicle.<br>
+<br>
+<br>
+<br>
+<br>
+12.   (Original): The apparatus according to claim 11, wherein the drive unit is configured to accelerate the vehicle via an acceleration drive torque before the restraining torque is generated.<br>
+<br>
+13.   (Original): The apparatus according to claim 12, wherein the braking unit is configured to generate the restraining torque by generating the restraining torque when the vehicle is at a standstill before the vehicle is accelerated via the acceleration drive torque.<br>
+<br>
+14.    (Original): The apparatus according to claim 11, wherein the braking unit is configured to modify the braking torque depending on a variably set restraining drive torque and/or depending on a variably set acceleration drive torque.<br>
+<br>
+15.   (Original): The apparatus according to claim 11, wherein the braking unit is configured to reduce the restraining torque when the vehicle is at a standstill.<br>
+<br>
+16.   (Original): The apparatus according to claim 11, wherein the drive unit is configured to accelerate the vehicle using an acceleration drive torque for a driving maneuver to position the vehicle in a predefined holding position at a speed lower than 10 km/h.<br>
+<br>
+17.   (Original): The apparatus according to claim 11, wherein the braking unit is configured to generate the restraining torque by generating the braking torque having a greater torque generating gradient than the restraining drive torque.<br>
+<br>
+18.   (Currently Amended): The apparatus according to claim <u>-511,</u>wherein the braking unit is configured to reduce the restraining torque by <u>dynamically ad</u><u>j</u><u>ustin</u><u>g</u><u> the braking tor</u><u>q</u><u>ue based on a slope on which the vehicle is moving</u><del>one of:</del><br>
+<del>reducing the bra</del><del>k</del><del>ing torque with a lesser torque reduction gradient than the restraining drive torque, or reducing the bra</del><del>k</del><del>ing torque after reducing the restraining drive torque</del>.<br>
+<br>
+<br>
+<br>
+19.    (Original): The apparatus according to claim 11, wherein the braking unit is configured to generate the restraining torque by generating the braking torque before generating the restraining drive torque.<br>
+<br>
+20.    (Previously Presented): A non-transitory computer-readable medium including executable instructions that are configured to cause restrained movement in a vehicle by performing a method comprising:generating a restraining drive torque via a drive unit;<br>
+generating a braking torque, via a braking unit, to compensate for the restraining drive torque and thereby generating a restraining torque in the vehicle; and<br>
+braking the vehicle by reducing the restraining drive torque; and<br>
+reducing the restraining torque by reducing the braking torque and the restraining drive torque, wherein the braking torque is reduced with a smaller torque reduction gradient than the restraining drive torque during the braking of the vehicle.<br>
+
+</body></html>

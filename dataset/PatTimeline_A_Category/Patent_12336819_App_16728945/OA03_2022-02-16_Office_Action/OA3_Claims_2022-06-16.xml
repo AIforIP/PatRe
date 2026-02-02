@@ -1,0 +1,123 @@
+<html><head></head><body><h3>Date: 2022-06-16</h3>
+<p><u>IN THE CLAIMS</u></p>
+<p>Please amend the claims as follows:</p>
+<br>
+
+<br>
+1. - 19. (Cancelled)
+
+218
+<br>
+<br>
+
+<br>
+20.    (Currently Amended) An analyte sensor system comprising: 
+<br>
+an implantable analyte sensor <u>configured to continuously monitor at least one analyte</u>; 
+<br>
+a sensor mounting unit, the implantable analyte sensor coupled to the sensor mounting unit; 
+<br>
+and an adhesive pad coupled to the sensor mounting unit to adhere the sensor mounting unit to a skin surface of a host; and 
+<br>
+a first heating element included in the adhesive pad and positioned to provide heat to the skin surface of the host when the implantable analyte sensor is inserted <u>into the host</u>. 
+
+<br>
+
+<br>
+21.    (Currently Amended) The analyte sensor system of claim 20, wherein the <u>first</u> heating element comprises at least a first reactant that reacts in the presence of air to generate heat.
+
+<br>
+
+<br>
+22.    (Currently Amended) The analyte sensor system of claim 20, further comprising: 
+<br>
+sensor electronics hardware, wherein the sensor electronics hardware is configured to provide power to the first heating element. 
+
+<br>
+
+<br>
+23.    (Previously Presented) The analyte sensor system of claim 22, wherein the sensor electronics hardware is configured to perform operations comprising: 
+<br>
+detecting that the implantable analyte sensor has been inserted into a host; 
+<br>
+beginning to provide power to the first heating element; and 
+<br>
+after a first time period, ceasing to provide power to the first heating element. 
+<br>
+
+<br>
+24.    (Currently Amended) The analyte sensor system of claim 20, further comprising. a sensor electronics unit installable to the sensor mounting unit, wherein the sensor electronics unit is configured to begin providing power to the first heating element after being installed to the sensor mounting unit.
+
+<br>
+
+<br>
+25.    (Currently Amended) The analyte sensor <u>system</u> of claim 20, wherein the adhesive pad comprises a permeability-enhancing substance.
+
+<br>
+
+<br>
+26.-78. (Cancelled)
+
+2777
+<br>
+<br>
+
+<br>
+79. (New) The analyte sensor system of claim 20, further comprising: 
+<br>
+the sensor mounting unit comprising a first contact and a second contact; and 
+<br>
+a battery electrically coupled at the sensor mounting unit, the battery configured to provide a bias voltage across the first contact and the second contact. 
+
+<br>
+
+<br>
+80. (New) The analyte sensor system of claim 20, further comprising: 
+<br>
+a control circuit configured to perform operations comprising: 
+<br>
+detecting insertion of the implantable analyte sensor into the host; and 
+<br>
+responsive to detecting insertion of the implantable analyte sensor into the host, electrically coupling a battery to provide a bias voltage to the implantable analyte sensor. 
+
+<br>
+
+<br>
+81.    (New) The analyte sensor system of claim 80, wherein detecting insertion of the implantable analyte sensor into the host comprises detecting contact with skin of the host.
+
+<br>
+
+<br>
+82.    (New) The analyte sensor system of claim 80, wherein the battery is a first battery, the system further comprising: 
+<br>
+an electronics unit comprising a second battery and a regulator, wherein the regulator is configured to regulate the bias voltage provided to the implantable analyte sensor by the first battery and the second battery. 
+<br>
+
+<br>
+83.    (New) An analyte sensor system comprising: 
+<br>
+an analyte sensor configured to continuously monitor at least one analyte; 
+<br>
+a sensor mounting unit, the analyte sensor being coupled to the sensor mounting unit; 
+<br>
+an adhesive pad coupled to the sensor mounting unit configured to adhere the sensor mounting unit to a skin surface of a host; 
+<br>
+a plurality of heating elements coupled to the adhesive pad; and 
+<br>
+sensor electronics hardware configured to provide power to the plurality of heating elements; 
+<br>
+wherein the sensor electronics hardware is configured to perform operations comprising: 
+<br>
+detecting that the analyte sensor has been inserted into a host; 
+<br>
+providing power to the plurality of heating elements; and 
+<br>
+in response to determining that a response of the analyte sensor is substantially linear, ceasing to provide power to the plurality of heating elements. 
+
+<br>
+
+<br>
+84. (New) The analyte sensor system of claim 83, wherein the sensor mounting unit comprises a first contact and a second contact, the system further comprising: 
+<br>
+a battery electrically coupled at the sensor mounting unit, the battery configured to provide a bias voltage across the first contact and the second contact. 
+</body></html>

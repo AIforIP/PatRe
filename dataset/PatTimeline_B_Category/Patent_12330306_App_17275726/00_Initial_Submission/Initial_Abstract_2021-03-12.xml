@@ -1,0 +1,62 @@
+<html><head></head><body><h3>Date: 2021-03-12</h3>
+<h1>(12) INTERNATIONAL APPLICATION PUBLISHED UNDER THE PATENT COOPERATION TREATY (PCT)</h1>
+
+<p>(19) World Intellectual Property Organization</p>
+<p>International Bureau</p>
+<p>(43) International Publication Date 19 March 2020 (19.03.2020)</p>
+<p>(10) International Publication Number</p>
+<p>WO 2020/053195 Al</p>
+
+<h1>WIPO I PCT</h1>
+
+<p>(51) International Patent Classification:</p>
+
+<h1>B25J9/16 (2006.01)</h1>
+
+<p>(21) International Application Number:</p>
+
+<h1>PCT/EP2019/074075</h1>
+
+<p>(22) International Filing Date:</p>
+<p>10 September 2019 (10.09.2019)</p>
+<p>(25) Filing Language:</p>
+<p>(26) Publication Language:</p>
+<p>(30) Priority Data:</p>
+<p>18194683.1 English English 14 September 2018 (14.09.2018) EP</p>
+<p>(71) Applicant: UNIVERSAL ROBOTS A/S [DK/DK]; Ener- givej 25, 5260 Odense S (DK).</p>
+<p>(72) Inventor: MADSEN, Emil; Skanderborgvej 6, 4tv, 8000 Aarhus C (DK).</p>
+<p>(74) Agent: FRUELUND, Morten; Energivej 25, 5260 Odense</p>
+
+<h1>S (DK).</h1>
+
+<p>(81) Designated States (unless otherwise indicated, for every kind of national protection available): AE, AG, AL, AM, AO, AT, AU, AZ, BA, BB, BG, BH, BN, BR, BW, BY, BZ, CA, CH, CL, CN, CO, CR, CU, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, ES, Fl, GB, GD, GE, GH, GM, GT, HN, HR, HU, ID, IL, IN, IR, IS, JO, JP, KE, KG, KH, KN, KP,</p>
+<p>KR, KW, KZ, LA, LC, LK, LR, LS, LU, LY, MA, MD, ME,</p>
+<p>MG, MK, MN, MW, MX, MY, MZ, NA, NG, NI, NO, NZ,</p>
+<p>OM, PA, PE, PG, PH, PL, PT, QA, RO, RS, RU, RW, SA,</p>
+<p>SC, SD, SE, SG, SK, SL, SM, ST, SV, SY, TH, TJ, TM, TN, TR, TT, TZ, UA, UG, US, UZ, VC, VN, ZA, ZM, ZW.</p>
+<p>(84) Designated States (unless otherwise indicated, for every kind of regional protection available): ARIPO (BW, GH, GM, KE, LR, LS, MW, MZ, NA, RW, SD, SL, ST, SZ, TZ, UG, ZM, ZW), Eurasian (AM, AZ, BY, KG, KZ, RU, TJ, TM), European (AL, AT, BE, BG, CH, CY, CZ, DE, DK, EE, ES, Fl, FR, GB, GR, HR, HU, IE, IS, IT, LT, LU, LV, MC, MK, MT, NL, NO, PL, PT, RO, RS, SE, SI, SK, SM, TR), OAPI (BF, BJ, CF, CG, CI, CM, GA, GN, GQ, GW, KM, ML, MR, NE, SN, TD, TG).</p>
+<p>Declarations under Rule 4.17:</p>
+<p>-    as to applicant's entitlement to apply for and be granted a patent (Rule 4.]17(n)) -    as to the applicant's entitlement to claim the priority of the earlier application (Rule 4.17(iii)) Published:</p>
+<p>-    with international search report (Art. 21(3))</p>
+<p>(54) Title: OBTAINING THE GEAR STIFFNESS OF A ROBOT JOINT GEAR OF A ROBOT ARM 303 304i 3041-1</p>
+
+<h1>D</h1>
+<h1>0</h1>
+
+<p>30i 32</p>
+<p>327i</p>
+<p>- 3291</p>
+<p>-303</p>
+<p>5i</p>
+<p>(57) Abstract: A method of obtaining the gear stiffness of a robot joint gear of a robot joint of a robot arm, where the robot joint is connectable to at least another robot joint. The robot joint comprises a joint motor having a motor axle configured to rotate an output axle via the robot joint gear. The method comprises the steps of: - applying a motor torque to the motor axle using the joint motor; - obtaining the angular position of the motor axle; - obtaining the angular position of the output axle; - determining the gear stiffness based on at least the angular position of the motor axle, the angular position of the output axle and a dynamic model of the robot arm.</p>
+
+<h1>FIG. 3</h1>
+
+<p>df mf 0</p>
+
+<h1>0O</h1>
+
+0
+0
+
+</body></html>

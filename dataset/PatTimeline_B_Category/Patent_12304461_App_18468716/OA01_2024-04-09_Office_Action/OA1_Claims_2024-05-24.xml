@@ -1,0 +1,67 @@
+<html><head></head><body><h3>Date: 2024-05-24</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims replaces all prior versions of the claims.</p><br>
+<br>
+1.   (Currently Amended) A method, comprising:<u>detecting </u><del>determining, </del>by a processing node <u>that a transport has parked at a first location </u><del>, a modified pickup time by a transport based on a conclusion </del>of an event;<br>
+<u>determine by the processing node a pickup location where the trans</u><u>p</u><u>ort is to be located at a </u><u>p</u><u>icku</u><u>p</u><u> time, wherein the </u><u>p</u><u>icku</u><u>p</u><u> location and the pickup time are based on a time of a conclusion of the event obtained from a device of an occupant of the transport</u><u>;</u><u></u>and<br>
+<u>in response to the processing node receiving a modified pickup time for the conclusion of the event from the device, causing by the </u><u>p</u><u>rocessing node </u><del>moving </del>the transport to <u>move to a second location </u>[[an]] intermediate<del> location </del>between <u>the first </u>[[a]] location <u>and the pickup location </u><del>of the transport after it has been parked and a modified pickup location </del>at the modified pickup time.<br>
+<br>
+2.   (Currently Amended) The method of claim 1, <u>further </u>comprising:<u>causing </u><del>moving </del>the transport to <u>move to </u>the <del>modified </del>pickup location when <u>the </u>[[a]] device <del>associated with the transport </del>approaches the <del>modified</del> pickup location.<br>
+<br>
+3.   (Currently Amended) The method of claim 1, <u>wherein the detecting that the trans</u><u>p</u><u>ort has </u><u>p</u><u>arked at the first location further com</u><u>p</u><u>rises</u><del> comprising</del>:detecting <u>that </u><del>the parking of </del>the transport <u>has parked </u>at the <u>first</u> location based on video data received from at least one camera.<br>
+<br>
+<br>
+4.   (Currently Amended) The method of claim 1, <u>wherein the detectin</u><u>g</u><u> that the transport has parked at the first location further comprises</u><del> comprising</del>:detecting <u>that </u><del>the parking of </del>the transport <u>has parked </u>at the <u>first</u> location based on a change in <u>an</u><del>transport </del>operation status <u>of the transport.</u><br>
+<br>
+5.   (Currently Amended) The method of claim 1, <u>wherein the detectin</u><u>g</u><u> that the transport has parked at the first location further comprises</u><del> comprising</del>:detecting <u>that </u><del>the parking of </del>the transport <u>has parked </u>at the <u>first</u> location based on a <u>sensor of the </u>transport <del>sensor </del>indicating <u>that the </u>[[an]] occupant of the transport has exited the transport.<br>
+<br>
+6.   (Currently Amended) The method of claim 1, comprising:receiving an agreement to move the transport from <u>the </u>[[a]] device<del> associated with the transport</del>.<br>
+<br>
+7.   (Currently Amended) The method of claim 1, comprising:determining the <u>second </u><del>intermediate </del>location based on one or more vehicles vacating a parking spot between the <u>first </u>location <del>of the parked transport </del>and the <del>modified </del>pickup location.<br>
+<br>
+8.   (Currently Amended) A system, comprising:a processor <u>that, when executin</u><u>g</u><u> instructions stored in a memory</u><u>,</u><u> is configured </u><del>;</del><del> a memory on which are stored machine readable instructions that when executed by the processor, cause the processor </del>to:<br>
+determine a <u>p</u><u>icku</u><u>p</u><u> location where the trans</u><u>p</u><u>ort is to be located at a </u><u>p</u><u>icku</u><u>p</u><u> time, wherein the pickup location and the pickup time are based on a time of a conclusion of the event obtained from a device of an occupant of</u><br>
+<br>
+<u>the transport</u><del> modified pickup time by a transport based on a conclusion of an event</del>; and<u>in response to a modified </u><u>p</u><u>icku</u><u>p</u><u> time for the conclusion of the event being received from the device, cause </u><del>move </del>the transport to <u>move to a second location </u>[[an]] intermediate <del>location </del>between <u>the first </u>[[a]] location<u> and the pickup location </u><del>of the transport after it has been parked and a modified pickup location </del>at the modified pickup time.<br>
+<br>
+9.   (Currently Amended) The system of claim 8, wherein the <u>processor is</u><del> instructions are </del>further <u>configured </u>to:cause <del>the processor to instruct </del>the transport to move <del>the transport </del>to the <del>modified </del>pickup location when <u>the </u>[[a]] device <del>associated with the transport </del>approaches the <del>modified </del>pickup location.<br>
+10. (Currently Amended) The system of claim 8, wherein <u>when the processor detects that the transport has parked at the first location, </u>the<u> processor is </u><del>instructions are </del>further <u>configured </u><del>to cause the processor </del>    detect <u>that </u>the transport <u>ha</u><u>s</u><u></u>parked at the <u>first </u>location based on video data <del>received </del>from at least one camera.SVG
+{EMBED HERE}
+0.140.237<br>
+11. (Currently Amended) The system of claim 8, wherein <u>when the processor detects that the transport has parked at the first location, </u>the<u> processor is </u><del>instructions are </del>further <u>configured </u><del>to cause the processor </del>    detect <u>that </u>the transport <u>ha</u><u>s</u><u></u>parked <u>at</u> the <u>first </u>location based on a change in an<del>transport </del>operation status <u>of the transport.</u>SVG
+{EMBED HERE}
+0.140.237<br>
+12. (Currently Amended) The system of claim 8, wherein <u>when the processor detects that the transport has parked at the first location, </u>the<u> processor is </u><del>instructions are </del>further <u>configured </u><del>to cause the processor </del>SVG
+{EMBED HERE}
+0.140.237<br>
+<br>
+<br>
+detect <u>that </u>the transport <u>ha</u><u>s</u><u></u>parked at the <u>first </u>location based on a<u> sensor of the </u>transport <del>sensor </del>indicating <u>that the </u>[[an]] occupant of the transport has exited the transport.<br>
+<br>
+13. (Currently Amended) The system of claim 8, wherein the <u>processor is</u><del> instructions are </del>further <u>configured </u>to:<del>cause the processor to </del>receive an agreement to move the transport from <u>the </u>[[a]] device associated with the transport.<br>
+<br>
+14. (Currently Amended) The system of claim 8, wherein the <u>processor is</u><del> instructions are </del>further <u>configured </u>to:determine the <u>second </u><del>intermediate </del>location based on one or more vehicles vacating a parking spot between the <u>fi</u><u>rs</u><u>t </u>location <del>of the parked transport </del>and the <del>modified </del>pickup location.<br>
+<br>
+15. (Currently Amended) A non-transitory <u>computer-readable </u><del>computer readable </del>medium comprising instructions[[,]] that. when <u>executed </u><del>read </del>by a processor, cause the processor to perform:<u>detecting </u><del>determining </del><u>that a transport has parked at a first location </u><del>, a modified pickup time by a transport based on a conclusion </del>of an event;<br>
+<u>determine a pickup location where the transport is to be located at a </u><u>p</u><u>icku</u><u>p</u><u> time, wherein the </u><u>p</u><u>icku</u><u>p</u><u> location and the </u><u>p</u><u>icku</u><u>p</u><u> time are based on a time of a conclusion of the event obtained from a device of an occupant of the transport</u><u>;</u><u></u>and<br>
+<u>in response to receiving a modified pickup time for the conclusion of the event from the device, causing </u><del>moving </del>the transport to <u>move to a second location </u>[[an]] intermediate <del>location </del>between <u>the first </u>[[a]] location<u> and the pickup location </u><del>of the transport after it has been parked and a modified pickup location </del>at the modified pickup time.<br>
+<br>
+<br>
+16. (Currently Amended) The non-transitory <u>computer-readable </u><del>computer readable </del>medium of claim 15, <u>wherein the instructions </u>further <u>cause the processor to perform </u>comprising:<u>causing </u><del>moving </del>the transport to <u>move to </u>the <del>modified </del>pickup location when <u>the </u>[[a]] device <del>associated with the transport </del>approaches the <del>modified</del> pickup location.<br>
+17. (Currently Amended) The non-transitory <u>computer-readable </u><del>computer readable </del>medium of claim 15, <u>wherein the detecting that the transport has parked at the first location further comprises</u><del> further comprisi  </del>  detecting <u>that </u><del>the parking of </del>the transport <u>has parked </u>at the <u>first</u> location based on video data received from at least one camera.SVG
+{EMBED HERE}
+0.1270.267<br>
+18. (Currently Amended) The non-transitory <u>computer-readable </u><del>computer readable </del>medium of claim 15, <u>wherein the detecting that the transport has parked at the first location further comprises</u><del> further comprisi  </del>  detecting <u>that </u><del>the parking of </del>the transport <u>has parked </u>at the <u>first</u> location based on a change in <u>an</u><del>transport </del>operation status <u>of the transport.</u>SVG
+{EMBED HERE}
+0.1270.267<br>
+19. (Currently Amended) The non-transitory <u>computer-readable </u><del>computer readable </del>medium of claim 15, <u>wherein the detecting that the transport has parked at the first location further comprises</u><del> further comprisi </del>SVG
+{EMBED HERE}
+0.1270.267<del></del>  detecting <u>that </u><del>the parking of </del>the transport <u>has parked </u>at the <u>first</u> location based on a <u>sensor of the </u>transport <del>sensor </del>indicating <u>that the </u>[[an]] occupant of the transport has exited the transport.<br>
+<br>
+<br>
+20. (Currently Amended) The non-transitory <u>computer-readable </u><del>computer readable </del>medium of claim 15, <u>wherein the detectin</u><u>g</u><u> that the transport has parked at the first location further comprises</u><del> further comprisi </del>SVG
+{EMBED HERE}
+0.1270.267<del></del><del></del> determining the <u>second </u><del>intermediate </del>location based on one or more vehicles vacating a parking spot between the <u>fi</u><u>rs</u><u>t </u>location <del>of the parked transport </del>and the <del>modified </del>pickup location.<br>
+
+</body></html>

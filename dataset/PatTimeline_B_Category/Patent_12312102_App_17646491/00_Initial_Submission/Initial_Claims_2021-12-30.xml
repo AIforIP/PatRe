@@ -1,0 +1,144 @@
+<html><head></head><body><h3>Date: 2021-12-30</h3>
+ Claims We Claim:
+<br>
+
+<br>
+1. A controller for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft, wherein the normal operation includes moving towards a target in the keep-away zone, and 
+<br>
+wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and a failure of at least one component of the spacecraft, the controller comprising: at least one processor; 
+<br>
+and a memory having instructions stored thereon that, when executed by the at least one processor, cause the controller to: 
+<br>
+execute, during the normal operation of the spacecraft, a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep-away zone, wherein the state of the spacecraft includes a location of the spacecraft and at least one or a combination of a velocity and an acceleration of the spacecraft, wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft; and 
+execute, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for the corresponding control invariant set to produce abort control commands moving the spacecraft while 
+  avoiding the keep-away zone for any state within the corresponding control invariant set.
+<br>
+
+<br>
+2. A spacecraft for moving in a multi-object celestial system, comprising: 
+<br>
+the controller of claim 1; 
+<br>
+a set of thrusters configured to change the state of a spacecraft according to a sequence of control commands produced by the nominal and the abort control laws; 
+<br>
+a set of sensors configured to produce measurements indicative of the state of the spacecraft; and 
+<br>
+a circuitry configured to detect the abnormal operation of the spacecraft.
+<br>
+
+<br>
+3. The controller of claim 1, wherein the controller is configured to avoid the unauthorized entry of the spacecraft into the keep-away zone with a prescribed safety likelihood while the motion of the spacecraft is subject to an unbounded stochastic uncertainty, wherein each of the control invariant set inner- approximates the values of the state of the spacecraft to guarantee control invariance with a first likelihood of the unbounded stochastic uncertainty greater than the prescribed safety likelihood, and wherein the nominal control law is configured to produce a control command maintaining the state of the spacecraft within the union of the plurality of control invariant sets with a second likelihood selected such that a product of the first likelihood and the second likelihood equals or greater than the prescribed safety likelihood.
+<br>
+
+<br>
+4. The controller of claim 3, wherein each of the control invariant sets is a stochastic reachable set determined for a possible abnormal operation defined 3 by the first likelihood of the unbounded stochastic uncertainty.
+<br>
+
+<br>
+5. The controller of claim 3, wherein each of the control invariant sets is a robust control invariant set determined for the nominal control law with a bounded non-stochastic uncertainty corresponding to the first likelihood on the unbounded stochastic uncertainty.
+<br>
+
+<br>
+6. The controller of claim 5, wherein the nominal control law is a model predictive control (MPC) with a model of dynamics of the spacecraft having the unbounded stochastic uncertainty, and the nominal control law ensures that the spacecraft stays within the robust controlled invariant sets with a second likelihood, along with other constraints including one or a combination of actuation constraints and nominal trajectory approaches the keep-away set without entering it.
+<br>
+
+<br>
+7. The controller of claim 6, wherein the probabilistic distribution of process noise specifies one or a combination of an actuation mismatch of spacecraft thrusters and unmodeled dynamics of the motion of the spacecraft.
+<br>
+
+<br>
+8. The controller of claim 6, wherein the unbounded stochastic uncertainty includes a probabilistic distribution of measurement noise of an estimation of the state of the spacecraft, wherein the MPC estimates a sequence of control steps over a prediction horizon acting on the spacecraft with the state having a bounded measurement noise with a range of values bounded to have a likelihood on the probabilistic distribution of the measurement noise greater than the first likelihood.
+<br>
+
+<br>
+9. The controller of claim 8, wherein the state of the spacecraft is determined 2 by a probabilistic filter subject to the measurement noise.
+<br>
+
+<br>
+10. The controller of claim 9, wherein the probabilistic filter includes one or a combination of a Kalman filter and a particle filter.
+<br>
+
+<br>
+11. The controller of claim 3, wherein the constraints maintaining the state of the spacecraft within the union of the plurality of control invariant sets require their satisfaction with the second likelihood.
+<br>
+
+<br>
+12. The controller of claim 11, wherein the constraints include a chance constraint.
+<br>
+
+<br>
+13. The controller of claim 11, wherein the constraints include one or a combination of a chance constraint requiring the state of the spacecraft be outside the keep-away zone, an actuation constraint, and a chance constraint requiring measurements of the spacecraft be within the plurality of control invariant sets.
+<br>
+
+<br>
+14. A method for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft, wherein the normal operation includes moving toward the keep-away zone, and wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and a failure of at least one component of the spacecraft, the method comprising: 
+executing, during the normal operation of the spacecraft, a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep-away zone, wherein the state of the spacecraft includes a location of the spacecraft and at least one or a 13 combination of a velocity and an acceleration of the spacecraft, wherein each of 
+  the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft; and 
+<br>
+executing, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the corresponding control invariant set.
+<br>
+
+<br>
+15. The method of claim 15, wherein the method further comprises avoiding the unauthorized entry of the spacecraft into the keep-away zone with a prescribed safety likelihood while the motion of the spacecraft is subject to an unbounded stochastic uncertainty, wherein each of the control invariant set inner- approximates the values of the state of the spacecraft to guarantee control invariance with a first likelihood of the unbounded stochastic uncertainty greater than the prescribed safety likelihood, and wherein the nominal control law is configured to produce a control command maintaining the state of the spacecraft within the union of the plurality of control invariant sets with a second likelihood selected such that a product of the first likelihood and the second likelihood equals or greater than the prescribed safety likelihood.
+<br>
+
+<br>
+16. The method of claim 16, wherein each of the control invariant sets is a stochastic reachable set determined for a possible abnormal operation by the 3 first likelihood of the unbounded stochastic uncertainty.
+<br>
+
+<br>
+17. The method of claim 16, wherein each of the control invariant sets is a robust control invariant set determined for the nominal control law with a bounded non-stochastic uncertainty corresponding to the first likelihood on the unbounded stochastic uncertainty.
+<br>
+
+<br>
+18. The method of claim 16, wherein the unbounded stochastic uncertainty includes a probabilistic distribution of process noise.
+<br>
+
+<br>
+19. A non-transitory computer-readable storage medium embodied thereon a program executable by a processor for performing a method for controlling a motion of a spacecraft in a multi-object celestial system while avoiding an unauthorized entry into a keep-away zone during a normal and an abnormal operation of the spacecraft, wherein the normal operation includes moving toward the keep-away zone, and wherein the abnormal operation includes one or a combination of a failure to receive an authorization to enter the keep-away zone and a failure of at least one component of the spacecraft, the method comprising: 
+<br>
+executing, during the normal operation of the spacecraft, a nominal control law subject to constraints on maintaining a state of the spacecraft within a union of a plurality of control invariant sets of values of the state of the spacecraft that partially or completely enclose the keep-away zone, wherein the state of the spacecraft includes a location of the spacecraft and at least one or a combination of a velocity and an acceleration of the spacecraft, wherein each of the plurality of control invariant sets is determined such that when the state of the spacecraft is within a control invariant set there is a control command produced by the nominal control law that maintains the state of the spacecraft within the control invariant set despite internal and external forces acting on the spacecraft; and 
+
+  executing, upon detecting the abnormal operation of the spacecraft, an abort control law associated with the control invariant set including a current state of the spacecraft, wherein at least some different abort control laws are associated with at least some different control invariant sets, and wherein the abort control law is jointly and interdependently determined for the corresponding control invariant set to produce abort control commands moving the spacecraft while avoiding the keep-away zone for any state within the 28 corresponding control invariant set.
+44
+45
+46
+47
+48
+49
+50
+1
+2
+3
+4
+5
+6
+7
+8
+8
+8
+9
+10
+10
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+25
+26
+27
+a
+s
+</body></html>

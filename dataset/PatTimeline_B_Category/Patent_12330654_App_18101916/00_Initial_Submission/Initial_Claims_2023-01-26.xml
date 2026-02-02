@@ -1,0 +1,140 @@
+<html><head></head><body><h3>Date: 2023-01-26</h3>
+<p>CLAIMS That which is claimed:</p>
+<br>
+
+<br>
+1. A method comprising: 
+<br>
+receiving a set of technical parameters associated with wheel power of at least one wheel of a vehicle on a terrain, the set of technical parameters comprising a first technical parameter and a second technical parameter, wherein the first technical parameter comprises a wheel circumferential force and the second technical parameter comprises a velocity; 
+<br>
+estimating an actual mobility performance based on the received set of technical parameters; 
+<br>
+determining a maximum mobility performance for the vehicle comprising the at least one wheel on the terrain; 
+<br>
+comparing the actual mobility performance to the maximum mobility performance; and 
+<br>
+controlling the vehicle based on a difference between the actual mobility performance and the maximum mobility performance. 
+
+<br>
+
+<br>
+2. The method of claim 1, further comprising determining an optimal tire slippage for the at least one wheel on the terrain based on the mobility performance by determining the optimal tire slippage that is greater than 0 and less than a predetermined slippage of the at least one wheel.
+<br>
+
+<br>
+3. The method of claim 2, wherein the a predetermined slippage is greater than a characteristic slippage of the at least one wheel by a predetermined amount.
+<br>
+
+<br>
+4. The method of claim 1, wherein controlling the vehicle comprises controlling a driving power to the at least one wheel or controlling at least one characteristic of the wheel.
+<br>
+
+<br>
+5. A method comprising: 
+<br>
+receiving a plurality of sets of technical parameters associated with wheel power of at least one wheel for a vehicle on a terrain, each set of technical parameters comprising a 
+
+ first technical parameter and a second technical parameter, wherein the first technical parameter of each set comprises a wheel circumferential force and the second technical parameter of each set comprises a velocity; 
+<br>
+estimating an actual mobility performance for each set of technical parameters and based on the first technical parameter and the second technical parameter for each set of technical parameters; 
+<br>
+determining a maximum mobility performance for the vehicle comprising the at least one wheel on the terrain; 
+<br>
+generating a mobility performance index based on a comparison of the estimated actual mobility performances with the maximum mobility performance; 
+<br>
+determining an optimal tire slippage for the at least one wheel on the terrain based on the mobility performance index; and 
+<br>
+controlling the vehicle based on the optimal tire slippage. 
+
+<br>
+
+<br>
+6. The method of claim 5, wherein determining the optimal tire slippage comprises determining the optimal tire slippage that is greater than 0 and less than a predetermined slippage of the at least one wheel.
+<br>
+
+<br>
+7. The method of claim 6, wherein the predetermined slippage is greater than a characteristic slippage of the at least one wheel by a predetermined amount.
+<br>
+
+<br>
+8. The method of claim 7, further comprising determining the predetermined amount based an operational parameter of the vehicle.
+<br>
+
+<br>
+9. The method of claim 5, wherein controlling the vehicle comprises controlling a driving power to the at least one wheel or controlling at least one characteristic of the wheel.
+<br>
+
+<br>
+10. A vehicle system comprising: 
+<br>
+one or more data processors; and 
+
+ a non-transitory computer readable storage medium containing instructions which, when executed on the one or more data processors, cause the one or more data processors to perform actions including: 
+<br>
+receiving a plurality of sets of technical parameters associated with wheel power of at least one wheel of a vehicle on a terrain, each set of technical parameters comprising a first technical parameter and a second technical parameter, wherein the first technical parameter of each set comprises a wheel circumferential force and the second technical parameter of each set comprises a velocity; 
+<br>
+estimating an actual mobility performance for each set of technical parameters and based on the first technical parameter and the second technical parameter for each set of technical parameters; 
+<br>
+generating a mobility performance index based on a comparison of the estimated actual mobility performances with a maximum mobility performance for the vehicle on the terrain; 
+<br>
+determining an optimal tire slippage for the at least one wheel on the terrain based on the mobility performance index; and 
+<br>
+generating a control signal for controlling the vehicle based on the optimal tire slippage. 
+
+<br>
+
+<br>
+11. The vehicle system of claim 10, further comprising at least one sensor configured to detect at least one of the set of technical parameters, wherein the at least one sensor is operably connected to the one or more data processors.
+<br>
+
+<br>
+12. The vehicle system of claim 10, further comprising a driving system configured to provide driving power to the at least one wheel for moving the vehicle system on the terrain, wherein the driving system is configured to control the driving power based on the control signal.
+<br>
+
+<br>
+13. The vehicle system of claim 12, wherein the driving system comprises a mechanical driveline or a virtual driveline.
+<br>
+
+<br>
+14. The vehicle system of claim 10, further comprising the at least one wheel.
+<br>
+
+<br>
+15. A method comprising: 
+<br>
+receiving a set of technical parameters associated with wheel power for each of a first wheel and a second wheel of a vehicle, the set of technical parameters comprising a first technical parameter and a second technical parameter, wherein the first technical parameter comprises a wheel circumferential force and the second technical parameter comprises a velocity; 
+<br>
+determining an optimal vehicle mobility performance by determining an optimal tire slippage for the first wheel based on the set of technical parameters for the first wheel and individually determining an optimal tire slippage for the second wheel based on the set of technical parameters for the second wheel; and 
+<br>
+individually controlling the first wheel and the second wheel such that the vehicle operates at the determined optimal vehicle mobility performance. 
+
+<br>
+
+<br>
+16. The method of claim 15, wherein individually controlling the first wheel and the second wheel comprises controlling a driving system for controlling driving power provided to each of the first wheel and the second wheel.
+<br>
+
+<br>
+17. The method of claim 15, wherein determining the optimal tire slippages comprises determining the optimal tire slippage for the first wheel that is different from the optimal tire slippage for the second wheel based on the first wheel being on a first terrain and the second wheel being on a second terrain different from the first terrain.
+<br>
+
+<br>
+18. The method of claim 15, wherein determining the optimal tire slippages comprises immobilizing the first wheel or the second wheel based on the first wheel being on a first terrain and the second wheel being on a second terrain different from the first terrain.
+<br>
+
+19. The method of claim 15, wherein determining the optimal tire slippages further comprises determining the optimal tire slippages based on a slope of a first terrain on which the first 
+ wheel is operating or based on a slope of a second terrain on which the second wheel is operating.
+<br>
+
+<br>
+20. The method of claim 15, wherein determining the optimal tire slippages further comprises determining the optimal tire slippages based on a drawbar pull loaded on the vehicle.
+<br>
+
+<br>
+21. The method of claim 15, wherein the first wheel is a front wheel and the second wheel is a rear wheel.
+- 28 -
+- 29 -
+- 30 -
+- 31 -
+- 32 -
+</body></html>

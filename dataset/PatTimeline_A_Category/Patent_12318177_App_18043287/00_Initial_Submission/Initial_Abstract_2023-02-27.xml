@@ -1,0 +1,9 @@
+<html><head></head><body><h3>Date: 2023-02-27</h3>
+<p>First Named Inventor  Xinpei CAI
+Attorney Docket No.: 51320-0072US 1 /</p><p>Application No.  :   To Be Assigned
+
+68102838US05</p><p>Filed
+:   Herewith</p><p>Page
+:   3of7</p>
+<h1><u>AMENDMENT TO THE ABSTRACT</u></h1>
+<p>Please replace the abstract at page 27 with the following amended abstract:</p><p>Embodiments of this application provide a terminal based on photo plethysmo graph PPG. The terminal includes an LED, an AFE chip, a processor, a delay circuit, and a plurality of PDs,<del> where the plurality of PDs include a first PD and a second PD, the first PD and the second PD are connected to the AFE chip in parallel, the AFE chip is connected to the processor, and the delay circuit is connected in series in a branch where the first PD is located; the LED is configured to emit a first optical signal to s</del><del>ki</del><del>n of a user; </del>the first PD is configured to receive a second optical signal reflected by the skin of the user, and convert the second optical signal into a first electrical signal; the second PD is configured to receive the second optical signal reflected by the skin of the user, and convert the second optical signal into a second electrical signal; the delay circuit is configured to perform delay processing on the first electrical signal; the AFE chip is configured to determine a target signal based on the second electrical signal and the first electrical signal subjected to the delay processing; and the processor is configured to process the target signal to obtain a health status of the user.</p></body></html>

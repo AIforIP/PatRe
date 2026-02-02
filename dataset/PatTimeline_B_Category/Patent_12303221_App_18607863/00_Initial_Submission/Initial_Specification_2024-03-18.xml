@@ -1,0 +1,387 @@
+<html><head></head><body>18607863
+
+   
+   
+SINGLE-ARM ROBOTIC DEVICE WITH COMPACT JOINT DESIGN
+   
+   <p>
+Government Support
+   </p>
+   <p>
+[001]
+ This invention was made with government support under Grant No. W81XWH-08-02-0043, awarded by the U.S. Army Medical Research and Materiel Command; and Grant No. W81XWH-09-2-0185, awarded by the U.S. Army Medical Research and Materiel Command.  The government has certain rights in the invention.</p>
+   
+
+Cross-Reference
+to Related Application(s)
+
+<p>
+[002]
+ This application claims priority as a continuation of U.S. Application 17/980,665, filed December 28, 2022, and entitled “Single-Arm Robotic Device with Compact Joint Design and Related Systems and Methods,” which claims priority as a continuation of U.S. Application 17/236,489, filed April 21, 2021 and entitled “Single-Manipulator Robotic Device with Compact Joint Design and Related Systems and Methods,” which issued as U.S. Patent 11,504,196 on November 22, 2022, which claims priority as a continuation of U.S. Application 16/241,263, filed January 7, 2019 and entitled “Single-Manipulator Robotic Device with Compact Joint Design and Related Systems and Methods,” which issued as U.S. Patent 11,013,564 on May 25, 2021, which claims the benefit under 35 U.S.C. § 119(e) to U.S. Provisional Application 62/614,127, filed January 5, 2018 and entitled “Single-Manipulator Robotic Device With Compact Joint Design,” the disclosures of which are hereby incorporated herein by reference in their entireties.</p>
+   
+   
+
+Field of the Invention
+
+<p>
+[003]
+ The various embodiments herein relate to various medical devices and related components, including robotic and/or in vivo surgical devices and related components, such as arms and end effectors.  More specifically, disclosed herein are robotic surgical devices and systems for use in minimally invasive surgical procedures.</p>
+   
+   
+Background of the Invention
+   
+   <p>
+[004]
+ Advancements in minimally-invasive surgical (M.I.S.) techniques continue to combat the major drawbacks of open surgery, which include lengthy recovery times, increased chance of postoperative infection, distinct cosmetic remnants, and other such disadvantages.  Minimally invasive laparoscopic surgery is one type of M.I.S. technique and consists of the insertion of thin profiled tools and accessories into a gas-inflated abdominal region, eliminating the need for a large incision.  However, these procedures also have limitations, including increased duration of surgery, reduction in visibility of the surgical site, and greater dexterity requirements of the surgeon. Accordingly, robotic platform integration has been introduced to the surgical field of medicine and looks to challenge these limitations.</p>
+   <p>
+[005]
+ A more recent minimally-invasive laparoscopic surgical technique is Laparo-Endoscopic Single-Site Surgery (LESS) (also commonly referred to as Single-Incision Laparoscopic Surgery&nbsp;(SILS)), which allows for access through a single incision into the abdomen. In order to operate, the surgeon must cross the tools through the port, causing a loss of triangulation, referred to as the “chopsticks effect.” This process has also included, in some instances, a shift in the type of passageway or access point into the peritoneal cavity from the traditional trocar to a single-port entry device.</p>
+   
+   <p>
+[006]
+ While single-port entry systems for use in LESS/SILS procedures are currently insubstantial, one device that has gained popularity is the GelPort® (hereafter referred to as “GelPort”) system, which has been adapted to work as a passageway for trocars and robotic platforms. </p>
+   <p>
+[007]
+ By comparison, a traditional trocar is a relatively simple device that includes two known components:  an outer sleeve (or “cannula”) and an obturator. The tube-like cannula acts as the actual passageway into the abdomen, while the obturator is the component with the generally sharp distal end that is positioned through the cannula and creates the passageway into the peritoneal cavity via the skin of the patient.</p>
+   <p>
+[008]
+ The industry standard in externally-actuated surgical robotic platforms is the Da Vinci® Surgical System (hereafter referred to as “Da Vinci”), which consists of a master-slave configuration in which the surgeon(s) operates from a remote console.  Da Vinci is also capable of performing single-site surgery.  Disadvantages of Da Vinci include cost (the system costs millions of dollars, making it unaffordable for smaller less funded hospitals), having a large base that takes up a good portion of the area surrounding the operating bed (as well as various additional consoles scattered throughout the operating room), and being a highly complex system that requires extensive training and experience before a surgeon can operate on a human.  </p>
+   <p>
+[009]
+ There is a need in the art for an improved robotic surgical system.</p>
+   
+
+Brief Summary of the Invention
+
+<p>
+[010]
+ Discussed herein are various single-armed robotic device embodiments with in-line shoulder joints.  </p>
+<p>
+[011]
+ In Example 1, a robotic device comprises a first elongate device body comprising first and second motors, a second elongate device body coupled to a distal end of the first elongate device body, a first driveshaft disposed through the second elongate device body and operably coupled to the first motor, a second driveshaft disposed through the second elongate device body and operably coupled to the second motor, the second driveshaft operably coupled at a distal end to a first bevel gear, a shoulder joint, and an arm operably coupled to the output body.  The shoulder joint comprises a differential yoke rotationally coupled to the first driveshaft, a dual shaft rotatably disposed within the yoke lumen, and an output body rotatably disposed over the extension shaft.  The differential yoke comprises a yoke body and a yoke lumen defined in the differential yoke, wherein the lumen has a longitudinal axis that is transverse to the longitudinal axis of the body.  In addition, the dual shaft comprises a rotational shaft rotatably disposed within the yoke lumen, the rotational shaft rotationally coupled to the first bevel gear, and an extension shaft extending from the rotational shaft such that a longitudinal axis of the extension shaft is transverse to a longitudinal axis of the rotational shaft.</p>
+<p>
+[012]
+ Example 2 relates to the robotic device according to Example 1, wherein the first driveshaft is rotatably disposed within and being radially concentric with the second driveshaft.</p>
+<p>
+[013]
+ Example 3 relates to the robotic device according to Example 1, further comprising a third driveshaft operably coupled to a third motor, the third driveshaft operably coupled at a distal end to a second bevel gear, wherein the second bevel gear is operably coupled to the output body.</p>
+<p>
+[014]
+ Example 4 relates to the robotic device according to Example 3, wherein the first driveshaft is rotatably disposed within and being radially concentric with the third driveshaft, and wherein the third driveshaft is rotatably disposed within and being radially concentric with the second driveshaft.</p>
+<p>
+[015]
+ Example 5 relates to the robotic device according to Example 1, wherein the device has no second arm.</p>
+<p>
+[016]
+ Example 6 relates to the robotic device according to Example 1, wherein the shoulder joint is a unitary shoulder joint.</p>
+<p>
+[017]
+ Example 7 relates to the robotic device according to Example 1, wherein the second elongate device body has a cross-sectional diameter that is less than a cross-sectional diameter of the first elongate device body.</p>
+<p>
+[018]
+ Example 8 relates to the robotic device according to Example 1, wherein the second elongate device body is sized and structured to be positionable through a standard trocar port.</p>
+<p>
+[019]
+ Example 9 relates to the robotic device according to Example 1, wherein the shoulder joint is an in-line joint that is collinear with the second elongate device body.</p>
+<p>
+[020]
+ In Example 10, a robotic device comprises a first elongate device body comprising first, second, and third motors disposed within the first elongate device body, a second elongate device body coupled to a distal end of the first elongate device body, a first driveshaft disposed through the second elongate device body and operably coupled to the first motor, a second driveshaft disposed through the second elongate device body and operably coupled to the second motor, the second driveshaft operably coupled at a distal end to a first bevel gear, a third driveshaft disposed through the second elongate device body and operably coupled to the third motor, the third driveshaft operably coupled at a distal end to a second bevel gear, a shoulder joint, and an arm operably coupled to the output body.  The shoulder joint comprises a differential yoke rotationally coupled to the first driveshaft, a T shaft rotatably disposed within the yoke lumen, and an output body rotatably disposed over the extension shaft, the output body rotationally coupled to the first bevel gear.  The differential yoke comprises a yoke body and a yoke lumen defined in the differential yoke, wherein the yoke lumen has a longitudinal axis that is transverse to the longitudinal axis of the body.  The T shaft comprises a rotational shaft rotatably disposed within the yoke lumen, the rotational shaft rotationally coupled to the second bevel gear, and an extension shaft extending from the rotational shaft.</p>
+<p>
+[021]
+ Example 11 relates to the robotic device according to Example 10, wherein the first driveshaft is rotatably disposed within and radially concentric with the second driveshaft, and wherein the second driveshaft is rotatably disposed within and radially concentric with the third driveshaft.</p>
+<p>
+[022]
+ Example 12 relates to the robotic device according to Example 10, wherein the yoke lumen is defined by opposing first and second yoke lumen walls, the first yoke lumen wall comprising a first slot and the second yoke lumen wall comprising a second slot.</p>
+<p>
+[023]
+ Example 13 relates to the robotic device according to Example 12, wherein the extension shaft is disposable within the first and second slots.</p>
+<p>
+[024]
+ Example 14 relates to the robotic device according to Example 10, wherein a longitudinal axis of the extension shaft is transverse to a longitudinal axis of the rotational shaft.</p>
+<p>
+[025]
+ Example 15 relates to the robotic device according to Example 10, wherein the first elongate device body has a cross-sectional diameter that is greater than a cross-sectional diameter of the second elongate device body.</p>
+<p>
+[026]
+ Example 16 relates to the robotic device according to Example 10, wherein the arm comprises an upper arm body; a forearm body; an elbow joint coupling the forearm body to the upper arm body; an end effector; and a wrist joint coupling the end effector to the forearm body, wherein the upper arm body is operably coupled to the output body.</p>
+<p>
+[027]
+ In Example 17, a robotic device comprises a first elongate device body comprising first, second, and third motors disposed within the first elongate device body, a second elongate device body coupled to a distal end of the first elongate device body, a first driveshaft disposed through the second elongate device body and operably coupled to the first motor, a second driveshaft disposed through the second elongate device body and operably coupled to the second motor, a third driveshaft disposed through the second elongate device body and operably coupled to the third motor, a shoulder joint, and an arm operably coupled to the output body.  The second driveshaft is operably coupled at a distal end to a first bevel gear, wherein the first driveshaft is rotatably disposed within and radially concentric with the second driveshaft.  The third driveshaft is operably coupled at a distal end to a second bevel gear, wherein the second driveshaft is rotatably disposed within and radially concentric with the third driveshaft.  The shoulder joint comprises a differential yoke rotationally coupled to the first driveshaft, a T shaft rotatably disposed within the yoke lumen, and an output body rotatably disposed over the extension shaft, the output body rotationally coupled to the first bevel gear.  The differential yoke comprises a yoke body and a yoke lumen defined in the differential yoke by opposing first and second curved shells, wherein the first curved shell comprises a first slot and the second curved shell comprises a second slot, and wherein the yoke lumen has a longitudinal axis that is transverse to the longitudinal axis of the body.  The T shaft comprises a rotational shaft rotatably disposed within the yoke lumen, the rotational shaft rotationally coupled to the second bevel gear, and an extension shaft extending from the rotational shaft.</p>
+<p>
+[028]
+ Example 18 relates to the robotic device according to Example 17, wherein the extension shaft is disposable within the first and second slots.</p>
+<p>
+[029]
+ Example 19 relates to the robotic device according to Example 17, wherein the first elongate device body has a cross-sectional diameter that is greater than a cross-sectional diameter of the second elongate device body.</p>
+<p>
+[030]
+ Example 20 relates to the robotic device according to Example 17, wherein the shoulder joint has a cross-sectional diameter that is less than or substantially similar to a cross-sectional diameter of the second elongate body.</p>
+<p>
+[031]
+ While multiple embodiments are disclosed, still other embodiments of the present invention will become apparent to those skilled in the art from the following detailed description, which shows and describes illustrative embodiments of the invention.  As will be realized, the invention is capable of modifications in various obvious aspects, all without departing from the spirit and scope of the present invention.  Accordingly, the drawings and detailed description are to be regarded as illustrative in nature and not restrictive.</p>
+   
+   
+
+Brief Description of the Drawings
+
+<p>
+[032]
+ FIG. 1A is a perspective view of a single-armed robotic device disposed through a trocar port, according to one embodiment.
+
+[033]
+ FIG. 1B is a side view of the robotic device of FIG. 1A, according to one embodiment.
+
+[034]
+ FIG. 1C is a top view of the robotic device of FIG. 1A, according to one embodiment.
+
+[035]
+ FIG. 2A is a side view of the first and second elongate bodies of a robotic device, according to one embodiment.
+
+[036]
+ FIG. 2B is a cross-sectional cutaway side view of a portion of the first and second elongate bodies of the robotic device of FIG. 2A, according to one embodiment.
+
+[037]
+ FIG. 2C is a cross-sectional, partial cutaway perspective view of an expanded portion of the first and second elongate bodies of the robotic device of FIG. 2A, according to one embodiment.
+
+[038]
+ FIG. 2D is a cross-sectional, partial cutaway perspective view of an expanded portion of the second elongate body and shoulder joint of the robotic device of FIG. 2A, according to one embodiment.
+
+[039]
+ FIG. 2E is a cross-sectional cutaway bottom view of the shoulder joint of the robotic device of FIG. 2A, according to one embodiment.
+
+[040]
+ FIG. 2F is a exploded perspective view of the shoulder joint of the robotic device of FIG. 2A, according to one embodiment.
+
+[041]
+ FIG. 3 is a cross-sectional cutaway top view of a shoulder joint of a robotic device, according to one embodiment.
+
+[042]
+ FIG. 4 is a perspective view of a robotic arm and a portion of a second elongate body of a single-armed robotic device, according to one embodiment.
+
+[043]
+ FIG. 5A is a side view of an upper arm of a robotic arm of a robotic device, according to one embodiment.
+
+[044]
+ FIG. 5B is a cross-sectional cutaway side view of the elbow joint of the robotic arm of FIG. 5A, according to one embodiment.
+
+[045]
+ FIG. 6A is a perspective view of a forearm of a robotic arm, according to one embodiment.
+
+[046]
+ FIG. 6B is a cross-sectional, partial cutaway perspective view of an expanded portion of the forearm of FIG. 6A, according to one embodiment.
+
+[047]
+ FIG. 6C is another cross-sectional, partial cutaway perspective view of an expanded portion of the forearm of FIG. 6A, according to one embodiment.
+
+[048]
+ FIG. 7A is a side view of the forearm of FIG. 6A, according to one embodiment.
+
+[049]
+ FIG. 7B is a cross-sectional cutaway side view of a portion of the forearm and the wrist joint of the forearm of FIG. 6A, according to one embodiment.
+
+[050]
+ FIG. 8A is a perspective view of a laparoscopic trocar, according to one embodiment.
+
+[051]
+ FIG. 8B is a side view of the laparoscopic trocar of FIG. 8A, according to one embodiment.
+
+[052]
+ FIG. 9A is a perspective exterior view of a one-armed robotic device positioned within a target cavity of a patient, according to one embodiment.
+
+[053]
+ FIG. 9B is a schematic view of the calculated workspace of the one-armed robotic device of FIG. 9A, according to one embodiment.
+
+</p>
+   
+   
+Detailed Description
+   
+   <p>
+[054]
+ The various robotic surgical device and system embodiments disclosed or contemplated herein include a robotic device having an elongate body having a minimal cross-sectional profile and a single robotic arm attached thereto via an in-line shoulder joint.  </p>
+   <p>
+[055]
+ It is understood that the various implementations of robotic devices and related methods and systems disclosed herein can be incorporated into or used with any other known medical devices, systems, and methods.  For example, the various implementations disclosed herein may be incorporated into or used with any of the medical devices and systems disclosed in U.S. Patents 7,492,116 (filed on October 31, 2007 and entitled “Robot for Surgical Applications”), 7,772,796 (filed on April 3, 2007 and entitled “Robot for Surgical Applications”), 8,179,073 (issued May 15, 2011, and entitled “Robotic Devices with Agent Delivery Components and Related Methods”), 8,343,171 (issued January 1, 2013 and entitled “Methods and Systems of Actuation in Robotic Devices”), 8,679,096 (issued March 25, 2014 and entitled “Multifunctional Operational Component for Robotic Devices”), U.S. Patent 8,828,024 (issued on September 9, 2014 and entitled “Methods and Systems of Actuation in Robotic Devices”), 8,834,488 (issued September 16, 2014 and entitled “Magnetically Coupleable Surgical Robotic Devices and Related Methods”), 8,894,633 (issued November 25, 2014 and entitled “Modular and Cooperative Medical Devices and Related Systems and Methods”), 8,968,267 (issued March 3, 2015 and entitled “Methods and Systems for Handling or Delivering Materials for Natural Orifice Surgery”), 8,968,332 (issued March 3, 2015 and entitled “Magnetically Coupleable Robotic Devices and Related Methods”), 8,974,440 (issued March 10, 2015 and entitled “Modular and Cooperative Medical Devices and Related Systems and Methods”), 9,010,214 (April 21, 2015 and entitled “Local Control Robotic Surgical Devices and Related Methods”), 9,060,781 (issued June 23, 2015 and entitled “Methods, Systems, and Devices Relating to Surgical End Effectors” ), 9,089,353 (issued July 28, 2015 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), U.S. Patent 9,179,981 (issued on November 10, 2015 and entitled “Multifunctional Operational Component for Robotic Devices”), 9,498,292 (issued November 22, 2016 and entitled “Single Site Robotic Devices and Related Systems and Methods”), 9,579,088 (issued February 28, 2017 and entitled “Methods, Systems, and Devices for Surgical Visualization and Device Manipulation”), 9,743,987 (August 29, 2017 and entitled “Methods, Systems, and Devices Relating to Robotic Surgical Devices, End Effectors, and Controllers”), 9,770,305 (issued September 26, 2017 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), and 9,888,966 (issued February 13, 2018 and entitled “Methods, Systems, and Devices Relating to Force Control Surgical Systems), all of which are hereby incorporated herein by reference in their entireties.</p>
+   
+   <p>
+[056]
+ Further, the various implementations disclosed herein may be incorporated into or used with any of the medical devices and systems disclosed in copending U.S. Published Applications 2014/0046340 (filed March 15, 2013 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), 2014/0058205 (filed January 10, 2013 and entitled “Methods, Systems, and Devices for Surgical Access and Insertion”), 2014/0303434 (filed March 14, 2014 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), 2015/0051446 (filed July 17, 2014 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), 2016/0074120 (filed September 14, 2015, and entitled “Quick-Release End Effectors and Related Systems and Methods”), 2016/0135898 (filed November 11, 2015 entitled “Robotic Device with Compact Joint Design and Related Systems and Methods”), 2016/0157709 (filed February 8, 2016 and entitled “Medical Inflation, Attachment, and Delivery Devices and Related Methods”), 2017/0035526 (filed August 3, 2016 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), 2017/0354470 (filed May 18, 2017 and entitled “Robotic Surgical Devices, Systems, and Related Methods”), 2018/0055584 (filed August 30, 2017 and entitled “Robotic Device with Compact Joint Design and an Additional Degree of Freedom and Related Systems and Methods”), 2018/0056527 (filed August 25, 2017 and entitled “Quick-Release End Effector Tool Interface”), 2018/0140377 (filed November 22, 2017 and entitled “Gross Positioning Device and Related Systems and Methods”), 2018/0147019 (filed November 29, 2017 and entitled “User Controller with User Presence Detection and Related Systems and Methods”), and 2018/0161122 (filed December 14, 2017 and entitled “Releasable Attachment Device for Coupling to Medical Devices and Related Systems and Methods”), all of which are hereby incorporated herein by reference in their entireties.  In addition, the various implementations disclosed herein may be incorporated into or used with any of the medical devices and systems disclosed in copending U.S. Application 16/144,807 (filed September 27, 2018), which is hereby incorporated herein by reference in its entirety.</p>
+   
+   <p>
+[057]
+ Certain device and system implementations disclosed in the patents and/or applications listed above can be positioned within a body cavity of a patient in combination with a support component similar to those disclosed herein and/or in certain of the patents and/or applications incorporated by reference above.  An “in vivo device” as used herein means any device that can be positioned, operated, or controlled at least in part by a user while being positioned within a body cavity of a patient, including any device that is disposed through an opening or orifice of the body cavity and is coupled to a support component such as a rod or other such component, also including any device positioned substantially against or adjacent to a wall of a body cavity of a patient, further including any such device that is internally actuated (having no external source of motive force), and additionally including any device that may be used laparoscopically or endoscopically during a surgical procedure.  As used herein, the terms “robot,” and “robotic device” shall refer to any device that can perform a task either automatically or in response to a command.</p>
+   <p>
+[058]
+ Certain implementations provide for insertion of the present invention into the cavity while maintaining sufficient insufflation of the cavity.  Further implementations minimize the physical contact of the surgeon or surgical users with the present invention during the insertion process.  Other implementations enhance the safety of the insertion process for the patient and the present invention.  For example, some implementations provide visualization of the present invention as it is being inserted into the patient’s cavity to ensure that no damaging contact occurs between the system/device and the patient.  In addition, certain implementations allow for minimization of the incision size/length.  Further implementations reduce the complexity of the access/insertion procedure and/or the steps required for the procedure.  Other implementations relate to devices that have minimal profiles, minimal size, or are generally minimal in function and appearance to enhance ease of handling and use.</p>
+   <p>
+[059]
+ As in manual laparoscopic procedures, a known insufflation system can be used to pump sterile carbon dioxide (or other gas) into the patient’s abdominal cavity.  This lifts the abdominal wall from the organs and creates space for the robot.  In certain implementations, the system has no direct interface with the insufflation system.  Alternatively, the system can have a direct interface to the insufflation system.</p>
+   <p>
+[060]
+ According to various embodiments, the insertion port is a traditional trocar or a modified trocar as described elsewhere herein.  In such implementations, the device embodiments herein - or a portion thereof - are disposed through the cannula of the trocar in a fashion described in more detail below.  Alternatively, in certain implementations, the insertion port is single-port entry device that is a known, commercially-available flexible membrane placed transabdominally to seal and protect the abdominal incision.  One example of such a single-port entry device is the GelPort® discussed above.  This off-the-shelf component is the same device used in the same way for Hand-Assisted Laparoscopic Surgery (HALS).  The only difference is that the working arms of the robot are inserted into the abdominal cavity through the insertion port rather than the surgeon’s hand.  The robot body seals against the insertion port, thereby maintaining insufflation pressure.  The port is single-use and disposable.  In a further alternative, any known port can be used.</p>
+   
+   <p>
+[061]
+ Certain implementations disclosed herein relate to “combination” or “modular” medical devices that can be assembled in a variety of configurations.  For purposes of this application, both “combination device” and “modular device” shall mean any medical device having modular or interchangeable components that can be arranged in a variety of different configurations, and the related systems.  The modular components and combination devices disclosed herein also include segmented triangular or quadrangular-shaped combination devices.  These devices, which are made up of modular components (also referred to herein as “segments”) that are connected to create the triangular or quadrangular configuration, can provide leverage and/or stability during use while also providing for substantial payload space within the device that can be used for larger components or more operational components.  As with the various combination devices disclosed and discussed above, according to one implementation these triangular or quadrangular devices can be positioned inside the body cavity of a patient in the same fashion as those devices discussed and disclosed above.</p>
+   <p>
+[062]
+ The various system implementations described herein are used to perform robotic surgery.  Further, the various implementations disclosed herein can be used in a minimally invasive approach to a variety of procedures that are typically performed “open” by known technologies, with the potential to improve clinical outcomes and health care costs, including, for example, general surgery applications in the abdominal cavity, such as, for example, colon resection and other known procedures.  Further, the various implementations disclosed herein can be used in place of the known mainframe-like laparoscopic surgical robots that reach into the body from outside the patient.  That is, the less-invasive robotic systems, methods, and devices according to the implementations disclosed herein feature small, self-contained surgical devices that are inserted in their entireties through a single incision in the patient’s abdomen.  Designed to utilize existing tools and techniques familiar to surgeons, the devices disclosed herein will not require a dedicated operating room or specialized infrastructure, and, because of their much smaller size, are expected to be significantly less expensive than existing robotic alternatives for laparoscopic surgery. Due to these technological advances, the various implementations herein could enable a minimally invasive approach to procedures performed in open surgery today.  In certain implementations, the various systems described herein are based on and/or utilize techniques used in manual laparoscopic surgery including insufflation of the abdominal cavity and the use of ports to insert tools into the abdominal cavity.</p>
+   <p>
+[063]
+ As will be described in additional detail below, components of the various system implementations disclosed or contemplated herein can include a control console and a robot having a minimal cross-sectional profile and a single robotic arm as described herein.  The robot implementations are constructed and arranged to be inserted into the insufflated abdominal cavity as described in further detail herein.    </p>
+   
+   <p>
+[064]
+ While the various embodiments herein are described as having motors, it is understood that any type of known actuators can be used in place of the motors.  Further, while the transmission components that transmit the force from the motors within the device are described as shafts that are coupled via gears, it is understood that any type of transmission components or mechanisms can be incorporated herein in place of such shafts and gears, including hydraulic or pneumatic components or other mechanical components such as cables and pulleys or similar components. </p>
+   <p>
+[065]
+ The various implementations are disclosed in additional detail in the attached figures and the related discussion thereof, as set forth herein.</p>
+   <p>
+[066]
+ FIGS. 1A-1C depict one embodiment of the single manipulator device (also referred to herein as the “unitary manipulator,” “single arm,” “unitary arm,” “in-line joint,” “in-line shoulder joint,” and “robotic surgical” device) 10 according to one embodiment.  In this implementation, the device 10 has a first body (also referred to herein as an “external body” or “first support beam”) 12, a second body (also referred to herein as an “internal body” or “second support beam”) 14, a first arm component (also referred to herein as an “upper arm”) 16, a second arm component (also referred to herein as a “forearm”) 18, and an operational component (also referred to herein as an “end effector”) 20.  In this embodiment as depicted and various other implementations herein, the internal body 14 has a smaller cross-sectional diameter than the external body 12 such that the internal body 14 can be inserted through a smaller port than would be possible for the external body 12, including, for example, a trocar port such as the port 28 depicted in FIG. 1A.  Note in FIG. 1A that the internal body 14 is disposed through and positioned within the trocar port 28 such that the distal end of the internal body 14 extends out of the distal end of the trocar cannula 30.  As such, the distal end of the internal body 14 and the shoulder joint 22 are disposed within the internal target cavity of the patient.  The second body 14 is coupled to the first body 12.  In certain embodiments, the first and second bodies 12, 14 are removably coupled.  Alternatively, the first and second bodies 12, 14 are fixedly coupled or are integral with each other as a single, unitary component..  In a further alternative, the first and second bodies 12, 14 are moveably coupled to each other in a jointed or other non-rigid fashion.</p>
+   <p>
+[067]
+ The first arm component 16 is rotatably coupled to the second body 14 via a first joint (also referred to herein as a “shoulder joint”) 22, while the second arm component 18 is rotatably coupled to the first arm component 16 via a third joint (also referred to herein as an “elbow joint”) 24, and the operational component 20 is rotataby coupled to the second arm component 18 via a fourth joint (also referred to herein as a “wrist joint”) 26.  Each of these components will be discussed in further detail below, according to various embodiments of the robotic surgical device.</p>
+   <p>
+[068]
+ It is understood that the compact in-line (or “coaxial”) shoulder joint as described in additional detail with respect to the various embodiments disclosed or contemplated herein presents a less-invasive approach to the insertable portion of the robot in comparison to devices having shoulder joints that are not in-line, including those devices having two shoulder joints.  That is, the in-line shoulder joint implementations herein have a smaller cross-sectional diameter in comparison to the known non-in-line or double shoulder joints.  </p>
+   
+   <p>
+[069]
+ One embodiment of a single-armed device 40, and more specifically the external body 42, the internal body 44, and shoulder joint 46 thereof, is depicted in further detail in FIGS. 2A-2F.  Like every other implementation disclosed or contemplated herein, this specific device 40 embodiment has a shoulder joint 46 with 3 degrees of freedom (“DOF”) and a minimal cross-sectional diameter for ease of insertion through trocars and other insertion devices.  The minimal diameter is accomplished via the specific design of the various components within the internal body 44 and the joint 46, as described in further detail below.</p>
+   <p>
+[070]
+ FIG. 2A depicts a side view of the device 40, including the external body 42, the internal body 44, and the shoulder joint 46.  More specifically, the figure shows the external casing or housing 48 of the external body 42 and the external casing or housing 50 of the internal body 44.
+
+[071]
+ FIG. 2B depicts a cross-sectional front view of the external body 42, the internal body 44, and the shoulder joint 46 in which certain internal components of those components are visible, according to one exemplary embodiment.  In this implementation and other embodiments disclosed or contemplated herein, the external body 42 contains the actuators (which, in this specific embodiment are motors) 70A, 70B, 70C that actuate the shoulder joint 46 via the transmission shafts (also referred to herein as “nested driveshafts”) 52 disposed within the internal body 44.  This configuration (with the motors 70A, 70B, 70C disposed within the external body 42 and the nested driveshafts 52 disposed in a nested configuration within the internal body 44 makes it possible for the internal body 44 to have a smaller cross-sectional diameter than the external body 42, as discussed above with respect to device 10.  The set of nested driveshafts 52 are rotatably disposed within the internal body 44.  As set forth herein, the word “nested” is intended to describe components that are concentric such that at least one of the components is positioned inside another of those components and each of the components have a common axis of rotation.  
+
+[072]
+ With respect to FIG. 2B, the set of nested driveshafts 52 is made up of a first or outer driveshaft 52A, a second or middle driveshaft 52B, and a third or inner driveshaft 52C.  The set of nested driveshafts 52 extend from the external body 42 into and through the internal body 44 as shown.  The inner driveshaft 52C is rotatably disposed within the middle driveshaft 52B as shown, and has a driven gear 54C fixedly or integrally attached at its proximal end.  At its distal end, the inner driveshaft 52C is coupled to or integral with a differential yoke (also referred to herein as a “shoulder housing” or “conversion body”) 56C.  The middle driveshaft 52B is rotatably disposed within the outer driveshaft 52A as shown, and has a driven gear 54B fixedly or integrally attached at its proximal end.  At its distal end, the middle driveshaft 52B is coupled to a second or inner drive bevel gear 56B.  The outer driveshaft 52A is rotatably disposed within the internal body 44 and has a driven gear 54A fixedly or integrally attached at its proximal end.  At its distal end, the outer driveshaft 52A is coupled to a first or outer drive bevel gear 56A.
+
+[073]
+ Various internal components at the proximal end of the internal body 44 and distal end of the external body 42 are best depicted in FIGS. 2B and 2C, including the proximal end of the driveshafts 52A, 52B, 52C and related gears and motors that drive those driveshafts 52A, 52B, 52C, according to one embodiment.  As best shown in FIG. 2B, the proximal end of the inner driveshaft 52C is rotatably supported in the external body 42 via a first shaft bearing 60 and a second shaft bearing 62.  Further, the proximal end of the middle driveshaft 52B, including the driven gear 54B, is rotatably supported in the external body 42 via the second shaft bearing 62 and a third shaft bearing 64.  In addition, the proximal end of the outer driveshaft 52A, including driven gear 54A, is rotatably supported in the external body 42 via the third shaft bearing 64.
+
+[074]
+ As best shown in FIGS. 2B and 2C, the set of nested driveshafts 52 has three motors operably coupled thereto (although only two of the three motors are visible), wherein the three motors are disposed within the external body 42 as discussed above.  More specifically, motor 70A has a motor drive gear 72A that is coupled to the driven gear 54A (which is coupled to the outer driveshaft 52A).  Further, motor 70C has a motor drive gear 72C that is coupled to the driven gear 54C (which is coupled to the inner driveshaft 52C).  In addition, a third motor (logically identified as 70B but not visible in the figures due to the perspective thereof) has a third motor drive gear (logically identified as 72B but also not visible) that is coupled to the driven gear 54B (which is coupled to the middle driveshaft 52B).  The positioning and functionality of the third motor and third motor drive gear are understood by one of ordinary skill in the art based on the description herein.
+
+[075]
+ In one embodiment, the motors 70A, 70B, 70C are 12 volt Faulhaber 1226 series brushless DC motors coupled to Faulhaber 256:1 planetary gearboxes with an efficiency rating of 0.60.  Alternatively, any known motors can be used in the external body 42.
+
+[076]
+ Thus, in operation, the motor 70A can be actuated to drive rotation of the outer driveshaft 52A by driving rotation of motor drive gear 72A, which drives rotation of the driven gear 54A.  Similarly, the motor 70B (not visible in the figures) can be actuated to drive rotation of the middle driveshaft 52B by driving rotation of motor drive gear 72B (also not visible), which drives rotation of the driven gear 54B.  In a similar fashion, the motor 70C can be actuated to drive rotation of the inner driveshaft 52C by driving rotation of motor drive gear 72C, which drives rotation of the driven gear 54C.
+
+[077]
+ FIGS. 2B, 2D, 2E, and 2F depict the shoulder joint 46 and its various components, according to one implementation.  More specifically, FIG. 2D depicts a cross-sectional perspective view of the internal components of the joint 46, while FIG. 2E depicts a cross-sectional top view of the joint 46, and FIG. 2F depicts an exploded view of the internal components of the joint 46.  As discussed above, and as shown in FIGS. 2B, 2D, and 2F, the outer driveshaft 52A is coupled (or rotationally constrained) to the outer drive bevel gear 56A, while the middle driveshaft 52B is coupled to the inner drive bevel gear 56B, and the inner driveshaft 52C is coupled to the differential yoke 56C.  As best shown in FIG. 2B, at the distal end, the outer driveshaft 52A and outer drive bevel gear 56A are supported by the first shoulder bearing 80.  In addition, the middle driveshaft 52B and the inner drive bevel gear 56B are supported by the first shoulder bearing 80 and the second shoulder bearing 82.  
+
+[078]
+ As best shown in FIGS. 2D and 2F, the differential yoke 56C has a cylindrical body 90 and a yoke opening or partial lumen 93 defined at the distal end of the body 90.  In one implementation as shown, the lumen 93 is defined by two opposing curved shells (or “curved walls”) 92A, 92B that extend from the body 90 and define the yoke lumen 93 between the two shells 92A, 92B.  In one embodiment, each of the two shells 92A, 92B is a set of two prongs, such that the first shell 92A is a first set of two curved prongs 92A and the second shell 92B is a second set of two curved prongs 92B.  In addition, shaft slots 94A, 94B are defined in the two shells 92A, 92B.  Thus, in those embodiments in which the shells 92A, 92B are prong pairs 92A, 92B, the shaft slots 94A, 94B are defined between each of two prongs of each set of prongs 92A, 92B.  The cylindrical body 90 is disposed in the joint 46 such that its longitudinal axis is parallel to and concentric with the longitudinal axis of the internal body 44.  In contrast, the yoke lumen 93 defined by the two shells 92A, 92B has a longitudinal axis that is transverse to the longitudinal axis of the cylindrical body 90.  
+
+[079]
+ Further, the joint 46 has a dual shaft (also referred to herein as a “t-bar” or “T shaft”) 96 rotatably disposed within the yoke opening 93.  The dual shaft 96 has a rotational shaft (also referred to as the “main shaft” or “pitch shaft”) 96A and an extension shaft (also referred to as the “roll shaft”) 96B.  The extension shaft 96B has a longitudinal axis that is transverse to the longitudinal axis of the rotational shaft 96A.  The pitch shaft 96A is rotatably supported within the yoke opening 93 by the third 84 and fourth 86 shoulder bearings (as best shown in FIG. 2B) - along with the fifth 88 and sixth 89 shoulder bearings (also best shown in FIG. 2B) - such that the pitch shaft 96A rotates around a longitudinal axis that is transverse to the longitudinal axis of the internal body 44 (and thus also the longitudinal axes of the set of nested driveshafts 52).  Further, the pitch shaft 96A is coupled or rotationally constrained to the first shoulder bevel gear 100 such that rotation of the first shoulder gear 100 causes rotation of the rotational shaft 96A.  The first shoulder gear 100 is rotatably coupled to the outer drive bevel gear 56A such that rotation of the outer drive bevel gear 56A causes rotation of the first shoulder gear 100.  The bevel gear 100, the pitch shaft 96A, and the bearings 84, 86, 88, 89 are coupled together and “preloaded” by the screw 102 that is coupled to the pitch shaft 96A.  Alternatively, any known attachment component can be used to couple together and preload these components.  As such, rotation of the motor 70A causes rotation of the rotational shaft 96A and thus causes movement of the extension shaft 96B around the longitudinal axis of the rotational shaft 96A as described in additional detail below.
+
+[080]
+ Continuing with FIGS. 2B, 2D, and 2F, the extension shaft 96B is coupled to or integral with the rotational shaft 96A and extends radially from the rotational shaft 96A such that the longitudinal axis of the extension shaft 96B is transverse to the longitudinal axis of the rotational shaft 96A, thereby resulting in the T-shaped configuration of the T shaft 96.  When the pitch shaft 96A is rotatably disposed within the yoke opening 93 as described above, the extension shaft 96B extends from the rotational shaft 96A as best shown in FIG. 2F such that the extension shaft 96B is disposed in either of the shaft slots 94A, 94B between the prong sets 92A, 92B depending on the rotational position of the rotational shaft 96A.  That is, as the rotational shaft 96A rotates, the extension shaft 96B rotates around the longitudinal axis of the rotational shaft 96A along a path that includes the two shaft slots 94A, 94B such that the extension shaft 96B can rotate at least 180º around the rotational shaft 96A.
+
+[081]
+ Continuing with FIG. 2F, the shoulder joint 46 also has a second shoulder bevel gear 104 rotatably disposed on the end of the rotational shaft 96A opposite the first shoulder bevel gear 100 such that the second shoulder gear 104 can rotate in relation to the rotational shaft 96A.  The second shoulder bevel gear 104 is rotatably coupled to the inner drive bevel gear 56B such that rotation of the inner drive bevel gear 56B causes rotation of the second shoulder bevel gear 104.  Further, the second shoulder bevel gear 104 is also rotatably coupled to the output body (also referred to as the “roll body”) bevel gear 108 such that rotation of the second shoulder gear 104 causes rotation of the output body bevel gear 108.  As such, rotation of the inner drive bevel gear 56B causes rotation of the output body 106, as described in additional detail below.
+
+[082]
+ The output body 106 with the output body bevel gear 108 is rotatably disposed on the extension shaft 96B such that the output gear 108 and body 106 can rotate in relation to the extension shaft 96B.  Thus, rotation of the output body bevel gear 108 around the extension shaft 96B caused by rotation of the second shoulder bevel gear 104 also causes rotation of the output body 106.  Further, rotation of the extension shaft 96B around the rotational axis of the rotational shaft 96A causes both the extension shaft 96B and the output body 106 disposed thereon to also rotate around the rotational axis of the shaft 96A, thereby resulting in the pitch motion of the arm attached thereto (such as arm 130 or upper arm 150, for example).
+
+[083]
+ In use, the outer drive bevel gear 56A is rotatably coupled to the first shoulder bevel gear 100 as discussed above such that rotation of the outer drive bevel gear 56A causes rotation of the first shoulder bevel gear 100.  This rotation of the first shoulder bevel gear 100 causes rotation of the rotational shaft 96A, which causes the movement of the extension shaft 96B - and the output body 106 coupled thereto - radially around the longitudinal axis of the rotational shaft 96A, which results in pitch.  
+
+[084]
+ Further, the inner drive bevel gear 56B is rotatably coupled to the second shoulder bevel gear 104 as discussed above such that the rotation of the inner drive bevel gear 56B causes rotation of the second shoulder bevel gear 104.  This rotation of the second shoulder bevel gear 104 causes rotation of the output body bevel gear 108, which causes rotation of the output body 106 around the extension shaft 96B, which results in roll.
+
+[085]
+ In addition, the inner driveshaft 52C is coupled to - or integral with - the differential yoke 56C as discussed above such that rotation of the inner driveshaft 52C causes rotation of the differential yoke 56C, which results in yaw.
+
+[086]
+ Thus, the shoulder joint 46 provides three degrees of freedom.  The shoulder joint 46 configuration provides those three degrees of freedom while minimizing the cross-sectional size thereof.  FIG. 2E depicts the greatest cross-sectional diameter of the shoulder joint 46, which is also the largest cross-sectional diameter of the internal components of the device 40 and any other device embodiment disclosed or contemplated herein.  As such, according to certain implementations, the cross-sectional diameter of the second or internal body (such as internal body 44) is no greater (or not substantially greater) than the cross-sectional diameter of the shoulder joint (such as shoulder joint 46), as best shown by example in FIG. 2B.  In one implementation, the shoulder joint 46 has a maximum diameter of about 15 mm, which means that the internal body 44, the shoulder joint 46, and the robotic arm (not shown) coupled thereto can be inserted through any trocar or other insertion device having a minimum internal diameter of about 15 mm.  
+
+[087]
+ FIG. 3 depicts yet another embodiment of a shoulder joint 120 with a similar configuration to the joint 46 discussed above and a maximum diameter of about 13.5 mm, meaning that any device embodiment having such a joint 120 can have an internal body, shoulder joint 120, and coupled robotic arm that can be inserted through any trocar or other insertion device having a minimum internal diameter of 13.5 mm.
+
+[088]
+ Alternatively, any shoulder joint (such as joint 46 or 120) according to any embodiment disclosed or contemplated herein can have a maximum diameter ranging from about 13.5 mm to any desirable greater diameter.  In a further embodiment, the maximum diameter of any such shoulder joint can be about 18 mm.
+
+[089]
+ In the specific embodiments of FIGS. 1A-3 and the various other implementations disclosed or contemplated herein, one advantage of the in-line, three degree-of-freedom (“3 DOF”) shoulder joint is the resulting reduced cross-sectional profile.  That is, the entire device (such as device 40 or other such embodiments herein) has a smaller cross-sectional diameter (transverse to the longitudinal axes of the body and the single arm) in comparison to known devices having motors (and other such actuators) in the body thereof, including such known devices with two arms.  The known two-armed devices have two arms attached to a single body such that the arms have mirrored, symmetric functionality.  This known two-armed mirrored configuration results in a device with a larger cross-sectional profile.  In contrast, the single-armed device embodiments disclosed or contemplated herein have smaller cross-sectional profiles and thus can be incorporated into a system of two or more such devices that allow for positioning the two or more devices in various locations into a patient’s abdomen through various incisions at different locations therein.  Given the variation in human anatomy across patients, the positioning of procedural tools and accessories can vary significantly by patient such that the use of separate single-armed devices can provide an advantage.  Further, the use of two or more separate single-armed devices provides spatial and operational independence between the two or more robotic arms, thereby enabling independent gross positioning capabilities.  As such, the device (such as device 40 or any other embodiment disclosed or contemplated herein) can be inserted through a smaller opening (such as a trocar port, other known port, or incision, for example) for use in a medical procedure, or two or more such devices can be inserted through two or more openings, thereby resulting in a less invasive procedure than the known devices.
+
+[090]
+ Further, as discussed above, the in-line, 3 DOF shoulder joint embodiments herein (such as, for example, joints 46 or 120) have a maximum diameter that is smaller than most separate shoulder joints in the known two-armed devices.  This reduced cross-sectional diameter results from the in-line shoulder joint configuration that consists of the combination of the differential yoke (such as yoke 16C) and the dual shaft (such as dual shaft 96) and how those two components are positioned with the various gears within the shoulder to result in a minimal diameter.  Using the shoulder joint 46 as an example, the disposition of the rotatable dual shaft 96 within the differential yoke 16C in combination with (1) the rotatable coupling of the inner drive shaft 52C and the differential yoke 56C, and (2) the rotatable coupling of the outer drive bevel gear 56A with the first shoulder bevel gear 100 and thus with the rotational shaft 96A of the dual shaft 96 results in minimized profile of the shoulder joint 46.  That is, unlike most known shoulder joints, the radially outermost component of the shoulder joint 46 is the first shoulder bevel gear 100.  Put another way, the component driven by the first shoulder bevel gear 100 is disposed in an interior radial position in relation to the gear 100, rather than a position that is radially outside the gear 100 in relation to the cross-sectional midpoint of the shoulder 46.  In contrast, in most known/prior shoulder joints, such an outer bevel gear would be coupled to a component disposed on the radially outer side of the bevel gear, thus resulting in a great cross-section diameter in comparison to the shoulder joints disclosed and contemplated herein.
+
+[091]
+ The “in-line” or collinear feature of the 3 DOF shoulder joint 46 results from the differential yoke 56C - with the dual shaft 96 rotatably disposed therein - being rotationally coupled to the inner drive shaft 52C.  Thus, when the dual shaft 96 is disposed such that the rotational shaft 96A extends away from the internal body 44 and is parallel and concentric with the longitudinal axis of the internal body 44 (such that an upper arm of a robotic arm (not shown) coupled thereto is also parallel and concentric with the longitudinal axis of the internal body 44), the rotation of the inner drive shaft 52C causes the directly corresponding rotation of the differential yoke 56C (and thus directly corresponding rotation of the upper arm attached thereto).  
+
+[092]
+ In certain embodiments, as best shown in FIG. 4, a single-arm device 130 similar to the embodiments above has an external body (not shown), an internal body 132, a shoulder joint 134, and a single robotic arm 136 coupled to the single shoulder joint 134.  Further, in accordance with some implementations, the arm 136 has two components:  a first arm component (also referred to herein as an “upper arm”) 136A and a second arm component (also referred to herein as a “forearm”) 136B.  Further, some embodiments have an operational component (also referred to herein as an “end effector”) 138 coupled to the arm 136.
+
+[093]
+ FIGS. 5A and 5B depict one embodiment of an upper arm 150, according to one embodiment.  This upper arm 150 embodiment can be fixedly coupled to the output body (such as output body 106 discussed above) of the joint (such as joint 46) such that the roll of the output body causes the upper arm 150 to rotate around its longitudinal axis.  More specifically, the arm 150 has an opening 152 defined in its proximal end into which the output body (such as output body 106) can be disposed and thereby attached to the arm 150.  Alternatively, any coupling mechanism, feature, or method can be used to couple the upper arm 150 to the output body.
+
+[094]
+ The upper arm 150 also has an arm joint (also referred to herein as a “elbow joint”) 154 at its distal end that allows for a jointed coupling to a forearm (such as forearm 180 as discussed below).  The elbow joint 154 has two opposing supports (or “projections”) 156A, 156B extending from or at the distal end of the upper arm 150 that define a space therebetween in which a coupling body 158 is rotatably disposed.  Each of the supports 156A, 156B has a bearing 160A, 160B disposed on an inner wall thereof.  The coupling body 158 has two rotational projections 162A, 162B, a coupling component 164, and a body bevel gear 166.  The two rotational projections 162A, 162B, according to one implementation, are disposed within and rotatably coupled to the two bearings 160A, 160B, respectively, as best shown in FIG. 5B, such that the coupling body 158 can rotate in relation to the supports 156A, 156B.  In this embodiment, the coupling component 164 is an opening 164 defined in the coupling body 158 that is configured to receive a portion of a forearm (such as forearm 180) such that the forearm portion is disposed within the opening 164 and the forearm is thereby coupled to the coupling body 158.  Alternatively, the coupling component 164 can be any coupling mechanism, feature, or method can be used to couple the upper arm 150 to the forearm.
+
+[095]
+ Further, the joint 154 includes an elbow joint bevel gear 168 that is coupled or rotationally constrained to an upper arm motor 170 such that actuation of the motor 170 causes rotation of the elbow joint bevel gear 168.  The elbow joint bevel gear 168 is rotatably coupled to the body bevel gear 166 such that rotation of the elbow joint bevel gear 168 causes rotation of the body bevel gear 166, which thereby causes the coupling body 158 to rotate in relation to the supports 156A, 156B, thereby causing the forearm (such as forearm 180) coupled thereto to rotate in relation to the upper arm 150.  Thus, actuation of the upper arm motor 170 can cause the forearm (such as forearm 180) to rotate in relation to the upper arm 150 at the elbow joint 154.
+
+[096]
+ In one implementation, the upper arm 150 has additional space within the arm 150 (beyond the space occupied by the upper arm motor 170) to house additional components as necessary.  For example, in one embodiment, one or more controllers (not shown) for controlling various components - including motors - of the arm or the robotic device can be disposed within the upper arm 150.
+
+[097]
+ FIGS. 6A-6C depict one embodiment of an forearm 180, according to one embodiment.  This forearm 180 embodiment can be fixedly coupled to the coupling component 164 of the coupling body 158 at the coupling projection 188 at the proximal end of the forearm 180.  It is understood that any coupling mechanism or method can be used for this attachment.
+
+[098]
+ The forearm 180 in this implementation has a wrist joint 182 at the distal end thereof, with an operational component (“end effector”) 184 coupled to the wrist joint 182.  In this specific embodiment, the end effector 184 is a grasper 184, but it is understood that the end effector 184 is removable and thus various known, interchangeable end effectors 184 can be used herewith.  Further, as best shown in FIGS. 6B and 6C, the forearm 180 in this embodiment has three motors disposed within the body 190 of the forearm 180:  the first motor 186A, the second motor 186B, and the third motor 186C.  
+
+[099]
+ One embodiment of the wrist joint 182 is depicted in additional detail in FIGS. 7A and 7B.  More specifically, FIG. 7B depicts a cross-sectional front view of the distal portion of the forearm body 190 and the wrist joint 182 in which certain internal components are visible, according to one exemplary embodiment.  The forearm body 190 has a set of nested driveshafts 192 rotatably disposed within the body 190 that extend into the wrist joint 182.  The set of nested driveshafts 192 is made up of a first or outer driveshaft 192A, a second or middle driveshaft 192B, and a third or inner driveshaft 192C.  The set of nested driveshafts 192 extend from the forearm body 190 into the wrist joint 182 as shown.  The inner driveshaft 192C is rotatably disposed within the middle driveshaft 192B as shown, and has a driven gear 194C fixedly or integrally attached at its proximal end.  At its distal end, the inner driveshaft 192C is rotatably coupled to a first or inner drive bevel gear 196C.  The middle driveshaft 192B is rotatably disposed within the outer driveshaft 192A as shown, and has a driven gear 194B fixedly or integrally attached at its proximal end.  At its distal end, the middle driveshaft 192B is coupled to a second or middle drive bevel gear 196B.  The outer driveshaft 192A is rotatably disposed within the forearm body 190 and wrist 182 and has a driven gear 194A fixedly or integrally attached at its proximal end.  At its distal end, the outer driveshaft 192A is coupled to a first or outer drive bevel gear 196A.
+
+[0100]
+ Continuing with FIG. 7B, the proximal end of the inner driveshaft 192C is rotatably supported in the forearm body 190 via a first shaft bearing 198 and a second shaft bearing 200.  Further, the proximal end of the middle driveshaft 192B, including the driven gear 194B, is rotatably supported via the second shaft bearing 200 and a third shaft bearing 202.  In addition, the proximal end of the outer driveshaft 192A, including driven gear 194A, is rotatably supported via the third shaft bearing 202.
+
+[0101]
+ The set of nested driveshafts 192 has three motors operably coupled thereto.  More specifically, motor 186B (of FIG. 6C) has an motor drive gear 204A (shown in FIG. 7A, but not visible in FIG. 7B) that is coupled to the driven gear 194A (which is coupled to the outer driveshaft 192A).  Further, motor 186A (of FIG. 6C) has a motor drive gear 204C that is coupled to the driven gear 194C (which is coupled to the inner driveshaft 192C).  In addition, motor 186C (of FIG. 6C) has a motor drive gear 204B (also not visible in the figures) that is coupled to the driven gear 194B (which is coupled to the middle driveshaft 192B).
+
+[0102]
+ Thus, in operation, the motor 186B can be actuated to drive rotation of the outer driveshaft 192A by driving rotation of motor drive gear 204A, which drives rotation of the driven gear 194A.  Similarly, the motor 186C can be actuated to drive rotation of the middle driveshaft 192B by driving rotation of motor drive gear 204B (also not visible), which drives rotation of the driven gear 194B.  In a similar fashion, the motor 186A can be actuated to drive rotation of the inner driveshaft 192C by driving rotation of motor drive gear 204C, which drives rotation of the driven gear 194C.
+
+[0103]
+ At the distal end, the outer driveshaft 192A and outer drive bevel gear 196A are supported by the first wrist bearing 210.  In addition, the middle driveshaft 192B and the middle drive bevel gear 196B are supported by the first wrist bearing 210 and the second wrist bearing 212.  
+
+[0104]
+ The inner drive bevel gear 196C is rotatably coupled to a differential yoke 220 having two rotational projections 222A, 222B, an extension shaft 224 that extends into the end effector body 244, and a yoke bevel gear 226.  The differential yoke 220 is similar to the differential yoke 56C of the shoulder joint 46 discussed above and thus conveys the same or similar in-line benefits to those of the yoke 56C, including the minimal cross-sectional profile and the in-line configuration as discussed in detail above.  The inner drive bevel gear 196C rotatably couples to the yoke bevel gear 226.  As such, rotation of the inner drive bevel gear 196C causes the rotation of the differential yoke 220 around the rotational projections 222A, 222B such that the extension shaft 224 is caused to rotate around the longitudinal axis of the yoke 220 that extends from the first rotational projection 222A to the second 222B.    
+
+[0105]
+ The middle drive bevel gear 196B is rotatably coupled to a first wrist bevel gear 230, which is rotatably disposed over the first inner rotational projection 222A.  In addition, the first wrist bevel gear 230 is also rotatably disposed over the first outer rotational projection 246A extending from the first wrist support bracket 246.  The first wrist support bracket 246 extends from the distal end of the forearm body 190.  As such, the first wrist bevel gear 230 is rotatably supported by the first inner rotational projection 222A and the first outer rotational projection 246A.  Further, the first wrist bevel gear 230 is rotatably coupled to the end effector output bevel gear 232, which is coupled to or integral with the end effector output body 234.  Thus, rotation of the middle drive bevel gear 196B causes rotation of the first wrist bevel gear 230, which causes rotation of the end effector output bevel gear 232, which causes rotation of the end effector output body 234.  In certain embodiments, the output body 234 is operably coupled to the end effector to actuate the end effector in some fashion, depending on the type of end effector.  
+
+[0106]
+ The outer drive bevel gear 196A is rotatably coupled to the second wrist bevel gear 240, which is rotatably disposed over the second inner rotational projection 222B.  In addition, the second wrist bevel gear 240 is also rotatably disposed over the second outer rotational projection 248A extending from the second wrist support bracket 248.  The second wrist support bracket 248 extends from the distal end of the forearm body 190 in a fashion similar to the first wrist support bracket 246.  As such, the second wrist bevel gear 240 is rotatably supported by the second inner rotational projection 222B and the second outer rotational projection 248A.  Further, the second wrist bevel gear 240 is rotatably coupled to the end effector rotation bevel gear 242, which is coupled to or integral with the end effector body 244.  Thus, rotation of the outer drive bevel gear 196A causes rotation of the second wrist bevel gear 240, which causes rotation of the end effector rotation bevel gear 242, which causes rotation of the end effector body 244, thereby causing rotation of the end effector around its longitudinal axis.
+
+   </p>
+   <p>
+[0107]
+ The wrist joint embodiment 182 discussed above is a compact dexterous wrist joint.  Given the unpredictable nature of a patient’s anatomy, the criticality of a robotic device providing as much control as possible to a surgeon for the purpose of completing a surgical task, and the importance of tool dexterity in surgical procedures, the dexterity of the wrist joint in a robotic arm is important.  There are known devices that provide a wrist joint with seven degrees of freedom, but those devices have arm and end effector actuation via actuators (which are typically motors) disposed outside the patient’s body, such as, for example, the EndoWrist® of the Da Vinci® system.  The use of mechanical (cables, etc.), pneumatic, hydraulic, or other such force transmission systems make it possible for the EndoWrist and other such devices to maintain a smaller profile while having great dexterity.  In contrast, to date, known devices having actuators (such as motors) disposed within the patient’s body or the opening through which the device is positioned have not been able to approach that number of degrees of freedom or the corresponding amount of dexterity.  However, the wrist embodiments (such as wrist joint 182) provide additional dexterity in comparison to other known devices with internal actuators.  That is, the wrist joint 182 provides three degrees of freedom while minimizing its cross-sectional profile due to the joint 182 configuration.  More specifically, as mentioned above, the configuration of the wrist joint 182 with the differential yoke 220 that is similar to the differential yoke 56C of the shoulder joint 46 results in similar features and functionality, including the minimal cross-sectional diameter and the in-line configuration.
+
+[0108]
+ FIGS. 8A and 8B depict one example of a trocar 250 according to one embodiment that is sized and configured to allow for receiving therethrough the various robotic device embodiments disclosed or contemplated herein.  The trocar 250 has a port (or “seal”) 252 and a cannula 254 extending from the port 252.  The port 252 and cannula 254 define an inner lumen 256 having a diameter that is large enough to receive any arm and internal body of any device implementation disclosed or contemplated herein.  Further, the cannula 254 has a length such that the shoulder joint of the robotic device positioned therethrough extends through and is positioned distally out of the distal end 258 of the cannula 254, thereby allowing the arm coupled to the shoulder joint to move in any direction as desired without being hindered or obstructed by the cannula 254.  As also discussed elsewhere herein, in addition to this trocar 250 and any other known laparoscopic trocar, it is understood that any insertion device of the appropriate size (including any type of port) or any incision of the appropriate size can be used with the various device embodiments disclosed or contemplated herein.
+
+[0109]
+ Trocar ports such as the trocar 250 described above and other known trocars can have certain advantages over known single-site entry ports.  For example, insertion of certain known robotic devices through the single-site entry port can cause structural damage to the robotic device as a result of the physical contact between the port and the device.  In addition, such known single-site entry ports require a larger incision in the patient than standard trocars require.
+
+[0110]
+ In use, one embodiment of a single-arm robotic device 270 is depicted in FIGS. 9A and 9B in a surgical environment.  More specifically, FIG. 9A provides an external view of the device 270 positioned in a patient 272 through a trocar 274 such that the device 270 is in its operational configuration.  That is, the device 270 is positioned into the target cavity (not shown) of the patient 272 such that the robotic arm (not shown) can be used to perform the desired procedure therein.  In this embodiment, the device 270 is stabilized and/or maintained in the desired operational position via a known external support 276 that is coupled to the external body 278 of the device 270.  
+
+[0111]
+ Further, FIG. 9B is a schematic view of the device 270 and the visual representation of the workspace 280 in which the device 270 can operate.  More specifically, the workspace 280 is the visual representation of the full area that the end effector 284 coupled to the single arm 282 can reach.  As such, the device 270 can be positioned within a target cavity in a patient such as the patient 272 in FIG. 9B such that the interior body 286 extends into the target cavity, resulting in the robotic arm 282 being disposed therein.  In this specific embodiment, the device 270, which has components and functionality similar to the various other device embodiments disclosed or contemplated herein, can manipulate or otherwise position the arm 282 such that the end effector 284 can extend to all of the areas defined by the workspace 280.  Thus, the end effector 284 can be used to perform a procedure at any location within that workspace 280.
+
+   </p>
+   
+   <p>
+[0112]
+ Although the present invention has been described with reference to preferred embodiments, persons skilled in the art will recognize that changes may be made in form and detail without departing from the spirit and scope of the invention.</p>
+
+</body></html>

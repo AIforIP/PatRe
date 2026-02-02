@@ -1,0 +1,17 @@
+<html><head></head><body>18620011
+
+   
+   CLAIMS
+   What is claimed is:
+   
+
+<br>
+
+1. A method for gait-based testing for a neurodegenerative condition in a patient, the method comprising:
+acquiring gait kinematic data for the patient; 
+processing the gait kinematic data, using one or more computer processors, to derive one or more gait metrics collectively constituting a gait signature associated with the neurodegenerative condition; and
+operating a machine-learning model on input comprising the gait signature, using the one or more computer processors, to determine at least one predictive score associated with the neurodegenerative condition and the patient, the machine-learning model trained on a training dataset comprising gait metrics derived from kinematic data for a plurality of patients along with evaluation scores quantifying the neurodegenerative condition in the respective one of the plurality of patients.
+
+   
+
+</body></html>

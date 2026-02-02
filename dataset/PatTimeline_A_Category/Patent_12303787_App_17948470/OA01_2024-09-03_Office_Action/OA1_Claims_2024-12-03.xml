@@ -1,0 +1,95 @@
+<html><head></head><body><h3>Date: 2024-12-03</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>Please amend the claims as follows:</p><br>
+<br>
+1. (Currently Amended) A method for controlling a virtual object, the method comprising:<br>
+displaying, by processing circuitry of a terminal, at least two physical strength display components corresponding to [[a]] <u>the</u> virtual object, each of the physical strength display components being configured to display a physical strength consumption status of a corresponding body part of the virtual object, wherein different physical strength display components correspond to different body parts of the virtual object;<br>
+determining, in response to a control operation instructing the virtual object to perform an action, a physical strength display component of the at least two physical strength display components, the determined physical strength display component corresponding to the control operation wherein a body part of the virtual object used to perform the action corresponds to the determined physical strength display component; and<br>
+controlling the virtual object to perform the action <u>according to a parameter that varies based on a current physical strength value of the corresponding body part of the virtual object indicated by the determined physical strength display component,</u> and updating a first remaining physical strength value displayed by the determined physical strength display component to a second remaining physical strength value, the second remaining physical strength value being less than the first remaining physical strength value.<br>
+<br>
+2. (Original) The method according to claim 1, wherein the controlling the virtual object to perform the action comprises:<br>
+controlling, in response to the first remaining physical strength value being greater than a first threshold, the virtual object to perform the action by using a first parameter; and<br>
+controlling, in response to the first remaining physical strength value being less than the first threshold, the virtual object to perform the action by using a second parameter, wherein an execution effect of the action using the second parameter is lower than an execution effect of the action using the first parameter.<br>
+<br>
+<br>
+3. (Original) The method according to claim 2, wherein the controlling, in response to the first remaining physical strength value being less than the first threshold, the virtual object to perform the action by using the second parameter comprises:<br>
+in response to (i) the first remaining physical strength value being less than the first threshold and (ii) the action being an action of a first type, controlling the virtual object to perform the action by using the second parameter, wherein the action of the first type comprises at least one of aiming, throwing, or posture switching; and<br>
+the method further comprises:<br>
+in response to (i) the first remaining physical strength value being less than the first threshold and (ii) the action being an action of a second type, canceling the control operation, wherein the action of the second type comprises at least one of running, jumping, climbing, or short-range attacking.<br>
+<br>
+4. (Original) The method according to claim 3, wherein when the action is aiming, aiming stability of the second parameter is lower than aiming stability of the first parameter;<br>
+when the action is throwing, a throwing speed or a throwing distance of the second parameter is lower than a throwing speed or a throwing distance of the first parameter; and<br>
+when the action is posture switching, a posture switching speed of the second parameter is lower than a posture switching speed of the first parameter.<br>
+<br>
+5. (Original) The method according to claim 1, wherein after the determining, the method further comprises:<br>
+determining an estimated physical strength consumption value of the action; and<br>
+displaying the estimated physical strength consumption value through the determined physical strength display component, wherein a display manner of the estimated physical strength consumption value is different from a display manner of a consumed physical strength value and the first remaining physical strength value.<br>
+<br>
+<br>
+6. (Original) The method according to claim 5, wherein the updating the first remaining physical strength value displayed by the determined physical strength display component to the second remaining physical strength value comprises:<br>
+determining the second remaining physical strength value based on the first remaining physical strength value and the estimated physical strength consumption value; and<br>
+updating the determined physical strength display component based on the second remaining physical strength value.<br>
+<br>
+7. (Original) The method according to claim 5, wherein the determining the estimated physical strength consumption value of the action comprises:<br>
+obtaining a first posture of the virtual object, wherein the first posture of the virtual object comprises at least one of a standing posture, a squatting posture, or a lying posture; and<br>
+determining the estimated physical strength consumption value of the action according to the first posture, wherein estimated physical strength consumption values of a same action performed in different postures are different.<br>
+<br>
+8. (Original) The method according to claim 7, wherein, after the controlling the virtual object to perform the action, the method further comprises:<br>
+obtaining a second posture of the virtual object in response to completing execution of the action; and<br>
+determining physical strength recovery rates respectively corresponding to the at least two physical strength display components according to the second posture, wherein a same physical strength display component corresponds to different physical strength recovery rates under different postures, and different physical strength display components correspond to different physical strength recovery rates under a same posture.<br>
+<br>
+9. (Original) The method according to claim 1, wherein the physical strength display components comprise an upper limb strength display component and a lower limb strength display component; and<br>
+the determining comprises:<br>
+determining the upper limb strength display component as the determined physical strength display component in response to the action indicated by the control operation being at least one of aiming, throwing, or short-range attacking;<br>
+determining the lower limb strength display component as the determined physical strength display component in response to the action indicated by the control operation being at least one of running or jumping; and<br>
+determining both the upper limb strength display component and the lower limb strength display component as the determined physical strength display component in response to the action indicated by the control operation being at least one of posture switching or climbing.<br>
+<br>
+10. (Original) The method according to claim 1, wherein the displaying comprises:<br>
+displaying the at least two physical strength display components in response to remaining physical strength values indicated by the at least two physical strength display components being less than a second threshold; and<br>
+the method further comprises:<br>
+in response to the remaining physical strength values indicated by the at least two physical strength display components restoring to the second threshold, highlighting the at least two physical strength display components and then stopping display of the at least two physical strength display components.<br>
+<br>
+11. (Currently Amended) The method according to claim 1, wherein the method further comprises:<br>
+in response to a use operation of a virtual supply item, determining a supply body part corresponding to the virtual supply item, wherein the virtual supply item is configured to increase a remaining physical strength value of the body part; and<br>
+<del>display </del><u>displayin</u><u>g</u><u></u>a physical strength value supply effect through a physical strength display component corresponding to the supply body part.<br>
+<br>
+12. (Currently Amended) An apparatus for controlling a virtual object, comprising:<br>
+processing circuitry configured to display at least two physical strength display components corresponding to [[a]]<u></u><u>t</u><u>he</u> virtual object, each of the physical strength display components being configured to display a physical strength consumption status of a corresponding body part of the virtual object, wherein different physical strength display components correspond to different body parts;determine, in response to a control operation instructing the virtual object to perform an action, a physical strength display component corresponding to the control operation, wherein a body part of the virtual object used to perform the action corresponds to the determined physical strength display component; and<br>
+control the virtual object to perform the action <u>according to a parameter that varies based on a current physical strength value of the corresponding body part of the virtual object indicated by the determined physical strength display component,</u> and update a first remaining physical strength value displayed by the determined physical strength display component to a second remaining physical strength value, the second remaining physical strength value being less than the first remaining physical strength value.<br>
+<br>
+13. (Original) The apparatus according to claim 12, wherein the processing circuitry is further configured to:<br>
+control, in response to the first remaining physical strength value being greater than a first threshold, the virtual object to perform the action by using a first parameter; and<br>
+control, in response to the first remaining physical strength value being less than the first threshold, the virtual object to perform the action by using a second parameter, wherein an execution effect of the action using the second parameter is lower than an execution effect of the action using the first parameter.<br>
+<br>
+14. (Original) The apparatus according to claim 13, wherein the processing circuitry is further configured to:<br>
+in response to (i) the first remaining physical strength value being less than the first threshold and (ii) the action being an action of a first type, control the virtual object to perform<br>
+<br>
+the action by using the second parameter, wherein the action of the first type comprises at least one of aiming, throwing, or posture switching; andin response to (i) the first remaining physical strength value being less than the first threshold and (ii) the action being an action of a second type, cancel the control operation, wherein the action of the second type comprises at least one of running, jumping, climbing, or short-range attacking.<br>
+<br>
+15. (Original) The apparatus according to claim 14, wherein when the action is aiming, aiming stability of the second parameter is lower than aiming stability of the first parameter;<br>
+when the action is throwing, a throwing speed or a throwing distance of the second parameter is lower than a throwing speed or a throwing distance of the first parameter; and<br>
+when the action is posture switching, a posture switching speed of the second parameter is lower than a posture switching speed of the first parameter.<br>
+<br>
+16. (Original) The apparatus according to claim 12, wherein the processing circuitry is further configured to:<br>
+determine an estimated physical strength consumption value of the action; and<br>
+display the estimated physical strength consumption value through the determined physical strength display component, wherein a display manner of the estimated physical strength consumption value is different from a display manner of a consumed physical strength value and the first remaining physical strength value.<br>
+<br>
+17. (Original) The apparatus according to claim 16, wherein the processing circuitry is further configured to:<br>
+determine the second remaining physical strength value based on the first remaining physical strength value and the estimated physical strength consumption value; and<br>
+update the determined physical strength display component based on the second remaining physical strength value.<br>
+<br>
+<br>
+18. (Original) The apparatus according to claim 16, wherein the processing circuitry is further configured to:<br>
+obtain a first posture of the virtual object, wherein the first posture of the virtual object comprises at least one of a standing posture, a squatting posture, or a lying posture; and<br>
+determine the estimated physical strength consumption value of the action according to the first posture, wherein estimated physical strength consumption values of a same action performed in different postures are different.<br>
+<br>
+19. (Original) The apparatus according to claim 18, wherein the processing circuitry is further configured to, after the virtual object is controlled to perform the action:<br>
+obtain a second posture of the virtual object in response to completing execution of the action; and<br>
+determine physical strength recovery rates respectively corresponding to the at least two physical strength display components according to the second posture, wherein a same physical strength display component corresponds to different physical strength recovery rates under different postures, and different physical strength display components correspond to different physical strength recovery rates under a same posture.<br>
+<br>
+20. (Currently Amended) A non-transitory computer-readable storage medium storing computer-readable instructions thereon, which, when executed by processing circuitry, cause the processing circuitry to perform a method for controlling a virtual object, the method comprising:<br>
+displaying at least two physical strength display components corresponding to [[a]] the virtual object, each of the physical strength display components being configured to display a physical strength consumption status of a corresponding body part of the virtual object, wherein different physical strength display components correspond to different body parts of the virtual object;<br>
+determining, in response to a control operation instructing the virtual object to perform an action, a physical strength display component corresponding to the control operation wherein a body part of the virtual object used to perform the action corresponds to the determined physical strength display component; and<br>
+controlling the virtual object to perform the action <u>according to a parameter that varies based on a current physical strength value of the corresponding body part of the virtual object indicated by the determined physical strength display component,</u> and updating a first remaining physical strength value displayed by the determined physical strength display component to a second remaining physical strength value, the second remaining physical strength value being less than the first remaining physical strength value.
+</body></html>

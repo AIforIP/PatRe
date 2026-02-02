@@ -1,0 +1,54 @@
+<html><head></head><body><h3>Date: 2024-08-06</h3>
+<p>IN THE CLAIMS</p><br>
+1.
+(previously presented) A computerized method for controlling movement of an end effector having a robotic wrist, the method comprising the following operations performed by a computer system:<br>
+producing sensor measurements of force or torque in a transmission that mechanically couples the robotic wrist to an actuator, wherein the sensor measurements are cable force measurements;<br>
+estimating joint friction in a joint of the robotic wrist, based on the cable force measurements, by relating the cable force measurements to a joint friction variable; and<br>
+performing control tasks to control movement of the end effector, by using the estimated joint friction.<br>
+2.
+(original) The method of claim 1 wherein performing control tasks comprises generating one or more control signals which control how the actuator is energized to move the robotic wrist.<br>
+3.
+(original) The method of claim 2 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission.<br>
+4.
+(previously presented) The method of claim 2 wherein using the estimated joint friction comprises computing a tracking error of the end effector based on the joint friction variable; and<br>
+adjusting the one or more control signals based on the tracking error.<br>
+5.
+(previously presented) The method of claim 4 further comprising computing the tracking error using a mathematical expression that relates the joint friction variable to the tracking error.<br>
+6.
+(previously presented) The method of claim 4 wherein relating the cable force measurements to the joint friction variable comprises relating a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+<br>
+<br>
+7.
+(previously presented) The method of claim 1 wherein the end effector comprises a pivoting jaw having a jaw angle and being mechanically coupled to the wrist to be driven by the actuator, and the tracking error refers to the jaw angle.<br>
+8.
+(original) The method of claim 7 wherein the joint friction variable represents friction at the joint of the wrist.<br>
+9.
+(original) The method of claim 8 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission that mechanically couples the robotic wrist to the actuator.<br>
+10.
+(previously presented) The method of claim 1 wherein relating the cable force measurements to the joint friction variable comprises relating a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+11.
+(previously presented) An article of manufacture comprising a computer-readable storage medium having stored therein instructions that configure a processor to:<br>
+produce sensor measurements of force or torque in a transmission, wherein the transmission mechanically couples a robotic wrist of an end effector to an actuator so the actuator can drive a joint of the robotic wrist and the sensor measurements are cable force measurements;<br>
+estimate joint friction in the joint of the robotic wrist based on the cable force measurements, by relating the cable force measurements to a joint friction variable; and<br>
+perform control tasks to control movement of the end effector, by using the estimated joint friction.<br>
+12.
+(currently amended) The article of manufacture of claim 11 wherein the computer- readable storage medium has stored therein instructions that configure the processor to use the estimated <del>join </del><del>j</del><u>o</u><u>int </u>friction by computing a tracking error of the end-effector based on the joint friction variable.<br>
+13.
+(previously presented) The article of manufacture of claim 12 wherein the processor performs the control tasks by generating one or more control signals which control how the actuator is energized to move the robotic wrist, based on the tracking error.<br>
+<br>
+<br>
+14.
+(original) The article of manufacture of claim 13 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission.<br>
+15.
+(currently amended) The article of manufacture of claim 13 wherein the processor relates the cable force measurements to the <del>join </del><del>j</del><u>o</u><u>int </u>friction variable by relating a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+16.
+(previously presented) The article of manufacture of claim 13 wherein the end effector comprises a jaw having a jaw angle and being mechanically coupled to the robotic wrist, and the tracking error refers to the jaw angle.<br>
+17.
+(original) The article of manufacture of claim 16 wherein the joint friction variable represents friction at the joint of the robotic wrist.<br>
+18.
+(original) The article of manufacture of claim 17 wherein the cable force measurements are measurements of force or tension on a plurality of cables that are part of the transmission that mechanically couples the robotic wrist to the actuator.<br>
+19.
+(previously presented) The article of manufacture of claim 11 wherein processor relates the cable force measurements to the joint friction variable comprises by relating a plurality of cable tension variables to a plurality of joint friction torque variables, wherein the plurality of joint friction torque variables represent friction at a plurality of joints of the end effector.<br>
+20.
+(previously presented) The article of manufacture of 19 wherein the computer-readable storage medium has stored therein further instructions that configure the processor to use the estimated joint friction by computing a tracking error of the end effector based on the joint friction variable.<br>
+</body></html>

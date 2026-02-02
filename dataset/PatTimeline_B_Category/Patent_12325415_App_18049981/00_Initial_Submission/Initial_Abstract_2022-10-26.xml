@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2022-10-26</h3>
+<p>Attorney Docket No.: SYSM-001/02US 337597-2006</p>
+<h1>ABSTRACT</h1>
+<p>A non-transitory computer readable storage medium has instructions executed by a</p><p>processor to obtain the relative speed between a first traffic object and a second traffic object. The separation distance between the first traffic object and the second traffic object is received. The relative speed and the separation distance are combined to form a quantitative measure of hazard encountered by the first traffic object. The obtain, receive and combine operations are repeated to form cumulative measures of hazard associated with the first traffic object. The cumulative measures of hazard are analyzed to derive a first traffic object safety score for the first traffic object.</p><p>22</p><p>276228411 v1</p></body></html>

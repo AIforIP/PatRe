@@ -1,0 +1,66 @@
+<html><head></head><body><h3>Date: 2024-10-16</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>This listing of claims reflects all claim amendments and replaces all prior versions, and listings, of claims in the application. Material to be inserted is in <u>bold and underline,</u> and material to be deleted is in <del>strikeout </del>or in [[double brackets]] if the deletion would be difficult to see.</p>
+<h1>LISTING OF CLAIMS:</h1>
+<br>
+<br>
+1.    (Currently amended) A system<u> for a vehicle,</u> comprising:<del>an input;</del><br>
+<del>an output;</del><br>
+<del>a first software component for use in configuring operation of a second software component via a proxy and stub interface;</del><br>
+a  non-transitory  memory   component   <u>storing </u><u></u><u>software </u><u></u><u>components </u><u>and </u>comprising:a first memory space <del>comprising the</del><u>storing a </u>first software component, a proxy software component, and an activity monitor software component; and<br>
+a second memory space <del>comprising the</del><u>storing a </u>second software component and a stub software <u>component</u><u>,</u><u> the first software component configured to interact with the second software component via the proxy software component and the stub software component;</u> and<br>
+at least one processor for executing software components stored on the first and second memory spaces <u>such that the first software component is configured to perform a polling event of a sensor component stored in the first memory space to obtain a speed reading of the vehicle, perform a comparison event to compare the speed</u><br>
+Application Filing Date: May 28, 2021<br>
+<br>
+<u>reading to a target speed, generate a command for engine output tor</u><u>q</u><u>ue based on the comparison, and send the command to the proxy software component as a command event, and the proxy software component is conf</u><u>ig</u><u>ured to send the command event to the stub software component</u><u>,</u>wherein the activity monitor software component is arranged when executed to:<br>
+<del>cause the input to </del>monitor <u>the polling event</u><u>,</u><u> the comparison event, and the command event</u><del>a first event associated with the first software component</del>;<br>
+<del>cause the input to monitor a second event associated with the proxy software component, wherein the second event includes a command event at the proxy software component;</del><br>
+assess compliance of the <del>first and second</del><u>pollin</u><u>g</u><u>, comparison, and command </u>events with a schedule of events, wherein assessing compliance includes checking <u>an</u><u></u>order and/or <u>a</u><u></u>timing of the <del>first and second</del><u>po</u><u>lling</u><u>, comparison, and command </u>events; and<br>
+<del>cause the output to </del>generate an error message in response to assessed non- compliance with the schedule of <u>events, the error message conf</u><u>ig</u><u>ured to be displayed, detectable by a diagnostic tool, or used to troubleshoot an error.</u><br>
+<br>
+2.    (Currently amended) The system of claim 1, wherein the schedule of events includes <u>an expected </u><u></u>timing and/or order of the <u>polling, comparison, and command </u>events.<br>
+<br>
+3.    (Original) The system of claim 1, further comprising a data store partitioned into the first memory space and the second memory space.<br>
+Application Filing Date: May 28, 2021<br>
+<br>
+<br>
+4.    (Original) The system of claim 1, further comprising a first data store comprising the first memory space and a second data store comprising the second memory space.<br>
+<br>
+5.    (Cancelled)<br>
+<br>
+6.    (Currently amended) The system of claim [[5]]1, wherein the vehicle system is a cruise control system.<br>
+<br>
+7.    (Original) The system of claim 5, wherein the second software component comprises a drivetrain component.<br>
+<br>
+8.    (Currently amended) The system of claim 1, wherein the first software component comprises a logic component arranged to generate [[a]]the command event to control the second software component based on an input event.<br>
+<br>
+9.    (Currently amended) The system of claim 8, wherein the input event comprises [[a]]the sensor reading obtained from [[a]]the sensor component.<br>
+<br>
+10.   (Previously presented) The system of claim 9, wherein the sensor component is a wheel speed sensor component.<br>
+<br>
+11.   (Currently amended) The system of claim 9, wherein the input event is obtained in response to [[a]]the polling event initiated by the logic component.<br>
+Application Filing Date: May 28, 2021<br>
+<br>
+<br>
+12.   (Cancelled)<br>
+<br>
+13.   (Currently amended) The system of claim 1, further comprising a troubleshooting component arranged to treat [[an]]the error in response to receiving the error message.<br>
+<br>
+14.   (Original) A vehicle comprising the system of claim 4.<br>
+<br>
+15.   (Cancelled)<br>
+<br>
+16.   (Currently amended) The system of claim 1[[5]], wherein the <del>corresponding </del>stub<u> software component </u>is arranged to route the command event to a powertrain component.<br>
+<br>
+17.   (Currently amended) The system  of claim  16[[5]], wherein the powertrain component is an engine control unit, and further wherein any torque demands received are used to configure a motor to output a desired output torque.<br>
+<br>
+18.   (Previously presented) The system of claim  1, wherein the proxy software component is arranged to marshal additional command events and route each command event to a target location on another memory space.<br>
+<br>
+19.   (Cancelled)<br>
+Application Filing Date: May 28, 2021 Docket No. JLR213134PCTUSCON1<br>
+20.    (Currently amended) The system
+of claim  1[[9]], wherein the assessed non- compliance includes a determination that <del>one of </del>the polling event[[s]] occurred after<del> one of </del>the comparison event[[s]].<br>
+<br>
+Docket No. JLR213134PCTUSCON1
+</body></html>

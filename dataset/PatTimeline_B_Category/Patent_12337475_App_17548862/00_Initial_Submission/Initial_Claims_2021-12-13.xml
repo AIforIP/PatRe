@@ -1,0 +1,146 @@
+<html><head></head><body><h3>Date: 2021-12-13</h3>
+ What is claimed is:
+<br>
+
+1.
+A repair welding system comprising: 
+<br>
+an inspection device configured to be connected to an inspection robot and 
+<br>
+configured to inspect a welded portion of a workpiece; and 
+<br>
+a welding device configured to be connected to a welding robot and configured to instruct execution of a repair welding on the workpiece based on an inspection result of the inspection device, wherein the inspection device determines whether there is a defective portion that 
+<br>
+does not satisfy a determination standard in the welded portion, wherein in a case that there is the defective portion in the welded portion, the inspection device extracts at least defect type information of the defective portion and inspection coordinate system defective portion position information that is position information of the defective portion based on a coordinate system of the inspection robot, converts at least the inspection coordinate system defective portion position information into position information corresponding to a coordinate system of the welding robot and generates welding coordinate system defective portion position information, and transmits at least the defect type information and the welding coordinate system defective portion position information to the welding device connected to the welding robot, and 
+<br>
+wherein the welding device instructs execution of a repair welding on the defective portion based on at least the defect type information and the welding coordinate system 
+<br>
+defective portion position information.
+<br>
+
+2.
+The repair welding system according to claim 1, wherein the inspection device has a first conversion matrix for converting position information in the coordinate system of the inspection robot into corresponding position information in the coordinate system of the welding robot, and converts the inspection coordinate system defective portion position information into the welding coordinate system defective portion position information by using the first conversion matrix.
+
+<br>
+
+3.
+The repair welding system according to claim 1, wherein the inspection device repeats the determination until it is determined that there is no defective portion that is correctable by the repair welding.
+<br>
+
+4.
+The repair welding system according to claim 1, wherein the inspection device counts the number of times of the determination, and 
+<br>
+when the counted number of times of the determination reaches a predetermined number of times, the inspection device outputs an alert for notifying that it is impossible to correct the defective portion by the repair welding. 
+<br>
+
+5.
+The repair welding system according to claim 1, wherein the inspection device converts the inspection coordinate system defective portion position information into position information corresponding to a workpiece coordinate system, and 
+<br>
+wherein the welding device converts the position information corresponding to the workpiece coordinate system into position information corresponding to the coordinate system of the welding robot.
+<br>
+
+6.
+The repair welding system according to claim 5, wherein the inspection device has a second conversion matrix for converting position information in the coordinate system of the inspection robot into corresponding position information in the workpiece coordinate system, converts the inspection coordinate system defective portion position information into the position information of the defective portion corresponding to the workpiece coordinate system by using the second conversion matrix, and transmits the converted position information to the welding device, and 
+<br>
+wherein the welding device has a third conversion matrix for converting position information in the workpiece coordinate system into corresponding position information in the coordinate system of the welding robot, and converts the position information of the defective portion transmitted from the inspection device into position information of the 
+<br>
+defective portion corresponding to the coordinate system of the welding robot by using the third conversion matrix.
+<br>
+
+7.
+A repair welding system comprising: 
+
+ an inspection device configured to be connected to an inspection robot and configured to inspect a welded portion of a workpiece; and 
+<br>
+a welding device configured to be connected to a welding robot and configured to instruct execution of a repair welding on the workpiece based on an inspection result of the 
+<br>
+inspection device, wherein the inspection device determines whether there is a defective portion that does not satisfy a determination standard in the welded portion, wherein in a case that there is the defective portion in the welded portion, the inspection device transmits at least defect type information of the defective portion and inspection coordinate system  defective portion position information that is position information of the defective portion based on a coordinate system of the inspection robot to the welding device, and 
+<br>
+wherein the welding device converts at least the inspection coordinate system defective portion 
+<br>
+position information into position information corresponding to a coordinate system of the welding robot and generates welding coordinate system defective portion position information, and instructs execution of a repair welding on the defective portion based on at least the defect type information and the welding coordinate system defective portion position information.
+<br>
+
+8.
+The repair welding system according to claim 7, wherein the welding device has a first conversion matrix for converting position information in the coordinate system of the inspection robot into corresponding position information in the coordinate system of the welding robot, and converts the inspection coordinate system defective portion position information into the welding coordinate system defective portion position information by using the first conversion matrix.
+<br>
+
+9.
+The repair welding system according to claim 7, wherein the inspection device repeats the determination until it is determined that there is no defective portion that is correctable by the repair welding.
+<br>
+
+10.
+The repair welding system according to claim 7,
+ wherein the inspection device counts the number of times of the determination, and 
+<br>
+when the counted number of times of the determination reaches a predetermined number of times, the inspection device outputs an alert for notifying that it is impossible to correct the defective portion by the repair welding. 
+<br>
+
+11.
+The repair welding system according to claim 7, wherein the inspection device converts the inspection coordinate system defective portion position information into position information corresponding to a workpiece coordinate system, and 
+<br>
+wherein the welding device converts the position information corresponding to the workpiece coordinate system into position information corresponding to the coordinate system of the welding robot.
+<br>
+
+12.
+The repair welding system according to claim 11, wherein the inspection device has a second conversion matrix for converting position information in the coordinate system of the inspection robot into corresponding position information in the workpiece coordinate system, converts the inspection coordinate system defective portion position information into the position information of the defective portion corresponding to the workpiece coordinate system by using the second conversion matrix, and transmits the converted position information to the welding device, and 
+<br>
+wherein the welding device has a third conversion matrix for converting position information in the workpiece coordinate system into corresponding position information in the coordinate system of the welding robot, and converts the position information of the defective portion transmitted from the inspection device into position information of the 
+<br>
+defective portion corresponding to the coordinate system of the welding robot by using the third conversion matrix.
+<br>
+
+13.
+A repair welding system comprising: 
+<br>
+an inspection device configured to be connected to an inspection robot and 
+<br>
+configured to inspect a welded portion of a workpiece; 
+<br>
+a welding device configured to be connected to a welding robot and configured to instruct execution of a repair welding on the workpiece based on an inspection result of the inspection device; and 
+
+ an integrated control device configured to be connected to the inspection device and the welding device, configured to acquire the inspection result of the inspection device, and 
+<br>
+configured to notify the welding device of the inspection result, wherein the inspection device determines whether there is a defective portion that 
+<br>
+does not satisfy a determination standard in the welded portion, wherein in a case that there is the defective portion in the welded portion, the inspection device transmits at least defect type information of the defective portion and inspection coordinate system defective portion position information that is position information of the defective portion based on a coordinate system of the inspection robot to the welding device, wherein the integrated control device converts at least the inspection coordinate system defective portion position information into position information corresponding to a coordinate system of the welding robot and generates welding coordinate system defective portion position information, and transmits at least the defect type information and the welding coordinate system defective portion position information to the welding device, and 
+<br>
+wherein the welding device instructs execution of a repair welding on the defective portion based on at least the defect type information and the welding coordinate system 
+<br>
+defective portion position information.
+<br>
+
+14.
+The repair welding system according to claim 13, wherein the integrated control device has a first conversion matrix for converting position information in the coordinate system of the inspection robot into corresponding position information in the coordinate system  of the welding robot, and converts the inspection coordinate system defective portion position information into the welding coordinate system defective portion position information by using the first conversion matrix.
+<br>
+
+15.
+The repair welding system according to claim 13, wherein the inspection device repeats the determination until it is determined that there is no defective portion that is correctable by the repair welding.
+<br>
+
+16.
+The repair welding system according to claim 13,
+ wherein the inspection device counts the number of times of the determination, and 
+<br>
+when the counted number of times of the determination reaches a predetermined number of times, the inspection device outputs an alert for notifying that it is impossible to correct the defective portion by the repair welding. 
+<br>
+
+17.
+The repair welding system according to claim 13, wherein the integrated control device converts the inspection coordinate system defective portion position information into position information corresponding to a workpiece coordinate system, and 
+<br>
+converts the position information corresponding to the workpiece coordinate system into position information corresponding to the coordinate system of the welding robot.
+<br>
+
+18.
+The repair welding system according to claim 17, wherein the integrated control device has a second conversion matrix for converting the acquired position information in the coordinate system of the inspection robot into corresponding position information in the workpiece coordinate system in the inspection, and converts the inspection coordinate system defective portion position information into the welding coordinate system defective portion position information by using the second conversion matrix, has a third conversion matrix for converting the converted position information in the workpiece coordinate system in the inspection into corresponding position information in the workpiece coordinate system in the repair welding and converts the position information of the defective portion into position information of the defective portion corresponding to the workpiece coordinate system in the repair welding by using the third conversion matrix, and 
+<br>
+has a fourth conversion matrix for converting the converted position information in the workpiece coordinate system in the repair welding into corresponding position information in the coordinate system of the welding robot and converts the position 
+<br>
+information of the defective portion into the welding coordinate system defective portion position information by using the fourth conversion matrix, and transmits the welding coordinate system defective portion position information to the welding device.
+5
+10
+15
+20
+25
+30
+</body></html>

@@ -1,0 +1,206 @@
+<html><head></head><body>18349268
+
+   DRIVING SUPPORT APPARATUS, DRIVING SUPPORT METHOD, AND NON-TRANSITORY COMPUTER-READABLE STORAGE MEDIUM
+   
+TECHNICAL FIELD
+<p>[0001]</p>
+<p>The present disclosure relates to a driving support apparatus for prohibiting a collision control when an acceleration operation of a driver is an override operation, a driving support method for prohibiting the collision control when the acceleration operation is the override operation, and a non-transitory computer-readable storage medium storing a program for prohibiting the collision control when the acceleration operation is the override operation.</p>
+   
+   BACKGROUND
+   <p>[0002]</p>
+   <p>Conventionally, there has been known a driving support apparatus that executes a collision control when a possibility (a collision possibility) that a vehicle and an object collide is high. The collision control is a control for avoiding a collision between the vehicle and the object or reducing/mitigating a damage caused by the collision. An automatic brake control for decelerating the vehicle without requiring a brake operation by a driver has been known as the collision control.</p>
+   <p>[0003]</p>
+   <p>A driving support apparatus described in Patent Literature 1 (hereinafter, referred to as a "conventional apparatus") prohibits the collision control when an acceleration override condition is satisfied in a case where the conventional apparatus determines that an acceleration operation by the driver is an erroneous operation. The acceleration override condition is a condition for determining that the acceleration operation is a predetermined acceleration override operation. </p>
+   <p>[0004]</p>
+   <p>Patent Literature 1: Japanese Patent Application Laid-Open No. 2021-79904</p>
+   <p>SUMMARY</p>
+   <p>[0005]</p>
+   <p>When an erroneous operation condition is easy to be satisfied, a detection possibility becomes high, but a misdetection becomes high.  The erroneous operation condition is a condition for determining that the acceleration operation is the erroneous operation.  The detection possibility is a possibility that the erroneous operation is detected.  The misdetection possibility is a possibility that an intentional acceleration override operation of the driver is mis-detected as the erroneous operation. On the other hand, when the erroneous operation condition is difficult to be satisfied, the misdetection possibility becomes low, but the detection possibility becomes low.</p>
+   <p>[0006]</p>
+   <p>When the conventional apparatus does not detect the erroneous operation, the conventional apparatus may mis-detect (erroneously determines) the erroneous operation as the acceleration override operation so as to prohibit the collision control. On the other hand, when the conventional mis-detects (erroneously determines) the erroneous operation, the conventional apparatus may perform the collision control even though the driver performs the acceleration override operation.</p>
+   <p>[0007]</p>
+   <p>The present disclosure has been made to address the above-described problem. That is, an object of the present disclosure is to provide a driving support apparatus capable of reducing a possibility that the collision control is prohibited when the driver performs the erroneous operation and a possibility that collision control is executed when the driver performs the acceleration override operation by accurately detecting the erroneous operation.</p>
+   <p>[0008]</p>
+   <p>The driving support apparatus of the present disclosure (hereinafter, referred to as "the present apparatus") comprises:</p>
+   <p>a sensor (22) configured to detect an object; and</p>
+   <p>a controller (20) configured to prohibit a collision control for avoiding a collision between a vehicle and the object or for mitigating a damage caused by the collision (step 225: No, step 245: Yes), when an override condition for determining that an acceleration operation of a driver is an override operation is satisfied,</p>
+   <p>wherein,</p>
+   <p>the controller is configured to:</p>
+   <p>execute the collision control without prohibiting the collision control, in a case where the override condition is satisfied while the controller is determining that the acceleration operation is an erroneous operation;</p>
+   <p>determine that the acceleration operation is the erroneous operation, when a predetermined normal erroneous operation condition is satisfied (step 315, step 400 to 495), or when a predetermined relaxation erroneous operation condition that is easier satisfied than the normal erroneous operation condition is satisfied (step 335, step 500 to 595) and a predetermined relaxation condition is satisfied (step 325: Yes or step 330: Yes); and</p>
+   <p>determine that the relaxation condition is satisfied, when a number of executions of the collision control while the controller is determining that the acceleration operation is the erroneous operation in one trip is greater than or equal to a first threshold number (step 325: Yes) or when a number of determinations that the acceleration operation is the erroneous operation in one trip is greater than or equal to a second threshold number (step 330: Yes).</p>
+   <p>[0009]</p>
+   <p>When any one of the following conditions 1 and 2 is satisfied, the present apparatus determines that the relaxation condition is satisfied so as to perform an erroneous operation determination using the relaxation erroneous operation condition that is easier to be satisfied than the normal erroneous operation condition.</p>
+   <p>Condition 1: The number of times of execution of the collision control while it is being determined that the erroneous operation is performed in one trip is equal to or greater than a first threshold number.</p>
+   <p>Condition 2: The number of times it is determined that the erroneous operation determined in one trip is equal to or greater than a second threshold number.</p>
+   <p>[0010]</p>
+   <p>When the condition 1 is satisfied, the collision control is executed the first threshold number or more while it is being determined that the erroneous operation is performed. Therefore, the driver tends to perform the erroneous operation that increases the possibility of collision with the object. When the condition 2 is satisfied, the driver tends to perform the erroneous operation. When the driver has at least one of the above tendencies, the present apparatus determines whether or not the erroneous operation is performed using the relaxation erroneous operation condition that is easier to be satisfied than the normal erroneous operation condition. Therefore, the present apparatus can accurately detect the erroneous operation. Accordingly, the present apparatus can reduce a possibility that the collision control is prohibited when the driver performs the erroneous operation, and a possibility that the collision control is executed when the driver performs the acceleration override operation.</p>
+   
+BRIEF DESCRIPTION OF THE DRAWINGS
+<p>[0011]</p>
+<p>FIG. 1 is a schematic system configuration diagram of a driving support apparatus according to an embodiment of the present disclosure.</p>
+<p>FIG. 2 is a flowchart of a program executed by a CPU of a driving support ECU.</p>
+<p>FIG. 3 is a flowchart of a program executed by the CPU of the driving support ECU.</p>
+<p>FIG. 4 is a flowchart of a program executed by the CPU of the driving support ECU.</p>
+<p>FIG. 5 is a flowchart of a program executed by the CPU of the driving support ECU.</p>
+   
+   DETAILED DESCRIPTION
+   <p>[0012]</p>
+   <p>A driving support apparatus (the present support apparatus) 10 according to an embodiment of the present disclosure is applied to a vehicle VA and includes components illustrated in FIG. 1.</p>
+   <p>[0013]</p>
+   <p>The driving support ECU 20 is an ECU that executes a driving support control which is a kind of automatic driving controls. Hereinafter, the driving support ECU 20 is referred to as "ECU20".</p>
+   <p>[0014]</p>
+   <p>In the present specification, an "ECU" is an electronic control unit including a microcomputer as a main part. The ECU is referred to as a controller and a computer. The microcomputer includes a CPU (a processor), a ROM, a RAM, an interfaces, and the like. Some or all of the ECU20 and the plurality of ECUs described below may be integrated into one ECU.</p>
+   <p>[0015]</p>
+   <p>A millimeter wave radar 22 is installed at a front end portion of the vehicle VA. The millimeter wave radar 22 detects an object existing in front of the vehicle VA so as to transmit object information related to the object to the ECU20. Specifically, the millimeter wave radar 22 uses the millimeter wave to specify a "position of the object with respect to the vehicle VA" and a "relative speed Vr of the object with respect to the vehicle VA". The millimeter wave radar 22 transmits the object information including information about the position and the speed of the object to the ECU20.</p>
+   <p>[0016]</p>
+   <p>A vehicle speed sensor 24 detects a speed of the vehicle VA (a vehicle speed Vs). The ECU20 receives a detected value from the vehicle speed sensor 24.</p>
+   <p>[0017]</p>
+   <p>A power management ECU30 is connected to a power train actuator 32. The power management ECU30 controls the power train actuator 32. The power train actuator 32 changes a driving force generated by a driving device (for example, an internal combustion engine and/or an electric motor) of the vehicle VA.</p>
+   <p>[0018]</p>
+   <p>Further, the power management ECU30 is connected to the accelerator opening degree sensor 34. The accelerator opening degree sensor 34 detects an operation amount (a depression amount) AP of an accelerator pedal (an acceleration operator) (not shown) of the vehicle VA. The power management ECU30 receives a detected value from the accelerator opening sensor 34. Further, the ECU20 can obtain the detected value of the accelerator opening degree sensor 34 received by the power management ECU30.</p>
+   <p>[0019]</p>
+   <p>A brake ECU40 is connected to a brake actuator 42 and controls a brake actuator 42. The brake actuator 42 controls a braking force applied to the vehicle VA.</p>
+   <p>[0020]</p>
+   <p>Further, the brake ECU40 is connected to a brake switch sensor 44. The brake switch sensor 44 detects whether or not a brake pedal (a deceleration operator) (not shown) of the vehicle VA is operated. The brake ECU40 receives a detected value from the brake switch sensor 44. Further, the ECU20 can obtain the detected value of the brake switch sensor 44 received by the brake ECU40.</p>
+   <p>[0021]</p>
+   <p>A CGW (control gateway) ECU60 controls transmission/reception of data between the plurality of ECUs via a first communication line C1 and a second communication line C2.</p>
+   <p>[0022]</p>
+   <p>(Operation)</p>
+   <p>An operation of the ECU20 of the present support apparatus 10 will be described.</p>
+   <p>When the ECU20 determines that a possibility that the vehicle VA collide with the object is high, the ECU20 executes a collision control for avoiding the collision or mitigating (reducing) the damage caused by the collision. An example of the collision control is an automatic brake control.</p>
+   <p>[0023]</p>
+   <p>The ECU20 determines that a driver has performed an acceleration override operation when an acceleration override condition described later is satisfied. In this case, the ECU20 prohibits the collision control. However, when the ECU20 determines that an acceleration operation of the driver is an erroneous operation, the ECU20 does not prohibit the collision control even if the ECU20 determines that the driver has performed the acceleration override operation.</p>
+   <p>[0024]</p>
+   <p>The ECU20 determines that the acceleration operation is the erroneous operation when a normal erroneous operation condition described later is satisfied. Even if the normal erroneous operation condition is not satisfied, when a relaxation condition is satisfied, the ECU20 determines whether or not a relaxation erroneous operation condition is satisfied. The relaxation erroneous condition is easier to be satisfied than the normal erroneous operation condition. The ECU20 determines that the acceleration operation is the erroneous operation when the relaxation erroneous operation condition is satisfied.</p>
+   <p>[0025]</p>
+   <p>When any one of the above conditions 1 and 2 is satisfied, the ECU20 determines that the relaxation condition is satisfied.</p>
+   <p>[0026]</p>
+   <p>When the condition 1 is satisfied, the driver has a "tendency to perform the erroneous operation that increases a collision possibility that the vehicle VA collides with the object". When the condition 2 is satisfied, the driver has a tendency to perform the erroneous operation. When the driver has any one of the above tendencies, the ECU20 determines whether or not the driver has performed the erroneous operation using the relaxation erroneous operation condition that is easier to be satisfied than the normal erroneous operation condition. Accordingly, when the driver does not have the above tendencies, the ECU20 determines whether or not the driver has performed the erroneous operation using the normal erroneous operation condition that is more difficult to be satisfied than the relaxation erroneous operation condition. When the driver has any one of the above tendencies, the ECU20 determines whether or not the driver has the erroneous operation using the relaxed erroneous operation condition that is easier to be satisfied than the normal erroneous operation condition. Therefore, since the determination of the erroneous operation is performed using the condition corresponding to the tendency of the driver, the present support apparatus 10 can accurately detect the erroneous operation. Accordingly, the present support apparatus 10 can reduce the possibility of prohibiting the collision control despite the driver performing the erroneous operation and the possibility of executing the collision control despite the driver performing the acceleration override operation.</p>
+   <p>[0027]</p>
+   <p>(Specific Operation)</p>
+   <p>A CPU of the ECU20 is executed every time a predetermined period of time elapses in the routines illustrated by the flow charts in FIGS. 2 to 5.</p>
+   <p>[0028]</p>
+   <p><collision control="" routine=""></collision></p>
+   <p>When an appropriate time point comes, the CPU starts processing from step 200 of FIG. 2 and executes steps 205 to 215 in sequence.</p>
+   <p>[0029]</p>
+   <p>Step 205: The CPU obtains the object information from the millimeter wave radar 22.</p>
+   <p>Step 210: The CPU obtains a TTC (Time To Collision) based on the object information. The TTC represents how long it takes for the vehicle VA to collide with the object. The TTC is also referred to as a "collision required time", a "collision grace time", and the like. The CPU obtains a distance between the vehicle VA and the object based on the position of the object specified based on the object information. The CPU obtains the TTC by dividing the distance by the relative speed Vr.</p>
+   <p>[0030]</p>
+   <p>Step 215: The CPU determines whether or not an execution flag Xexe is "0".</p>
+   <p>When the CPU executes the collision control, a value of the execution flag Xexe is set to "1", and when the CPU does not execute the collision control, the value of the execution flag Xexe is set to "0". The execution flag Xexe is also set to "0" in an initialization routine. The initialization routine is a routine executed by the CPU when an ignition-key switch (not shown) of the vehicle VA is changed from an off-position to an on-position.</p>
+   <p>[0031]</p>
+   <p>When the execution flag Xexe is "0" (step 215: Yes), the process proceeds to step 220. In step 220, the CPU determines whether or not the TTC is shorter than or equal to a threshold start time Tsth.</p>
+   <p>[0032]</p>
+   <p>When the TTC is longer than the threshold start time Tsth (step 220: No), the CPU determines that the collision possibility that the vehicle VA collides with the object is low. Then, the process proceeds to step 295, and the CPU terminates the present routine tentatively.</p>
+   <p>[0033]</p>
+   <p>When the TTC is shorter than or equal to the threshold start time Tsth (step 220: Yes), the CPU determines that the collision possibility that the vehicle VA collides with the object is high. The process proceeds to step 225. In step 225, the CPU determines whether or not an acceleration override flag Xaor is "0".</p>
+   <p>[0034]</p>
+   <p>When the CPU determines that the driver has performed the acceleration override operation, a value of the acceleration override flag Xaor is set to "1", and when the CPU determines that the driver has not performed the acceleration override operation, the value of the acceleration override flag Xaor is set to "0". The acceleration override flag Xaor is also set to "0" in the initialization routine.</p>
+   <p>[0035]</p>
+   <p>When at least one of a condition that the operation amount AP is equal to or greater than a first start threshold AP1orth and a condition that the operation amount AP is equal to or greater than a second start threshold AP2orth and an operation speed APV is equal to or greater than a first threshold speed APV1th is satisfied (that is, when the acceleration override condition is satisfied), the CPU determines that the driver has performed the acceleration override operation so as to set the acceleration override flag Xaor to "1". However, the CPU does not set the acceleration override flag Xaor to "1" (that is, the CPU does not prohibit the collision control) even if the acceleration override condition is satisfied when the CPU determines that the acceleration operation is an erroneous operation (that is, when an erroneous operation flag Xgfm described later is set to "1"). The operation speed APV represents an operation speed of the accelerator pedal. The operation speed APV is obtained by time-differentiating the operation amount AP.</p>
+   <p>[0036]</p>
+   <p>The second start threshold AP2orth is set to be smaller than the first start threshold AP1orth.</p>
+   <p>[0037]</p>
+   <p>On the other hand, when a condition that the operation amount AP is equal to or less than an OR end threshold AP3orth is satisfied, the CPU determines that the driver is no longer performing the acceleration override operation. The OR end threshold AP3orth is set to be smaller than the second start threshold AP2orth.</p>
+   <p>[0038]</p>
+   <p>When the acceleration override flag Xaor is "0" (step 225: Yes), the CPU executes step 230 and step 235 in sequence.</p>
+   <p>Step 230: The CPU sets the execution flag Xexe to "1".</p>
+   <p>Step 235: The CPU determines whether or not the erroneous operation flag Xgfm is "1".</p>
+   <p>When the CPU determines that the acceleration operation of the driver is the erroneous operation, the value of the erroneous operation flag Xgfm is set to "1", and when CPU determines that the acceleration operation of the driver is not an erroneous operation, the value of the erroneous operation flag Xgfm is set to "0". The error operation flag Xgfm is also set to "0" in the initial routine.</p>
+   <p>[0039]</p>
+   <p>When the erroneous operation flag Xgfm is "0" (step 235: No), the process proceeds to step 295, and the CPU terminates the present routine tentatively.</p>
+   <p>When the erroneous operation flag Xgfm is "1" (step 235: Yes), the process proceeds to step 240, and the CPU adds "1" to a first numbers-of-executions counter N1. After that, the process proceeds to step 295, and the CPU terminates the present routine tentatively.</p>
+   <p>[0040]</p>
+   <p>The first numbers-of-executions counter N1 is a counter for counting the number of times the collision control is executed while the CPU determines that the acceleration operation of the driver is the erroneous operation in one trip. At the beginning of one trip (i.e., in the initialization routine), the first execution number counter N1 is set to "0".</p>
+   <p>[0041]</p>
+   <p>In a case where the acceleration override Xaor is "1" when the process proceeds to step 225 (step 225: No), the process proceeds to step 295 and the CPU terminates the routine tentatively. Therefore, when the CPU determines that the driver is performing the acceleration override operation before the CPU starts the collision control, the CPU does not start the collision control (that is, the CPU prohibits the collision control).</p>
+   <p>[0042]</p>
+   <p>In a case where the execution flag Xexe is "1" when the process proceeds to step 215 (step 215: No), the process proceeds to step 245. In step 245, the CPU determines whether or not the acceleration override flag Xaor is "1".</p>
+   <p>[0043]</p>
+   <p>When the acceleration override flag Xaor is "0" (step 245: No), the process proceeds to step 250. In step 250, the CPU determines whether or not the TTC is longer than or equal to a threshold end time Teth. The threshold end time Teth is set to be larger than the threshold start time Tsth.</p>
+   <p>[0044]</p>
+   <p>When the TTC is shorter than the threshold end time Teth (step 250: No), the process proceeds to step 255. In step 255, the CPU transmits a deceleration command including a predetermined target deceleration Gtgt to the power management ECU30 and the braking ECU40. After that, the process proceeds to step 295, and the CPU terminates the present routine tentatively.</p>
+   <p>[0045]</p>
+   <p>When the power management ECU30 and the brake ECU40 receive the deceleration command, the power management ECU30 and the brake ECU40 control the power train actuator 32 and the brake actuator 42 so that the acceleration G of the vehicle VA coincides with the target deceleration Gtgt included in the deceleration command respectively. The power management ECU30 and the braking ECU40 receive information about the vehicle speed Vs from the ECU20, and obtain the acceleration G by time differentiating the vehicle speed Vs.</p>
+   <p>[0046]</p>
+   <p>In a case where the acceleration override flag Xaor is "1" when the process proceeds to step 245 (step 245: Yes), the process proceeds to step 260. In step 260, the CPU sets the execution flag Xexe to "0". After that, the process proceeds to step 295, and the CPU terminates the present routine tentatively. Therefore, when the CPU determines that the driver has performed the acceleration override operation during execution of the collision control, the CPU stops/canceling the collision control being executed (that is, the CPU prohibits the collision control).</p>
+   <p>[0047]</p>
+   <p>In a case where the TTC is longer than or equal to the threshold end time Teth (step 250: Yes) when the process proceeds to step 250, the process proceeds to step 260. In step 260, the CPU sets the execution flag Xexe to "0". After that, the process proceeds to step 295, and the CPU terminates the present routine tentatively.</p>
+   <p>[0048]</p>
+   <p><acceleration erroneous="" determination="" routine=""></acceleration></p>
+   <p>When an appropriate time point comes, the CPU starts processing from step 300 of FIG. 3, and the process proceeds to step 305. In step 305, the CPU determines whether or not the erroneous operation flag Xgfm is "0".</p>
+   <p>[0049]</p>
+   <p>When the value of the erroneous operation flag Xgfm is "0" (step 305: Yes), the process proceeds to step 310, and the CPU determines whether or not the operation amount AP is equal to or greater than a threshold operation amount APth. The threshold operation amount APth is set to a value smaller than a first erroneous operation start threshold AP1sth and a second erroneous operation start threshold AP2sth, which will be described later.</p>
+   <p>[0050]</p>
+   <p>When the operation amount AP is less than the threshold operation amount APth (step 310: No), the process proceeds to step 395. In step 395, the CPU terminates the present routine tentatively.</p>
+   <p>[0051]</p>
+   <p>When the operation amount AP is equal to or larger than the threshold operation amount APth (step 310: Yes), the CPU executes step 315 and step 320 in sequence.</p>
+   <p>Step 315: The CPU executes a normal erroneous operation condition determination subroutine for setting the value of the erroneous operation flag Xgfm to "1" when the normal erroneous operation condition is satisfied. The normal erroneous operation condition determination subroutine will be described later with reference to FIG. 4.</p>
+   <p>Step 320: The CPU determines whether or not the erroneous operation flag Xgfm is "1".</p>
+   <p>[0052]</p>
+   <p>When the erroneous operation flag Xgfm is "0" (step 320: No), that is, when the normal erroneous operation condition is not satisfied, the process proceeds to step 325. In step 325, the CPU determines whether or not the first number-of-executions counter N1 is greater than or equal to a first threshold value N1th.</p>
+   <p>[0053]</p>
+   <p>When the first number-of-executions counter N1 is less than the first threshold value N1th (step 325: No), that is, when the condition 1 is not satisfied, the process proceeds to step 330. In step 330, the CPU determines whether or not a second execution number counter N2 is greater than or equal to a second threshold value N2th. The second threshold value N2th is preferably set to be larger than the first threshold value N1th.</p>
+   <p>[0054]</p>
+   <p>The second number-of-executions counter N2 is a counter for counting the number of times of determination of the erroneous operation in one trip. At the beginning of one trip (i.e., in the initialization routine), the second number-of-executions counter N2 is set to "0".</p>
+   <p>[0055]</p>
+   <p>When the second number-of-executions counter N2 is less than the second threshold value N2th (step 330: No), that is, when the relaxation condition is not satisfied, the process proceeds to step 395. In step 395, the CPU terminates the present routine tentatively.</p>
+   <p>[0056]</p>
+   <p>When the first number-of-executions counter N1 is equal to or larger than the first threshold value N1th (step 325: Yes) and/or the second number-of-executions counter N2 is equal to or larger than the second threshold value N2th (step 330: Yes), the CPU determines that the relaxation condition is satisfied. In this case, the process proceeds to step 335. In step 335, the CPU executes a relaxation erroneous operation condition determination subroutine. After that, the process proceeds to step 395, and the CPU terminates the present routine tentatively. This sub-routine is a routine for setting the value of the erroneous operation flag Xgfm to "1" when the "relaxation erroneous operation condition that is easier to be satisfied than the normal erroneous operation condition" is satisfied. This subroutine will be described later with reference to FIG. 5.</p>
+   <p>[0057]</p>
+   <p>In a case where the erroneous operation flag Xgfm is "1" when the process proceeds to step 305 (step 305: No), the process proceeds to step 340. In step 340, the CPU determines whether or not the operation amount AP is less than or equal to an erroneous operation end threshold APeth. The erroneous operation end threshold APeth is set to be smaller than the threshold operation amount APth. The erroneous operation end threshold APeth may be set to be the same as OR end threshold AP3orth.</p>
+   <p>[0058]</p>
+   <p>When the operation amount AP is greater than the erroneous operation end threshold APeth (step 340: No), the process proceeds to step 395. In step 395, the CPU terminates the present routine tentatively. When the operation amount AP is equal to or smaller than the erroneous operation end threshold APeth (step 340: Yes), the CPU sets the value of the erroneous operation flag Xgfm to "0" (that is, the CPU determines that the acceleration operation is no longer the erroneous operation). After that, the process proceeds to step 395, and the CPU terminates the present routine tentatively.</p>
+   <p>[0059]</p>
+   <p><normal erroneous="" operation="" condition="" determination="" subroutine=""></normal></p>
+   <p>When the process proceeds to step 315 of FIG. 3, the CPU starts processing from step 400 of FIG. 4, and the process proceeds to step 405. In step 405, the CPU determines whether or not a first predetermined period T1th has elapsed since a non-operating time point at which the brake pedal is not operated.</p>
+   <p>[0060]</p>
+   <p>When the first predetermined period T1th has elapsed from the non-operating time point (step 405: Yes), the process proceeds to step 410. In step 410, the CPU determines whether or not a second predetermined period T2th has elapsed since a turn-off time point at which a blinker (not shown) is turned off.</p>
+   <p>[0061]</p>
+   <p>When the second predetermined period T2th has elapsed since the turn-off time point (step 410: Yes), the process proceeds to step 415. In step 415, the CPU determines whether or not the operation amount AP is equal to or greater than the first erroneous operation start threshold AP1sth. The first erroneous operation start threshold AP1sth may be referred to as a "first threshold".</p>
+   <p>[0062]</p>
+   <p>When the operation amount AP is equal to or larger than the first erroneous operation start threshold AP1sth (step 415: Yes), the process proceeds to step 420. In step 420, the CPU determines whether or not the operation speed APV is higher than or equal to the second threshold speed APV2th. The second threshold speed APV2th is set to be lower than the first threshold speed APV1th.</p>
+   <p>[0063]</p>
+   <p>When the operation speed APV is higher than or equal to the second threshold speed APV2th (step 420: Yes), the process proceeds to step 425. In step 425, the CPU determines whether or not the vehicle speed Vs is lower than or equal to a first threshold vehicle speed Vs1th.</p>
+   <p>[0064]</p>
+   <p>When the vehicle speed Vs is equal to or lower than the first threshold vehicle speed Vs1th (step 425: Yes), the CPU executes step 430 and step 435 in sequence.</p>
+   <p>Step 430: The CPU adds "1" to the second number-of-executions counter N2.</p>
+   <p>Step 435: The CPU sets the value of the erroneous operation flag Xgfm to "1" and sets the value of the acceleration override flag Xaor to "0".</p>
+   <p>After that, the process proceeds to step 495, and the CPU terminates the present routine tentatively.</p>
+   <p>[0065]</p>
+   <p>When the first predetermined period T1th has not yet elapsed from the non-operating time point (step 405: No), the process proceeds to step 495, and the CPU terminates the present routine tentatively. Immediately after the driver switching from the brake pedal to the accelerator pedal, a possibility that the driver erroneously operates the accelerator pedal is low, and a possibility that the driver has an acceleration intention is high. Therefore, the CPU does not determine the erroneous operation.</p>
+   <p>[0066]</p>
+   <p>When the second predetermined period of T2th has not yet elapsed since the turn-off time point (step 410: No), the process proceeds to step 495, and the CPU terminates the present routine tentatively. When the vehicle VA passes the preceding vehicle, the driver is highly likely to depress the accelerator pedal largely(deeply) after the vehicle VA reaches a neighboring lane and the blinker is turned off. Therefore, when the second predetermined period of T2th has not yet elapsed since the turn-off time, the CPU does not determine the erroneous operation.</p>
+   <p>[0067]</p>
+   <p>When the operation amount AP is less than the first erroneous operation start threshold AP1sth (step 415: No), when the operation speed APV is less than the second threshold speed APV2th (step 420: No), or when the vehicle speed Vs is equal to or higher than the first threshold vehicle speed Vs (step 425: No), the process proceeds to step 495, and the CPU terminates the present routine tentatively.</p>
+   <p>[0068]</p>
+   <p><relaxation erroneous="" operation="" condition="" determination="" subroutine=""></relaxation></p>
+   <p>When the process proceeds to step 335 of FIG. 3, the CPU starts processing from step 500 of FIG. 5, and the process proceeds to step 505. In step 505, the CPU determines whether or not the operation amount AP is equal to or greater than a second erroneous operation start threshold AP2sth. The second erroneous operation start threshold AP2sth is set to a value smaller than the first erroneous operation start threshold AP1sth, and may be referred to as a "second threshold".</p>
+   <p>[0069]</p>
+   <p>When the operation amount AP is equal to or larger than the second erroneous operation start threshold AP2sth (step 505: Yes), the process proceeds to step 510. In step 510, CPU determines whether or not the vehicle speed Vs is lower than or equal to a second threshold vehicle speed Vs2th. The second threshold vehicle speed Vs2th is set to be larger than the first threshold vehicle speed Vs1th.</p>
+   <p>[0070]</p>
+   <p>When the vehicle speed Vs is equal to or lower than the second threshold vehicle speed Vs2th (step 510: Yes), the CPU executes step 515 and step 520 in sequence. After that, the process proceeds to step 595, and the CPU terminates the present routine tentatively. Steps 515 and 520 are the same as steps 430 and 435 shown in FIG. 4, respectively, and thus description thereof will be omitted.</p>
+   <p>[0071]</p>
+   <p>When the operation amount AP is less than the second erroneous operation start threshold value AP2sth (step 505: No), or when the vehicle speed Vs is greater than the second threshold vehicle speed Vs2th (step 510: No), the process proceeds to step 595, and the CPU terminates the routine tentatively.</p>
+   <p>[0072]</p>
+   <p>As described above, the relaxation erroneous operation condition does not include the conditions corresponding to steps 405, 410, and 420 illustrated in FIG. 4. The second erroneous operation start threshold AP2sth is set to a value smaller than the first erroneous operation start threshold AP1sth. The second threshold vehicle speed Vs2th is set to a value higher than the first threshold vehicle speed Vs1th. Therefore, the relaxation erroneous operation condition is a condition that is easier satisfied than the normal erroneous operation condition.</p>
+   <p>[0073]</p>
+   <p>The CPU determines that the relaxation condition is satisfied when the first number-of-executions counter N1 is equal to or greater than the first threshold N1th (when the condition 1 is satisfied) and/or when the second numbers-of-executions counter N2 is equal to or greater than the second threshold N2th (when the condition 2 is satisfied) so as to determine whether or not the acceleration operation is the erroneous operation using the relaxation erroneous operation condition. Accordingly, since the determination of the erroneous operation is performed using the condition corresponding to the tendency of the driver, the erroneous operation can be accurately detected.</p>
+   <p>[0074]</p>
+   <p>(First Modification)</p>
+   <p>A sensor for detecting an object in front of the vehicle VA is not limited to the millimeter-wave radar 22. As an example, such a sensor may be a camera. Further, the ECU20 may detect an object in front of the vehicle VA by integrating information about the object detected by the camera and the object information obtained by the millimeter-wave radar 22.</p>
+   <p>[0075]</p>
+   <p>(Second Modification)</p>
+   <p>The following condition 3 may be adopted instead of the condition 1 of the relaxation condition.</p>
+   <p>Condition 3: The number of times of execution of the collision control in one trip is equal to or greater than a first threshold number.</p>
+   <p>[0076]</p>
+   <p>(Third Modification)</p>
+   <p>The collision control is not limited to the automatic braking control. As an example, the collision control may be an alert control for alerting the driver to the object having the TTC equal to or less than the threshold start time Tsth. In the alert control, the ECU20 may display an alert screen for directing the driver's eye toward the object, or may generate an alert sound.</p>
+   <p>[0077]</p>
+   <p>(Fourth Modification)</p>
+   <p>The present support apparatus 10 may be applied vehicles such as an engine vehicle, a hybrid electric vehicle (HEV), a plug-in Hybrid electric vehicle (PHEV), a fuel cell electric vehicle (FCEV), and a battery electric vehicle (BEV).</p>
+   <p>[0078]</p>
+   <p>The present disclosure can also be regarded as a non-transitory computer-readable storage medium storing a program for realizing the functions of the support apparatus 10. Further, the present disclosure can be applied to an automatic driving vehicle in a case where a transition from automatic driving (for example, automatic brake control) to driving of a driver is made.</p>
+
+</body></html>

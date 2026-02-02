@@ -1,0 +1,74 @@
+<html><head></head><body><h3>Date: 2024-08-23</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application:</p><br>
+<br>
+1. (Currently amended) A method comprising:<br>
+identifying a set of sub-regions within an electrocardiogram (ECG) signal;<br>
+cross-correlating each sub-region of the set of sub-regions with each other sub-region in the set of sub-regions;<br>
+determining, by a processor, two or more sub-regions of the set of sub-regions that are correlated based on the cross-correlating, the two or more sub-regions that are correlated corresponding to sub-regions that are <del>typical </del><u>characteristic </u>of the ECG signal; and<br>
+differentially processing the two or more sub-regions of the ECG signal to generate a de- noised ECG signal.<br>
+<br>
+2. (Original) The method of claim 1, wherein differentially processing the two or more sub-regions comprises:<br>
+removing the two or more sub-regions from the ECG signal;<br>
+filtering the two or more sub-regions using a first filtering regime;<br>
+filtering the remaining sub-regions of the ECG signal using a second filtering regime; and<br>
+adding the filtered two or more sub-regions to the filtered remaining sub-regions of the ECG signal to generate the de-noised ECG signal.<br>
+<br>
+3. (Original) The method of claim 1, wherein cross-correlating a first sub-region of the set of sub-regions with a second sub-region of the set of sub-regions comprises:<br>
+comparing the first and second sub-regions and determining a location of maximum correlation between the first and second sub-regions, wherein the first and second sub-regions are correlated if the maximum correlation between the first and second sub-regions exceeds a correlation threshold.<br>
+<br>
+4. (Original) The method of claim 3, wherein determining the two or more sub- regions comprises:<br>
+identifying from among the set of sub-regions, a longest sequence of consecutive, correlated sub-regions;<br>
+identifying each sub-region outside of the longest sequence that correlates with a threshold number of sub-regions from the longest sequence, wherein the two or more sub-regions correspond to the longest sequence of sub-regions and each sub-region outside of the longest sequence that is correlated with the threshold number of sub-regions from the longest sequence.<br>
+<br>
+5.    (Original) The method of claim 1, further comprising:<br>
+generating a correlation matrix indicating a level of correlation of each sub-region of the set of sub-regions with each other sub-region in the set of sub-regions.<br>
+<br>
+6.    (Original) The method of claim 2, wherein the first filtering regime comprises Principal Component Analysis (PCA), and the second filtering regime comprises polynomial filtering.<br>
+<br>
+7.    (Original) The method of claim 1, wherein the set of sub-regions may comprise one of a set of P-waves, a set of R-waves, a set of Q-waves, a set of S-waves, a set of T-waves, a set of QRS regions, a set of P-R intervals, and a set of R-R intervals.<br>
+<br>
+8.    (Original) The method of claim 1, further comprising pre-filtering the ECG signal before identifying the set of sub-regions in the ECG signal.<br>
+<br>
+9.    (Original) The method of claim 8, wherein pre-filtering the ECG signal comprises performing wavelet filtering on the ECG signal identifying the set of sub-regions.<br>
+<br>
+10.    (Original) The method of claim 1, further comprising determining if the de-noised ECG signal is indicative of a heart condition.<br>
+<br>
+11.    (Currently amended) An apparatus comprising:<br>
+a set of electrodes to measure an electrocardiogram (ECG) signal;<br>
+a memory; and<br>
+a processor operatively coupled to the memory, the processor to:<br>
+identify a set of sub-regions within the ECG signal;<br>
+cross-correlate each sub-region of the set of sub-regions with each other sub-region in the set of sub-regions;<br>
+determine two or more sub-regions of the set of sub-regions that are correlated based on the cross-correlating, the two or more sub-regions that are correlated corresponding to sub- regions that are <del>typical </del><u>characteristic </u>of the ECG signal; and<br>
+differentially process the two or more sub-regions of the ECG signal to generate a de- noised ECG signal.<br>
+<br>
+12.    (Original) The apparatus of claim 11, wherein to differentially process the two or more sub-regions, the processor is to:<br>
+remove the two or more sub-regions from the ECG signal;<br>
+filter the two or more sub-regions using a first filtering regime;<br>
+filter the remaining sub-regions of the ECG signal using a second filtering regime; and<br>
+add the filtered two or more sub-regions to the filtered remaining sub-regions of the ECG signal to generate the de-noised ECG signal.<br>
+<br>
+13.    (Original) The apparatus of claim 11, wherein to cross-correlate a first sub-region of the set of sub-regions with a second sub-region of the set of sub-regions, the processor is to:<br>
+compare the first and second sub-regions and determining a location of maximum correlation between the first and second sub-regions, wherein the first and second sub-regions are correlated if the maximum correlation between the first and second sub-regions exceeds a correlation threshold.<br>
+<br>
+14.    (Original) The apparatus of claim 13, wherein to determine the two or more sub- regions, the processor is to:<br>
+identify from among the set of sub-regions, a longest sequence of consecutive, correlated sub-regions;<br>
+identify each sub-region outside of the longest sequence that correlates with a threshold number of sub-regions from the longest sequence, wherein the two or more sub-regions<br>
+<br>
+correspond to the longest sequence of sub-regions and each sub-region outside of the longest sequence that is correlated with the threshold number of sub-regions from the longest sequence.<br>
+<br>
+15.    (Original) The apparatus of claim 11, wherein the processor is further to:<br>
+generate a correlation matrix indicating a level of correlation of each sub-region of the set of sub-regions with each other sub-region in the set of sub-regions.<br>
+<br>
+16.    (Original) The apparatus of claim 12, wherein the first filtering regime comprises Principal Component Analysis (PCA), and the second filtering regime comprises polynomial filtering.<br>
+<br>
+17.    (Original) The apparatus of claim 11, wherein the set of sub-regions may comprise one of a set of P-waves, a set of R-waves, a set of Q-waves, a set of S-waves, a set of T-waves, a set of QRS regions, a set of P-R intervals, and a set of R-R intervals.<br>
+<br>
+18.   (Original) The apparatus of claim 11, wherein the processor is further to pre-filter the ECG signal before identifying the set of sub-regions in the ECG signal.<br>
+<br>
+19.    (Original) The apparatus of claim 18, wherein to pre-filter the ECG signal, the processor is to perform wavelet filtering on the ECG signal identifying the set of sub-regions.<br>
+<br>
+20.    (Original) The apparatus of claim 11, wherein the processor is further to determine if the de-noised ECG signal is indicative of a heart condition.
+</body></html>

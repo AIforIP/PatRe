@@ -1,0 +1,44 @@
+<html><head></head><body><h3>Date: 2024-06-18</h3>
+
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<p><u>AMENDMENT TO THE CLAIMS:</u></p><p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+<br>
+1. (Currently Amended):  <del></del>A <del>module </del><u>modular </u>robotcomprising<u> a plurality of modules that are coupled together, wherein each of the plurality of modules includes:</u>a first link;<br>
+a second link movably linked to the first link; and<br>
+a <del>fluid </del><u>liquid </u>pressure cylinder configured to move the first link and the second link relative to each other<u> by a working fluid that is supplied to a cylinder chamber from a li</u><u>q</u><u>uid pressure source located outside the plurality of modules and is discharged from the cylinder chamber to a tank located outside the plurality of modules,</u> wherein the first link <del>has </del><u>includes </u>a cylinder block in which [[a]]the cylinder chamber of the<del> fluid </del><u>li</u><u>q</u><u>uid </u>pressure cylinder is <u>formed, the cylinder block having a plurality of outer surfaces, and at least two of the plurality of outer surfaces of the cylinder block each have both a pump port connectable to the li</u><u>q</u><u>uid pressure source and a tank port connectable to the tank.</u><br>
+<br>
+2. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim 1, wherein<del> the module robot is configured by coupling a plurality of modules,</del><del>the modules each has the first link, the second link, and the fluid pressure cylinder, and</del><br>
+<del>two of </del>the <u>plurality of </u>modules<u> includes a first module and a second module that </u>are coupled by connecting the first link or the second link of [[a]]the first module [[with]]to the first link or the second link of [[a]]the second module<del>, the first module being one of the two modules, and the second module being other of the two modules</del>.<br>
+<br>
+3. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim 2, wherein the cylinder block of the first module is connectable [[with]]to the first link or the second link of the second module.<br>
+<br>
+<br>
+<br>
+4. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim 1, wherein the <del>module robot is configured of a </del>plurality of modules<del>, the modules being formed so as to be </del><u>are</u><u></u><u>partially</u> integrated.<br>
+<br>
+5. (Canceled)<br>
+6. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim [[5]    wherein the cylinder block <del>is formed with </del><u>includes </u>a <u>supply passage</u><del>configured to </del><u>connecting</u> the pump port <u>to the cylinder chamber </u>and <u>a discharge passage connecting </u>the tank port [[with]]to the cylinder chamber.SVG
+{EMBED HERE}
+0.140.167<br>
+7. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim [[2] SVG
+{EMBED HERE}
+0.140.167 wherein<del> the fluid pressure cylinder is a liquid pressure cylinder,</del><br>
+<del>a pump port connectable to a liquid pressure source and a tank port connectable to a tank are formed in at least two surfaces among a plurality of outer surfaces of the cylinder block, and</del><br>
+[[the]]each<u></u>module further <u>[</u><u>[has]]includes:</u>a state-quantity detector configured to detect a state quantity of the module;<br>
+a control valve configured to control communication between the cylinder chamber, and <u>one of </u>the pump ports and <u>one of </u>the tank <u>ports of the at least two of the plurality of outer surfaces of the cylinder block;</u> and<br>
+a controller configured to control motion of the module by controlling operation of the control valve based on a detection result from the state-quantity detector.<br>
+<br>
+8. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim 1, wherein<del> the fluid pressure cylinder is a liquid pressure cylinder</del>,<u>[[a</u><u>]]</u><u>at least one of the plurality of outer surfaces of the cylinder block has at least two</u> supply-discharge <u>ports in total, one of which is </u>selectively connectable to <u>[[a]]one of the </u>liquid pressure source [[and <u>a]]or the tank, and another one of which is selectively connectable to the other one of the li</u><u>q</u><u>uid pressure source or the tank</u><del>is formed in an outer surface of the cylinder block</del>, and<br>
+<br>
+<br>
+the cylinder block <del>is formed </del><del>w</del><del>ith a </del><u>includes at least two </u>passages<u></u><del>configured to</del><u> respectively </u>connecting<u>respective ones of </u>the<u> at least two </u>supply-discharge ports [[with]]to the cylinder chamber.<br>
+<br>
+9. (Currently Amended):   The <del>module </del><u>modular </u>robot according to claim 2, wherein<del> the module robot is configured by coupling at least t</del><del>w</del><del>o of the modules, </del>the<u> first and second </u>modules <del>being </del><u>are </u>identical<u> to each other.</u><br>
+<br>
+10. (Currently Amended):  The <del>module </del><u>modular </u>robot according to claim 3, wherein the cylinder block of the first module <del>is formed </del><del>w</del><del>ith h</del><u>as </u>a joint hole into which a joint tool is inserted, the joint tool being configured to connect the cylinder block <u>[[</u><u>with]]of the first module to </u>the first link or the second link of the second module.<br>
+<br>
+11. (New):   The modular robot according to claim 7, wherein in each module, the state quantity detected by the state-quantity detector is at least one of a stroke amount of the liquid pressure cylinder, a relative rotational angle between the first link and the second link thereof, a pressure in the liquid pressure cylinder, a load acting on the liquid pressure cylinder, a stroke speed of the liquid pressure cylinder, or a flow amount of the working fluid supplied to the liquid pressure cylinder.<br>
+<br>
+12 (New): The modular robot according to claim 8, wherein the at least two supply-discharge ports are different from the pump and tank ports in each module.<br>
+
+</body></html>

@@ -1,0 +1,20 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Applicant’s amendments dated 12/10/24 are hereby entered.
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 1, 3-10, and 11-18 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Claim 1 is directed to an apparatus (a “handle trigger”) and a method step of employing that apparatus (“so that a facing area of the bracket magnet (2) and the trigger magnet (3) remains unchanged when the control device controls the bracket magnet (2) to approach or go away from the trigger magnet (3)”, emphasis added) and is thereby indefinite.  See MPEP 2173.05(p)(II).
+Response to Arguments
+Applicant’s arguments are addressed by the updated statement of rejection made supra under 35 USC 112, which was necessitated by Applicant’s amendments.
+Conclusion
+THIS ACTION IS MADE FINAL.  Applicant is reminded of the extension of time policy as set forth in 37 CFR 1.136(a).
+A shortened statutory period for reply to this final action is set to expire THREE MONTHS from the mailing date of this action.  In the event a first reply is filed within TWO MONTHS of the mailing date of this final action and the advisory action is not mailed until after the end of the THREE-MONTH shortened statutory period, then the shortened statutory period will expire on the date the advisory action is mailed, and any extension fee pursuant to 37 CFR 1.136(a) will be calculated from the mailing date of the advisory action.  In no event, however, will the statutory period for reply expire later than SIX MONTHS from the mailing date of this final action.
+Any inquiry concerning this communication or earlier communications from the Examiner should be directed to Mike Grant whose telephone number is 571-270-1545. The Examiner can normally be reached on Monday through Friday between 8:00 a.m. and 5:00 p.m., except on the first Friday of each bi-week.
+If attempts to reach the Examiner by telephone are unsuccessful, the Examiner's Supervisory Primary Examiner, Peter Vasat can be reached at 571-270-7625.  The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.gov.  Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free).  If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/MICHAEL C GRANT/Primary Examiner, Art Unit 3715

@@ -1,0 +1,90 @@
+<html><head></head><body><h3>Date: 2025-01-07</h3>
+
+<h1><u>AMENDMENTS</u> <u>TO</u> <u>THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application:</p>
+<h1>LISTING OF CLAIMS:</h1>
+<br>
+<br>
+1. (Original) A learned model generation method for generating a learned model for predicting a disease development risk of a subject based on physiological information obtained from the subject, the learned model generation method comprising:<br>
+receiving first data including the physiological information obtained from a first subject and a first result that a disease is developing, the first result being determined based on the physiological information;<br>
+specifying a first time point at which the physiological information included in the first data is obtained;<br>
+receiving second data including the physiological information obtained from the first subject and a second result that the disease is not developing, the second result being determined based on the physiological information;<br>
+specifying a second time point at which the physiological information included in the second data is obtained;<br>
+upon determining that a time interval between the first time point and the second time point is smaller than a first predetermined value, assigning, to the second data, a first training label indicating that the disease is developing and a weighting index that is capable of taking a plurality of values according to the time interval; and<br>
+<br>
+performing machine learning of a model by using the second data, to which the first training label is assigned, as training data.<br>
+<br>
+2. (Original) The learned model generation method according to  The learned model generation method according to <br>
+wherein the value of the weighting index decreases linearly, nonlinearly, or stepwise as the time interval from the first time point increases.<br>
+<br>
+3. (Original) The learned model generation method according to claim 1, further comprising:<br>
+receiving third data including the physiological information obtained from a second subject different from the first subject and a third result that the disease is not developing, the third result being determined based on the physiological information;<br>
+specifying a third time point at which the physiological information included in the third data is obtained;<br>
+assigning, to the third data, a second training label indicating that the disease is not developing, when the third time point is earlier than a reference time point by a second predetermined value or more; and<br>
+performing machine learning of the model by using the third data, to which the second training label is assigned, as training data.<br>
+<br>
+4. (Original) A learned model generation method for generating a learned model for predicting a disease development risk of a subject based on physiological information obtained from the subject, the learned model generation method comprising:<br>
+<br>
+receiving first data including the physiological information obtained from a first subject and a first result that a disease is developing, the first result being determined based on the physiological information;<br>
+specifying a first time point at which the physiological information included in the first data is obtained;<br>
+receiving second data including the physiological information obtained from the first subject and a second result that the disease is not developing, the second result being determined based on the physiological information;<br>
+specifying a second time point at which the physiological information included in the second data is obtained;<br>
+assigning, to the second data, a first training label indicating that the disease is developing, upon determining that a time interval between the first time point and the second time point is smaller than a first predetermined value;<br>
+assigning, to the second data, a second training label indicating that the disease is not developing, upon determining that the second time point is earlier than a reference time point by a second predetermined value or more; and<br>
+performing machine learning of a model by using, as training data, at least one of the second data to which the first training label is assigned and the second data to which the second training label is assigned.<br>
+<br>
+5. (Original) The learned model generation method according to  The learned model generation method according to <br>
+<br>
+wherein evaluation data is inputted to the model, the evaluation data including the physiological information and a third result indicating whether the disease is developing, the third result being determined based on the physiological information,<br>
+wherein whether prediction performance of the model is improved as compared with prediction performance before performing the machine learning is determined, and<br>
+wherein upon determining that the prediction performance is improved, the machine learning is enabled.<br>
+<br>
+6. (Original) The learned model generation method according to claim 1, wherein the physiological information is a physiological signal waveform.<br>
+<br>
+7. (Original) The learned model generation method according to claim 1, wherein the disease is a cardiac disease.<br>
+<br>
+8. (Original) A training data generation device that generates training data to be used in generating a learned model for predicting a disease development risk of a subject based on physiological information obtained from the subject, the training data generation device comprising circuitry configured to:<br>
+receive first data including the physiological information obtained from a first subject and a first result that a disease is developing, the first result being determined based on the physiological information;<br>
+<br>
+receive second data including the physiological information obtained from the first subject and a second result that the disease is not developing, the second result being determined based on the physiological information;<br>
+specify a first time point at which the physiological information included in the first data is obtained;<br>
+specify a second time point at which the physiological information included in the second data is obtained; and<br>
+upon determining that a time interval between the first time point and the second time point is smaller than a first predetermined value, generate training data by assigning, to the second data, a first training label indicating that the disease is developing and a weighting index that is capable of taking a plurality of values according to the time interval.<br>
+<br>
+9. (Original) A training data generation device that generates training data to be used in generating a learned model for predicting a disease development risk of a subject based on physiological information obtained from the subject, the device comprising circuitry configured to:<br>
+receive first data including the physiological information obtained from a first subject and a first result that a disease is developing, the first result being determined based on the physiological information;<br>
+receive second data including the physiological information obtained from the first subject and a second result that the disease is not developing, the second result being determined based on the physiological information; and<br>
+<br>
+specify a first time point at which the physiological information included in the first data is obtained;<br>
+specify a second time point at which the physiological information included in the second data is obtained; and<br>
+generate training data by assigning a first training label indicating that the disease is developing to the second data upon determining that a time interval between the first time point and the second time point is less than a first predetermined value, and by assigning a second training label indicating that the disease is not developing to the second data upon determining that the second time point is earlier than a reference time point by a second predetermined value or more.<br>
+<br>
+10. (Original) A learned model generation device that generates a learned model for predicting a disease development risk of a subject based on physiological information obtained from the subject, the device comprising circuitry configured to:<br>
+receive training data generated by the training data generation device according to claim 8; and<br>
+perform machine learning of a model by using the training data.<br>
+<br>
+11. (Original) A disease development risk prediction device comprising circuitry configured to:<br>
+receive physiological information obtained from a subject;<br>
+input the physiological information to the learned model generated by the learned model generation device according to claim 10;<br>
+<br>
+predict a disease development risk of the subject based on a prediction result output from the learned model; and<br>
+output information corresponding to the disease development risk.<br>
+<br>
+12. (Original) A learned model generation device that generates a learned model for predicting a disease development risk of a subject based on physiological information obtained from the subject, the device comprising circuitry configured to:<br>
+receive training data generated by the training data generation device according to claim 9; and<br>
+perform machine learning of a model by using the training data.<br>
+<br>
+13. (Original) A disease development risk prediction device comprising circuitry configured to:<br>
+receive physiological information obtained from a subject;<br>
+input the physiological information to the learned model generated by the learned model generation device according to claim 12;<br>
+predict a disease development risk of the subject based on a prediction result output from the learned model; and<br>
+output information corresponding to the disease development risk.<br>
+<br>
+14. (New) The learned model generation method according to claim 1, wherein the weighting index representing a degree to which teaching of the first training label is considered.<br>
+<br>
+<br>
+<br>
+15. (New) The training data generation device according to claim 8, wherein the weighting index representing a degree to which teaching of the first training label is considered.<br>
+<br>
+16. (New) The learned model generation method according to claim 4, wherein the physiological information is a physiological signal waveform.
+</body></html>

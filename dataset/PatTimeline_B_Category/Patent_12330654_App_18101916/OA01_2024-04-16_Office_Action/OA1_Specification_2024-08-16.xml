@@ -1,0 +1,30 @@
+<html><head></head><body>18101916
+
+   
+   
+<u>IN THE SPECIFICATION</u>
+   
+   <p>At page 1, at line 5, please amend the title as follows:</p>
+   
+“OPTIMIZING MOBILITY PERFORMANCE”
+   
+   <p>Please amend paragraph [0003], on page 1, as follows:</p>
+   <p>“[0003] Conventional mobility performance of a vehicle is analyzed after a vehicle is simulated on an off-road course and after vehicle-wheels-terrain interaction characteristics are computed. However, such conventional techniques typically analyze mobility in terms of energy efficiency, and none of them identify mobility in terms of performance or the vehicle’s ability to perform a primary mission or task. While energy efficiency may be acceptable in some circumstances, energy efficiency in other applications may not be acceptable and/or preferable and may compromise technical productivity / efficiency of the vehicle, particularly for autonomous ground vehicles that must be capable and able to operate autonomously in hyper-dynamic changing terrain conditions and environments, which are much more severe <u>than</u>
+[[that]]
+paved or dirt roads and may be terrains where manned vehicles cannot operate.”</p>
+   <p>Please amend paragraph [0027], on page 9, as follows:</p>
+   <p>“[0027] In certain embodiments, a driveline system 108 is provided with the vehicle system 100. The driveline system 108 may be a component of the control system 104, although it need not be in other embodiments. A powering source 112 (e.g., battery, electric generator, internal combustion engine, and/or other suitable powering source, etc.) may be operably connected to the driveline system 108, and the driveline system 108 may be various suitable devices or mechanisms for providing a driving power to
+[[the ]]
+one or more <u>tires 102</u>
+<del>wheels 102</del> during operation of the vehicle system 100. As some non-limiting examples, the driveline system 108 may be a mechanical driveline, a virtual driveline, combinations thereof, and/or various other <u>driveline</u>
+<del>derive</del> systems as desired.<u>”</u>
+[[ “]]
+</p>
+   
+   <p>Please amend the paragraph from page 13, lines 1-11, as follows:</p>
+   <p>“nonlinearity of the traction characteristic drastically increases and any small increases in force results in <u>an </u>intensive tire slippage growth, which can quickly bring the wheel to complete immobilization. In block 406, the value of ∆ depends on how far the optimal tire slippage is allowed to exceed the characteristic slippage and thus, to enter into
+[[of ]]
+the extremely nonlinear zone of the traction characteristic. For different terrains, magnitudes of ∆ may be different and/or otherwise controlled as desired. Such lower bound constraints and upper bound constraints on the optimal tire slippage may ensure positive traction of the wheels while minimizing potential immobilization of the wheel.  In order to extend the wheel mobility performance to deceleration or <u>braking</u>
+<del>breaking</del> operations when tire slippage is negative (skidding), the relation between the wheel mobility performance and the braking performance is considered. First, one may define the wheel braking performance as”</p>
+
+</body></html>

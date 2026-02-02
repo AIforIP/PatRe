@@ -1,0 +1,7 @@
+<html><head></head><body><h3>Date: 2024-12-02</h3>
+<h1><u>AMENDMENTS TO THE SPECIFICATION</u></h1>
+<p>Amend filed paragraph [0103] (published paragraph [0104]) as follows:</p><p>The method 300 then comprises determining 316 one or more parameters of a second</p><p>scanning process to be performed by the second magnetic resonance imaging scanner 204 based on the relatively high quality first image data, and also based on the specifications of the second magnetic resonance imaging scanner 204. In some aspects, the parameter of the second scanning process is determined to modify spatial encoding in the second scanning process. In some aspects, the parameter of the second scanning process is determined to modify a point spread function associated with the region of interest, for example according to the so-called "SLOOP"<u> (spectral localization with optimal pointspread function</u><u>)</u><u> </u>method. In some aspects, the parameter of the second scanning process is determined to enable selective excitation during the second scanning process.</p>
+
+<p><u>AMENDMENTS TO THE TITLE</u></p><p>Amend the title as follows:</p><p>Magnetic Resonance Imaging <u>of an Organ Structure</u></p>
+
+</body></html>

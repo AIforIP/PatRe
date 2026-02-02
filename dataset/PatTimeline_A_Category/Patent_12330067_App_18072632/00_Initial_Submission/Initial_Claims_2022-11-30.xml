@@ -1,0 +1,191 @@
+<html><head></head><body><h3>Date: 2022-11-30</h3>
+<p>CLAIMS</p>
+<p><u>What is claimed is:</u></p>
+<br>
+
+<br>
+1.    A cloud gaming processing method performed by a computer device and the method comprising: 
+<br>
+receiving an access request of a second client for a cloud gaming instance, the cloud gaming instance having been created according to a play request of a first client for a cloud gaming, the first client being bound to a first stream processing resource of the cloud gaming instance, and data transmission between the cloud gaming instance and the first client being implemented by using the first stream processing resource; 
+<br>
+creating a second stream processing resource of the cloud gaming instance in response to the access request of the second client; 
+<br>
+binding the second stream processing resource to the second client; and 
+<br>
+implementing data transmission between the second client and the cloud gaming instance by using the second stream processing resource. 
+
+<br>
+
+2.
+The method according to claim 1, wherein the access request of the second client is initiated by the second client after receiving the play request shared by the first client.
+<br>
+
+3.
+The method according to claim 1, wherein each of the first stream processing resource and the second stream processing resource has a dedicated transmission control resource for performing predefined coding traffic control and quality control on each corresponding client separately.
+<br>
+
+4.
+The method according to claim 1, wherein the method further comprises: 
+<br>
+receiving an access request of a third client for the cloud gaming instance, the access request of the third client carrying a user identifier of the third client and a second access policy indicating that the third client is an observer of the cloud gaming instance; 
+<br>
+selecting one stream processing resource from the first stream processing resource and the second stream processing resource in response to the access request of the third client and according to the second access policy; 
+<br>
+binding the selected one stream processing resource to the third client; and 
+
+performing data transmission between the third client and the cloud gaming instance based on the selected one stream processing resource.
+<br>
+
+5.
+The method according to claim 1, wherein the implementing data transmission between the second client and the cloud gaming instance by using the second stream processing resource comprises: 
+<br>
+acquiring a media stream from the cloud gaming instance; 
+<br>
+transmitting the media stream to the second client by using the second stream processing resource; and 
+<br>
+when the second client requests to operate the cloud gaming instance, receiving operation data of the second client by using the second stream processing resource. 
+
+<br>
+
+6.
+The method according to claim 1, wherein the method further comprises: 
+<br>
+transmitting a network probe packet to the second client based on the second stream processing resource, and receiving network information fed back by the second client; and 
+<br>
+adjusting a data volume of the network probe packet according to the network information, and adjusting a transmission parameter of the second stream processing resource. 
+
+<br>
+
+7.
+The method according to claim 1, wherein the first stream processing resource and the second stream processing resource have different video streams of the cloud gaming instance and share one audio stream of the cloud gaming instance.
+<br>
+
+<br>
+8.    The method according to claim 1, wherein the method further comprises: 
+<br>
+configuring a permission for the second client according to a permission setting request of the first client, the permission comprising at least one of the following: an operation permission for the cloud gaming instance or a browsing permission for the cloud gaming instance; and 
+<br>
+when the second client does not have the operation permission for the cloud gaming instance, discarding operation data of the second client when the operation data of the second client is received by using the second stream processing resource. 
+<br>
+9.    The method according to claim 1, wherein the first client is mapped to a first operation control in the cloud gaming instance, and the second client is mapped to a second operation control in the cloud gaming instance; and the method further comprises: 
+<br>
+when operation data of the first client is received based on the first stream processing resource, injecting the operation data of the first client into the first operation control, so as to control the first operation control to operate the cloud gaming instance; and 
+<br>
+when operation data of the second client is received based on the second stream processing resource, injecting the operation data of the second client into the second operation control, so as to control the second operation control to operate the cloud gaming instance. 
+
+<br>
+
+<br>
+10.   The method according to claim 1, wherein the method further comprises: 
+<br>
+receiving, by using the first stream processing resource, a device resolution transmitted by the first client; 
+<br>
+setting a docker window resolution of the cloud gaming instance according to the device resolution; 
+<br>
+transmitting the docker window resolution to the first client by using the first stream processing resource; 
+<br>
+receiving, by using the second stream processing resource, a resolution setting request transmitted by the second client, the resolution setting request carrying a coding resolution that is requested to be set by the second client; 
+<br>
+performing, by using the second stream processing resource, coding processing on a media stream transmitted to the second client based on coding resolution. 
+
+<br>
+
+<br>
+11.   A computer device, comprising: 
+<br>
+a processor; and 
+<br>
+a computer-readable storage medium, storing a computer program, and the computer program being adapted to be loaded and executed by the processor and causing the computer device to implement a cloud gaming processing method and the method comprising: 
+<br>
+receiving an access request of a second client for a cloud gaming instance, the cloud gaming instance having been created according to a play request of a first client for a cloud 
+
+gaming and shared by the first client with the second client, the first client being bound to a first stream processing resource of the cloud gaming instance, and data transmission between the cloud gaming instance and the first client being implemented by using the first stream processing resource; 
+<br>
+creating a second stream processing resource of the cloud gaming instance in response to the access request of the second client; 
+<br>
+binding the second stream processing resource to the second client; and 
+<br>
+implementing data transmission between the second client and the cloud gaming instance by using the second stream processing resource. 
+
+<br>
+
+<br>
+12.   The computer device according to claim 11, wherein the access request of the second client is initiated by the second client after receiving the play request shared by the first client.
+<br>
+
+<br>
+13.   The computer device according to claim 11, wherein each of the first stream processing resource and the second stream processing resource has a dedicated transmission control resource for performing predefined coding traffic control and quality control on each corresponding client separately.
+<br>
+
+<br>
+14.   The computer device according to claim 11, wherein the method further comprises: 
+<br>
+receiving an access request of a third client for the cloud gaming instance, the access request of the third client carrying a user identifier of the third client and a second access policy indicating that the third client is an observer of the cloud gaming instance; 
+<br>
+selecting one stream processing resource from the first stream processing resource and the second stream processing resource in response to the access request of the third client and according to the second access policy; 
+<br>
+binding the selected one stream processing resource to the third client; and 
+<br>
+performing data transmission between the third client and the cloud gaming instance based on the selected one stream processing resource. 
+
+<br>
+
+<br>
+15.   The computer device according to claim 11, wherein the implementing data transmission between the second client and the cloud gaming instance by using the second stream processing resource comprises: 
+
+acquiring a media stream from the cloud gaming instance; 
+<br>
+transmitting the media stream to the second client by using the second stream processing resource; and 
+<br>
+when the second client requests to operate the cloud gaming instance, receiving operation data of the second client by using the second stream processing resource. 
+
+<br>
+
+<br>
+16.   The computer device according to claim 11, wherein the method further comprises: 
+<br>
+configuring a permission for the second client according to a permission setting request of the first client, the permission comprising at least one of the following: an operation permission for the cloud gaming instance or a browsing permission for the cloud gaming instance; and 
+<br>
+when the second client does not have the operation permission for the cloud gaming instance, discarding operation data of the second client when the operation data of the second client is received by using the second stream processing resource. 
+
+<br>
+
+<br>
+17.   The computer device according to claim 11, wherein the first stream processing resource and the second stream processing resource have different video streams of the cloud gaming instance and share one audio stream of the cloud gaming instance.
+<br>
+
+<br>
+18.   The computer device according to claim 9, wherein the method further comprises: 
+<br>
+receiving, by using the first stream processing resource, a device resolution transmitted by the first client; 
+<br>
+setting a docker window resolution of the cloud gaming instance according to the device resolution; and 
+<br>
+transmitting the docker window resolution to the first client by using the first stream processing resource. 
+
+<br>
+
+<br>
+19.   A non-transitory computer-readable storage medium, the computer-readable storage medium comprising a computer program, and the computer program being adapted to be loaded and executed by a processor of a computer device and causing the computer device to implement a cloud gaming processing method and the method comprising: 
+<br>
+receiving an access request of a second client for a cloud gaming instance, the cloud 
+
+gaming instance having been created according to a play request of a first client for a cloud gaming and shared by the first client with the second client, the first client being bound to a first stream processing resource of the cloud gaming instance, and data transmission between the cloud gaming instance and the first client being implemented by using the first stream processing resource; 
+<br>
+creating a second stream processing resource of the cloud gaming instance in response to the access request of the second client: 
+<br>
+binding the second stream processing resource to the second client: and 
+<br>
+implementing data transmission between the second client and the cloud gaming instance by using the second stream processing resource. 
+
+<br>
+
+<br>
+20.   The non-transitory computer-readable storage medium according to claim 19, wherein each of the first stream processing resource and the second stream processing resource has a dedicated transmission control resource for performing predefined coding traffic control and quality control on each corresponding client separately.
+031384-7504-US49
+031384-7504-US50
+031384-7504-US51
+031384-7504-US52
+031384-7504-US53
+031384-7504-US54
+</body></html>

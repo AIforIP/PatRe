@@ -1,0 +1,86 @@
+<html><head></head><body><h3>Date: 2025-02-19</h3>
+
+<h1><u>Amendments to the Claims</u></h1>
+<br>
+<br>
+1.    (Currently Amended) A servicer satellite configured to perform rendezvous with a client satellite, the servicer satellite comprising:<br>
+a body comprising an X axis with a +X direction and a -X direction, a Y axis with a +Y direction and a -Y direction, and a Z axis with a +Z direction and a -Z direction;<br>
+a set of thrusters comprising: i) a first thruster coupled to the body, ii) a second thruster coupled to the body, iii) a third thruster coupled to the body, and iv) a fourth thruster coupled to the body;<br>
+a controller configured with commands to fire: i) the first thruster and the second thruster to produce a first thrust vector that reduces a separation distance between the servicer satellite and the client satellite and that removes an angular momentum or a rotational velocity of the body, and ii) the third thruster and the fourth thruster to produce a second thrust vector that reduces a rate of closure between the servicer satellite and the client satellite and that removes the angular momentum or the rotational velocity of the <u>body, the controller further configured with commands to fire the first thruster and the second thruster to follow a rendezvous tra</u><u>i</u><u>ectory that matches orbital parameters of the servicer satellite and the client satellite</u><u>;</u><br>
+wherein:<br>
+<u>the first thruster is coupled to at least one of a first hinge and a first gimble and the second thruster is coupled to at least one of a second hinge and a second gimble to enable the first thruster and the second thruster to position to produce the first thrust </u><u>vector; </u><u>and</u><br>
+<u>the third thruster is coupled to at least one of a third hinge and a third gimble and the fourth thruster is coupled to at least one of a fourth hinge and a fourth gimble to enable the third thruster and the fourth thruster to position to produce the second thrust vector.</u><br>
+<del>each of the thrusters are configured to provide 6 DO</del><del>F</del><del> thruster firing.</del><br>
+2.
+(Original) The servicer satellite of claim 1, wherein each of the first thruster, the second thruster, the third thruster, and the fourth thruster are electric propulsion thrusters.<br>
+3.
+(Currently Amended) The servicer satellite of claim 1, wherein:<br>
+the controller is further configured <u>with commands to fire: i) the first thruster and the second thruster to accelerate the servicer satellite toward the client satellite, and ii) to fire the third thruster and the fourth thruster to decelerate the servicer satellite with respect to the client satellite.</u><del>to calculate and to follow a rendezvous trajectory that matches orbital parameters of the servicer satellite and the client satellite while firing the first thruster and the second thruster.</del><br>
+4.
+(Currently Amended) The servicer satellite of claim 1, wherein:<br>
+<u>the first thruster is coupled to the first </u><u>g</u><u>imble;</u><br>
+<u>the second thruster is coupled to the second </u><u>g</u><u>imble;</u><br>
+<u>the third thruster is coupled to the third </u><u>g</u><u>imble; and</u><br>
+<u>the fourth thruster is coupled to the fourth gimble.</u><del>the controller is further configured to calculate and to follow a rendezvous trajectory that matches orbital parameters of the servicer satellite and the client satellite while firing the third thruster and the fourth thruster.</del><br>
+5.
+(Original) The servicer satellite of claim 1, wherein:<br>
+each of the first thruster and the second thruster are disposed at an aft panel of the body, the aft panel facing in the -Z direction.<br>
+6.
+(Original) The servicer satellite of claim 5, wherein:<br>
+each of the third thruster and the fourth thruster are disposed on a nadir panel of the body, the nadir panel positioned to face opposite to the aft panel.<br>
+7.
+(Currently Amended) The servicer satellite of claim 13,-wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are gimbled thrusters.<br>
+8.
+(Original) The servicer satellite of claim 1, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to fire through a center of mass of the servicer satellite.<br>
+9.
+(Original) The servicer satellite of claim 1, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to avoid firing through a center of mass of the servicer satellite.<br>
+<br>
+10.   (Original) The servicer satellite of claim 1, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured for orientation independent from one another.<br>
+<br>
+11.   (Original) The servicer satellite of claim 1, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to fire simultaneously.<br>
+<br>
+12.   (Original) The servicer satellite of claim 1, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to throttle.<br>
+<br>
+13.   (Currently Amended) A servicer satellite comprising:<br>
+a body comprising an X axis with a +X direction and a -X direction, a Y axis with a +Y direction and a -Y direction, and a Z axis with a +Z direction and a -Z direction;<br>
+a set of thrusters comprising: i) a first thruster coupled to the body, ii) a second thruster coupled to the body, iii) a third thruster coupled to the body, and iv) a fourth thruster coupled to the body; and<br>
+a controller configured with commands to: i) fire the first thruster and the second thruster to produce a first thrust vector that reduces a separation distance between the servicer satellite and the client satellite and that removes an angular momentum or a rotational velocity of the body, ii) fire the third thruster and the fourth thruster to produce a second thrust vector that reduces a rate of closure between the servicer satellite and the client satellite and that removes the angular momentum or the rotational velocity of the body; iii) <u>fire the first thruster and the second thruster to follow a rendezvous tra</u><u>j</u><u>ectory that matches orbital parameters of the servicer satellite and the client satellite</u><u>;</u><del>calculate and follow a rendezvous trajectory that matches orbital parameters of the servicer satellite and the client satellite while firing the first thruster and the second thruster; </del>and iv) <u>fire the first thruster and the second thruster to accelerate the servicer satellite toward the client satellite</u><u>.</u><u></u><del>calculate and follow the rendezvous trajectory while firing the third thruster and the fourth thruster;</del><br>
+<del>wherein:</del><br>
+<del>each of the thrusters are configured to provide 6 DOF thruster firing.</del><br>
+<br>
+14.   (Currently Amended) A method of performing rendezvous <u>by a servicer</u><del> with a client </del>satellite, the method comprising:<br>
+providing the[[a]] servicer satellite comprising:a body comprising an X axis with a +X direction and a -X direction, a Y axis with a +Y direction and a -Y direction, and a Z axis with a +Z direction and a -Z direction;<br>
+a set of thrusters comprising: i) a first thruster coupled to the body, ii) a second thruster coupled to the body, iii) a third thruster coupled to the body, and iv) a fourth thruster coupled to the body; and<br>
+a controller configured <u>with commands </u>to fire the set of thrusters;<br>
+wherein:<br>
+the controller fires the first thruster and the second thruster to produce a first thrust vector that reduces a separation distance between the servicer satellite and <u>a</u><u></u><del>the </del>client satellite and that removes an angular momentum or a rotational velocity of the body; and<br>
+the controller fires the third thruster and the fourth thruster to produce a second thrust vector that reduces a rate of closure between the servicer satellite and the client satellite and that removes the angular momentum or the rotational velocity of the body; and<br>
+<u>the controller fires the first thruster and the second thruster to follow a first rendezvous tra</u><u>j</u><u>ectory that matches orbital parameters of the servicer satellite and the client satellite.</u><del>each of the thrusters are configured to provide 6 DO</del><del>F</del><del> thruster firing.</del><br>
+<br>
+15.   (Currently Amended) The method of claim 14, <u>wherein</u><del>:further comprising the step of:</del><br>
+<u>the controller is further configured with commands to fire the first thruster and the second thruster to accelerate the servicer satellite toward the client satellite.</u><del>th</del><del>e</del><del> controller calcu</del><del>la</del><del>tes </del><del>a</del><del>nd follows a rendezvous traj</del><del>e</del><del>ctory that matches</del><br>
+<del>orbital parameters of the servicer satellite and the client satellite while firing the first thruster and the second thruster.</del><br>
+<br>
+16.   (Currently Amended) The method of claim 14, <u>wherein:</u><del>further comprising the step of:</del><br>
+<u>the first thruster is coupled to a first </u><u>g</u><u>imble and the second thruster is coupled to a second </u><u>g</u><u>imble to enable the first thruster and the second thruster to produce the first thrust vector; and</u><br>
+<u>the third thruster is coupled to a third </u><u>g</u><u>imble and the fourth thruster is coupled to a fourth </u><u>g</u><u>imble to enable the third thruster and the fourth thruster to produce the second thrust vector.</u><del>the controller calculates and follows a rendezvous trajectory that matches orbital parameters of the servicer satellite and the client satellite while firing the third thruster and the fourth thruster.</del><br>
+<br>
+17.   (Currently Amended) The method of claim 14, wherein:<br>
+each of the first thruster and the second thruster are disposed at an aft panel of the body, the aft panel facing in the -Zdirection;<u> and</u><br>
+<u>each of the third thruster and the fourth thruster are disposed on a nadir panel of the body, the nadir panel positioned to face opposite to the aft panel.</u><br>
+<br>
+18.   (Currently Amended) The method of claim <u>14,</u><del>17,</del><del></del>wherein:<br>
+<u>each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to fire through a center of mass of the servicer satellite.</u><del>each of the third thruster and the fourth thruster are disposed on a nadir panel of the body, the nadir panel positioned to face opposite to the aft panel.</del><br>
+<br>
+19.   (Original) The method of claim 14, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to fire simultaneously and are electric propulsion thrusters.<br>
+<br>
+20.   (Currently Amended) The method of claim 14, wherein:<br>
+each of the first thruster, the second thruster, the third thruster, and the fourth thruster are configured to <u>avoid firing through a center of mass of the servicer satellite.</u><del>throttle.</del>
+</body></html>

@@ -1,0 +1,104 @@
+<html><head></head><body><h3>Date: 2024-12-27</h3>
+
+<h1><u>Claim Amendments:</u></h1>
+<br>
+<br>
+1. - 59. (Canceled)258<br>
+<br>
+<br>
+60. (Currently Amended) A system, comprising:<br>
+a plurality of sensors configured to monitor physiological signals from an individual that has undergone a medical procedure on an anatomical <u>feature, wherein the physiological signals comprise primary physiological signals which are indicative of a function of the anatomical feature, and secondary physiological signals which are monitored concurrently with the primary physiological signals;</u><br>
+a physiological signal processing system configured to analyze the physiological signals and extract features from the physiological signals, which are indicative of [[a]] the function of the anatomical feature, following the medical procedure on the anatomical <u>feature, the physiological signal processing system comprising:</u><u>a waveform extraction module configured to generate primary signal waveforms from the primary physiological signals, and generate secondary signal waveforms from the secondary physiological signals</u><u>;</u><br>
+<u>a waveform synchronization module configured to time-synchronize the primary signal waveforms with the secondary signal waveforms</u><u>;</u><br>
+<u>a waveform segment grouping module configured to group segments of the primary signal waveforms into self-similar groups of segments based on the time-synchronized primary and secondary signal waveforms</u><u>;</u><u> and</u><br>
+<u>a waveform feature extraction module configured to extract features from the segments of the self-similar groups of segments of the primary signal waveforms;</u> and<br>
+a feature analysis system configured to analyze the extracted features <u>associated with at least one of the self-similar groups of segments to </u><del>and </del>predict a risk of the individual developing a post-procedural dysfunction of the anatomical feature as a result of the medical procedure on the anatomical feature.<br>
+<br>
+61. (Currently Amended) The system of claim 60, wherein the <u>plurality of </u>sensors comprise at least one of (i) sensor devices that are worn by the individual, and (ii) sensor patches that are coupled to the individual's skin.<br>
+<br>
+<br>
+62. (Currently Amended) The system of claim 60, wherein the physiological signal processing system is configured to extract features <u>indicative of the function of the anatomical feature</u><u>,</u><u></u>from the physiological signals that are obtained over a target monitoring period following the medical procedure, wherein the target monitoring period is one of: (i) less than an hour, (ii) about an hour, (iii) multiple hours, (iv) about a day, (v) multiple days, (vi) about a week, and (viii) multiple weeks, and wherein the physiological signals are obtained and analyzed one of continuously and intermittently during the target monitoring period.<br>
+<br>
+63. (Withdrawn, Currently Amended) The system of claim 60, wherein:<br>
+the medical procedure comprises a structural heart procedure;<br>
+the <u>p</u><u>rimar</u><u>y </u>physiological signals comprise [[an]] electrocardiogram <del>signal </del><u>signals;</u><br>
+<u>the waveform extraction module is configured to generate electrocardiogram signal waveforms from the electrocardiogram signals</u> the <u>waveform feature extraction module </u><del>physiological signal processing system </del>is configured to <del>analyze the electrocardiogram signal and </del>extract a plurality of features <u>from segments of the self-similar groups of segments of the electrocardiogram signal waveforms, which </u><u>a</u><u>re</u> indicative of intracardiac conduction over a plurality of cardiac cycles, wherein the plurality of extracted features comprise one or more of (i) waveform features comprising one or more of P- waves, T-waves, QRS-waves, U-waves, R-R intervals, PR timing intervals, QT timing intervals, QRS timing intervals, ST segments, and PR segments, and (ii) morphological features of the waveform features; and<br>
+the morphological features of the waveform features comprise one or more of a waveform shape, a waveform contour, a waveform amplitude, a waveform width, a waveform phase, a waveform polarity, a notch, a local inversion, a ripple, an amplitude change, relative timing or polarity inversion thereof, a perturbation, a repetitive perturbation, a low amplitude, high frequency wavelet, and a wavelet that repeats along with essentially a same period as a parent waveform.<br>
+<br>
+64. (Withdrawn, Currently Amended) The system of claim 63, wherein:<br>
+the <del>physiological signals further comprise one or more </del>secondary physiological signals<del> comprising </del><u>comprise one or more of </u>an electromyogram signal, a respiratory rhythm signal, blood pressure signal, blood pressure surrogate waveform signal, a heart movement signal, a body<br>
+<br>
+movement signal, a phonogram, and a cardiac output signal; andthe <del>physiological signal processing system </del><u>waveform </u><u></u><u>synchronization module </u>is configured to [[:]] time-synchronize the electrocardiogram signal <u>waveforms </u>with the <u>secondary signal waveforms </u><del>one or more secondary physiological signals</del>;<br>
+<u>the waveform segment </u><u>g</u><u>roupin</u><u>g</u><u> module is configured to </u>organize <u>segments of </u>the cardiac cycles of the electrocardiogram signal <u>waveforms </u>into self-similar groups <u>of segments </u>based on the time-synchronized <u>electrocardiogram and secondary signal waveforms </u><del>signals</del>; <del>and extract and compare the plurality of features of cardiac cycles within the same self-similar group</del><u> the waveform feature extraction module is configured to extract the plurality of features from segments of the cardiac cycles within the same self-similar group of segments</u><u>;</u><u> and</u><br>
+<u>the feature analysis system is configured to compare extracted features from segments of the cardiac cycles within the same self-similar group of segments to predict a risk of the individual developing heart dysfunction.</u><br>
+<br>
+65. (Previously Presented) The system of claim 60, wherein the feature analysis system is configured to:<br>
+compute a trend line for at least one extracted feature of the plurality of extracted features based on time series data collected for the at least one extracted feature;<br>
+compare the computed trend line with known trend lines for the at least one extracted feature as determined from a cohort patient population;<br>
+risk stratify the computed trend line based on a result of comparing of the computed trend line with the known trend lines; and<br>
+render and display at least one of the time series data and the computed trend line for the at least one extracted feature on a display system.<br>
+<br>
+66. (Currently Amended) The system of claim 65, wherein the feature analysis system is configured to:<br>
+risk stratify the computed trend line into one of a plurality of zones comprising a low-risk zone, an increasing risk zone, and a high-risk zone; and<br>
+generate an alert notification when an extracted feature is determined to enter into [[a]] <u>the</u> high-risk zone.<br>
+<br>
+<br>
+67. (Currently Amended) The system of claim 65, wherein the feature analysis system<u> comprises a classification module which </u>is configured to:<br>
+<u>utilize a neural network to </u>process time series data of at least one extracted feature of the plurality of extracted features <u>from the segments of</u><u>self-similar groups of segments of the primary signal waveforms </u><del>using a neural net</del><del>w</del><del>ork</del>; and<br>
+classify a risk profile of the at least one extracted feature based on processing results of the time series data applied to the neural network.<br>
+<br>
+68. - 79. (Canceled)6978<br>
+<br>
+<br>
+80. (New) A method comprising:<br>
+monitoring physiological signals from an individual that has undergone a medical procedure on an anatomical feature, wherein the physiological signals comprise primary physiological signals which are indicative of a function of the anatomical feature, and secondary physiological signals which are monitored concurrently with the primary physiological signals;<br>
+processing the physiological signals to extract features from the physiological signals which are indicative of the function of the anatomical feature, following the medical procedure on the anatomical feature, wherein processing the physiological signals comprises:generating primary signal waveforms from the primary physiological signals;<br>
+generating secondary signal waveforms from the secondary physiological signals;<br>
+time-synchronizing the primary signal waveforms with the secondary signal waveforms;<br>
+grouping segments of the primary signal waveforms into self-similar groups of segments based on the time-synchronized primary and secondary signal waveforms; and<br>
+extracting features from the segments of the self-similar groups of segments of the primary signal waveforms; and<br>
+analyzing the extracted features associated with at least one of the self-similar groups of segments to predict a risk of the individual developing a post-procedural dysfunction of the anatomical feature as a result of the medical procedure on the anatomical feature.<br>
+<br>
+81. (New) The method of claim 80, wherein monitoring the physiological signals comprises obtaining the physiological signals from at least one of (i) sensor devices that are worn<br>
+<br>
+by the individual, and (ii) sensor patches that are coupled to the individual's skin.<br>
+<br>
+82. (New) The method of claim 80, wherein the physiological signals are obtained over a target monitoring period following the medical procedure, wherein the target monitoring period is one of: (i) less than an hour, (ii) about an hour, (iii) multiple hours, (iv) about a day, (v) multiple days, (vi) about a week, and (viii) multiple weeks, and wherein the physiological signals are obtained and analyzed one of continuously and intermittently during the target monitoring period.<br>
+<br>
+83. (New) The method of claim 80, further comprising:<br>
+computing a trend line for at least one extracted feature of the plurality of extracted features based on time series data collected for the at least one extracted feature;<br>
+comparing the computed trend line with known trend lines for the at least one extracted feature as determined from a cohort patient population;<br>
+risk stratifying the computed trend line based on a result of comparing of the computed trend line with the known trend lines; and<br>
+rendering and displaying at least one of the time series data and the computed trend line for the at least one extracted feature on a display system.<br>
+<br>
+84. (New) The method of claim 83, wherein risk stratifying the computed trend line comprises risk stratifying the computed trend line into one of a plurality of zones comprising a low-risk zone, an increasing risk zone, and a high-risk zone.<br>
+<br>
+85. (New) The method of claim 84, further comprising generating an alert notification when an extracted feature is determined to enter into the high-risk zone.<br>
+<br>
+86. (New) A computer program product, comprising:<br>
+one or more computer readable storage media, and program instructions collectively stored on the one or more computer readable storage media, the program instructions comprising:<br>
+program instructions to monitor physiological signals from an individual that has undergone a medical procedure on an anatomical feature, wherein the physiological signals comprise primary physiological signals which are indicative of a function of the anatomical feature, and secondary physiological signals which are monitored concurrently with the primary<br>
+<br>
+physiological signals;program instructions to process the physiological signals to extract features from the physiological signals which are indicative of the function of the anatomical feature, following the medical procedure on the anatomical feature, wherein the program instruction to process the physiological signals comprise:<br>
+program instructions to generate primary signal waveforms from the primary physiological signals;<br>
+program instructions to generate secondary signal waveforms from the secondary physiological signals;<br>
+program instructions to time-synchronize the primary signal waveforms with the secondary signal waveforms;<br>
+program instructions to group segments of the primary signal waveforms into self- similar groups of segments based on the time-synchronized primary and secondary signal waveforms; and<br>
+program instructions to extract features from the segments of the self-similar groups of segments of the primary signal waveforms; and<br>
+program instructions to analyze the extracted features associated with at least one of the self-similar groups of segments to predict a risk of the individual developing a post-procedural dysfunction of the anatomical feature as a result of the medical procedure on the anatomical feature.<br>
+<br>
+87. (New) The computer program product of claim 86, wherein the program instructions to monitor the physiological signals comprise program instructions to obtain the physiological signals from at least one of (i) sensor devices that are worn by the individual, and (ii) sensor patches that are coupled to the individual's skin.<br>
+<br>
+88. (New) The computer program product of claim 86, wherein the physiological signals are obtained over a target monitoring period following the medical procedure, wherein the target monitoring period is one of: (i) less than an hour, (ii) about an hour, (iii) multiple hours, (iv) about a day, (v) multiple days, (vi) about a week, and (viii) multiple weeks, and wherein the physiological signals are obtained and analyzed one of continuously and intermittently during the target monitoring period.<br>
+<br>
+<br>
+89. (New) The computer program product of claim 86, further comprising:<br>
+program instructions to compute a trend line for at least one extracted feature of the plurality of extracted features based on time series data collected for the at least one extracted feature;<br>
+program instructions to compare the computed trend line with known trend lines for the at least one extracted feature as determined from a cohort patient population;<br>
+program instructions to risk stratify the computed trend line based on a result of comparing of the computed trend line with the known trend lines; and<br>
+program instruction to render and display at least one of the time series data and the computed trend line for the at least one extracted feature on a display system.<br>
+<br>
+90. (New) The computer program product of claim 89, wherein the program instructions to risk stratify the computed trend line comprise program instructions to risk stratify the computed trend line into one of a plurality of zones comprising a low-risk zone, an increasing risk zone, and a high-risk zone.<br>
+<br>
+91. (New) The computer program product of claim 90, further comprising program instructions to generate an alert notification when an extracted feature is determined to enter into the high-risk zone.
+</body></html>

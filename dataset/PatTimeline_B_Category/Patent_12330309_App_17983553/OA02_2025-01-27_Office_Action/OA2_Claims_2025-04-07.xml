@@ -1,0 +1,131 @@
+<html><head></head><body><h3>Date: 2025-04-07</h3>
+
+<h1><u>Claims</u></h1>
+<p>The listing of the claims below replaces all previous listings of the claims.</p><br>
+<br>
+1. (Currently Amended) A robot motion control method, applied to a robot, the method comprising:<br>
+obtaining a center-of-mass reference trajectory for guiding the robot to execute a target motion; the center-of-mass reference trajectory being a center-of-mass motion trajectory of the robot configured to achieve the target motion;<br>
+determining desired center-of-mass motion data of the robot based on the center-of-mass reference trajectory, the desired center-of-mass motion data being a desired value of motion data associated with a center of mass of the robot;<br>
+constructing an objective function based on the desired center-of-mass motion data and matrix data constructed based on a position relationship between the center of mass of the robot and contact points, the contact points being contact points between the robot and an environment, a value of the objective function is representing a degree of deviation of the robot from the center-of-mass reference <u>trajectory</u><u>,</u><u> wherein the objective function is:</u><u>J-</u><u> = </u><u>(w</u><u>des</u><u>-Af)TW,(</u><u>wdes</u><u>-Af),</u><br>
+<u>where W,</u><u>,</u><u> denotes a positive definite weight mat</u><u>r</u><u>ix, wdes denotes the desired center-of-mass motion data</u><u>,</u><u> A denotes the matrix and f denotes the center-of-mass control information;</u>calculating center-of-mass control information enabling the value of the objective function to satisfy an optimization stop condition;<br>
+generating joint control information according to the center-of-mass control information and a structure matrix of the robot; and<br>
+controlling the robot to execute the target motion based on the joint control information.<br>
+<br>
+2. (Canceled).<br>
+<br>
+3. (Canceled) <del>The</del><del>-me</del><del>tho</del><del>d-aceording-to-oai-vwherein-the-oejtive-funetion-is+</del>SVG
+{EMBED HERE}
+0.1972.237<br>
+<br>
+<br>
+<del>where-W  denotes -itvedefinitewe-ght-matrvi    denotes-fhe-desired-center-f-</del><del> mass motion data, A denotes the matrix and </del><del>f</del><del> denotes the center-of</del><del>- </del><del>mass control information</del>.<br>
+<br>
+4. (Original) The method according to claim 1, wherein the calculating the center-of- mass control information comprises:<br>
+utilizing quadratic programming (QP) optimization to calculate the center-of-mass control information.<br>
+<br>
+5. (Original) The method according to claim 1, wherein the calculating the center-of- mass control information comprises:<br>
+utilizing interior point optimizer (IPOPT) optimization to calculate the center-of-mass control information.<br>
+<br>
+6. (Original) The method according to claim 1, wherein the obtaining the desired center- of-mass motion data of the robot based on the center-of-mass reference trajectory comprises:<br>
+obtaining actual center-of-mass motion data of the robot;<br>
+obtaining reference center-of-mass motion data of the robot according to the center-of-mass reference trajectory;<br>
+obtaining a center-of-mass motion data adjustment value according to a difference between the actual center-of-mass motion data and the reference center-of-mass motion data;<br>
+and obtaining the desired center-of-mass motion data according to the center-of-mass motion data adjustment value and the reference center-of-mass motion data.<br>
+<br>
+7. (Original) The method according to claim 6, wherein the obtaining the center-of-mass motion data adjustment value according to the difference between the actual center-of-mass motion data and the reference center-of-mass motion data comprises:<br>
+calculating a difference between the actual center-of-mass motion data and the reference Page 3 of 10<br>
+<br>
+<br>
+center-of-mass motion data; andobtaining the center-of-mass motion data adjustment value according to a gain matrix and the difference, the gain matrix corresponding to the motion data associated with the center of mass of the robot.<br>
+<br>
+8. (Original) The method according to claim 6, wherein the center-of-mass motion data adjustment value comprises a center-of-mass acceleration adjustment value and a center-of- mass angular acceleration adjustment value.<br>
+9. (Original) The method according to claim 8, wherein the center-of-mass acceleration adjustment value is represented by
++ Kpcef-pct), where pad denotes a center-of-mass acceleration adjustment  SVG
+{EMBED HERE}
+0.1730.723 denotes a reference center-of-mass velocity,  SVG
+{EMBED HERE}
+0.1670.263 denotes an actual center-of-mass velocity,  SVG
+{EMBED HERE}
+0.180.263 denotes a reference center-of- mass  SVG
+{EMBED HERE}
+0.1670.913 denotes an actual center-of-mass position, K  and KS denote gain matrices associated with center-of-mass acceleration.SVG
+{EMBED HERE}
+0.2031.43<br>
+10. (Original) The method according to claim 8, wherein the center-of-mass angular acceleration adjustment value is represented by  SVG
+{EMBED HERE}
+0.1871.553 + Kg (RrefRact)v,SVG
+{EMBED HERE}
+0.1670.757SVG
+{EMBED HERE}
+0.1470.293where
+denotes a center-of-mass angular acceleration adjustment
+denotes a reference center-of-mass angular velocity, oact denotes an actual center-of-mass angular velocity, Rref denotes a reference rotation matrix of a center-of-mass coordinate system relative to a world coordinate system, Ract denotes an actual rotation matrix of the center-of- mass coordinate system relative to the world coordinate system, (RrefRact)v denotes a rotation vector from Ract to Rref, and Kg and Kd denote gain matrices associated with center- of-mass angular acceleration.<br>
+<br>
+11. (Original) The method according to claim 1, wherein the method further comprises:<br>
+performing kinetics analysis on a particle model to obtain a kinetics equation, the particle model being obtained by simplification based on a robot body; and<br>
+analyzing the kinetics equation and constructing the objective function based on an objective of making the center-of-mass motion trajectory of the robot consistent with the Page 4 of 10<br>
+<br>
+<br>
+center-of-mass reference trajectory.<br>
+<br>
+12. (Original) The method according to claim 1, wherein the generating the joint control information according to the center-of-mass control information and the structure matrix of the robot comprises:<br>
+generating intermediate joint control information according to the center-of-mass control information and the structure matrix corresponding to the robot;<br>
+obtaining actual joint motion data of the robot;<br>
+obtaining reference joint motion data of the robot; and<br>
+adjusting the intermediate joint control information according to the actual joint motion data and the reference joint motion data to obtain the joint control information.<br>
+13. (Original) The method according to claim 12, wherein the joint control information comprises joint torque represented by T =
+(grefgact), where  SVG
+{EMBED HERE}
+0.080.08 denotes joint torque, J, denotes the structure matrix corresponding to the robot, fopt denotes the center-of-mass control information obtained by optimization, gref denotes a reference joint angular velocity,  SVG
+{EMBED HERE}
+0.160.267 denotes an actual joint angular velocity, gref denotes a reference joint angle, qact denotes an actual joint  SVG
+{EMBED HERE}
+0.2070.93 and Kd are gain matrices associated with the joint torque.SVG
+{EMBED HERE}
+0.2031.987<br>
+<br>
+14. (Original) The method according to claim 13, wherein the robot is a quadruped robot, and the target motion is a motion process from a four-legged lying down state to a two- legged standing state.<br>
+<br>
+15. (Currently Amended) A robot motion control apparatus, comprising:<br>
+a memory operable to store computer-readable instructions; and<br>
+a processor circuitry operable to read the computer-readable instructions, the processor circuitry when executing the computer-readable instructions is configured to:obtain a center-of-mass reference trajectory for guiding the robot to execute a target Page 5 of 10<br>
+<br>
+<br>
+motion; the center-of-mass reference trajectory being a center-of-mass motion trajectory of the robot configured to achieve the target motion;determine desired center-of-mass motion data of the robot based on the center-of- mass reference trajectory, the desired center-of-mass motion data being a desired value of motion data associated with a center of mass of the robot;<br>
+construct an objective function based on the desired center-of-mass motion data and matrix data constructed based on a position relationship between the center of mass of the robot and contact points, the contact points being contact points between the robot and an environment, a value of the objective function is representing a degree of deviation of the robot from the center-of-mass reference trajectory;<br>
+calculate center-of-mass control information enabling the value of the objective function to satisfy an optimization stop condition;<br>
+generate joint control information according to the center-of-mass control information and a structure matrix of the robot; and<br>
+control the robot to execute the target motion based on the joint control information.<br>
+l6. (Canceled).<br>
+<br>
+17. (Original) The apparatus according to claim 15, wherein the processor circuitry is configured to:<br>
+obtain actual center-of-mass motion data of the robot;<br>
+obtain reference center-of-mass motion data of the robot according to the center-of-mass reference trajectory;<br>
+obtain a center-of-mass motion data adjustment value according to a difference between the actual center-of-mass motion data and the reference center-of-mass motion data; and<br>
+obtain the desired center-of-mass motion data according to the center-of-mass motion data adjustment value and the reference center-of-mass motion data.<br>
+<br>
+<br>
+<br>
+18. (Original) The apparatus according to claim 15, wherein the processor circuitry is further configured to:<br>
+perform kinetics analysis on a particle model to obtain a kinetics equation, the particle model being obtained by simplification based on a robot body; and<br>
+analyze the kinetics equation and construct the objective function based on an objective of making the center-of-mass motion trajectory of the robot consistent with the center-of- mass reference trajectory.<br>
+<br>
+19. (Original) The apparatus according to claim 15, wherein the processor circuitry is configured to:<br>
+generate intermediate joint control information according to the center-of-mass control information and the structure matrix corresponding to the robot;<br>
+obtain actual joint motion data of the robot;<br>
+obtain reference joint motion data of the robot; and<br>
+adjust the intermediate joint control information according to the actual joint motion data and the reference joint motion data to obtain the joint control information.<br>
+<br>
+20. (Currently Amended) A non-transitory machine-readable media, having instructions stored on the machine-readable media, the instructions configured to, when executed, cause a machine to:<br>
+obtain a center-of-mass reference trajectory for guiding the robot to execute a target motion; the center-of-mass reference trajectory being a center-of-mass motion trajectory of the robot configured to achieve the target motion;<br>
+determine desired center-of-mass motion data of the robot based on the center-of-mass reference trajectory, the desired center-of-mass motion data being a desired value of motion data associated with a center of mass of the robot;<br>
+construct an objective function based on the desired center-of-mass motion data and<br>
+<br>
+matrix data constructed based on a position relationship between the center of mass of the robot and contact points, the contact points being contact points between the robot and an environment, a value of the objective function is representing a degree of deviation of the robot from the center-of-mass reference <u>trajectory, wherein the objective function is</u><u>:</u>SVG
+{EMBED HERE}
+0.202.233<u> ,</u><u>,</u><br>
+<u>where W</u><u>.A,</u><u> denotes a positive definite weight matrix, w</u><u>d</u><u>es denotes the desired center-of- mass motion data, A denotes the matrix and f denotes the center-</u><u>o</u><u>f-mass control inf</u><u>o</u><u>rmati</u><u>on;</u><br>
+calculate center-of-mass control information enabling the value of the objective function to satisfy an optimization stop condition;<br>
+generate joint control information according to the center-of-mass control information and a structure matrix of the robot; and<br>
+control the robot to execute the target motion based on the joint control information.
+</body></html>

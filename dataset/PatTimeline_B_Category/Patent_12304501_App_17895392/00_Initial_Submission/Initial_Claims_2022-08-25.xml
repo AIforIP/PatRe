@@ -1,0 +1,74 @@
+<html><head></head><body><h3>Date: 2022-08-25</h3>
+ What Is Claimed Is:
+<br>
+
+<br>
+1. A method for providing operating data for an at least semi- automated vehicle, comprising the following steps: 
+<br>
+sensorially detecting surroundings data using a surroundings sensor system of the vehicle; 
+<br>
+conveying the sensorially detected surroundings data to a cloud, and conveying a request to the cloud for localization data; 
+<br>
+receiving the localization data from the cloud; 
+<br>
+ascertaining the operating data for use in a cooperative driving maneuver of the vehicle with at least one further road user using the localization data received from the cloud and the sensorially detected surroundings data; and 
+<br>
+initiating the cooperative driving maneuver using the ascertained operating data. 
+
+<br>
+
+<br>
+2. The method as recited in claim 1, wherein the localization data received from the cloud include at least one of the following: distance of the vehicle up to a lane change zone, length of a lane change zone, a position of the vehicle.
+<br>
+
+<br>
+3. The method as recited in claim 1, wherein the sensorially detected surroundings data of the vehicle are detected using at least one of the following: radar sensor, LIDAR sensor, ultrasonic sensor, camera.
+<br>
+
+<br>
+4. The method as recited in claim 1, wherein the localization data received from the cloud are displayed in an electronic horizon of the vehicle.
+
+<br>
+5. The method as recited in claim 1, wherein the conveyance of a request to the cloud for data relating to cooperative driving of the vehicle is carried out when the vehicle enters into a defined mapping area of a digital map.
+<br>
+
+<br>
+6. A device for providing operating data for an at least semi- automated vehicle, comprising: 
+<br>
+a first interface for a wireless connection to a cloud for receiving localization data from the cloud; 
+<br>
+a second interface for feeding sensorially detected surroundings data; 
+<br>
+an ascertainment unit configured to ascertain the operating data relating to a cooperative driving maneuver for the vehicle using the received localization data and from the sensorially detected surroundings data; and 
+<br>
+a third interface via which the operating data are output. 
+
+<br>
+
+<br>
+7. The device as recited in claim 6, wherein the device is configured to display the received localization data of the cloud using an electronic horizon.
+<br>
+
+<br>
+8. The device as recited in claim 6, further comprising: 
+<br>
+an electronic horizon, with which the localization data conveyed by the cloud is signaled. 
+
+<br>
+
+<br>
+9. A non-transitory machine-readable memory medium on which is stored a computer program for providing operating data for an at least semi-automated vehicle, the computer program, when executed by a computer, causing the computer to perform the following steps: 
+
+sensorially detecting surroundings data using a surroundings sensor system of the vehicle; 
+<br>
+conveying the sensorially detected surroundings data to a cloud, and conveying a request to the cloud for localization data; 
+<br>
+receiving the localization data from the cloud; 
+<br>
+ascertaining the operating data for use in a cooperative driving maneuver of the vehicle with at least one further road user using the localization data received from the cloud and the sensorially detected surroundings data; and 
+<br>
+initiating the cooperative driving maneuver using the ascertained operating data. 
+131818235.116
+131818235.117
+131818235.118
+</body></html>

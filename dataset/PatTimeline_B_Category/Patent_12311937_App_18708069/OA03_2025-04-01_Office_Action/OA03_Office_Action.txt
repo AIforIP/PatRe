@@ -1,0 +1,30 @@
+DETAILED ACTION
+Patent Prosecution Highway
+The petition to participate in the PPH program was granted on 9/17/2024. Accordingly, the instant application has been granted special status.
+Response to Amendment
+The amendment filed 3/6/2025 has been accepted and entered. Accordingly, claim 6 is amended.
+Claim Rejections - 35 USC § 112
+The rejection of claim 6 under 35 U.S.C. 112(b) has been withdrawn as a result of the amendment.
+Allowable Subject Matter
+Claims 1-6 are allowed. The following is an examiner’s statement of reasons for allowance: The prior art does not teach, disclose or suggest the limitation:
+A vehicle control device comprising:
+a camera configured to capture an environment in front of an own vehicle; and
+a controller configured to execute processing including:
+acquiring a current position of the own vehicle;
+acquiring a captured image representing an environment in front of the own vehicle from the camera;
+determining whether or not a current position of the own vehicle is within a high-definition map-available region in which high-definition map information is available;
+when determining that a current position of the own vehicle is within the high- definition map-available region, performing acceleration/deceleration control to control acceleration or deceleration of the own vehicle, based on specified speed information acquired by recognizing a speed sign in the captured image or specified speed information acquired from the high-definition map information based on a current position of the own vehicle and also notifying a driver of the specified speed information, and
+when the own vehicle is predicted to leave the high-definition map-available region to an outside, terminating the acceleration/deceleration control based on the specified speed information at a point before a point at which the own vehicle leaves the high-definition map-available region to an outside and also switching the specified speed information to specified speed information acquired from road map information, the road map information having lower precision than the high-definition map information, based on a current position of the own vehicle and notifying the driver of the acquired specified speed information at a point before a point at which the own vehicle leaves the high-definition map available region to an outside”
+As recited in claim 6 and similarly recited in claim 1. With respect to claim 1, the best prior art, U.S. Patent Application Publication o. 20170072955 to Ediger et al. (Ediger) discloses detecting a speed limit to determine a drive set point acceleration (abstract) wherein road signs are automatically detected with a camera (¶¶ 4-5, 37) and automatically adapts acceleration and braking to the detected road sign speed limit (¶ 8). Ediger also discloses reading out from a map processing device to determine map sections of a road and their associated speed limits (¶12, 32)( ¶¶ 38-42).
+However, Ediger fails to teach, disclose or suggest the detailed combination of interrelated limitations, particularly the underlined portions, and performed in the required order. In addition, there was no other prior art reference that taught, disclosed or suggested this feature, nor is there any reason to modify or combine prior art references in the manner recited in claims 1 and 6 absent the applicant's disclosure.
+Previously cited Prior Art
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure:
+U.S. Patent Application Publication No. 20210276550 to Gotou et al. (“Gotou”) is cited to disclose “generating a target vehicle speed of a driving-assisted vehicle, in which a target acceleration/deceleration of a host vehicle is generated in accordance with a speed limit of a travel path of the host vehicle”(¶ 2). See also ¶¶ 24, 28 (road sign speed limit recognition by camera), 34 (speed limit acquisition unit), 36 (recognizing speed limit signs), 39 (speed limit acquitted form map data), 42 (based on speed limit information control target acceleration and deceleration), 53-101.
+U.S. Patent Application Publication No. 20230021313 is cited to generally disclose derivation of map regions with labeled speed limits.
+U.S. Patent Application Publication No. 20170144664 to Yamashita et al is cited to disclose detecting speed limits from speed limit signs to further control acceleration and deceleration of the vehicle (¶¶ 4, 34, 71-74, 183-185).
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to KENNETH J MALKOWSKI whose telephone number is(313)446-4854. The examiner can normally be reached 8:00 AM - 5:00 PM.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Faris Almatrahi can be reached on 313-446-4821. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/KENNETH J MALKOWSKI/Primary Examiner, Art Unit 3667

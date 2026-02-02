@@ -1,0 +1,57 @@
+<html><head></head><body><h3>Date: 2024-05-06</h3>
+
+<h1><u>LISTING OF CLAIMS</u></h1>
+<br>
+<br>
+1.  (Currently amended) A method for controlling a vehicle, the method comprising:<br>
+determining <u>t</u><u>hat </u><del>whether </del>one or more surrounding vehicles <u>demonstrates</u><del> demonstrate </del>threatening behavior<u> by detecting that a first surrounding vehicle directly in front of the vehicle slows down in an absence of a traffic related reason to slow down and a person approaches the vehicle;</u> and<br>
+<u>upon determining </u><del>when it is determined </del>that <u>t</u><u>he </u>one or more surrounding vehicles <u>demonstrates </u><del>demonstrate </del>threatening behavior, controlling the vehicle to perform one or more threat evasive actions.<br>
+<br>
+2.   (Currently amended) The method of claim 1, wherein determining <u>that the</u><del> whether </del>one or more surrounding vehicles <u>demonstrates </u><del>demonstrate </del>threatening behavior is based on:<br>
+information regarding surrounding vehicles acquired by one or more external sensors mounted on the vehicle; and<br>
+interpretation of the information regarding surrounding vehicles to provide one or more threat determining <u>metrics </u><del>metric </del>associated with the one or more surrounding vehicles.<br>
+<br>
+3.   (Currently amended) The method of claim 2, wherein the one or more threat determining<u>metrics associated with the one or more surrounding vehicles </u><del>metric associated with a surrounding vehicle </del>comprise one or more of a speed of the <u>one or more surrounding vehicles, </u><del>surrounding vehicle, </del>a velocity of the <u>one or more surrounding vehicles, </u><del>surrounding vehicle, </del>a difference between speed of the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and a speed of the <u>controlled </u>vehicle, a difference between velocity of the <u>one or more surrounding vehicles </u><del>surrounding vehicle</del> and a velocity of the <u>controlled </u>vehicle, a distance between the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and the <u>controlled </u>vehicle,<u>or </u><del>and </del>a trend of the distance between the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and the <u>controlled</u> vehicle.<br>
+<br>
+<br>
+4.   (Currently amended) The method of claim 1, wherein <u>determining that</u> one or more surrounding vehicles <u>demonstrates </u><del>demonstrating </del>threatening behavior<u> further </u>comprises <u>detecting that </u>a <u>second </u><del>first </del>surrounding vehicle <u>blocks a route of the vehicle alternative to forward progression</u><del>dire</del><del>c</del><del>tly in front of the vehicle slowing down in absence of traffic related reason to slow down</del>.<br>
+<br>
+5.   (Currently amended) The method of claim 4, wherein <del>one or more surrounding vehicles demonstrating threatening behavior further comprises a t</del><u>he</u> second surrounding vehicle <u>that blocks the route of the vehicle alternative to forward progression is </u>in an adjacent lane to the vehicle <u>and slows </u><del>slowing </del>down in association with the first surrounding vehicle.<br>
+<br>
+6.   (Currently amended) The method of claim 1, wherein controlling the vehicle to perform one or more threat evasive actions comprises controlling the vehicle to perform one or more of:<br>
+activating a visual deterrent maneuver;<br>
+activating an audial deterrent maneuver;<br>
+activating an intrusion mitigating maneuver;<br>
+disabling a collision avoidance system;<br>
+taking an available escape route;<br>
+initiating an emergency call;<u>or </u><del>and</del> initiating a call to a remote controller.<br>
+<br>
+7.   (Original) A non-transitory computer readable medium storing a computer program comprising program instructions, the computer program being loadable into a data processing unit and configured to cause execution of the method according to claim 1 when the computer program is run by the data processing unit.<br>
+<br>
+8.   (Original) A control unit for controlling a vehicle, the control unit being configured to cause execution of the method according to claim 1.<br>
+<br>
+<br>
+9.   (Currently amended) An apparatus for controlling a vehicle, the apparatus comprising controlling circuitry configured to cause:<br>
+determination <u>t</u><u>hat </u><del>of whether o</del>ne or more surrounding vehicles <u>demonstrates</u><del> demonstrate </del>threatening behavior<u> by detecting that a first surrounding vehicle directly in front of the vehicle slows down in an absence of a traffic related reason to slow down and a person approaches the vehicle;</u> and<br>
+responsive to <u>t</u><u>h</u><u>e </u>determination that <u>t</u><u>he </u>one or more surrounding vehicles<u> demonstrates </u>demonstrate threatening behavior, control of the vehicle to perform one or more threat evasive actions.<br>
+<br>
+10.  (Currently amended) The apparatus of claim 9, wherein the controlling circuitry is further configured to cause:<br>
+acquisition of information regarding surrounding vehicles from one or more external sensors mounted on the vehicle; and<br>
+interpretation of the information regarding surrounding vehicles to provide one or more threat determining <u>metrics </u><del>metric </del>associated with the one or more surrounding vehicles, wherein determination of <del>whether one or more surrounding vehicles demonstrate </del>threatening behavior is based on the one or more threat determining<u> metrics</u><del>metric</del><u>.</u><br>
+<br>
+11.  (Currently amended) The apparatus of claim 10, wherein the one or more threat determining <u>metrics </u><del>metric associated with a surrounding vehicle </del>comprise one or more of a speed of the <u>one or more surrounding vehicles, </u><del>surrounding vehicle, </del>a velocity of the <u>one or more surrounding vehicles, </u><del>surrounding vehicle, </del>a difference between speed of the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and <u>a</u> speed of the <u>controlled </u>vehicle, a difference between velocity of the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and <u>a</u><u></u>velocity of the <u>controlled </u>vehicle, a distance between the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and the<u> controlled </u>vehicle,<u>or </u><del>and </del>a trend of the distance between the <u>one or more surrounding vehicles </u><del>surrounding vehicle </del>and the <u>controlled </u>vehicle.<br>
+<br>
+12.  A system for controlling a vehicle, the system comprising:<br>
+one or more external sensors mountable on the vehicle and configured to acquire information regarding one or more surrounding vehicles; and<br>
+<u>the apparatus of</u><u> claim 9, </u><u>wherein the determination is made based on the controlling circuitry interpreting </u><del>processing circuitry configured to: interpret </del>the information<del> regarding surrounding vehicles to provide one or more threat determining metric associated with the one or more surrounding vehicles;</del><br>
+<del>determine, based on the threat determining metric, whether one or more surrounding vehicles demonstrate threatening behavior; and</del><br>
+<del>responsive to determination that one or more surrounding vehicles demonstrate threatening behavior, issue one or more control signals for controlling the vehicle to perform one or more threat evasive actions</del>.<br>
+<br>
+13.  (Currently amended) The system of claim 12, wherein the <del>one or more control signals for controlling the vehicle to perform o</del>ne or more threat evasive actions comprise <del>one or more control signals for controlling the vehicle to perform </del>one or more of:<br>
+activating a visual deterrent maneuver;<br>
+activating an audial deterrent maneuver;<br>
+activating an intrusion mitigating maneuver;<br>
+disabling a collision avoidance system;<br>
+taking an available escape route;<br>
+initiating an emergency call;<u>or </u><del>and</del> initiating a call to a remote controller.
+</body></html>

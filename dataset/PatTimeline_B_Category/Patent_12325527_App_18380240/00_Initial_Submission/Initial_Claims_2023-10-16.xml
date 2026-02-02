@@ -1,0 +1,50 @@
+<html><head></head><body><h3>Date: 2023-10-16</h3>
+
+<h1>WHAT IS CLAIMED IS:</h1>
+<br>
+<br>
+1.   An exhaust duct configured to be arranged around an exhaust nozzle of an engine, the exhaust duct having a plurality of sections, the sections comprising an inlet section and an outlet section, the exhaust duct extending along a guiding line from the inlet section to the outlet section, the outlet section being configured to expel gases discharged by the exhaust nozzle,<br>
+wherein the sections are circular between the inlet section and the outlet section, with the exception of the sections of a deformed segment, each section of the deformed segment comprising a bottom sector and a top sector, the bottom sector having a non-circular shape so that at least a volume of liquid that is not able to reach, by force of gravity, the inlet section and the outlet section, is less than a volume threshold when the pitch and roll angles respectively lie within predetermined pitch and roll angle ranges.<br>
+<br>
+2.   The exhaust duct according to   The exhaust duct according to <br>
+wherein the exhaust duct comprises two identical half- shells joined together, the two half-shells being symmetrical with respect to a plane containing the guiding line, one of the two half-shells comprising the bottom sectors of the sections of the deformed segment and the other half-shell comprising the top sectors of the sections of the deformed segment.<br>
+<br>
+3.   The exhaust duct according to   The exhaust duct according to <br>
+wherein at least the inlet section or the outlet section is circular.<br>
+<br>
+<br>
+<br>
+4.   The exhaust duct according to   The exhaust duct according to <br>
+wherein each section of the deformed segment has a non- circular shape arranged between two arcs of a circle.<br>
+<br>
+5.   The exhaust duct according to   The exhaust duct according to <br>
+wherein the non-circular shape is a flat shape.<br>
+<br>
+6.   The exhaust duct according to   The exhaust duct according to <br>
+wherein each section is orthogonal to the guiding line.<br>
+<br>
+7.   The exhaust duct according to   The exhaust duct according to <br>
+wherein the guiding line is curved.<br>
+<br>
+8.   An aircraft provided with at least one engine, the engine comprising an exhaust nozzle for at least discharging gases, the aircraft comprising the exhaust duct arranged least partially around the exhaust nozzle,<br>
+wherein the exhaust duct is according to claim 1.<br>
+<br>
+9.   A method for designing the exhaust duct configured to be arranged around an exhaust nozzle of an engine, the exhaust duct having a plurality of sections, the sections comprising an inlet section and an outlet section, the exhaust duct extending along a guiding line from the inlet section to the outlet section, the outlet section being configured to expel gases discharged by the exhaust nozzle,<br>
+wherein the design method comprises defining a hose with circular sections extending from the inlet section to the outlet section, the design method comprising at least one modification phase comprising the following steps:<br>
+<br>
+determining at least one undrainable volume delimited by the hose and wherein a liquid cannot, by force of gravity, reach the inlet section and the outlet section at pitch and roll angles that respectively lie within predetermined pitch and roll angle ranges;<br>
+if no undrainable volume is greater than or equal to a volume threshold, assigning a geometry of the hose to the exhaust duct; andif at least one undrainable volume is greater than or equal to the volume threshold: (i) positioning a predetermined shape intersecting the hose, the undrainable volume(s) being present between the hose and the predetermined shape;
+(ii) modifying the hose, the part of the hose situated beneath the predetermined shape and comprising the undrainable volume(s) being cut off and replaced locally by the predetermined shape; and (iii) carrying out a new modification phase with the hose obtained after the modification of the hose.<br>
+<br>
+10. The method according to The method according to <br>
+wherein the predetermined shape is a plane.<br>
+<br>
+11. The method according to The method according to <br>
+wherein determining at least one undrainable volume delimited by the hose and wherein a liquid cannot, by force of gravity, reach the inlet section and the outlet section at pitch and roll angles that respectively lie within the predetermined pitch and roll angle ranges comprises:<br>
+for a plurality of attitudes of the exhaust duct permitted by the predetermined roll and pitch angle ranges, determining an intermediate volume wherein a liquid cannot, by force of gravity, reach the inlet section and the outlet section, 20<br>
+<br>
+the at least one undrainable volume being equal to a sum of the intermediate volumes.<br>
+<br>
+12. A   method  for  manufacturing   the  exhaust  duct configured to be arranged around an exhaust nozzle of an engine,<br>
+wherein the manufacturing method comprises defining a geometry of the exhaust duct by applying the design method according to claim 9, then a step of manufacturing the exhaust duct in order to give this exhaust duct said geometry.
+</body></html>

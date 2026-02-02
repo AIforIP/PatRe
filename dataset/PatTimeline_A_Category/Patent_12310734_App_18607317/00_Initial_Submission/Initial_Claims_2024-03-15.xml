@@ -1,0 +1,102 @@
+<html><head></head><body>18607317
+
+   
+   What is claimed is:
+   
+
+<br>
+
+1. An apparatus for measuring magnetic fields from a subject’s organ, comprising:
+a plurality of unshielded magnetometers in a three-dimensional arrangement,
+wherein: 
+a respective pair of magnetometers, in the plurality of magnetometers, has a respective known separation; 
+each magnetometer in the plurality of magnetometers is configured to simultaneously detect a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field and output a signal indicative of the detected biomagnetic field and the background magnetic field; and
+the apparatus is configured to operate without magnetic shielding.
+<br>
+
+2. The apparatus of claim 1, wherein each magnetometer in the plurality of magnetometers is responsive to a total magnetic field in proximity to the respective magnetometer.
+<br>
+
+3. The apparatus of claim 1, wherein the respective known separation has a respective fixed length.
+<br>
+
+4. The apparatus of claim 1, wherein: 
+the plurality of magnetometers includes a first magnetometer having a variable position; and
+a respective pair of magnetometers, in the plurality of magnetometers, has a respective known separation that varies during device operation and determined by tracking a position of the first magnetometer. 
+<br>
+
+5. The apparatus of claim 1, wherein the background magnetic field includes a uniform magnetic field.
+<br>
+
+6. The apparatus of claim 1, wherein the plurality of magnetometers has an average spacing that satisfies a constraint in Fourier space, such that the average spacing provides a wavevector coverage to recover information from both the biomagnetic field from the subject’s organ and the background magnetic field.
+<br>
+
+7. The apparatus of claim 1, wherein the plurality of magnetometers are spatially distributed such that in Fourier space, the plurality of magnetometers have a wavevector coverage to recover information from both the biomagnetic field from the subject’s organ and the background magnetic field.
+<br>
+
+8. The apparatus of claim 1, wherein:
+the plurality of magnetometers comprises an array of magnetometers arranged in a stack of planes, wherein:
+adjacent magnetometers in a respective plane of the stack of planes are separated by a first predefined spacing along a length of the array and separated by a second predefined spacing along a width of the array; and
+magnetometers in adjacent planes of the stack of planes are separated by a third predefined spacing along a thickness direction of the array.
+<br>
+
+9. The apparatus of claim 8, wherein:
+a first magnetometer in a first plane of the stack of planes is aligned with a second magnetometer in a second plane of the stack of planes along the length and the width of the array.
+<br>
+
+10. The apparatus of claim 8, wherein:
+the array of magnetometers includes a first subset of magnetometers positioned in a first plane of the stack of planes and a second subset of magnetometers positioned in a second plane of the stack of planes; and
+the first subset of magnetometers are aligned with the second subset of magnetometers along the length and the width of the array.
+<br>
+
+11. The apparatus of claim 8, wherein each of the magnetometers in the array comprises:
+an optically pumped magnetometer; or
+a diamond NV center magnetometer; or
+a fluxgate sensor.
+<br>
+
+12. The apparatus of claim 8, wherein the apparatus is operable at room temperature.
+<br>
+
+13. The apparatus of claim 8, wherein each magnetometer in the array of magnetometers has a sensitivity better than 100 pTHz. 
+<br>
+
+14. The apparatus of claim 1, wherein each magnetometer of the plurality of unshielded magnetometers has a dynamic range of around 50 microTeslas.
+<br>
+
+15. A magnetically unshielded magnetometer system for measuring magnetic fields from a subject’s organ, the magnetometer system comprising:
+a plurality of unshielded magnetometers in a three-dimensional arrangement, wherein: 
+a respective pair of magnetometers, in the plurality of magnetometers, has a respective known separation; 
+each magnetometer in the plurality of magnetometers is configured to simultaneously detect a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field and output a signal indicative of the detected biomagnetic field and the background magnetic field; and
+the magnetometer system is configured to operate without magnetic shielding;
+one or more processors; and
+memory storing instructions for execution by the one or more processors, the stored instructions including instructions for:
+causing each magnetometer in the plurality of magnetometers to:
+simultaneously measure a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field; and 
+output a signal indicative of the detected biomagnetic field and the background magnetic field.
+<br>
+
+16. The magnetometer system of claim 15, wherein the stored instructions include signal processing instructions to separate the background field from the biomagnetic signals.
+<br>
+
+17. The magnetometer system of claim 15, wherein the plurality of magnetometers are positioned within a housing.
+<br>
+
+18. The magnetometer system of claim 15, further comprising: 
+a positioning arm for supporting the plurality of unshielded magnetometers.
+<br>
+
+19. The magnetometer system of claim 18, wherein the positioning arm is mounted on a base that includes one or more wheels.
+<br>
+
+20. The magnetometer system of claim 18, wherein the positioning arm is mounted on a patient support platform.
+<br>
+
+21. The magnetometer system of claim 15, wherein each of the plurality of unshielded magnetometers comprises:
+an optically pumped magnetometer; or
+a diamond NV center magnetometer; or
+a fluxgate sensor.
+
+   
+
+</body></html>

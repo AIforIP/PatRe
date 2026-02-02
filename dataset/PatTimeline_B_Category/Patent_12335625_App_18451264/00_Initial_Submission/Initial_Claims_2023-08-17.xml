@@ -1,0 +1,58 @@
+<html><head></head><body><h3>Date: 2023-08-17</h3>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1. A system of automatic target image acquisition and calibration, comprising:a first robotic arm, being disposed near a first conveyor and a second conveyor, wherein the first conveyor transfers a plurality of articles, and at least one surface of said article being provided with a recognition structure thereon;<br>
+a first camera, being disposed near the first robotic arm;<br>
+at least one second robotic arm, being disposed near the second conveyor, and<br>
+grasping at least one second camera; andan electronic device, being coupled to the first robotic arm, the first camera,<br>
+the at least one second robotic arm, and the at least one second camera, and<br>
+comprising a processor and a memory;<br>
+wherein the memory stores an application program, and the processor accesses the memory so as to execute the application program;<br>
+wherein when the application program is executed, the processor is configured to:<br>
+control the first robotic arm to grasp one article from the first conveyor, move the article to be in a first photographing region of the first camera, and then turn over the article in a rotation sequence;<br>
+control the first camera to acquire a plurality of 2D images from the article during the article being turned over;<br>
+apply a feature recognition process to the plurality of 2D images, so as to find at least one 2D image including a recognition feature pattern;<br>
+control the first robotic arm to move the article to the second conveyor, and determine a relative position and a relative 3D coordinate of the article based on the recognition feature pattern and the plurality of 2D images;<br>
+conduct a camera moving operation, so as to control the robotic arm to move the second camera to make one of N inspection surfaces of the article be in a second photographing region of the second camera, where N is an integer;<br>
+conduct a photographing operation, so as to control the second camera to<br>
+ photograph the inspection surface of the article, thereby obtaining one article image;repeat the foregoing   camera moving   operation  and  the foregoing photographing operation N-1 times, so as to obtain a total of N article images;<br>
+apply a feature extracting process to the N article images so as to generate N feature images; and<br>
+conduct a feature matching operation, so as to determine whether said feature image contains at least one defect feature that matches at least one of a plurality of reference defect features.<br>
+<br>
+2. The system of claim 1, further comprising:a first light source, being coupled to the electronic device, and being controlled by the electronic device so as to radiate a first illumination light to the first photographing region; and<br>
+a second light source, being coupled to the electronic device, and being controlled by the electronic device so as to radiate a second illumination light to<br>
+ the second photographing region.<br>
+<br>
+3. The system of claim 1, wherein the recognition structure is a tag selected from the group consisting of RFID tag, 2D barcode tag, QR code tag, matrix barcode tag, patterns-containing tag, text-containing tag, alphabets-containing tags, and digits- containing tag.<br>
+<br>
+4. The system of claim 1, wherein the recognition structure is a structural feature of the article.<br>
+<br>
+5. The system of claim 3, wherein the tag is adopted for storing an article information comprising vendor ID, product ID, serial number, and batch/lot number.<br>
+<br>
+6. The system of claim 1, wherein the application program comprises instructions, andthe processor executes the instructions so as to be configured to establish a 3D image of the article based on the recognition feature pattern and the plurality of 2D<br>
+ images, and then to determine the relative position and the relative 3D coordinate of the article.<br>
+<br>
+7. rhe system of claim 6, wherein the instructions include a mathematical algorithm selected from the group consisting of Delaunay triangulation algorithm, Crust triangulation algorithm, and triangulated irregular network (TIN) algorithm.<br>
+<br>
+8. The system of claim 1, wherein the application program includes a plurality of subprograms, the plurality of subprograms comprising:a first subprogram, being compiled to be integrated in the application program<br>
+ by one type of programming language, and including instructions for configuring the processor to control the first robotic arm to grasp one article from the first conveyor, move the article to be in the first photographing region of the first camera,<br>
+and turn over the article in said rotation sequence, and configuring the processor to control the first robotic arm to move the article to the second conveyor;a second subprogram, being compiled to be integrated in the application program by one type of programming language, and including instructions for 15 configuring the processor to control the first camera to acquire the plurality of 2D images from the article during the article being turned over;<br>
+a third subprogram, being compiled to be integrated in the application program by one type of programming language, and including instructions for configuring<br>
+ the processor to apply the feature recognition process to the plurality of 2D images,<br>
+so as to find at least one 2D image including the recognition feature pattern;a fourth subprogram, being compiled to be integrated in the application program by one type of programming language, and including instructions for configuring the processor to establish a 3D image of the article based on the<br>
+ recognition feature pattern and the plurality of 2D images, and then to determine the relative position and the relative 3D coordinate of the article;a fifth subprogram, being compiled to be integrated in the application program by one type of programming language, and including instructions for configuring the processor to control the robotic arm to move the second camera, thereby making<br>
+ one of N inspection surfaces of the article be in the second photographing region of the second camera;a six subprogram, being compiled to be integrated in the application program by one type of programming language, and including instructions for configuring the processor to control the second camera to photograph the inspection surface of<br>
+ the article, thereby obtaining one article image; anda seventh subprogram, being compiled to be integrated in the application program by one type of programming language, and including instructions for configuring the processor to apply the feature extracting process to the N article images, and then to determine whether said feature image contains at least one<br>
+ defect feature that matches at least one of a plurality of reference defect features.<br>
+<br>
+9. The system of claim 1, wherein the electronic device is further coupled to an apparatus controlling device that is used for controlling the first conveyor and the second conveyor.<br>
+<br>
+<br>
+10. The system of claim 1, wherein the electronic device is integrated in an apparatus controlling device that is used for controlling the first conveyor and the second conveyor.5
+10
+15
+20
+25
+</body></html>

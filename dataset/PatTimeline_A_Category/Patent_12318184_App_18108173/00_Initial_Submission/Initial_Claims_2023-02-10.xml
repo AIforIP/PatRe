@@ -1,0 +1,104 @@
+<html><head></head><body><h3>Date: 2023-02-10</h3>
+<p><u>Claims</u></p>
+<br>
+
+<br>
+1.    A method of scanning an organ structure of a patient using magnetic resonance imaging, the method comprising: 
+<br>
+scanning, in a first scanning process, the patient to obtain first image data indicative of at least the organ structure of the patient; 
+<br>
+determining, based on the first image data, one or more parameters of a second scanning process to be performed on the patient; and 
+<br>
+scanning the patient in the second scanning process to obtain second image data indicative of at least the organ structure of the patient, wherein the first scanning process comprises a first quality of imaging scan, the second scanning process comprises a second quality of imaging scan, and the first quality of imaging scan is higher than the second quality of imaging scan. 
+
+<br>
+
+<br>
+2.    The method of claim 1, wherein the first scanning process is performed using a first magnetic resonance imaging scanner, and a second magnetic resonance imaging process is performed using a second magnetic resonance imaging scanner different to the first magnetic resonance imaging scanner.
+<br>
+
+<br>
+3.    The method of claim 2, further comprising: 
+<br>
+determining, based on a property of the second magnetic resonance imaging scanner, one or more parameters of the second scanning process. 
+
+<br>
+
+<br>
+4.    The method of claim 1, wherein the first quality of imaging scan comprises any one or more of a greater spatial resolution than the second quality of imaging scan, a greater signal-to-noise ratio than the second quality of imaging scan, a greater imaging volume than the second quality of imaging scan, a lower slice thickness to be resolved than the second quality of imaging scan, and high-sample recording of nuclear magnetic resonances compared to the second quality of imaging scan.
+
+<br>
+
+<br>
+5.    The method of claim 1, further comprising: 
+<br>
+determining a region of interest in the first image data; and 
+<br>
+determining, based on the determined region of interest, the one or more parameters of the second scanning process. 
+
+<br>
+
+<br>
+6.    The method of claim 5, wherein determining the region of interest comprises performing a segmentation process on the first image data.
+<br>
+
+<br>
+7.    The method of claim 5, wherein determining the region of interest comprises identifying at least one of a landmark in the first image data and a sub-compartment in the first image data.
+<br>
+
+<br>
+8.    The method of claim 5, wherein determining the one or more parameters of the second scanning process comprises determining the one or more parameters of the second scanning process to modify a point spread function associated with the region of interest.
+<br>
+
+<br>
+9.    The method of claim 1, wherein determining the one or more parameters of the second scanning process comprises determining the one or more parameters of the second scanning process to modify spatial encoding in the second scanning process.
+<br>
+
+<br>
+10.   The method of claim 1, further comprising prior to determining the one or more parameters of the second scanning process: 
+<br>
+performing a localizer scan on the patient to obtain localizer data; 
+<br>
+comparing the first image data to the localizer data to determine a consistency metric between the first image data and the localizer data; and 
+<br>
+when the consistency metric is above a threshold value, determining the one or more parameters of the second scanning process and scanning the patient in the second scanning process. 
+<br>
+
+<br>
+11.   The method of claim 10, further comprising: 
+<br>
+when the consistency metric is below the threshold value, scanning the patient in a re-scanning process comprising a quality of imaging scan similar to the first quality of imaging scan to obtain updated first image data indicative of at least the organ structure of the patient. 
+
+<br>
+
+<br>
+12.   The method of claim 1, further comprising: 
+<br>
+reconstructing the second image data based on any one or more of the first image data and a dataset comprising data relating to previously scanned patients. 
+
+<br>
+
+<br>
+13.   The method of claim 1, further comprising: 
+<br>
+determining, based on at least one of the first image data and the second image data, one or more parameter of a third scanning process to be performed on the patient; 
+<br>
+and scanning the patient in the third scanning process to obtain third image data indicative of at least the organ structure of the patient. 
+
+<br>
+
+<br>
+14.   A magnetic resonance imaging system, comprising: 
+<br>
+a first magnetic resonance imaging scanner operable to obtain, as part of a first scanning process, first image data indicative of at least an organ structure of a patient, the first magnetic resonance imaging scanner operable to perform a first quality of imaging scan in the first scanning process; 
+<br>
+a second magnetic resonance imaging scanner different from the first magnetic resonance imaging scanner, the second magnetic resonance imaging scanner operable to obtain, as part of a second scanning process, second image data indicative of at least the organ structure of the patient, and operable to perform a second quality of imaging scan in the second scanning process; and 
+<br>
+a processor operable to determine, based on the first image data, one or more parameters of the second scanning process, 
+
+   wherein the first quality of imaging scan is higher than the second quality of imaging scan.
+<br>
+
+<br>
+15.   The magnetic resonance imaging system according to claim 14, wherein the magnetic resonance imaging system is operable to determine and/or adjust a parameter of the first scanning process based on a property of the second magnetic resonance imaging scanner.
+</body></html>

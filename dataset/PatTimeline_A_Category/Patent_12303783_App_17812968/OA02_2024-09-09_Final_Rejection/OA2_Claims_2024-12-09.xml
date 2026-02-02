@@ -1,0 +1,77 @@
+<html><head></head><body><h3>Date: 2024-12-09</h3>
+
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the Application.</p><br>
+<br>
+Claims 1-20 Canceled219<br>
+<br>
+<br>
+21. (Currently Amended) A system adapted to selectively convert a bounded gameplay session to an unbounded gameplay session in a multiplayer video game for players of the multiplayer video game, <u>wherein at least a portion of the multiplayer video </u><u>g</u><u>ame is hosted by at least one server and executed on a plurality of client devices remotely located from the at least one server, wherein the bounded gameplay session or unbounded </u><u>g</u><u>ameplay session is accessible via at least one of the plurality of client devices, </u>wherein the bounded gameplay session is configured to run a session of the multiplayer video game until a predefined game objective is fulfilled or time has expired and wherein the unbounded gameplay session is configured to run a session of the multiplayer video game continuously, the system comprising:<u>a customization application adapted to execute on the at least one server or to execute on each of the plurality of client devices and further configured to automatically monitor the bounded gameplay session to determine whether, during the bounded </u><u>g</u><u>ame play session, the predefined game objective is fulfilled or the time has expired</u><u>;</u><br>
+a gameplay session engine<u> adapted to execute on the at least one server or to execute on each of the plurality of client devices,</u> wherein the gameplay session engine is <u>further</u> configured to:initiate the bounded gameplay session for all the players;<br>
+query a predetermined number of the players to determine if the bounded gameplay session should be converted to the unbounded gameplay session for all the players;<br>
+convert the bounded gameplay session to the unbounded gameplay session for all the players based on a result of said query;<br>
+<u>extend a game map of the unbounded </u><u>g</u><u>ameplay sessio</u><u>n;</u><u></u>and<br>
+terminate the unbounded gameplay session only when no more of the players remain in the unbounded gameplay session.<br>
+<br>
+22. (Previously Presented) The system of claim 21, wherein the unbounded gameplay session is configured to run continuously provided a minimum number of the players are in the unbounded gameplay session.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+23. (Previously Presented) The system of claim 21, wherein the gameplay session engine is further configured to determine whether to initiate the bounded gameplay session for all the players or the unbounded gameplay session for all the players and initiate the bounded gameplay session for all the players based on the determination.<br>
+<br>
+24. (Previously Presented) The system of claim 21, wherein the gameplay session engine is further configured to not convert the bounded gameplay session to the unbounded gameplay session if a number of the players agreeing to said converting is below a predefined number.<br>
+<br>
+25. (Currently Amended) The system of claim 21, further comprising a matchmaking<u> engine, adapted to execute on the at least one server or to execute on each of the plurality of client devices, wherein the matchmaking engine is further </u>configured to create at least a first subset of players and a second subset of players from the players.<br>
+<br>
+26. (Previously Presented) The system of claim 25, wherein the matchmaking engine is configured to create the first subset of players and the second subset of players based upon an election by at least one player of the players.<br>
+<br>
+27. (Previously Presented) The system of claim 25, wherein the matchmaking engine is configured to create the first subset of players and the second subset of players based on at least one of a skill level or a style of at least one player of the players.<br>
+<br>
+28. (Currently Amended) The system of claim 21, further comprising a scoring engine,<u>adapted to execute on the at least one server or to execute on each of the plurality of client devices</u><u>,</u><u></u>wherein, in the unbounded gameplay session, the scoring engine is <u>further</u> configured to generate scores for the players and wherein the scores are not dependent on a total length of time the unbounded gameplay session has been played by one or more players of the players.<br>
+<br>
+29. (Currently Amended) The system of claim 21, further comprising a scoring engine,<u>adapted to execute on the at least one server or to execute on each of the plurality of client devices</u><u>,</u><u></u>wherein, in the bounded gameplay session, the scoring engine is <u>further</u> configured to generate scores for the players and wherein the scores are dependent on a total length of time the bounded gameplay session has been played by one or more players of the players.<br>
+<br>
+30. (Currently Amended) The system of claim 21, further comprising a game adjustment engine, <u>adapted to execute on the at least one server or to execute on each of the plurality of client devices, </u>wherein the game adjustment engine is <u>further </u>configured to monitor the<br>
+<br>
+<br>
+<br>
+unbounded gameplay session and determine a performance gap between the first subset of players and the second subset of players.<br>
+<br>
+31. (Previously Presented) The system of claim 30, wherein the game adjustment engine is configured to generate and implement an adjustment feature based on the performance gap.<br>
+<br>
+32. (Currently Amended) A method adapted to selectively convert a bounded gameplay session to an unbounded gameplay session in a multiplayer video game for players of the multiplayer video game, <u>wherein at least a portion of the multiplayer video </u><u>g</u><u>ame is hosted by at least one server and executed on a plurality of client devices remotely located from the at least one server, wherein the bounded </u><u>g</u><u>ameplay session or unbounded </u><u>g</u><u>ameplay session is accessible via at least one of the plurality of client devices, </u>wherein the bounded gameplay session is configured to run a session of the multiplayer video game until a predefined game objective is fulfilled or time has expired and wherein the unbounded gameplay session is configured to run a session of the multiplayer video game continuously, the method comprising;<u>confi</u><u>g</u><u>urin</u><u>g</u><u> a customization application, adapted to execute on the at least one server or to execute on each of the plurality of client devices, to automatically monitor the bounded gameplay session to determine whether, during the bounded </u><u>g</u><u>ame play session, the predefined </u><u>g</u><u>ame objective is fulfilled or the time has expired</u><u>;</u><br>
+configuring a gameplay session <u>engine, adapted to execute on the at least one server or to execute on each of the plurality of client devices, </u>to:initiate the bounded gameplay session for all the players;<br>
+query a predetermined number of the players to determine if the bounded gameplay session should be converted to the unbounded gameplay session for all the players;<br>
+convert the bounded gameplay session to the unbounded gameplay session for all the players based on a result of said query;<br>
+<u>extend a </u><u>g</u><u>ame map of the unbounded gameplay session</u><u>;</u><u></u>and terminate the unbounded gameplay session only when no more of the players remain in the unbounded gameplay session.<br>
+<br>
+33. (Previously Presented) The method of claim 32, wherein the unbounded gameplay session is configured to run continuously provided a minimum number of the players are in the unbounded gameplay session.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+34. (Previously Presented) The method of claim 32, further comprising configuring the gameplay session engine to determine whether to initiate the bounded gameplay session for all the players or the unbounded gameplay session for all the players and to initiate the bounded gameplay session for all the players based on the determination.<br>
+<br>
+35. (Previously Presented) The method of claim 32, further comprising configuring the gameplay session engine to not convert the bounded gameplay session to the unbounded gameplay session when a number of the players agreeing to said converting is below a predefined number.<br>
+<br>
+36. (Currently Amended) The method of claim 32, further comprising configuring a matchmaking <u>engine, adapted to execute on the at least one server or to execute on each of the plurality of client devices, </u>to create at least a first subset of players and a second subset of players from the players.<br>
+<br>
+37. (Previously Presented) The method of claim 36, further comprising configuring the matchmaking engine to create the first subset of players and the second subset of players based upon an election by at least one player of the players.<br>
+<br>
+38. (Previously Presented) The method of claim 36, further comprising configuring the matchmaking engine to create the first subset of players and the second subset of players based on at least one of a skill level or a style of at least one player of the players.<br>
+<br>
+39. (Currently Amended) The method of claim 32, further comprising, in the unbounded gameplay session, configuring a scoring <u>engine, adapted to execute on the at least one server or to execute on each of the plurality of client devices, </u>to generate scores for the players, wherein the scores are not dependent on a total length of time the unbounded gameplay session has been played by one or more players of the players.<br>
+<br>
+40. (Currently Amended) The method of claim 32, further comprising, in the bounded gameplay session, configuring a scoring <u>engine, adapted to execute on the at least one server or to execute on each of the plurality of client devices, </u>to generate scores for the players, wherein the scores are dependent on a total length of time the bounded gameplay session has been played by one or more players of the players.<br>
+<br>
+41. (Currently Amended) The method of claim 32, further comprising configuring a game adjustment <u>engine, adapted to execute on the at least one server or to execute on each of the plurality of client devices, </u>to monitor the unbounded gameplay session and determine a performance gap between the first subset of players and the second subset of players.<br>
+<br>
+<br>
+<br>
+<u>Filing Date: July 15, 2022</u><br>
+<br>
+42. (Previously Presented) The method of claim 41, wherein the game adjustment engine is configured to generate and implement an adjustment feature based on the performance gap.
+</body></html>

@@ -1,0 +1,92 @@
+<html><head></head><body><h3>Date: 2024-12-24</h3>
+
+<h1><u>IN THE CLAIMS</u></h1>
+<p><u>CLAIM LISTING</u>This listing of claims will replace all prior versions and listings of claims in the application:</p><br>
+<br>
+1.    (Previously presented) A method of monitoring a user's breathing, the method comprising:passively monitoring the user's breathing with a device during a predetermined time interval generating sensor-generated signals, wherein the sensor-generated signals include acoustic signals comprising audio and motion signals;<br>
+detecting a plurality of phases of the user's breathing by processing solely the audio of the acoustic signals using a machine learning model;<br>
+wherein the machine learning model is trained as a student model in a teacher-student architecture including a teacher model configured to teach the machine learning model by generating labels for received motion training data corresponding to human breathing, wherein the machine learning model uses the labels during a training process to learn to classify training audio corresponding to the human breathing into the plurality of phases, and wherein the training audio is time aligned with the motion training data;<br>
+identifying a breathing mode of the user's breathing and detecting that the breathing mode is a particular trigger mode selected from a plurality of detectable trigger modes including shallow breathing and mouth breathing by processing data created from the sensor-generated signals and the plurality of phases of the user's breathing using a further machine learning model trained, at least in part, to distinguish between shallow breathing and mouth breathing; and<br>
+responsive to detecting the trigger mode, providing to the user via the device real time biofeedback specifying a breathing exercise adapted to the particular trigger mode.<br>
+<br>
+2.    (Canceled).<br>
+<br>
+3.    (Previously presented) The method of claim 1, wherein the trigger mode is mouth breathing and the biofeedback directs the user to close a mouth of the user and breathe through a nose of the user.<br>
+<br>
+<br>
+<br>
+4.
+(Previously presented) The method of claim 1, wherein the trigger mode is shallow breathing and the biofeedback directs the user to breathe deeply.<br>
+<br>
+5.    (Previously presented) The method of claim 1, comprising:identifying a social context corresponding to the user in which the user is engaged in a conversation based on detection of human voices; and<br>
+in response to the identifying the social context, delaying the providing of the biofeedback to the user.<br>
+<br>
+6.    (Original) The method of claim 1, comprising:capturing with the device a series of sensor-generated acoustic signals during the predetermined time interval; and<br>
+discarding one or more of the series of sensor-generated acoustic signals that are each identified as an unreliable signal;<br>
+wherein the identifying is based on a comparison of multiple phases of the user's breathing.<br>
+<br>
+7.    (Previously presented) The method of claim 1, comprising:providing the biofeedback to the user via the device based on the plurality of phases of the user's breathing as the user performs the breathing exercise.<br>
+<br>
+8.    (Previously presented) The method of claim 1, comprising:identifying a breathing pattern of the user based on the plurality of phases of the user's breathing;<br>
+comparing the breathing pattern identified with a target pattern specified in response to user input to the device; and<br>
+generating an instruction based on the comparing and conveying the instruction to the user with the device.<br>
+<br>
+9.    (Previously presented) The method of claim 1, comprising:<br>
+<br>
+<br>
+identifying a breathing pattern of the user based on the plurality of phases of the user's breathing;<br>
+detecting in real time a corresponding physiological condition of the user; and<br>
+generating an instruction, based on the breathing pattern and corresponding physiological condition, and conveying the instruction to the user with the device.<br>
+<br>
+10.   (Previously presented) A system, comprising:a processor configured to initiate operations including:<br>
+passively monitoring a user's breathing with a device during a predetermined time interval generating sensor-generated signals, wherein the sensor-generated signals include acoustic signals comprising audio and motion signals;<br>
+detecting a plurality of phases of the user's breathing by processing solely the audio of the acoustic signals using a machine learning model;<br>
+wherein the machine learning model is trained as a student model in a teacher- student architecture including a teacher model configured to teach the machine learning model by generating labels for received motion training data corresponding to human breathing, wherein the machine learning model uses the labels during a training process to learn to classify training audio corresponding to the human breathing into the plurality of phases, and wherein the training audio is time aligned with the motion training data;<br>
+identifying a breathing mode of the user's breathing and detecting that the breathing mode is a particular trigger mode selected from a plurality of detectable trigger modes including shallow breathing and mouth breathing by processing data created from the sensor-generated signals and the plurality of phases of the user's breathing using a further machine learning model trained, at least in part, to distinguish between shallow breathing and mouth breathing; and<br>
+responsive to detecting the trigger mode, providing to the user via the device real time biofeedback specifying a breathing exercise adapted to the particular trigger mode.<br>
+<br>
+11.   (Canceled).<br>
+<br>
+<br>
+<br>
+<br>
+12.   (Previously presented) The system of claim 10, wherein the trigger mode is mouth breathing and the biofeedback directs the user to close a mouth of the user and breathe through a nose of the user.<br>
+<br>
+13.   (Previously presented) The system of claim 10, wherein the trigger mode is shallow breathing and the biofeedback directs the user to breathe deeply.<br>
+<br>
+14.   (Previously presented) The system of claim 10, wherein the processor is configured to initiate further operations including:identifying a social context corresponding to the user in which the user is engaged in a conversation based on detection of human voices; and<br>
+in response to the identifying the social context, delaying the providing of the biofeedback.<br>
+<br>
+15.   (Original) The system of claim 10, wherein the processor is configured to initiate further operations including:capturing with the device a series of sensor-generated acoustic signals during the predetermined time interval; and<br>
+discarding one or more of the series of sensor-generated acoustic signals that are each identified as an unreliable signal;<br>
+wherein the identifying is based on a comparison of multiple phases of the user's breathing.<br>
+<br>
+16.   (Previously presented) The system of claim 10, wherein the processor is configured to initiate further operations including:providing biofeedback to the user via the device based on the plurality of phases of the user's breathing as the user performs the breathing exercise.<br>
+<br>
+17.   (Previously presented) The system of claim 10, wherein the processor is configured to initiate further operations including:identifying a breathing pattern of the user based on the plurality of phases of the user's breathing;<br>
+<br>
+<br>
+<br>
+comparing the breathing pattern identified with a target pattern specified in response to user input to the device; and<br>
+generating an instruction based on the comparing and conveying the instruction to the user with the device.<br>
+<br>
+18.   (Previously presented) The system of claim 10, wherein the processor is configured to initiate further operations including:identifying a breathing pattern of the user based on the plurality of phases of the user's breathing;<br>
+detecting in real time a corresponding physiological condition of the user; and<br>
+generating an instruction, based on the breathing pattern and corresponding physiological condition, and conveying the instruction to the user with the device.<br>
+<br>
+19-20. (Canceled).<br>
+<br>
+<br>
+21.   (Currently amended) A method of monitoring a user's breathing, the method comprising:training a first machine learning model as a student model in a teacher-student architecture to detect a plurality of breathing phases by:<br>
+generating labels corresponding to the plurality of breathing phases using a teacher model configured to operate on motion training data corresponding to human breathing;<br>
+teaching the first machine learning model to classify training audio into the plurality of breathing phases based on the labels from the teacher model, wherein the training audio corresponds to the human breathing and is time aligned with the motion training data;<br>
+passively monitoring a user's breathing by detecting audio with an acoustic sensor of a device; and<br>
+classifying breathing of the user into the plurality of breathing phases by processing <u>solely</u> the audio <u>detected by the acoustic sensor </u>using the first machine learning model as trained.<br>
+<br>
+22.   (Previously presented) The method of claim 21, further comprising:<br>
+<br>
+<br>
+identifying a breathing mode of the user's breathing by processing the plurality of breathing phases of the breathing of the user through a second machine learning model; and<br>
+in response to detecting that the breathing mode is a trigger mode, generating an instruction adapted to the trigger mode and conveying the instruction to the user via the device.<br>
+
+</body></html>

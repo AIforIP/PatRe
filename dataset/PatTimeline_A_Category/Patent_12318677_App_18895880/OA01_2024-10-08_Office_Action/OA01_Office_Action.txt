@@ -1,0 +1,49 @@
+PNG
+media_image1.png
+172
+172
+media_image1.png
+Greyscale
+United States Patent and Trademark Office
+Commissioner for Patents
+United States Patent and Trademark Office
+P.O. Box 1450
+Alexandria, VA 22313-1450
+www.uspto.gov
+In re Application of
+Fogleman et al.
+Application No. 18/895,880
+Filed: September 25, 2024
+For: METHODS, DEVICES, AND SYSTEMS FOR FACILITATING UMPIRES OFFICIATING A BASEBALL GAME
+:
+:
+:
+:	DECISION ON PETITION
+:
+:
+:
+This is a decision on the request to participate in the Patent Prosecution Highway (PPH) program and the petition under 37 CFR 1.102(a), filed September 25, 2024, to make the above-identified application special.
+The request and petition under 37 CFR 1.102(a) are GRANTED.
+DISCUSSION
+A grantable request to participate in the PPH pilot program and petition to make special require:
+1. The U.S. application for which participation in the Global/IP5 PPH pilot program is requested must have the same earliest date, whether this is the priority date or filing date, as that of a corresponding national or regional application filed with another Global/IP5 PPH participating office or a corresponding PCT international application for which one of the Global/IP5 PPH participating offices was the International Searching Authority (ISA) or the International Preliminary Examining Authority (IPEA);
+2.	Applicant must:
+a.	Ensure all the claims in the U.S. application must sufficiently correspond or be amended to sufficiently correspond to the allowable/patentable claim(s) in the corresponding Office of Earlier Examination (OEE) application and
+b.	Submit a claims correspondence table in English;
+3.   Examination on the merits of U.S. application has not begun;
+4.   Applicant must submit:
+a.   Documentation of prior office action:
+i.    a copy of the office action(s) just prior to the “Decision to Grant a Patent” from each of the Global/IP5 PPH participating office application(s) containing the allowable/patentable claim(s),
+ii.   if the allowable/patentable claim(s) are from a “Notification of Reasons for Refusal” then the Notification of Reasons for Refusal,
+iii.  if the Global/IP5 PPH participating office application is a first action allowance then no office action from the Global/IP5 PPH participating office is necessary should be indicated on the request/petition form, or
+iv.  the latest work product in the international phase of the OEE PCT application and
+b.   An English language translation of the Global/IP5 PPH participating office action or work product from (4)(a)(i)-(ii) or (iv) above; and
+5.   Applicant must submit:
+a.   An IDS listing the documents cited by the Global/IP5 PPH participating office examiner in the Global/IP5 PPH participating office action or work product (unless already submitted in this application) and
+b.   Copies of the documents except U.S. patents or U.S. patent application publications (unless already submitted in this application).
+There is no indication that the request and petition is signed by a registered patent attorney or patent agent of record.  However, in accordance with 37 CFR 1.34, the signature of Gregory M. Evans appearing on the correspondence shall constitute a representation to the United States Patent and Trademark Office that he or she is authorized to represent the particular party on whose behalf he or she acts.
+Applicant should note that the Office has attempted to electronically retrieve the latest work product from the Dossier Access System or the PATENTSCOPE. However, the attempts to obtain the documents electronically were unsuccessful. Therefore, the Office assumes that the Written Opinion of the International Searching Authority with a date of August 7, 2024, to be the relied upon OEE work product, as supplied by the applicant.
+The request to participate in the PPH pilot program and petition comply with the above requirements.  Accordingly, the above-identified application has been accorded “special” status.
+Telephone inquiries concerning this decision should be directed to Jamice Brantley whose telephone number is (571) 272-3814.  Information regarding the status of published or unpublished applications may be obtained from Patent Center at https://patentcenter.uspto.gov. Unpublished application information in Patent Center is available to registered users. All other inquiries concerning the examination of this application should be directed to the assigned Technology Center.
+/JAMICE T BRANTLEY/
+Jamice T BrantleyParalegal Specialist, Office of Petitions

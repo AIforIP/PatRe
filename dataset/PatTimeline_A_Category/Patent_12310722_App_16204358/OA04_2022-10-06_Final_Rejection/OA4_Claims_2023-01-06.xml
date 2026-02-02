@@ -1,0 +1,177 @@
+<html><head></head><body><h3>Date: 2023-01-06</h3>
+<p><u>AMENDMENTS TO THE CLAIMS</u> The following listing of claims replaces all previous listings and versions of claims in this application.</p>
+<br>
+
+<br>
+1. (Currently Amended) A method of <del>adjusting analyte sensor data</del> <u>determining a level of an analyte of a user using an analyte sensor</u>, comprising: 
+<br>
+storing, by processing circuitry, at least one parameter including a slope associated with a sensitivity of [[an]] <u>the</u> analyte sensor; 
+<br>
+collecting, by the processing circuity, sensor data from the analyte sensor when the analyte sensor is at least partially inserted into interstitial fluid of [[a]] <u>the</u> user, the sensor data including data indicative of [[a]] <u>the</u> level of [[an]] <u>the</u> analyte in the interstitial fluid; 
+<br>
+obtaining, by the processing circuitry, a shelf start time from an electronic memory communicatively coupled with the processing circuitry; 
+<br>
+determining, by the processing circuitry, a shelf duration of the analyte sensor based on the shelf start time; 
+<br>
+<u>determining, by the processing circuitry and based on the shelf duration, an adjustment function of a plurality of adjustment functions configured to adjust processing of the sensor data, wherein each adjustment function of the plurality of adjustment functions differs from other adjustment functions of the plurality of adjustment functions</u><u>;</u> 
+<br>
+adjusting, by the processing circuitry, processing of the sensor data <u>using the determined adjustment function</u> to compensate for the shelf duration, the adjusting comprising adjusting the slope associated with the sensitivity of the analyte sensor; 
+<br>
+determining, by the processing circuitry, the level of the analyte of the user from the sensor data using the adjusted slope; and 
+
+  outputting the determined level of the analyte to a display.
+
+<br>
+
+<br>
+2. (Cancelled)
+
+<br>
+
+<br>
+3. (Cancelled)
+
+<br>
+
+<br>
+4. (Previously Presented) The method of claim 1, wherein the shelf duration is representative of a period of time after the analyte sensor was manufactured and before the analyte sensor was inserted into the interstitial fluid of the user.
+
+<br>
+
+<br>
+5. (Previously Presented) The method of claim 1, wherein the shelf duration includes the entire time the analyte sensor was in a packaged state prior to insertion into the interstitial fluid of the user.
+
+<br>
+
+<br>
+6. (Previously Presented) The method of claim 5, wherein a wait period is implemented such that the shelf duration is representative of a time period less than the entire time the analyte sensor was in a packaged state prior to insertion into the interstitial fluid of the user.
+
+<br>
+
+<br>
+7. (Previously Presented) The method of claim 1, wherein the determined level of the analyte is different from the collected sensor data.
+
+<br>
+
+8. (Currently Amended) The method of <u>claim</u> <u>1</u> <del>claim</del> <del>3</del>, wherein the at least one parameter further comprises an intercept, and wherein adjusting, by processing circuitry, 
+  processing of the sensor data to compensate for the shelf duration further comprises adjusting the intercept.
+
+<br>
+
+<br>
+9. (Cancelled)
+
+<br>
+
+<br>
+10. (Previously Presented) The method of claim 1, further comprising collecting temperature data representative of a plurality of temperatures to which the analyte sensor was subjected during the shelf duration.
+
+<br>
+
+<br>
+11. (Original) The method of claim 10, further comprising adjusting, with processing circuitry, the sensor data to compensate for the shelf duration and the plurality of temperatures.
+
+<br>
+
+<br>
+12. (Previously Presented) The method of claim 1, further comprising determining a wear duration with processing circuitry, and adjusting, by the processing circuitry, processing of the sensor data to compensate for the wear duration.
+
+<br>
+
+<br>
+13. (Previously Presented) The method of claim 12, wherein the wear duration is representative of a period of time during which the analyte sensor is at least partially inserted into the interstitial fluid of the user.
+
+<br>
+
+<br>
+14. (Previously Presented) The method of claim 12, wherein the wear duration begins upon insertion of the analyte sensor into the interstitial fluid of the user.
+<br>
+
+<br>
+15. (Cancelled)
+
+<br>
+
+<br>
+16. (Previously Presented) The method of claim 1, wherein a sensor control device comprises the analyte sensor and sensor electronics, and wherein the shelf duration ends upon activation of the sensor control device.
+
+<br>
+
+<br>
+17-22. (Cancelled)
+
+1821
+<br>
+<br>
+
+<br>
+23. (Currently Amended) The method of claim 1, wherein <u>the determined adjustment function comprises</u><del> adjusting</del>, <del>with processing circuitry</del>, <del>the sensor data to compensate for the shelf duration comprises:</del> 
+<br>
+<del>adjusting</del>, <del>with processing circuitry</del>, <del>the sensor data with</del> a continuous function comprising an adjustment parameter and a value representative of time. 
+
+<br>
+
+<br>
+24. (Canceled).
+
+<br>
+
+<br>
+25. (Previously Presented) The method of claim 23, wherein the adjustment parameter corresponds to a code selected from one of a plurality of codes, the method further comprising: 
+<br>
+communicating the code from a sensor control device to a reader device; 
+<br>
+decoding, with processing circuitry of the reader device, the code to determine the adjustment parameter; and 
+
+  adjusting, with processing circuitry of the reader device, the sensor data with the continuous function comprising the adjustment parameter and the value representative of time.
+
+<br>
+
+<br>
+26. (Previously Presented) The method of claim 23, wherein the value representative of time is representative of the shelf duration.
+
+<br>
+
+<br>
+27. (Previously Presented) The method of claim 23, wherein the value representative of time is representative of the shelf duration less a wait period.
+
+<br>
+
+<br>
+28. (Previously Presented) The method of claim 23, wherein the adjustment factor is stored in the electronic memory in an unencoded form, the method further comprising: 
+<br>
+adjusting, with processing circuitry, the sensor data without decoding the adjustment factor. 
+
+<br>
+
+<br>
+29-73. (Cancelled)
+
+3072
+<br>
+<br>
+
+<br>
+74.   (Previously Presented) The method of claim 1, wherein the shelf start time is recorded to the electronic memory during or upon completion of manufacture of the analyte sensor.
+
+<br>
+
+75.   (Previously Presented) The method of claim 1, wherein the shelf start time corresponds to a start time of a timer initiated by processing circuitry during or upon completion 
+  of manufacture of the analyte sensor, wherein the timer is incremented at regular intervals until a shelf stop time.
+
+<br>
+
+<br>
+76. (New) The method of claim 8, wherein the plurality of adjustment functions is a first plurality of adjustment functions for adjusting the slope associated with the sensitivity of the analyte sensor, and wherein the determined adjustment function is a first adjustment function, the method further comprising: 
+<br>
+determining, by the processing circuitry and based on the shelf duration, a second adjustment function of a second plurality of adjustment functions for adjusting the intercept; and 
+<br>
+determining, by the processing circuitry, the level of the analyte of the user from the sensor data using the adjusted intercept. 
+<br>
+2
+3
+4
+5
+6
+7
+</body></html>

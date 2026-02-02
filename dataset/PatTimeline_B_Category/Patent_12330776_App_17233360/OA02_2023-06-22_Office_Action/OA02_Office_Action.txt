@@ -1,0 +1,55 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Election/Restrictions
+Applicant’s election without traverse of Species A (claims 1-9, Figs 3-7E) in the reply filed on 02/28/2023 is acknowledged.
+Claim Rejections - 35 USC § 102
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claim(s) 1-3 and 5-6 is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by EP 2357356 to Katz (see machine translation in file wrapper).
+(a) Regarding claim 1:
+(i) Katz discloses a tunable mass damper assembly (mass actuator 4, Fig 8) attachable to a rotor blade (1), the tunable mass damper assembly comprising:
+a base configured to be attached to the rotor blade (whichever structure arm 25 and joint 26 are attached to, Fig 8); and
+a pendulum mass structure (mass 6, arm 25, Fig 8) movably attached to the base (via arm 25, Fig 8) and configured to move relative to the base in accordance with a rotational speed of the rotor blade about a rotor axis (positions 12-14, Fig 8; relative to rotational speed, Pars 0013/0015),
+the pendulum mass structure being configured to reduce vibratory forces of the rotor blade induced by a rotation of the rotor blade about the rotor axis (Par 0013), and
+an entirety of the pendulum mass structure being configured to be contained within and enclosed by the rotor blade (Fig 8).
+(b) Regarding claim 2:
+(i) Katz further discloses wherein an entirety of the base is configured to be positioned within and completely enclosed by the rotor blade (Fig 8).
+(c) Regarding claim 3:
+(i) Katz further discloses wherein the pendulum mass structure comprises a pendulum mass (mass 6) and at least one pendulum arm (arm 25), wherein a first arm end of the pendulum arm is attached to the base (arm 25 attached to base at joint 26, Fig 8) and a second arm end of the pendulum arm is attached to the pendulum mass (Fig 8).
+(d) Regarding claim 5:
+(i) Katz further discloses wherein the pendulum mass structure is configured to be positioned along and move substantially perpendicular to a feathering axis of the rotor blade (mass moves towards/from upper and lower lateral surfaces 2/3, Fig 8).
+(e) Regarding claim 6:
+(i) Katz further discloses wherein the base is configured to be rigidly secured to the rotor blade (“cohesive”, i.e. integral, jointed or firmly clamped; Par 0055).
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim(s) 4 is/are rejected under 35 U.S.C. 103 as being unpatentable over EP 2357356 to Katz (see machine translation in file wrapper) in view of US 5639214 to Guimbal.
+(a) Regarding claim 4:
+(i) Katz further discloses wherein the at least one pendulum arm is rotatably attached to the base (rotates about pivot 26, Fig 8).
+(ii) Katz does not disclose wherein the at least one pendulum arm is rotatably attached to the mass.
+(iii) Guimbal is also in the field of damping (see title) and teaches:
+a tunable mass damper assembly (branches 215, spacer member 226, pendulous member 220; Fig 6);
+the tunable mass damper assembly comprising a base (branches 215), a pendulum arm (spacer member 226), and a mass (pendulous member 220),
+wherein the pendulum arm is rotatably attached to both the mass and the base (Fig 6).
+(iv) It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified the at least one pendulum arm as disclosed by Katz to be rotatably attached to the mass for the purpose of creating a double pendulum thereby avoiding the inertia of the at least one pendulum arm limiting the natural frequencies at which vibrations can be damped and allowing greater freedom in the choice of connecting structure of the at least one pendulum arm (Col 1 Lns 55-62).
+Claim(s) 7-9 is/are rejected under 35 U.S.C. 103 as being unpatentable over EP 2357356 to Katz (see machine translation in file wrapper).
+(a) Regarding claim 7:
+(i) Katz does not explicitly disclose wherein the base is configured to be movably secured to the rotor blade such that the base and the pendulum mass structure do not rotate with the rotor blade when the rotor blade rotates about a feathering axis to change a pitch angle.
+(ii) The Applicant has not disclosed any criticality nor any new or unexpected results from having the base movably secured as claimed and the mass damper assembly of Katz would operate equally well whether the base is rigidly or movably secured as claimed.
+(iii) It would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified the base as disclosed by Katz to be movably secured as claimed as an obvious matter of design choice.
+(b) Regarding claims 8-9:
+(i) Katz further discloses wherein the tunable mass damper assembly is configured to be positioned within a rotor blade (Fig 8).
+(ii) Katz does not disclose wherein the rotor blade is part of a coaxial rotor system; nor wherein the rotor blade is part of a rigid rotor system.
+(iii) It has been held that apparatus claims cover what a device is, not what a device does (Hewlett-Packard Co.v.Bausch & Lomb Inc., 909 F.2d 1464, 1469, 15 USPQ2d 1525, 1528 [Fed. Cir. 1990]).  Further, a claim containing a recitation with respect to the manner in which a claimed apparatus is intended to be employed does not differentiate the claimed apparatus from a prior art apparatus if the prior art apparatus teaches all the structural limitations of the claim. (Ex parte Masham, 2 USPQ2d 1647 [Bd. Pat. App. & Inter. 1987]).
+(iii) Katz discloses all structural limitations of the claim and is fully capable of fulfilling the intended use as claimed.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure. US 2426130 to Wald teaches a pendular tunable mass damper assembly (30, Figs 4-6) located entirely within a rotor blade (Figs 2-3). US 10830067 to Kray teaches a pendular tunable mass damper assembly (arm 176, mass 174, Fig 6) located entirely within a rotor blade (Fig 6). US 8899928 to Girard teaches a tunable mass damper assembly comprising two parallel arms (42/43, Fig 2) rotatably coupled to a mass (30, Fig 2) which not only allows the mass to rotate about a connection axis (AX1, Fig 2) but to have the mass rotation plane remain parallel when the mass is shifted to different axial locations along a rotation axis (AX, Fig 2).  US 20010048875 to Cardin teaches a tunable mass damper assembly (pendulum 5) comprising a mass having an elongated aerodynamic shape  (11, Figs 7-9), with the mass rotatably connected to an arm (17, Fig 10) allowing for variable centers of the mass (Fig 10). US 7470114 to Bonnet teaches a tunable mass damper assembly (arm 46/44, mass 42) located entirely within a rotor blade (Figs 1-3).
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to JUSTIN A PRUITT whose telephone number is (571)272-8383. The examiner can normally be reached T-F 8:30am - 6:30pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Woody Lee can be reached on (571) 272-1051. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/JUSTIN A PRUITT/Examiner, Art Unit 3745
+/WOODY A LEE JR/Supervisory Patent Examiner, Art Unit 3745

@@ -1,0 +1,74 @@
+<html><head></head><body><h3>Date: 2023-12-14</h3>
+
+<h1>CLAIMS</h1>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.   A system for monitoring pressure in a subject, comprising:an elongated instrument configured to be placed within the subject, having an elongated wall extending a distance from a first terminal end to a second terminal end and forming a lumen along at least a portion of the distance, the elongated instrument further including a passage into the lumen through the first terminal end, wherein the elongated wall includes a maximum cross- sectional dimension;<br>
+a plurality of portals formed though the elongated wall configured to allow a fluid to flow into the lumen from an external environment;<br>
+a pressure sensor integrated with the elongated instrument configured to measure a pressure within the external environment near the plurality of portals and transmit a pressure signal based on the measurement of the pressure, wherein the pressure sensor does not increase the maximum cross-sectional dimension greater than about 20%; and<br>
+a monitoring system configured to receive the pressure signals and provide an output to a user based on the received pressure signals.<br>
+<br>
+2.   The system of Claim 1, wherein the pressure sensor is formed as a composite of insulating, conductive, and elastic thin films on a surface of the elongated wall.<br>
+<br>
+<br>
+3.   The system of Claim 1, further comprising:an antenna coupled to the pressure sensor;<br>
+wherein the antenna is configured to wirelessly transmit the pressure signal.<br>
+<br>
+4.   The system of Claim 3, wherein the antenna is configured to inductively coupled to provide power to the pressure sensor for selectively measuring the pressure;wherein the pressure sensor measures the pressure during a period that the pressure sensor is inductively powered.<br>
+<br>
+5.   The system of Claim 3, further comprising:a battery to at least power the pressure sensor to measure the pressure and transmit the pressure signal.<br>
+<br>
+6.   The system of Claim 1, wherein the output to the user from the monitoring system includes an alarm when the pressure signal is beyond a threshold.<br>
+<br>
+7.   The system of Claim 1, further comprising:a tracking device associated with the elongated instrument;<br>
+a tracking system configured to track the tracking device;<br>
+<br>
+<br>
+a navigation system configured to determine at least one of a position or orientation of the elongated instrument relative to the subject when placing the elongated instrument within the subject.<br>
+<br>
+8.   The system of Claim 7, further comprising:a display device configured to display an image of the subject and an icon that represents an outline of the elongated instrument superimposed on the image of the subject;<br>
+wherein the navigation system includes the tracking system; and<br>
+wherein the navigation system is configured to superimpose the icon on the image of the subject based on the determined position of the elongated instrument relative to the subject.<br>
+<br>
+9.   The system of Claim 7, further comprising:a display device configured to display an image of the subject and an icon that represents an outline of the elongated instrument superimposed on the image of the subject;<br>
+wherein the navigation system is configured to receive the pressure signal from the pressure sensor; and<br>
+wherein the navigation system is configured to superimpose the icon on the image of the subject based on the determined position of the elongated instrument relative to the subject and the received pressure signal.<br>
+<br>
+<br>
+10.  A method of monitoring a pressure at a position in a subject, comprising:providing an elongated instrument having a lumen formed therein;<br>
+providing a portal into the lumen from an exterior of the elongated instrument;<br>
+providing a pressure sensor near the provided portal to measure a pressure near the provided portal and wirelessly transmit a pressure signal;<br>
+providing a transceiver configured to be positioned near, but exterior to the subject, to receive the pressure signal from the provided pressure sensor;<br>
+comparing the received  pressure signal overtime  to  a predetermined pressure value.<br>
+<br>
+11.  The method of Claim 10, further comprising:emitting an alarm when the received pressure signal is different than the predetermined pressure value.<br>
+<br>
+12.  The method of Claim 10, further comprising:forming the provided pressure sensor as a composite of thin films on a surface of the provided elongated instrument.<br>
+<br>
+13.  The method of Claim 10, further comprising:<br>
+<br>
+fixing the provided pressure sensor to an exterior of the elongated instrument.<br>
+<br>
+14.  The method of Claim 10, further comprising:illustrating a graphical display of a plurality of the monitored received pressure signals.<br>
+<br>
+15.  The method of Claim 14, further comprising:tracking the elongated instrument as it is placed within the subject;<br>
+wherein the elongated instrument is placed at least partially within a ventricle of the subject.<br>
+<br>
+16.  The method of Claim 15, further comprising:providing a passage of a fluid into the lumen through the provided portal;<br>
+wherein the provided passage is configured to drain fluid from the lateral ventricle.<br>
+<br>
+17.  The method of Claim 16, further comprising:providing an alarm to a user when a pressure sensed with the provided sensor is beyond a threshold difference from the predetermined pressure value and prior to a patient perception of increased pressure.<br>
+<br>
+<br>
+18.  The method of Claim 10, wherein providing the pressure sensor near the provided portal includes providing the pressure sensor to increase a maximum cross-dimensional distance less than about 0.1 millimeters.<br>
+<br>
+19.  A method of monitoring a pressure at a position in a subject, comprising:positioning an elongated instrument having a lumen therein and a passage into the lumen from an exterior of the elongated instrument formed, wherein the portal is placed at the position in the subject, wherein the portal and the lumen are configured to allow flow of a fluid from the position to a drainage volume;<br>
+positioning a transceiver near, but exterior, to the subject, to receive a pressure signal from a pressure sensor provided with the positioned elongated instrument to measure a pressure near the portal at the position;<br>
+monitoring the received pressure signal over time with a monitoring system; and<br>
+receiving an output from the monitoring system regarding a comparison of the monitored received pressure signal to a predetermined pressure value.<br>
+<br>
+20.  The method of Claim 19, further comprising:receiving the pressure signal wirelessly from the pressure sensor.<br>
+
+</body></html>

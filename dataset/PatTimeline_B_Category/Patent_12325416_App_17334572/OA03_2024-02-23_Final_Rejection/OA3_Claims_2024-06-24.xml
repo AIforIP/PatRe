@@ -1,0 +1,64 @@
+<html><head></head><body><h3>Date: 2024-06-24</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>This listing of claims reflects all claim amendments and replaces all prior versions, and listings, of claims in the application. Material to be inserted is in <u>bold and underline,</u> and material to be deleted is in <del>strikeout </del>or in [[double brackets]] if the deletion would be difficult to see.</p>
+<h1>LISTING OF CLAIMS:</h1>
+<br>
+<br>
+1.    (Currently amended) A system, comprising:<u>an input;</u><br>
+<u>an output;</u><br>
+a first software component for use in configuring operation of a second software component via a proxy and stub interface;<br>
+<u>a non-transitory memory component comprising:</u>a first memory space comprising the first software component, a proxy software component and an activity monitor software component;<u></u><u>and</u><br>
+a second memory space comprising the second software component and a stub software component; and<br>
+at least one processor for executing software components stored on the first and second memory spaces,<br>
+wherein the activity monitor software component is arranged when executed to:<br>
+<u>cause the input to </u>monitor a first event associated with the first software component;<br>
+<u>cause the input to </u>monitor a second event associated with the proxy software component, wherein the second event includes a command event at the proxy software component;<br>
+<br>
+Docket No. JLR213134PCTUSCON1 assess compliance of the first and second events with a schedule of events,<br>
+wherein assessing compliance includes checking order and/or timing of the first and second events; and<u>cause the output to generate</u> an error message in response to assessed non-compliance with the schedule of events.<br>
+2.
+(Original) The system of claim 1, wherein the schedule of events includes timing and/or order of the events.<br>
+<br>
+3.    (Original) The system of claim 1, further comprising a data store partitioned into the first memory space and the second memory space.<br>
+4.
+(Original) The system of claim 1, further comprising a first data store comprising the first memory space and a second data store comprising the second memory space.<br>
+<br>
+5.    (Original) The system of claim 1, wherein the system is a vehicle system.<br>
+<br>
+6.    (Original) The system  of claim  5, wherein the vehicle system  is a cruise control system.<br>
+7.
+(Original) The system  of claim  5, wherein the second software component comprises a drivetrain component.<br>
+<br>
+<br>
+<br>
+8.    (Original) The system of claim 1, wherein the first software component comprises a logic component arranged to generate a command event to control the second software component based on an input event.<br>
+<br>
+9.    (Original) The system of claim 8, wherein the input event comprises a sensor reading obtained from a sensor component.<br>
+<br>
+10.   (Currently amended) The system of claim 9, wherein the sensor component is a <u>wheel </u>speed sensor component.<br>
+<br>
+11.   (Original) The system of claim 9, wherein the input event is obtained in response to a polling event initiated by the logic component.<br>
+<br>
+12.   (Currently amended) The system of claim 11, wherein the <u>fi</u><u>rst </u>event associated with the first software component is selected from a list including the input event, the polling event, and the command event.<br>
+<br>
+13.   (Original) The system of claim 1, further comprising a troubleshooting component arranged to treat an error in response to receiving the error message.<br>
+<br>
+14.   (Original) A vehicle comprising the system of claim 4.<br>
+<br>
+15.   (Previously presented) The system of claim  1, wherein the proxy software component is arranged to marshal the command event and route the command event to a corresponding stub on the second memory space.<br>
+Application Filing Date: May 28, 2021<br>
+<br>
+<br>
+16.   (Currently amended) The system of claim 15, wherein the <u>corresponding </u>stub is arranged to route the command event to a powertrain component.<br>
+<br>
+17.   (Previously presented) The system of claim 15, wherein the powertrain component is an engine control unit, and further wherein any torque demands received are used to configure a motor to output a desired output torque.<br>
+<br>
+18.   (Previously presented) The system of claim  1, wherein the proxy software component is arranged to marshal additional command events and route each command event to a target location on another memory space.<br>
+<br>
+19.   (Previously presented) The system of claim  1, wherein the activity monitor software component is arranged to monitor polling events and comparison events.<br>
+<br>
+20.   (Previously presented) The system of claim  19, wherein the assessed non- compliance includes a determination that one of the polling events occurred after one of the comparison events.<br>
+<br>
+
+</body></html>

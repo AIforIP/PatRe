@@ -1,0 +1,291 @@
+<html><head></head><body><h3>Date: 2021-05-21</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+<br>
+1.   A method for imaging tissue, the method comprising: 
+<br>
+focusing a beam of light to a focus point; 
+<br>
+raster scanning the location of the focus point across a field of view in a vertical plane extending generally perpendicular to a surface of the tissue and collecting and detecting light returning from the focus point to provide a first xz plane image; 
+<br>
+scanning the location of the focus point in a y-direction transverse to the vertical plane to obtain a sequence of additional xz plane images corresponding to vertical planes parallel to and spaced apart in a y-direction from the vertical plane, the first xz plane image and the additional xz plane images constituting a set of xz plane images; and 
+<br>
+processing the set of xz plane images to provide volumetric image data for the tissue. 
+
+<br>
+
+<br>
+2.   The method according to claim 1 wherein focusing the beam of light comprises passing the light through an objective and raster scanning the location of the focus point comprises optically scanning the beam in an x direction in coordination with scanning the objective relative to the tissue along a z axis which is generally perpendicular to the x direction and to the surface of the tissue.
+<br>
+
+<br>
+3.   The method according to claim 1 or 2 wherein scanning the location of the focus point in the y direction comprises holding the objective fixed in the y direction while moving the tissue in the y direction.
+<br>
+
+<br>
+4.   The method according to claim 3 wherein a range of the scanning in the y direction is at least three times larger than a range of the scanning in the x direction.
+<br>
+
+<br>
+5.   The method according to claim 3 or 4 wherein a range of the scanning in the y direction is greater than 1 mm.
+<br>
+
+<br>
+6.   The method according to any of claims 3 to 5 wherein moving the tissue in the y direction comprises operating a linear motion stage coupled between the objective and a member adhered to a surface of the tissue.
+<br>
+
+<br>
+7.   The method according to any one of claims 2 to 6 wherein processing the set of xz plane image frames comprises performing distortion compensation, the distortion compensation comprising monitoring an output of a z-axis position sensor to determine an actual trajectory of the objective during the scanning along the z axis and shifting pixels of the xz image according to the actual trajectory.
+<br>
+
+<br>
+8.   The method according to claim 7 wherein the scanning along the z axis is bidirectional, and the xz plane images include first xz plane images acquired while scanning the objective in a first direction along the z axis and second xz plane images acquired while scanning the objective in a second direction opposed to the first direction along the z axis.
+<br>
+
+<br>
+9.   The method according to claim 8 comprising monitoring the output of the z- axis position sensor to determine a first actual trajectory of the objective during the scanning along the z axis in the first direction and a second actual trajectory of the objective during the scanning along the z axis in the second direction and shifting the positions of the pixels of the first xz plane images in the z direction based on the first actual trajectory and shifting the pixels of the second xz plane images in the z direction based on the second actual trajectory.
+<br>
+
+<br>
+10.  The method according to any one of claims 1 to 9 wherein processing the set of xz plane image frames comprises performing motion compensation, the motion compensation comprising processing the xz plane images to determine representative z-axis locations of the tissue surface in each of the xz plane images and shifting the pixels of the xz plane images based on the representative z-axis locations.
+<br>
+
+11.  The method according to claim 10 wherein shifting the pixels of the xz plane 
+ images based on the representative z-axis locations comprises determining differences between the representative z-axis locations for adjacent ones of a sequence of the xz plane images, for each of the xz plane images in the sequence calculating a cumulative difference of the representative z-axis locations relative to a selected one of the xz plane images and shifting the pixels of each of the xz plane images in the sequence by the corresponding cumulative difference.
+<br>
+
+<br>
+12.  The method according to any of claims 10 and 11 wherein the representative z-axis location for each of the xz plane images comprises a position of the tissue surface along the z axis averaged across the xz plane image.
+<br>
+
+<br>
+13.  The method according to any of claims 10 to 12 wherein the first xz plane image and the additional xz plane images constitute a first set of xz plane images for a first imaging modality and the method comprises acquiring one or more additional sets of xz plane images, each of the additional sets of xz plane images for a corresponding additional imaging modality and co-registered with the first set of xz plane images and the method comprises shifting the pixels of the xz plane images of the additional sets of xz plane images based on the representative z-axis locations determined for the first set of xz plane images.
+<br>
+
+<br>
+14.  The method according to claim 13 wherein the first imaging modality is RCM.
+<br>
+
+<br>
+15.  The method according to claim 13 or 14 wherein the additional imaging modality for one of the additional sets of xz plane images is one of TPF, SHG, THG, CARS and SRS.
+<br>
+
+<br>
+16.  The method according to any of claims 1 to 12 wherein processing the set of xz plane image frames comprises performing surface flatting.
+<br>
+
+<br>
+17.  The method according to claim 16 wherein the surface flatting comprises processing the xz plane images to yield a 3D profile of the tissue surface; 
+<br>
+smoothing the 3D profile of the tissue surface; 
+
+ determining offsets corresponding to columns in the xz plane images that extend parallel to the z axis based on the smoothed 3D profile of the tissue surface; and 
+<br>
+applying the offsets to the xz plane images. 
+
+<br>
+
+<br>
+18.  The method according to any of claims 16 to 17 wherein the first xz plane image and the additional xz plane images constitute a first set of xz plane images for a first imaging modality and the method comprises acquiring one or more additional sets of xz plane images, each of the additional sets of xz plane images for a corresponding additional imaging modality and co-registered with the first set of xz plane images and the method comprises applying the offsets to the xz plane images of the additional sets of xz plane images.
+<br>
+
+<br>
+19.  The method according to claim 18 wherein the first imaging modality is RCM.
+<br>
+
+<br>
+20.  The method according to claim 18 or 19 wherein the additional imaging modality for one of the additional sets of xz plane images is one of TPF, SHG, THG, CARS and SRS.
+<br>
+
+<br>
+21.  The method according to any one of claims 1 to 20 wherein collecting and detecting light returning from the focus point comprises splitting the collected light into a plurality of wavelength ranges and separately detecting the portion of the collected light in each of the wavelength ranges.
+<br>
+
+<br>
+22.  The method according to claim 21 wherein collecting and detecting the light returning from the focus point comprises: 
+<br>
+descanning and directing light having a wavelength that is the same as a wavelength of the beam of light to a first light detector; and 
+<br>
+directing light having a wavelength that is shorter than a wavelength of the beam of light to a second light detector. 
+
+<br>
+
+<br>
+23.  The method according to claim 21 wherein collecting and detecting the light returning from the focus point comprises: 
+<br>
+by a first wavelength selective element, redirecting a portion of the 
+
+ returning light having a wavelength that is shorter than a wavelength of the beam of light to a second wavelength selective element; 
+<br>
+descanning and directing the remaining returning light to a first light detector; and 
+<br>
+by the second wavelength selective element splitting the portion of the returning light into first and second parts; and directing the first part to a second light detector and directing the second part to a third light detector. 
+
+<br>
+
+<br>
+24.  The method according to any of claims 1 to 23 wherein the beam of light comprises a femtosecond laser beam having a wavelength in the red or infrared.
+<br>
+
+<br>
+25.  The method according to claim 24 wherein the wavelength is in the range of 400nm to 2300 nm.
+<br>
+
+<br>
+26.  The method according to claim 24 wherein the wavelength is in the range of 700nm to 1000 nm.
+<br>
+
+<br>
+27.  The method according to any one of claims 1 to 26 comprising separating and detecting a plurality of components of the light returning from the focus point using a plurality of different light detectors and processing output signals from the plurality of light detectors to provide a plurality of co-registered images according to plural imaging modalities.
+<br>
+
+<br>
+28.  The method according to claim 27 wherein the plural imaging modalities comprise two or more selected from RCM, TPF, SHG, THG, CARS and SRS.
+<br>
+
+<br>
+29.  The method according to any one of claims 1 to 28 comprising operating a frame grabber in coordination with the raster scanning the location of the focus point to assemble each of the xz plane images as a frame.
+<br>
+
+30.  The method according to any one of claims 1 to 29 comprising dividing the set of xz plane images into a sequence of groups of N sequential ones of the xz plane images, combining the N sequential ones of the xz plane images in each 
+ of the groups to yield a combined xz plane image and performing the processing on the combined xz plane images.
+<br>
+
+<br>
+31.  The method according to claim 30 wherein combining the N sequential ones of the xz plane images in each of the groups comprises averaging the N sequential ones of the xz plane images in each of the groups.
+<br>
+
+<br>
+32.  Apparatus for imaging tissue, the apparatus comprising: 
+<br>
+a laser light source operative to emit a beam of light; 
+<br>
+an objective arranged to receive and focus the beam of light to a focus point; 
+<br>
+a scanner unit in an optical path between the laser light source and the objective, the scanner unit operative to redirect the beam of light and thereby cause the focus point to scan in an x direction; 
+<br>
+a z-axis scanner operative to move the objective in a z direction parallel to an optical axis of the objective, a first light detector arranged to receive light returning through the objective from the focus point and to generate an output signal representing an intensity of the light returning, a tissue stabilizing mechanism coupled to the objective by way of a movable stage operative to move tissue relative to the objective in a y direction that is transverse relative to the x direction, a controller configured to generate coordinated driving signals for the scanner unit and the z-axis scanner to cause the focus point to be raster scanned in an xz plane and control signals for the movable stage to cause the focus point to be scanned in the y direction, a frame grabber operative to monitor the output signal in coordination with the raster scanning of the focus point to build a first series of xz image frames, and 
+<br>
+a data processor connected to receive the xz image frames and configured to process the xz image frames to provide volumetric image data for a volume scanned by the focus point. 
+
+<br>
+
+33.  The apparatus according to claim 32 wherein a range of the scanning in the y 
+ direction is larger by a factor of at least three than a range of the scanning in the x direction.
+<br>
+
+<br>
+34.  The apparatus according to claim 32 or 33 wherein a range of the scanning in the y direction is greater than 1 mm.
+<br>
+
+<br>
+35.  The apparatus according to claim 32 or 33 wherein a range of the scanning in the y direction is at least ±2 mm.
+<br>
+
+<br>
+36.  The apparatus according to any one of claims 32 to 35 comprising a first wavelength selective element in the optical path between the scanning unit and the objective, the first wavelength selective element arranged to redirect a portion of the returning light having a wavelength that is shorter than a wavelength of the beam of light out of the beam and a second light detector arranged to detect light from the portion of the returning light.
+<br>
+
+<br>
+37.  The apparatus according to claim 36 comprising: 
+<br>
+a second wavelength selective element arranged to receive the portion of the returning light redirected by the first wavelength selective element and to split the portion of the returning light into first and second parts; and 
+<br>
+a third light detector arranged to detect light of the third part wherein the second light detector is arranged to detect light of the second part. 
+
+<br>
+
+<br>
+38.  The apparatus according to claim 37 wherein an output of the third light detector is connected to the frame grabber and the frame grabber is configured to build a third series of xz image frames co-registered with the first series of xz image frames.
+<br>
+
+<br>
+39.  The apparatus according to any of claims 36 to 38 wherein an output of the second light detector is connected to the frame grabber and the frame grabber is configured to build a second series of xz image frames co-registered with the first series of xz image frames.
+<br>
+
+<br>
+40.  The apparatus according to any of claims 32 to 39 comprising a z-axis position sensor operative to output a signal indicative of a displacement of the objective in the z direction wherein the processing the set of xz plane image frames comprises performing distortion compensation, the distortion compensation comprising monitoring the output of the z-axis position sensor to determine an actual trajectory of the objective during the scanning along the z axis and shifting pixels of the xz image frames according to the actual trajectory.
+<br>
+
+<br>
+41.  The apparatus according to claim 40 wherein the scanning along the z axis is bidirectional, the xz plane image frames include first xz plane image frames acquired while scanning the objective in a first direction along the z axis and second xz plane image frames acquired while scanning the objective in a second direction opposed to the first direction along the z axis.
+<br>
+
+<br>
+42.  The apparatus according to claim 8 wherein the data processor is configured to monitor the output of the z-axis position sensor to determine a first actual trajectory of the objective during the scanning along the z axis in the first direction and a second actual trajectory of the objective during the scanning along the z axis in the second direction and to shift the positions of the pixels of the first xz plane image frames in the z direction based on the first actual trajectory and to shift the pixels of the second xz plane images in the z direction based on the second actual trajectory.
+<br>
+
+<br>
+43.  The apparatus according to any one of claims 32 to 42 wherein the data processor is configured to perform motion compensation, the motion compensation comprising processing the xz plane image frames to determine representative z-axis locations of a tissue surface in each of the xz plane images and to shift the pixels of the xz plane images based on the representative z-axis locations.
+<br>
+
+44.  The apparatus according to claim 43 wherein the data processor is configured to determine differences between the representative z-axis locations for adjacent ones of a sequence of the xz plane image frames, for each of the xz plane image frames in the sequence calculating a cumulative difference of the 
+ representative z-axis locations relative to a selected one of the xz plane images and shifting the pixels of each of the xz plane image frames in the sequence by the corresponding cumulative difference.
+<br>
+
+<br>
+45.  The apparatus according to claim 43 wherein the data processor is configured to divide the first series of xz image frames into a sequence of groups of N sequential ones of the xz plane images frames, combine the N sequential ones of the xz plane image frames in each of the groups to yield a combined xz plane image frame and perform the processing on the combined xz plane image frames.
+<br>
+
+<br>
+46.  The apparatus according to claim 45 wherein the data processor is configured to perform the combining of the N sequential ones of the xz plane image frames in each of the groups by averaging the N sequential ones of the xz plane image frames in each of the groups.
+<br>
+
+<br>
+47.  The apparatus according to any of claims 32 to 46 wherein the laser light source comprises a pulsed laser.
+<br>
+
+<br>
+48.  The apparatus according to claim 47 wherein the pulsed laser is a femtosecond laser.
+<br>
+
+<br>
+49.  The apparatus according to any of claims 47 to 48 wherein the beam has a wavelength in the range of 400nm to 2300 nm.
+<br>
+
+<br>
+50.  The apparatus of any of claims 47 to 48 wherein the beam has a wavelength in the range of 700nm to 1000 nm.
+<br>
+
+<br>
+51.  The apparatus according to any one of claims 32 to 49 configured to perform plural co-registered imaging modalities selected from RCM, TPF, SHG, THG, CARS and SRS.
+<br>
+
+<br>
+52.  A method for motion compensating image data, the method comprising: 
+<br>
+obtaining a sequence comprising plural vertical plane images of a 
+
+ tissue comprising a body surface, the plural vertical plane images each including a portion comprising a cross section of the body surface that extends across the vertical plane image; 
+<br>
+processing the vertical plane images to generate representative locations of the body surface in each of the vertical plane images; 
+<br>
+shifting pixels of the vertical plane images in a vertical direction based on the representative locations. 
+
+<br>
+
+<br>
+53.  The method according to claim 51 comprising computing differences between the representative locations for pairs of the vertical plane images that are adjacent in the sequence and summing the differences to determine cumulative differences between the representative location for a first one of the vertical plane images and the reference locations for a plurality of other ones of the vertical plane images.
+<br>
+
+<br>
+54.  Apparatus having any new and inventive feature, combination of features, or 
+<br>
+sub-combination of features as described herein. 
+
+<br>
+
+<br>
+55.  Methods having any new and inventive steps, acts, combination of steps and/or acts or sub-combination of steps and/or acts as described herein.
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+</body></html>

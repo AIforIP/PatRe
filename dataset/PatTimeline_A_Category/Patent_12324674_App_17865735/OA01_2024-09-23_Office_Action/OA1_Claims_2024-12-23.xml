@@ -1,0 +1,89 @@
+<html><head></head><body><h3>Date: 2024-12-23</h3>
+
+<h1><u>I</u><u>N THE CLAIMS</u></h1>
+<p>Please amend the claims as follows:</p><br>
+<br>
+1. (Currently Amended) A computer-implemented method for voxelizing a 3D structural medical image of a human's brain, each voxel being suitable for running a simulator of an electrical activity of a 3D volume of the human's brain being enclosed by the voxel, the method comprising:<br>
+obtaining a 3D structural medical image of the human's brain, the 3D structural medical image comprising a reference <u>frame, wherein the 3D structural image stems from acquisition by a medical ima</u><u>ging</u><u> device</u><u>;</u><br>
+generating a voxelized 3D structural medical image;<br>
+obtaining parameters of at least one EEG electrode sensor and, for each EEG electrode sensor:a localization in a reference frame of the voxelized 3D structural medical image, and a sensor detection distance;<br>
+obtaining a 3D grid of voxels, each voxel of the 3D grid joining a same finite number of voxels of the voxelized 3D structural medical image, the number of voxels of the 3D grid being smaller than the number of voxels of the voxelized 3D structural medical image; and<br>
+for each voxel of the 3D grid, iteratively subdividing the voxel while the distance between the voxel and localization of any electrode sensor is smaller than or equal to the sensor detection distance and while a size of the voxel is greater than a predetermined length, each subdivided voxel joining a finite number of voxels of the voxelized 3D structural medical image.<br>
+<br>
+<br>
+<br>
+2. (Original) The computer-implemented method of claim 1, wherein the iteratively subdividing further comprises:<br>
+computing for each voxel of the 3D grid a bounding sphere;<br>
+computing for each EEG electrode sensor, a sphere being centered at the EEG electrode sensor and a radius being equal to the sensor detection distance;<br>
+determining, for each computed bounding sphere, when the computed bounding sphere is intersecting with the computed spheres; and<br>
+for each voxel, subdividing the voxel when the respective computed bounding sphere is intersecting with one or more computed sphere while a size of the voxel is greater than the predetermined length, each subdivided voxel joining a finite number of voxels of the voxelized 3D structural medical image.<br>
+<br>
+3. (Original) The computer-implemented method of claim 1, wherein each voxel of the 3D grid having 2n voxels of the voxelized 3D structural medical image wherein n E N.<br>
+<br>
+4. (Original) The computer-implemented method according to claim 1, further comprising removing the voxels of the voxelized 3D structural medical image that are not enclosing a brain grey matter in the voxelized 3D structural medical image.<br>
+<br>
+5. (Original) The computer-implemented method of claim 4, further comprising, for each voxel of the 3D grid:<br>
+determining, among the voxels of the voxelized 3D structural medical image encompassed in the voxel of the 3D grid, when one or more voxels of the voxelized 3D structural medical image having no neighbor voxel of the voxelized 3D structural medical image, thereby each voxel forming a new volume added to the 3D grid;<br>
+<br>
+determining, among the voxels of the voxelized 3D structural medical image encompassed in the voxel of the 3D grid, whether at least two voxels of the voxelized 3D structural medical image are neighbors, thereby the at least two neighbor voxels forming a new volume added to the 3D grid; and<br>
+removing the voxel of the 3D grid.<br>
+<br>
+6. (Original) The computer-implemented method of claim 5, further comprising, for each volume of the 3D grid having less than a first predetermined minimum number of voxels of the voxelized 3D structural medical image, merging the volume with a neighbor volume of the 3D grid.<br>
+<br>
+7. (Original) The computer-implemented method of claim 5, further comprising, for each volume of the 3D grid, discarding the volume having less than a second predetermined minimum number of voxels of the voxelized 3D structural medical image.<br>
+<br>
+8. (Original) The computer-implemented method of claim 7, wherein the first and second predetermined minimum number of voxels rounding down a value representing 10% of a same finite number of voxels of the voxelized 3D structural medical image.<br>
+<br>
+9. (Original) The computer-implemented method according to claim 1, wherein each generated voxel of the voxelized 3D structural medical image being cubic.<br>
+<br>
+10. (Original) The computer-implemented method according to claim 1, wherein all generated voxels of the voxelized 3D structural medical image having the same volume.<br>
+<br>
+<br>
+<br>
+11. (Original) The computer-implemented method according to claim 1, wherein each dimension of the voxelized 3D structural medical image has a same and even number of generated voxels.<br>
+<br>
+12. (Original) The computer-implemented method according to claim 1, wherein the sensor detection distance is between 20 to 30 millimeters.<br>
+<br>
+13. (Currently Amended) A non-transitory computer readable storage medium having recorded thereon a computer program having instructions for performing a method for voxelizing a 3D structural medical image of a human's brain, each voxel being suitable for running a simulator of an electrical activity of a 3D volume of the human's brain being enclosed by the voxel, the method comprising:<br>
+obtaining a 3D structural medical image of the human's brain, the 3D structural medical image comprising a reference <u>frame, wherein the 3D structural image stems from acquisition by a medical imaging device;</u><br>
+generating a voxelized 3D structural medical image;<br>
+obtaining parameters of at least one EEG electrode sensor and, for each EEG electrode sensor:a localization in a reference frame of the voxelized 3D structural medical image, and a sensor detection distance;<br>
+obtaining a 3D grid of voxels, each voxel of the 3D grid joining a same finite number of voxels of the voxelized 3D structural medical image, the number of voxels of the 3D grid being smaller than the number of voxels of the voxelized 3D structural medical image; and<br>
+<br>
+for each voxel of the 3D grid, iteratively subdividing the voxel while the distance between the voxel and localization of any electrode sensor is smaller than or equal to the sensor detection distance and while a size of the voxel is greater than a predetermined length, each subdivided voxel joining a finite number of voxel(s) of the voxelized 3D structural medical image.<br>
+<br>
+14. (Original) The non-transitory computer readable storage medium of claim 13, wherein the iteratively subdividing comprises:<br>
+computing for each voxel of the 3D grid a bounding sphere;<br>
+computing for each EEG electrode sensor, a sphere being centered at the EEG electrode sensor and a radius being equal to the sensor detection distance;<br>
+determining, for each computed bounding sphere, when the computed bounding sphere is intersecting with the computed spheres; and<br>
+for each voxel, subdividing the voxel when the computed bounding sphere is intersecting with one or more computed sphere while a size of the voxel is greater than the predetermined length, each subdivided voxel joining a finite number of voxels of the voxelized 3D structural medical image.<br>
+<br>
+15. (Original) The non-transitory computer readable storage medium of claim 13, wherein each voxel of the 3D grid having 2n voxels of the voxelized 3D structural medical image wherein n E N.<br>
+<br>
+16. (Original) The non-transitory computer readable storage medium of claim 13, wherein the method further comprises removing the voxels of the voxelized 3D structural<br>
+<br>
+<br>
+medical image that are not enclosing a brain grey matter in the voxelized 3D structural medical image.<br>
+<br>
+17. (Currently Amende) An apparatus comprising:<br>
+a processor; and<br>
+a database having a non-transitory computer readable storage medium having recorded thereon a computer program having instructions for voxelizing a 3D structural medical image of a human's brain, each voxel being suitable for running a simulator of an electrical activity of a 3D volume of the human's brain being enclosed by the voxel that when executed by the processor causes the processor to be configured to:<br>
+obtain a 3D structural medical image of the human's brain, the 3D structural medical image comprising a reference <u>frame, wherein the 3D structural image stems from ac</u><u>q</u><u>uisition by a medical ima</u><u>ging</u><u> device;</u><br>
+generate a voxelized 3D structural medical image;<br>
+obtain parameters of at least one EEG electrode sensor and, for each EEG electrode sensor:a localization in a reference frame of the voxelized 3D structural medical image, and a sensor detection distance;<br>
+obtain a 3D grid of voxels, each voxel of the 3D grid joining a same finite number of voxels of the voxelized 3D structural medical image, the number of voxels of the 3D grid being smaller than the number of voxels of the voxelized 3D structural medical image; and<br>
+for each voxel of the 3D grid, iteratively subdivide the voxel while the distance between the voxel and localization of any electrode sensor is smaller than or equal to the sensor detection distance and while a size of the voxel is greater than a predetermined length,<br>
+<br>
+<br>
+each subdivided voxel joining a finite number of voxel(s) of the voxelized 3D structural medical image.<br>
+<br>
+18. (Original) The apparatus of claim 17, wherein the processor is further configured to iteratively subdivide by being configured to:<br>
+compute for each voxel of the 3D grid a bounding sphere,<br>
+compute for each EEG electrode sensor, a sphere being centered at the EEG electrode sensor and a radius being equal to the sensor detection distance,<br>
+determine, for each computed bounding sphere, whether the computed bounding sphere is intersecting with the computed spheres, and<br>
+for each voxel, subdivide the voxel when the respective computed bounding sphere is intersecting with one or more computed sphere while a size of the voxel is greater than the predetermined length, each subdivided voxel joining a finite number of voxels of the voxelized 3D structural medical image.<br>
+<br>
+19. (Original) The apparatus of claim 17, wherein each voxel of the 3D grid having 2n voxels of the voxelized 3D structural medical image wherein n EN.<br>
+<br>
+20. (Original) The apparatus of claim 17, wherein the processor is further configured to remove the voxels of the voxelized 3D structural medical image that are not enclosing a brain grey matter in the voxelized 3D structural medical image.
+</body></html>

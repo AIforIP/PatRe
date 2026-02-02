@@ -1,0 +1,5 @@
+<html><head></head><body><h3>Date: 2022-07-26</h3>
+<p>8611.00175c</p>
+<h1><u>ABSTRACT OF THE DISCLOSURE</u></h1>
+<p>An apparatus includes a capture device and a processor. The capture device may be configured to generate pixel data corresponding to an exterior view from a vehicle. The processor may be configured to perform operations on video frames generated from the pixel data to detect a moving object in the video frames, determine a predicted path of the moving object, determine a probability of the moving object colliding with the vehicle based on the predicted path, determine whether the vehicle is stationary and generate a control signal if the vehicle is stationary and the probability is greater than a pre-determined threshold.
+The</p><p>control signal may be configured to enable a response to alert a person in control of the moving object.</p><p>111</p></body></html>

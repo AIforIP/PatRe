@@ -1,0 +1,85 @@
+<html><head></head><body>17921807
+
+   
+<u>AMENDMENTS TO THE CLAIMS</u>
+   
+   <p>Please cancel claim 1 and add new claims 13-28, as follows.</p>
+   
+<u>Listing of Claims</u>
+   
+   
+
+<br>
+
+<br>
+ 1-12. (CANCELLED)
+2
+11
+<br>
+<br>
+
+13. (NEW)  A method for automatically scheduling the timing of a plurality of brake tests that succeed one another at time intervals, at a plurality of brakes of a robot arm that is equipped with a plurality of joints and a plurality of links connecting the joints to one another, and the arm is connected to a robot controller that is designed and configured to control the joints and the brakes in order to move the robot arm, the method comprising:
+configuring at least one individual parameter for each individual brake of the plurality of brakes, or jointly for at least two groups of the brakes, wherein the at least one parameter is assigned at least one criterion that is a property relevant for the safe operation of the brake;
+automatically initializing a brake test procedure that is associated with the robot arm and which is provided to control the joints and the brakes of the robot arm via the robot controller, thereby automatically moving the links of the robot arm according to a brake test program predetermined by the brake test procedure, and automatically controlling the brakes as a function of the configured parameters; and
+executing the initialized brake test procedure based on the configured parameters and during an operating time of the robot arm in which the robot arm is configured for its application-specific intended use.
+<br>
+
+14. (NEW)  The method of claim 13, wherein the brake test procedure is automatically initialized such that, based on the configured parameters, corresponding brake tests are carried out at each individually configured brake, or at the groups of brakes that are configured jointly in at least two groups, the corresponding brake tests being carried out at individual different times and/or in individual different time intervals.
+<br>
+
+15. (NEW)  The method of claim 13, wherein the brake test procedure is automatically initialized based on at least one individually configured parameter for an individual brake, or jointly for the at least two groups of brakes, wherein the at least one parameter is a criterion of the mounting position of the robot arm in the state of the robot arm configured for the application-specific intended use.
+<br>
+
+16. (NEW)  The method of claim 13, wherein the brake test procedure is automatically initialized based on at least one individually configured parameter for an individual brake, or jointly for the at least two groups of brakes, wherein the at least one parameter is a criterion of the robot tool fastened to the robot arm.
+<br>
+
+17. (NEW)  The method of claim 13, wherein the brake test procedure is automatically initialized based on at least one individually configured parameter for a single brake, or jointly for the at least two groups of brakes, wherein the at least one parameter is a criterion of a workplace in a region of which the robot arm is configured for its application-specific intended use.
+<br>
+
+18. (NEW)  The method of claim 13, wherein a value of the at least one individual parameter is determined by a manual input at a control device of the robot arm, and the manually input value is stored automatically so that it can be retrieved during the automatic initialization of the brake test procedure.
+<br>
+
+19. (NEW)  The method of claim 18, wherein the value of the at least one individual parameter is at least one of the point in time or the time interval according to which the particular brake test is to be carried out at the individually configured brake, or at the groups of brakes that are configured jointly in at least two groups.
+<br>
+
+20. (NEW)  The method of claim 13, wherein configuring at least one individual parameter for each individual brake, or jointly for the at least two groups of brakes, is limited within a predefined permissible value range.
+<br>
+
+21. (NEW)  The method of claim 13, wherein configuring at least one individual parameter by at least one of inputting values or saving values outside the predefined, permissible value range is automatically prevented.
+<br>
+
+22. (NEW)  The method of claim 13, wherein automatically executing the initialized brake test procedure comprises executing the initialized brake test procedure as a function of:
+the configured parameters during an operating time of the robot arm in which the robot arm is configured for its application-specific, intended use; and
+measured values that are detected during the operating time of the robot arm from state measurements at the brakes of the robot arm.
+<br>
+
+23. (NEW)  The method of claim 22, wherein the measured values are detected during a corresponding execution of the brake test procedure at the robot arm.
+<br>
+
+24. (NEW)  The method of claim 13, wherein executing the initialized brake test procedure comprises at least one of:
+automatically executing the initialized brake test procedure; or
+initiating execution of the initialized brake test procedure in response to a signal supplied externally of the robot.
+<br>
+
+25. (NEW)  The method of claim 24, wherein the signal supplied externally of the robot is associated with at least one of:
+a process state; or
+a spatial trigger.
+<br>
+
+26. (NEW)  The method of 25, wherein the signal supplied externally of the robot is associated with a spatial trigger, and the spatial trigger corresponds to reaching an axis limit or an axis stop of a joint of the robot arm.
+<br>
+
+27. (NEW)  The method of claim 13, further comprising:
+assigning a first weighting to the parameters associated with a particular brake of a particular joint of the robot arm; and
+assigning a second weighting, different from the first weighting, to the parameters associated with at least one other brake associated with a different joint of the robot arm.
+<br>
+
+28. (NEW)  A robot, comprising:
+a robot arm including a plurality of joints connecting a plurality of links that are adjustable relative to one another by the movements of the joints;
+a plurality of brakes, each brake assigned to a respective one of the joints;
+a plurality of motors, each motor assigned to a respective one of the joints, wherein each motor is designed to adjust the respectively assigned joint by automatic control of the motor; and
+a robot controller designed to automatically control the motors in order to adjust the links of the robot arm automatically and individually relative to one another by driven movement of the joints, and to automatically control the brakes to individually brake the joints of the robot arm and hold the brakes in a locked condition;
+wherein the robot controller is further designed and configured to carry out the method of claim 13.
+   
+
+</body></html>

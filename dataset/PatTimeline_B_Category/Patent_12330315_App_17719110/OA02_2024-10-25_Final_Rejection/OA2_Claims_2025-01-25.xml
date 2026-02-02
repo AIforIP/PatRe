@@ -1,0 +1,56 @@
+<html><head></head><body><h3>Date: 2025-01-25</h3>
+
+<h1><u>Amendments to the Claims</u></h1>
+<p>This listing of claims will replace all prior versions of claims in the application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<br>
+<br>
+1.   (Currently Amended) A method of operation of a fleet of robots, the method comprising:<br>
+identifying, by a first robot in the fleet of robots, a set of candidate actions that may be performed by a first robot;<br>
+collecting, by <u>at least one sensor onboard </u>the first robot and for each candidate action of the set of candidate actions, a respective set of <del>ancillary </del><u>sensor </u>data;<br>
+transmitting, by the first robot, a request for instructions to a tele-operation system, the tele-operation system communicatively coupled to the fleet of robots, the request for the instructions which includes each candidate action of the set of candidate actions and each respective set of <del>ancillary </del><u>sensor </u>data;<br>
+receiving, by the first robot, the instructions from the tele-operation system;<br>
+executing, by the first robot, the instructions;<br>
+updating, by the first robot, a <u>f</u><u>irst </u>control model of the first robot, based at least in part on each candidate action of the set of candidate actions, each respective set of <del>ancillary</del><u> sensor </u>data, and the instructions, to increase a level of autonomy of the first robot;<br>
+<u>sendin</u><u>q,</u><u> by the first robot and directly to a second robot in the fleet of robots</u><u>, ,</u><u> control model update instructions based on the update made to the first control model; </u>and<br>
+updating, by a-the second robot<del> in the fleet of robots</del>, a <u>second </u>control model of the second robot, based at least in part <del>based </del>on the update made to the <u>f</u><u>irst </u>control model of the first robot, to increase a level of autonomy of the second robot,<u> wherein the second control model of the second robot is different from the first control model of the first robot.</u><br>
+<br>
+2.   (Currently Amended) The method of claim 1<del>, </del><del>the first robot comprising one or more sensors, </del>wherein the identifying a set of candidate actions that may be performed by the first robot includes sensing, by the <del>one or more sensors</del><u>at last one sensor onboard the first robot,</u> at least one of an external event or an external condition and identifying the set of candidate actions in response to sensing the at least one of an external event or an external condition.<br>
+<br>
+3.   (Previously Presented)  The method of claim 1, further comprising receiving, by the first robot and from the tele-operation system, an objective to be completed by the first robot, wherein the identifying a set of candidate actions that may be performed by the first robot includes identifying a set of candidate actions that may be performed by the first robot in furtherance of the objective.<br>
+<br>
+4.   (Previously Presented)  The method of claim 3, wherein the transmitting a request for instructions to a tele-operation system includes transmitting the request for instructions to the tele-operation system in response to determining the first robot is unable to select a candidate action of the set of candidate actions to perform in furtherance of the objective.<br>
+<br>
+5.   (Previously Presented)  The method claim 4, further comprising scoring, by the first robot, each candidate action of the set of candidate actions, wherein the scoring each candidate action of the set of candidate actions includes assigning a respective probability to each candidate action, the respective probability being based at least in part on a respective expectation of progress, achievable by each candidate action, towards the objective.<br>
+<br>
+6.   (Previously Presented)  The method of claim 5, further comprising ranking, by the first robot, each candidate action in an order of preference, the order of preference being based at least in part on the respective probability of each candidate action.<br>
+<br>
+7.   (Previously Presented)  The method of claim 6, wherein the transmitted request for instructions includes each respective probability and the order of preference.<br>
+<br>
+8.   (Previously Presented)  The method of claim 6, further comprising determining, by the first robot, whether a respective probability meets a predetermined probability criterion.<br>
+<br>
+9.   (Previously Presented)  The method of claim 6, further comprising determining, by the first robot, whether a difference between a first respective probability and a second respective probability meets a predetermined difference criterion.<br>
+<br>
+10.  (Currently Amended) The method of claim 1, the first robot being a semi- autonomous robot characterized by a level of autonomy, the level of autonomy being determined at least in part by the <u>f</u><u>irst </u>control model, the method further comprising comparing the level of autonomy of the first robot to a threshold level of autonomy, the threshold level of autonomy above which the first robot is operable to autonomously select a candidate action of the set of candidate actions to perform, wherein the transmitting, by the first robot, a request for instructions to a tele-operation system includes transmitting the request for instructions to the tele-operation system in response to determining the level of autonomy of the first robot is lower than the threshold level of autonomy.<br>
+<br>
+11.  (Previously Presented)  The method of claim 10, further comprising, in response to determining the level of autonomy of the first robot meets or exceeds the threshold level of autonomy, performing, by the first robot, one of the candidate actions of the set of candidate actions.<br>
+<br>
+12.  (Previously Presented)  The method of claim 11, further comprising receiving, by the first robot and from the tele-operation system, an objective to be completed by the first robot, wherein the identifying a set of candidate actions that may be performed by the first robot includes identifying a set of candidate actions that may be performed by the first robot in furtherance of the objective.<br>
+<br>
+13.  (Previously Presented)  The method of claim 12, further comprising determining, by the first robot, the threshold level of autonomy, wherein the determining the threshold level of autonomy includes assigning a respective probability to each candidate action, the respective probability being based at least in part on a respective expectation of progress, achievable by each candidate action, towards the objective.<br>
+<br>
+14.  (Previously Presented)  The method of claim 13, further comprising ranking, by the first robot, each candidate action in an order of preference, the order of preference being based at least in part on the respective probability.<br>
+<br>
+15.  (Previously Presented)  The method of claim 14, wherein the determining the level of autonomy of the first robot is lower than the threshold level of autonomy<br>
+includes determining the respective probability of each candidate action in the set of candidate actions fails to satisfy at least one predetermined criterion.<br>
+<br>
+16.  (Currently Amended) The method of claim 1,the first robot comprising<del> one or more sensors and </del>a data repository, <del>the collecting, by the first robot and for each candidate action of the set of candidate actions, a respective set of ancillary data includes at least one of collecting a first subset of the respective set of ancillary data by the one or more sensors or </del><u>and the method further comprisin</u><u>g</u><u>: extracting, for each candidate action of the set of candidate actions, </u><del>a second subset of the</del>a respective set of ancillary data from the data repository.<br>
+<br>
+17.  (Previously Presented)  The method of claim 1, wherein the transmitting, by the first robot, a request for instructions to a tele-operation system includes transmitting a request for the tele-operation system to determine which candidate action the first robot should perform.<br>
+<br>
+18.  (Previously Presented)  The method of claim 1, the first robot comprising a motion actuator, wherein executing the instructions includes causing, by the motion actuator, the first robot to execute a movement.<br>
+<br>
+19.  (Currently Amended) The method of claim 1, wherein the updating, by the first robot, a <u>first</u><u></u>control model, based at least in part on each candidate action of the set of candidate actions, each respective set of <del>ancillary </del><u>sensor </u>data, and the instructions includes increasing a level of autonomy of the first robot from a first level of autonomy to a second level of autonomy, the second level of autonomy being higher than the first level of autonomy.<br>
+<br>
+20.  (Previously Presented)  The method of claim 1, further comprising identifying, by the first robot, an objective to be completed by the first robot, wherein the identifying a set of candidate actions that may be performed by the first robot includes identifying a set of candidate actions that may be performed by the first robot in furtherance of the objective.
+</body></html>

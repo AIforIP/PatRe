@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2023-03-29</h3>
+
+<h1>ABSTRACT</h1>
+<p>An embodiment includes a method of determining a collision-free space for a robotic welding system. The method includes fixing a location of a part to be welded in a 3D coordinate space of a robotic welding system. An arm of the robotic welding system is moved around the part within the 3D coordinate space. Data corresponding to positions and orientations of the arm in the 3D coordinate space are recorded as the arm is moved within the 3D coordinate space around the part. The data is translated to swept volumes of data within the 3D coordinate space. The swept volumes of data are merged to generate 3D geometry data representing a continuous collision-free space within the 3D coordinate space.</p><p>28</p></body></html>

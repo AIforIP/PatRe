@@ -1,0 +1,142 @@
+<html><head></head><body><h3>Date: 2021-10-21</h3>
+ <u>What is claimed is</u>:
+<br>
+
+<br>
+1. A mobile cargo controller for a cargo handling system, comprising: 
+<br>
+at least one inertial measurement unit; 
+<br>
+a plurality of cargo zone selectors, wherein different combinations of one or more cargo zone selectors of said plurality of cargo zone selectors are activatable to correspond with different cargo zones of a cargo compartment; 
+<br>
+a plurality of cargo zone indicators, wherein each said cargo zone selector of said plurality of cargo zone selectors has a corresponding cargo zone indicator of said plurality of cargo zone indicators; and 
+<br>
+at least one cargo motion controller. 
+
+<br>
+
+<br>
+2. The mobile cargo controller of claim 1, wherein said at least one inertial measurement unit comprises at least one accelerometer and at least one gyroscope.
+<br>
+
+<br>
+3. The mobile cargo controller of claim 1, wherein said at least one cargo motion controller comprises a single cargo motion controller.
+<br>
+
+<br>
+4. The mobile cargo controller of claim 1, wherein said at least one cargo motion controller is configured to provide proportional velocity control on a directional basis.
+<br>
+
+<br>
+5. The mobile cargo controller of claim 1, wherein each cargo zone selected through activation of one or more of said cargo zone selectors in turn activates each corresponding said cargo zone indicator based upon a current orientation of said mobile cargo controller.
+<br>
+
+<br>
+6. The mobile cargo controller of claim 1, wherein each said cargo zone selector of said plurality of cargo zone selectors comprises a different actuator.
+
+<br>
+7. The mobile cargo controller of claim 1, wherein said plurality of cargo zone selectors comprises four said cargo zone selectors.
+<br>
+
+<br>
+8. The mobile cargo controller of claim 1, wherein each said cargo zone indicator comprises an activatable light source.
+<br>
+
+<br>
+9. The mobile cargo controller of claim 1, further comprising: 
+<br>
+an operation selector; 
+<br>
+a plurality of operation indicators, wherein said operation selector is used to select an operation associated with one of said plurality of operation indicators, wherein each operation indicator of said plurality of operation indicators comprises an activatable light source; 
+<br>
+wherein said plurality of operation indicators comprise a loading operation indicator and an unloading operation indicator. 
+
+<br>
+
+<br>
+10. The mobile cargo controller of claim 1, further comprising: 
+<br>
+a cargo rotation selector, wherein said cargo rotation selector comprises an actuator; 
+<br>
+a cargo rotation indicator, wherein said cargo rotation indicator comprises an activatable light source; 
+<br>
+wherein said cargo rotation selector is associated with control of a doorway zone. 
+
+<br>
+
+<br>
+11. The mobile cargo controller of claim 1, further comprising: 
+<br>
+a cargo lateral movement selector, wherein said cargo lateral movement selector comprises an actuator; 
+<br>
+a cargo lateral movement indicator, wherein said cargo lateral movement indicator comprises an activatable light source; 
+<br>
+wherein said cargo lateral movement selector is associated with control of a doorway zone. 
+<br>
+12. A method of controlling a cargo handling system, said method comprising: 
+<br>
+selecting a selected cargo zone from a plurality of cargo zone selectors presented on a mobile cargo controller, wherein said selecting is based upon a first orientation of said mobile cargo controller relative to said plurality of cargo zone selectors; 
+<br>
+activating said selected cargo zone in response to said selecting; 
+<br>
+activating a first combination of a plurality of cargo zone indicators on said mobile cargo controller to identify said selected cargo zone based upon said first orientation of said mobile cargo controller, wherein said first combination comprises at least one cargo zone indicator of said plurality of cargo zone indicators; and 
+<br>
+operating at least one cargo motion controller of said mobile cargo controller, wherein said operating controls motion of cargo within said selected cargo zone. 
+
+<br>
+
+<br>
+13. The method of claim 12, wherein different combinations of one or more cargo zone selectors of said plurality of cargo zone selectors are activatable to correspond with different cargo zones of a cargo compartment, wherein a first cargo zone selector of said plurality of cargo zone selectors is toward a forward end of said mobile cargo controller, wherein a second cargo zone selector of said plurality of cargo zone selectors is toward a right side of said mobile cargo controller, wherein a third cargo zone selector of said plurality of cargo zone selectors is toward a rear end of said mobile cargo controller, and wherein a fourth cargo zone selector of said plurality of cargo zones is toward a left side of said mobile cargo controller.
+<br>
+
+14. The method of claim 12, wherein different combinations of one or more cargo zone selectors of said plurality of cargo zone selectors are activatable to correspond with different cargo zones of a cargo compartment, wherein one of said plurality of cargo zone selectors corresponds with a forward direction for said first orientation of said mobile cargo   
+controller, wherein another of said plurality of cargo zone selectors corresponds with a right direction for said first orientation of said mobile cargo controller, wherein another of said plurality of cargo zone selectors corresponds with a rearward direction for said first orientation of said mobile cargo controller, and wherein another of said plurality of cargo zone selectors corresponds with a left direction for said first orientation of said mobile cargo controller.
+<br>
+
+<br>
+15. The method of claim 12, wherein different combinations of one or more cargo zone selectors of said plurality of cargo zone selectors are activatable to correspond with different cargo zones of a cargo compartment, wherein a first cargo zone selector of said plurality of cargo zone selectors corresponds with a forward direction for said first orientation of said mobile cargo controller, wherein a second cargo zone selector of said plurality of cargo zone selectors corresponds with a right direction for said first orientation of said mobile cargo controller, wherein a third cargo zone selector of said plurality of cargo zone selectors corresponds with an aft direction for said first orientation of said mobile cargo controller, and 
+<br>
+wherein a fourth cargo zone selector of said plurality of cargo zones corresponds with a left direction for said first orientation of said mobile cargo controller, said method further comprising: 
+<br>
+changing an orientation of said mobile cargo compartment from said first orientation to a second orientation; and 
+<br>
+activating a second combination of said plurality of cargo zone indicators to identify said selected cargo zone on said mobile cargo controller based upon said second orientation, wherein said second combination is different from said first combination and comprises at least one said cargo zone indicator of said plurality of cargo zone indicators. 
+<br>
+16. The method of claim 15, wherein said plurality of cargo zone selectors consist essentially of said first cargo zone selector, said second cargo zone selector, said third cargo zone selector, and said fourth cargo zone selector; 
+<br>
+wherein said first cargo zone selector and said third cargo zone selector are oppositely disposed on said mobile cargo controller, and wherein said second cargo zone selector and said fourth cargo zone selector are oppositely disposed on said mobile cargo controller; and 
+<br>
+wherein said first cargo zone selector, said second cargo selector, said third cargo zone selector, and said fourth cargo zone selector are presented in this order on said mobile cargo controller and are disposed about a joystick, wherein said at least one cargo motion controller comprises said joystick. 
+
+<br>
+
+<br>
+17. The method of claim 12, further comprising determining an orientation of said mobile cargo controller using at least one inertial measurement unit, wherein said mobile cargo controller comprises said at least one inertial measurement unit.
+<br>
+
+<br>
+18. The method of claim 12, further comprising: 
+<br>
+identifying a condition that is associated with a dropping of said mobile cargo controller; 
+<br>
+and at least temporarily deactivating a current cargo moving operation using said mobile cargo controller. 
+
+<br>
+
+<br>
+19. The method of claim 12, further comprising: 
+<br>
+activating a cargo rotation selector on said mobile cargo controller, wherein said operating at least one cargo motion controller comprises rotating said cargo within a doorway zone. 
+<br>
+20. The method of claim 12, further comprising: 
+<br>
+activating a cargo lateral movement selector on said mobile cargo controller, wherein said operating at least one cargo motion controller comprises moving said cargo from a first doorway zone to a second doorway zone. 
+4846-6943-6926
+63584.23500/ 131608US01
+Page 53 of 59
+Page 54 of 59
+Page 55 of 59
+Page 56 of 59
+Page 57 of 59
+Page 58 of 59
+</body></html>

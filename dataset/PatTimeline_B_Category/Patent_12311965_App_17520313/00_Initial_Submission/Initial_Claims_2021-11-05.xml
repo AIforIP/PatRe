@@ -1,0 +1,173 @@
+<html><head></head><body><h3>Date: 2021-11-05</h3>
+ What is claimed is:
+<br>
+
+<br>
+1.    A vehicle comprising: 
+<br>
+a steering wheel, a vehicle drive system, a driving mode paddle shifter coupled to the steering wheel, an output device, and an electronic control unit communicatively coupled to the driving mode paddle shifter, the vehicle drive system, and the output device, wherein the electronic control unit is configured to: 
+<br>
+output a menu of driving mode options of the vehicle with the output device based on an operation of the driving mode paddle shifter, each of the driving mode options referring to a set of parameters that adjust at least one of the vehicle's economy, responsiveness, or traction; 
+<br>
+navigate the menu of the driving mode options of the vehicle using the driving mode paddle shifter; 
+<br>
+receive a drive mode shifting signal from the driving mode paddle shifter indicative of a selection of one of the driving mode options in the menu with the driving mode paddle shifter; 
+<br>
+and change a parameter of the vehicle drive system in order to change a driving mode of the vehicle in response to the drive mode shifting signal. 
+
+<br>
+
+<br>
+2.    The vehicle of claim 1, wherein the output device comprises a heads-up-display.
+<br>
+
+<br>
+3.    The vehicle of claim 1, wherein the output device comprises a display.
+<br>
+
+<br>
+4.    The vehicle of claim 1, wherein the driving mode paddle shifter is a first paddle shifter, and the vehicle further comprises a second paddle shifter.
+<br>
+
+<br>
+5.    The vehicle of claim 4, wherein: 
+<br>
+the output device comprises a display, and 
+<br>
+actuating one of the first paddle shifter and the second paddle shifter causes the electronic control unit to display the menu of driving mode options with the display. 
+
+<br>
+
+<br>
+6.    The vehicle of claim 4, wherein: 
+<br>
+the output device comprises a display, actuating one of the first paddle shifter and the second paddle shifter causes the electronic control unit to display the menu of driving mode options with the display, 
+
+ shifting of the first paddle shifter causes the electronic control unit to navigate the menu in a first direction, and 
+<br>
+shifting of the second paddle shifter causes the electronic control unit to navigate the menu in a second direction. 
+
+<br>
+
+<br>
+7.    The vehicle of claim 1, wherein: 
+<br>
+the output device comprises a display, and 
+<br>
+actuating the driving mode paddle shifter causes the electronic control unit to display the menu of driving mode options with the display. 
+
+<br>
+
+<br>
+8.    The vehicle of claim 7, wherein shifting of the driving mode paddle shifter causes the electronic control unit to navigate the menu.
+<br>
+
+<br>
+9.    A system for changing a driving mode of a vehicle, the system comprising: 
+<br>
+a steering wheel, a vehicle drive system, a driving mode paddle shifter coupled to the steering wheel, a sensor configured to output a driving environment signal indicative of a characteristic of a driving environment of the vehicle, an output device, and an electronic control unit communicatively coupled to the driving mode paddle shifter, the vehicle drive system, the sensor, and the output device, wherein the electronic control unit is configured to: 
+<br>
+receive the driving environment signal from the sensor; 
+<br>
+determine a recommended driving mode based on the driving environment signal from the sensor; 
+<br>
+output a menu of driving mode options including the recommended driving mode with the output device based on an operation of the driving mode paddle shifter, each of the driving mode options referring to a set of parameters that adjust at least one of the vehicle's economy, responsiveness, or traction; 
+<br>
+navigate the menu of the driving mode options of the vehicle using the driving mode paddle shifter; 
+<br>
+receive a drive mode shifting signal from the driving mode paddle shifter indicative of a selection of one of the driving mode options in the menu with the driving mode paddle shifter; and 
+<br>
+change a parameter of the vehicle drive system in order to change the driving mode of the vehicle in response to the drive mode shifting signal. 
+<br>
+
+<br>
+10.   The system of claim 9, wherein the electronic control unit is configured to: 
+<br>
+receive a response signal from the driving mode paddle shifter in response to outputting the recommended driving mode; and 
+<br>
+change the parameter of the vehicle drive system in order to change the driving mode of the vehicle to the recommended driving mode in response to receiving the response signal from the driving mode paddle shifter indicative of approval of the recommended driving mode. 
+
+<br>
+
+<br>
+11.   The system of claim 9, wherein the driving environment signal includes at least one of image data from one or more cameras, weather data, map data, driver habit data, and vehicle status data.
+<br>
+
+<br>
+12.   The system of claim 9, wherein the electronic control unit is further configured to: 
+<br>
+receive an unprompted drive mode shifting signal from the driving mode paddle shifter indicative of a desire to change the driving mode of the vehicle; 
+<br>
+change the parameter of the vehicle drive system in order to change the driving mode in response to the unprompted drive mode shifting signal, and 
+<br>
+provide a notification related to the change in the driving mode with the output device. 
+
+<br>
+
+<br>
+13.   The system of claim 12, wherein: 
+<br>
+the output device comprises a display, and 
+<br>
+the unprompted drive mode shifting signal causes the electronic control unit to display the menu of driving mode options with the display. 
+
+<br>
+
+<br>
+14.   The system of claim 12, wherein the driving mode paddle shifter includes a first paddle shifter, and the system further comprises a second paddle shifter.
+<br>
+
+<br>
+15.   The system of claim 14, wherein: 
+<br>
+the output device comprises a display, the unprompted drive mode shifting signal causes the electronic control unit to display the menu of driving mode options with the display, actuating of the first paddle shifter causes the electronic control unit to navigate the menu in a first direction, and 
+<br>
+actuating of the second paddle shifter causes the electronic control unit to navigate the menu in a second direction. 
+<br>
+
+<br>
+16.   A method of changing a driving mode of a vehicle, the method comprising: 
+<br>
+outputting, with an electronic control unit, a menu of driving mode options including a recommended driving mode with an output device based on an operation of a driving mode paddle shifter coupled to a vehicle steering wheel, each of the driving mode options referring to a set of parameters that adjust at least one of the vehicle's economy, responsiveness, or 
+<br>
+traction; 
+<br>
+navigating the menu of the driving mode options of the vehicle using the driving mode paddle shifter; 
+<br>
+receiving, with the electronic control unit, a drive mode shifting signal from the driving mode paddle shifter coupled to the vehicle steering wheel indicative of a selection of one of the driving mode options in the menu with the driving mode paddle shifter; and 
+<br>
+changing a parameter of a vehicle drive system in order to change the driving mode of the vehicle in response to receiving the drive mode shifting signal from the driving mode paddle shifter. 
+
+<br>
+
+<br>
+17.   The method of claim 16, further comprising changing two or more parameters of the vehicle drive system in order to change the driving mode in response to receiving the drive mode shifting signal from the driving mode paddle shifter.
+<br>
+
+<br>
+18.   The method of claim 16, further comprising changing the driving mode paddle shifter from a first role to a second role in response to the selection of the driving mode, wherein: 
+<br>
+in the first role, the electronic control unit changes the parameter of the vehicle drive system in response to the drive mode shifting signal, and 
+<br>
+in the second role, the electronic control unit shifts gears of the vehicle in response to the drive mode shifting signal. 
+
+<br>
+
+<br>
+19.   The method of claim 16, wherein: 
+<br>
+the driving mode paddle shifter comprises a first paddle shifter, the vehicle comprises a second paddle shifter, and 
+<br>
+the drive mode shifting signal from the driving mode paddle shifter indicative of the selection of one of the driving mode options in the menu with the driving mode paddle shifter 
+
+ comprises actuating the first paddle shifter and the second paddle shifter in a predetermined sequence.
+<br>
+
+<br>
+20.   The method of claim 16, wherein the output device is a heads-up-display.
+15
+16
+17
+18
+19
+</body></html>

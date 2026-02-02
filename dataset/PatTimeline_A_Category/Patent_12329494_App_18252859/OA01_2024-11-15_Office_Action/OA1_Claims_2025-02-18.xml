@@ -1,0 +1,64 @@
+<html><head></head><body><h3>Date: 2025-02-18</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>The following listing of claims replaces all previous listings of claims in the instant application.</p><br>
+<br>
+1.    (Currently Amended) An apparatus suitable for optical coherence tomography (OCT) scanning of a subject, the apparatus comprising:at least one source for providing a first signal and a reference signal;<br>
+a photonics integrated circuit comprising:<br>
+(i) a first path for receiving a reflected first signal, reflected from the subject;<br>
+(ii) a second path for coupling the reflected first signal to the reference signal to provide an interference signal, and<br>
+(iii) a variable delay for varying an optical path length of one of the reference signal and the first signal to match the optical path length of the reference signal to an optical path length of the reflected first signal, wherein the variable delay comprises a series of binary switches and <u>a series of </u>path elements of <u>different lengths of </u>L<del>, 2L, etc.</del><br>
+<u>wherein the series of path elements comprises lengths of L </u>up to 2NL, where N is [[an]] a<u></u><u>p</u><u>ositive </u>integer; anda detector for analyzing and detecting the interference signal.<br>
+<br>
+2.    (Cancelled)<br>
+<br>
+3.    (Cancelled)<br>
+4.
+(Previously Presented) The apparatus of claim 1, wherein the variable delay is a binary delay implementing a delay, in steps of L, of 0 to (2x2N-1)L.<br>
+<br>
+5.    (Previously Presented) The apparatus of claim 4, wherein the variable delay has N delay path elements and N+1 binary switches, one binary switch before each delay path element, to selectively switch between a direct path or the delay path element, and one binary switch at the<br>
+<br>
+<br>
+output to selectively switch from the direct path or a final delay path element to an output of the variable delay.<br>
+<br>
+6.    (Previously Presented) The apparatus of claim 4, wherein the switches are two-way multiplexing or demultiplexing switches.<br>
+<br>
+7.    (Previously Presented) The apparatus of claim 1, wherein the variable delay acts on the reference signal.<br>
+<br>
+8.    (Previously Presented) The apparatus of claim 1, wherein one of the paths of different lengths includes a tunable labyrinth with integrated phase shifter.<br>
+<br>
+9.    (Previously Presented) The apparatus of claim 1, wherein the at least one source comprises a broadband light source and the detector for analyzing and detecting the interference signal comprises a spectrometer.<br>
+<br>
+10.   (Previously Presented) The apparatus of claim 9, wherein the spectrometer is implemented as one of an arrayed waveguide grating, AWG, a ring bus, a ring fan-out, a binary asymmetric Mach-Zehnder interferometer (AMZI), or an AMZI fan out.<br>
+<br>
+11.   (Previously Presented) The apparatus of claim 1, wherein the at least one source a swept laser source and the detector comprises a point photodetector.<br>
+<br>
+12.   (Previously Presented) The apparatus of claim 1, wherein the at least one source comprises a beam-splitter, and wherein the beam-splitter beam-splits the first signal.<br>
+<br>
+13.   (Previously Presented) The apparatus of claim 1, wherein the second path is a 2 x 2 coupler, and wherein the 2 x 2 coupler is one of a directional coupler, a multimode interferometer or a Mach-Zender interferometer.<br>
+<br>
+14.   (Previously Presented) The apparatus of claim 1, wherein the photonic integrated circuit comprises:<br>
+<br>
+a first path for guiding the first signal to a set of imaging optics to the subject and for guiding reflected light from the subject back through the set of imaging optics to the second path for coupling the reflected first signal to the reference signal to provide an interference signal; and<br>
+a second path for guiding the reference signal to a reflector and back to the second path for coupling the reflected first signal to the reference signal to provide an interference signal.<br>
+<br>
+15.   (Previously Presented) The apparatus of claim 14, wherein the first and second paths comprise polarization-maintaining fibers for maintaining polarization of the first signal and the reference signal respectively.<br>
+<br>
+16.   (Previously Presented) The apparatus of claim 1, further comprising an output image processor for remote viewing of the analyzed interference signal an on-chip control unit for remote control of the variable delay.<br>
+<br>
+17.   (Currently Amended) A method suitable for performing an optical coherence tomography (OCT) scan, the method comprising:providing a first signal provided by a light source;<br>
+providing a reference signal;<br>
+reflecting the first signal from a subject and coupling the reflected first signal to the reference signal to provide an interference signal;<br>
+adjusting a delay of one of the reference signal and the first signal by a variable delay to match an optical path length of the reference signal to an optical path length of the reflected first signal, wherein the step of adjusting comprises selecting between paths of different lengths, wherein the variable delay comprises a series of binary switches and <u>a series of different selectable </u>path elements,<del>of different selectable lengths and </del>wherein the <u>series of </u>path elements <del>are of </del><u>comprise lengths</u><u></u><u>of</u> L<del>, 2L, etc.</del><br>
+up to [[2NL]] <u>2</u><u>N</u><u>L,</u> where N is [[an]] <u>a positive </u>integer; andanalyzing the interference signal.<br>
+<br>
+18.   (Cancelled)<br>
+Filing Date:
+May 12, 2023<br>
+<br>
+19.   (Cancelled)<br>
+<br>
+20.   (New) The apparatus of claim 17 wherein the minimum value of N is 2.<br>
+<br>
+21.   (New) The apparatus of claim 1 wherein the minimum value of N is 2.
+</body></html>

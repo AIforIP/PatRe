@@ -1,0 +1,743 @@
+<html><head></head><body>18666116
+
+   
+   APPARATUS AND METHOD FOR GENERATING CARDIAC CATHETERIZATION DATA
+   
+FIELD OF THE INVENTION
+<p>
+[0001]
+ The present invention generally relates to the field of cardiac catheterization analysis. In particular, the present invention is directed to an apparatus and method for generating cardiac catheterization data.</p>
+   
+   BACKGROUND
+   <p>
+[0002]
+ Left/Right ventricular hypertrophy is a forecaster for cardiovascular morbidity and degradation. Electrocardiogram (ECG) procedures are less expensive and widely available with known limitations. The echocardiogram (Echo) procedure is not as widely available as ECG although it is an effective means of detecting cardiovascular diseases. Cardiac catheterization is an invasive procedure where the catheter is inserted into chamber or vessel of the heart and is extremely effective although requires time, an experienced physician and is costly. Invasive procedures used by physicians can be laborious, costly, and reach a limited audience. Noninvasive procedures have limits but still require a physician to see and use the data to diagnose or forecast a patient’s cardiovascular morbidity or degradation.</p>
+   <p>SUMMARY OF THE DISCLOSURE</p>
+   <p>
+[0003]
+ In an aspect, an apparatus for generating cardiac catheterization data. An apparatus includes at least a processor and a memory communicatively connected to the at least a processor, wherein the memory contains instructions configuring the at least a processor to: receive a plurality of cardiogram data examples; train a catheter data predictor using the plurality of cardiogram data examples; input a cardiogram data signal; generate a plurality of catheterization parameters from the cardiogram data signal and the catheter data predictor; and display the plurality of catheterization parameters. </p>
+   <p>
+[0004]
+ In another aspect, a method for generating cardiac catheterization data. The method includes using at least a processor configured to receive a plurality of cardiogram data examples; train a catheter data predictor using the plurality of cardiogram data examples; input a cardiogram data signal; generate a plurality of catheterization parameters from the cardiogram data signal and the catheter data predictor; and displaying the plurality of catheterization parameters.</p>
+   <p>
+[0005]
+ These and other aspects and features of non-limiting embodiments of the present invention will become apparent to those skilled in the art upon review of the following description of specific non-limiting embodiments of the invention in conjunction with the accompanying drawings.</p>
+   
+   
+BRIEF DESCRIPTION OF THE DRAWINGS
+<p>
+[0006]
+ For the purpose of illustrating the invention, the drawings show aspects of one or more embodiments of the invention. However, it should be understood that the present invention is not limited to the precise arrangements and instrumentalities shown in the drawings, wherein:</p>
+<p>FIG. 1 is a block diagram of an exemplary embodiment of an apparatus for cardiac catheterization data;</p>
+<p>FIG. 2 is a block diagram of an exemplary machine-learning process;</p>
+<p>FIG. 3 is a diagram of an exemplary embodiment of a neural network;</p>
+<p>FIG. 4 is a diagram of an exemplary embodiment of a node of a neural network;</p>
+<p>FIG. 5, is a diagram of an ECG reading with annotations;</p>
+<p>FIG. 6 is a block diagram of an exemplary embodiment of a method for cardiac catheterization data; and</p>
+<p>FIG. 7 is a block diagram of a computing system that can be used to implement any one or more of the methodologies disclosed herein and any one or more portions thereof.</p>
+<p>The drawings are not necessarily to scale and may be illustrated by phantom lines, diagrammatic representations and fragmentary views. In certain instances, details that are not necessary for an understanding of the embodiments or that render other details difficult to perceive may have been omitted.</p>
+   
+   DETAILED DESCRIPTION
+   <p>
+[0007]
+ At a high level, aspects of the present disclosure are directed to an apparatus and method for generating cardiac catheterization data.</p>
+   <p>
+[0008]
+ Aspects of the present disclosure can be used to implement a standardization and quality check method for cardiac catheterization data. Such a standardization procedure may enable a wide variety of patients to have accurate prognostic feedback in the event of absence of a physician. Such standardization procedure may help aid physician prognosis and identification of health deficiencies and possible comorbidities Exemplary embodiments illustrating aspects of the present disclosure are described below in the context of several specific examples.</p>
+   <p>
+[0009]
+ Aspects of the present disclosure can be used to give distinct audio or visual feedback to the physician to indicate when the cardiac catheterization data does or does not meet the quality standards required for prognostic and screening.</p>
+   
+   <p>
+[0010]
+ Referring now to FIG. 1, an exemplary embodiment of an apparatus 100 for generating cardiac catheterization data parameters is illustrated. As used in this disclosure, “cardiac catheterization data” 148 or “cardiac catheterization data parameters” 148 refers to a predictive set of parameters comprised of data, signals, or other types of data stemming from the cardiovascular system. As mentioned, cardiac catheterization data parameters 148 may include, without limitation, prognosis parameters such as right heart catheterization data (RHCD). Apparatus 100 includes a processor 104. Processor 104 may include any computing device as described in this disclosure, including without limitation a microcontroller, microprocessor, digital signal processor (DSP) and/or system on a chip (SoC) as described in this disclosure. Computing device may include, be included in, and/or communicate with a mobile device such as a mobile telephone or smartphone. Processor 104 may include a single computing device operating independently, or may include two or more computing device operating in concert, in parallel, sequentially or the like; two or more computing devices may be included together in a single computing device or in two or more computing devices. Processor 104 may interface or communicate with one or more additional devices as described below in further detail via a network interface device. Network interface device may be utilized for connecting processor 104 to one or more of a variety of networks, and one or more devices. Examples of a network interface device include, but are not limited to, a network interface card (e.g., a mobile network interface card, a LAN card), a modem, and any combination thereof. Examples of a network include, but are not limited to, a wide area network (e.g., the Internet, an enterprise network), a local area network (e.g., a network associated with an office, a building, a campus or other relatively small geographic space), a telephone network, a data network associated with a telephone/voice provider (e.g., a mobile communications provider data and/or voice network), a direct connection between two computing devices, and any combinations thereof. A network may employ a wired and/or a wireless mode of communication. In general, any network topology may be used. Information (e.g., data, software etc.) may be communicated to and/or from a computer and/or a computing device. Processor 104 may include but is not limited to, for example, a computing device or cluster of computing devices in a first location and a second computing device or cluster of computing devices in a second location. Processor 104 may include one or more computing devices dedicated to data storage, security, distribution of traffic for load balancing, and the like. Processor 104 may distribute one or more computing tasks as described below across a plurality of computing devices of computing device, which may operate in parallel, in series, redundantly, or in any other manner used for distribution of tasks or memory between computing devices. Processor 104 may be implemented using a “shared nothing” architecture in which data is cached at the worker, in an embodiment, this may enable scalability of apparatus 100 and/or computing device.</p>
+   
+   <p>
+[0011]
+ With continued reference to FIG. 1, processor 104 may be designed and/or configured to perform any method, method step, or sequence of method steps in any embodiment described in this disclosure, in any order and with any degree of repetition. For instance, processor 104 may be configured to perform a single step or sequence repeatedly until a desired or commanded outcome is achieved; repetition of a step or a sequence of steps may be performed iteratively and/or recursively using outputs of previous repetitions as inputs to subsequent repetitions, aggregating inputs and/or outputs of repetitions to produce an aggregate result, reduction or decrement of one or more variables such as global variables, and/or division of a larger processing task into a set of iteratively addressed smaller processing tasks. Processor 104 may perform any step or sequence of steps as described in this disclosure in parallel, such as simultaneously and/or substantially simultaneously performing a step two or more times using two or more parallel threads, processor cores, or the like; division of tasks between parallel threads and/or processes may be performed according to any protocol suitable for division of tasks between iterations. Persons skilled in the art, upon reviewing the entirety of this disclosure, will be aware of various ways in which steps, sequences of steps, processing tasks, and/or data may be subdivided, shared, or otherwise dealt with using iteration, recursion, and/or parallel processing.</p>
+   <p>
+[0012]
+ With continued reference to FIG 1, apparatus 100 includes a memory. Memory is communicatively connected to processor 104. Memory may contain instructions configuring processor 104 to perform tasks disclosed in this disclosure. As used in this disclosure, “communicatively connected” means connected by way of a connection, attachment, or linkage between two or more relata which allows for reception and/or transmittance of information therebetween. For example, and without limitation, this connection may be wired or wireless, direct, or indirect, and between two or more components, circuits, devices, systems, apparatus, and the like, which allows for reception and/or transmittance of data and/or signal(s) therebetween. Data and/or signals therebetween may include, without limitation, electrical, electromagnetic, magnetic, video, audio, radio, and microwave data and/or signals, combinations thereof, and the like, among others. A communicative connection may be achieved, for example, and without limitation, through wired or wireless electronic, digital, or analog, communication, either directly or by way of one or more intervening devices or components. Further, communicative connection may include electrically coupling or connecting at least an output of one device, component, or circuit to at least an input of another device, component, or circuit. For example, without limitation, via a bus or other facility for intercommunication between elements of a computing device. Communicative connecting may also include indirect connections via, for example, and without limitation, wireless connection, radio communication, low power wide area network, optical communication, magnetic, capacitive, or optical coupling, and the like. In some instances, the terminology “communicatively coupled” may be used in place of communicatively connected in this disclosure. </p>
+   
+   <p>
+[0013]
+ With continued reference to FIG 1, processor may be configured to receive a plurality of cardiogram data examples 108. In some embodiments, cardiogram data examples 108 may be retrieved from an electronic health record (EHR). Cardiogram data may include data captured using non-invasive processes for scanning heart health, including without limitation ECG (electrocardiogram) and/or Echocardiogram processes. It should be noted that the data received by processor is full spectrum and not condensed, shortened, filtered, and/or refined etc. As discussed below, recognition classifier 112 may refine, shorten, and or/ filter the cardiogram data examples 108 received. Cardiogram data examples 108may include a collection of cardiogram data that has been quantitatively measured. It should further be noted that the plurality of cardiogram data examples may correlate with ECG and Echocardiogram measurements. As used in this disclosure, “non-invasive processes” refers to external measurement and imaging of the cardiovascular system via, but not limited to, electrodes, leads, ultrasound imaging. As used in this disclosure, “ECG processes” refers to the usage of electrodes, leads and other techniques for measurement of electrical activity of the cardiovascular system. In non-limiting examples, electrical activity within the cardiovascular system may be electrical stimulation, polarization, depolarization, repolarization, action potential etc. Electrical activity may be depicted using electrocardiogram (ECG) signals. It should be noted that ECG signals may be analog or digital which may refer to electrical activity recorded over time, and a digital representation of the electrical activity of the heart recorded over time. As used in the current disclosure, a “electrocardiogram (ECG) signal” is a signal representative of electrical activity of heart. The ECG signal may consist of several distinct waves and intervals, each representing a different phase of the cardiac cycle. These waves may include the P-wave, QRS complex, T wave, U wave, and the like. The P-wave may represent atrial depolarization (contraction) as the electrical impulse spreads through the atria. The QRS complex may represent ventricular depolarization (contraction) as the electrical impulse spreads through the ventricles. The QRS complex may include three waves: Q wave, R wave, and S wave. The T-wave may represent ventricular repolarization (recovery) as the ventricles prepare for the next contraction. The U-wave may sometimes be present after the T wave, it represents repolarization of the Purkinje fibers. The intervals between these waves provide information about the duration and regularity of various phases of the cardiac cycle. The ECG signal can help diagnose various heart conditions, such as arrhythmias, myocardial infarction (heart attack), conduction abnormalities, and electrolyte imbalances. As used in this disclosure, “Echocardiogram processes” refers to usage of ultrasound imaging and/or Doppler ultrasound in measurement of the cardiovascular system distances, abnormalities, irregularities, cardiac cycle etc. It should be noted that Echocardiogram processes are not limited to ultrasound and/or Doppler ultrasound. The ultrasound may consist of acoustic waves with a frequency range or ranges. As used in this disclosure, “heart health” refers to the state at which the cardiovascular system is operating which includes, but not limited to, rest, excitation, stimulation, irregular, abnormal, etc.</p>
+   
+   <p>
+[0014]
+ Still referring to FIG. 1, cardiogram data examples 108 may include data collected using non-invasive processes for recording data concerning a person’s heart, including without limitation ECG, echocardiogram, and/or any other such procedures. In a non-limiting example, ECG signals may be recorded in an analog, non-digital format; alternatively, ECG signals may be recorded and/or stored digitally. Cardiogram data examples 108 may involve the use of paper or other analog recording mediums to graphically represent the electrical activity of the heart. Cardiogram data examples 108 may further refer to the traditional methods of recording and storing echocardiogram data in an analog or digital way. In some embodiments, the analog electrical signals from the heart are recorded directly onto special ECG paper. In some embodiments, the ultrasound images from the heart are recorded on special echocardiogram paper or recorded in a digital manner. ECG paper typically has a grid pattern with horizontal and vertical lines, which helps in measuring the time and voltage of the ECG waveforms. Cardiogram data examples 108 also may use electrodes placed on the patient's skin. The electrodes may be connected to leads that transmit the electrical signals to the recording device. Different lead configurations may be used, such as the 12-lead system, 6-lead system, 3-lead system, etc., each providing a different perspective of the heart's electrical activity. Cardiogram data examples 108 may reflect electrical activity of the heart is continuously recorded as a series of analog waveforms on the ECG paper. Cardiogram data examples 108 may further reflect the blood flow velocity within the heart and vessels, real time slice images of the heart. For the ECG, the most important components of these waveforms include the P-wave, QRS complex, and T-wave, which represent different phases of the cardiac cycle.</p>
+   
+   <p>
+[0015]
+ With continued reference to FIG 1, cardiac catheterization data parameters may also include right heart catheterization data (RHCD). As used in this disclosure “right heart catheterization data”, or “RHCD” refers to a subset of cardiac catheterization data typically focusing on the right side of the heart. This area includes, but is not limited to, the superior and inferior venae cavae, right atrium, tricuspid valve, right ventricle, pulmonary semilunar valves, pulmonary arteries, etc. It should be noted that cardiac catheterization data may include an aggregation of data stemming from ECG processes and Echocardiogram processes. </p>
+   <p>
+[0016]
+ Still referring to FIG 1, data stemming from ECG processes may refer to the digital methods of recording and storing ECG signals in a digital format. This may include formats such as DICOM, HL7, or simple text-based formats. These files contain the time and voltage measurements, patient information, and metadata. In an embodiment, digital ECG data may be received from a database, application program interface (API), electronic health records, and the like. As used in the current disclosure, “electronic health records” are digital records containing a patient's medical history, diagnoses, medications, treatment plans, and other relevant information. EHRs are used by healthcare providers to track and manage patient care. In an embodiment, digital ECG data may include a plurality of metadata. As used in the current disclosure, “metadata” refers to descriptive or informational data that provides details about the digital ECG data. Metadata may include descriptive metadata, wherein descriptive metadata is configured to describe the content, context, and structure of the data. In an embodiment, metadata may include data regarding the lead system the digital ECG data was recording. ECGs are typically recorded using multiple leads, each of which provides a different view of the heart's electrical activity. Common lead systems include the 12-lead, 6-lead, 3-lead, and single-lead ECGs. The specific lead system used to generate the digital ECG data and their configurations may be documented in the metadata. In some embodiments, metadata associated with the digital ECG data may include information such as time, geographic location, medical facility names, medical professional logs, patient names, patient IDs, patient data, along with any other patient specific data. Metadata may be used to describe records of how the data has been accessed, utilized, or modified over time, aiding in understanding data usage patterns, and optimizing access.</p>
+   
+   <p>
+[0017]
+ With continued reference to FIG 1, processor 104 may be configured to train a catheter data predictor 120 using the plurality of cardiogram data examples 108. As described in this disclosure, “catheter data predictor” refers to a type of machine learning (ML) model or algorithm used for predicting cardiac catheterization data. It should be noted that ML will be defined below in FIG 2 description. The catheter data predictor may learn from supplied cardiogram data examples. Training a catheter data predictor using the plurality of cardiogram data examples 108 includes using a machine learning model. The catheter data predictor uses an ML model which outputs comparison results between cardiogram data examples and training data. This ML model may include using a machine learning algorithm such as a comparison function classifier 124. A ML model may include training a comparison function classifier 124 with a plurality of cardiogram data examples 108 correlated to a plurality of cardiac catheterization data indicating inconsistencies between the plurality of training data and the plurality of cardiogram data. It should be noted that the training data here may be externally or locally supplied. It should further be noted that the training data may be used as a baseline for the ML model to compare with. A ML model may also include inputting the training cardiac catheterization data 116 into the comparison function classifier 124. It may further include outputting, by the comparison function classifier 124, a prediction of the plurality of catheterization parameters 128. A comparison function classifier 124 may be configured to receive cardiogram data examples 108 and cardiac catheterization data examples 152. It should be noted that training data 116 may contain cardiogram data examples 108 and cardiac catheterization data examples 152. It should further be noted that the training data can be locally or externally provided. A comparison function classifier 124 may also be configured to output the prediction of the plurality of catheterization parameters 128. A comparison function classifier 124 may include a performance enhancement program 132. A performance enhancement program 132 may act as a rational agent to predict the most accurate catheterization data. The result may be in machine-readable format and/or other formats. In non-limiting examples, these formats may include CSV (comma-separated values), JSON (JavaScript Object Notation), HDF5 (Hierarchical Data Format version 5), DICOM (Digital Imaging and Communications in Medicine), XML (Extensible Markup Language), RDF (Resource Description Framework), etc.</p>
+   
+   <p>
+[0018]
+ With continued reference to FIG 1, processor 104 may be further configured to refine a plurality of cardiogram data examples using a machine learning model. A machine learning model may include using a machine learning algorithm such as a recognition classifier 112. A machine learning model may further include training a recognition classifier 112 with cardiogram data examples 108 comprising a plurality of cardiogram data correlated to a plurality of textbook validators of cardiac catheterization parameters. It should be noted that training data 116 may be equivalent to cardiogram data examples in the context of the recognition classifier 112. It should further be noted that the training data inputs may be user inputs or measured catheterization processes, or other forms of inputs and may be locally stored in processor 104. This machine learning model may input the plurality of cardiogram data into the recognition classifier 112. Lastly, a recognition classifier 112 may further be configured to output the plurality of preliminary cardiac catheterization parameters 116. It should be noted that a ML model aids in improving the performance of apparatus 100 because of the increased accuracy of the output of cardiac catheterization parameters 148. Recognition classifier 112 refines the cardiogram data examples 108 to produce cardiac data signal(s) 136 for usage within prognosis classifier 140.</p>
+   <p>
+[0019]
+ With continued reference to FIG 1, catheter data predictor 120 may include a neural network. A neural network is a nonlimiting example of a machine learning model. A neural network may include a deep learning network. Nonlimiting embodiments of a neural network are feedforward networks, convolutional networks, recurrent neural networks, recursive neural networks, Echo state networks, deep recurrent networks etc. It is to be noted that a neural network and a deep learning network will be defined below in FIG 3 description.</p>
+   <p>
+[0020]
+ With continued reference to FIG 1, processor 104 may be configured to input a plurality of cardiogram data signals 136 into prognosis classifier 140 using a machine learning model. It should be noted that processor 104 may obviate right heart catheterization parameters. The machine learning model selects at least one cardiogram data signal from a plurality of cardiogram data examples 108, and inputs at least one cardiogram data signal 136 from the plurality of cardiogram data examples 108 into prognosis classifier 140. It should be noted that training data 116 may come from user inputs or cardiogram measured processes. </p>
+   
+   <p>
+[0021]
+ Still referring to FIG 1, processor 104 may be configured to generate a plurality of cardiac catheterization parameters from a plurality of cardiogram data signals 136 and prediction data from a catheter data predictor 120. Generating may include using a machine learning algorithm such as a prognosis classifier 140. Prognosis classifier 140 creates the predictions of cardiac catheterization parameter data 148, which may include RHCD. Generating may include training a prognosis classifier 140 with training data 116 correlating cardiac catheterization data to a plurality of cardiac catheterization data. It may then include inputting the cardiac catheterization data into the prognosis classifier. It may further include outputting, by prognosis classifier 140, one or more cardiac catheterization data indicating accordance and discordance. Prognosis classifier 140 may indicate whether the predicted data agrees with a family of cardiac catheterization data or whether the data is diverging from the actual catheterization data.</p>
+   <p>
+[0022]
+ Still referring to FIG 1, catheterization parameters includes at least one cardiac catheterization parameters, including without limitation atrial pressure, ventricular pressure, pulmonary artery pressure, pulmonary capillary pressure, pulmonary vascular resistance, cardiac output, ejection fraction, blood oxygenation, among other relevant parameters. In some non-limiting embodiments, cardiac catheterization parameters may include right heart catheterization parameters. Right heart catheterization parameters may include a subset of the enumerated list of parameters above such as right atrium pressure, right ventricle pressure and pulmonary artery pressure.</p>
+   <p>
+[0023]
+ With continued reference to FIG. 1, cardiogram data examples 108 may be recorded and stored on various physical mediums. Cardiogram data examples 108 may be stored on cardiogram data paper or stored in digital format. ECG machines printed the electrical waveforms directly onto a roll or sheets of special ECG paper. Echocardiogram machines may print the ultrasound imaging directly onto a roll of sheets of a special physical medium. The resulting ECG tracings were a graphical representation of the heart's electrical activity over time. These paper printouts were often physically archived in patient medical records. Cardiogram data examples 108 could also be recorded and stored on magnetic tape. Specialized magnetic tape recorders may be used to capture the analog signal, which could then be played back for analysis. This medium allowed for easier archiving and retrieval compared to paper. In some cases, cardiogram data examples 108 may be recorded onto analog audio cassette tapes. While primarily designed for audio, these tapes could be adapted for ECG signal storage, especially in ambulatory monitoring systems. The signal could be played back and analyzed using dedicated equipment. Cardiogram data examples 108 could be stored on photographic film, similar to how images are stored on film. These films used light exposure to capture the ECG waveforms and could be processed and printed for analysis or archiving. In a few cases, ECG data 108 may be stored on analog magnetic disk drives, similar to early computer storage systems. These systems were less common for ECG signal storage but were used in some research or specialized applications. Echocardiogram data can be displayed and stored in a short/long-axis manner and other manner of display. Long Axis display is a standard method of heart imaging display.</p>
+   
+   <p>
+[0024]
+ Still referring to FIG. 1, converting image data to digitized cardiogram data examples signals 128 may include preprocessing cardiogram data examples 108 to enhance the image quality. Preprocessing may include converting the color image to grayscale, adjusting contrast and brightness, cropping or resizing the image, applying filters (e.g., Gaussian, median) to reduce noise and the like. Processing cardiogram data examples 108 may include performing thresholding or edge detection, to separate the cardiogram data examples 112 from the background and grid lines. Using edge detection algorithms (e.g., Sobel, Canny) or morphological operations (e.g., dilation, erosion) may emphasize the boundaries of the cardiogram data examples 112, isolate the ECG waveform from the rest of the image, and extract the region of interest containing the ECG waveform. Furthermore, recognition classifier 112 may detect specific heart tissues, black zones (i.e. echo-free zones) within the heart, depth perception, and timing. Processing the cardiogram data examples 108 may include using peak detection algorithms or signal processing techniques to identify significant points, such as identifying R-peaks within a QRS complex. Peak detection algorithms may include threshold-based methods wherein a threshold value determines which peaks are identified. Peaks exceeding this threshold may be considered significant. Processing the ECG printout may include. Processing the cardiogram data examples 108, may include using image processing and recognition algorithms, such as identifying the depth in heart tissue correlated with timed response per cardiac cycle. </p>
+   
+   <p>
+[0025]
+ Still referring to FIG. 1, after determining the digital format, processor 104 may determine a temporal relationship between sampled points. A "sampled point" refers to a measurement of the electrical activity of the heart at a specific point in time. Processor 104 may be configured to determine the time duration covered by each pixel column or row in the digital representation/format. If the image was captured at a specific rate, this information may be used to calculate the time duration between pixels. For example, calibration marks or information on the printout indicating the time duration may be represented by a certain length or number of pixels on the cardiac data examples 108. Processor 104 may be configured to recognize these calibration marks and use them to establish a relationship between the physical dimensions on the printout and the corresponding time duration. In another embodiment, the cardiogram data examples 108 may include textual information indicating the paper speed or time intervals. Processor 104 may use OCR (optical character recognition) algorithms to extract and interpret this information, wherein the OCR is trained to recognize specific patterns or keywords related to temporal scaling. The temporal relationship between sampled points may ensure that the digital representation/format accurately reflects the timing of the original cardiogram data examples 112.</p>
+   <p>
+[0026]
+ Still referring to FIG. 1, based on the mapping and temporal durations steps described above, processor 104 may organize the data representations/formats into an array structure to generate preliminary cardiac catheterization data 116. The array may be one-dimensional or two-dimensional depending on the ECG and/or Echocardiogram data. In embodiments where the ECG data is one-dimensional, the array may have a single row or column where each element corresponds to the voltage value at a specific moment in time. In embodiments where the ECG data is two-dimensional, the array may have rows and columns, where each row represents a specific moment in time, and each column represents a spatial position along the ECG waveform. In embodiments where the Echocardiogram data is one-dimensional, the array may have a single row or column, where each element corresponds to the heart rhythm breathing blood pressure or interval timing of heart rhythm. In embodiments where the Echocardiogram data is two-dimensional, the array may have rows and columns, where each row represents a moment in time, and each column represents heart rhythm or breathing or blood pressure. Each row or column in the array represents a specific moment in time, and the values in that row or column represent the amplitude of the ECG signal at that time or the Echocardiogram measure of blood pressure or heart rhythm. The preliminary cardiac catheterization data 116 may be in a machine-readable formation for further integration into software programs and analysis. In nonlimiting examples, formats may include CSV (Comma-Separated Values) where each row represents a time point, and columns represent different parameters or features, including time and voltage or pressure. Other examples of formats may include JSON (JavaScript Object Notation), HDF5 (Hierarchical Data Format version 5), DICOM (Digital Imaging and Communications in Medicine), and the like. It should be noted that data stemming from cardiogram data examples may be multidimensional, and an array may accommodate for multidimensional data in the preliminary cardiac catheterization data 116.</p>
+   
+   <p>
+[0027]
+ Still referring to FIG 1, for example, processor 104 may be communicatively connected to a user interface 144, wherein the digital ECG may be transmitted and displayed, and processor 104 may receive user input. A “user interface,” as used herein, is a means by which a user and a computer system interact; for example, through the use of input devices and software. A user interface 144 may include a graphical user interface 144 (GUI), command line interface (CLI), menu-driven user interface, touch user interface, voice user interface (VUI), form-based user interface, any combination thereof, and the like. A user interface 144 may include a smartphone, smart tablet, desktop, or laptop operated by the user. In an embodiment, the user interface 144 may include a graphical user interface. A “graphical user interface (GUI),” as used herein, is a graphical form of user interface 44 that allows users to interact with electronic devices. In some embodiments, GUI may include icons, menus, other visual indicators, or representations (graphics), audio indicators such as primary notation, and display information and related user controls. A menu may contain a list of choices and may allow users to select one from them. A menu bar may be displayed horizontally across the screen such as pull-down menu. When any option is clicked in this menu, then the pulldown menu may appear. A menu may include a context menu that appears only when the user performs a specific action. An example of this is pressing the right mouse button. When this is done, a menu may appear under the cursor. Files, programs, web pages and the like may be represented using a small picture in a graphical user interface. For example, links to decentralized platforms as described in this disclosure may be incorporated using icons. Using an icon may be a fast way to open documents, run programs etc. because clicking on them yields instant access. Information contained in user interface 144 may be directly influenced using graphical control elements such as widgets. A “widget,” as used herein, is a user control element that allows a user to control and change the appearance of elements in the user interface 144. In this context a widget may refer to a generic GUI element such as a check box, button, or scroll bar to an instance of that element, or to a customized collection of such elements used for a specific function or application (such as a dialog box for users to customize their computer screen appearances). User interface 144 controls may include software components that a user interacts with through direct manipulation to read or edit information displayed through user interface 144. Widgets may be used to display lists of related items, navigate the system using links, tabs, and manipulate data using check boxes, radio boxes, and the like.</p>
+   
+   <p>
+[0028]
+ Still referring to FIG. 1, cardiac catheterization data 148 may be a representation of the quality of the prognosis data. Cardiac catheterization data 148 may be in the form of a quality prognosis. As used in this disclosure, a “quality prognosis” refers to a report including predictive catheterization data 148. Quality prognosis may be a physical or digital manifestation of cardiac catheterization data. It should be noted that predictive catheterization data may be cardiac catheterization data parameters 148. For example, cardiac catheterization data 148 may regard the quality of the cardiogram data examples 108. Quality prognosis may include an auditory representation such an auditory, message alert, or notification transmitted through the user interface 144. An auditory representation may include sounds to indicate a pass status or a fail status regarding the overall quality of the predictive catheterization data. Quality prognosis may include a visual representation, displayed through the user interface 144, regarding the quality status of the predictive catheterization data. The visual representation may include a report or assessment detailing the accuracy score for each cardiac catheterization data parameter 148. The visual representation may include information describing the clarity and fidelity of the cardiogram data examples 112, such as the presence of noise or interference, signal artifacts, such as baseline wander or electrical interference, and the like. The visual representation may include information describing the alignment of the ECG waveforms within the grid, as poor alignment hinders accurate measurement of intervals and durations. Furthermore, the visual representation may include information describing the clarity and form of the Echocardiogram imagery. The visual representation may include information describing an incomplete assessment, such as an inadequate duration of the recording for comprehensive analysis. The visual representation may include information recognizing and labeling artifacts caused by patient movement or other external factors. Data derived from image processing techniques and other algorithms as disclosed above may be used to generate the quality prognosis. In some embodiments, a machine learning model, such as a prognosis classifier 140, may be used to classify cardiogram data examples 108, preliminary cardiac catheterization data 116, and/or cardiac data signal(s) 136 to one or more flags. A “flag,” as used herein, is a label indicating an issue with cardiogram data examples 108. A flag may be information detailed in a visual representation as described above, such as patient movement, unclear cardiogram data examples 108, presence of noise and the like. Prognosis classifier 140 training data may include data correlating cardiogram data examples 108, preliminary cardiac catheterization data 116, and/or cardiac data signal(s) 136, to a plurality of flags. </p>
+   
+   <p>
+[0029]
+ Still referring to FIG 1, machine learning models and computer-based technology for analyzing physiological electrical data and echocardiogram data as described herein may be validated, recognized, predicted etc. Processor 104 may use methods such as correlating echocardiogram data to prediction data as described in United States Patent Application Publication No. US 2020/0397313 A1 published on December 24, 2020, and entitled “ECG-BASED CARDIAC EJECTION-FRACTION SCREENING,” the entirety of which is incorporated herein by reference. </p>
+   <p>
+[0030]
+ Still referring to FIG 1, machine learning models and computer-based technology for analyzing physiological electrical data as described herein may be validated, recognized, predicted, etc. </p>
+   <p>
+[0031]
+ Still referring to FIG. 1, machine learning models as described herein improve the performance power of processor 104 by optimizing processor functionality. For example, machine learning models can be effectively trained on extensive and diverse datasets, additionally encompassing individuals from various ethnicities, to understand intricate patterns and variations in cardiac data examples 112. It should be noted that these datasets may be created by classifying data to cohorts and then combined to ensure desired proportions of different types of data. This approach enhances the model's ability to identify parameters accurately and consistently, thereby minimizing the risk of human interpretation errors. For example, comparison function classifier 124 may be trained on an extensive and diverse dataset, ensuring that it can accommodate the subtle differences in ECG and Echocardiogram characteristics among individuals of different ethnic backgrounds. This inclusive training approach may empower processor 104 to interpret cardiac data examples 112 from quantitative measuring and determine preliminary cardiac catheterization parameters 116 with greater accuracy and adaptability to the diverse characteristics present in real-world scenarios. Without the implementation of a machine-learning model, there would be a trade in the performance power of processor 104, such as time and accuracy, in order to sort the data and generate preliminary cardiac catheterization parameters 116 that play a critical role in validating ECG and/or Echocardiogram data as described above. The ability to continuously train a machine-learning model cable of learning to identify new trends or correlations within a fluctuating quantity of data is a benefit that would not be realized otherwise, without the tradeoff in performance efficiency. </p>
+   
+   <p>
+[0032]
+ Referring now to FIG. 2, an exemplary embodiment of a machine-learning module 200 that may perform one or more machine-learning processes as described in this disclosure is illustrated. Machine-learning module may perform determinations, classification, and/or analysis steps, methods, processes, or the like as described in this disclosure using machine learning processes. A “machine learning process,” as used in this disclosure, is a process that automatedly uses training data 204 to generate an algorithm instantiated in hardware or software logic, data structures, and/or functions that will be performed by a computing device/module to produce outputs 208 given data provided as inputs 212; this is in contrast to a non-machine learning software program where the commands to be executed are determined in advance by a user and written in a programming language.</p>
+   <p>
+[0033]
+ Still referring to FIG. 2, “training data,” as used herein, is data containing correlations that a machine-learning process may use to model relationships between two or more categories of data elements. For instance, and without limitation, training data 204 may include a plurality of data entries, also known as “training examples,” each entry representing a set of data elements that were recorded, received, and/or generated together; data elements may be correlated by shared existence in a given data entry, by proximity in a given data entry, or the like. Multiple data entries in training data 204 may evince one or more trends in correlations between categories of data elements; for instance, and without limitation, a higher value of a first data element belonging to a first category of data element may tend to correlate to a higher value of a second data element belonging to a second category of data element, indicating a possible proportional or other mathematical relationship linking values belonging to the two categories.  Multiple categories of data elements may be related in training data 204 according to various correlations; correlations may indicate causative and/or predictive links between categories of data elements, which may be modeled as relationships such as mathematical relationships by machine-learning processes as described in further detail below. Training data 204 may be formatted and/or organized by categories of data elements, for instance by associating data elements with one or more descriptors corresponding to categories of data elements. As a non-limiting example, training data 204 may include data entered in standardized forms by persons or processes, such that entry of a given data element in a given field in a form may be mapped to one or more descriptors of categories. Elements in training data 204 may be linked to descriptors of categories by tags, tokens, or other data elements; for instance, and without limitation, training data 204 may be provided in fixed-length formats, formats linking positions of data to categories such as comma-separated value (CSV) formats and/or self-describing formats such as extensible markup language (XML), JavaScript Object Notation (JSON), or the like, enabling processes or devices to detect categories of data.</p>
+   
+   <p>
+[0034]
+ Alternatively, or additionally, and continuing to refer to FIG. 2, training data 204 may include one or more elements that are not categorized; that is, training data 204 may not be formatted or contain descriptors for some elements of data. Machine-learning algorithms and/or other processes may sort training data 204 according to one or more categorizations using, for instance, natural language processing algorithms, tokenization, detection of correlated values in raw data and the like; categories may be generated using correlation and/or other processing algorithms. As a non-limiting example, in a corpus of text, phrases making up a number “n” of compound words, such as nouns modified by other nouns, may be identified according to a statistically significant prevalence of n-grams containing such words in a particular order; such an n-gram may be categorized as an element of language such as a “word” to be tracked similarly to single words, generating a new category as a result of statistical analysis. Similarly, in a data entry including some textual data, a person’s name may be identified by reference to a list, dictionary, or other compendium of terms, permitting ad-hoc categorization by machine-learning algorithms, and/or automated association of data in the data entry with descriptors or into a given format. The ability to categorize data entries automatedly may enable the same training data 204 to be made applicable for two or more distinct machine-learning algorithms as described in further detail below. Training data 204 used by machine-learning module 200 may correlate any input data as described in this disclosure to any output data as described in this disclosure. </p>
+   
+   <p>
+[0035]
+ Further referring to FIG. 2, training data may be filtered, sorted, and/or selected using one or more supervised and/or unsupervised machine-learning processes and/or models as described in further detail below; such models may include without limitation a training data classifier 216. Training data classifier 216 may include a “classifier,” which as used in this disclosure is a machine-learning model as defined below, such as a data structure representing and/or using a mathematical model, neural net, or program generated by a machine learning algorithm known as a “classification algorithm,” as described in further detail below, that sorts inputs into categories or bins of data, outputting the categories or bins of data and/or labels associated therewith. A classifier may be configured to output at least a datum that labels or otherwise identifies a set of data that are clustered together, found to be close under a distance metric as described below, or the like. A distance metric may include any norm, such as, without limitation, a Pythagorean norm. Machine-learning module 200 may generate a classifier using a classification algorithm, defined as a process whereby a computing device and/or any module and/or component operating thereon derives a classifier from training data 204. Classification may be performed using, without limitation, linear classifiers such as without limitation logistic regression and/or naive Bayes classifiers, nearest neighbor classifiers such as k-nearest neighbors classifiers, support vector machines, least squares support vector machines, fisher’s linear discriminant, quadratic classifiers, decision trees, boosted trees, random forest classifiers, learning vector quantization, and/or neural network-based classifiers. As a non-limiting example, training data classifier 216 may classify elements of training data to [something that characterizes a sub-population, such as a cohort of persons and/or other analyzed items and/or phenomena for which a subset of training data may be selected].</p>
+   <p>
+[0036]
+ Still referring to FIG. 2, computing device 204 may be configured to generate a classifier using a Naïve Bayes classification algorithm. Naïve Bayes classification algorithm generates classifiers by assigning class labels to problem instances, represented as vectors of element values. Class labels are drawn from a finite set. Naïve Bayes classification algorithm may include generating a family of algorithms that assume that the value of a particular element is independent of the value of any other element, given a class variable. Naïve Bayes classification algorithm may be based on Bayes Theorem expressed as P(A/B)= P(B/A) P(A)÷P(B), where P(A/B) is the probability of hypothesis A given data B also known as posterior probability; P(B/A) is the probability of data B given that the hypothesis A was true; P(A) is the probability of hypothesis A being true regardless of data also known as prior probability of A; and P(B) is the probability of the data regardless of the hypothesis.  A naïve Bayes algorithm may be generated by first transforming training data into a frequency table. Computing device 204 may then calculate a likelihood table by calculating probabilities of different data entries and classification labels. Computing device 204 may utilize a naïve Bayes equation to calculate a posterior probability for each class. A class containing the highest posterior probability is the outcome of prediction. Naïve Bayes classification algorithm may include a gaussian model that follows a normal distribution. Naïve Bayes classification algorithm may include a multinomial model that is used for discrete counts. Naïve Bayes classification algorithm may include a Bernoulli model that may be utilized when vectors are binary.</p>
+   
+   <p>
+[0037]
+ With continued reference to FIG. 2, computing device 204 may be configured to generate a classifier using a K-nearest neighbors (KNN) algorithm. A “K-nearest neighbors algorithm” as used in this disclosure, includes a classification method that utilizes feature similarity to analyze how closely out-of-sample- features resemble training data to classify input data to one or more clusters and/or categories of features as represented in training data; this may be performed by representing both training data and input data in vector forms, and using one or more measures of vector similarity to identify classifications within training data, and to determine a classification of input data. K-nearest neighbors algorithm may include specifying a K-value, or a number directing the classifier to select the k most similar entries training data to a given sample, determining the most common classifier of the entries in the database, and classifying the known sample; this may be performed recursively and/or iteratively to generate a classifier that may be used to classify input data as further samples. For instance, an initial set of samples may be performed to cover an initial heuristic and/or “first guess” at an output and/or relationship, which may be seeded, without limitation, using expert input received according to any process as described herein. As a non-limiting example, an initial heuristic may include a ranking of associations between inputs and elements of training data. Heuristic may include selecting some number of highest-ranking associations and/or training data elements.</p>
+   <p>
+[0038]
+ With continued reference to FIG. 2, generating k-nearest neighbors algorithm may generate a first vector output containing a data entry cluster, generating a second vector output containing an input data, and calculate the distance between the first vector output and the second vector output using any suitable norm such as cosine similarity, Euclidean distance measurement, or the like. Each vector output may be represented, without limitation, as an n-tuple of values, where n is at least two values. Each value of n-tuple of values may represent a measurement or other quantitative value associated with a given category of data, or attribute, examples of which are provided in further detail below; a vector may be represented, without limitation, in n-dimensional space using an axis per category of value represented in n-tuple of values, such that a vector has a geometric direction characterizing the relative quantities of attributes in the n-tuple as compared to each other. Two vectors may be considered equivalent where their directions, and/or the relative quantities of values within each vector as compared to each other, are the same; thus, as a non-limiting example, a vector represented as [5, 10, 15] may be treated as equivalent, for purposes of this disclosure, as a vector represented as [1, 2, 3]. Vectors may be more similar where their directions are more similar, and more different where their directions are more divergent; however, vector similarity may alternatively or additionally be determined using averages of similarities between like attributes, or any other measure of similarity suitable for any n-tuple of values, or aggregation of numerical similarity measures for the purposes of loss functions as described in further detail below. Any vectors as described herein may be scaled, such that each vector represents each attribute along an equivalent scale of values. Each vector may be “normalized,” or divided by a “length” attribute, such as a length attribute l as derived using a Pythagorean norm: 
+
+l
+=
+∑
+
+i
+=
+0
+n
+ 
+    a
+ 
+ 
+    i
+ 
+2
+, where a
+i is attribute number i of the vector. Scaling and/or normalization may function to make vector comparison independent of absolute quantities of attributes, while preserving any dependency on similarity of attributes; this may, for instance, be advantageous where cases represented in training data are represented by different quantities of samples, which may result in proportionally equivalent vectors with divergent values. </p>
+   
+   <p>
+[0039]
+ With further reference to FIG. 2, training examples for use as training data may be selected from a population of potential examples according to cohorts relevant to an analytical problem to be solved, a classification task, or the like. Alternatively, or additionally, training data may be selected to span a set of likely circumstances or inputs for a machine-learning model and/or process to encounter when deployed. For instance, and without limitation, for each category of input data to a machine-learning process or model that may exist in a range of values in a population of phenomena such as images, user data, process data, physical data, or the like, a computing device, processor, and/or machine-learning model may select training examples representing each possible value on such a range and/or a representative sample of values on such a range. Selection of a representative sample may include selection of training examples in proportions matching a statistically determined and/or predicted distribution of such values according to relative frequency, such that, for instance, values encountered more frequently in a population of data so analyzed are represented by more training examples than values that are encountered less frequently. Alternatively, or additionally, a set of training examples may be compared to a collection of representative values in a database and/or presented to a user, so that a process can detect, automatically or via user input, one or more values that are not included in the set of training examples. Computing device, processor, and/or module may automatically generate a missing training example; this may be done by receiving and/or retrieving a missing input and/or output value and correlating the missing input and/or output value with a corresponding output and/or input value collocated in a data record with the retrieved value, provided by a user and/or other device, or the like.</p>
+   
+   <p>
+[0040]
+ Continuing to refer to FIG. 2, computer, processor, and/or module may be configured to preprocess training data. “Preprocessing” training data, as used in this disclosure, is transforming training data from raw form to a format that can be used for training a machine learning model. Preprocessing may include sanitizing, feature selection, feature scaling, data augmentation and the like. </p>
+   <p>
+[0041]
+ Still referring to FIG. 2, computer, processor, and/or module may be configured to sanitize training data. “Sanitizing” training data, as used in this disclosure, is a process whereby training examples are removed that interfere with convergence of a machine-learning model and/or process to a useful result. For instance, and without limitation, a training example may include an input and/or output value that is an outlier from typically encountered values, such that a machine-learning algorithm using the training example will be adapted to an unlikely amount as an input and/or output; a value that is more than a threshold number of standard deviations away from an average, mean, or expected value, for instance, may be eliminated. Alternatively, or additionally, one or more training examples may be identified as having poor quality data, where “poor quality” is defined as having a signal to noise ratio below a threshold value. Sanitizing may include steps such as removing duplicative or otherwise redundant data, interpolating missing data, correcting data errors, standardizing data, identifying outliers, and the like. In a nonlimiting example, sanitization may include utilizing algorithms for identifying duplicate entries or spell-check algorithms.</p>
+   
+   <p>
+[0042]
+ As a non-limiting example, and with further reference to FIG. 2, images used to train an image classifier or other machine-learning model and/or process that takes images as inputs or generates images as outputs may be rejected if image quality is below a threshold value. For instance, and without limitation, computing device, processor, and/or module may perform blur detection, and eliminate one or more Blur detection may be performed, as a non-limiting example, by taking Fourier transform, or an approximation such as a Fast Fourier Transform (FFT) of the image and analyzing a distribution of low and high frequencies in the resulting frequency-domain depiction of the image; numbers of high-frequency values below a threshold level may indicate blurriness. As a further non-limiting example, detection of blurriness may be performed by convolving an image, a channel of an image, or the like with a Laplacian kernel; this may generate a numerical score reflecting a number of rapid changes in intensity shown in the image, such that a high score indicates clarity, and a low score indicates blurriness. Blurriness detection may be performed using a gradient-based operator, which measures operators based on the gradient or first derivative of an image, based on the hypothesis that rapid changes indicate sharp edges in the image, and thus are indicative of a lower degree of blurriness. Blur detection may be performed using Wavelet -based operator, which takes advantage of the capability of coefficients of the discrete wavelet transform to describe the frequency and spatial content of images. Blur detection may be performed using statistics-based operators take advantage of several image statistics as texture descriptors in order to compute a focus level. Blur detection may be performed by using discrete cosine transform (DCT) coefficients in order to compute a focus level of an image from its frequency content.</p>
+   <p>
+[0043]
+ Continuing to refer to FIG. 2, computing device, processor, and/or module may be configured to precondition one or more training examples. For instance, and without limitation, where a machine learning model and/or process has one or more inputs and/or outputs requiring, transmitting, or receiving a certain number of bits, samples, or other units of data, one or more training examples’ elements to be used as or compared to inputs and/or outputs may be modified to have such a number of units of data. For instance, a computing device, processor, and/or module may convert a smaller number of units, such as in a low pixel count image, into a desired number of units, for instance by upsampling and interpolating. As a non-limiting example, a low pixel count image may have 100 pixels, however a desired number of pixels may be 128. Processor may interpolate the low pixel count image to convert the 100 pixels into 128 pixels. It should also be noted that one of ordinary skill in the art, upon reading this disclosure, would know the various methods to interpolate a smaller number of data units such as samples, pixels, bits, or the like to a desired number of such units. In some instances, a set of interpolation rules may be trained by sets of highly detailed inputs and/or outputs and corresponding inputs and/or outputs downsampled to smaller numbers of units, and a neural network or other machine learning model that is trained to predict interpolated pixel values using the training data. As a non-limiting example, a sample input and/or output, such as a sample picture, with sample-expanded data units (e.g., pixels added between the original pixels) may be input to a neural network or machine-learning model and output a pseudo replica sample-picture with dummy values assigned to pixels between the original pixels based on a set of interpolation rules. As a non-limiting example, in the context of an image classifier, a machine-learning model may have a set of interpolation rules trained by sets of highly detailed images and images that have been downsampled to smaller numbers of pixels, and a neural network or other machine learning model that is trained using those examples to predict interpolated pixel values in a facial picture context. As a result, an input with sample-expanded data units (the ones added between the original data units, with dummy values) may be run through a trained neural network and/or model, which may fill in values to replace the dummy values. Alternatively or additionally, processor, computing device, and/or module may utilize sample expander methods, a low-pass filter, or both. As used in this disclosure, a “low-pass filter” is a filter that passes signals with a frequency lower than a selected cutoff frequency and attenuates signals with frequencies higher than the cutoff frequency. The exact frequency response of the filter depends on the filter design. Computing device, processor, and/or module may use averaging, such as luma or chroma averaging in images, to fill in data units in between original data units.</p>
+   
+   <p>
+[0044]
+ In some embodiments, and with continued reference to FIG. 2, computing device, processor, and/or module may down-sample elements of a training example to a desired lower number of data elements. As a non-limiting example, a high pixel count image may have 256 pixels, however a desired number of pixels may be 128. Processor may down-sample the high pixel count image to convert the 256 pixels into 128 pixels. In some embodiments, processor may be configured to perform downsampling on data. Downsampling, also known as decimation, may include removing every Nth entry in a sequence of samples, all but every Nth entry, or the like, which is a process known as “compression,” and may be performed, for instance by an N-sample compressor implemented using hardware or software. Anti-aliasing and/or anti-imaging filters, and/or low-pass filters, may be used to clean up side-effects of compression.</p>
+   
+   <p>
+[0045]
+ Further referring to FIG. 2, feature selection includes narrowing and/or filtering training data to exclude features and/or elements, or training data including such elements, that are not relevant to a purpose for which a trained machine-learning model and/or algorithm is being trained, and/or collection of features and/or elements, or training data including such elements, on the basis of relevance or utility for an intended task or purpose for a trained machine-learning model and/or algorithm is being trained. Feature selection may be implemented, without limitation, using any process described in this disclosure, including without limitation using training data classifiers, exclusion of outliers, or the like.</p>
+   <p>
+[0046]
+ With continued reference to FIG. 2, feature scaling may include, without limitation, normalization of data entries, which may be accomplished by dividing numerical fields by norms thereof, for instance as performed for vector normalization. Feature scaling may include absolute maximum scaling, wherein each quantitative datum is divided by the maximum absolute value of all quantitative data of a set or subset of quantitative data. Feature scaling may include min-max scaling, in which each value 
+
+X
+
+ has a minimum value 
+X
+m
+i
+n
+&nbsp;
+
+in a set or subset of values subtracted therefrom, with the result divided by the range of the values, give maximum value in the set or subset 
+X
+m
+a
+x
+: 
+X
+n
+e
+w
+=
+X
+-
+X
+m
+i
+n
+X
+m
+a
+x
+-
+X
+m
+i
+n
+. Feature scaling may include mean normalization, which involves use of a mean value of a set and/or subset of values, 
+X
+m
+e
+a
+n
+ with maximum and minimum values: 
+X
+n
+e
+w
+=
+X
+-
+X
+m
+e
+a
+n
+X
+m
+a
+x
+-
+X
+m
+i
+n
+. Feature scaling may include standardization, where a difference between 
+
+X
+
+ and
+
+&nbsp;
+X
+m
+e
+a
+n
+ is divided by a standard deviation 
+
+σ
+
+ of a set or subset of values: 
+X
+n
+e
+w
+=
+X
+-
+X
+m
+e
+a
+n
+σ
+. Scaling may be performed using a median value of a set or subset 
+X
+m
+e
+d
+i
+a
+n
+ and/or interquartile range (IQR), which represents the difference between the 25th percentile value and the 50th percentile value (or closest values thereto by a rounding protocol), such as: 
+X
+n
+e
+w
+=
+X
+-
+X
+m
+e
+d
+i
+a
+n
+I
+Q
+R
+. Persons skilled in the art, upon reviewing the entirety of this disclosure, will be aware of various alternative or additional approaches that may be used for feature scaling.</p>
+   <p>
+[0047]
+ Further referring to FIG. 2, computing device, processor, and/or module may be configured to perform one or more processes of data augmentation. “Data augmentation” as used in this disclosure is addition of data to a training set using elements and/or entries already in the dataset. Data augmentation may be accomplished, without limitation, using interpolation, generation of modified copies of existing entries and/or examples, and/or one or more generative AI processes, for instance using deep neural networks and/or generative adversarial networks; generative processes may be referred to alternatively in this context as “data synthesis” and as creating “synthetic data.” Augmentation may include performing one or more transformations on data, such as geometric, color space, affine, brightness, cropping, and/or contrast transformations of images.</p>
+   <p>
+[0048]
+ Still referring to FIG. 2, machine-learning module 200 may be configured to perform a lazy-learning process 220 and/or protocol, which may alternatively be referred to as a “lazy loading” or “call-when-needed” process and/or protocol, may be a process whereby machine learning is conducted upon receipt of an input to be converted to an output, by combining the input and training set to derive the algorithm to be used to produce the output on demand.  For instance, an initial set of simulations may be performed to cover an initial heuristic and/or “first guess” at an output and/or relationship. As a non-limiting example, an initial heuristic may include a ranking of associations between inputs and elements of training data 204. Heuristic may include selecting some number of highest-ranking associations and/or training data 204 elements. Lazy learning may implement any suitable lazy learning algorithm, including without limitation a K-nearest neighbors algorithm, a lazy naïve Bayes algorithm, or the like; persons skilled in the art, upon reviewing the entirety of this disclosure, will be aware of various lazy-learning algorithms that may be applied to generate outputs as described in this disclosure, including without limitation lazy learning applications of machine-learning algorithms as described in further detail below.</p>
+   <p>
+[0049]
+ Alternatively or additionally, and with continued reference to FIG. 2, machine-learning processes as described in this disclosure may be used to generate machine-learning models 224.  A “machine-learning model,” as used in this disclosure, is a data structure representing and/or instantiating a mathematical and/or algorithmic representation of a relationship between inputs and outputs, as generated using any machine-learning process including without limitation any process as described above, and stored in memory; an input is submitted to a machine-learning model 224 once created, which generates an output based on the relationship that was derived. For instance, and without limitation, a linear regression model, generated using a linear regression algorithm, may compute a linear combination of input data using coefficients derived during machine-learning processes to calculate an output datum.  As a further non-limiting example, a machine-learning model 224 may be generated by creating an artificial neural network, such as a convolutional neural network comprising an input layer of nodes, one or more intermediate layers, and an output layer of nodes. Connections between nodes may be created via the process of "training" the network, in which elements from a training data 204 set are applied to the input nodes, a suitable training algorithm (such as Levenberg-Marquardt, conjugate gradient, simulated annealing, or other algorithms) is then used to adjust the connections and weights between nodes in adjacent layers of the neural network to produce the desired values at the output nodes. This process is sometimes referred to as deep learning.</p>
+   
+   <p>
+[0050]
+ Still referring to FIG. 2, machine-learning algorithms may include at least a supervised machine-learning process 228. At least a supervised machine-learning process 228, as defined herein, include algorithms that receive a training set relating a number of inputs to a number of outputs, and seek to generate one or more data structures representing and/or instantiating one or more mathematical relations relating inputs to outputs, where each of the one or more mathematical relations is optimal according to some criterion specified to the algorithm using some scoring function. For instance, a supervised learning algorithm may include inputs as described in this disclosure as inputs, outputs as described in this disclosure as outputs,, and a scoring function representing a desired form of relationship to be detected between inputs and outputs; scoring function may, for instance, seek to maximize the probability that a given input and/or combination of elements inputs is associated with a given output to minimize the probability that a given input is not associated with a given output. Scoring function may be expressed as a risk function representing an “expected loss” of an algorithm relating inputs to outputs, where loss is computed as an error function representing a degree to which a prediction generated by the relation is incorrect when compared to a given input-output pair provided in training data 204. Persons skilled in the art, upon reviewing the entirety of this disclosure, will be aware of various possible variations of at least a supervised machine-learning process 228 that may be used to determine relation between inputs and outputs. Supervised machine-learning processes may include classification algorithms as defined above. </p>
+   
+   <p>
+[0051]
+ With further reference to FIG. 2, training a supervised machine-learning process may include, without limitation, iteratively updating coefficients, biases, weights based on an error function, expected loss, and/or risk function. For instance, an output generated by a supervised machine-learning model using an input example in a training example may be compared to an output example from the training example; an error function may be generated based on the comparison, which may include any error function suitable for use with any machine-learning algorithm described in this disclosure, including a square of a difference between one or more sets of compared values or the like. Such an error function may be used in turn to update one or more weights, biases, coefficients, or other parameters of a machine-learning model through any suitable process including without limitation gradient descent processes, least-squares processes, and/or other processes described in this disclosure. This may be done iteratively and/or recursively to gradually tune such weights, biases, coefficients, or other parameters. Updating may be performed, in neural networks, using one or more back-propagation algorithms. Iterative and/or recursive updates to weights, biases, coefficients, or other parameters as described above may be performed until currently available training data is exhausted and/or until a convergence test is passed, where a “convergence test” is a test for a condition selected as indicating that a model and/or weights, biases, coefficients, or other parameters thereof has reached a degree of accuracy. A convergence test may, for instance, compare a difference between two or more successive errors or error function values, where differences below a threshold amount may be taken to indicate convergence. Alternatively or additionally, one or more errors and/or error function values evaluated in training iterations may be compared to a threshold.</p>
+   <p>
+[0052]
+ Still referring to FIG. 2, a computing device, processor, and/or module may be configured to perform method, method step, sequence of method steps and/or algorithm described in reference to this figure, in any order and with any degree of repetition. For instance, a computing device, processor, and/or module may be configured to perform a single step, sequence and/or algorithm repeatedly until a desired or commanded outcome is achieved; repetition of a step or a sequence of steps may be performed iteratively and/or recursively using outputs of previous repetitions as inputs to subsequent repetitions, aggregating inputs and/or outputs of repetitions to produce an aggregate result, reduction or decrement of one or more variables such as global variables, and/or division of a larger processing task into a set of iteratively addressed smaller processing tasks. A computing device, processor, and/or module may perform any step, sequence of steps, or algorithm in parallel, such as simultaneously and/or substantially simultaneously performing a step two or more times using two or more parallel threads, processor cores, or the like; division of tasks between parallel threads and/or processes may be performed according to any protocol suitable for division of tasks between iterations. Persons skilled in the art, upon reviewing the entirety of this disclosure, will be aware of various ways in which steps, sequences of steps, processing tasks, and/or data may be subdivided, shared, or otherwise dealt with using iteration, recursion, and/or parallel processing.</p>
+   
+   <p>
+[0053]
+ Further referring to FIG. 2, machine learning processes may include at least an unsupervised machine-learning processes 232. An unsupervised machine-learning process, as used herein, is a process that derives inferences in datasets without regard to labels; as a result, an unsupervised machine-learning process may be free to discover any structure, relationship, and/or correlation provided in the data. Unsupervised processes 232 may not require a response variable; unsupervised processes 232may be used to find interesting patterns and/or inferences between variables, to determine a degree of correlation between two or more variables, or the like.</p>
+   <p>
+[0054]
+ Still referring to FIG. 2, machine-learning module 200 may be designed and configured to create a machine-learning model 224 using techniques for development of linear regression models. Linear regression models may include ordinary least squares regression, which aims to minimize the square of the difference between predicted outcomes and actual outcomes according to an appropriate norm for measuring such a difference (e.g. a vector-space distance norm); coefficients of the resulting linear equation may be modified to improve minimization. Linear regression models may include ridge regression methods, where the function to be minimized includes the least-squares function plus term multiplying the square of each coefficient by a scalar amount to penalize large coefficients. Linear regression models may include least absolute shrinkage and selection operator (LASSO) models, in which ridge regression is combined with multiplying the least-squares term by a factor of 1 divided by double the number of samples. Linear regression models may include a multi-task lasso model wherein the norm applied in the least-squares term of the lasso model is the Frobenius norm amounting to the square root of the sum of squares of all terms. Linear regression models may include the elastic net model, a multi-task elastic net model, a least angle regression model, a LARS lasso model, an orthogonal matching pursuit model, a Bayesian regression model, a logistic regression model, a stochastic gradient descent model, a perceptron model, a passive aggressive algorithm, a robustness regression model, a Huber regression model, or any other suitable model that may occur to persons skilled in the art upon reviewing the entirety of this disclosure. Linear regression models may be generalized in an embodiment to polynomial regression models, whereby a polynomial equation (e.g. a quadratic, cubic or higher-order equation) providing a best predicted output/actual output fit is sought; similar methods to those described above may be applied to minimize error functions, as will be apparent to persons skilled in the art upon reviewing the entirety of this disclosure.</p>
+   
+   <p>
+[0055]
+ Continuing to refer to FIG. 2, machine-learning algorithms may include, without limitation, linear discriminant analysis. Machine-learning algorithm may include quadratic discriminant analysis. Machine-learning algorithms may include kernel ridge regression. Machine-learning algorithms may include support vector machines, including without limitation support vector classification-based regression processes. Machine-learning algorithms may include stochastic gradient descent algorithms, including classification and regression algorithms based on stochastic gradient descent. Machine-learning algorithms may include nearest neighbors algorithms. Machine-learning algorithms may include various forms of latent space regularization such as variational regularization. Machine-learning algorithms may include Gaussian processes such as Gaussian Process Regression. Machine-learning algorithms may include cross-decomposition algorithms, including partial least squares and/or canonical correlation analysis. Machine-learning algorithms may include naïve Bayes methods. Machine-learning algorithms may include algorithms based on decision trees, such as decision tree classification or regression algorithms. Machine-learning algorithms may include ensemble methods such as bagging meta-estimator, forest of randomized trees, AdaBoost, gradient tree boosting, and/or voting classifier methods. Machine-learning algorithms may include neural net algorithms, including convolutional neural net processes.</p>
+   <p>
+[0056]
+ Still referring to FIG. 2, a machine-learning model and/or process may be deployed or instantiated by incorporation into a program, apparatus, system and/or module. For instance, and without limitation, a machine-learning model, neural network, and/or some or all parameters thereof may be stored and/or deployed in any memory or circuitry. Parameters such as coefficients, weights, and/or biases may be stored as circuit-based constants, such as arrays of wires and/or binary inputs and/or outputs set at logic “1” and “0” voltage levels in a logic circuit to represent a number according to any suitable encoding system including twos complement or the like or may be stored in any volatile and/or non-volatile memory. Similarly, mathematical operations and input and/or output of data to or from models, neural network layers, or the like may be instantiated in hardware circuitry and/or in the form of instructions in firmware, machine-code such as binary operation code instructions, assembly language, or any higher-order programming language. Any technology for hardware and/or software instantiation of memory, instructions, data structures, and/or algorithms may be used to instantiate a machine-learning process and/or model, including without limitation any combination of production and/or configuration of non-reconfigurable hardware elements, circuits, and/or modules such as without limitation ASICs, production and/or configuration of reconfigurable hardware elements, circuits, and/or modules such as without limitation FPGAs, production and/or of non-reconfigurable and/or configuration non-rewritable memory elements, circuits, and/or modules such as without limitation non-rewritable ROM, production and/or configuration of reconfigurable and/or rewritable memory elements, circuits, and/or modules such as without limitation rewritable ROM or other memory technology described in this disclosure, and/or production and/or configuration of any computing device and/or component thereof as described in this disclosure. Such deployed and/or instantiated machine-learning model and/or algorithm may receive inputs from any other process, module, and/or component described in this disclosure, and produce outputs to any other process, module, and/or component described in this disclosure.</p>
+   
+   <p>
+[0057]
+ Continuing to refer to FIG. 2, any process of training, retraining, deployment, and/or instantiation of any machine-learning model and/or algorithm may be performed and/or repeated after an initial deployment and/or instantiation to correct, refine, and/or improve the machine-learning model and/or algorithm. Such retraining, deployment, and/or instantiation may be performed as a periodic or regular process, such as retraining, deployment, and/or instantiation at regular elapsed time periods, after some measure of volume such as a number of bytes or other measures of data processed, a number of uses or performances of processes described in this disclosure, or the like, and/or according to a software, firmware, or other update schedule. Alternatively or additionally, retraining, deployment, and/or instantiation may be event-based, and may be triggered, without limitation, by user inputs indicating sub-optimal or otherwise problematic performance and/or by automated field testing and/or auditing processes, which may compare outputs of machine-learning models and/or algorithms, and/or errors and/or error functions thereof, to any thresholds, convergence tests, or the like, and/or may compare outputs of processes described herein to similar thresholds, convergence tests or the like. Event-based retraining, deployment, and/or instantiation may alternatively or additionally be triggered by receipt and/or generation of one or more new training examples; a number of new training examples may be compared to a preconfigured threshold, where exceeding the preconfigured threshold may trigger retraining, deployment, and/or instantiation.</p>
+   
+   <p>
+[0058]
+ Still referring to FIG. 2, retraining and/or additional training may be performed using any process for training described above, using any currently or previously deployed version of a machine-learning model and/or algorithm as a starting point. Training data for retraining may be collected, preconditioned, sorted, classified, sanitized or otherwise processed according to any process described in this disclosure. Training data may include, without limitation, training examples including inputs and correlated outputs used, received, and/or generated from any version of any system, module, machine-learning model or algorithm, apparatus, and/or method described in this disclosure; such examples may be modified and/or labeled according to user feedback or other processes to indicate desired results, and/or may have actual or measured results from a process being modeled and/or predicted by system, module, machine-learning model or algorithm, apparatus, and/or method as “desired” results to be compared to outputs for training processes as described above.</p>
+   <p>
+[0059]
+ Redeployment may be performed using any reconfiguring and/or rewriting of reconfigurable and/or rewritable circuit and/or memory elements; alternatively, redeployment may be performed by production of new hardware and/or software components, circuits, instructions, or the like, which may be added to and/or may replace existing hardware and/or software components, circuits, instructions, or the like.</p>
+   <p>
+[0060]
+ Further referring to FIG. 2, one or more processes or algorithms described above may be performed by at least a dedicated hardware unit 236. A “dedicated hardware unit,” for the purposes of this figure, is a hardware component, circuit, or the like, aside from a principal control circuit and/or processor performing method steps as described in this disclosure, that is specifically designated or selected to perform one or more specific tasks and/or processes described in reference to this figure, such as without limitation preconditioning and/or sanitization of training data and/or training a machine-learning algorithm and/or model. A dedicated hardware unit 236 may include, without limitation, a hardware unit that can perform iterative or massed calculations, such as matrix-based calculations to update or tune parameters, weights, coefficients, and/or biases of machine-learning models and/or neural networks, efficiently using pipelining, parallel processing, or the like; such a hardware unit may be optimized for such processes by, for instance, including dedicated circuitry for matrix and/or signal processing operations that includes, e.g., multiple arithmetic and/or logical circuit units such as multipliers and/or adders that can act simultaneously and/or in parallel or the like. Such dedicated hardware units 236 may include, without limitation, graphical processing units (GPUs), dedicated signal processing modules, FPGA or other reconfigurable hardware that has been configured to instantiate parallel processing units for one or more specific tasks, or the like, A computing device, processor, apparatus, or module may be configured to instruct one or more dedicated hardware units 236 to perform one or more operations described herein, such as evaluation of model and/or algorithm outputs, one-time or iterative updates to parameters, coefficients, weights, and/or biases, and/or any other operations such as vector and/or matrix operations as described in this disclosure.</p>
+   
+   <p>
+[0061]
+ Referring now to FIG. 3, an exemplary embodiment of neural network 300 is illustrated. A neural network 300 also known as an artificial neural network, is a network of “nodes,” or data structures having one or more inputs, one or more outputs, and a function determining outputs based on inputs. Such nodes may be organized in a network, such as without limitation a convolutional neural network, including an input layer of nodes 304, one or more intermediate layers 308, and an output layer of nodes 312. Connections between nodes may be created via the process of "training" the network, in which elements from a training dataset are applied to the input nodes, a suitable training algorithm (such as Levenberg-Marquardt, conjugate gradient, simulated annealing, or other algorithms) is then used to adjust the connections and weights between nodes in adjacent layers of the neural network to produce the desired values at the output nodes. This process is sometimes referred to as deep learning. Connections may run solely from input nodes toward output nodes in a “feed-forward” network, or may feed outputs of one layer back to inputs of the same or a different layer in a “recurrent network.” As a further non-limiting example, a neural network may include a convolutional neural network comprising an input layer of nodes, one or more intermediate layers, and an output layer of nodes. A “convolutional neural network,” as used in this disclosure, is a neural network in which at least one hidden layer is a convolutional layer that convolves inputs to that layer with a subset of inputs known as a “kernel,” along with one or more additional layers such as pooling layers, fully connected layers, and the like.</p>
+   
+   <p>
+[0062]
+ Referring now to FIG. 4, an exemplary embodiment of a node 400 of a neural network is illustrated. A node may include, without limitation a plurality of inputs x
+i that may receive numerical values from inputs to a neural network containing the node and/or from other nodes. Node may perform one or more activation functions to produce its output given one or more inputs, such as without limitation computing a binary step function comparing an input to a threshold value and outputting either a logic 1 or logic 0 output or something equivalent, a linear activation function whereby an output is directly proportional to the input, and/or a non-linear activation function, wherein the output is not proportional to the input. Non-linear activation functions may include, without limitation, a sigmoid function of the form 
+
+f
+x
+=
+1
+1
+-
+e
+-
+x
+ given input x, a tanh (hyperbolic tangent) function, of the form 
+e
+x
+-
+e
+-
+x
+e
+x
++
+e
+-
+x
+, a tanh derivative function such as 
+
+f
+x
+=
+tanh
+2
+⁡
+
+(
+x
+)
+, a rectified linear unit function such as 
+
+f
+x
+=
+m
+a
+x
+⁡
+(
+0
+,
+x
+)
+
+, a “leaky” and/or “parametric” rectified linear unit function such as 
+
+f
+x
+=
+m
+a
+x
+⁡
+(
+a
+x
+,
+x
+)
+
+ for some a, an exponential linear units function such as 
+
+f
+x
+=
+&nbsp;
+ x
+ &nbsp;
+ f
+ o
+ r
+ &nbsp;
+ x
+ ≥
+ 0
+ α
+ 
+    
+e
+x
+-
+
+1
+    
+ 
+ &nbsp;
+ f
+ o
+ r
+ &nbsp;
+ x
+ &lt;
+ 0
+ for some value of 
+
+α
+
+ (this function may be replaced and/or weighted by its own derivative in some embodiments), a softmax function such as 
+
+f
+x
+i
+=
+e
+x
+∑
+
+i
+ x
+ i
+ where the inputs to an instant layer are 
+x
+i
+, a swish function such as 
+
+f
+x
+=
+x
+*
+s
+i
+g
+m
+o
+i
+d
+(
+x
+)
+
+, a Gaussian error linear unit function such as f(x) = 
+
+a
+1
++
+t
+a
+n
+h
+⁡
+(
+
+2
+/
+π
+x
++
+b
+ x
+ r
+)
+ for some values of a, b, and r, and/or a scaled exponential linear unit function such as 
+
+f
+x
+=
+&nbsp;
+λ
+ α
+ 
+    
+e
+x
+-
+
+1
+    
+ 
+ &nbsp;
+ f
+ o
+ r
+ &nbsp;
+ x
+ &lt;
+ 0
+ x
+ &nbsp;
+ f
+ o
+ r
+ &nbsp;
+ x
+ &nbsp;
+ ≥
+ 0
+. Fundamentally, there is no limit to the nature of functions of inputs x
+i that may be used as activation functions. As a non-limiting and illustrative example, node may perform a weighted sum of inputs using weights w
+i that are multiplied by respective inputs x
+i. Additionally or alternatively, a bias b may be added to the weighted sum of the inputs such that an offset is added to each unit in the neural network layer that is independent of the input to the layer. The weighted sum may then be input into a function φ, which may generate one or more outputs y. Weight w
+i applied to an input x
+i may indicate whether the input is “excitatory,” indicating that it has strong influence on the one or more outputs y, for instance by the corresponding weight having a large numerical value, and/or a “inhibitory,” indicating it has a weak effect influence on the one more inputs y, for instance by the corresponding weight having a small numerical value. The values of weights w
+i may be determined by training a neural network using training data, which may be performed using any suitable process as described above.</p>
+   
+   <p>
+[0063]
+ Referring now to FIG. 5, a diagram of an ECG diagram 500 is illustrated. ECG diagram 500 may be depicted in an ECG printout as described above. ECG diagram 500 may include a plurality of parameters such a PR interval 504, QT interval 508. ST interval 512, TP interval 516, RR interval 520, and the like. The P-wave may reflect atrial depolarization (activation). The PR interval 504 is the distance between the onset of the P-wave to the onset of the QRS complex. The PR interval 504 may be assessed to determine whether impulse conduction from the atria to the ventricles is normal. PR interval 504 may be measured in seconds, for example, 
+
+h
+e
+a
+r
+t
+&nbsp;
+r
+a
+t
+e
+=
+60
+P
+R
+&nbsp;
+I
+n
+t
+e
+r
+v
+a
+l
+  (in seconds). The QT interval 508 may reflect the total duration of ventricular depolarization and repolarization. It may be measured from the onset of a QRS complex to the end of the T-wave. The QT duration may be inversely related to heart rate; i.e. the QT interval 508 may increase at slower heart rates and decrease at higher heart rates. Therefore, to determine whether the QT interval 508 is within normal limits, it may be necessary to adjust for the heart rate. The heart rate-adjusted QT interval 508 is referred to as the corrected QT interval 508 (QTc interval). A long QTc interval may indicate increased risk of ventricular arrhythmias. The QTc interval may be in the range of 0.36 to 0.44 seconds. 
+Q
+T
+c
+=
+Q
+T
+i
+n
+t
+e
+r
+v
+a
+l
+R
+R
+i
+n
+t
+e
+r
+v
+a
+l
+&nbsp;
+
+ (measured in seconds), where RR interval 520 is the time between two consecutive R waves. The QRS complex may represent the depolarization (activation) of the ventricles which may be depicted between the Q-, R- and S-wave, although it may not always display all three waves. Since the electrical vector generated by the left ventricle is usually many times larger than the vector generated by the right ventricle, the QRS complex is a reflection of left ventricular depolarization. </p>
+   <p>
+[0064]
+ Still referring to FIG. 5, the ST interval 512 is the segment on the ECG that starts at the end of the QRS complex and extends to the beginning of the T wave. It represents the early part of ventricular repolarization. The ST segment may be relatively isoelectric, meaning it is at the baseline, with minimal elevation or depression. The normal duration of the ST interval 512 is usually around 0.12 seconds (120 milliseconds). The TP interval 516 is the segment on the ECG that extends from the end of the T wave to the beginning of the next P wave. It represents the time when the ventricles are fully repolarized and are in a resting state. The duration of the TP interval 516may be variable but is typically short, as it may represent the brief pause between cardiac cycles. Significant deviations may be associated with certain conditions affecting repolarization. The RR interval 520 is the time between two consecutive R waves on the ECG. It may represent the duration of one cardiac cycle, encompassing both atrial and ventricular depolarization and repolarization. The RR interval 520 may be measured in seconds and can be used to calculate heart rate (beats per minute) using a formula, such as 
+
+h
+e
+a
+r
+t
+&nbsp;
+r
+a
+t
+e
+=
+60
+R
+R
+&nbsp;
+I
+n
+t
+e
+r
+v
+a
+l
+  (in seconds). The intervals described above may be used to determine a ventricular rate which refers to the number of ventricular contractions (heartbeats) that occur in one minute. It may be  closely related to the RR interval 520 on an electrocardiogram (ECG), as the RR interval 520 represents the time between two consecutive ventricular contractions. The formula for calculating the ventricular rate (heart rate) in beats per minute (bpm) may be: 
+
+V
+e
+n
+t
+r
+i
+c
+u
+l
+a
+r
+&nbsp;
+r
+a
+t
+e
+=
+60
+R
+R
+&nbsp;
+I
+n
+t
+e
+r
+v
+a
+l
+ (in seconds). </p>
+   
+   <p>
+[0065]
+ Referring now to FIG. 6, an exemplary diagram of a method 600 for generating cardiac catheterization parameters is displayed. This may be implemented as disclosed in and with reference to FIGS 1-4. At step 605, method 600 includes receiving, by a computing device, a plurality of cardiogram data examples. This may be implemented as disclosed in and with reference to FIGS 1-4. At step 610, method 600 includes training, by the computing device, a catheter data predictor using the plurality of cardiogram data examples. This may be implemented as disclosed in and with reference to FIGS 1-4. At step 615, method 600 includes inputting, by the computing device, a cardiogram data signal. This may be implemented as disclosed in and with reference to FIGS 1-4. At step 620, method 600 includes generating, by the computing device, a plurality of catheterization parameters from the cardiogram data signal and the catheter data predictor. At step 625, method 600 includes displaying, by the computing device, the plurality of catheterization parameters. This may be implemented as disclosed in and with reference to FIGS 1-4.</p>
+   <p>
+[0066]
+ It is to be noted that any one or more of the aspects and embodiments described herein may be conveniently implemented using one or more machines (e.g., one or more computing devices that are utilized as a user computing device for an electronic document, one or more server devices, such as a document server, etc.) programmed according to the teachings of the present specification, as will be apparent to those of ordinary skill in the computer art. Appropriate software coding can readily be prepared by skilled programmers based on the teachings of the present disclosure, as will be apparent to those of ordinary skill in the software art. Aspects and implementations discussed above employing software and/or software modules may also include appropriate hardware for assisting in the implementation of the machine executable instructions of the software and/or software module.</p>
+   
+   <p>
+[0067]
+ Such software may be a computer program product that employs a machine-readable storage medium. A machine-readable storage medium may be any medium that is capable of storing and/or encoding a sequence of instructions for execution by a machine (e.g., a computing device) and that causes the machine to perform any one of the methodologies and/or embodiments described herein. Examples of a machine-readable storage medium include, but are not limited to, a magnetic disk, an optical disc (e.g., CD, CD-R, DVD, DVD-R, etc.), a magneto-optical disk, a read-only memory “ROM” device, a random access memory “RAM” device, a magnetic card, an optical card, a solid-state memory device, an EPROM, an EEPROM, and any combinations thereof. A machine-readable medium, as used herein, is intended to include a single medium as well as a collection of physically separate media, such as, for example, a collection of compact discs or one or more hard disk drives in combination with a computer memory. As used herein, a machine-readable storage medium does not include transitory forms of signal transmission.</p>
+   <p>
+[0068]
+ Such software may also include information (e.g., data) carried as a data signal on a data carrier, such as a carrier wave. For example, machine-executable information may be included as a data-carrying signal embodied in a data carrier in which the signal encodes a sequence of instruction, or portion thereof, for execution by a machine (e.g., a computing device) and any related information (e.g., data structures and data) that causes the machine to perform any one of the methodologies and/or embodiments described herein.</p>
+   <p>
+[0069]
+ Examples of a computing device include, but are not limited to, an electronic book reading device, a computer workstation, a terminal computer, a server computer, a handheld device (e.g., a tablet computer, a smartphone, etc.), a web appliance, a network router, a network switch, a network bridge, any machine capable of executing a sequence of instructions that specify an action to be taken by that machine, and any combinations thereof. In one example, a computing device may include and/or be included in a kiosk.</p>
+   
+   <p>
+[0070]
+ Now referring to FIG. 7, which shows a diagrammatic representation of one embodiment of a computing device in the exemplary form of a computer system 700 within which a set of instructions for causing a control system to perform any one or more of the aspects and/or methodologies of the present disclosure may be executed. It is also contemplated that multiple computing devices may be utilized to implement a specially configured set of instructions for causing one or more of the devices to perform any one or more of the aspects and/or methodologies of the present disclosure. Computer system 700 includes a processor&nbsp;704 and a memory 708 that communicate with each other, and with other components, via a bus 712. Bus 712 may include any of several types of bus structures including, but not limited to, a memory bus, a memory controller, a peripheral bus, a local bus, and any combinations thereof, using any of a variety of bus architectures.</p>
+   <p>
+[0071]
+ Processor 704 may include any suitable processor, such as without limitation a processor incorporating logical circuitry for performing arithmetic and logical operations, such as an arithmetic and logic unit (ALU), which may be regulated with a state machine and directed by operational inputs from memory and/or sensors; processor 704 may be organized according to Von Neumann and/or Harvard architecture as a non-limiting example. Processor 704 may include, incorporate, and/or be incorporated in, without limitation, a microcontroller, microprocessor, digital signal processor (DSP), Field Programmable Gate Array (FPGA), Complex Programmable Logic Device (CPLD), Graphical Processing Unit (GPU), general purpose GPU, Tensor Processing Unit (TPU), analog or mixed signal processor, Trusted Platform Module (TPM), a floating point unit (FPU), system on module (SOM), and/or system on a chip (SoC).</p>
+   <p>
+[0072]
+ Memory 708 may include various components (e.g., machine-readable media) including, but not limited to, a random-access memory component, a read only component, and any combinations thereof. In one example, a basic input/output system 716 (BIOS), including basic routines that help to transfer information between elements within computer system 700, such as during start-up, may be stored in memory&nbsp;708. Memory 708 may also include (e.g., stored on one or more machine-readable media) instructions (e.g., software) 720 embodying any one or more of the aspects and/or methodologies of the present disclosure. In another example, memory 708 may further include any number of program modules including, but not limited to, an operating system, one or more application programs, other program modules, program data, and any combinations thereof.</p>
+   
+   <p>
+[0073]
+ Computer system 700 may also include a storage device 724. Examples of a storage device (e.g., storage device 724) include, but are not limited to, a hard disk drive, a magnetic disk drive, an optical disc drive in combination with an optical medium, a solid-state memory device, and any combinations thereof. Storage device 724 may be connected to bus 712 by an appropriate interface (not shown). Example interfaces include, but are not limited to, SCSI, advanced technology attachment (ATA), serial ATA, universal serial bus (USB), IEEE 1394 (FIREWIRE), and any combinations thereof. In one example, storage device&nbsp;724 (or one or more components thereof) may be removably interfaced with computer system 700 (e.g., via an external port connector (not shown)). Particularly, storage device 724 and an associated machine-readable medium 728 may provide nonvolatile and/or volatile storage of machine-readable instructions, data structures, program modules, and/or other data for computer system 700. In one example, software 720 may reside, completely or partially, within machine-readable medium 728. In another example, software 720 may reside, completely or partially, within processor 704.</p>
+   <p>
+[0074]
+ Computer system 700 may also include an input device 732. In one example, a user of computer system 700 may enter commands and/or other information into computer system 700 via input device 732. Examples of an input device 732 include, but are not limited to, an alpha-numeric input device (e.g., a keyboard), a pointing device, a joystick, a gamepad, an audio input device (e.g., a microphone, a voice response system, etc.), a cursor control device (e.g., a mouse), a touchpad, an optical scanner, a video capture device (e.g., a still camera, a video camera), a touchscreen, and any combinations thereof. Input device 732 may be interfaced to bus 712 via any of a variety of interfaces (not shown) including, but not limited to, a serial interface, a parallel interface, a game port, a USB interface, a FIREWIRE interface, a direct interface to bus 712, and any combinations thereof. Input device 732 may include a touch screen interface that may be a part of or separate from display 736, discussed further below. Input device 732 may be utilized as a user selection device for selecting one or more graphical representations in a graphical interface as described above.</p>
+   
+   <p>
+[0075]
+ A user may also input commands and/or other information to computer system 700 via storage device 724 (e.g., a removable disk drive, a flash drive, etc.) and/or network interface device&nbsp;740. A network interface device, such as network interface device 740, may be utilized for connecting computer system 700 to one or more of a variety of networks, such as network 744, and one or more remote devices 748 connected thereto. Examples of a network interface device include, but are not limited to, a network interface card (e.g., a mobile network interface card, a LAN card), a modem, and any combination thereof. Examples of a network include, but are not limited to, a wide area network (e.g., the Internet, an enterprise network), a local area network (e.g., a network associated with an office, a building, a campus or other relatively small geographic space), a telephone network, a data network associated with a telephone/voice provider (e.g., a mobile communications provider data and/or voice network), a direct connection between two computing devices, and any combinations thereof. A network, such as network 744, may employ a wired and/or a wireless mode of communication. In general, any network topology may be used. Information (e.g., data, software 720, etc.) may be communicated to and/or from computer system&nbsp;700 via network interface device 740.</p>
+   <p>
+[0076]
+ Computer system 700 may further include a video display adapter 752 for communicating a displayable image to a display device, such as display device 736. Examples of a display device include, but are not limited to, a liquid crystal display (LCD), a cathode ray tube (CRT), a plasma display, a light emitting diode (LED) display, and any combinations thereof. Display adapter 752 and display device 736 may be utilized in combination with processor 704 to provide graphical representations of aspects of the present disclosure. In addition to a display device, computer system 700 may include one or more other peripheral output devices including, but not limited to, an audio speaker, a printer, and any combinations thereof. Such peripheral output devices may be connected to bus&nbsp;712 via a peripheral interface 756. Examples of a peripheral interface include, but are not limited to, a serial port, a USB connection, a FIREWIRE connection, a parallel connection, and any combinations thereof.</p>
+   <p>
+[0077]
+ The foregoing has been a detailed description of illustrative embodiments of the invention. Various modifications and additions can be made without departing from the spirit and scope of this invention. Features of each of the various embodiments described above may be combined with features of other described embodiments as appropriate in order to provide a multiplicity of feature combinations in associated new embodiments. Furthermore, while the foregoing describes a number of separate embodiments, what has been described herein is merely illustrative of the application of the principles of the present invention. Additionally, although particular methods herein may be illustrated and/or described as being performed in a specific order, the ordering is highly variable within ordinary skill to achieve methods, systems, and software according to the present disclosure. Accordingly, this description is meant to be taken only by way of example, and not to otherwise limit the scope of this invention.</p>
+   
+   <p>
+[0078]
+ Exemplary embodiments have been disclosed above and illustrated in the accompanying drawings. It will be understood by those skilled in the art that various changes, omissions and additions may be made to that which is specifically disclosed herein without departing from the spirit and scope of the present invention.</p>
+
+</body></html>

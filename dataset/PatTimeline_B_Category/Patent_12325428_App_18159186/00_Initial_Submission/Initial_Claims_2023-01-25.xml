@@ -1,0 +1,106 @@
+<html><head></head><body>18159186
+
+   
+What is claimed is:
+   
+   
+
+<br>
+
+1. A computer-implemented method of monitoring health information and providing recommendations for one or more passengers on a vehicle, the method comprising: 
+transmitting, from a health monitoring system associated with the vehicle, a request to connect to a user device associated with a passenger on the vehicle; 
+receiving, at the health monitoring system and from the user device, a connection confirmation; 
+obtaining, using the health monitoring system subsequent to receiving the connection confirmation and from one or more sensors associated with the user device, passenger health data;
+receiving, at the health monitoring system from one or more other sensors onboard the vehicle, environmental data; 
+generating, based on the passenger health data and the environmental data, an indicator value for each of a plurality of parameters; 
+determining, using a processor of the health monitoring system, whether the indicator value for any of the plurality of parameters has reached a threshold value;
+generating, responsive to determining that the indicator value has reached the threshold value for any of the plurality of parameters, a recommended action; and
+automatically transmitting the recommended action to a designated device. 
+<br>
+
+2. The computer-implemented method of claim 1, wherein the threshold value corresponds to an emergency health condition of the passenger. 
+<br>
+
+3. The computer-implemented method of claim 2, further comprising accessing, utilizing the health monitoring system, a database comprising passenger information associated with the one or more passengers, wherein the passenger information comprises at least one of: medical history information, family contact information, travel information, and work history information. 
+<br>
+
+4. The computer-implemented method of claim 3, wherein the generating the recommended action comprises generating, via leveraging the passenger information, an optimal aid administration plan to address the emergency health condition. 
+<br>
+
+5. The computer-implemented method of claim 4, wherein the generating the optimal aid administration plan comprises:
+providing, as input to a trained machine learning model, a compilation of input data comprising: the passenger information, the passenger health data, the environmental data, and the indicator value; and
+receiving, at the health monitoring system from the trained machine learning model, an output recommendation result comprising the recommended action.
+<br>
+
+6. The computer-implemented method of claim 2, further comprising instituting a modification to an original flight plan in view of the emergency health condition of the passenger. 
+<br>
+
+7. The computer-implemented method of claim 1, wherein the threshold value corresponds to a minimum comfort value for any of the plurality of parameters as designated by the passenger. 
+<br>
+
+8. The computer-implemented method of claim 7, wherein the threshold value is designated by the passenger. 
+<br>
+
+9. The computer-implemented method of claim 7, wherein the generating the recommended action comprises: 
+identifying one or more aspects of the environmental data that can be adjusted to move the indicator value away from the threshold value; and
+providing an adjustment level recommendation by which each of the one or more aspects can be adjusted. 
+<br>
+
+10. The computer-implemented method of claim 1, wherein the designated device is at least one of: the user device, a crew-member device, an emergency services device, and a designated contact device.  
+<br>
+
+11. A system for monitoring health information and providing recommendations for one or more passengers on a vehicle, comprising: 
+at least on processor;
+at least one database; and
+a server in network communication with the at least one database, the server configured to perform operations including:
+transmitting, from a health monitoring system associated with the vehicle, a request to connect to a user device associated with a passenger on the vehicle; 
+receiving, at the health monitoring system and from the user device, a connection confirmation; 
+obtaining, using the health monitoring system subsequent to receiving the connection confirmation and from one or more sensors associated with the user device, passenger health data;
+receiving, at the health monitoring system from one or more other sensors onboard the vehicle, environmental data; 
+generating, based on the passenger health data and the environmental data, an indicator value for each of a plurality of parameters; 
+determining, using a processor of the health monitoring system, whether the indicator value for any of the plurality of parameters has reached a threshold value;
+generating, responsive to determining that the indicator value has reached the threshold value for any of the plurality of parameters, a recommended action; and
+automatically transmitting the recommended action to a designated device.  
+<br>
+
+12. The system of claim 11, wherein the threshold value corresponds to an emergency health condition of the passenger. 
+<br>
+
+13. The system of claim 12, further comprising accessing, utilizing the health monitoring system, a database comprising passenger information associated with the one or more passengers, wherein the passenger information comprises at least one of: medical history information, family contact information, travel information, and work history information. 
+<br>
+
+14. The system of claim 13, wherein the generating the recommended action comprises generating, via leveraging the passenger information, an optimal aid administration plan to address the emergency health condition. 
+<br>
+
+15. The system of claim 14, wherein the generating the optimal aid administration plan comprises:
+providing, as input to a trained machine learning model, a compilation of input data comprising: the passenger information, the passenger health data, the environmental data, and the indicator value; and
+receiving, at the health monitoring system from the trained machine learning model, an output recommendation result comprising the recommended action.
+<br>
+
+16. The system of claim 12, further comprising instituting a modification to an original flight plan in view of the emergency health condition of the passenger. 
+<br>
+
+17. The system of claim 11, wherein the threshold value corresponds to a minimum comfort value for any of the plurality of parameters as designated by the passenger. 
+<br>
+
+18. The system of claim 17, wherein the generating the recommended action comprises: 
+identifying one or more aspects of the environmental data that can be adjusted to move the indicator value away from the threshold value; and
+providing an adjustment level recommendation by which each of the one or more aspects can be adjusted. 
+<br>
+
+19. The system of claim 11, wherein the designated device is at least one of: the user device, a crew-member device, an emergency services device, and a designated contact device.  
+<br>
+
+20. A non-transitory computer-readable medium storing computer-executable instructions which, when executed by a server in network communication with at least one database, cause the server to perform operations comprising: 
+transmitting, from a health monitoring system associated with a vehicle, a request to connect to a user device associated with a passenger on the vehicle; 
+receiving, at the health monitoring system and from the user device, a connection confirmation; 
+obtaining, using the health monitoring system subsequent to receiving the connection confirmation and from one or more sensors associated with the user device, passenger health data;
+receiving, at the health monitoring system from one or more other sensors onboard the vehicle, environmental data; 
+generating, based on the passenger health data and the environmental data, an indicator value for each of a plurality of parameters; 
+determining, using a processor of the health monitoring system, whether the indicator value for any of the plurality of parameters has reached a threshold value;
+generating, responsive to determining that the indicator value has reached the threshold value for any of the plurality of parameters, a recommended action; and
+automatically transmitting the recommended action to a designated device.
+
+   
+
+</body></html>

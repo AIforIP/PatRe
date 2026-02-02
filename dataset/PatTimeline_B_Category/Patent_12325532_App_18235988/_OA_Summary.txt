@@ -1,0 +1,10 @@
+Total Office Actions: 3
+Application Number: 18235988
+Patent Number: 12325532
+
+OA Timeline:
+  OA1: 2024-03-20 - Office_Action
+  OA2: 2024-10-10 - Office_Action
+  OA3: 2025-02-20 - Granted
+
+Final Status: Granted

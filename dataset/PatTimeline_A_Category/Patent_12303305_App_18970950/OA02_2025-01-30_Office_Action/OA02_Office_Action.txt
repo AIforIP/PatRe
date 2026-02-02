@@ -1,0 +1,108 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+DETAILED ACTION
+Claims 1-5 are presented for examination.
+Claim Rejections -35 USC §112(b)
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. §112(b) that form the basis for the rejections under this section made in this Office action:
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 1-5 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Claims (listed below) recites the limitation (as described below).  There are insufficient antecedent basis for these limitations in the claims.
+Claims (listed below) recites the limitation (as described below).  There are indefiniteness issues for these limitations in the claims.
+Claim 1 (antecedent basis issues shown emboldened):
+the top of the bedstead mechanism;
+the near front side;
+the opposite sides of the two side baffles;
+the outer surfaces of the opposite sides of the two air bags;
+the inner side of the tops of the two side baffles;
+the top of the underframe;
+the tops of the plurality  of support columns;
+the top of the support frame;
+(104) at positions close to the front side, the bottoms;
+the top of the support frame (104);
+close to the four corners;
+the front and rear inner surface walls;
+the inner surface walls of the side openings (105);
+the inner surface walls of the side openings;
+the inner surface walls of the side baffles (106);
+the front surface walls of the support frame;
+the front end of the first rotating shaft;
+the top of the side baffle (301);
+first sliding groove (302) near the outside;
+the front and rear inner surface walls of the first sliding groove (302);
+the inner surface walls of the first sliding groove (302);
+the outer surface of the first sliding block(305);
+the front surface of the side baffle (301);
+the output end of the second motor (303);
+the front surface of the side baffle (301);
+and extends to the other side;
+the front end of the first screw rod (304);
+the top of the first sliding block (305);
+the top of the support frame (104);
+the front side;
+the top of the long rod (401);
+the bottom of the mounting rod (402);
+near the rear edge;
+the front side of camera (405);
+a TOF radar (403) is arranged at the front side of the motion sensor (404);
+at the bottom of the mounting rod (402);
+at the top of the mounting rod (402);
+Claim 2 (antecedent basis issues shown emboldened):
+the front surfaces of the first rotating frame 202);
+the front surfaces of the first rotating frame;
+the rear  surface of the first rotating frame;
+the inner surface walls of both sides of the first rotating frame (202);
+Claim 3 (antecedent basis issues shown emboldened):
+the outer surface of the connecting rod (205);
+the bottom of the first rotating sleeve (206);
+the bottom of the first electric push rod (207);
+the outer surface of the mattress (210);
+the outer surface of the strap (212);
+the bottom of the adjacent lap plates (209);
+Claim 4 (antecedent basis issues shown emboldened):
+the front surface of the headstock (501);
+the rear surface of the support frame (104);
+the front surface of the headstock (501);
+the inner top and the inner bottom of the second sliding groove (502);
+the rear surface of the mounting plate (503) near the middle;
+the outer surface of the second screw rod (505);
+the outer surface of the second sliding block (504);
+the top center of the headstock (501);
+the bottom of the first pulley (506);
+the top of the second screw rod (505);
+the rear surface of the headstock (501);
+the output end of the third motor (509);
+the outer surface of the first pulley (506);
+Claim 5 (antecedent basis issues shown emboldened):
+the front surface of the headstock (501);
+the rear surface of the mounting plate (503);
+extend to the front side;
+the inner surface walls of the avoidance grooves (516);
+the front ends of the two second electric push rods (510);
+the inner surface walls of the rotating seats (511);
+the front surfaces of the two rotating blocks (512);
+the outer surfaces of the two second rotating seats (511);
+the front surface of the connecting frame (513);
+the output ends at both sides of the biaxial motor (514);
+the outer surfaces of the two second rotating seats (511)
+Claim 1 (indefiniteness issues):
+detection mechanism the near front side (“near front side” is a location without an accompanying element);
+(104) at positions close to the front side, the bottoms…(“the front side” is a location without an accompanying element);
+mounted  at positions, close to the four corners…(“the four corners” is a location without an accompanying element);
+first sliding groove (302) near the outside…(“the outside” is a location without an accompanying element);
+and extends to the other side…(“the other side” is a location without an accompanying element);
+the front side (“the front side” is a location without an accompanying element);
+near the rear edge (“the rear edge” is a location without an accompanying element);
+Claim 4 (indefiniteness issues):
+near the bottom (“the bottom” is a location without an accompanying element)
+near the middle (“the middle” is a location without an accompanying element).
+Allowable Subject Matter
+Claim 1 as well as its dependent claims 4-5, are otherwise allowable pending the amendment of the above highlighted 35 USC 112(b) issues.
+Remarks
+The examiner sought permission, via email and voicemail, directed to the applicant to effect an examiner’s amendment to correct the 35 USC 112(b) issues. In either case, no response to the request was received. Voicemails were left as needed. The examiner also notes while much effort was made to find 35 USC 112(b) issues, there might be additional such errors not found in this examination and the applicant is requested to provide additional proofreading to find other issues the examiner did not find.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to CAL EUSTAQUIO whose telephone number is (571)270-7229. The examiner can normally be reached on 8am-5pm. If attempts to reach the examiner by telephone are unsuccessful, the examiner's supervisor, Nabil Syed, can be reached at (571) 272-2963. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300. Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system. Status information for published applications may be obtained from either Private PAIR or Public PAIR. Status  information for unpublished applications is available through Private PAIR only. For more information about the PAIR system, see http:/lpair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-91 99 (IN USA OR CANADA) or 571-272-1000.
+/CAL J EUSTAQUIO/Examiner, Art Unit 2686
+/NABIL H SYED/Primary Examiner, Art Unit 2686

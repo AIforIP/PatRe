@@ -1,0 +1,87 @@
+<html><head></head><body><h3>Date: 2024-12-19</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>This listing of claims reflects all claim amendments and replaces all prior versions, and listings, of claims in the application. Material to be inserted is in <u>bold and underline,</u> and material to be deleted is in <del>strikeout </del>or in [[double brackets]] if the deletion would be difficult to see.</p>
+<h1>LISTING OF CLAIMS:</h1>
+<br>
+<br>
+1.    (Currently amended) A system for determining a cognitive state of a user of a vehicle to control one or more functions of the vehicle, the system being implemented by one or more controllers, the system comprising:one or more inputs for receiving user data from a plurality of associated user monitoring devices for each monitoring at least one respective attribute of the user of the vehicle, the user data being indicative of the plurality of respective attributes;<br>
+<u>one or more electronic processors confi</u><u>g</u><u>ured to execute a plurality of inference modules and an inference fusion module, wherein:</u>[[a]]the plurality of inference modules <u>is </u>each arranged to receive user data from one or more of the user monitoring devices, and to each determine a respective inference of a cognitive state of the user based at least in part on the received user data, wherein each of the plurality of inference modules is arranged to output user state data indicative of the determined inference of the cognitive state of the user; and<br>
+[[an]]the inference fusion module <u>is </u>arranged to receive the user state data from each of the plurality of inference modules, to determine an inference of an aggregated cognitive state of the user and to output cognitive state data indicative of the aggregated cognitive state for controlling the one or more functions of the vehicle based thereon,<u> the inference fusion module being further confi</u><u>g</u><u>ured to determine, in dependence on the</u><br>
+<br>
+<br>
+<u>received user state data from each of the plurality of inference modules, likelihood data indicative of a current likelihood of the user being in one or more cognitive states</u><u>,</u><u> and determine the inference of the a</u><u>ggreg</u><u>ated cognitive state based at least in part on whether the likelihood data exceeds a threshold for that cognitive state for lon</u><u>g</u><u>er than a minimum period of time; and</u><u>an output conf</u><u>igu</u><u>red to output control data for controlling the one of more functions of the vehicle, the control data generated based on the cognitive state data.</u><br>
+<del>wherein one or more of the plurality of inference modules comprises:</del><del>a threshold monitor a</del><del>rr</del><del>anged to recei</del><del>v</del><del>e the user data and to determine, based at least in part on the user data and at least one threshold </del><del>v</del><del>alue, an acti</del><del>v</del><del>e state of the user; and</del><br>
+<del>an acti</del><del>v</del><del>e time monitor arranged to recei</del><del>v</del><del>e an indication of the acti</del><del>v</del><del>e state from the threshold monitor and to determine, based at least in part on a temporal threshold value, the inference of the cognitive state of the user.</del><br>
+2.
+(Cancelled)<br>
+3.
+(Previously presented) The system of claim 1, wherein the each of the plurality of inference modules are arranged to output a wrapper including user state data indicative of the determined inference of the cognitive state of the user at a plurality of points in time.<br>
+4.
+(Currently amended) The system of claim 1, wherein the inference fusion module is arranged to determine the <u>a</u><u>ggreg</u><u>ated </u>cognitive state of the user based at least in part on<br>
+<br>
+<br>
+the received user state data and one or more baseline parameters associated with the user indicative of a dormant state of the user.<br>
+5.
+(Currently amended) The system of claim 1, wherein the inference fusion module is arranged to determine the <u>a</u><u>ggreg</u><u>ated </u>cognitive state of the user based at least in part on the received user state data and learned inference information associated with the user, wherein the learned inference information associates user data with one or more cognitive states.<br>
+6.
+(Currently amended) The system of claim 1, wherein the inference fusion module comprises relative baseline offset (RBO) information and the inference fusion module is arranged to process the user <u>state </u>data based at least in part on the RBO information to remove an offset from the user data.<br>
+7.
+(Currently amended) The system of claim 1, wherein:<br>
+the one or more inputs is configured to receive context data indicative of a context of one or both of the user and the vehicle; and preference data indicative of one or more preferences associated with the user, where the one or more preferences associate one or more of the cognitive states of the user with one or more settings of at least one vehicle system; and wherein the system further comprises:<br>
+one or more electronic processors for controlling the one or more functions of the vehicle based <u>on the control data, wherein the control data is generated based </u>at least in part on the cognitive state data, the context data and the preference data;<br>
+<del>one or more outputs for outputting control data for controlling the one of more functions of the vehicle;</del><br>
+<br>
+<br>
+wherein the one or more electronic processors is arranged to receive further cognitive state data responsive to the control of the one or more functions of the vehicle, wherein the one or more electronic processors is arranged to update the preference data indicative of a correlation between the cognitive state and the control of the one of more functions of the vehicle.<br>
+8.
+(Previously presented) The system of claim 1, wherein:<br>
+the one or more inputs is arranged to receive visual user data from a visual monitoring device for visually monitoring the user of the vehicle;<br>
+the plurality of inference modules comprise a visual inference module arranged to determine an inference of a visual state of the user based at least in part on the visual user data and to output visual state data indicative of the inference of the visual state of the user.<br>
+9.
+(Previously presented) The system of claim 1, wherein:<br>
+the one or more inputs comprise an input for receiving biometric user data from a biometric monitoring device for monitoring one or more biometric attributes of the user of the vehicle;<br>
+the plurality of inference modules comprise a biometric inference module arranged determine an inference of a biometric state of the user based at least in part on the biometric user data, and to output the user state data indicative of the inference of the biometric state of the user.<br>
+<br>
+<br>
+<br>
+10.   (Previously presented) The system of claim 1, wherein:the one or more inputs comprise an input for receiving thermal user data from a temperature monitoring device for monitoring a temperature of at least a portion of the user of the vehicle;<br>
+the plurality of inference modules comprise a thermal inference module arranged determine an inference of a thermal state of the user based at least in part on the thermal user data, and to output thermal state data indicative of the inference of the thermal state of the user.<br>
+<br>
+11.   (Previously presented) The system of claim 1 wherein:the one or more inputs comprise an input for receiving gaze data from a gaze monitoring device for monitoring a gaze of the user of the vehicle;<br>
+the plurality of inference modules comprise a gaze inference module arranged determine an inference of a gazing state of the user based at least in part on the gaze data, and to output gaze state data indicative of an inference of a visual state of the user.<br>
+<br>
+12.   (Previously presented) The system of claim 1, wherein the one or more inputs comprise an input means for receiving contextual user data from a device associated with the user, wherein the contextual user data is indicative of a behavior of the user prior to entering the vehicle.<br>
+<br>
+13.   (Previously presented) The system according to claim 1 comprised in the vehicle.<br>
+<br>
+<br>
+<br>
+14.   (Cancelled)<br>
+<br>
+15.   (Currently amended) A non-transitory, computer-readable storage medium storing instructions thereon that, when executed by one or more electronic processors, causes the one or more electronic processors to carry out a method of determining a cognitive state of a user of a vehicle to control one or more functions of the vehicle, the method comprising:receiving user data from a plurality of associated user monitoring devices for each monitoring at least one respective attribute of the user of the vehicle, the user data being indicative of the plurality of respective attributes;<br>
+using a plurality of inference modules to determine a plurality of inferences of respective cognitive states of the user based at least in part on the received user data;[[ and]]<u> determining, with an inference infusion module, </u>an inference of an aggregated cognitive state of the user indicative of the aggregated cognitive state for controlling the one or more functions of the vehicle based thereon,<u> the inference fusion module being further configured to determine, in dependence on the plurality of inferences of respective cognitive states of the user, likelihood data indicative of a current likelihood of the user being in one or more cognitive states, determine the inference of the a</u><u>ggreg</u><u>ated cognitive state based at least in part on whether the likelihood data exceeds a threshold for that cognitive state for lon</u><u>g</u><u>er than a minimum period of time, and output cognitive state data indicative of the a</u><u>ggreg</u><u>ated cognitive state; and</u><br>
+<u>outputting control data for controlling the one of more functions of the vehicle, the control data generated based on the cognitive state data.</u><br>
+<del>wherein one or more of the plurality of inference modules comprises:</del><br>
+<br>
+<br>
+<del>a threshold monitor for receiving the user data and to determine, based at least in part on the user data and at least one threshold value, an active state of the user; and</del><br>
+<del>an active time monitor for receiving an indication of the active state from the threshold monitor and to determine, based at least in part on a temporal threshold value, the inference of the cognitive state of the user.</del><br>
+<br>
+16.   (Previously presented) The system of claim 4, wherein the inference fusion module is arranged to update the one or more baseline parameters associated with the user based at least in part on the user data.<br>
+<br>
+17.   (Previously presented) The system of claim 8, wherein the visual user data is facial expression data indicative of one or more attributes of a facial expression of the user.<br>
+<br>
+18.   (Previously presented) The system of claim 17, wherein the visual inference module comprises a plurality of visual state monitoring units, wherein each monitoring unit is arranged to identify a respective visual state of the user.<br>
+<br>
+19.   (Previously presented) The system of claim 9, wherein the biometric user data is indicative of one or more of a heart rate or skin conductance value of the user.<br>
+20.    (New) The system of claim 1, wherein one or more of the plurality of inference modules comprises:a threshold monitor arranged to receive the user data and to determine, based at least in part on the user data and at least one threshold value, an active state of the user; and Page 8 of 16
+Application No. 17/756,109<br>
+<br>
+<br>
+an active time monitor arranged to receive an indication of the active state from the threshold monitor and to determine, based at least in part on a temporal threshold value, the inference of the cognitive state of the user.<br>
+<br>
+21.    (New) The system of claim 1, wherein the inference fusion module comprises relative baseline offset (RBO) information, wherein the inference fusion module is arranged to process the user state data based at least in part on the RBO information to remove a baseline cognitive state from the user state data to form normalized user state data, wherein the inference fusion module is configured to determine the inference of the aggregated cognitive state of the user based on the normalized user state data, and wherein the baseline cognitive data is determined as an average of prior user state data received over a predetermined period of time.<br>
+<br>
+
+</body></html>

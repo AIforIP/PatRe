@@ -1,0 +1,44 @@
+<html><head></head><body><h3>Date: 2025-04-15</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<p>1.    (Currently Amended) A cabin management apparatus configured to manage a cabin of a vehicle, the cabin management apparatus comprising:an acquisition interface;a communication interface;an output interface; anda controller,wherein the controller is configured to:acquire, by the acquisition interface, passenger information including <u>posture information </u><del>a characteristic and/or a boarding position </del>of a passenger in the cabin;receive, by the communication interface, travel event information regarding a travel event that can occur during travel of the vehicle; andprovide, by the output interface based on the travel event information, a notification that is different depending on the <del>passenger </del><u>posture </u>information, in the cabin.</p><br>
+2.
+(Original)    The cabin management apparatus according to claim 1, wherein the controller is configured to acquire, by the acquisition interface, the passenger information each time the vehicle starts traveling after the vehicle stops with opening and closing of a door.<br>
+3.
+(Original)    The cabin management apparatus according to claim 1, wherein the communication interface is configured to be communicable with an automated driving apparatus configured to perform control related to automated driving of the vehicle, and<br>
+the controller is configured to, upon receiving the travel event information with the passenger information satisfying a first condition, transmit, by the communication interface to the automated driving apparatus, a first request to change a travel state of the vehicle so as to avoid the travel event.<br>
+<br>
+<br>
+4.
+(Original)    The cabin management apparatus according to claim 3, wherein the first condition is a condition indicating that a predetermined number or more passengers are standing.<br>
+5.
+(Canceled)<br>
+6.
+(Currently Amended) [[The]] <u>A</u> cabin management apparatus <del>according to </del><del>claim 5, </del><del>w</del><del>herein </del><u>configured to manage a cabin of a vehicle, the cabin management apparatus comprisin</u><u>g:</u><br>
+<u>an acquisition interface</u><u>;</u><br>
+<u>a communication interface confi</u><u>g</u><u>ured to be communicable with a travel assistance apparatus confi</u><u>g</u><u>ured to set a travel route for the vehicle</u><u>;</u><br>
+<u>an output interface</u><u>;</u><u> and</u><br>
+<u>a controller, wherein:</u><br>
+<u>the controller confi</u><u>g</u><u>ured to:</u><u>acquire, by </u><u></u><u>the acquisition </u><u></u><u>interface, passenger information </u><u></u><u>including a characteristic and/or a boarding position of a passenger in the cabin</u><u>;</u><br>
+<u>receive, by the communication interface, travel event information re</u><u>g</u><u>ardin</u><u>g</u><u> a travel event that can occur durin</u><u>g</u><u> travel of the vehicle</u><u>;</u><u> and</u><br>
+<u>provide, by the output interface based on the travel event information, a notification that is different dependin</u><u>g</u><u> on the passenger information, in the cabin,</u><br>
+<u>upon receivin</u><u>g</u><u> the travel event information with the passenger information satisfying a condition, transmit, by the communication interface to the travel assistance apparatus, a request to chan</u><u>g</u><u>e the travel route for the vehicle so as to prioritize a road at which the vehicle can stop, and</u><br>
+the <del>second </del>condition is a condition indicating that a predetermined number or more passengers <u>satisfy a predetermined characteristic of the passengers</u><del> are elderly or children</del>.<br>
+7.
+(Currently Amended) [[The]] <u>A</u> cabin management apparatus <del>according to </del> [[The]] <u>A</u> cabin management apparatus <del>according to </del><br>
+<del>wherein </del><u>confi</u><u>g</u><u>ured to mana</u><u>g</u><u>e a cabin of a vehicle, the cabin management apparatus comprisin</u><u>g:</u><u>an acquisition interface</u><u>;</u><br>
+<u>a communication interface</u><u>;</u><br>
+<u>an output interface</u><u>;</u><u> and</u><br>
+<br>
+<u>a controller, wherein:</u><br>
+<u>the controller configured to:</u><u>acquire, by </u><u></u><u>the acquisition </u><u></u><u>interface, passenger information </u><u></u><u>including </u><u></u><u>a characteristic and/or a boarding position of a passenger in the cabin</u><u>;</u><br>
+<u>receive, by the communication interface, travel event information re</u><u>g</u><u>ardin</u><u>g</u><u> a travel event that can occur durin</u><u>g</u><u> travel of the vehicle</u><u>;</u><u> and</u><br>
+<u>provide, by the output interface based on the travel event information, a notification that is different dependin</u><u>g</u><u> on the passenger information, in the cabin,</u><br>
+the output interface is configured to be capable of providing multiple patterns of notifications that are different depending on the <del>boarding position of the </del>passenger <u>information,</u> and the controller is configured to provide, by the output interface by priority, a notification to which a larger number of passengers correspond, among the multiple patterns of notifications.<br>
+<br>
+8-20. (Canceled)919<br>
+<br>
+
+</body></html>

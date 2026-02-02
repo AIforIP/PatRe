@@ -1,0 +1,22 @@
+Total Office Actions: 15
+Application Number: 14994555
+Patent Number: 12310759
+
+OA Timeline:
+  OA1: 2016-05-18 - Office_Action
+  OA2: 2016-09-23 - Office_Action
+  OA3: 2017-02-02 - Office_Action
+  OA4: 2017-07-28 - Office_Action
+  OA5: 2018-06-06 - Final_Rejection
+  OA6: 2019-01-02 - Office_Action
+  OA7: 2020-04-15 - Office_Action
+  OA8: 2020-09-16 - Office_Action
+  OA9: 2021-09-02 - Office_Action
+  OA10: 2022-03-10 - Office_Action
+  OA11: 2023-03-27 - Final_Rejection
+  OA12: 2023-10-18 - Office_Action
+  OA13: 2024-06-04 - Final_Rejection
+  OA14: 2024-11-07 - Office_Action
+  OA15: 2025-02-04 - Office_Action
+
+Final Status: Office_Action

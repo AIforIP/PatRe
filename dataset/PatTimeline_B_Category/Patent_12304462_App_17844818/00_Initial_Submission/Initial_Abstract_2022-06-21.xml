@@ -1,0 +1,8 @@
+<html><head></head><body><h3>Date: 2022-06-21</h3>
+<h1><u>ABSTRACT</u></h1>
+
+<p>A computer-implemented method for detecting an obstacle on a route ahead of a first vehicle. In the method, information on a second vehicle driving ahead on the route is recorded in the first vehicle by at least one sensor of the first vehicle. In the first vehicle, depending on the recorded information, a computer detects an avoidance maneuver of the second vehicle due to an obstacle or detects that the second vehicle has driven over an obstacle. An obstacle is detected on the route depending on the detected avoidance maneuver or the detection that the vehicle has driven over an obstacle. A measure for protecting the vehicle and/or the obstacle is initiated depending on the detected obstacle.</p>
+130656672.119
+5
+10
+</body></html>

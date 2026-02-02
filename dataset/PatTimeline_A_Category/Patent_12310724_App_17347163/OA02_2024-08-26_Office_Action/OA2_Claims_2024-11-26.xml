@@ -1,0 +1,72 @@
+<html><head></head><body><h3>Date: 2024-11-26</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>Please amend the claims as is shown in the following listing of claims, which listing replaces all prior claims in the application.</p><br>
+<br>
+1.    (Currently Amended) A method for performing a non-invasive blood glucose level measurement, comprising:translating raw optical measurements ("IT") to calibrated optical transmission measurements ("A") based on operating conditions [[("Io")]] of <del>an optical transmission </del><u>a light</u> source <u>device external to a body of a subject, with a ratio of the raw optical measurements and the operating conditions defining an internal transmittance, the operating conditions comprising radiant power ("</u><u>I</u><u>o") of optical radiation emitted by the li</u><u>g</u><u>ht source device;</u><br>
+preprocessing the calibrated optical transmission measurements;<br>
+providing the preprocessed calibrated optical transmission measurements to at least one chemometric model to obtain <u>[[an]]respective </u>estimates of a concentration of acetone in a breath of [[a]]the subject;<br>
+<del>mapping </del><u>determining, using a lookup table, a defined internal transmittance value corresponding to the </u>internal transmittance <u>measured </u>at a first wavelength; <del>and matching the mapped internal transmittance to a lookup table entry; and</del><br>
+<u>determinin</u><u>g</u><u>, usin</u><u>g</u><u> the lookup table and the defined internal transmittance value, a defined concentration of acetone</u><u>;</u><br>
+<u>selectin</u><u>g</u><u>, from the respective estimates, a particular estimate of the concentration of acetone in the breath of the subject that is closest to the defined concentration of acetone;</u><br>
+reporting an average of the <del>matched lookup table entry </del><u>defined concentration of acetone</u> and the <u>particular </u>estimate <del>from the at least one chemometric model </del>as a <u>measured </u>concentration of the acetone in the breath <u>of the subject, with the measured concentration of the acetone in the breath representing a level of blood glucose in the subject.</u><br>
+2.
+(Cancelled)<br>
+<br>
+<br>
+<br>
+3.
+(Currently Amended) The method of claim 1, wherein the translating the raw optical measurements to the calibrated optical transmission measurements is performed in accordance with A = -log10(IT/Io).<br>
+4.
+(Original) The method of claim 1, wherein the first wavelength aligns with an absorption wavelength of a particular concentration of acetone.<br>
+5.
+(Withdrawn) A method for performing non-invasive blood glucose level measurements over time, comprising:<br>
+using an optical source to emit optical radiations at certain wavelengths through breath in an air collection chamber;<br>
+receiving the emitted optical radiations at a photodetector;<br>
+converting the received optical radiations to digital data;<br>
+accumulating the digital data for a first time period; and<br>
+periodically transmitting the accumulated digital data to a cloud service for further processing.<br>
+6.
+(Withdrawn) The method of claim 5, wherein the optical source comprises at least one of a Quantum Cascade Laser ("QCL"), miniaturized near infrared ("NIR") spectrometer, and an LED.<br>
+7.
+(Withdrawn) The method of claim 5 further comprising adjusting an optical path length between the optical source and the photodetector by adjusting a number of reflections experienced by the emitted optical radiations.<br>
+8.
+(Withdrawn) The method of claim 5, wherein each one of the certain wavelengths aligns with an absorption wavelength of a particular concentration of acetone.<br>
+9.
+(Withdrawn) An apparatus for non-invasive measurement of blood glucose level,<br>
+comprising:a system housing for collecting breath of a subject, the system housing comprising:<br>
+<br>
+<br>
+a spectrometer printed circuit board ('PCB') connected to an inlet diaphragm; and<br>
+a reflective surface opposite the spectrometer PCB;<br>
+wherein an air containment section is disposed between the spectrometer PCB and the reflective surface; and<br>
+an optical source disposed on a surface of the spectrometer PCB;<br>
+wherein radiation emitted from the optical source travels through breath disposed within the air containment section, is reflected by the reflective surface, and is detected by an optical detector.<br>
+<br>
+10.    (Withdrawn) The apparatus of claim 9, wherein the system housing further comprises a mouthpiece for receiving breath expelled by the subject.<br>
+<br>
+11.    (Withdrawn) The apparatus of claim 10, wherein the system housing further comprises a particulate filter for filtering particulates from the received breath.<br>
+<br>
+12.    (Withdrawn) The apparatus of claim  11, the inlet diaphragm being connected to the particulate filter.<br>
+<br>
+13.    (Withdrawn) The apparatus of claim 12, further comprising an outlet diaphragm connected to the air containment section.<br>
+<br>
+14.    (Withdrawn) The apparatus of claim 9, further comprising a reflective coating disposed on an inside of the air containment section to adjust an optical path of the radiation through the breath disposed within the air containment section.<br>
+<br>
+15.    (Withdrawn) The apparatus of claim 9, wherein the optical source comprises at least one of a Quantum Cascade Laser ("QCL"), a miniaturized near infrared ("NIR") spectrometer, and an LED.<br>
+<br>
+<br>
+<br>
+16.   (Withdrawn) The apparatus of claim 9, further comprising a sensor device configured to measure a temperature of the breath disposed within the breath collections section.<br>
+<br>
+17.   (Withdrawn) The apparatus of claim 9, further comprising electronics configured to convert the detected radiation into digital data and calculating a raw spectral power density of the detected radiation.<br>
+<br>
+18.   (Withdrawn) The apparatus of claim 17, further comprising a gateway device configured to transmit the digital data and the raw spectral power density to a cloud service for processing.<br>
+<br>
+19.   (Withdrawn) The apparatus of claim 9, wherein the optical source emits optical radiations at certain wavelengths through breath in the air containment section.<br>
+<br>
+20.    (Withdrawn) The apparatus of claim 19, wherein each one of the certain wavelengths aligns with an absorption wavelength of a particular concentration of acetone.<br>
+<br>
+21.    (New) The method of claim 1, wherein the lookup table comprises first values of the internal transmittance at respective wavelengths for a first concentration of acetone and second values of internal transmittance at respective wavelengths for a second concentration of acetone.<br>
+
+</body></html>

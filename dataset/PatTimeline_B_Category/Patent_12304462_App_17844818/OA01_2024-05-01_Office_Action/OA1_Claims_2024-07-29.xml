@@ -1,0 +1,71 @@
+<html><head></head><body><h3>Date: 2024-07-29</h3>
+
+<h1><u>Listing of the Claims:</u></h1>
+<p>Attorney Docket No. BOSC.P13390US/1001206826 Reply to Office Action of May 1, 2024<u> Amendments to the Claims:</u></p><p>Without prejudice, this listing of the claims replaces all prior versions and listings of the claims in the present application:</p><br>
+<br>
+1. (Original) A computer-implemented method for detecting an obstacle on a route ahead of a first vehicle, the method comprising the following steps:<br>
+recording information on a second vehicle driving ahead on a route in the first vehicle by at least one sensor of the first vehicle;<br>
+detecting, by a computer in the first vehicle, depending on the recorded information, an avoidance maneuver of the second vehicle due to an obstacle or that the second vehicle has driven over the obstacle,<br>
+detecting the obstacle on the route depending on the detected avoidance maneuver or the detection that the vehicle has driven over an obstacle;<br>
+initiating a measure for protecting the first vehicle and/or the obstacle, depending on the detected obstacle.<br>
+<br>
+2. (Original) The method as recited in claim 1, wherein the information on the second vehicle includes information on movements of the second vehicle.<br>
+<br>
+3. (Original) The method as recited in claim 2, wherein the movements include at least one pitch motion, and the second vehicle driving over the obstacle is detected depending on the information on the pitch motion.<br>
+<br>
+4. (Original) The method as recited in claim 2, further comprising:<br>
+deducing a change to a relative position of the second vehicle in a lane or a yaw motion of the second vehicle from the movements, and the avoidance maneuver is detected depending on the deduced change or the deduced yaw rate.<br>
+<br>
+5. (Original) The method as recited in claim 1, further comprising:<br>
+determining, depending on the recorded information on the second vehicle, a location of the obstacle, the location including a distance between the first vehicle and the obstacle or a position of the obstacle in a lane, and the initiated measure depends on the determined location.<br>
+<br>
+<br>
+<br>
+Reply to Office Action of May 1, 2024<br>
+<br>
+6. (Original) The method as recited in claim 1, wherein the obstacle is roadway damage, including a pothole or an object on a roadway.<br>
+<br>
+7. (Original) The method as recited in claim 1, wherein the second vehicle is a vehicle that is driving directly ahead of the first vehicle.<br>
+<br>
+8. (Original) The method as recited in claim 1, wherein information is recorded for a plurality of second vehicles, and the obstacle is detected on the route depending on the recorded information for the plurality of second vehicles.<br>
+<br>
+9. (Original) The method as recited in claim 1, wherein the first vehicle monitors the second vehicle both for an avoidance maneuver due to the obstacle and to see if the second vehicle drives over the obstacle, and the obstacle being detected depending on the detected avoidance maneuver and the detection that the vehicle has driven over the obstacle.<br>
+<br>
+10. (Original) The method as recited in claim 1, wherein the measure includes an automatic steering intervention, and/or an automatic braking intervention, and/or a warning signal to a driver of the first vehicle.<br>
+<br>
+11. (Original) The method as recited in claim 1, wherein the at least one sensor includes an environment sensor, and the information on the second vehicle includes a camera image, and/or a LiDAR point cloud, and/or a radar signature, and/or audio information, and/or ultrasonic data.<br>
+<br>
+<br>
+<br>
+Reply to Office Action of May 1, 2024<br>
+<br>
+12. (Original) A non-transitory machine-readable storage device on which is stored a computer program for detecting an obstacle on a route ahead of a first vehicle, the computer program, when executed by a computer, causing the computer to perform the following steps:<br>
+recording information on a second vehicle driving ahead on a route in the first vehicle by at least one sensor of the first vehicle;<br>
+detecting, by a computer in the first vehicle, depending on the recorded information, an avoidance maneuver of the second vehicle due to an obstacle or that the second vehicle has driven over the obstacle,<br>
+detecting the obstacle on the route depending on the detected avoidance maneuver orthe detection that the vehicle has driven over an obstacle;<br>
+initiating a measure for protecting the first vehicle and/or the obstacle, depending on the detected obstacle.<br>
+<br>
+13. (Original) A vehicle configured to detect an obstacle on a route ahead of a first vehicle, the vehicle comprising:<br>
+at least one sensor, the at least one sensor configured to record information on a second vehicle driving ahead on a route in the vehicle by the at least one sensor; and<br>
+a computer configured to:detect, depending on the recorded information, an avoidance maneuver of the second vehicle due to an obstacle or that the second vehicle has driven over the obstacle,<br>
+detect the obstacle on the route depending on the detected avoidance maneuver or the detection that the vehicle has driven over an obstacle, and<br>
+initiate a measure for protecting the vehicle and/or the obstacle, depending on the detected obstacle.<br>
+<br>
+<br>
+<br>
+Reply to Office Action of May 1, 2024<br>
+<br>
+14. (New) A computer-implemented method of an ego vehicle, the method comprising:<br>
+recording, with a sensor system of the ego vehicle, sensor information regarding;<br>
+detecting a change over time in a leading vehicle that is in front of the ego vehicle;<br>
+based on the detected change over time in the leading vehicle, determining at least one of that the leading vehicle has conducted an evasive maneuver, that the leading vehicle has undergone a pitching motion, and that the leading vehicle has undergone a yaw motion;<br>
+based on the determination regarding the leading vehicle, determining by the ego vehicle (a) that an obstacle, a view of which, by the ego vehicle, is blocked by the leading vehicle, is present and (b) position information of the obstacle; and<br>
+performing a protection actionfor protecting at least one of (a) the ego vehicle from the obstacle and (b) the obstacle from the ego vehicle.<br>
+<br>
+15. (New) The method as recited in claim 14, wherein the detection of the change over time is a detection of a change in a difference between two corner regions of the leading vehicle.<br>
+<br>
+16. (New) The method as recited in claim 14, wherein the determination regarding the leading vehicle is that the vehicle has conducted the evasive maneuver and is made based on a detection of the yaw motion.<br>
+<br>
+17. (New) The method as recited in claim l 4, wherein the pitching motion of the leading vehicle is determined based on a changed to height of a particular part of the leading vehicle.<br>
+
+</body></html>

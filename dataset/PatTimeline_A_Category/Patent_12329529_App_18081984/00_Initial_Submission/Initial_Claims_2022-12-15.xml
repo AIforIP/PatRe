@@ -1,0 +1,51 @@
+<html><head></head><body><h3>Date: 2022-12-15</h3>
+<p>CLAIMS:</p>
+<br>
+
+1.
+An ECG sensor system comprising: 
+<br>
+a substrate having a first side and a second side, the substrate of a non- conducting material; 
+<br>
+a plurality of textile-based sensors positioned on the first side, each of the plurality of textile-based sensors spaced apart from one another on the first side, the second side covering one side of the each of the plurality of textile-based sensors as an insulating covering, the each of the plurality of textile-based sensors including conductive fibres interlaced with one another; and 
+<br>
+a conductive trace connected to the each of the plurality of textile-based sensors, each of the conductive traces for connecting the plurality of textile-based sensors to an electronic controller for sending and receiving electronic signals from a selected pair of the plurality of textile-based sensors. 
+
+<br>
+
+2.
+The ECG sensor system of claim 1, wherein the non-conducting material is a non-interlaced material such as plastic.
+<br>
+
+3.
+The ECG sensor system of claim 1, wherein the non-conducting material includes non-conductive fibres as an interlaced material selected from the group consisting of: a woven material and a knit material.
+<br>
+
+4.
+The ECG sensor system of claim 1, wherein the substrate is in the form of a band and the plurality of textile-based sensors are distributed along the band.
+<br>
+
+5.
+The ECG sensor system of claim 1 further comprising the plurality of textile- based sensors divided into a generator group and a receiver group, such that a group spacing between a generator sensor of the generator group and a receiver sensor of the receiver group is larger than spacing between the sensors within in the generator group and spacing between the sensors within in the receiver group, the generator sensor adjacent to the receiver sensor.
+
+<br>
+
+6.
+The ECG sensor system of claim 3, wherein the conductive fibres and the non-conductive fibres are interlaced with one another to form an integral interlaced structure.
+<br>
+
+7.
+The ECG sensor system of claim 3, wherein the conductive fibres and the non-conductive fibres are connected to one another forming a non-integral structure, such as an applique.
+<br>
+
+8.
+The ECG sensor system of claims 6 or 7, wherein respective conducting surfaces of the plurality of textile-based sensors is raised from a surrounding insulating surface of the first side.
+<br>
+
+9.
+The ECG sensor system of claim 1 further comprising the controller configured via stored instructions for execution by a computer processor for deselecting at least one of the sensors from the selected pair and selecting a replacement sensor from the plurality of textile-based sensors, a basis for said deselecting based on analysis of a quality of the electronic signals.
+<br>
+
+10.
+The ECG sensor system of claim 1 further comprising the controller configured via stored instructions for execution by a computer processor for alternating different pairings from the plurality of textile-based sensors as the select pair and choosing a determined optimum signal from the electronic signals received from the alternating different pairings.
+</body></html>

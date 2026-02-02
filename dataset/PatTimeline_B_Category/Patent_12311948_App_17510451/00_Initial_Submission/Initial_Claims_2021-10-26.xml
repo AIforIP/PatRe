@@ -1,0 +1,126 @@
+<html><head></head><body><h3>Date: 2021-10-26</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1. A vehicle motion management system for a vehicle, the vehicle motion management system being connectable to a motion support system for communication of control signals therebetween, wherein the vehicle motion management system is configured to: 
+<br>
+determine a desired torque for operating the vehicle at a current vehicle operating condition; 
+<br>
+determine a wheel slip limit for at least one wheel of the vehicle; 
+<br>
+determine, based at least on the wheel slip limit, a wheel speed limit for the at 
+<br>
+least one wheel of the vehicle; and 
+<br>
+transmit a control signal indicative of the desired torque and the wheel speed limit to the motion support system. 
+
+<br>
+
+<br>
+2. The vehicle motion management system of claim 1, wherein the wheel speed limit is further based on the desired torque.
+<br>
+
+<br>
+3. The vehicle motion management system of claim 2, wherein the wheel speed limit comprises an upper wheel speed limit and a lower wheel speed limit, the vehicle motion management system being configured to: 
+<br>
+transmit the upper wheel speed limit to the motion support system at least when the desired torque is above zero; and 
+<br>
+transmit the lower wheel speed limit to the motion support system at least when the desired torque is below zero. 
+
+<br>
+
+<br>
+4. The vehicle motion management system of claim 1, wherein the vehicle motion management system is further configured to: 
+<br>
+determine an offset wheel speed parameter; 
+<br>
+obtain a signal indicative of a wheel speed for the vehicle; and 
+<br>
+determine the wheel slip limit based on the offset wheel speed parameter 
+<br>
+when the wheel speed is below a threshold vehicle speed limit.
+<br>
+
+<br>
+5. The vehicle motion management system of claim 1, wherein the vehicle motion management system is further configured to: 
+<br>
+determine a current rotational wheel speed and a current longitudinal wheel 
+<br>
+speed for at least one of the wheels of the vehicle; and 
+
+ determine a wheel slip for the at least one wheel based on the current rotational wheel speed and the current longitudinal wheel speed.
+<br>
+
+<br>
+6. The vehicle motion management system of claim 1, wherein the wheel slip limit is within a predetermined wheel slip range.
+<br>
+
+<br>
+7. The vehicle motion management system of claim 1, wherein the vehicle motion management system is further configured to: 
+<br>
+obtain a signal indicative of a current accelerator pedal position of an 
+<br>
+accelerator pedal of the vehicle; and 
+<br>
+determine the desired torque based on the current accelerator pedal position. 
+
+<br>
+
+<br>
+8. The vehicle motion management system of claim 1, wherein the desired torque is determined based on a signal received from an autonomous vehicle operating system.
+<br>
+
+<br>
+9. The vehicle motion management system of claim 1, wherein the vehicle motion management system is further configured to: 
+<br>
+determine a wheel friction level between the at least one wheel and a road 
+<br>
+surface; and 
+<br>
+determine the current vehicle operating condition based on the determined wheel friction level. 
+
+<br>
+
+<br>
+10. A motion support system for a vehicle, the motion support system being connectable to a vehicle motion management system and to at least one actuator configured to apply a torque to at least one wheel of the vehicle, wherein the motion support system is configured to: 
+<br>
+receive a control signal from the vehicle motion management system, the control signal being indicative of a desired torque for operating the vehicle at a 
+<br>
+current vehicle operating condition, and indicative of a wheel speed limit for the at least one wheel of the vehicle; 
+<br>
+determine a current vehicle driveline state for the vehicle; 
+<br>
+determine, based on the current vehicle driveline state, the desired torque and the wheel speed limit, an operating torque and an actuator rotational speed limit; 
+and
+ transmit an actuator signal to the actuator for the actuator to generate the operating torque on the at least one wheel without exceeding the actuator rotational speed limit.
+<br>
+
+<br>
+11. The motion support system of claim 10, wherein the current vehicle driveline state is one of a current vehicle transmission state, a gear stage for the vehicle transmission, or a transmission clutch actuation state.
+<br>
+
+<br>
+12. The motion support system of claim 10, wherein the motion support system is a decentralized motion support system connectable to a wheel specific actuator configured to control a single wheel of the vehicle.
+<br>
+
+<br>
+13. A method for controlling an actuator of a vehicle, the actuator being configured to apply a torque on at least one wheel of the vehicle, wherein the method comprises: 
+<br>
+determining a desired torque for operating the vehicle at a current vehicle operating condition; 
+<br>
+determining a wheel slip limit for the at least one wheel of the vehicle; 
+<br>
+determining, based at least on the wheel slip limit, a wheel speed limit for the at least one wheel of the vehicle; 
+<br>
+determining an operating torque and an actuator rotational speed limit based on the desired torque, the wheel speed limit and a current vehicle driveline state; and 
+<br>
+controlling the actuator to generate the operating torque on the at least one wheel without exceeding the actuator rotational speed limit. 
+5
+10
+15
+20
+25
+30
+35
+</body></html>

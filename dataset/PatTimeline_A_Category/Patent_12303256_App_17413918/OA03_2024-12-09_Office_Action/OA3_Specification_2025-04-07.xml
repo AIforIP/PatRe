@@ -1,0 +1,147 @@
+<html><head></head><body>17413918
+
+   
+   <p>
+<u>Amendments to the Specification:</u>
+   </p>
+   <p>
+[0128] Using BAM, a risk curve was developed to classify the injury and non-injury events. The results are given in Fig. 15, where 50% risk of concussion signified by the green plane. Critical brain angle values (axes intercept) for 50% injury risk correspond to 0.34 rad in the coronal direction, 0.26 in the axial direction, and 0.96 in the sagittal direction. In the case of classifying concussions, a high sensitivity classifier is desirable to minimize the number of false negatives. The classifier hyper-plane can be tuned to different sensitivity levels by adjusting the classification threshold. To obtain 50% sensitivity with the BAM, coronal, sagittal, and axial critical values are 0.29, 0.83, and 0.22; to obtain 90% sensitivity, the critical values are 0.17, 0.49, and 0.13. Risk curves for 
+a
+
+→
+ and
+
+&nbsp;
+∆
+ω
+
+→
+ are shown in Figs. 16 and 17.</p>
+   <p>
+
+SVG
+{EMBED HERE}
+1.0923611111111111
+6.239583333333333
+A black and white image of numbers
+
+AI-generated content may be incorrect.
+
+Table 3: Logistic regression coefficients for each tested metric. Statistical significance (p &lt; 0.05) denoted by asterisk.</p>
+   [[
+]]
+   <p>
+β0
+</p>
+<p>β1
+</p>
+<p>β2
+</p>
+<p>β3
+</p>
+<p>
+ 
+    α
+    &nbsp;
+ 
+ →
+</p>
+<p>8.446</p>
+<p>-1.63e-4</p>
+<p>5.17e-5</p>
+<p>-.0014·</p>
+<p>α</p>
+<p>6.900</p>
+<p>-4.74e-4·</p>
+<p>-</p>
+<p>-</p>
+<p>Δ
+ 
+    ω
+ 
+ →
+</p>
+<p>10.69</p>
+<p>-.145·</p>
+<p>-.005</p>
+<p>-.172·</p>
+<p>Δωr
+</p>
+<p>7.421</p>
+<p>-.122·</p>
+<p>-</p>
+<p>-</p>
+<p>BrIC</p>
+<p>10.57</p>
+<p>-11.10·</p>
+<p>-</p>
+<p>-</p>
+<p>RIC</p>
+<p>5.559</p>
+<p>-4.3e-8·</p>
+<p>-</p>
+<p>-</p>
+<p>
+ 
+    α
+    &nbsp;
+ 
+ →
+</p>
+<p>9.041</p>
+<p>-.071·</p>
+<p>-.071·</p>
+<p>-.031·</p>
+<p>αr
+</p>
+<p>8.038</p>
+<p>.0572</p>
+<p>HIC15
+</p>
+<p>6.071</p>
+<p>-.0072·</p>
+<p>-</p>
+<p>-</p>
+<p>HIC36
+</p>
+<p>5.928</p>
+<p>-.0056·</p>
+<p>-</p>
+<p>-</p>
+<p>SI</p>
+<p>5.673</p>
+<p>-.0024·</p>
+<p>-</p>
+<p>-</p>
+<p>HIP</p>
+<p>5.549</p>
+<p>-4.11e-5·</p>
+<p>-</p>
+<p>-</p>
+<p>HIP3D
+</p>
+<p>5.882</p>
+<p>-1.43e-5</p>
+<p>-2.26e-4·</p>
+<p>1.50e-4</p>
+<p>GAMBIT</p>
+<p>5.701</p>
+<p>-9.599·</p>
+<p>-</p>
+<p>-</p>
+<p>VT CP</p>
+<p>5.910</p>
+<p>-5.126·</p>
+<p>-</p>
+<p>-</p>
+<p>BAM</p>
+<p>9.845</p>
+<p>-28.83</p>
+<p>-10.23</p>
+<p>-37.95·</p>
+   
+   <p>
+<u>_________________________________________________________________</u>
+   </p>
+
+</body></html>

@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-12-14</h3>
+<h1>ABSTRACT</h1>
+
+<p>A vehicle is equipped with a lidar installed on the vehicle to secure an external field of view of the vehicle and configured to obtain lidar data for detecting an object in the external field of view. The vehicle includes a controller including at least one processor configured to process the lidar data and perform an avoidance control or a warning control based on the processed results. In particular, the controller is further configured to generate a plurality of virtual lines in a moving direction of the vehicle within a full width of the vehicle, obtain a plurality of contour points of the object by processing the lidar data, and determine a collision risk for the avoidance control or the warning control based on the number of crossing points between the plurality of virtual lines and the plurality of contour points.</p>
+25
+</body></html>

@@ -1,0 +1,46 @@
+<html><head></head><body>17413918
+
+   
+   <p>
+<u>Amendments to the Specification:</u>
+   </p>
+   <p>
+[0128] Using BAM, a risk curve was developed to classify the injury and non-injury events. The results are given in Fig. 15, where 50% risk of concussion signified by the green plane. Critical brain angle values (axes intercept) for 50% injury risk correspond to 0.34 rad in the coronal direction, 0.26 in the axial direction, and 0.96 in the sagittal direction. In the case of classifying concussions, a high sensitivity classifier is desirable to minimize the number of false negatives. The classifier hyper-plane can be tuned to different sensitivity levels by adjusting the classification threshold. To obtain 50% sensitivity with the BAM, coronal, sagittal, and axial critical values are 0.29, 0.83, and 0.22; to obtain 90% sensitivity, the critical values are 0.17, 0.49, and 0.13. Risk curves for 
+a
+
+→
+ and
+
+&nbsp;
+∆
+ω
+
+→
+ are shown in Figs. 16 and 17.</p>
+   <p>
+
+SVG
+{EMBED HERE}
+1.0923611111111111
+6.239583333333333
+A black and white image of numbers
+
+AI-generated content may be incorrect.
+
+Table 3: Logistic regression coefficients for each tested metric. Statistical significance (p &lt; 0.05) denoted by asterisk.</p>
+   [[
+]]
+   <p>
+
+SVG
+{EMBED HERE}
+1.4191874453193352
+8.106181102362205
+A table with numbers and symbols
+
+AI-generated content may be incorrect.
+
+   </p>
+   <p>________________</p>
+
+</body></html>

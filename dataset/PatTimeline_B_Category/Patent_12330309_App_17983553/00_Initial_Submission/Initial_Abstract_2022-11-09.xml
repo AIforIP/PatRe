@@ -1,0 +1,5 @@
+<html><head></head><body><h3>Date: 2022-11-09</h3>
+
+<h1>ABSTRACT</h1>
+<p>This disclosure is related to a robot motion control method and apparatus. The method</p><p>includes: obtaining a center-of-mass reference trajectory used for guiding the robot to execute a target motion; obtaining, based on optimization of an objective function, center-of-mass control information for controlling the robot to follow the center-of-mass reference trajectory to move; generating joint control information according to the center-of-mass control information and a structure matrix of the robot; and controlling the robot to execute the target motion based on the joint control information.</p><p>21PCT843/US
+  32</p></body></html>

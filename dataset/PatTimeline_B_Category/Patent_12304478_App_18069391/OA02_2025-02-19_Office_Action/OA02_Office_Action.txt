@@ -1,0 +1,38 @@
+DETAILED CORRESPONDENCE
+Status of Claims
+Claim(s) 1, 3-7, 9-13 and 15-18 is/are allowed in this office action.
+Examiner’s Amendment
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+The application has been amended as follows:
+---Beginning of Amendment(s)---
+(Currently Amended) A method for controlling lane changing, implemented by an autonomous driving system of a vehicle, comprising:
+predicting a target pose of the vehicle changed to a second lane based on a current pose of the vehicle on a first lane in response to a trigger of changing the vehicle from the first lane to the second lane; [[and]]
+determining a lane changing preparation pose of the vehicle on the first lane based on the target pose, a minimum turning radius of the vehicle and at least one safe distance parameter of the vehicle; and
+performing lane changing of the vehicle based on the lane changing preparation pose.
+7. (Currently Amended) An apparatus for controlling lane changing, comprising:
+at least one processor; and
+a memory communicatively connected to the at least one processor; wherein, the memory is stored with instructions executable by the at least one processor, and the instructions are executed by the at least one processor, to cause the at least one processor to perform:
+predicting a target pose of a vehicle changed to a second lane based on a current pose of the vehicle on a first lane in response to a trigger of changing the vehicle from the first lane to the second lane; [[and]]
+determining a lane changing preparation pose of the vehicle on the first lane based on the target pose, a minimum turning radius of the vehicle and at least one safe distance parameter of the vehicle; and
+performing lane changing of the vehicle based on the lane changing preparation pose.
+13. (Currently Amended) A non-transitory computer-readable storage medium having computer instructions stored thereon, wherein the computer instructions are configured to cause a computer to perform:
+predicting a target pose of a vehicle changed to a second lane based on a current pose of the vehicle on a first lane in response to a trigger of changing the vehicle from the first lane to the second lane; [[and]]
+determining a lane changing preparation pose of the vehicle on the first lane based on the target pose, a minimum turning radius of the vehicle and at least one safe distance parameter of the vehicle; and
+performing lane changing of the vehicle based on the lane changing preparation pose.
+---End of Amendment(s)---
+Reason for Allowance
+Regarding the claimed terms, the Examiner notes that a “general term must be understood in the context in which the inventor presents it.” In re Glaug 283 F.3d 1335, 1340, 62 USPQ2d 1151, 1154 (Fed. Cir. 2002).  Therefore the Examiner must interpret the claimed terms as found within the Original Specification.  Clearly almost all the general terms in the claims may have multiple meanings.  So where a claim term “is susceptible to various meanings, ... the inventor’s lexicography must prevail ....” Id.  Using these definitions for the claims, the claimed invention was not reasonably found in the prior art.
+Claim(s) 1, 3-7, 9-13 and 15-18 is/are allowable over the prior art of record.  The following are statements of the subject matter disclosed by the prior art references used in the prior office action:
+US 20200241547 Al (“Hashimoto”) discloses an autonomous driving system which acquires information concerning a vehicle density in an adjacent lane that is adjacent to a lane on which an own vehicle is traveling, when the own vehicle travels on a road having a plurality of lanes. The autonomous driving system selects the adjacent lane as an own vehicle travel lane, when the vehicle density in the adjacent lane that is calculated from the acquired information is lower than a threshold density that is determined in accordance with relations between the own vehicle and surrounding vehicles. The autonomous driving system performs lane change to the adjacent lane autonomously, or propose lane change to the adjacent lane to a driver, when the adjacent lane is selected as the own vehicle travel lane.
+“If the examiner believes that the record of the prosecution as a whole does not make clear his or her reasons for allowing a claim or claims, the examiner may set forth such reasoning.” See MPEP § 1302.14 I and CFR 1.104(e).  The following is the examiner’s statement(s) regarding this application’s reason(s) for allowance:
+Regarding Claim(s) 1, 3-7, 9-13 and 15-18, the prior art taken either individually or in combination with other prior art of record fails to disclose, suggest, teach, or render obvious all the claimed limitations in the context of the invention as a whole; in this case:
+determining a lane changing preparation pose of the vehicle on the first lane based on the target pose, a minimum turning radius of the vehicle and at least one safe distance parameter of the vehicle; and
+performing lane change of the vehicle based on the lane changing preparation pose.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Contact Information
+Primary Examiner Calvin Cheung’s contact information is listed at the bottom, and he is best reached MONDAY-THURSDAY, 0700-1700 ET. If attempts to reach the primary by telephone are unsuccessful, the primary’s supervisor, MARC BURGESS, is available at telephone number (571) 272-9385.
+Applicants are encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice for scheduling an examiner interview that will be performed over telephone or video conferencing (using a USPTO supplied web-based collaboration tool).
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/CALVIN CHEUNG/
+(571) 270-7041 phone number
+Calvin.Cheung@USPTO.GOV email and fax

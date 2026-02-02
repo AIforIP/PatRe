@@ -1,0 +1,11 @@
+Total Office Actions: 4
+Application Number: 17224561
+Patent Number: 12324662
+
+OA Timeline:
+  OA1: 2024-01-18 - Office_Action
+  OA2: 2024-08-05 - Office_Action
+  OA3: 2025-02-20 - Office_Action
+  OA4: 2025-02-26 - Granted
+
+Final Status: Granted

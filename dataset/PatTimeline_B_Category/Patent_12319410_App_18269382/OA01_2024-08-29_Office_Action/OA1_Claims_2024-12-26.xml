@@ -1,0 +1,62 @@
+<html><head></head><body><h3>Date: 2024-12-26</h3>
+
+<h1><u>In the Claims</u></h1>
+<br>
+<br>
+1.    (Currently Amended) A payload attachment device for an unmanned aircraft for supporting a payload having a payload handle, the payload attachment device comprising:a receiver for receiving the payload handle;<br>
+a releasable latch in the receiver having an engaged position and disengaged position, the<del> latched </del><u>releasable latch </u>biased to the engaged position restraining a payload handle;<br>
+a manual release connected to the <u>releasable </u>latch for overcoming the bias and moving the <u>releasable </u>latch to the disengaged position[[,]];<br>
+an automated release connected to the <u>releasable </u>latch for overcoming the bias and moving the <u>releasable </u>latch to the disengaged position, the automated release connected to a controller of the unmanned <u>aircraf</u><u>t;</u><u> and</u><br>
+<u>a disconnectable electrical communication connection with a first end connecting at the payload attachment device and a second end configured for connecting to the payload handle when the payload handle is restrained.</u><br>
+2.
+(Cancelled)<br>
+3.
+(Currently Amended) The payload attachment device of claim [[2]]1 wherein the disconnectable electrical communication connection comprises at least one electrical contact in the receiver, <u>the at least one electrical contact configured </u>for engaging electrically with at least one corresponding electrical contact on the payload handle when the<u> payload </u>handle is restrained.<br>
+4.
+(Currently Amended) The payload attachment device of claim [[2]] 1, wherein the disconnectable electrical communication connection comprises a detachable cable between the payload attachment device and <u>configured to detach from the</u> payload handle <del>that detaches </del>when the <u>releasable </u>latch is released <del>and payload handle is disengaged</del>.<br>
+5.
+(Currently Amended) The payload attachment device of claim 1, further comprising<u> [[an]]a second </u>electrical communication connection <del>between </del><u>with a first end at </u>the payload<br>
+<br>
+<br>
+attachment device <del>at a first end </del>and <u>a second end configured to connect to </u>the <u>unmanned </u>aircraft<del> at a second end</del>.<br>
+<br>
+6.    (Currently Amended) The payload attachment device of claim [[2]]5, wherein the electrical communication connection is <u>configured for communicating </u><del>in communication </del>with a flight control system of the <u>unmanned </u>aircraft at the second end.<br>
+<br>
+7.    (Currently Amended) The payload attachment device of claim [[2]] 1, wherein the payload attachment device is <del>adapted to receive </del><u>configured for receiving </u>payload telemetry data from the payload using the disconnectable electrical communication connection.<br>
+<br>
+8.    (Currently Amended) The payload attachment device of claim 1, wherein the automated release connected to the <u>releasable </u>latch <del>may be </del><u>is configured </u><del>operated </del>to <del>release a payload</del><u> disen</u><u>gag</u><u>e </u>when [[an]] <u>the unmanned </u>aircraft reaches a destination.<br>
+<br>
+9.    (Withdrawn) An payload box for an unmanned aircraft having a payload attachment device comprising:at least one payload handle having an opening for engaging with the payload attachment device on a top of the payload box;<br>
+at least one electrical contact in releasable connection with the payload attachment device; and<br>
+at least one support for supporting a payload.<br>
+<br>
+10.   (Withdrawn) The payload box of claim 9, wherein the payload box communicates payload telemetry data using the at least one electrical contact to the payload attachment device.<br>
+<br>
+11.   (Withdrawn) The payload box of claim 9, further comprising walls and a floor, where in the floor is the at least support for supporting a payload.<br>
+<br>
+12.   (Withdrawn) The payload box of claim 9, further comprising a parachute mechanism, the parachute mechanism comprising<br>
+<br>
+a parachute affixed to the payload box;<br>
+a parachute canister containing the parachute when the parachute is packed;<br>
+a parachute attachment that deploys the parachute from the parachute canister when the payload box is released from the payload attachment device.<br>
+<br>
+13.   (Withdrawn) The payload box of claim 9, wherein the payload box comprises one or more sensors that generate data, and wherein the data is communicated over the at least one electrical contact.<br>
+<br>
+14.   (Withdrawn) The payload box of claim 9, wherein the payload box comprises a modular attachment wherein the attachment is selected from a group comprising search lights, cameras, emergency equipment, military equipment, sensors, cargo delivery cartons, winch, and robotic arms.<br>
+<br>
+15.   (Withdrawn) A method of transporting a payload using an unmanned aircraft having a payload attachment device comprising:positioning a payload box beneath the aircraft and aligning each of one or more payload box handles with a receivers of corresponding one or more payload attachment devices;<br>
+receiving each payload handle by the receivers of the corresponding one or more payload attachment devices at a first location;<br>
+releasable engaging each payload handle with a biased latch passing into an opening in the payload handle, by the corresponding payload attachment device to support the payload by the payload attachment device;<br>
+flying the aircraft to a second location with the payload box;<br>
+disengaging each payload handle by forcing the latch against the bias to release the payload handle from the receiver at the second location.<br>
+<br>
+16.   (Withdrawn) The method of claim 15, wherein disengaging each payload handle occurs while the aircraft is not on the ground.<br>
+<br>
+<br>
+17.   (Withdrawn) The method of claim 16, further deploying a parachute when disengaging each payload handle so that parachute slows the fall of the payload.<br>
+<br>
+18.   (Withdrawn) The method of claim 15, further comprising communicating telemetry data from the payload through a first electrical connection between the payload handle and the payload attachment device, though a second electrical connection between the payload attachment device to the aircraft.<br>
+<br>
+19.   (Withdrawn) The method of claim 18, further comprising communicating the telemetry data from the aircraft to a ground station over a wireless link.<br>
+
+</body></html>

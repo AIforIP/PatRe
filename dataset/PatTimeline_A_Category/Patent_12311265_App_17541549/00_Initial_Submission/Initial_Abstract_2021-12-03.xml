@@ -1,0 +1,5 @@
+<html><head></head><body><h3>Date: 2021-12-03</h3>
+<p>SYSTEMS AND METHODS FOR TRAINING A MODEL TO</p><p>DETERMINE A TYPE OF ENVIRONMENT SURROUNDING A USER</p>
+<h1><u>ABSTRACT</u></h1>
+<p>A method for determining an environment in which a user is located is described. The</p><p>method includes receiving a plurality of sets of audio data based on sounds emitted in a plurality of environments. Each of the plurality of environments has a different combination of objects. The method further includes receiving input data regarding the plurality of environments, and training an artificial intelligence (Al) model based on the plurality of sets of audio data and the input data. The method includes applying the Al model to audio data captured from an environment surrounding the first user to determine a type of the environment.</p><p>SONYP486 57
+PATENT APPLICATION</p><p>SCEA21006US00</p><p>ASP/NVP</p></body></html>

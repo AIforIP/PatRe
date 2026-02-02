@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-11-21</h3>
+<h1>ABSTRACT</h1>
+
+<p>A travel control apparatus to be mounted on a vehicle includes a computer device configured to perform control to cause the vehicle to travel at a set constant vehicle speed or to cause the vehicle to travel following the preceding vehicle. The computer device includes a determination unit and a target acceleration rate setting unit. The determination unit is configured to, before turn steering is started, determine whether it is a turn opportunity for the vehicle to make a first direction turn. The first direction turn is a turn made by the vehicle deviating from a current travel course without crossing an oncoming travel course. The target acceleration rate setting unit is configured to, in a case where the determination unit determines that it is the turn opportunity, perform control to reduce acceleration before the turn steering is started.</p>
+30
+</body></html>

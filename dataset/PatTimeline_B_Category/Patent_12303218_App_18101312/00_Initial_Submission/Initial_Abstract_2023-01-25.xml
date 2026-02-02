@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2023-01-25</h3>
+<h1>ABSTRACT</h1>
+
+<p>A robotic surgical system and method are disclosed for transitioning control to a secondary robotic arm controller. In one embodiment, a robotic surgical system comprises a user console comprising a display device and a user input device; a robotic arm configured to be coupled to an operating table; a primary robotic arm controller configured to move the robotic arm in response to a signal received from the user input device at the user console; and a secondary robotic arm controller configured to move the robotic arm in response to a signal received from a user input device remote from the user console. Control over movement of the robotic arm is transitioned from the primary robotic arm controller to the secondary robotic arm controller in response to a failure in the primary robotic arm controller. Other embodiments are provided.</p>
+23
+</body></html>

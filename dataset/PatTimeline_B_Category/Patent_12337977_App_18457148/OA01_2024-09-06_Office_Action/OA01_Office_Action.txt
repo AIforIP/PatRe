@@ -1,0 +1,105 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Drawings
+The drawings are objected to under 37 CFR 1.83(a).  The drawings must show every feature of the invention specified in the claims.  Therefore, the oblong shape extending in direction perpendicular to the longitudinal axis, the oblong shape extending along an axis parallel to the longitudinal axis, duplicated peg and second through opening in front transverse rib must be shown or the feature(s) canceled from the claim(s).  No new matter should be entered.
+Corrected drawing sheets in compliance with 37 CFR 1.121(d) are required in reply to the Office action to avoid abandonment of the application. Any amended replacement drawing sheet should include all of the figures appearing on the immediate prior version of the sheet, even if only one figure is being amended. The figure or figure number of an amended drawing should not be labeled as “amended.” If a drawing figure is to be canceled, the appropriate figure must be removed from the replacement sheet, and where necessary, the remaining figures must be renumbered and appropriate changes made to the brief description of the several views of the drawings for consistency. Additional replacement sheets may be necessary to show the renumbering of the remaining figures. Each drawing sheet submitted after the filing date of an application must be labeled in the top margin as either “Replacement Sheet” or “New Sheet” pursuant to 37 CFR 1.121(d). If the changes are not accepted by the examiner, the applicant will be notified and informed of any required corrective action in the next Office action. The objection to the drawings will not be held in abeyance.
+Claim Objections
+Claims 1-2, 4 and 10 are objected to because of the following informalities:
+In claim 1 lines 10-11, “…a longitudinal axis oriented…” should read “…an axis oriented…” to avoid confusion with a longitudinal axis of the fairing.
+In claim 1 lines 14-15, “…along a longitudinal axis oriented…” should read “…along an axis oriented…” to avoid confusion with a longitudinal axis of the fairing.
+In claim 2 line 4, “…in a bore of…” should read “…in the bore of…” as positively recited in claim 1 line 10.
+In claim 4 lines 2-3, “…have an oblong shape extending in a direction perpendicular…” should read “…have the oblong shape extending in the direction perpendicular…” as positively recited in claim 3 lines 10-11.
+In claim 4 line 6, “…have an oblong shape extending along an axis parallel…” should read “…have the oblong shape extending along the axis parallel…” as positively recited in claim 3 lines 13-14.
+In claim 10 line 3, “…an aircraft pylon…” should read “…the aircraft pylon…” as positively recited in claim 3 line 1.
+In claim 10 lines 8, “…into a bore of a yoke into which a fitting…” should read “…into the bore of the yoke into which the fitting…” as positively recited in claims 1 line 10 and claim 3 line 5.
+Appropriate correction is required.
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+This application currently names joint inventors. In considering patentability of the claims the examiner presumes that the subject matter of the various claims was commonly owned as of the effective filing date of the claimed invention(s) absent any evidence to the contrary.  Applicant is advised of the obligation under 37 CFR 1.56 to point out the inventor and effective filing dates of each claim that was not commonly owned as of the effective filing date of the later invention in order for the examiner to consider the applicability of 35 U.S.C. 102(b)(2)(C) for any potential 35 U.S.C. 102(a)(2) prior art against the later invention.
+Claim(s) 1-2 and 9 is/are rejected under 35 U.S.C. 103 as being unpatentable over Roche (US 2009/0283631) in view of Ramlaoui et al. (US 2011/0127370).
+Regarding claim 1, Roche ‘631 teaches (figures 1-6) an aircraft pylon fairing/forward aerodynamic structure (24) extending along a longitudinal axis, the aircraft pylon fairing comprising:
+a wall having at least two opposite flanks oriented respectively one on each side of said longitudinal axis (clearly shown in the figure below);
+a central interior cavity (clearly shown in the figure below), the at least two opposite flanks meeting in a upper part of said fairing/forward aerodynamic structure (24) (clearly seen in figures 5-6) (Para  0053);
+a front transfer rib securely fixed to said wall and extending perpendicularly on each side of said longitudinal axis, said front transverse rib comprising a through opening configured to accept a peg/pin (64) of an exterior structure/fairing (33) by push-fitting in a direction parallel to said longitudinal axis (clearly shown in the figure below) (Para 0068),
+a rear transverse rib securely fixed to said wall and extending perpendicularly on each side of said longitudinal axis (clearly shown in the figure below), and
+the front and rear transverse ribs connected to the two opposite flanks of the wall (clearly shown in the figure below)
+PNG
+media_image1.png
+446
+799
+media_image1.png
+Greyscale
+but it is silent about the aircraft pylon fairing comprising:
+a front transverse rib comprising two yokes each having bores along an axis oriented perpendicular to said longitudinal axis of the fairing and arranged facing a through opening in one said opposing flanks, and
+a rear transverse rib comprising two yokes each having bores along an axis oriented perpendicular to said longitudinal axis of the fairing and arranged facing a through opening in one said opposing flanks.
+Ramlaoui et al. ‘370 teaches (figures 5-8) a fan cowl support assembly (100) for a turbofan engine and engine pylon (50) wherein the aft end (130b) of the support is pivotally connected to the front end (52) of the pylon (50) by rear pins (181) that extend through aligned holes/bores (153) in the cooperating pivot brackets/fittings (131) and front brackets/yokes (55) wherein front holes/bores (153) extend along an axis oriented perpendicular to longitudinal axis of the fan cowl support assembly and engine pylon (clearly shown in the figure below) (Para 0028-0029, 0031).
+PNG
+media_image2.png
+409
+627
+media_image2.png
+Greyscale
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified Roche ‘631 to incorporate the teachings of Ramlaoui et al. ‘370 to configure the aircraft pylon fairing comprising:
+a front transverse rib comprising two yokes each having bores along an axis oriented perpendicular to said longitudinal axis of the fairing and arranged facing a through opening in one said opposing flanks, and
+a rear transverse rib comprising two yokes each having bores along an axis oriented perpendicular to said longitudinal axis of the fairing and arranged facing a through opening in one said opposing flanks (the front and rear transverse ribs are connected to the two opposite flanks of the wall, thus each flank has a through opening to insert the pins which extends through the yokes).
+One of ordinary skill in art would recognize that doing so would form a stronger joint.
+Regarding claim 2, modified Roche ‘631 teaches (figures 1-6) an aircraft pylon fairing assembly comprising:
+the aircraft pylon fairing according to claim 1, and
+four fixing elements/pins which are configured to each be inserted into and held in position in the bore of one of said yokes (as modified by Ramlaoui et al. ‘370; four yokes each having a bore needs four fixing elements/pins).
+Regarding claim 9, modified Roche ‘631 teaches (figures 1-6) an aircraft comprising the aircraft pylon fairing according to claim 1 (Para 0045).
+Claim(s) 3-5, 8 and 10 is/are rejected under 35 U.S.C. 103 as being unpatentable over Roche (US 2009/0283631) and Ramlaoui et al. (US 2011/0127370) as applied to claim 2 above, and further in view of Chintapudi et al. (US 2019/0232825).
+Regarding claim 3, modified Roche ‘631 teaches (figures 1-6) an aircraft pylon comprising:
+the fairing assembly according to claim 2, and
+an aircraft primary structure/ fairing (33) and fan cowl (34), said aircraft primary structure comprising a peg/pin (64) oriented along an axis parallel to the longitudinal axis of the fairing and configured to be inserted into said through opening of said front transverse rib (clearly shown in the figure below), and four fittings/ pivot brackets which are respectively arranged in such a way as to each be inserted into one of said yokes/ front brackets and each having a through opening configured to be arranged facing said bore of said yoke and configured to receive a portion of one of said four fixing elements which is inserted into said bore of said yoke (as modified by Ramlaoui et al. ‘370),
+PNG
+media_image1.png
+446
+799
+media_image1.png
+Greyscale
+but it is silent about the aircraft pylon comprising:
+said openings in the fittings which are configured to be inserted into the yokes of the front transverse rib of said faring having an oblong shape extending in a direction perpendicular to the longitudinal axis of the fairing, and said openings in the fittings that are configured to be inserted into the yokes of the rear transverse rib of said fairing having an oblong shape extending along an axis parallel to said longitudinal axis of said fairing, or vice versa.
+Chintapudi et al. ‘825 teaches (figures 1A-1D) a pitch clevis (100) comprising a clevis (102) , side holes (104), and a top hole (106) wherein the side holes (104) and top hole (102) of the pitch clevis (100) are oblong (Para 0046, 0049; oblong holes 104 and 102 extend in two different directions).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Roche ‘631 to incorporate the teachings of Chintapudi et al. ‘825 to configure the aircraft pylon comprising:
+said openings in the fittings which are configure to be inserted into the yokes of the front transverse rib of said faring having an oblong shape extending in a direction perpendicular to the longitudinal axis of the fairing, and said openings in the fittings that are configured to be inserted into the yokes of the rear transverse rib of said fairing having an oblong shape extending along an axis parallel to said longitudinal axis of said fairing, or vice versa.
+One of ordinary skill in art would recognize that doing so would provide room for mechanical tolerance during installations in two different directions.
+Regarding claim 4, modified Roche ‘631 teaches (figures 1-6) the aircraft pylon wherein said openings in the fittings configured to be inserted into the yokes of the front transverse rib of said fairing have the oblong shape extending in the direction perpendicular to the longitudinal axis of the fairing, and
+wherein said openings of the fittings configured to be inserted into the yokes of the rear transverse rib of said fairing having the oblong shape extending along the axis parallel to said longitudinal axis of said fairing (as modified by Chintapudi et al. ‘825).
+Regarding claim 5, modified Roche ‘631 teaches (figures 1-6) the aircraft pylon wherein said openings in the fittings configured to be inserted into the yokes of the front transverse rib of said fairing have an oblong shape extending in a direction parallel to the longitudinal axis of the fairing, and
+wherein said openings of the fittings configured to be inserted into the yokes of the rear transverse rib of said fairing have an oblong shape extending along an axis perpendicular to said longitudinal axis of said fairing (as modified by Chintapudi et al. ‘825).
+Regarding claim 8, modified Roche ‘631 teaches (figures 1-6) the aircraft pylon comprising:
+only five mechanical-connection interfaces (two at the rear transverse rib and 3 at the front transverse rib) between said primary structure and the fairing,
+but it is silent about the aircraft pylon comprising:
+only six mechanical-connection interfaces between said primary structure and the fairing, said peg being duplicated and said front transverse rib comprising a second through opening.
+However, It would have been obvious to one having ordinary skill in the art at the time the invention was made to have the aircraft pylon comprising:
+only six mechanical-connection interfaces between said primary structure and the fairing, said peg being duplicated and said front transverse rib comprising a second through opening, since it has been held that mere duplication of the essential working parts of a device involves only routine skill in the art. St. Regis Paper Co. v. Bemis Co., 193 USPQ 8.
+One of ordinary skill in art would recognize that doing so would provide redundancy.
+Regarding claim 10, modified Roche ‘631 teaches (figures 1-6) a method for assembling the aircraft pylon according to claim 3, the method comprising:
+push-fitting the fairing/ forward aerodynamic structure (24) onto the peg/pin (64) of the primary structure of an aircraft pylon (Para 0053, 0068), then
+positioning said yokes of the fairing around the four fittings of the primary structure in such a way as to align said bores of said yokes with said oblong openings of said fittings, said fittings each being inserted into one of said yokes (as modified by Ramlaoui et al. ‘370) and then
+inserting each of the four fixing elements into said bore of said yoke into which said fitting has been inserted and into the oblong opening in said fitting so as to hold the fairing of said aircraft pylon in position on said primary structure in a statically determinate manner (as modified by (as modified by Ramlaoui et al. ‘370 and Chintapudi et al. ‘825).
+Claim(s) 6 is/are rejected under 35 U.S.C. 103 as being unpatentable over Roche (US 2009/0283631), Ramlaoui et al. (US 2011/0127370) and Chintapudi et al. (US 2019/0232825) as applied to claim 3 above, and further in view of Prager et al. (US 2023/0192296).
+Regarding claim 6, modified Roche ‘631 teaches (figures 1-6) the aircraft pylon according to claim 3 but it is silent about the aircraft pylon wherein the peg has a conical or frustoconical shape.
+Prager et al. ‘296 teaches (figure 12) a pair of conical pins (570, 572) extending through holes (524, 526) in handle (511) of payload (510) to secure the handle (511) and top portion of payload (510) within the fuselage of a UAV (Para 0177).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Roche ‘631 to incorporate the teachings of Prager et al. ‘296 to configure the aircraft pylon wherein the peg has a conical shape.
+One of ordinary skill in art would recognize that doing so would help to insert and align the peg into the opening.
+Claim(s) 7 is/are rejected under 35 U.S.C. 103 as being unpatentable over Roche (US 2009/0283631), Ramlaoui et al. (US 2011/0127370) and Chintapudi et al. (US 2019/0232825) as applied to claim 3 above, and further in view of Paulson et al. (US 5,459,935).
+Regarding claim 7, modified Roche ‘631 teaches (figures 1-6) the aircraft pylon according to claim 3 but it is silent about the aircraft pylon wherein the fixing elements are countersunk screws, and
+wherein all or part of each of said bores comprises an internal screw thread of a shape that complements a screw thread of said screws.
+Paulson et al. ‘935 teaches (figures 1-7) a level square (20) comprising a hinge (26) wherein hinge (26) comprises first hinge  block (38) pivotably connected to the second hinge block (40), wherein the first hinge block (38) includes a pair of spaced apart upper and lower clevis plates (80a, 80b) connected by a vertical wall (83) defining slot (82) therebetween and the second hinge block (40) includes a pivot plate (84) sized to closely fit within the slot (82), and wherein a fastener shaft or sleeve (86) fits into a cylindrical counterboard hole (88) in the upper clevis plate (80a) wherein the fastener sleeve (86) includes a dead-end threaded bore for receiving a hinge tightness screw (90) inserted into a counter sunk hole (92) in the opposite clevis plate (80b) (Col. 4 Line 8-9; Col. 5 Lines 59-67; Col. 6 Lines 1-11).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Roche ‘631 to incorporate the teachings of Paulson et al. ‘935 to configure the aircraft pylon wherein the fixing elements are countersunk screws, and
+wherein all or part of each of said bores comprises an internal screw thread of a shape that complements a screw thread of said screws (countersunk screw has thread which connects mechanically with thread of the bore).
+One of ordinary skill in art would recognize that doing so would create a secure joint between the fittings and the yoke without any protrusion from the joint.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ASHESH DANGOL whose telephone number is (303)297-4455. The examiner can normally be reached Monday-Friday 0730-0530 MT.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joshua J Michener can be reached on (571) 272-1467. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/ASHESH DANGOL/Examiner, Art Unit 3642

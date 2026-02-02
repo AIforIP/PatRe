@@ -1,0 +1,124 @@
+<html><head></head><body><h3>Date: 2019-11-07</h3>
+ We claim:
+<br>
+
+<br>
+1. A method of providing a continuity of care for a patient during transfer between care settings, the method comprising the steps of deciding to transfer a patient from a first care setting to a second care setting, performing a first assessment of the patient in the first care setting, preparing a transfer record of the assessment, and 
+<br>
+transferring the transfer record with the patient to the second care setting. 
+
+<br>
+
+<br>
+2. The method of claim 1, wherein the first assessment comprises performing a sub- epidermal moisture (SEM) scan of at least one body location of the patient.
+<br>
+
+<br>
+3. The method of claim 2, wherein the SEM scan comprises a plurality of measurements of an SEM value at the body location and calculation of a delta value from the plurality of SEM values.
+<br>
+
+<br>
+4. The method of claim 3, further comprising the step of: 
+<br>
+performing a plurality of SEM scans of the patient at different times while in the first care setting, and 
+<br>
+recording the delta values from each of the respective SEM scans, wherein the decision to transfer the patient is based partially on the delta values recorded while in the first care setting. 
+
+<br>
+
+<br>
+5. The method of claim 4, wherein the transfer record comprises the delta values from a portion of the plurality of SEM scans of the patient taken at different times while in the first care setting.
+<br>
+
+<br>
+6. The method of claim 2, wherein the SEM scan is performed at all body locations identified for monitoring.
+<br>
+
+<br>
+7. The method of claim 1, wherein the first assessment comprises at least one of a risk assessment of the patient, a visual skin assessment of at least one body location of the patient, and an image of the at least one body location.
+<br>
+
+<br>
+8. The method of claim 1, wherein the transfer record comprises at least one of a transaction type, a transaction date/time, a "to" location, and a "from" location.
+<br>
+
+9. The method of claim 1, further comprising the steps of performing a first SEM scan of at least one body location of the patient while in the first care setting, wherein the first SEM scan comprises a plurality of  
+ measurements of an SEM value at the body location and calculation of a first delta value from the plurality of SEM values, creating a first data record that comprises the first delta value, reporting the first data record to a database, and 
+<br>
+reporting the transfer record to the database. 
+
+<br>
+
+<br>
+10. The method of claim 9, wherein: 
+<br>
+the first data record comprises a patient identifier and a first date/time when the first SEM scan was performed, and 
+<br>
+the transfer record comprises the patient identifier and a second date/time when the first assessment was performed. 
+
+<br>
+
+<br>
+11. The method of claim 10, further comprising the steps of: 
+<br>
+performing an SEM scan of the at least one body location of the patient and calculating a second delta value while in the second care setting, creating a second data record that comprises the patient identifier, the second delta value, and a third date/time when the second SEM scan was performed, and 
+<br>
+reporting the second data record to a database. 
+
+<br>
+
+<br>
+12. The method of claim 11, further comprising the step of: 
+<br>
+querying the database to retrieve a portion of data records that comprise the delta values of the at least one body location of the patient. 
+
+<br>
+
+<br>
+13. The method of claim 12, further comprising the step of: 
+<br>
+formatting the retrieved delta values in date/time order, and 
+<br>
+displaying the formatted delta values. 
+
+<br>
+
+<br>
+14. The method of claim 10, further comprising the steps of: 
+<br>
+creating an additional data record that comprises the patient identifier, a data element from the group of nutritional information, an implemented intervention, a risk assessment, a visual skin assessment, a care plan, a doctor's note, lean event, a vital sign, a body weight, and a lab result, and a date/time associated with the data element, and 
+<br>
+reporting the additional data record to the database. 
+
+<br>
+
+<br>
+15. The method of claim 13, wherein the formatted delta values is displayed in the form of a curve.
+<br>
+
+<br>
+16. The method of claim 15, further comprising the step of analyzing the retrieved delta values to determine one or more of a slope, an acceleration, a curve shape and associated characteristics, and a time-to-intercept of a selected threshold value.
+<br>
+
+<br>
+17. The method of claim 16, wherein acceleration is determined by the rate of change of the slope of the curve.
+<br>
+
+<br>
+18. The method of claim 16, wherein the decision to transfer the patient is based partially on one or more of the slope, the acceleration, the curve shape and associated characteristics, and the time-to-intercept of a selected threshold value.
+<br>
+
+<br>
+19. The method of claim 11, further comprising the steps of. performing an SEM scan of the at least one body location of the patient and calculating a third delta value while in the third care setting, creating a third data record that comprises the patient identifier, the third delta value, and a fourth date/time when the third SEM scan was performed, and 
+<br>
+reporting the third data record to a database. 
+
+<br>
+
+<br>
+20. The method of claim 19, further comprising the step of querying the database to retrieve the delta values observed over time for a particular patient across multiple care settings and various episodes of care.
+41
+42
+43
+US 166932975v1
+</body></html>

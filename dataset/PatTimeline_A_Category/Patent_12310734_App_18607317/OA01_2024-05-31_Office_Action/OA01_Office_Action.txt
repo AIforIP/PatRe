@@ -1,0 +1,42 @@
+PNG
+media_image1.png
+340
+340
+media_image1.png
+Greyscale
+[AltContent: connector] United States Patent and Trademark Office
+Commissioner for Patents
+United States Patent and Trademark Office
+P.O. Box 1450
+Alexandria, VA 22313-1450
+www.uspto.gov
+MORGAN, LEWIS & BOCKIUS LLP (PA)
+1400 PAGE MILL ROAD
+PALO ALTO, CA 94304-1124
+In re Application of: GEOFFREY IWATA
+Serial No.: 18607317
+Filed: March 15, 2024
+Docket: 131075-02-5016-US
+Title: Systems and Methods for Biomagnetic Field Imaging
+::::::
+DECISION ON PETITION UNDER 37 CFR 1.84(a)(2) TO ACCEPT COLOR DRAWINGS
+This decision is in response to the petition under 37 CFR 1.84(a)(2) for acceptance of color drawings, filed 15 March 2024.
+The petition is GRANTED.
+REVIEW OF FACTS
+Petitioner filed a petition requesting acceptance of color drawings on 15 March 2024.
+REGULATION AND PRACTICE
+37 CFR 1.84(a)(2) states in relevant part:
+“Color. Color drawings are permitted in design applications. Where a design application contains color drawings, the application must include the number of sets of color drawings required by paragraph (a)(2)(ii) of this section and the specification must contain the reference required by paragraph (a)(2)(iii) of this section. On rare occasions, color drawings may be necessary as the only practical medium by which to disclose the subject matter sought to be patented in a utility patent application. The color drawings must be of sufficient quality such that all details in the drawings are reproducible in black and white in the printed patent. Color drawings are not permitted in international applications (see PCT Rule 11.13). The Office will accept color drawings in utility patent applications only after granting a petition filed under this paragraph explaining why the color drawings are necessary. Any such petition must include the following:
+The fee set forth in § 1.17(h);
+One (1) set of the color drawings if submitted via the Office electronic filing system or three (3) sets of the color drawings if not submitted via the Office electronic filing system; and
+An amendment to the specification (unless the specification contains or has been previously amended to contain) the following language as the first paragraph of the brief description of the drawings:
+‘The patent or application file contains at least one drawing executed in color. Copies of this patent or patent application publication with color drawing(s) will be provided by the Office upon request and payment of the necessary fee.’”
+MPEP § 608.02(VIII) COLOR DRAWINGS OR COLOR PHOTOGRAPHS states in relevant part:
+It is anticipated that such a petition will be granted only when the U.S. Patent and Trademark Office has determined that a color drawing or color photograph is the only practical medium by which to disclose in a printed utility patent the subject matter to be patented.
+ANALYSIS
+Petitioner has satisfied all criteria identified in 37 CFR 1.84(a)(2) and MPEP § 608.02(VIII) above.
+DECISION
+For the above-stated reasons, the petition is GRANTED.
+Petitioner is advised that this decision grants the petition to accept color drawing(s) or photograph(s) because the requirements of 37 CFR 1.84(a)(2) or (b)(2) have been met. The initial review undertaken for purposes of the petition did not identify new matter in the color drawing(s) or photograph(s). However, the grant of this petition should not be construed as a determination that should the color drawing(s) be entered the application would be free of statutory and/or formal defects. See MPEP § 608.02(VIII) and 608.02(b). The examiner is charged with determining whether applicant’s nonprovisional application as amended to include the replacement drawings complies with all statutory requirements (e.g., enablement under 35 U.S.C. 112) and other applicable requirements (e.g., other formal requirements under 37 CFR 1.84).  Further, the determination of whether a petition establishes a sufficient basis to accept color drawings or photographs is separate from the examiner’s ultimate determination as to whether an amendment to the drawings should be entered (e.g., based on the prohibition under 35 U.S.C. 132 against introducing new matter). See MPEP § 608.04(a), 608.02(h), and 2163.06(I).
+Any inquiry concerning this decision should be directed to Victoria Murphy at (571)270-7362. If attempts to reach the undersigned are unsuccessful, you may contact Andrew Gilbert at (571) 272-7216.
+/ANDREW M GILBERT/Quality Assurance Specialist, TC 3700

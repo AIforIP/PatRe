@@ -1,0 +1,99 @@
+<html><head></head><body><h3>Date: 2024-10-08</h3>
+
+<h1>IN THE CLAIMS</h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1>Listing of Claims:</h1>
+<br>
+<br>
+1.   (Currently amended) A method for providing assistance <u>to a hand-held controller</u> during gameplay, comprising:accessing <del>a pro</del><del>fi</del><del>le </del><u>an arti</u><u>fi</u><u>cial intelligence </u>model <del>associated with </del><u>via</u> a user account of a user, wherein the <del>profile </del><u>arti</u><u>fi</u><u>cial intelligence </u>model is used to generate one or more predictive indicators based on a plurality of game contexts <u>during a plurality of game sessions </u>of one or more <u>games, wherein the one or more predictive indicators identify that the user will be unable to complete a task during a game;</u><br>
+receiving a request for accessing [[a]] the game for a game session via the user account;<br>
+<u>determining that the </u><u>g</u><u>ame session includes a </u><u>g</u><u>ame context similar to one or more of the plurality of game contexts</u><u>;</u><u> and</u><br>
+<del>generating </del><u>p</u><u>rovidin</u><u>g</u><u></u>assistance input [[for]] <u>via a computer network to the hand-held controller operated by </u>the user <u>during the game context </u>responsive to the one or more predictive indicators that the user will be unable to complete [[a]] <u>the</u> task in the <del>game, the task being associated to a </del>game context,<br>
+wherein the assistance input is provided before the user performs the task.<br>
+<br>
+2.    (Currently amended) The method of claim 1, wherein the <del>profile </del><u>arti</u><u>fi</u><u>cial intelligence</u> model includes a neural network that is trained by one or more gameplays occurring via the user account, the one or more gameplays used to perform labeling and classification of the plurality of game contexts, labeling and classification of <u>a plurality of </u>user interactions, and labeling and classification of <u>a plurality of </u>performance metrics.<br>
+<br>
+3.    (Currently amended) The method of claim 2, wherein said <del>generating </del><u>providing </u>the assistance input occurs upon determining that the game context of the game session is similar to one or more of the plurality of game contexts used to train the <del>pro</del><del>fi</del><del>le </del><u>artificial intelligence </u>model.<br>
+<br>
+<br>
+<br>
+<br>
+4.    (Currently amended) The method of claim 2, further comprising:generating state data for the one or more gameplays;<br>
+parsing the state data to identify the plurality of game contexts of the one or more games, the <u>plurality of </u>user interactions with the plurality of game contexts, and the <u>plurality</u>of performance metrics that are generated based on the <u>plurality of </u>user interactions and the plurality of game contexts.<br>
+<br>
+5.    (Currently amended) The method of claim 4, further comprising:labeling the plurality of game contexts to identify the plurality of game contexts;<br>
+labeling the <u>plurality of </u>user interactions to identify the <u>plurality of </u>user interactions;<br>
+labeling the <u>plurality of </u>performance metrics to identify the <u>plurality of </u>performance metrics;<br>
+classifying the <u>plurality of </u>game contexts to provide a level to each of the <u>plurality of</u> game contexts;<br>
+classifying the <u>plurality of </u>user interactions to provide a level to each of the <u>plurality </u><u>o</u><u>f</u> user interactions; and<br>
+classifying the <u>plurality of </u>performance metrics to provide a level to each of the<u> plurality of </u>performance metrics.<br>
+<br>
+6.    (Currently amended) The method of claim 5, wherein the one or more predictive indicators are determined based on the levels of the <u>plurality of </u>game contexts, the levels of the <u>pl</u><u>urality of user </u>interactions, and the levels of the <u>plurality of </u>performance metrics, a number of occurrences of the levels of the <u>plurality of </u>game contexts, a number of occurrences of the levels of the <u>plurality of user </u>interactions, and a number of occurrences of the levels of the <u>plurality of </u>performance metrics.<br>
+<br>
+7.    (Currently amended) The method of claim 1, wherein the assistance input includes controller input data, light data for controlling one or more lights on [[a]] <u>the hand-held</u> controller <del>of the game</del>, screen text data for presenting on a display device used during the game session, and audio data for outputting sounds during the game session.<br>
+<br>
+8.    (Currently amended) A computer system for providing assistance during gameplay, comprising:<br>
+<br>
+<br>
+a processor configured to:access <del>a profile </del><u>an arti</u><u>fi</u><u>cial intelligence </u>model <del>associated with </del><u>via</u> a user account of a user, wherein the <del>profile </del><u>artificial intelligence </u>model is used to generate one or more predictive indicators based on a plurality of game contexts <u>during a plurality of </u><u>g</u><u>ame sessions </u>of one or more <u>games, wherein the one or more predictive indicators identify that the user will be unable to complete a task during a </u><u>g</u><u>ame;</u><br>
+receive a request for accessing [[a]] the game for a game session via the user account;<br>
+<u>determine that the </u><u>g</u><u>ame session includes a </u><u>g</u><u>ame context similar to one or more of the plurality of </u><u>g</u><u>ame contexts</u><u>;</u><br>
+<del>generate </del><u>pr</u><u>ovide </u>assistance input [[for]] <u>via a computer network to the hand- held controller operated by </u>the user <u>during the </u><u>g</u><u>ame context </u>responsive to the one or more predictive indicators that the user will be unable to complete [[a]] the task in the<del> game, the task being associated to a </del>game context; and<br>
+provide the assistance input before the user performs the task; and<br>
+a memory device coupled to the processor.<br>
+<br>
+9.    (Currently amended) The computer system of claim 8, wherein the <del>pro</del><del>fi</del><del>le </del><u>artificial intelligence </u>model includes a neural network that is trained by one or more gameplays occurring via the user account, the one or more gameplays used to perform labeling and classification of the plurality of game contexts, labeling and classification of <u>a plurality of</u> user interactions, and labeling and classification of <u>a plurality of </u>performance metrics.<br>
+<br>
+10.   (Currently amended) The computer system of claim 9, wherein the assistance input is generated when the <del>pro</del><del>fi</del><del>le </del><u>arti</u><u>fi</u><u>cial intelligence </u>model determines that [[a]] <u>the</u> game context of the game session is similar to one of the plurality of game contexts used to train the profile model.<br>
+<br>
+11.  (Currently amended) The computer system of claim 9, wherein the processor is configured to:generate state data for the one or more gameplays;<br>
+parse the state data to identify the plurality of game contexts of the one or more games, the <u>plurality of </u>user interactions with the plurality of game contexts, and <u>the plurality</u><br>
+<br>
+<br>
+<br>
+of performance metrics that are generated based on the <u>plurality of </u>user interactions and the plurality of game contexts.<br>
+<br>
+12.   (Currently amended) The computer system of claim 11, wherein the processor is configured to:label the <u>plurality of </u>game contexts to identify the plurality of game contexts;<br>
+label the <u>plurality of </u>user interactions by the user to identify the <u>plurality of </u>user interactions;<br>
+label the <u>plurality of </u>performance metrics to identify the <u>plurality of </u>performance metrics;<br>
+classify the plurality of game contexts to provide a level to each of the plurality of game contexts;<br>
+classify the <u>plurality of </u>user interactions to provide a level to each of the <u>plurality of</u> user interactions; and<br>
+classify the <u>plurality of </u>performance metrics to provide a level to each of the <u>plurality</u>of performance metrics.<br>
+<br>
+13.  (Currently amended) The computer system of claim 12, wherein the one or more predictive indicators are determined based on the levels of the plurality of game contexts, the levels of the <u>plurality of </u>user interactions, and the levels of the <u>plurality of </u>performance metrics, a number of occurrences of the levels of the plurality of game contexts, a number of occurrences of the levels of the <u>plurality of </u>user interactions, and a number of occurrences of the levels of the <u>plurality of </u>performance metrics.<br>
+<br>
+14.   (Currently amended) The computer system of claim of claim 8, wherein the assistance input includes controller input data, light data for controlling one or more lights on [[a]] the<u> hand-held </u>controller <del>of the game</del>, screen text data for presenting on a display device used during the game session, and audio data for outputting sounds during the game session.<br>
+<br>
+15.   (Currently amended) A system for providing assistance during gameplay, comprising:a client device; and<br>
+a server coupled to the client device via a computer network, wherein the server is configured to:<br>
+<br>
+<br>
+<br>
+access <del>a profile </del><u>an arti</u><u>fi</u><u>cial intelligence </u>model <del>associated with </del><u>via</u> a user account of a user, wherein the <del>profile </del><u>artificial intelligence </u>model is used to generate one or more predictive indicators based on a plurality of game contexts <u>during a plurality of </u><u>g</u><u>ame sessions </u>of one or more <u>games, wherein the one or more predictive indicators identify that the user will be unable to complete a task during a </u><u>g</u><u>ame;</u><br>
+receive a request for accessing [[a]] the game for a game session via the user account;<br>
+<u>determine that the </u><u>g</u><u>ame session includes a </u><u>g</u><u>ame context similar to one or more of the plurality of </u><u>g</u><u>ame contexts</u><u>;</u><br>
+<del>generate </del><u>pr</u><u>ovide </u>assistance input [[for]] <u>via a computer network to the hand- held controller operated by </u>the user <u>during the </u><u>g</u><u>ame context </u>responsive to the one or more predictive indicators that the user will be unable to complete [[a]] the task in the<del> game, the task being associated to a </del>game context; and<br>
+send the assistance input before the user performs the task,<br>
+wherein the client device is configured to receive the assistance input from the server via the computer network.<br>
+<br>
+16.   (Currently amended) The system   of claim  15, wherein the assistance input is generated when the <del>profile </del><u>arti</u><u>fi</u><u>cial intelligence </u>model determines that the game context of the game session is similar to one of the plurality of game contexts used to train the <del>pro</del><del>file</del><u> artificial intelligence </u>model.<br>
+<br>
+17.   (Currently amended) The system of claim 15, wherein the <del>profile </del><u>artificial intelligence</u> model includes a neural network that is trained by one or more gameplays occurring via the user account, the one or more gameplays used to perform labeling and classification of the plurality of game contexts, labeling and classification of <u>a plurality of </u>user interactions, and labeling and classification of <u>a plurality of </u>performance metrics.<br>
+<br>
+18.  (Currently amended) The system of claim 17, wherein the server is configured to:generate state data for the one or more gameplays;<br>
+parse the state data to identify the plurality of game contexts of the one or more games, the <u>plurality of </u>user interactions with the plurality of game contexts, and the <u>plurality</u><br>
+<br>
+<br>
+<br>
+of performance metrics that are generated based on the <u>plurality of </u>user interactions and the plurality of game contexts.<br>
+<br>
+19.   (Currently amended) The system of claim [[15]] 17, <del>wherein the profile model is an artificial intelligence model, </del>wherein the server is configured to:label the plurality of game contexts to identify the plurality of game contexts;<br>
+label <u>the plurality of </u>user interactions with the plurality of game contexts to identify the <u>plurality of </u>user interactions;<br>
+label <u>the plurality of </u>performance metrics achieved based on the <u>plurality of </u>user interactions to identify the <u>plurality of </u>performance metrics;<br>
+classify the plurality of game contexts to provide a level to each of the plurality of game contexts;<br>
+classify the <u>plurality of </u>user interactions to provide a level to each of the <u>plurality of</u> user interactions;<br>
+classify the <u>plurality of </u>performance metrics to provide a level to each of the <u>plurality</u>of performance metrics,<br>
+wherein the one or more predictive indicators are determined based on the levels of the plurality of game contexts, the levels of the <u>plurality of </u>user interactions, and the levels of the <u>plurality of </u>performance metrics, a number of occurrences of the levels of the plurality of game contexts, a number of occurrences of the levels of the <u>plurality of </u>user interactions, and a number of occurrences of the levels of the <u>plurality of </u>performance metrics.<br>
+<br>
+20.   (Original) The system of claim 15, wherein the client device is a hand-held controller or a head-mounted display.
+</body></html>

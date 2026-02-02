@@ -1,0 +1,15 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Continuation from Box 12
+Response to Arguments
+Applicant’s arguments, filed 05/14/2021, have been fully considered but they are not persuasive.
+Rejection of claims 1 and 13 under 35 U.S.C. 102(a)(1) – Zhang et al. (US Patent No. 8,855,755)
+Applicant argues that Zhang does not teach or suggest the elements of claims 1 and 13. Applicant claims Zhang does not disclose or suggest
+for each of the plurality of ventricular depolarizations, identify[ing] a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point (see Page 2, lines 9-13 of the 05/14/2021 response), and
+for each of the plurality of ventricular depolarizations…an interval from the maximum slope point to the minimum slope point” (see Page 2, lines 21 -25 of the 05/14/2021 response) as recited in claim 1.
+Examiner respectfully disagrees. Zhang teaches it is known to identify a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point for each of the plurality of ventricular depolarizations (e.g. Col. 11, lines 7-14: the processor is analyzing 9 intervals from the 10 most recent intervals, which means that each of the intervals are analyzed; Col. 13, lines 61-63: slope is used for morphology analysis; Fig. 10: morphology analysis is conducted for multiple cardiac events when sudden rate onset is detected; Col. 19, lines 22-67 – Col. 20, lines 1-5: performing morphology analysis for multiple cardiac intervals). Zhang further teaches it is known to identify an interval from the maximum slope point to the minimum slope point for each of the plurality of ventricular depolarizations (e.g. Col. 15, lines 46-63: the intervals between each beat are identified). Due to the reasons discussed above, the rejection of claims 1 and 13 under 35 U.S.C. 102 is maintained.
+Rejection of claims 2-12 and 14-26 under 35 U.S.C. 103 - Zhang et al. (US Patent No. 8,855,755) in view of Sarkar (US Patent No. 9,675,270), Healey (US Patent No. 7,751,876), and Cao et al. (US Patent No. 7,027,858)
+Regarding the rejection of claims 2-12 and 14-26 under 35 U.S.C. 103, the examiner maintains the rejections of claims 2-12 and 14-26 due to the reasons discussed above. No additional arguments have been provided.
+/SHREYA ANJARIA/Examiner, Art Unit 3792
+/MALLIKA D FAIRCHILD/Primary Examiner, Art Unit 3792

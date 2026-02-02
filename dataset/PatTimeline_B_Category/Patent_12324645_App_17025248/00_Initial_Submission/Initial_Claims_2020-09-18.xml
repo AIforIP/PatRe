@@ -1,0 +1,218 @@
+<html><head></head><body><h3>Date: 2020-09-18</h3>
+ <u>WHAT IS CLAIMED IS:</u>
+<br>
+
+<br>
+1.    A robotic medical system, comprising: 
+<br>
+a platform; 
+<br>
+one or more robotic arms coupled to the platform; 
+<br>
+a console configured to receive input commanding motion of the one or more robotic arms; 
+<br>
+a processor; and 
+<br>
+at least one computer-readable memory in communication with the processor and having stored thereon a model of the one or more robotic arms and computer- executable instructions to cause the processor to: 
+<br>
+control movement of the one or more robotic arms in a workspace based on the input received by the console, receive an indication of one or more objects are within reach of the one or more robotic arms, and 
+<br>
+update the model to include a representation of the one or more objects in the workspace. 
+
+<br>
+
+<br>
+2.    The system of Claim 1, wherein the computer-executable instructions further cause the processor to: 
+<br>
+prevent a collision between the one or more robotic arms and the one or more objects based on the updated model. 
+
+<br>
+
+<br>
+3.    The system of Claim 1, wherein the one or more objects are rigid objects.
+<br>
+
+<br>
+4.    The system of Claim 3, wherein the one or more rigid objects are pre-modeled and stored on the computer-readable memory.
+<br>
+
+<br>
+5.    The system of Claim 3, wherein one or more rigid objects comprise one or more accessories that are attachable to the platform.
+<br>
+
+<br>
+6.    The system of Claim 5, wherein the one or more accessories comprise at least one of the following: shoulder supports, foot supports, toboggans, leg boards, arm boards, fences, stirrups, poles, and tissue retractors.
+
+<br>
+7.    The system of Claim 1, wherein the one or more objects are non-rigid objects.
+<br>
+
+<br>
+8.    The system of Claim 7, wherein the computer-executable instructions further cause the processor to: 
+<br>
+update the model to include one or more zones corresponding to the non-rigid objects within the workspace based on a user input received at the console. 
+
+<br>
+
+<br>
+9.    The system of Claim 8, wherein: 
+<br>
+the one or more zones comprise keep-out zones in the form of geometric representations, and 
+<br>
+the computer-executable instructions further cause the processor to prevent movement of the one or more robotic arms into the keep-out zones. 
+
+<br>
+
+<br>
+10.   The system of Claim 7, wherein the one or more non-rigid objects comprise at least one of the following: IV bags, tubing, padding, objects associated with the patient including the patient himself, and objects associated with the bedside staff including the bedside staff itself.
+<br>
+
+<br>
+11.   The system of Claim 1, further comprising: 
+<br>
+one or more sensors positioned on the platform and configured to detect the one or more objects, wherein the indication of the one or more objects being within reach of the one or more robotic arms is received from the one or more sensors. 
+
+<br>
+
+<br>
+12.   The system of Claim 11, wherein the platform comprises a bed including one or more adjustable arms supports.
+<br>
+
+<br>
+13.   The system of Claim 12, wherein the one or more sensors are positioned along the one or more adjustable arms supports.
+<br>
+
+<br>
+14.   The system of Claim 13, wherein the one or more sensors comprise at least one of: a Lidar sensor, an electromagnetic sensor, and an image-based sensor.
+<br>
+
+<br>
+15.   The system of Claim 1, wherein each of the one or more robotic arms includes a force sensor configured to detect collisions.
+
+<br>
+16.   The system of Claim 1, wherein the computer-executable instructions further cause the processor to: 
+<br>
+receive a signal from one or more sensors positioned in the workspace, wherein the signal comprises the indication of the one or more objects being within reach of the one or more robotic arms. 
+
+<br>
+
+<br>
+17.   The system of Claim 16, wherein the computer-executable instructions further cause the processor to: 
+<br>
+generate a dynamic model of the workspace based on the signal, and 
+<br>
+compare the dynamic model of the workspace to the model of the one or more robotic arms, wherein the updating of the model of the one or more robotic arms is further based on the comparison. 
+
+<br>
+
+<br>
+18.   The system of Claim 16, wherein the one or more sensors comprise at least one of: a stereo camera, a Lidar sensor, and an image based sensor.
+<br>
+
+<br>
+19.   A robotic medical system, comprising: 
+<br>
+a platform; 
+<br>
+one or more robotic arms coupled to the platform; 
+<br>
+a console configured to receive input commanding motion of the one or more robotic arms; 
+<br>
+a processor; and 
+<br>
+at least one computer-readable memory in communication with the processor and having stored thereon a model of the one or more robotic arms, a database of pre- modeled objects, and computer-executable instructions to cause the processor to: 
+<br>
+control movement of one or more robotic arms based on the input received by the console, receive an indication of one or more pre-modeled objects being within reach of the one or more robotic arms, and 
+<br>
+update the model to include a representation of the one or more pre- modeled objects based on the indication and the database. 
+<br>
+20.   The system of Claim 19, wherein the computer-executable instructions further cause the processor to: 
+<br>
+prevent a collision between the one or more robotic arms and the one or more objects based on the updated model. 
+
+<br>
+
+<br>
+21.   The system of Claim 19, further comprising: 
+<br>
+one or more sensors positioned on the platform and configured to detect the one or more objects, wherein the indication of the one or more pre-modeled objects being within reach of the one or more robotic arms are received from the one or more sensors. 
+
+<br>
+
+<br>
+22.   The system of Claim 21, wherein the platform comprises a bed including one or more adjustable arms supports.
+<br>
+
+<br>
+23.   The system of Claim 22, wherein the one or more sensors are positioned along the one or more adjustable arms supports.
+<br>
+
+<br>
+24.   The system of Claim 23, wherein the sensors comprise at least one of: a Lidar sensor, an electromagnetic sensor, and an image-based sensor.
+<br>
+
+<br>
+25.   A robotic medical system, comprising: 
+<br>
+a platform; 
+<br>
+one or more robotic arms coupled to the platform; 
+<br>
+a console configured to receive user input; 
+<br>
+a processor; and 
+<br>
+at least one computer-readable memory in communication with the processor and having stored thereon a model of the one or more robotic arms and the platform and computer-executable instructions to cause the processor to: 
+<br>
+receive an indication of one or more keep-out zones based on the user input received at the console, update the model to include the one or more keep-out zones, and 
+<br>
+prevent movement of the one or more robotic arms into the one or more keep-out zones based on the updated model. 
+<br>
+26.   The system of Claim 25, wherein the computer-executable instructions further cause the processor to: 
+<br>
+prevent a collision between the one or more robotic arms and the one or more objects based on the updated model. 
+
+<br>
+
+<br>
+27.   The system of Claim 25, wherein: 
+<br>
+the keep-out zones are pre-modeled, and 
+<br>
+the computer-readable memory further has stored thereon a database of the pre-modeled keep-out zones. 
+
+<br>
+
+<br>
+28.   The system of Claim 25, wherein the computer-executable instructions further cause the processor to receive a manually drawn boundary for the one or more keep-out zones via the console.
+<br>
+
+<br>
+29.   A robotic medical system, comprising: 
+<br>
+a platform; 
+<br>
+one or more robotic arms coupled to the platform; 
+<br>
+one or more sensors positioned on the platform and configured to detect one or more objects in a workspace of the robotic arms; 
+<br>
+a processor; and 
+<br>
+at least one computer-readable memory in communication with the processor and having stored thereon a model of the one or more robotic arms and the platform and computer-executable instructions to cause the processor to: 
+<br>
+receive an indication of the one or more objects from the one or more sensors, and 
+<br>
+update the model, based on the indication, to include the one or more objects within the workspace. 
+
+<br>
+
+<br>
+30.   The system of Claim 29, wherein the computer-executable instructions further cause the processor to: 
+<br>
+prevent a collision between the one or more robotic arms and the one or more objects based on the updated model. 
+-44-
+-45-
+-46-
+-47-
+-48-
+</body></html>

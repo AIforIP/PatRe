@@ -1,0 +1,106 @@
+<html><head></head><body><h3>Date: 2023-01-25</h3>
+ What is claimed is:
+<br>
+
+<br>
+1.    A robotic method, comprising: 
+<br>
+controlling movement of a surgical robot by a primary robot controller based on input from a first input device, the primary robot controller comprising a first plurality of processes for controlling the surgical robot; 
+<br>
+receiving heartbeat messages from the primary robot controller by a secondary robot controller, while the primary robot controller is controlling the surgical robot, the secondary robot controller comprising a hibernated copy of the first plurality of processes; 
+<br>
+responsive to failing to receive one or more heartbeat messages, transitioning control of the surgical robot to the secondary robot controller; and 
+<br>
+controlling movement of the surgical robot by the secondary robot controller based on input from a second input device different from the first input device. 
+
+<br>
+
+<br>
+2.    The robotic method of claim 1, wherein failing to receive the heartbeat messages from the primary robot controller is caused by at least one of a failure of power supply, a failure of hardware, a failure of software and a failure of communication in the primary robot controller.
+<br>
+
+<br>
+3.    The robotic method of claim 1, wherein transitioning control of the surgical robot comprises bringing the first plurality of the processes in the secondary robot controller out of hibernation.
+<br>
+
+<br>
+4.    The robotic method of claim 1, wherein transitioning control of the surgical robot comprises routing communication from the surgical robot to the secondary robot controller instead of the primary robot controller.
+<br>
+
+<br>
+5.    The robotic method of claim 1, further comprising, responsive to determining that the secondary robot controller is unable to control movement of the surgical robot, transitioning control of the surgical robot to a backup robot controller coupled to the secondary input device.
+<br>
+
+<br>
+6.    The robotic method of claim 5, wherein transitioning control of the surgical robot to a backup robot controller comprises bringing processes in the backup robot controller out of hibernation and routing the communication from the surgical robot to the backup controller instead of the secondary robot controller.
+<br>
+
+<br>
+7.    A robotic method, comprising: 
+<br>
+controlling movement of a surgical robot by a primary robot controller based on input from a first input device; 
+<br>
+receiving heartbeat messages from the primary robot controller by a secondary robot controller, while the primary robot controller is controlling the surgical robot; 
+<br>
+responsive to failing to receive one or more heartbeat messages, transitioning control of the surgical robot to the secondary robot controller, the transitioning of the control comprising (1) activating a hibernated copy of a process for controlling the surgical robot by the primary robot controller at the secondary robot controller or (2) routing state information received from the surgical robot when controlling the surgical robot from the surgical robot to the secondary controller; and 
+<br>
+controlling movement of the surgical robot by the secondary robot controller based on input from a second input device different from the first input device. 
+
+<br>
+
+<br>
+8.    The robotic method of claim 7, wherein failing to receive the heartbeat messages from the primary robot controller is caused by at least one of a failure of power supply, a failure of hardware, a failure of software and a failure of communication in the primary robot controller.
+<br>
+
+<br>
+9.    The robotic method of claim 7, wherein transitioning control of the surgical robot comprises bringing the process of the hibernated copy in the secondary robot controller out of hibernation, wherein the process in the secondary robot controller is a copy copies of process in the primary robot controller for controlling of the surgical robot.
+<br>
+
+10.   The robotic method of claim 7, wherein transitioning control of the surgical robot comprises routing communication including the state information from the surgical robot to the secondary 
+ robot controller instead of the primary robot controller.
+<br>
+
+<br>
+11.   The robotic method of claim 7, further comprising, responsive to determining that the secondary robot controller is unable to control movement of the surgical robot, transitioning control of the surgical robot to a backup robot controller coupled to the secondary input device.
+<br>
+
+<br>
+12.   The robotic method of claim 11, wherein transitioning control of the surgical robot to a backup robot controller comprises bringing processes in the backup robot controller out of hibernation and routing the communication from the surgical robot to the backup controller instead of the secondary robot controller.
+<br>
+
+<br>
+13.   A robotic method, comprising: 
+<br>
+controlling movement of a surgical robot by a primary robot controller based on input from a first input device; 
+<br>
+receiving heartbeat messages from the primary robot controller by a secondary robot controller, while the primary robot controller is controlling the surgical robot; 
+<br>
+responsive to failing to receive one or more heartbeat messages, transitioning control of the surgical robot to the secondary robot controller, the transitioning of the control comprising routing communications received from the surgical robot when controlling the surgical robot from the surgical robot to the secondary controller; and 
+<br>
+controlling movement of the surgical robot by the secondary robot controller based on input from a second input device different from the first input device. 
+
+<br>
+
+<br>
+14.   The robotic method of claim 13, wherein failing to receive the heartbeat messages from the primary robot controller is caused by at least one of a failure of power supply, a failure of hardware, a failure of software and a failure of communication in the primary robot controller.
+<br>
+
+15.   The robotic method of claim 13, wherein transitioning control of the surgical robot comprises bringing processes in the secondary robot controller out of hibernation, wherein the processes in the secondary robot controller are copies of processes in the primary robot controller 
+ for controlling of the surgical robot.
+<br>
+
+<br>
+16.   The robotic method of claim 13, wherein transitioning control of the surgical robot comprises routing the communications from the surgical robot to the secondary robot controller instead of the primary robot controller.
+<br>
+
+<br>
+17.   The robotic method of claim 13, further comprising, responsive to determining that the secondary robot controller is unable to control movement of the surgical robot, transitioning control of the surgical robot to a backup robot controller coupled to the secondary input device.
+<br>
+
+<br>
+18.   The robotic method of claim 17, wherein transitioning control of the surgical robot to a backup robot controller comprises bringing processes in the backup robot controller out of hibernation and routing the communications from the surgical robot to the backup controller instead of the secondary robot controller.
+19
+20
+21
+22
+</body></html>

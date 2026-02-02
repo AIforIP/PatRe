@@ -1,0 +1,67 @@
+<html><head></head><body><h3>Date: 2024-06-25</h3>
+
+<h1><u>LISTING OF CLAIMS:</u></h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the Application.</p><br>
+<br>
+Claims 1-20 Canceled219<br>
+<br>
+<br>
+21. (New) A system adapted to selectively convert a bounded gameplay session to an unbounded gameplay session in a multiplayer video game for players of the multiplayer video game, wherein the bounded gameplay session is configured to run a session of the multiplayer video game until a predefined game objective is fulfilled or time has expired and wherein the unbounded gameplay session is configured to run a session of the multiplayer video game continuously, the system comprising:a gameplay session engine, wherein the gameplay session engine is configured to:<br>
+initiate the bounded gameplay session for all the players;<br>
+query a predetermined number of the players to determine if the bounded gameplay session should be converted to the unbounded gameplay session for all the players;<br>
+convert the bounded gameplay session to the unbounded gameplay session for all the players based on a result of said query; and<br>
+terminate the unbounded gameplay session only when no more of the players remain in the unbounded gameplay session.<br>
+<br>
+22. (New) The system of claim 21, wherein the unbounded gameplay session is configured to run continuously provided a minimum number of the players are in the unbounded gameplay session.<br>
+<br>
+23. (New) The system of claim 21, wherein the gameplay session engine is further configured to determine whether to initiate the bounded gameplay session for all the players or the unbounded gameplay session for all the players and initiate the bounded gameplay session for all the players based on the determination.<br>
+<br>
+24. (New) The system of claim 21, wherein the gameplay session engine is further configured to not convert the bounded gameplay session to the unbounded gameplay session if a number of the players agreeing to said converting is below a predefined number.<br>
+<br>
+25. (New) The system of claim 21, further comprising a matchmaking engine configured to create at least a first subset of players and a second subset of players from the players.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+26. (New) The system of claim 25, wherein the matchmaking engine is configured to create the first subset of players and the second subset of players based upon an election by at least one player of the players.<br>
+<br>
+27. (New) The system of claim 25, wherein the matchmaking engine is configured to create the first subset of players and the second subset of players based on at least one of a skill level or a style of at least one player of the players.<br>
+<br>
+28. (New) The system of claim 21, further comprising a scoring engine, wherein, in the unbounded gameplay session, the scoring engine is configured to generate scores for the players and wherein the scores are not dependent on a total length of time the unbounded gameplay session has been played by one or more players of the players.<br>
+<br>
+29. (New) The system of claim 21, further comprising a scoring engine, wherein, in the bounded gameplay session, the scoring engine is configured to generate scores for the players and wherein the scores are dependent on a total length of time the bounded gameplay session has been played by one or more players of the players.<br>
+<br>
+30. (New) The system of claim 21, further comprising a game adjustment engine, wherein the game adjustment engine is configured to monitor the unbounded gameplay session and determine a performance gap between the first subset of players and the second subset of players.<br>
+<br>
+31. (New) The system of claim 30, wherein the game adjustment engine is configured to generate and implement an adjustment feature based on the performance gap.<br>
+<br>
+32. (New) A method adapted to selectively convert a bounded gameplay session to an unbounded gameplay session in a multiplayer video game for players of the multiplayer video game, wherein the bounded gameplay session is configured to run a session of the multiplayer video game until a predefined game objective is fulfilled or time has expired and wherein the unbounded gameplay session is configured to run a session of the multiplayer video game continuously, the method comprising configuring a gameplay session engine to:initiate the bounded gameplay session for all the players;<br>
+query a predetermined number of the players to determine if the bounded gameplay session should be converted to the unbounded gameplay session for all the players;<br>
+convert the bounded gameplay session to the unbounded gameplay session for all the players based on a result of said query; and<br>
+<br>
+<br>
+<br>
+<br>
+terminate the unbounded gameplay session only when no more of the players remain in the unbounded gameplay session.<br>
+<br>
+33. (New) The method of claim 32, wherein the unbounded gameplay session is configured to run continuously provided a minimum number of the players are in the unbounded gameplay session.<br>
+<br>
+34. (New) The method of claim 32, further comprising configuring the gameplay session engine to determine whether to initiate the bounded gameplay session for all the players or the unbounded gameplay session for all the players and to initiate the bounded gameplay session for all the players based on the determination.<br>
+<br>
+35. (New) The method of claim 32, further comprising configuring the gameplay session engine to not convert the bounded gameplay session to the unbounded gameplay session when a number of the players agreeing to said converting is below a predefined number.<br>
+<br>
+36. (New) The method of claim 32, further comprising configuring a matchmaking engine to create at least a first subset of players and a second subset of players from the players.<br>
+<br>
+37. (New) The method of claim 36, further comprising configuring the matchmaking engine to create the first subset of players and the second subset of players based upon an election by at least one player of the players.<br>
+<br>
+38. (New) The method of claim 36, further comprising configuring the matchmaking engine to create the first subset of players and the second subset of players based on at least one of a skill level or a style of at least one player of the players.<br>
+<br>
+39. (New) The method of claim 32, further comprising, in the unbounded gameplay session,configuring a scoring engine to generate scores for the players, wherein the scores are not dependent on a total length of time the unbounded gameplay session has been played by one or more players of the players.<br>
+<br>
+40. (New) The method of claim 32, further comprising, in the bounded gameplay session,configuring a scoring engine to generate scores for the players, wherein the scores are dependent on a total length of time the bounded gameplay session has been played by one or more players of the players.<br>
+<br>
+41. (New) The method of claim 32, further comprising configuring a game adjustment engine to monitor the unbounded gameplay session and determine a performance gap between the first subset of players and the second subset of players.<br>
+<br>
+42.(New) The method of claim 41, wherein the game adjustment engine is configured to generate and implement an adjustment feature based on the performance gap.
+</body></html>

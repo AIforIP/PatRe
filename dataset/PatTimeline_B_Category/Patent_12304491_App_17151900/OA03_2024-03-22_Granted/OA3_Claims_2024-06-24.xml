@@ -1,0 +1,54 @@
+<html><head></head><body><h3>Date: 2024-06-24</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>The following listing of claims will replace all prior versions and listings of claims in the application.</p>
+<h1>LISTING OF CLAIMS</h1>
+<br>
+<br>
+1.  (currently amended) A vehicle control system comprising:<br>
+a vehicle control device configured to control traveling of an autonomous driving vehicle; and<br>
+a center device configured to communicate with the vehicle control device, wherein the center device includes at least one processor and a memory coupled to the at least one processor, configured to<u> recognize, based on information indicating fault of a device used for autonomous driving or information indicating tem</u><u>p</u><u>orarily unusable state of the device which are transmitted from the vehicle control device, </u>that the autonomous driving vehicle terminates autonomous driving,(i) set, when the at least one processor of the center device recognizes that the autonomous driving vehicle terminates the autonomous driving, a first stop position for stopping the autonomous driving vehicle based on position information transmitted from the autonomous driving vehicle and map information previously prepared and (ii) transmit the first stop position to the autonomous driving vehicle,<br>
+acquire a type of a passenger of the autonomous driving vehicle, and<br>
+set a measure method for the passenger according to the type of the passenger and set a dialogue method for dialogue with the passenger according to the type of the passenger,<br>
+<br>
+the vehicle control device includes at least one processor and a memory coupled to the at least one processor, configured to recognize a fault of an in-vehicle device used for autonomous driving in the autonomous driving vehicle or a temporarily unusable state of the in-vehicle device by monitoring an operation state of a signal transmitted from the in-vehicle device,<del>receive </del><u>transmit </u>information indicating the fault of the in-vehicle device or the temporarily unusable state of the in-vehicle device,<br>
+set a second stop position for stopping the autonomous driving vehicle,<u></u><u>the second sto</u><u>p p</u><u>osition being a nearest </u><u>p</u><u>osition to a </u><u>p</u><u>resent </u><u>p</u><u>osition of the autonomous driving vehicle, which is selected from predetermined </u><u>p</u><u>ositions</u><u>,</u><br>
+transmit at least the position information of the autonomous driving vehicle to the center device and acquire the first stop position, [[and]]<u> initiate travel of the autonomous driving vehicle toward the second stop </u><u>p</u><u>osition without waiting for receiving of the first sto</u><u>p p</u><u>osition transmitted from the center device</u><u>,</u><u> upon setting the second sto</u><u>p p</u><u>osition</u><u>,</u><u> and</u><br>
+cause the autonomous driving vehicle to head to the second stop position, which has been decided by the vehicle control device placed on the autonomous driving vehicle, in a case where the first stop position is not acquired from the center device, and cause the autonomous driving vehicle to head to the first stop position in a case where the first stop position is acquired from the center device,<br>
+the center device is placed outside the autonomous driving vehicle and the vehicle control device is placed on the autonomous driving vehicle, and the center device and the vehicle control device wirelessly communicate with each other, and<br>
+<br>
+the first stop position is decided by the center device and the second stop position is decided by the vehicle control device.<br>
+<br>
+2.   (previously presented) The vehicle control system according to claim 1, wherein the at least one processor of the center device outputs an instruction to a relief vehicle to head to the first stop position, and<br>
+the first stop position, which is set by the at least one processor of the center device, is a position intermediate between a present position of the relief vehicle and a present position of the autonomous driving vehicle.<br>
+<br>
+3.   (previously presented) The vehicle control system according to claim 2, wherein the at least one processor of the center device sets the first stop position at a position temporally intermediate between a present position of the relief vehicle and a present position of the autonomous driving vehicle.<br>
+<br>
+4.   (previously presented) The vehicle control system according to claim 1, wherein when the type of the passenger includes a person requiring care, the at least one processor of the center device sets the first stop position at a predetermined position having space necessary for the required care.<br>
+<br>
+<br>
+5.  (previously presented) The vehicle control system according to claim 2, wherein when the type of the passenger includes a person requiring care, the at least one processor of the center device sets the first stop position at a predetermined position having space necessary for the required care.<br>
+<br>
+6.  (currently amended) A vehicle control device configured to control traveling of an autonomous driving vehicle, and configured to communicate with a center device, wherein the center device includes at least one processor and a memory coupled to the at least one processor, configured to<u> recognize, based on information indicating fault of a device used for autonomous driving or information indicating tem</u><u>p</u><u>orarily unusable state of the device which are transmitted from the vehicle control device, </u>that the autonomous driving vehicle terminates autonomous driving,(i) set, when the at least one processor of the center device recognizes that the autonomous driving vehicle terminates the autonomous driving, a first stop position for stopping the autonomous driving vehicle based on position information transmitted from the autonomous driving vehicle and map information previously prepared and (ii) transmit the first stop position to the autonomous driving vehicle,<br>
+acquire a type of a passenger of the autonomous driving vehicle, and<br>
+<br>
+set a measure method for the passenger according to the type of the passenger and set a dialogue method for dialogue with the passenger according to the type of the passenger,<br>
+the vehicle control device includes at least one processor and a memory coupled to the at least one processor, configured to recognize a fault of an in-vehicle device used for autonomous driving in the autonomous driving vehicle or a temporarily unusable state of the in-vehicle device by monitoring an operation state of a signal transmitted from the in-vehicle device,<del>receive </del><u>transmit </u>information indicating the fault of the in-vehicle device or the temporarily unusable state of the in-vehicle device,<br>
+set a second stop position for stopping the autonomous driving vehicle,<u></u><u>the second sto</u><u>p p</u><u>osition being a nearest </u><u>p</u><u>osition to a </u><u>p</u><u>resent </u><u>p</u><u>osition of the autonomous driving vehicle, which is selected from predetermined </u><u>p</u><u>ositions</u><u>,</u><br>
+transmit at least the position information of the autonomous driving vehicle to the center device and acquire the first stop position, [[and]]<u> initiate travel of the autonomous driving vehicle toward the second stop </u><u>p</u><u>osition without waiting for receiving of the first sto</u><u>p p</u><u>osition transmitted from the center device</u><u>,</u><u> upon setting the second sto</u><u>p p</u><u>osition</u><u>,</u><u> and</u><br>
+cause the autonomous driving vehicle to head to the second stop position, which has been decided by the vehicle control device placed on the autonomous driving vehicle, in a case where the first stop position is not acquired from the center device, and cause the autonomous driving vehicle to head to the first stop position in a case where the first stop position is acquired from the center device,<br>
+<br>
+the center device is placed outside the autonomous driving vehicle and the vehicle control device is placed on the autonomous driving vehicle, and the center device and the vehicle control device wirelessly communicate with each other, and<br>
+the first stop position is decided by the center device and the second stop position is decided by the vehicle control device.<br>
+<br>
+7.  (previously presented) The vehicle control device according to claim 6, wherein when the type of the passenger includes a person requiring care, the at least one processor of the center device sets the first stop position at a predetermined position having space necessary for the required care.<br>
+<br>
+8.  (currently amended) The vehicle control system according to claim 1, wherein the type of the passenger classified includes a person not requiring care, a person requiring carer and no passenger.<br>
+<br>
+9.  (previously presented) The vehicle control system according to claim 8, wherein the person not requiring care is a person who is able to transfer from the autonomous driving vehicle to another autonomous driving vehicle by himself/herself.<br>
+<br>
+<br>
+10.  (previously presented) The vehicle control system according to claim 1, wherein the second stop position set by the vehicle control device is a predetermined place at which the autonomous driving vehicle is parked, and<br>
+the center device decides the first stop position depending on the type of the passenger of the autonomous driving vehicle based on the position information transmitted from the autonomous driving vehicle and the map information.<br>
+
+</body></html>

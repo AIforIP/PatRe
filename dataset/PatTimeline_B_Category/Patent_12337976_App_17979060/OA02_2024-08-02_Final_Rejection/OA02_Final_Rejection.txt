@@ -1,0 +1,178 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Response to Amendments
+The amendment filed 16th May 2024  has been entered. Claims 1-22 remain pending in the application. Applicant’s amendments to the claims have not overcome each and every objection previously set forth in the Non-Final Office Action mailed 6th March 2024.
+Claim Objections
+Claim 17 is objected to because of the following informalities:
+In claim 17 line 2, “…the strut…” should read “…the one or more strut …” for the purpose of clarity.
+Appropriate correction is required.
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+Claim(s) 1-6, 9-10, and 12-19 is/are rejected under 35 U.S.C. 103 as being unpatentable over Stanley et al. (US 3,848,832) in view of Behzadpour et al. (US 2022/0033060).
+Regarding claims 1 and 5-6, Stanley et al. ‘832 teaches (figures 1-2) a coupling system configured to secure one or more struts (6) to a wing (10) of an aircraft (Col. 1 Lines 65-67),
+wherein the coupling system secures the one or more struts (6) to a one or more ribs of the wing (clearly shown in the figure below; struts are coupled to the top and bottom surface of the ribs (also seen in figure 3)),
+PNG
+media_image1.png
+375
+665
+media_image1.png
+Greyscale
+but it is silent about the coupling system comprising:
+one or more splice straps that secure the one or more struts to the wing,
+wherein the one or more splice straps secure to both the one or more struts and a one or more ribs of the wing, and
+wherein the one or more splice straps comprise:
+one or more upper splice straps extending over a first top surface of a rear end of the one or more struts and a second top surface of a front end of the one or more ribs; and
+one or more lower splice straps extending over a first bottom surface of the rear end of the one or more struts and a second bottom surface of the front end of the one or more ribs.
+Behzadpour et al. ‘060 teaches (figures 4-5) a wing assembly (120) comprising the outer wing front spar (212)  and the outer wing rear spar (214) coupled to the center wing front spar (152) and center wing rear spar (154) via spar splice plates (216, 218) respectively (Para 0114; two splice plates secure outer wing spars and center wing spars on front and rear of the wing).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified Stanley et al. ‘832 to incorporate the teachings of Behzadpour et al. ‘060 to configure the coupling system comprising:
+one or more splice straps that secure the one or more struts to the wing,
+wherein the one or more splice straps is secure to both the one or more struts and one or more ribs of the wing, and
+wherein the one or more splice straps comprise:
+one or more upper splice straps extending over a first top surface of a rear end of the one or more struts and a second top surface of a front end of the one or more ribs (one or more splice straps couples the rear end of the one or more struts and the front end of the one or more ribs); and
+one or more lower splice straps extending over a first bottom surface of the rear end of the one or more struts and a second bottom surface of the front end of the one or more ribs (one or more splice straps couples the rear end of the one or more struts and the front end of the one or more ribs).
+One of ordinary skill in art would recognize that doing so would transfer loads between the strut and the wing. (Para 0114).
+Regarding claim 2, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system wherein the one or more splice straps are integrally formed with the one or more struts and the wing (splice straps connects struts and the wing, thus splice straps are integral part of a coupling system).
+Regarding claim 3, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system wherein a rear surface of the one or more struts (6) are linearly aligned with a front surface of a front spar (14) of the wing (clearly seen in figure 2) (Col. 1 Line 68, Col. 2 Lines 1-3;  rear surface of the strut (6) abuts the front spar linearly in a longitudinal direction).
+Regarding claim 4, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system wherein an engine (2) is secured to the one or more struts (6) distally from the wing (10) (Col. 1 Lines 64-68; Col. 2 Lines 22-25, 52-59; engine is secured to the strut via arch assembly (16)).
+Regarding claim 9, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system wherein the one or more splice straps are vertically and longitudinally aligned with the one or more struts and the one or more ribs (the one or more splice straps aligns and couples the one or more struts and the one or more ribs at the top and bottom surfaces of the one or more struts and the one or more ribs i.e., the one or more splice strips are vertically aligned and the one or more splice straps extends in a longitudinal direction i.e., longitudinally aligned).
+Regarding claim 10, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system further comprising one or more fairings covering at least a portion of the one or more splice straps (Col. 2 Lines 60-67; nacelle (4) and wing skin (clearly shown in the figure above) encloses the splice straps).
+Regarding claim 12, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system further comprising one or more spanning plates/front spar (14)  configured to span across a plurality of ribs, wherein the one or more splice straps are coupled to the one or more spanning plates (Col. 1 Lines 68; Col. 2 Lines 1-3; front spar extends in the spanwise direction i.e., span across a plurality of ribs and is sandwiched between the strut and rib of the wing (clearly seen in figure 2); the splice strap connects the strut and the rib of the wing, thus the sandwiched front spar is connected/coupled to the splice strap).
+Regarding claim 13 and 15-16, Stanley et al. ‘832 teaches (figures 1-2) a method for securing one or more struts (6) to a wing (10) of an aircraft (Col. 1 Lines 65-67),
+wherein the method comprises securing the one or more struts (6) to the wing (10) (clearly shown in the figure below; struts are secured at the top and bottom surface of the ribs of the wing (also seen in figure 3)),
+PNG
+media_image1.png
+375
+665
+media_image1.png
+Greyscale
+but it is silent about the method comprising:
+securing, by one or more splice straps, the one or more struts to the wing,
+wherein said securing comprises securing the one or more splice straps to both the one or more struts and a one or more ribs of the wing, and
+wherein the one or more splice straps comprise:
+one or more upper splice straps extending over a first top surface of a rear end of the one or more struts and a second top surface of a front end of the one or more ribs; and
+one or more lower splice straps extending over a first bottom surface of the rear end of the one or more struts and a second bottom surface of the front end of the one or more ribs.
+Behzadpour et al. ‘060 teaches (figures 4-5) a wing assembly (120) comprising the outer wing front spar (212)  and the outer wing rear spar (214) coupled to the center wing front spar (152) and center wing rear spar (154) via spar splice plates (216, 218) respectively (Para 0114; splice plates are secured to both outer wing spars and center wing spars; two splice plates secure outer wing spars and center wing spars on front and rear of the wing).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified Stanley et al. ‘832 to incorporate the teachings of Behzadpour et al. ‘060 to configure the method comprising:
+securing, by one or more splice straps, the one or more struts to the wing,
+wherein said securing comprises securing the one or more splice straps to both the one or more struts and one or more ribs of the wing, and
+wherein the one or more splice straps comprise:
+one or more upper splice straps extending over a first top surface of a rear end of the one or more struts and a second top surface of a front end of the one or more ribs (one or more splice straps couples the rear end of the one or more struts and the front end of the one or more ribs); and
+one or more lower splice straps extending over a first bottom surface of the rear end of the one or more struts and a second bottom surface of the front end of the one or more ribs (one or more splice straps couples the rear end of the one or more struts and the front end of the one or more ribs).
+One of ordinary skill in art would recognize that doing so would transfer loads between the strut and the wing. (Para 0114).
+Regarding claim 14, modified Stanley et al. ‘832 teaches (figures 1-2) the method wherein said securing comprises integrally forming the one or more splice straps to the one or more struts and the wing (splice straps connects struts and the wing, thus splice straps are integral part of a coupling system).
+Regarding claim 17, modified Stanley et al. ‘832 teaches (figures 1-2) the method wherein said securing further comprises vertically and longitudinally aligning the one or more splice straps with the one or more struts and the one or more ribs (the one or more splice straps aligns and couples the one or more struts and the one or more ribs at the top and bottom surfaces of the one or more struts and the one or more ribs i.e., the one or more splice strips are vertically aligned and the one or more splice straps extends in a longitudinal direction i.e., longitudinally aligned).
+Regarding claims 18-19, Stanley et al. ‘832 teaches (figures 1-2) an aircraft comprising:
+a fuselage (aircraft has fuselage that holds crew, passengers and cargo);
+a wing (10) extending from the fuselage, wherein wing comprises a front spar (14) and one or more ribs (clearly shown in the figure below) (Col. 2 Lines 1-3);
+one or more struts (6), wherein a rear surface of the one or more struts are linearly aligned with a front surface of the spar (clearly seen in figure 2) (Col. 1 Line 68, Col. 2 Lines 1-3;  rear surface of the strut (6) abuts the front spar linearly in a longitudinal direction),
+an engine (2) secured to the one or more struts (6) distally from the wing (10) (Col. 1 Lines 64-68; Col. 2 Lines 22-25, 52-59; engine is secured to the strut via arch assembly (16)),
+a coupling system securing the one or more struts (6) to the wing (10) (clearly shown in the figure below; struts are coupled to the top and bottom surface of the ribs (also seen in figure 3)) (Col. 1 Lines 65-67),
+PNG
+media_image1.png
+375
+665
+media_image1.png
+Greyscale
+but it is silent about the aircraft comprising the coupling system comprising:
+one or more splice straps that secure the one or more struts to the wing,
+wherein the one or more splice straps are integrally formed with the one or more struts and the wing,
+wherein the one or more splice straps secure to both the one or more struts and the one or more ribs,
+wherein the one or more splice straps are vertically and longitudinally aligned with the one or more struts and the one or more ribs, and
+wherein the one or more splice straps comprise:
+one or more upper splice straps extending over a first top surface of a rear end of the one or more struts and a second top surface of a front end of the one or more ribs; and
+one or more lower splice straps extending over a first bottom surface of the rear end of the one or more struts and a second bottom surface of the front end of the one or more ribs.
+Behzadpour et al. ‘060 teaches (figures 4-5) a wing assembly (120) comprising the outer wing front spar (212)  and the outer wing rear spar (214) coupled to the center wing front spar (152) and center wing rear spar (154) via spar splice plates (216, 218) respectively (Para 0114; splice plates are secured to both outer wing spars and center wing spars; two splice plates secure outer wing spars and center wing spars on front and rear of the wing).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have modified Stanley et al. ‘832 to incorporate the teachings of Behzadpour et al. ‘060 to configure the aircraft comprising the coupling system comprising:
+one or more splice straps that secure the one or more struts to the wing,
+wherein the one or more splice straps are integrally formed with the one or more struts and the wing (splice straps connects struts and the wing, thus splice straps are integral part of a coupling system),
+wherein the one or more splice straps secure to both the one or more struts and the one or more ribs,
+wherein the one or more splice straps are vertically and longitudinally aligned with the strut and the one or more ribs (the one or more splice straps aligns and couples the one or more struts and the one or more ribs at the top and bottom surfaces of the one or more struts and the one or more ribs i.e., the one or more splice strips are vertically aligned and the one or more splice straps extends in a longitudinal direction i.e., longitudinally aligned), and
+wherein the one or more splice straps comprise:
+one or more upper splice straps extending over a first top surface of a rear end of the one or more struts and a second top surface of a front end of the one or more ribs (one or more splice straps couples the rear end of the one or more struts and the front end of the one or more ribs); and
+one or more lower splice straps extending over a first bottom surface of the rear end of the one or more struts and a second bottom surface of the front end of the one or more ribs (one or more splice straps couples the rear end of the one or more struts and the front end of the one or more ribs).
+One of ordinary skill in art would recognize that doing so would transfer loads between the strut and the wing. (Para 0114).
+Claim(s) 7-8 and 20 is/are rejected under 35 U.S.C. 103 as being unpatentable over Stanley et al. (US 3,848,832) and Behzadpour et al. (US 2022/0033060) as applied to claims 6 and 19 above, and further in view of Brodell et al. (US 5,524,847).
+Regarding claims 7-8, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system where the one or more upper splice straps comprise a first upper splice strap and wherein the one or more lower splice straps comprise a first lower splice strap (at least one splice strap is present on both the top and bottom surfaces which couples the struts and ribs),
+but it is silent about the coupling system wherein the one or more upper splice straps comprise a second upper splice strap, and wherein the one or more lower splice straps comprise a second lower splice strap, and
+wherein the one or more upper splice straps further comprise a third upper splice strap between the first upper splice strap and the second upper splice strap, and wherein the one or more lower splice straps further comprise a third lower splice strap between the first lower splice strap and the second lower splice strap.
+Brodell et al. ‘847 teaches (figures 1-2) an engine mounted on the aircraft  by a pylon (60) extending between the engine and an aircraft wing (62) wherein a pylon beam (64) is united with the intermediate cowl (34) by a separable joint such as the bolted joint (74)  (Col. 5 Lines 39-50; 3 bolted joint unites the pylon beam with the intermediate cowl; bolted joint is analogous to splice strap as both couples two structures).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Stanley et al. ‘832 to incorporate the teachings of Brodell et al. ‘847 to configure the coupling system wherein the one or more upper splice straps comprise a second upper splice strap, and wherein the one or more lower splice straps comprise a second lower splice strap, and
+wherein the one or more upper splice straps further comprise a third upper splice strap between the first upper splice strap and the second upper splice strap, and wherein the one or more lower splice straps further comprise a third lower splice strap between the first lower splice strap and the second lower splice strap.
+One of ordinary skill in art would recognize that doing so would reinforce the coupling system.
+Regarding claim 20, modified Stanley et al. ‘832 teaches (figures 1-2) the aircraft wherein the one or more upper splice straps comprise:
+a first upper splice strap (at least one splice strap is present on both the top and bottom surfaces which couples the struts and ribs); and
+wherein the one or more lower splice straps comprise:
+a first lower splice strap (at least one splice strap is present on both the top and bottom surfaces which couples the struts and ribs),
+but it is silent about the aircraft wherein the one or more upper splice straps comprise:
+a second upper splice strap; and
+a third upper splice strap between the first upper splice strap and the second upper splice strap; and
+wherein the one or more lower splice straps comprise:
+a second lower splice strap; and
+a third lower splice strap between the first lower splice strap and the second lower splice strap.
+Brodell et al. ‘847 teaches (figures 1-2) an engine mounted on the aircraft  by a pylon (60) extending between the engine and an aircraft wing (62) wherein a pylon beam (64) is united with the intermediate cowl (34) by a separable joint such as the bolted joint (74)  (Col. 5 Lines 39-50; 3 bolted joint unites the pylon beam with the intermediate cowl; bolted joint is analogous to splice strap as both couples two structures).
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Stanley et al. ‘832 to incorporate the teachings of Brodell et al. ‘847 to configure the aircraft wherein the one or more upper splice straps comprise:
+a second upper splice strap; and
+a third upper splice strap between the first upper splice strap and the second upper splice strap; and
+wherein the one or more lower splice straps comprise:
+a second lower splice strap; and
+a third lower splice strap between the first lower splice strap and the second lower splice strap.
+One of ordinary skill in art would recognize that doing so would reinforce the coupling system.
+Claim(s) 11 is/are rejected under 35 U.S.C. 103 as being unpatentable over Stanley et al. (US 3,848,832) and Behzadpour et al. (US 2022/0033060) as applied to claim 1 above, and further in view of Liu (CN 201660965).
+Regarding claim 11, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system of claim 1 but it is silent about the coupling system comprising one or more mounting plates between the one or more splice straps and the one or more struts, and between the one or more splice straps and the wing.
+Liu ‘965 teaches (figures 1-7) cantilever beam (2) connected to an extension beam (clearly shown in the figure below) at the upper flange (31) and lower flange (32) via an inner layer splice plate/mounting plate (40, 42), wing outer plate/splice strap (41, 43) and bolt (7) (clearly seen in figure 7) (English Translation Pg. 3 Lines 11-28).
+PNG
+media_image2.png
+286
+584
+media_image2.png
+Greyscale
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Stanley et al. ‘832 to incorporate the teachings of Liu ‘965 to configure the coupling system comprising one or more mounting plates between the one or more splice straps and the one or more struts, and between the one or more splice straps and the wing.
+One of ordinary skill in art would recognize that doing so would provide uniform surface for mounting the splice straps.
+Claim(s) 22 is/are rejected under 35 U.S.C. 103 as being unpatentable over Stanley et al. (US 3,848,832) and Behzadpour et al. (US 2022/0033060) as applied to claim 1 above, and further in view of Pautis et al. (US 2016/0229545)
+Regarding claim 22, modified Stanley et al. ‘832 teaches (figures 1-2) the coupling system further comprising first outer lateral surface of the one or more struts , a front spar (14) of the wing and a second outer lateral surface of the one or more struts (strut has two lateral surfaces) (lateral surface on one side of the strut is shown in the figure below) (Col. 2 Line 3),
+PNG
+media_image3.png
+375
+665
+media_image3.png
+Greyscale
+but it is silent about the coupling system further comprising:
+a first lateral brace secured to first outer lateral surface of the one or more struts and a front spar of the wing;
+a second lateral brace secured to a second outer lateral surface of the one or more struts and the front spar of the wing, wherein the second outer lateral surface is opposite from the first lateral surface.
+Pautis et al. ‘545 teaches (figures 2-5e) a pylon box/strut (6a) comprising two outer lateral surfaces (clearly shown in the figure below) wherein two lateral braces (clearly shown in the figure below) are secured to two outer lateral surfaces of the pylon box/strut (6a) and a front spar (34a) of the wing (clearly seen in the figure below) (Para 0051, 0054)
+PNG
+media_image4.png
+395
+534
+media_image4.png
+Greyscale
+Therefore, it would have been obvious to one of ordinary skill in the art before the effective filing date of the claimed invention to have further modified Stanley et al. ‘832 to incorporate the teachings of Pautis et al. ‘545 to configure the coupling system further comprising:
+a first lateral brace secured to first outer lateral surface of the one or more struts and a front spar of the wing;
+a second lateral brace secured to a second outer lateral surface of the one or more struts and the front spar of the wing, wherein the second outer lateral surface is opposite from the first lateral surface.
+One of ordinary skill in art would recognize that doing so would reinforce the coupling system.
+Allowable Subject Matter
+Claim 21 is objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Response to Arguments
+Applicant's arguments filed 16th May 2024 have been fully considered but they are not persuasive.
+In response to applicant's argument regarding combination of Stanley ‘832 and Behzadpour ‘060 in claims 1, 6, 13, 16 and 18-19, the test for obviousness is not whether the features of a secondary reference may be bodily incorporated into the structure of the primary reference; nor is it that the claimed invention must be expressly suggested in any one or all of the references.  Rather, the test is what the combined teachings of the references would have suggested to those of ordinary skill in the art.  See In re Keller, 642 F.2d 413, 208 USPQ 871 (CCPA 1981). Stanley ‘832 teaches coupling strut to a rib of a wing of an aircraft and Behzadpour ‘060 teaches coupling the outer wing front spar and the outer wing rear spar (214) via splice plates. Since coupling is being done on a wing portion of an aircraft in both Stanley ‘832 and Behzadpour ‘060 it would have been obvious to use splice plates of Behzadpour ‘060 to couple strut to a rib of a wing in Stanley ‘832. Also the coupling system couples on top and bottom portion of the wing and couples rear portions of the strut to front portions of the rib.
+Conclusion
+Applicant's amendment necessitated the new ground(s) of rejection presented in this Office action.  Accordingly, THIS ACTION IS MADE FINAL.  See MPEP § 706.07(a).  Applicant is reminded of the extension of time policy as set forth in 37 CFR 1.136(a).
+A shortened statutory period for reply to this final action is set to expire THREE MONTHS from the mailing date of this action.  In the event a first reply is filed within TWO MONTHS of the mailing date of this final action and the advisory action is not mailed until after the end of the THREE-MONTH shortened statutory period, then the shortened statutory period will expire on the date the advisory action is mailed, and any extension fee pursuant to 37 CFR 1.136(a) will be calculated from the mailing date of the advisory action.  In no event, however, will the statutory period for reply expire later than SIX MONTHS from the date of this final action.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ASHESH DANGOL whose telephone number is (303)297-4455. The examiner can normally be reached Monday-Friday 0730-0530 MT.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joshua J Michener can be reached on (571) 272-1467. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/ASHESH DANGOL/Examiner, Art Unit 3642
+/Richard Green/Primary Examiner, Art Unit 3647

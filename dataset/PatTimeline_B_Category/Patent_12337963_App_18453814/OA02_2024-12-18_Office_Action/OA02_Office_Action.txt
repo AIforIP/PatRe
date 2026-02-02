@@ -1,0 +1,99 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Election/Restriction
+Applicant's election with traverse of invention I, directed to claims 1-16 in the reply filed on 11/06/2024 is acknowledged.  The traversal is on the ground(s) that applicant has amended claim 17 to require a wing tip hinge and there would be no undue search burden.  This is not found persuasive because the method does not require a wing root with a leading edge, trailing edge, and a distal end and could instead be performed with merely the part which joins the fuselage and wing of an aircraft without have spanwise width. Similarly, classification searching of wing attachments in B64C1/26 and text searching of methods for attaching and moving wings to an aircraft would be required would be required in this case.
+The requirement is still deemed proper and is therefore made FINAL.
+Claims 17-20 are withdrawn from further consideration pursuant to 37 CFR 1.142(b), as being drawn to a nonelected invention, there being no allowable generic or linking claim. Applicant timely traversed the restriction (election) requirement in the reply filed on 11/06/2024.
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The text of those sections of Title 35, U.S. Code not included in this action can be found in a prior Office action.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+This application currently names joint inventors. In considering patentability of the claims the examiner presumes that the subject matter of the various claims was commonly owned as of the effective filing date of the claimed invention(s) absent any evidence to the contrary.  Applicant is advised of the obligation under 37 CFR 1.56 to point out the inventor and effective filing dates of each claim that was not commonly owned as of the effective filing date of the later invention in order for the examiner to consider the applicability of 35 U.S.C. 102(b)(2)(C) for any potential 35 U.S.C. 102(a)(2) prior art against the later invention.
+Claim(s) 1-2 and 6-10 is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Santini (US 9296469 B2) or in the alternative under 35 U.S.C. 103 as being obvious over Alvarez-Calderon (US 3333792 A).
+Regarding claim 1, Santini (US 9296469 B2) discloses a wing for use with an aircraft (Santini, figure 3, item 302), the wing comprising:
+a wing root comprising a leading edge, a trailing edge, and a distal end (Santini, figure 2, item 126, wing with root, leading edge, trailing edge, and distal end);
+a wing tip comprising a leading edge, positioned proximate to the distal end of the wing root (Santini, figure 2, item 122, wing tip at end of wing), and configured to be foldable, relative to the wing root, along a folding plane that is co- planar with or parallel to a wing root plane of the wing root (Santini, figure 2, item 122, wing tip folds aftwards parallel to the wing root); and
+a wing-tip hinge pivotally coupling the wing tip to the wing root and defining a wing-tip axis that is perpendicular to the folding plane (Santini, figure 4, item 422), wherein:
+the wing tip is pivotable about the wing-tip axis, within the folding plane, between, and inclusive of, an extended position and a retracted position, relative to the wing root (Santini, figure 6, item 610, rotation axis of joint);
+when in the extended position, the leading edge of the wing tip extends from the leading edge of the wing root in a spanwise direction of the wing root (Santini, figure 6, item 608, wing tip in extended position);
+and when in the retracted position, the leading edge of the wing tip extends from the leading edge of the wing root in a chordwise direction of the wing root (Santini, figure 6, item 608, wing tip in retracted position).
+Alternatively, Alvarez-Calderon (US 3333792 A) teaches a wing-tip hinge pivotally coupling the wing tip to the wing root and defining a wing-tip axis that is perpendicular to the folding plane (Alvarez-Calderon, figure 1, item 3).
+Santini and Alvarez-Calderon are both considered analogous art as they are both in the same field of retractable aircraft wing tips. It would have been obvious before the effective filing date of the application for one of ordinary skill in the art to modify the wing tip of Santini with the hinge between the wing tip and the end of the main wing of Alvarez-Calderon with a reasonable expectation of success in order to provide a redundant mechanism for preventing the wing tip from becoming un-attached.
+Regarding claim 2, Santini discloses/Santini as modified by Alvarez-Calderon teaches the wing of claim 1, further comprising an actuator comprising a first actuator end and a second actuator end, wherein:
+the first actuator end is mounted to the wing root (Santini, figure 9, item 926);
+the second actuator end is mechanically coupled to the wing tip (Santini, figure 9, item 918); and
+the actuator is actuatable to pivot the wing tip relative to the wing root between, and inclusive of, the extended position and the retracted position (Santini, figure 9, item 920).
+Regarding claim 6, Santini discloses/Santini as modified by Alvarez-Calderon teaches the wing of claim 1, further comprising at least one wing-tip panel configured to be pivotable, relative to the wing tip, about a panel axis as the wing tip is pivoted between, and inclusive of, the extended position and the retracted position (Santini, figure 4, items 430 and 432, first and second surface pivoted about axis of a second hinge with respect to wing tip).
+Regarding claim 7, Santini discloses/Santini as modified by Alvarez-Calderon teaches the wing of claim 6, wherein:
+the wing tip comprises a panel cutout defined by a panel-attachment edge and a panel- abutment edge (Santini, figure 6-7, item 612 and 712 panel cutout); and
+the at least one wing-tip panel comprises a tip-attachment edge, a tip-abutment edge, a wing-abutment edge, and a trailing edge (Santini, figure 6-7, item 612 and 712 panel);
+wherein when in the extended position:
+the at least one wing-tip panel is pivotally attached to the panel-attachment edge of the wing tip by the tip-attachment edge (Santini, figure 7, item 712 panel cutout);
+the tip-abutment edge is laterally aligned with the panel-abutment edge of the wing tip (Santini, figure 6, item 612, panel laterally aligned with the edge of wing tip); and
+the wing-abutment edge is laterally aligned with the distal end of the wing root (Santini, figure 6, item 612, panel laterally aligned with the edge of a distal end of the wing).
+Regarding claim 8, Santini discloses/Santini as modified by Alvarez-Calderon teaches the wing of claim 6, wherein:
+the at least one wing-tip panel comprises an upper wing-tip panel and a lower wing-tip panel (Santini, figure 4, items 430 and 432, first and second surface pivoted about axis of a second hinge with respect to wing tip);
+the upper wing-tip panel is configured to be pivotable about a first panel axis (Santini, figure 4, items 430, col 7, lines 45-49, pivoted about an axis by a hinge); and
+the lower wing-tip panel is configured to be pivotable about a second panel axis (Santini, figure 4, items 432, col 7, lines 50-59, pivoted about an axis by a hinge).
+Regarding claim 9, Santini discloses/Santini as modified by Alvarez-Calderon teaches the wing of claim 8,
+further comprising:
+an upper rod comprising a first upper-rod end and a second upper-rod end (Santini, figures 9 and 12, item 922); and
+wherein:
+the first upper-rod end is mounted to the wing root at a first location (Santini, figures 9 and 12, items 922, link attached to wing root at a location) and the second upper-rod end is mounted to an interior surface of the upper wing-tip panel (Santini, figures 9 and 12, items 922, link attached to panel interior surface); except:
+It is not clear if Santini discloses/teaches a lower rod comprising a first lower-rod end and a second lower-rod end; wherein:
+the first lower-rod end is mounted to the wing root at a second location and the second lower-rod end is mounted to an interior surface of the lower wing- tip panel; and
+the first location on the wing root is below the second location on the wing root.
+It would have been obvious to one having ordinary skill in the art before the effective filing date of the application to mirror the upper rod to a lower rod connected to the lower panel in order to allow the wing tip to move into the retracted position without impacting the lower surface, since it has been held that mere duplication of the essential working parts of a device involves only routine skill in the art. St. Regis Paper Co. v. Bemis Co., 193 USPQ 8.
+Regarding claim 10, Santini discloses/Santini as modified by Alvarez-Calderon teaches the wing of claim 1, wherein the wing tip comprises a panel cutout defined by a panel-attachment edge and a panel-abutment edge, and when in the retracted position, the panel-abutment edge of the wing tip is adjacent to the trailing edge of the wing root (Santini, figures 3 and 6-8, items 342 and 712, cutout with attachment edge, panel abutment edge, and where the abutment edge is adjacent to the wing trailing edge when retracted).
+Allowable Subject Matter
+Claims 3-5 are objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Claims 11-16 are allowed.
+The following is a statement of reasons for the indication of allowable subject matter:
+Regarding claim 3, Santini discloses the wing of claim 2, except:
+further comprising:
+a bell crank comprising a first bell-crank end, a second bell-crank end, and a fixed pivot point between the first bell-crank end and the second bell-crank end; and
+a bell-crank hinge defining a bell-crank axis that is parallel to the wing-tip axis, the bell- crank hinge being mounted to the wing root aft of the wing-tip hinge;
+wherein:
+the first bell-crank end is mounted to the second actuator end;
+the second bell-crank end is mechanically coupled to the wing tip; and the fixed pivot point is pivotally coupled to the bell-crank hinge so that the bell crank is pivotable about the bell-crank axis.
+Alvarez-Calderon (US 3333792 A) teaches a bell crank comprising a first bell-crank end (Alvarez-Calderon, figure 1, item 19), a second bell-crank end (Alvarez-Calderon, figure 1, item 17), and a fixed pivot point between the first bell-crank end and the second bell-crank end (Alvarez-Calderon, figure 1, item 11); and
+a bell-crank hinge defining a bell-crank axis that is parallel to the wing-tip axis, the bell- crank hinge being mounted to the wing root (Alvarez-Calderon, figure 1, items 3 and 11);
+wherein:
+the first bell-crank end is mounted to the second actuator end (Alvarez-Calderon, figure 1, item 23);
+the second bell-crank end is mechanically coupled to the wing tip (Alvarez-Calderon, figure 1, item 13 and 17, bell crank end coupled with wing tip via coupler); and
+the fixed pivot point is pivotally coupled to the bell-crank hinge so that the bell crank is pivotable about the bell-crank axis (Alvarez-Calderon, figure 1, item 11, bell crank hinged to a fixed pivot point of the wing).
+Schweighart (US 20100019080 A1) also teaches a bell crank comprising a first bell-crank end (Schweighart, figure 1, item 32), a second bell-crank end (Schweighart, figure 1, item 13), and a fixed pivot point between the first bell-crank end and the second bell-crank end (Schweighart, figure 1, item 12); and
+a bell-crank hinge defining a bell-crank axis that is parallel to the wing-tip axis, the bell- crank hinge being mounted to the wing root (Schweighart, figure 1, items 5 and 12);
+wherein:
+the first bell-crank end is mounted to the second actuator end (Schweighart, figure 1, item 33);
+the second bell-crank end is mechanically coupled to the wing tip (Schweighart, figure 1, items 7 and 50, bell crank end coupled with wing tip via coupler); and
+the fixed pivot point is pivotally coupled to the bell-crank hinge so that the bell crank is pivotable about the bell-crank axis (Alvarez-Calderon, figure 1, item 11, bell crank hinged to a fixed pivot point of the wing).
+The prior art fails to teach the bell crank hinge aft of the wing tip hinge.
+Thus, the prior art fails to teach the claimed matter alone and it would not have been obvious to meet the claims either without undue hindsight based on the applicant' s disclosure.
+Regarding claim 11, Santini discloses a wing-tip assembly comprising:
+a wing tip (Santini, figures 6-8, item 608, 708, and 808) comprising a panel cutout defined by a panel-attachment edge and a panel- abutment edge (Santini, figures 6-8, item 612 and 712, panel cutout with a panel installed), wherein the wing tip is pivotable about a wing-tip axis (Santini, figures 6-8, item 610, 710, and 810, wing tip pivots about wing tip axis);
+an upper wing-tip panel comprising a tip-attachment edge and a tip-abutment edge, the upper wing-tip panel being pivotable about a first panel axis that is angled relative to the wing- tip axis, wherein the upper wing-tip panel is pivotally attached to the panel-attachment edge of the wing tip by the tip-attachment edge of the upper wing-tip panel (Santini, figure 4, item 430, first surface attached to the hinge at an angle with respect to the wing pivot axis); and
+a lower wing-tip panel comprising a tip-attachment edge and a tip-abutment edge, the lower wing-tip panel being pivotable about a second panel axis that is parallel to the first panel axis, wherein the lower wing-tip panel is pivotally attached to the panel-attachment edge of the wing tip by the tip-attachment edge of the lower wing-tip panel (Santini, figure 4, item 432, second surface attached to the hinge at an angle with respect to the wing pivot axis and parallel to the first panel axis);
+wherein:
+the wing tip is pivotable about the wing-tip axis, between, and inclusive of, an extended position and a retracted position (Santini, figures 6-8, wing tips travel between extended and retracted positions);
+when in the extended position, the tip-abutment edge of the upper wing-tip panel and the tip-abutment edge of the lower wing-tip panel are laterally aligned with the panel-abutment edge of the wing tip (Santini, figure 6, item 624, wingtip and panel abutment edges are laterally aligned); and
+when in the retracted position, the tip-abutment edge of the upper wing-tip panel and the tip-abutment edge of the lower wing-tip panel are unaligned with the panel-abutment edge, such that the tip-abutment edge of the upper wing-tip panel and lower wing-tip panel extends vertically downward from the panel-abutment edge of the wing tip (Santini, figure 7, item 712)
+except:
+wherein the upper panel extends vertically upward from the panel-abutment edge of the wing tip and the tip-abutment edge of the lower wing-tip panel extends vertically downward from the panel-abutment edge of the wing tip
+Thus, the prior art fails to teach the claimed matter alone and it would not have been obvious to meet the claims either without undue hindsight based on the applicant' s disclosure.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+Snook (US 3223365 A) teaches bell cranks for control mechanisms
+Sakurai (US 8708286 B2) teaches a wingtip retraction mechanism including a panel which folds down (¶56)
+Harding (US 10464658 B2) teaches a mechanism for retracting wing tip; including bell crank
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to RYAN ANDREW YANKEY whose telephone number is (571)272-9979. The examiner can normally be reached Monday-Thursday 8:30 - 5:00.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joshua Michener can be reached on (571) 272-1467. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/RYAN ANDREW YANKEY/Examiner, Art Unit 3642                                                                                                                                                                                                        /JOSHUA J MICHENER/Supervisory Patent Examiner, Art Unit 3642

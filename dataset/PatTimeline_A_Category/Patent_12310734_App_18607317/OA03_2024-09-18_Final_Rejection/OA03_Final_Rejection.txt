@@ -1,0 +1,117 @@
+DETAILED ACTION
+Summary
+Claims 1-6, and 8-22 are pending in the application. Claims 1-3, 5, and 8-21 are rejected under 35 USC 103.
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+This application currently names joint inventors. In considering patentability of the claims the examiner presumes that the subject matter of the various claims was commonly owned as of the effective filing date of the claimed invention(s) absent any evidence to the contrary.  Applicant is advised of the obligation under 37 CFR 1.56 to point out the inventor and effective filing dates of each claim that was not commonly owned as of the effective filing date of the later invention in order for the examiner to consider the applicability of 35 U.S.C. 102(b)(2)(C) for any potential 35 U.S.C. 102(a)(2) prior art against the later invention.
+Claims 1, 3, 5, 8-10, 12, and 15-20 are rejected under 35 U.S.C. 103 as being unpatentable over Nakamura (U.S PGPub 2019/0298202 A1) in view of Varcoe et al. (U.S PGPub 2019/0133478 A1) and Ishiyama et al. (U.S PGPub 2005/0192502 A1).
+Regarding Claim 1, an apparatus for measuring magnetic fields from a subject’s organ (Abstract), comprising:
+a plurality of magnetometers in a three-dimensional arrangement (Fig. 2, 110) [0053],
+wherein:
+a respective pair of magnetometers (Fig. 2, 210), in the plurality of magnetometers, has a respective known separation [0053]+[0089];
+each magnetometer in the plurality of magnetometers is configured to simultaneously detect a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field and output a signal indicative of the detected biomagnetic field and the background magnetic field [0084]+[0090];
+the plurality of magnetometers are spatially distributed (Fig. 2, 110) [0053]
+the plurality of magnetometers recovers information from both the biomagnetic field from the subject’s organ and the background magnetic field [0084]+[0090] and
+the apparatus is configured to operate without magnetic shielding [0045].
+Nakamura is silent regarding the magnetometers being unshielded magnetometers.
+Varcoe teaches a system for measuring the magnetic field of a patient’s body (Abstract). This system measures the magnetic field without the magnetometers being shielded [0019]+[0205].
+It would have been obvious to one of ordinary skill in the art before the effective filing date to modify the system of Nakamura with the unshielded magnetometers of Varcoe because this reduces the cost of the system by not requiring expensive shielding arrangement/components, as recognized by Varcoe [0274].
+Nakamura fails to teach that the magnetometers are distributed such that in Fourier space they have a wavevector coverage.
+Ishiyama teaches a magnetocardiography technique (Abstract). This system distributes magnetometers [0037] in Fourier space [0013] the sensors have a wavevector coverage on the heart [0043].
+It would have been obvious to one of ordinary skill in the art before the effective filing date to modify the combined system so the magnetometers are distributed in Fourier space to have a wavevector coverage on the heart, as taught by Ishiyama, because this provides a better method for diagnosing the heart, as recognized by Ishiyama [0009].
+Regarding Claim 3, the combination of references teaches the invention substantially as claimed. Nakamura further teaches wherein the respective known separation has a respective fixed length [0053]+[0089].
+Nakamura is silent that the length is fixed.
+Varcoe further teaches the sensors are mounted (fixed) in a substrate [0100].
+It would have been obvious to one of ordinary skill in the art before the effective filing date to modify to have the sensors fixed, as taught by Varcoe, because this allows for a lighter magnetometer system, thereby allowing the system to be used for medical magnetometry, as recognized by Varcoe [0099]-[0100].
+Regarding Claim 5, the combination of references teaches the invention substantially as claimed. Nakamura further teaches wherein the background magnetic field includes a uniform magnetic field [0100].
+Regarding Claim 8, the combination of references teaches the invention substantially as claimed. Nakamura further teaches the plurality of magnetometers comprises an array of magnetometers arranged in a stack of planes (Fig. 2) [0053], wherein:
+adjacent magnetometers in a respective plane of the stack of planes are separated by a first predefined spacing along a length of the array and separated by a second predefined spacing along a width of the array (Fig. 2) [0053]+[0089] (Lx is the predefined space in length, Ly is predefined space on width); and
+magnetometers in adjacent planes of the stack of planes are separated by a third predefined spacing along a thickness direction of the array (Fig. 2) [0053]+[0089] (Lz is the predefined space in height).
+Regarding Claim 9, the combination of references teaches the invention substantially as claimed. Nakamura further teaches a first magnetometer in a first plane of the stack of planes is aligned with a second magnetometer in a second plane of the stack of planes along the length and the width of the array (Fig 2, the sensors 220 of each stack 210 are aligned) [0053].
+Regarding Claim 10, the combination of references teaches the invention substantially as claimed. Nakamura further teaches the array of magnetometers includes a first subset of magnetometers positioned in a first plane of the stack of planes (Fig. 2, 220 on the bottom level) and a second subset of magnetometers positioned in a second plane of the stack of planes (Fig. 2, 220 on the top level) [0053]; and
+the first subset of magnetometers are aligned with the second subset of magnetometers along the length and the width of the array (Fig. 2, 210 are aligned, and 220 on the bottom are aligned with the top along the length and width) [0053].
+Regarding Claim 12, the combination of references teaches the invention substantially as claimed. While Nakamura teaches the system can be used in an examination room [0081], Nakamura is silent regarding the apparatus is operable at room temperature.
+Varcoe further teaches that the system can be used at room temperature [0050].
+It would have been obvious to one of ordinary skill in the art before the effective filing date to modify the system of Nakamura with the unshielded magnetometers which can be used at room temperature of Varcoe because this reduces the cost of the system by not requiring expensive cooling components, as recognized by Varcoe [0050].
+Regarding Claim 15, Nakamura teaches a magnetically unshielded [0053] magnetometer system for measuring magnetic fields from a subject’s organ (Abstract), the magnetometer system comprising:
+a plurality of magnetometers in a three-dimensional arrangement (Fig. 2, 110) [0053], wherein:
+a respective pair of magnetometers (Fig. 2, 210), in the plurality of magnetometers, has a respective known separation [0053]+[0089];
+each magnetometer in the plurality of magnetometers is configured to simultaneously detect a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field and output a signal indicative of the detected biomagnetic field and the background magnetic field [0084]+[0090];
+wherein the plurality of magnetometers are spatially distributed (Fig. 2, 110) [0053], the plurality of magnetometers recovers information from both the biomagnetic field from the subject’s organ and the background magnetic field [0084]+[0090], and
+the magnetometer system is configured to operate without magnetic shielding [0053];
+one or more processors [0143]; and
+memory storing instructions for execution by the one or more processors [0143], the stored instructions including instructions for:
+causing each magnetometer [0084] in the plurality of magnetometers to:
+simultaneously measure a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field [0084]+[0090]; and
+output a signal indicative of the detected biomagnetic field and the background magnetic field [0084] (the output signal contains both the biomagnetic and background magnetic field).
+Nakamura is silent regarding the magnetometers being unshielded magnetometers.
+Varcoe teaches a system for measuring the magnetic field of a patient’s body (Abstract). This system measures the magnetic field without the magnetometers being shielded [0019]+[0205].
+It would have been obvious to one of ordinary skill in the art before the effective filing date to modify the system of Nakamura with the unshielded magnetometers of Varcoe because this reduces the cost of the system by not requiring expensive shielding arrangement/components, as recognized by Varcoe [0274].
+Nakamura fails to teach that the magnetometers are distributed such that in Fourier space they have a wavevector coverage.
+Ishiyama teaches a magnetocardiography technique (Abstract). This system distributes magnetometers [0037] in Fourier space [0013] the sensors have a wavevector coverage on the heart [0043].
+It would have been obvious to one of ordinary skill in the art before the effective filing date to modify the combined system so the magnetometers are distributed in Fourier space to have a wavevector coverage on the heart, as taught by Ishiyama, because this provides a better method for diagnosing the heart, as recognized by Ishiyama [0009].
+Regarding Claim 16, the combination of references teaches the invention substantially as claimed. Nakamura further teaches wherein the stored instructions include signal processing instructions to separate the background field from the biomagnetic signals [0090] (canceling the environmental fields is considered separating the field from the biomagnetic signals).
+Regarding Claim 17, the combination of references teaches the invention substantially as claimed. Nakamura is silent regarding wherein the plurality of magnetometers are positioned within a housing.
+Varcoe teaches a system for measuring the magnetic field of a patient’s body (Abstract). This system has the magnetometers positioned within a housing (Fig. 6+Fig. 7, 30) [0241]+[0247].
+It would have been obvious to one of ordinary skill in the art to modify the combined system to have the magnetometers positioned within a housing, as taught by Varcoe, because this allows the system to be used at the patient’s bedside, in a normal ward environment, thereby allowing the device to more easily and cheaply image patients, as recognized by Varcoe [0247]+[0004].
+Regarding Claim 18, the combination of references teaches the invention substantially as claimed. Nakamura further teaches a positioning arm (Fig. 1, 125) for supporting the plurality of unshielded magnetometers (Fig. 1, 110) [0047]+[0051].
+Regarding Claim 19, the combination of references teaches the invention substantially as claimed. Nakamura fails to explicitly teach wherein the positioning arm is mounted on a base that includes one or more wheels.
+Varcoe further teaches wherein the positioning arm is mounted on a base that includes one or more wheels (Fig. 7) [0247].
+It would have been obvious to one of ordinary skill in the art to modify the combined system to have positioning arm mounted on a base with wheels, as taught by Varcoe, because this allows the system to be used at the patient’s bedside, in a normal ward environment, thereby allowing the device to more easily and cheaply image patients, as recognized by Varcoe [0247]+[0004].
+Regarding Claim 20, the combination of references teaches the invention substantially as claimed. Nakamura further teaches wherein the positioning arm is mounted on a patient support platform (Fig. 1, 130) [0048].
+Claims 2, 11, 14, and 21 are rejected under 35 U.S.C. 103 as being unpatentable over Nakamura in view of Varcoe and Ishiyama as applied to claims 1, 8, and 15 respectively, above, and further in view of Ledbetter et al. (U.S PGPub 2020/0256929 A1).
+Regarding Claim 2, the combination of references teaches the invention substantially as claimed. Nakamura fails to teach wherein each magnetometer in the plurality of magnetometers is responsive to a total magnetic field in proximity to the respective magnetometer.
+Ledbetter teaches a system for measuring biomagnetic fields (Abstract). This system uses an array [0029] of optically pumped magnetometers which can measure the total magnitude of the magnetic field [0025].
+It would have been obvious to one of ordinary skill in the art to substitute the magnetometers of Nakamura to use scalar OPMs, as taught by Ledbetter, as the substitution for one known magnetometer with another yields predictable results to one of ordinary skill in the art. One of ordinary skill would have been able to carry out such a substitution, and the results of using an array of scalar OPMs to measure a biomagnetic field are reasonably predictable.
+Regarding Claim 11, the combination of references teaches the invention substantially as claimed. Nakamura fails to explicitly teach wherein each of the magnetometers in the array comprises: an optically pumped magnetometer; or a diamond NV center magnetometer; or a fluxgate sensor.
+Ledbetter teaches a system for measuring biomagnetic fields (Abstract). This system uses an array [0029] of optically pumped magnetometers [0025].
+It would have been obvious to one of ordinary skill in the art to substitute the magnetometers of Nakamura to use scalar OPMs, as taught by Ledbetter, as the substitution for one known magnetometer with another yields predictable results to one of ordinary skill in the art. One of ordinary skill would have been able to carry out such a substitution, and the results of using an array of scalar OPMs to measure a biomagnetic field are reasonably predictable.
+Regarding Claim 14, the combination of references teaches the invention substantially as claimed. Nakamura fails to explicitly teach wherein each magnetometer of the plurality of unshielded magnetometers has a dynamic range of around 50 microTeslas.
+Ledbetter teaches a system for measuring biomagnetic signals (Abstract). This system has a dynamic range of range of 10 to 100 µT (Fig. 2, 211) [0040].
+It would have been obvious to one of ordinary skill in the art to substitute the magnetometers of Nakamura to use scalar OPMs with a dynamic range of 10 to 100 µT, as taught by Ledbetter, as the substitution for one known magnetometer with another yields predictable results to one of ordinary skill in the art. One of ordinary skill would have been able to carry out such a substitution, and the results of using an array of scalar OPMs to measure a biomagnetic field are reasonably predictable. The values of “around 50 µT” is a range which lies inside the range of 10 to 100 µT. In the case where the claimed ranges overlap or lie inside ranges disclosed by the prior art a prima facie case of obviousness exists. In re Wertheim, 541 F.2d 257, 191 USPQ 90 (CCPA 1976); In re Woodruff, 919 F.2d 1575, 16 USPQ2d 1934 (Fed. Cir. 1990) (MPEP 2144.05(I)).
+Regarding Claim 21, the combination of references teaches the invention substantially as claimed. Nakamura fails to explicitly teach wherein each of the plurality of unshielded magnetometers comprises: an optically pumped magnetometer; or a diamond NV center magnetometer; or a fluxgate sensor.
+Ledbetter teaches a system for measuring biomagnetic fields (Abstract). This system uses an array [0029] of optically pumped magnetometers [0025].
+It would have been obvious to one of ordinary skill in the art to substitute the magnetometers of Nakamura to use scalar OPMs, as taught by Ledbetter, as the substitution for one known magnetometer with another yields predictable results to one of ordinary skill in the art. One of ordinary skill would have been able to carry out such a substitution, and the results of using an array of scalar OPMs to measure a biomagnetic field are reasonably predictable.
+Claim 13 is rejected under 35 U.S.C. 103 as being unpatentable over Nakamura in view of Varcoe as applied to claim 8 above, and further in view of Zuckerman et al. (U.S PGPub 2011/0152703 A1).
+Regarding Claim 13, the combination of references teaches the invention substantially as claimed. The combination is silent wherein each magnetometer in the array of magnetometers has a sensitivity better than 100
+p
+T
+H
+z
+.
+Zuckerman teaches a system for measuring the magnetic field of the heart (Abstract). This system contains magnetometers with a sensitivity better than 100
+p
+T
+H
+z
+[0049].
+It would have been obvious to one of ordinary skill in the art to modify the combined system so the magnetometers of the combination have a sensitivity better than 100
+p
+T
+H
+z
+, as taught by Zuckerman, because this is sensitive enough for the system to perform MCG, allowing the system to better detect dangerous conditions, as recognized by Zuckerman [0022].
+Response to Arguments
+Applicant's arguments filed 9/10/2024 have been fully considered but they are not persuasive.
+Applicant argues that claim 1 is not taught by the prior art because the system of Ishiyama is configured to work in a magnetic room. Examiner disagrees. In response to applicant's arguments against the references individually, one cannot show nonobviousness by attacking references individually where the rejections are based on combinations of references.  See In re Keller, 642 F.2d 413, 208 USPQ 871 (CCPA 1981); In re Merck & Co., 800 F.2d 1091, 231 USPQ 375 (Fed. Cir. 1986). Nakamura teaches using magnetometers in an unshielded room [0045]. These magnetometers are spaced apart in such a way that they simultaneously measure both the biomagnetic and background magnetic field [0084]+[0090]. Nakamura is silent regarding the wavevector coverage in Fourier space. Ishiyama was brought in to teach that magnetometers are spaced apart in Fourier space to have a wavevector coverage during biomagnetic measurements ([0013]+[0043). When viewed together, one of ordinary skill would recognize that in order to achieve the result of Nakamura the magnetometers would need to be distributed such that they obtain coverage of both the organ and the subject’s magnetic field. Therefore, claims 1 and 15 remain rejected under 35 USC 103.
+Allowable Subject Matter
+Claims 4 and 6 objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Claim 22 allowed.
+The following is a statement of reasons for the indication of allowable subject matter:  Claim 22 contains the features of claim 4, and is allowable for substantially the same reasons as set forth on pages 10-11 of the non-final rejection mailed 6/14/2024. Claims 4 and 7 are objected to for the same reasons as set forth on pages 10-11 of the non-final rejection mailed 6/14/2024.
+Conclusion
+Applicant's amendment necessitated the new ground(s) of rejection presented in this Office action.  Accordingly, THIS ACTION IS MADE FINAL.  See MPEP § 706.07(a).  Applicant is reminded of the extension of time policy as set forth in 37 CFR 1.136(a).
+A shortened statutory period for reply to this final action is set to expire THREE MONTHS from the mailing date of this action.  In the event a first reply is filed within TWO MONTHS of the mailing date of this final action and the advisory action is not mailed until after the end of the THREE-MONTH shortened statutory period, then the shortened statutory period will expire on the date the advisory action is mailed, and any extension fee pursuant to 37 CFR 1.136(a) will be calculated from the mailing date of the advisory action.  In no event, however, will the statutory period for reply expire later than SIX MONTHS from the date of this final action.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to SEAN D MATTSON whose telephone number is (408)918-7613. The examiner can normally be reached Monday - Friday 9 AM - 5 PM PST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Pascal Bui-Pho can be reached on (571) 272-2714. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/SEAN D MATTSON/Primary Examiner, Art Unit 3798

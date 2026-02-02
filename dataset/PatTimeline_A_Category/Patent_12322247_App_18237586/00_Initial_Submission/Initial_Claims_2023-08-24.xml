@@ -1,0 +1,26 @@
+<html><head></head><body><h3>Date: 2023-08-24</h3>
+
+<h1>CLAIMS</h1>
+<br>
+<br>
+1. An inspection device for gaming chips (a) whose respective values can be identified by respective external appearances, colors, or dimensions of the gaming chips and (b) including respective radio frequency identifications (RFID) in each of which information of the respective gaming chip is recorded, the inspection device comprising:<br>
+an RFID reading device configured to read the information of the gaming chips from the RFID when the gaming chips are placed in a betting area on a gaming table;<br>
+a camera device configured to image and record the gaming chips; and<br>
+a management control device configured to:determine and store a total number of the placed gaming chips by using a result of the imaging performed by the camera device;<br>
+determine the total number of the placed gaming chips from information supplied from the RFID reading device;<br>
+identify a mismatch between the total number of the gaming chips determined from information supplied from the RFID reading device and the total number of the gaming chips determined using the result of the imaging performed by the camera device; and<br>
+detect one or more gaming chips whose RFID is broken or which has no RFID based on the mismatch.<br>
+<br>
+2. The inspection device according to claim 1, wherein the management control device is configured to:<br>
+determine the total number of the placed gaming chips respectively for each of a plurality of types of the gaming chips from the information supplied from the RFID reading device;<br>
+determine the total number of the placed gaming chips for the each of the plurality of types of the gaming chips using the result of the imaging performed by the camera device;<br>
+identify the mismatch, respectively for each of the plurality of types, between the respective total number of the gaming chips determined for the respective type from the information supplied from the RFID reading device and the respective total number<br>
+<br>
+of the gaming chips determined for the respective type using the result of the imaging performed by the camera device; and<br>
+detect one or more gaming chips whose RFID is broken or which has no RFID for the respective type based on the mismatch for the respective type.<br>
+<br>
+3. The inspection device according to claim 1, wherein the management control device is configured to:<br>
+determine a total value of the placed gaming chips from the information supplied from the RFID reading device;<br>
+determine the total value of the placed gaming chips by using the result of the imaging performed by the camera device; and<br>
+identify a mismatch between the total value of the gaming chips determined from the information from the RFID reading device and the total value of the gaming chips determined using the result of the imaging performed by the camera device.<br>
+</body></html>

@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-02-28</h3>
+<h1>ABSTRACT</h1>
+
+<p>Systems and methods for grip-based transport speeds for objects transported at a manufacturing system is provided. A controller can detect an object placed on an end effector of a robot arm. The controller can apply vacuum pressure to secure the object to the end effector via vacuum grip pads. The controller can obtain a vacuum pressure measurement indicating the amount of vacuum pressure between the object and the end effector and determine whether the obtained vacuum pressure measurement satisfies a vacuum pressure criterion. The controller can determine a transport speed setting for transporting the obj ect using the robot arm based on whether the obtained vacuum pressure measurement satisfies the vacuum pressure criterion. The controller can cause the robot arm to move the object according to the transport speed setting.</p>
+31
+</body></html>

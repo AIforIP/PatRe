@@ -1,0 +1,69 @@
+<html><head></head><body><h3>Date: 2024-05-28</h3>
+
+<h1>LISTING OF THE CLAIMS</h1>
+<p>If indicated, please amend the claims accordingly.</p><br>
+SVG
+{EMBED HERE}
+0.1170.091.(Currently Amended) An air-permeable bedding system, comprising:<br>
+a microclimate fabric layer; and<br>
+an air-permeable capacitive sensor layer below the microclimate fabric layer, the air- permeable capacitive sensor layer comprises <u>a top </u><del>two </del>air-permeable substrate[[s]] <u>and a bottom air-permeable substrate,</u> wherein <u>the top air-permeable</u><del> each </del>substrate carries a top set of electrically conductive pathways<u> and the bottom air-permeable substrate carries a bottom set of</u><u>electronically conductive pathways, the top set and the bottom set being arranged at an angle of</u><u>each other, the electrically conductive pathways in the top set being configured to be spaced apart from each other to form a top set of</u><u>horizontal air pathways and the electrically conductive pathways in the bottom set being configured to be spaced apart from each other to form a bottom set of</u><u>horizontal air pathways,</u> the <del>two </del><u>top and bottom</u> sets of electrically conductive pathways separated <u>vertically</u> by an air- permeable dielectric layer that is located between the <u>top and bottom </u><del>two </del>air- permeable substrates, <del>wherein the air-permeable dielectric layer defines a horizontal air pathway allowing for airflow horizontally between the two sets of electrically conductive pathways, </del>wherein the <del>two </del><u>top and bottom </u>air-permeable substrates <u>respectively </u><del>securely </del>position the <del>two </del><u>top and bottom</u> sets of electrically conductive pathways to cross over each other <u>forming a grid,</u> forming capacitors at intersection points <u>of</u><u>the grid, and forming vertical air-pathways at a plurality of</u><u>gaps of</u><u>the grid,</u><del>the intersection points defining a sensor grid, wherein</del><br>
+<del>the sensor grid comprises a plurality of gaps that define a plurality of vertical air pathways, </del>and wherein the dielectric layer and the <del>two </del><u>top and bottom </u>air- permeable substrates comprise cut-outs at the vertical air pathways such that airflow passes vertically through the <u>plurality of </u>gaps [[in]] <u>of</u> the <del>sensor </del>grid and horizontally through the air-permeable dielectric layer.<br>
+2.
+(Canceled)<br>
+3.
+(Currently Amended) The air-permeable bedding system of claim 1, wherein the top air-permeable substrate[[s]] <u>and bottom air-permeable substrate </u>are formed from meshes or foam.<br>
+4.
+(Currently Amended) The air-permeable bedding system of claim 1, wherein at least one of the electrically conductive pathways carried by one of the <u>top and bottom </u>air- permeable substrates is encapsulated by a thermoplastic.<br>
+5.
+(Currently Amended) The air-permeable bedding system of claim 4, wherein the thermoplastic is bonded to the one of the <u>top and bottom </u>air-permeable substrates.<br>
+6.
+(Currently Amended) The air-permeable bedding system of claim 5, wherein the thermoplastic is bonded to the one of the <u>top and bottom </u>air-permeable substrates by heat lamination.<br>
+7.
+(Original) The air-permeable bedding system of claim 1, further comprising:<br>
+a foam comfort layer between the microclimate fabric layer and the air-permeable capacitive sensor layer.<br>
+8.
+(Original) The air-permeable bedding system of claim 1, further comprising:<br>
+a piezoelectric sensor below the microclimate fabric layer.<br>
+9.
+(Original) The air-permeable bedding system of claim 8, further comprising a transmitter configured to transmit signals of the capacitive sensor layer for determining a respiration rate and to transmit signals of the piezoelectric sensor for determining a heart rate.<br>
+<br>
+10.    (Original) The air-permeable bedding system of claim 1, further comprising:<br>
+an inlet configured to be connected to an active air source that increases airflow within the air-permeable bedding system.<br>
+<br>
+11.   (Withdrawn) A computer-implemented method, comprising:<br>
+receiving pressure sensor data from a bedding system that comprises a sensor grid that generates the pressure sensor data;<br>
+identifying, based on the pressure sensor data, a target body part of a person on the bedding system;<br>
+identifying a subset of the pressure sensor data generated from a region of the sensor grid that measures pressure exerted by the target body part; and<br>
+using the subset of the pressure sensor data to determine a heart rate or a respiration rate of the person.<br>
+<br>
+12.   (Withdrawn) The computer-implemented method of claim 11, wherein identifying, based on the pressure sensor data, the target body part of the person on the bedding system comprises:<br>
+identifying the person's body and joint positions of the person using the pressure sensor data, andApplication No.: 17/019,090 identifying the target body part based on the joint positions.<br>
+<br>
+13.   (Withdrawn) The computer-implemented method of claim 12, wherein identifying the person's body and target joint positions of the person using the pressure sensor data comprises:<br>
+arranging the pressure sensor data as a matrix of pressure data, and<br>
+inputting the matrix of pressure data to a machine learning model for identifying the target joint positions.<br>
+<br>
+14.   (Withdrawn) The computer-implemented method of claim 11, wherein using the subset of the pressure sensor data to determine the heart rate or the respiration rate of the person comprises:<br>
+calculating an average pressure corresponding to the region based on the subset of the pressure sensor data,<br>
+generating a time series of pressure readings corresponding to the region, and<br>
+determining the heart rate or the respiration rate based on the time series.<br>
+<br>
+15.   (Withdrawn) The computer-implemented method of claim 11, wherein the target body part is a lumbar area of the person.<br>
+<br>
+16.   (Withdrawn) A computer-implemented method, comprising:<br>
+receiving a time series of pressure sensor data from a bedding system that comprises a sensor grid that generates the pressure sensor data;<br>
+identifying poses of a person on the bedding system based on the pressure sensor data;<br>
+determining respiration rates of the person based on the pressure sensor data; andApplication No.: 17/019,090 inputting the poses and the respiration rates of the person to a machine learning model to determine a sleep state of the person.<br>
+<br>
+17.   (Withdrawn) The computer-implemented method of claim 16, wherein identifying the poses of the person on the bedding system based on the pressure sensor data comprises:<br>
+arranging, for a particular instance in time, the pressure sensor data as a matrix of pressure readings,<br>
+inputting the matrix of pressure readings to a machine learning model for a particular pose at the particular instance, and<br>
+generating other poses in other instances in time using the machine learning model.<br>
+<br>
+18.   (Withdrawn) The computer-implemented method of claim 16, wherein the poses and the respiration rates are formatted as two additional time series.<br>
+<br>
+19.   (Withdrawn) The computer-implemented method of claim 16, wherein the sleep state is one of candidate sleep states, and the machine learning model generates a probability that the person is in a particular candidate sleep state for each candidate state, the sleep state selected being the particular candidate sleep state with the highest probability.<br>
+<br>
+20.    (Withdrawn) The computer-implemented method of claim 16, further comprising:<br>
+determining heart rates of the person, wherein the machine learning model also receives the heart rates to determine the sleep state of the person.
+</body></html>

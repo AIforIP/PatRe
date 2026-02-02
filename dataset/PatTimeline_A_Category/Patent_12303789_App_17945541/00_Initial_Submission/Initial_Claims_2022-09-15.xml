@@ -1,0 +1,205 @@
+<html><head></head><body><h3>Date: 2022-09-15</h3>
+<p>CLAIMS</p>
+<br>
+
+<br>
+1.   A system (100, 200) for detecting and preventing fraudulent activities in digital advertising, the system comprising a server arrangement (114, 202) that is communicably coupled with a user device (102, 104, 204), wherein the server arrangement is configured to: 
+<br>
+send a data element of a given digital advertisement to the user device; 
+<br>
+receive user-interaction data from the user device responsive to a 
+<br>
+rendering of the data element at the user device, wherein the user- interaction data is indicative of one or more taps being generated in response to the data element being rendered at the user device, wherein the user-interaction data is time stamped; 
+<br>
+receive sensor data from the user device, the sensor data being 
+<br>
+collected by at least one sensor (106, 108, 206) of the user device during generation of the user-interaction data, wherein the at least one sensor comprises a touch-pressure sensor, and the sensor data is indicative of at least one of: a touch pressure applied by the user on a touchscreen (110, 112, 208) of the user device during each tap, a size of a touch area on the touchscreen during each tap, a location of the touch area on the touchscreen during each tap, wherein the sensor data is time stamped; 
+<br>
+analyse at least one of: a number of taps indicated in the user- interaction data, touch pressures during the taps, sizes of touch areas 
+<br>
+on the touchscreen during the taps, locations of the touch areas on the touchscreen during the taps, time stamps of the taps, to detect whether a user of the user device is a bot; and 
+<br>
+perform at least one action when the analysis indicates that the user of the user device is a bot. 
+<br>
+
+<br>
+2.   The system (100, 200) of claim 1, wherein the at least one action comprises at least one of: notifying an advertising agency of the given digital advertisement, stopping to send any further data element to the user device (102, 104, 204), blacklisting a user account of the user, blacklisting the user device, recording a fraudulent activity conducted by the bot, recording information pertaining to the bot.
+<br>
+
+<br>
+3.   The system   (100, 200) of claim   1, wherein the server arrangement (114, 202) is configured to: 
+<br>
+receive respective user-interaction data and respective sensor 
+<br>
+data at respective points of time from a plurality of user devices (102, 104, 204) to which data elements of digital advertisements are sent; 
+<br>
+analyse the respective user-interaction data and the respective sensor data received from the plurality of user devices, based on their time stamps, to determine a pattern of user interaction with the digital 
+<br>
+advertisements; and 
+<br>
+train a machine learning model based on the determined pattern of user interaction with the digital advertisements, wherein the trained machine learning model is to be employed to analyse the at least one of: the number of taps, the touch pressures, the sizes of the touch 
+<br>
+areas, the locations of the touch areas, the time stamps of the taps to detect whether the user is a bot.
+<br>
+
+<br>
+4.   The system (100, 200) of claim 1, wherein the user-interaction data is further indicative of at least one of: 
+<br>
+a time elapsed between a time instant at which the data element 
+<br>
+is rendered at the user device (102, 104, 204) and a time instant at which the one or more taps are generated, a total time duration in which the one or more taps are generated, a time duration in which a given tap is generated, a time elapsed between consecutive taps.
+
+<br>
+
+<br>
+5.   The system (100, 200) of claim 1, wherein the at least one sensor (106, 108, 206) further comprises at least one of: an accelerometer, a gyroscope, and wherein the sensor data is further indicative of at least one of: a movement of the user device (102, 104, 204) during the user interaction, an orientation of the user device during the user interaction.
+<br>
+
+<br>
+6.   The system (100, 200) of claim 1, wherein the at least one sensor (106, 108, 206) further comprises at least one of: a location sensor, an imaging sensor, a temperature sensor, a proximity sensor, a fingerprint sensor, and wherein the sensor data is further indicative of at least one of: a location of the user device (102, 104, 204), an image of the user, an image of surroundings of the user device, an ambient temperature in surroundings of the user device, a proximity of the user to the user device, a fingerprint of the user.
+<br>
+
+<br>
+7.   The system (100, 200) of claim 1, wherein, when analysing the at least one of: the number of taps, the touch pressures, the sizes of the touch areas, the locations of the touch areas, the time stamps of the taps to detect whether the user is the bot, the server arrangement (114, 202) is configured to: 
+<br>
+calculate a reliability factor for the user based on said analysis; 
+<br>
+and detect whether or not the user is the bot, based on the calculated reliability factor.
+<br>
+
+<br>
+8.   A method for detecting and preventing fraudulent activities in digital advertising, the method comprising: 
+<br>
+sending a data element of a given digital advertisement to a user device (102, 104, 204); 
+<br>
+receiving user-interaction data from the user device responsive to a rendering of the data element at the user device, wherein the user- interaction data is indicative of one or more taps being generated in 
+
+ response to the data element being rendered at the user device, wherein the user-interaction data is time stamped; 
+<br>
+receiving sensor data from the user device, the sensor data being collected by at least one sensor (106, 108, 206) of the user device 
+<br>
+during generation of the user-interaction data, wherein the at least one sensor comprises a touch-pressure sensor, and the sensor data is indicative of at least one of: a touch pressure applied by the user on a touchscreen (110, 112, 208) of the user device during each tap, a size of a touch area on the touchscreen during each tap, a location of the touch area on the touchscreen during each tap, wherein the sensor data is time stamped; 
+<br>
+analysing at least one of: a number of taps indicated in the user- interaction data, touch pressures during the taps, sizes of touch areas on the touchscreen during the taps, locations of the touch areas on the 
+<br>
+touchscreen during the taps, time stamps of the taps, to detect whether a user of the user device is a bot; and 
+<br>
+performing at least one action when the analysis indicates that the user of the user device is a bot. 
+
+<br>
+
+<br>
+9.   The method of claim 8, wherein the at least one action comprises at least one of: notifying an advertising agency of the given digital advertisement, stopping to send any further data element to the user device (102, 104, 204), blacklisting a user account of the user, blacklisting the user device, recording a fraudulent activity conducted by the bot, recording information pertaining to the bot.
+<br>
+
+<br>
+10. The method of claim 8, further comprising: 
+<br>
+receiving respective user-interaction data and respective sensor data at respective points of time from a plurality of user devices to which data elements of digital advertisements are sent; 
+<br>
+analysing the respective user-interaction data and the respective 
+sensor data received from the plurality of user devices (102, 104, 204),
+ based on their time stamps, to determine a pattern of user interaction with the digital advertisements; and 
+<br>
+training a machine learning model based on the determined pattern of user interaction with the digital advertisements, wherein the 
+<br>
+trained machine learning model is to be employed to analyse the at least one of: the number of taps, the touch pressures, the sizes of the touch areas, the locations of the touch areas, the time stamps of the taps to detect whether the user is a bot.
+<br>
+
+<br>
+11. The method of claim 8, wherein the user-interaction data is further indicative of at least one of: 
+<br>
+a time elapsed between a time instant at which the data element is rendered at the user device (102, 104, 204) and a time instant at which the one or more taps are generated, a total time duration in which the one or more taps are generated, 
+<br>
+a time duration in which a given tap is generated, a time elapsed between consecutive taps.
+<br>
+
+<br>
+12. The method of claim 8, wherein the at least one sensor (106, 108, 206) further comprises at least one of: an accelerometer, a gyroscope, and wherein the sensor data is further indicative of at least one of: a movement of the user device (102, 104, 204) during the user interaction, an orientation of the user device during the user interaction.
+<br>
+
+<br>
+13. The method of claim 8, wherein the at least one sensor (106, 108, 206) further comprises at least one of: a location sensor, an imaging sensor, a temperature sensor, a proximity sensor, a fingerprint sensor, and wherein the sensor data is further indicative of at least one of: a location of the user device (102, 104, 204), an image of the user, an image of surroundings of the user device, an ambient temperature in surroundings of the user device, a proximity of the user to the user device, a fingerprint of the user.
+
+<br>
+
+<br>
+14. The method of claim 8, wherein the step of analysing comprises: 
+<br>
+calculating a reliability factor for the user based on said analysis; 
+<br>
+and detecting whether or not the user is the bot, based on the 
+<br>
+calculated reliability factor.
+<br>
+
+<br>
+15. A computer program product for detecting and preventing fraudulent activities in digital advertising, the computer program product comprising a non-transitory machine-readable data storage medium   having stored thereon program  instructions that, when executed by a processing device, cause the processing device to: 
+<br>
+send a data element of a given digital advertisement to a user device (102, 104, 204); 
+<br>
+receive user-interaction data from the user device responsive to a rendering of the data element at the user device, wherein the user- 
+<br>
+interaction data is indicative of one or more taps being generated in response to the data element being rendered at the user device, wherein the user-interaction data is time stamped; 
+<br>
+receive sensor data from the user device, the sensor data being collected by at least one sensor (106, 108, 206) of the user device 
+<br>
+during generation of the user-interaction data, wherein the at least one sensor comprises a touch-pressure sensor, and the sensor data is indicative of at least one of: a touch pressure applied by the user on a touchscreen (110, 112, 208) of the user device during each tap, a size of a touch area on the touchscreen during each tap, a location of a touch area on the touchscreen during each tap, wherein the sensor data is time stamped; 
+<br>
+analyse at least one of: a number of taps indicated in the user- interaction data, touch pressures during the taps, sizes of touch areas on the touchscreen during the taps, locations of the touch areas on the 
+<br>
+touchscreen during the taps, time stamps of the taps, to detect whether a user of the user device is a bot; and 
+
+ perform at least one action when the analysis indicates that the user of the user device is a bot.
+<br>
+
+<br>
+16. The computer program product of claim 15, wherein the at least one action comprises at least one of: notifying an advertising agency of the given digital advertisement, stopping to send any further data element to the user device (102, 104, 204), blacklisting a user account of the user, blacklisting the user device, recording a fraudulent activity conducted by the bot, recording information pertaining to the bot.
+<br>
+
+<br>
+17. The computer program product of claim 15, wherein the program instructions, when executed by the processing device, cause the processing device to: 
+<br>
+receive respective user-interaction data and respective sensor data at respective points of time from a plurality of user devices (102, 104, 204) to which data elements of digital advertisements are sent; 
+<br>
+analyse the respective user-interaction data and the respective sensor data received from the plurality of user devices, based on their time stamps, to determine a pattern of user interaction with the digital advertisements; and 
+<br>
+train a machine learning model based on the determined pattern 
+<br>
+of user interaction with the digital advertisements, wherein the trained machine learning model is to be employed to analyse the at least one of: the number of taps, the touch pressures, the sizes of the touch areas, the locations of the touch areas, the time stamps of the taps to detect whether the user is a bot.
+<br>
+
+<br>
+18. The computer program product of claim 15, wherein the user- interaction data is further indicative of at least one of: 
+<br>
+a time elapsed between a time instant at which the data element is rendered at the user device (102, 104, 204) and a time instant at which the one or more taps are generated, 
+a total time duration in which the one or more taps are generated,
+ a time duration in which a given tap is generated, a time elapsed between consecutive taps.
+<br>
+
+<br>
+19. The computer program product of claim 15, wherein the at least one sensor (106, 108, 206) further comprises at least one of: an accelerometer, a gyroscope, and wherein the sensor data is further indicative of at least one of: a movement of the user device (102, 104, 204) during the user interaction, an orientation of the user device during the user interaction.
+<br>
+
+<br>
+20. The computer program product of claim 15, wherein the at least one sensor (106, 108, 206) further comprises at least one of: a location sensor, an imaging sensor, a temperature sensor, a proximity sensor, a fingerprint sensor, and wherein the sensor data is further indicative of at least one of: a location of the user device (102, 104, 204), an image of the user, an image of surroundings of the user device, an ambient temperature in surroundings of the user device, a proximity of the user to the user device, a fingerprint of the user.
+<br>
+
+<br>
+21. The computer program product of claim 15, wherein when analysing the at least one of: the number of taps, the touch pressures, the sizes of the touch areas, the locations of the touch areas, the time stamps of the taps to detect whether the user is the bot, the program instructions, when executed by the processing device, cause the processing device to: 
+<br>
+calculate a reliability factor for the user based on said analysis; 
+<br>
+and 
+<br>
+detect whether or not the user is the bot, based on the calculated reliability factor.
+1o
+1o
+5
+10
+15
+15
+20
+25
+30
+</body></html>

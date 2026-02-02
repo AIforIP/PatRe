@@ -1,0 +1,61 @@
+<html><head></head><body><h3>Date: 2023-11-13</h3>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.    A system for flight control of an electric vertical takeoff and landing (eVTOL) aircraft, the system comprising:a pilot control connected to an eVTOL aircraft, wherein the pilot control is configured to transmit a pilot instruction of a pilot;<br>
+a pusher component connected to the eVTOL aircraft;<br>
+a lift component connected to the eVTOL aircraft; and<br>
+a flight controller communicatively connected to the pilot control, wherein the flight controller is configured to:<br>
+estimate a stall speed for the eVTOL aircraft as a function ;<br>
+receive the pilot instruction from the pilot control;<br>
+initiate operation of the pusher component as a function of the pilot instruction;<br>
+terminate operation of the lift component as a function of the pilot instruction; and<br>
+transmit a warning to the pilot as a function of the pilot instruction and the stall speed.<br>
+2.
+The system of claim 1, wherein the pilot instruction comprises at least information on a pilot's desired transition from substantially vertical flight of the eVTOL aircraft to substantially horizontal flight of the eVTOL aircraft.<br>
+3.
+The system of claim 1, wherein the pilot control comprises at least one of a control switch and a control lever.<br>
+4.
+The system of claim 1, wherein the pusher component comprises at least a propulsor.<br>
+5.
+The system of claim 1, wherein the pusher component is configured to generate a generally forward thrust for the eVTOL aircraft.<br>
+6.
+The system of claim 1, wherein the lift component comprises at least a propuls or.<br>
+7.
+The system of claim 1, wherein the lift component is configured to generate a generally upward thrust for the eVTOL aircraft.<br>
+8.
+The system of claim 1, wherein the flight controller comprises a computing device.<br>
+9.
+The system of claim 1, wherein the flight controller comprises a proportional-integral- derivative (PID) controller.<br>
+<br>
+10.   The system of claim 1, wherein the flight controller is further configured to:<br>
+<br>
+<br>
+11.   A method for flight control of an electric vertical takeoff and landing (eVTOL) aircraft, the method comprising:transmitting, by a pilot control connected to an eVTOL aircraft, pilot instructions of a pilot;<br>
+providing a pusher component connected to the eVTOL aircraft;<br>
+providing a lift component connected to the eVTOL aircraft;<br>
+receiving, by a flight controller communicatively connected to the pilot control, the pilot instruction from the pilot control;<br>
+initiating, by the flight controller, operation of the pusher component as a function of the pilot instruction;<br>
+terminating, by the flight controller, operation of the lift component as a function of the pilot instruction; and<br>
+transmitting, by the flight controller, a warning to the pilot as a function of the pilot instruction and the stall speed.<br>
+<br>
+12.   The method of claim 11, wherein the pilot instructions comprises information on a pilot's desired transition from substantially vertical flight of the eVTOL aircraft to substantially horizontal flight of the eVTOL aircraft.<br>
+<br>
+13.   The method of claim 11, wherein the pilot control comprises at least one of a control switch and a control lever.<br>
+<br>
+14.   The method of claim 11, wherein the pusher component comprises at least a propulsor.<br>
+<br>
+15.   The method of claim 11, wherein the pusher component is configured to generate a generally forward thrust for the eVTOL aircraft.<br>
+<br>
+16.   The method of claim 11, wherein the lift component comprises at least a propulsor.<br>
+<br>
+17.   The method of claim 11, wherein the lift component is configured to generate a generally upward thrust for the eVTOL aircraft.<br>
+<br>
+18.   The method of claim 11, wherein the flight controller comprises a computing device.<br>
+<br>
+19.   The method of claim 11, wherein the flight controller comprises a proportional-integral- derivative (PID) controller.<br>
+<br>
+20.    The method of claim 11, wherein the method further comprises:<br>
+
+</body></html>

@@ -1,0 +1,64 @@
+<html><head></head><body><h3>Date: 2024-11-28</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>Please amend the claims as indicated in the Listing of Claims below. No new matter has been added. This Listing of Claims replaces all prior versions, and listings, of claims in this application.</p>
+<h1><u>Listin</u><u>g</u><u> of Claims:</u></h1>
+<br>
+<br>
+1.    (Currently Amended) A robot application development system, comprising:<br>
+<u>a controller configured to:</u><del>a robot application unit configured for determining </del><u>determine </u>a robot application for an industrial robot processing a work piece, wherein the robot application defines the industrial robot in a robot workspace;<br>
+<del>an input interface configured for receiving </del><u>receive, by an input interface, </u>robot application information characterizing the robot application;<br>
+<del>an object data interface configured for receiving </del><u>receive, by an object data interface</u><u>,</u><u></u>work piece information characterizing the work piece; and<br>
+<del>a gripper finger design unit configured for determining </del><u>determine </u>a gripper finger design of a gripper finger of the industrial robot,[[;]] wherein the <del>robot application unit </del><u>controller </u>is configured <u>to determine </u><del>for determining </del>the robot application using the robot application information<del>; and</del><br>
+wherein the <del>gripper finger design unit </del><u>controller </u>is configured <u>to determine </u><del>for determining </del>the gripper finger design using the work piece information and the robot application information,<u></u><u>and</u><br>
+<u>wherein the controller is configured to automatically determine a default gripper finger desi</u><u>g</u><u>n using the work piece information and the robot application information.</u><br>
+<br>
+2.    (Original) The robot application development system of claim 1, wherein the robot application information comprises a robot workspace layout, at least one action of the industrial robot, and a movement of the industrial robot.<br>
+<br>
+3.    (Original) The robot application development system of claim 1, wherein the gripper finger design comprises at least one of an opening for grasping, a grasping position, and a grasping orientation.<br>
+<br>
+<br>
+4.
+(Cancelled).<br>
+<br>
+5.    (Currently Amended) The robot application development system of claim 1, wherein the <del>gripper finger design unit is configured for </del><u>controller is configured to </u>automatically<u> determine </u><del>determining </del>a plurality of possible grasping positions and/or grasping orientations.<br>
+<br>
+6.    (Original) The robot application development system of claim 1, wherein the work piece information comprises geometry information of the work piece.<br>
+<br>
+7.    (Original) The robot application development system of claim 1, wherein the input interface is configured for inputting the robot application information by a user.<br>
+<br>
+8.    (Currently Amended) The robot application development system of claim 1, wherein the <del>gripper finger design unit i</del><del>s</del><del> configured for generating </del><u>controller is configured to generate Computer-Aided Design (CAD</u><u>)</u> data of the work piece for 3D printing of the gripper finger based on the gripper finger design.<br>
+<br>
+9.    (Currently Amended) The robot application development system of claim 1, wherein the object data interface is configured for receiving the work piece information from a<u> Computer-Aided Design (CAD</u><u>)</u> database.<br>
+<br>
+10.    (Currently Amended) The robot application development system of claim 1,<u></u><u>wherein the controller is </u>further <del>comprising a </del><del>s</del><del>imulation unit </del>configured <u>to provide </u><del>for providing </del>simulation functions of the robot application.<br>
+<br>
+11.    (Original) The robot application development system of claim 1, wherein the input interface comprises a user interface configured for user interaction.<br>
+<br>
+12.    (Currently Amended) The robot application development system of claim 1,<u></u><u>wherein the controller is </u>further <u>configured to provide </u><del>comprising a 3D view unit providing </del>at least one 3D view of the robot workspace layout, wherein the robot workspace layout comprises the industrial robot and the work piece involved in the robot application.<br>
+<br>
+<br>
+<br>
+13.   (Original) The robot application development system of claim 1, wherein the input interface is configured for allowing the user to directly manipulate the 3D view of the robot workspace layout.<br>
+<br>
+14.   (Currently Amended) A computer implemented method for robot application development containing computer-executable instructions stored in tangible media that, when executed by a computer, cause the following to be executed:<br>
+receiving robot application information characterizing the robot application;<br>
+receiving work piece information characterizing a work piece;<br>
+determining a robot application for an industrial robot processing the work piece, wherein the robot application defines the industrial robot in a robot workspace;<br>
+determining a gripper finger design of a gripper finger of the industrial robot,[[;]] wherein the robot application is determined using the robot application information;<br>
+<del>and</del>' wherein the gripper finger design is determined using the work piece information and the robot application information,<u> and</u><u>wherein a default </u><u>g</u><u>ripper fin</u><u>g</u><u>er design is automatically determined using the work piece information and the robot application information.</u><br>
+<br>
+15.   (Original) The robot application development method of claim 14, wherein the robot application information comprises a robot workspace layout, at least one action of the industrial robot, and a movement of the industrial robot.<br>
+<br>
+16.   (Original) The robot application development method of claim 14, wherein the gripper finger design comprises at least one of an opening for grasping, a grasping position, and a grasping orientation.<br>
+<br>
+17.   (Original) The robot application development method of claim 14, wherein the gripper finger design unit automatically determines a default gripper finger design using the work piece information and the robot application information.<br>
+<br>
+18.   (Original) The robot application development method of claim 14, wherein the gripper finger design unit automatically determines a plurality of possible grasping positions and/or grasping orientations.<br>
+<br>
+<br>
+<br>
+19.    (Original) The robot application development method of claim 14, wherein the work piece information comprises geometry information of the work piece.<br>
+<br>
+20.    (Currently Amended) The robot application development method of claim 14, wherein the gripper finger design unit generates <u>Computer-Aided Design (CAD</u><u>}</u> data of the work piece for 3D printing of the gripper finger based on the gripper finger design.
+</body></html>

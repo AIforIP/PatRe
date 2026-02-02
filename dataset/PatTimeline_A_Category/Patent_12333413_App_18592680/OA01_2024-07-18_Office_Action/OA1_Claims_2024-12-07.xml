@@ -1,0 +1,113 @@
+<html><head></head><body>18592680
+
+   
+   
+<u>AMENDMENTS TO THE CLAIMS</u>
+   
+   <p>This listing of claims will replace all prior versions, and listings, of claims in the application.</p>
+   
+
+<br>
+
+1. (Currently Amended) An apparatus for artificial intelligence-supported diagnostic assessment, wherein the apparatus comprises:
+at least a processor, wherein the processor is configured to:
+receive a plurality of multi-channel sensor readings of physiological data;
+generate training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels;
+train a neural network using the plurality of diagnostic labels;
+<u>update the training data as a function of new training examples;</u>
+<u>retrain the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded;</u>
+receive a time series input describing user physiological data from at least a sensor;
+input the time series input into the trained neural network;
+generate diagnostic data as a function of the time series input and the trained neural network<u>, wherein the diagnostic data includes a classification under a plurality of groups, wherein the groups are comprised of:</u>
+<u>normal LV function;</u>
+<u>LVSD only;</u>
+<u>LVDD only; and </u>
+<u>both LVSD and LVDD</u>;
+determine prognostic data as a function of the diagnostic data; and
+output the prognostic data. 
+<br>
+
+2. (Original) The apparatus of claim 1, wherein the time series input is comprised of electrocardiogram (ECG) data.
+<br>
+
+3. (Currently Amended) The apparatus of claim 2, wherein the plurality of multi-channel sensor readings further comprises a plurality of ECG readings, and the plurality of training data further comprises [[a]] <u>the</u> plurality of ECG readings, and generating the plurality of training data further comprises:
+receiving echocardiogram data correlated to each ECG reading of the plurality of ECG readings; and 
+generating the plurality of diagnostic labels using the echocardiogram data. 
+<br>
+
+4. (Original) The apparatus of claim 1, wherein the neural network is a multi-output convolutional neural network. 
+<br>
+
+5. (Currently Amended) The apparatus of claim 1, wherein the neural network is trained using general-use lead data<u>, wherein the general-use lead data refers to the lead data used for a diagnostic tool</u>.
+<br>
+
+6. (Currently Amended) The apparatus of claim 1, wherein the neural network is trained using reduced general-use lead data<u>, wherein the reduced general-use lead data refers to a reduction in the leads used in acquiring the lead data</u>. 
+<br>
+
+7. (Currently Amended) The apparatus of claim 1, wherein the neural network is trained [[using]] <u>as a function of lead</u> data gathered from 12-lead ECGs performed within 14 days of transthoracic echocardiography, wherein the plurality of multi-channel sensor readings of physiological data are comprised of <u>the</u> 12-lead ECG data and <u>the lead </u><del>echocardiography</del> data correlated to each 12-lead ECG datum. 
+<br>
+
+8. (Original)The apparatus of claim 1, wherein the diagnostic data includes an assessment of LVDD. 
+<br>
+
+9. (Canceled)
+<br>
+
+10. (Currently Amended) The apparatus of claim 1, <u>further comprising a display device</u>, wherein the output of prognostic data is displayed at a display device <u>to diagnose a patient</u>. 
+<br>
+
+11. (Currently Amended) A method for training an artificial intelligence-supported diagnostic assessment tool, wherein the method comprises:
+receiving a plurality of multi-channel sensor readings of physiological data;
+generating training data correlating each of the plurality of multi-channel sensor readings with a plurality of diagnostic labels;
+
+training a neural network using the plurality of diagnostic labels;
+<u>updating the training data as a function of new training examples;</u>
+<u>retraining the neural network as a function of the updated training data, wherein the retraining occurs when a preconfigured threshold of new training examples is exceeded;</u>
+receiving a time series input describing user physiological data from at least a sensor; 
+inputting the time series input into the trained neural network;
+generating diagnostic data as a function of the time series input and the trained neural network<u>, wherein the diagnostic data includes a classification under a plurality of groups, wherein the groups are comprised of:</u>
+<u>normal LV function;</u>
+<u>LVSD only;</u>
+<u>LVDD only; and </u>
+<u>both LVSD and LVDD</u>;
+determining prognostic data as a function of the diagnostic data; and
+outputting the prognostic data. 
+<br>
+
+12. (Original) The method of claim 11, wherein the time series input is comprised of electrocardiogram (ECG) data.
+<br>
+
+13. (Currently Amended) The method of claim 12, wherein the plurality of multi-channel sensor readings further comprises a plurality of ECG readings, and the plurality of training data further comprises [[a]] <u>the</u> plurality of ECG readings, and generating the plurality of training data further comprises:
+receiving echocardiogram data correlated to each ECG reading of the plurality of ECG readings; and 
+generating the plurality of diagnostic labels using the echocardiogram data. 
+<br>
+
+14. (Original) The method of claim 11, wherein the neural network is a multi-output convolutional neural network. 
+<br>
+
+15. (Currently Amended) The method of claim 11, wherein the neural network is trained using general-use lead data<u>, wherein the general-use lead data refers to the lead data used for a diagnostic tool</u>.
+<br>
+
+16. (Currently Amended) The method of claim 11, wherein the neural network is trained using reduced general-use lead data<u>, wherein the reduced general-use lead data refers to a reduction in the leads used in acquiring the lead data</u>. 
+<br>
+
+17. (Currently Amended) The method of claim 11, wherein the neural network is trained using <u>lead </u>data gathered from 12-lead ECGs performed within 14 days of transthoracic echocardiography, wherein the plurality of multi-channel sensor readings of physiological data are comprised of <u>the</u> 12-lead ECG data and <del>echocardiography</del><u>the lead</u> data correlated to each 12-lead ECG datum. 
+<br>
+
+18. (Original) The method of claim 11, wherein the diagnostic data includes an assessment of both LVSD and LVDD. 
+<br>
+
+19. (Canceled)
+<br>
+
+20. (Currently Amended) The method of claim 11, wherein the <del>output of prognostic data is</del><u>method further comprises displaying the output of prognostic data</u><del>displayed</del> at a display device <u>to diagnose a patient</u>. 
+<br>
+
+21. (New) The apparatus of claim 1, further comprising a sensor for receiving the time series input.
+<br>
+
+22. (New) The method of claim 11, wherein the method further comprises measuring the time series input via a sensor.
+
+   
+
+</body></html>

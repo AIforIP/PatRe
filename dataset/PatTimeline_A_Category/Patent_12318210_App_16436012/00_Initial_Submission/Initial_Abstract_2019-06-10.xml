@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2019-06-10</h3>
+<h1>ABSTRACT</h1>
+
+<p>Techniques for determining whether a ventricular depolarization is a premature ventricular contraction (PVC) depolarization may include processing circuitry of a medical system identifying an interval from a maximum slope point to a minimum slope point for each of a plurality of ventricular depolarizations and, for each of the plurality of ventricular depolarizations as a current ventricular depolarization, determining that the intervals from the maximum slope point to the minimum slope point for the current ventricular depolarization, a preceding adj acent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent adjacent ventricular depolarization of the plurality of ventricular depolarizations satisfy one or more slope criteria. The processing circuitry determines that the current ventricular depolarization is a PVC depolarization based on the intervals from the maximum slope point to the minimum slope point satisfying the one or more slope criteria.</p>
+42
+</body></html>

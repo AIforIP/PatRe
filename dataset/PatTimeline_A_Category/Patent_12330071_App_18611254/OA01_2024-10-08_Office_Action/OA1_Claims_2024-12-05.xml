@@ -1,0 +1,61 @@
+<html><head></head><body><h3>Date: 2024-12-05</h3>
+
+<h1><u>LISTING OF</u> <u>THE CLAIMS</u></h1>
+<br>
+<br>
+1.   (Original) A system comprising:an audio input device configured to receive or obtain input audio; and<br>
+one or more circuits configured to:<br>
+determine when the system operates in an audio modifying mode; and<br>
+when the system operates in the audio modifying mode:<br>
+determine one or more audio control settings for modifying audio in the audio modifying mode; and<br>
+modify at least the input audio, based on the one or more audio control settings.<br>
+<br>
+2.   (Original) The system of claim 1, wherein the one or more audio control settings comprise parameters relating to one or more of audio pitch, audio intensity, and audio tone.<br>
+<br>
+3.   (Original) The system of claim 1, wherein the input audio is associated with a user of the system, and wherein the one or more circuits are configured to determine at least one of the one or more audio control settings for modifying the input audio in conjunction with use of the system by the user.<br>
+<br>
+4.   (Original) The system of claim 3, wherein the one or more circuits are configured to determine the at least one of the one or more audio control settings for modifying the input audio in conjunction with an application used or performed via the system.<br>
+<br>
+5.   (Original) The system of claim 4, wherein the input audio comprises or corresponds to a voice of the user, wherein the one or more circuits are configured to determine the at least one of the one or more audio control settings for adjusting the voice of the user in conjunction with an application used or performed via the system.<br>
+<br>
+<br>
+6.   (Original) The system of claim 1, wherein the one or more circuits are configured to determine at least one of the one or more audio control settings based on information obtained from a database associated with the system or with an application used or performed via the system.<br>
+<br>
+7.   (Original) The system of claim 1, wherein the one or more circuits are configured to determine at least one of the one or more audio control settings based on a reference audio.<br>
+<br>
+8.   (Original) The system of claim 7, wherein the one or more circuits are configured to process the reference audio to determine the at least one of the one or more audio control settings.<br>
+<br>
+9.   (Original) The system of claim 7, wherein the one or more circuits are configured to obtain the reference audio from a database associated with an application used or performed via the system, and wherein the input audio is obtained and/or used during use or performing of the application.<br>
+<br>
+10.  (Original) The system of claim 1, wherein the one or more circuits are configured to:determine, based on the one or more audio control settings, one or more sound effect adjustments; and<br>
+modify, based on the one or more sound effect adjustments, at least one output audio provided via the system.<br>
+<br>
+11.  (Original) A method comprising:in a system that comprises at least an input device:<br>
+receiving or obtaining an input audio via the input device;<br>
+determining when the system operates in an audio modifying mode; and<br>
+when operating in the audio modifying mode:<br>
+<br>
+determining one or more audio control settings for modifying audio in the audio modifying mode; and<br>
+modifying at least the input audio, based on the one or more audio control settings.<br>
+<br>
+12.  (Original) The method of claim 11, wherein the one or more audio control settings comprise parameters relating to one or more of audio pitch, audio intensity, and audio tone.<br>
+<br>
+13.  (Original) The method of claim 11, wherein the input audio is associated with a user of the system, and further comprising determining at least one of the one or more audio control settings for modifying the input audio in conjunction with use of the system by the user.<br>
+<br>
+14.  (Original) The method of claim 13, further comprising determining the at least one of the one or more audio control settings for modifying the input audio in conjunction with an application used or performed via the system.<br>
+<br>
+15.  (Original) The method of claim 14, wherein the input audio comprises or corresponds to a voice of the user, and further comprising determining the at least one of the one or more audio control settings for adjusting the voice of the user in conjunction with an application used or performed via the system.<br>
+<br>
+16.  (Original) The method of claim 11, further comprising determining at least one of the one or more audio control settings based on information obtained from a database associated with the system or with an application used or performed via the system.<br>
+<br>
+17.  (Original) The method of claim 11, further comprising determining at least one of the one or more audio control settings based on a reference audio.<br>
+<br>
+<br>
+18.  (Original) The method of claim 17, further comprising processing the reference audio to determine the at least one of the one or more audio control settings.<br>
+<br>
+19.  (Original) The method of claim 17, further comprising obtaining the reference audio from a database associated with an application used or performed via the system, and wherein the input audio is obtained and/or used during use or performing of the application.<br>
+<br>
+20.  (Original) The method of claim 11, further comprising:determining, based on the one or more audio control settings, one or more sound effect adjustments; and<br>
+modifying, based on the one or more sound effect adjustments, at least one output audio provided via the system.<br>
+
+</body></html>

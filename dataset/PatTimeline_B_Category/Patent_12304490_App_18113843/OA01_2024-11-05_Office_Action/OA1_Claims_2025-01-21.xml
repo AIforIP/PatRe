@@ -1,0 +1,27 @@
+<html><head></head><body><h3>Date: 2025-01-21</h3>
+<p>AMENDMENTS TO THE CLAIMS Please CANCEL claim 2 without prejudice or disclaimer to the subject matter recited therein.</p><p>Please AMEND claims 1, 3, 6, and 7, as follows.</p><p>The following is a complete list of all claims in this application.</p><br>
+<br>
+1. (Currently Amended) A control device that performs travel control of a vehicle, the control device comprising a processor configured to acquire output information of a sensor configured to detect an object in an around of the vehicle based on a reflected wave from the object, wherein the processor is configured to:acquire detection point data of the object in a peripheral region of the vehicle based on the output information of the sensor; [[and]] recognize that a peripheral environment of the vehicle is a travel- restricted section based on a distribution of detection point data in a first group including a plurality pieces of the detection point data on one side in a left-right direction of the vehicle in the peripheral region;<br>
+<u>classify the first </u><u>g</u><u>rou</u><u>p</u><u> into a </u><u>p</u><u>lurality of first sub</u><u>g</u><u>rou</u><u>ps;</u><u> and recognize that the peripheral environment is the travel-restricted section based on a variation amount of </u><u>p</u><u>ositions of the </u><u>p</u><u>lurality of first sub</u><u>g</u><u>rou</u><u>p</u><u>s in the left-right direction.</u><br>
+<br>
+<br>
+<br>
+2. (Canceled).<br>
+<br>
+3. (Currently Amended) The control device according to claim [[2]] 1, wherein the plurality of first subgroups are different in position in a front-rear direction of the vehicle.<br>
+<br>
+4. (Original) The control device according to claim 1, wherein the processor is further configured to recognize that the peripheral environment is the travel-restricted section based on a distribution of detection point data in a second group including a plurality pieces of the detection point data on another side in the left- right direction in the peripheral region.<br>
+<br>
+5. (Original) The control device according to claim 4, wherein the processor is configured to:classify the second group into a plurality of second subgroups; and recognize that the peripheral environment is the travel-restricted section based on a variation amount of positions of the plurality of second subgroups in the left-right direction.<br>
+<br>
+6. (Currently Amended) The control device according to claim 5, wherein the plurality of second subgroups are different in position in [[the]] a front-rear direction of the vehicle.<br>
+<br>
+Reply to Non-Final Office Action of November 5, 2024<br>
+<br>
+7. (Currently Amended) The control device according to claim 1, wherein the processor is configured to acquire, as the detection point data, detection point data based on [[the]] past output information and detection point data based on [[the]] latest output information.<br>
+<br>
+8. (Original) The control device according to claim 1, wherein the sensor is a radar device.<br>
+<br>
+9. (Original) The control device according to claim 1, wherein the processor is configured to:perform lane change control of the vehicle; and restrict the lane change control when it is determined that the peripheral environment is the travel-restricted section.<br>
+
+</body></html>

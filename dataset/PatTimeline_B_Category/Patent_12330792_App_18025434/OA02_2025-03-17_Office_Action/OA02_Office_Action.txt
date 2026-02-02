@@ -1,0 +1,26 @@
+Notice of Pre-AIA  or AIA  Status
+This office action is in response to the amendment filed 12/30/24 for application serial number 18/025,434 which was filed 3/09/23 as a national stage entry of PCT/US2020/066185.  Claims 1-20 are pending. The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Applicant’s argument filed 12/30/24 is not persuasive.  Applicant argues that Colletti fails to provide a first attachment member configured to engage a circumferential portion of an armrest as the base of the housing 132 is attached to rear end of the armrest 112.  This is not persuasive because the rear end is a circumferential portion of the armrest as illustrated in the marked-up figure below.
+PNG
+media_image1.png
+534
+431
+media_image1.png
+Greyscale
+Nonetheless, the claims are deemed allowable as Colletti, nor any of the other prior art of record, teach or adequately suggest the second attachment member coupled to the first attachment member wherein the second attachment is attachable to fixed location of the seats for preventing rotation of the armrest or where the second attachment prevents rotation of the armrest
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure. Note:
+In US 2023/0264817 to Audelo Navarro et al.  privacy panel 126 attached to an armrest 122 between passenger seats 124 at a first attachment [0035] and to a fixed location 128 on the seats but there is no disclosure of prevention of rotation of the armrest not is readily apparent when deployed rotation would be prevented as the panel 126 is a non-rigid-material [0036].
+Figure 13 of JP 10-75847 to Fujimoto et al. provides a partition 3 attached to an armrest with a first attachment 12-12 which engages a circumferential portion of an armrest 2.
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with Anthony Guebert on 2/19/25.
+The application has been amended as follows:
+CANCEL CLAIMS 3 and 4.
+Claims 1, 2 and 5-20 are allowed.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to ROBERT CANFIELD whose telephone number is(571)272-6840. The examiner can normally be reached M-F 10-6, some Saturdays.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, David Dunn can be reached on 571-272-6670. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+ROBERT CANFIELD
+Primary Examiner
+Art Unit 3636
+/Robert Canfield/           Primary Examiner, Art Unit 3636

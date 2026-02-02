@@ -1,0 +1,9 @@
+<html><head></head><body><h3>Date: 2020-09-30</h3>
+
+<h1>ABSTRACT:</h1>
+
+<p>The present invention is concerned with the automated updating of a digital patient record with actual vital signs data values for the patient, thereby obviating the need for a healthcare professional attending to the patient to manually input such data values into the digital patient record. To this end, the present application provides several computer- implemented methods for capturing such vital signs data values in digital form, e.g. a photographic image or screen capture[BA1], and automatically extracting the vital signs data values captured in such a digital image therefrom, e.g. using OCR algorithms. Also provided are computer program products for implementing such methods and electronic devices configured to implement such methods.</p>
+<h1>FIG. 4</h1>
+5
+10
+</body></html>

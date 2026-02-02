@@ -1,0 +1,61 @@
+<html><head></head><body>18765181
+
+   
+   
+What is claimed is:
+   
+   
+
+<br>
+
+1. A multifunctional electric wave generator for simulation of brain wave, comprising:
+a base;
+a protective box fixedly mounted on the top of the base;
+a support plate located inside the protective box;
+an electric wave generator body placed on the support plate, consisting of a housing, a signal receiver, a frequency controller, a power amplifier, a waveform converter, an output device, and a digital signal processor; the signal receiver, frequency controller, power amplifier, waveform converter, output device, and the digital signal processor are all assembled inside the housing and are interconnected electrically;
+a storage mechanism disposed on the protective box for storing the electric wave generator body.
+<br>
+
+2. The multifunctional electric wave generator for simulation of brain wave according to claim 1, wherein a limit plate is fixedly mounted on one side of the electric wave generator body, an L-shaped plate is fixedly mounted on the top of the support plate, the L-shaped plate is slidingly connected to the limit plate, and a screwing rod is threadedly mounted on the top of the limit plate, and the screwing rod is threadedly connected to the L-shaped plate.
+<br>
+
+3. The multifunctional electric wave generator for simulation of brain wave according to claim 1, wherein the storage mechanism comprises:
+a connecting box fixedly mounted on the upright posts of the base;
+a threaded rod rotatably mounted at the top of the connecting box;
+a threaded sleeve set on the threaded rod;
+a connecting plate fixedly mounted on one side of the support plate, one side of the connecting plate extending outside of the protective box, the connecting plate being securely connected to the threaded sleeve;
+a drive mechanism provided on the connecting box for driving the threaded rod.
+<br>
+
+4. The multifunctional electric wave generator for simulation of brain wave according to claim 3, wherein the drive mechanism comprises:
+a connecting piece fixedly mounted in the connecting box;
+a rotating lever rotationally mounted on the connecting piece, with conical gears fixedly sheathed on both the rotating lever and the threaded rod, where a set of the conical gears mesh with each other;
+a junction box fixedly mounted on one side of the connecting box;
+a first sprocket fixedly socketed to the rotating lever, connected to a first chain that passes through the junction box and meshes with the first sprocket;
+a first motor fixedly mounted at the bottom of the connecting box;
+a set of drive gears fixedly socketed to the output shaft of the first motor and the rotating lever respectively, withe the drive gears meshing with each other.
+<br>
+
+5.The multifunctional electric wave generator for simulation of brain wave according to claim 2, wherein the top of protective box is in an opening shape, a cover plate is hingedly connected to the top of the protective box, the top of the cover plate is fixedly mounted with a handle, and the top of the electric wave generator body is assembled with a push rod.
+<br>
+
+6.The multifunctional electric wave generator for simulation of brain wave according to claim 1, wherein a notch is provided on one side of the protective box, the notch is adapted to the connecting plate.
+<br>
+
+7.The multifunctional electric wave generator for simulation of brain wave according to claim 5, wherein one side of the connecting box is fixedly equipped with a mounting tab, on which a connecting bar is pivotally mounted, the connecting bar is wrapped with a rope , the top end of the rope is fixedly connected to one side of the cover plate.
+<br>
+
+8.The multifunctional electric wave generator for simulation of brain wave according to claim 7, wherein the connecting bar and rotating lever are both equipped with a second sprocket, and a second chain is wrapped around the two second sprockets, engaging with both of them.
+<br>
+
+9.The multifunctional electric wave generator for simulation of brain wave according to claim 8, wherein a protective cover is fixedly mounted on the mounting tab, and the protective cover is placed on the second sprocket located on the connecting bar. 
+<br>
+
+10. A control method of a multifunctional electric wave generator for simulation of brain wave according to claim 1, comprising the following steps:
+Step one: Ensuring the power supply is stable, connecting the power and ground lines correctly, activating the electric wave generator and allowing it to warm up to improve the frequency stability;
+Step two: Selecting or setting a modulation mode as needed, which includes amplitude modulation, frequency modulation, and phase modulation, choosing appropriate filters to filter out clutter or noise from the output signal, then setting or adjusting various parameters, such as waveform type, frequency, amplitude, through a microprocessor to ensure stable DC power supply to the internal circuit of the electric wave generator body;
+Step three: Selecting the desired waveform type through a waveform converter, which includes sine wave, square wave, and triangle wave, setting the desired range of signal output frequency range by a frequency controller, adjusting a fine-tuning knob or a keyboard to input the precise frequency, adjusting the output power of the power amplifier as needed to ensure sufficient signal strength, and monitoring the waveform, frequency, amplitude, and other parameters of the output signal in real-time through a display device, utilizing a digital signal processor to further process and optimize the output signal.
+
+   
+
+</body></html>

@@ -1,0 +1,9 @@
+<html><head></head><body>18775083
+
+   
+   
+ABSTRACT
+   
+   <p>Embodiments relate to a recliner automatic fastening system and a recliner automatic fastening method, which allow a cushion of a car seat and a nut of a back frame to be automatically fastened.  The system includes an articulated robot installed along a conveyor line of a car seat, a vision check part checking a position of a nut temporarily fastened to the car seat using 2D vision sensing and then notifying the position to the articulated robot, and performing vision sensing on the nut that has been fastened, a nut fastening part installed on the articulated robot and fastening the nut when it moves to the position of the nut that is temporarily fastened by the articulated robot, and a fastening check part checking whether the nut is normally fastened using sensing data obtained by performing vision sensing on the fastened nut received from the vision check part.</p>
+
+</body></html>

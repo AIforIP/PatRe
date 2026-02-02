@@ -1,0 +1,61 @@
+<html><head></head><body><h3>Date: 2024-12-31</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p><br>
+<br>
+1. (Original) A device for measuring internal blood pressure and mapping an internal surface of a vessel carrying a fluid, the device comprising:(a) an optical sensor emitting light of a known wavelength and capturing light reflected from the emitted light, the sensor located in a housing having a deformable membrane, wherein the emitted light reflects off of the membrane;<br>
+(b) a signal conditioner processing detection of the reflected light to generate electrical signals proportional to corresponding amounts of deformation of the membrane caused by pressure changes in the vessel deforming the membrane;<br>
+(c) a computing device calculating pressure readings in the vessel by correlating corresponding amounts of deformation to a total fluid pressure in the vessel using the electrical signals; and<br>
+(d) a memory for storing a plurality of pressure readings calculated at regular intervals, wherein the computing device further correlates membrane deformation to pressure wave information and determines vessel attributes following statistical analysis of pressure changes among the plurality of pressure readings.<br>
+<br>
+2. (Original) The device of claim 1, wherein the total fluid pressure within the vessel includes a first pressure component produced by a heart muscle and a second pressure component from a vessel attribute.<br>
+<br>
+3. (Original) The device of claim 2, wherein the computing device correlating the amount of deformation to a total fluid pressure in the vessel comprises subtracting the first pressure component from the calculated total pressure.<br>
+<br>
+4. (Original) The device of claim 1, wherein the computing device performs a zero calibration function prior to the correlating.<br>
+<br>
+<br>
+<br>
+5. (Original) The device of claim 1, wherein the computing device analyzes pressure wave data using methods of statistical analysis including Fast Fourier transformation (FFT).<br>
+<br>
+6. (Original) The device of claim 5, wherein the FFT statistical analysis assesses cardiovascular integrity from the optical sensor inserted alone, or as part of a medical device, into a cardiovascular structure.<br>
+<br>
+7. (Original) The device of claim 5, wherein the FFT statistical analysis assesses CSF or brain pressures from the optical sensor inserted alone, or as part of another medical device, into a brain or spinal subarachnoid space.<br>
+<br>
+8. (Original) The device of claim 1, further comprising a bridge emulator and a bridge excitation converter, wherein the bridge excitation converter generates a scaling reference signal for use by the bridge emulator to provide compensated analog bridge sense signals representing corresponding compensated and calibrated conversions of the electrical signals.<br>
+<br>
+9. (Original) The device of claim 8, further comprising a bridge sense D/A converter, wherein the bridge sense D/A converter received the scaling reference signal and generates the compensated analog bridge sense signals.<br>
+<br>
+10 - 20. (Canceled)1119<br>
+<br>
+<br>
+21. (Withdrawn) A method for measuring internal blood pressure and mapping an internal surface of a vessel carrying a fluid, the method comprising:(a) locating an optical sensor in a housing having a deformable membrane;<br>
+(b) emitting, using the optical sensor, light of a known wavelength;<br>
+(c) capturing, using the optical sensor, light reflected from the emitted light reflecting off of the membrane;<br>
+(d) processing, using a signal conditioner in communication with the optical sensor, detection of the reflected light to generate electrical signals proportional to corresponding amounts of deformation of the membrane caused by pressure changes in the vessel deforming the<br>
+<br>
+<br>
+membrane;(e) calculating, using a computing device, pressure readings in the vessel by correlating corresponding amounts of deformation to a total fluid pressure in the vessel using the electrical signals;<br>
+(f) storing, in a memory, a plurality of pressure readings calculated at regular intervals;<br>
+and (g) correlating, with the computing device, membrane deformation to pressure wave information to determine vessel attributes following statistical analysis of pressure changes among the plurality of pressure readings.<br>
+<br>
+22. (Withdrawn) The method of claim 21, wherein the total fluid pressure within the vessel includes a first pressure component produced by a heart muscle and a second pressure component from a vessel attribute.<br>
+<br>
+23. (Withdrawn) The method of claim 22, wherein correlating, with the computing device, the amount of deformation to a total fluid pressure in the vessel comprises subtracting the first pressure component from the calculated total pressure.<br>
+<br>
+24. (Withdrawn) The method of claim 21, further comprising performing, with the computing device, a zero calibration function prior to the correlating.<br>
+<br>
+25. (Withdrawn) The method of claim 21, further comprising analyzing, with the computing device, pressure wave data using methods of statistical analysis including Fast Fourier transformation (FFT).<br>
+<br>
+26. (Withdrawn) The method of claim 25, wherein the FFT statistical analysis assesses cardiovascular integrity from the optical sensor inserted alone, or as part of a medical device, into a cardiovascular structure.<br>
+<br>
+27. (Withdrawn) The method of claim 25, wherein the FFT statistical analysis assesses CSF or brain pressures from the optical sensor inserted alone, or as part of another medical device, into a<br>
+<br>
+<br>
+brain or spinal subarachnoid space.<br>
+<br>
+28. (Withdrawn) The method of claim 21, further comprising generating, using a bridge excitation converter, a scaling reference signal for use by a bridge emulator to provide compensated analog bridge sense signals representing corresponding compensated and calibrated conversions of the electrical signals.<br>
+<br>
+29. (Withdrawn) The method of claim 28, further comprising receiving, using a bridge sense D/A converter, the scaling reference signal to generate the compensated analog bridge sense signals.<br>
+
+</body></html>

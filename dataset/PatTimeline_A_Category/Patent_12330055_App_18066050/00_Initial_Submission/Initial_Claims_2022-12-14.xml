@@ -1,0 +1,151 @@
+<html><head></head><body><h3>Date: 2022-12-14</h3>
+<p>CLAIMS</p>
+<p>What is claimed is:</p>
+<br>
+
+1.
+A method , comprising: 
+<br>
+receiving, by a hub, location information and network performance telemetry information from one or more controllers connected to the hub; 
+<br>
+generating, by the hub, a first mapping correlating usage of users of the one or more controllers with an environment around the hub based on the location information; 
+<br>
+generating, by the hub, a second mapping correlating the network performance telemetry information with the environment around the hub; 
+<br>
+determining, by the hub, first unstable zones based on the first mapping, the second mapping, and a first criteria; and 
+<br>
+determining, by the hub, an action based on the first unstable zones. 
+
+<br>
+
+2.
+The method of claim 1, wherein the location information comprises ultra-wideband positioning information of the one or more controllers.
+<br>
+
+3.
+The method of claim 1, wherein the action comprises generating a notification to reorient the hub based on the first unstable zones.
+<br>
+
+4.
+The method of claim 1, wherein the action comprises steering one or more frequency beams emitted by the hub toward the first unstable zones, strengthening the one or more frequency beams, or both.
+<br>
+
+5.
+The method of claim 1, wherein the action comprises: 
+<br>
+predicting, by an artificial intelligence algorithm, one or more future unstable zones based on the first unstable zones and the first mapping; 
+<br>
+and steering one or more frequency beams emitted by the hub toward the future unstable zones, strengthening the one or more frequency beams, or 
+<br>
+both. 
+
+<br>
+
+6.
+The method of claim 1, further comprising determining, by the hub, second unstable zones based on the first mapping, the second mapping, and a second criteria.
+<br>
+
+7.
+The method of claim 1, wherein the network performance telemetry information comprises at least one of latency, packet loss, jitter, and bandwidth.
+<br>
+
+8.
+The method of claim 1, wherein the first mapping comprises a plurality of mappings, each of the plurality of mappings correlating usage of a particular user of the one or more controllers with the environment around the hub based on the location information.
+<br>
+
+9.
+A system, comprising: 
+<br>
+a hub configured to: 
+
+  receive location information and network performance telemetry information from one or more controllers connected to the hub; 
+<br>
+generate a first mapping correlating usage of users of the one or more controllers with an environment around the hub based on the location information; 
+<br>
+generate a second mapping correlating the network performance telemetry information with the environment around the hub; 
+<br>
+determine first unstable zones based on the first mapping, the second mapping, and a first criteria; and 
+<br>
+determine an action based on the first unstable zones. 
+
+<br>
+
+10.
+The system of claim 9, wherein the location information comprises ultra-wideband positioning information of the one or more controllers.
+<br>
+
+11.
+The system of claim 9, wherein the action comprises generating a notification to reorient the hub based on the first unstable zones.
+<br>
+
+12.
+The system of claim 9, wherein the action comprises steering one or more frequency beams emitted by the hub toward the first unstable zones, strengthening the one or more frequency beams, or both.
+<br>
+
+13.
+The system of claim 9, wherein the action comprises: 
+<br>
+predicting, by an artificial intelligence algorithm, one or more future unstable zones based on the first unstable zones and the first mapping; 
+<br>
+and 
+
+  steering one or more frequency beams emitted by the hub toward the future unstable zones, strengthening the one or more frequency beams, or 
+<br>
+both. 
+
+<br>
+
+14.
+The system of claim 9, wherein the hub is further configured to determine second unstable zones based on the first mapping, the second mapping, and a second criteria.
+<br>
+
+15.
+The system of claim 9, wherein the network performance telemetry information comprises at least one of latency, packet loss, jitter, and bandwidth.
+<br>
+
+16.
+The system of claim 9, wherein the first mapping comprises a plurality of mappings, each of the plurality of mappings correlating usage of a particular user of the one or more controllers with the environment around the hub based on the location information.
+<br>
+
+17.
+An information handling system comprising: 
+<br>
+a memory; 
+<br>
+a wireless interface; and 
+<br>
+a processor configured to: 
+<br>
+receive location information and network performance telemetry information from one or more controllers connected to the wireless interface; 
+<br>
+generate a first mapping correlating usage of users of the one or more controllers with an environment around the wireless interface based on the location information; 
+
+  generate a second mapping correlating the network performance telemetry information with the environment around the wireless interface; 
+<br>
+determine first unstable zones based on the first mapping, the second mapping, and a first criteria; and 
+<br>
+determine an action based on the first unstable zones. 
+
+<br>
+
+18.
+The information handling system of claim 17, wherein the action comprises steering one or more frequency beams emitted by the wireless interface toward the first unstable zones, strengthening the one or more frequency beams, or both.
+<br>
+
+19.
+The information handling system of claim 17, wherein the action comprises: 
+<br>
+predicting, by an artificial intelligence algorithm, one or more future unstable zones based on the first unstable zones and the first mapping; 
+<br>
+and steering one or more frequency beams emitted by the wireless interface toward the future unstable zones, strengthening the one or more frequency beams, or both. 
+
+<br>
+
+20.
+The information handling system of claim 17, wherein the first mapping comprises a plurality of mappings, each of the plurality of mappings correlating usage of a particular user of the one or more controllers with the environment around the wireless interface based on the location information.
+- 33 -
+- 34 -
+- 35 -
+- 36 -
+- 37 -
+</body></html>

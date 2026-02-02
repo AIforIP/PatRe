@@ -1,0 +1,153 @@
+<html><head></head><body><h3>Date: 2022-11-11</h3>
+<p><u>AMENDMENTS TO THE CLAIMS</u></p>
+<p>Please amend the claims as follows:</p>
+<br>
+
+<br>
+1-23 (Canceled)
+
+222
+<br>
+<br>
+
+<br>
+24. (New) A medical system comprising: 
+<br>
+a processor; and 
+<br>
+a memory in communication with the processor and storing instructions configured to cause the system to: 
+<br>
+receive a first signal indicative of electrical activity in myocardial tissue, the first signal being received from a catheter comprising a distal end comprising a plurality of electrodes; 
+<br>
+receive a second signal indicative of a respective position of the plurality of electrodes; 
+<br>
+determine a geometric center of the plurality of electrodes; 
+<br>
+determine a focus of an arrhythmia in the myocardial tissue; 
+<br>
+output, to a display, a geometric shape corresponding to an area proximate the geometric center; 
+<br>
+output, to the display, a region indicative of the focus of the arrhythmia; and 
+<br>
+output, to the display, an indication of a spatial relationship between the geometric center and the focus of the arrhythmia. 
+
+<br>
+
+<br>
+25. (New) The medical system of Claim 24, wherein the instructions are further configured to cause the system to: 
+<br>
+generate an anatomical map indicative of the electrical activity of the myocardial tissue; 
+<br>
+and output, to the display, the anatomical map. 
+
+<br>
+
+<br>
+26. (New) The medical system of Claim 25, wherein the instructions are further configured to cause the system to output, to the display, an overlay of the geometric shape and the region and the anatomical map.
+<br>
+27. (New) The medical system of Claim 24, the plurality of electrodes comprising at least three electrodes.
+
+<br>
+
+<br>
+28. (New) The medical system of Claim 24, wherein the distal end comprises a plurality of spines forming an expandable framework, the plurality of electrodes being disposed on the plurality of spines.
+
+<br>
+
+<br>
+29. (New) The medical system of Claim 24, wherein the electrical activity comprises local activation time values.
+
+<br>
+
+<br>
+30. (New) The medical system of Claim 29, wherein outputting, to the display, the region indicative of the focus of the arrhythmia comprises plotting the local activation time values against their respective locations.
+
+<br>
+
+<br>
+31. (New) The medical system of Claim 24, wherein the geometric shape comprises a circle and the indication of the spatial relationship between the geometric center and the focus of the arrhythmia comprises displaying the region within the circle.
+
+<br>
+
+<br>
+32. (New) The medical system of Claim 24 further comprising outputting, to the display, a path of the arrhythmia from the focus of the arrhythmia.
+
+<br>
+
+<br>
+33. (New) The medical system of Claim 24, wherein the region is indicative of the arrhythmia comprising more than one focus.
+
+<br>
+
+<br>
+34. (New) The medical system of Claim 24, wherein the plurality of electrodes are configured to deliver ablation energy to the myocardial tissue.
+
+<br>
+
+<br>
+35. (New) The medical system of Claim 24, wherein the second signal is received from the catheter.
+<br>
+36. (New) The medical system of Claim 24, wherein the second signal is received from a body surface electrode applied to a body surface.
+
+<br>
+
+<br>
+37. (New) A method, comprising: 
+<br>
+receiving, from a plurality of electrodes disposed on a distal end of a catheter, a first signal indicative of electrical activity in myocardial tissue; 
+<br>
+receiving a second signal indicative of a respective position of the plurality of electrodes; 
+<br>
+determining a geometric center of the plurality of electrodes; 
+<br>
+determining a focus of an arrhythmia in the myocardial tissue; 
+<br>
+outputting, to a display, a geometric shape corresponding to an area proximate the geometric center; 
+<br>
+outputting, to the display, a region indicative of the focus of the arrhythmia; and 
+<br>
+outputting, to the display, an indication of a spatial relationship between the geometric center and the focus of the arrhythmia. 
+
+<br>
+
+<br>
+38. (New) The method of Claim 37, the plurality of electrodes comprising at least three electrodes.
+
+<br>
+
+<br>
+39. (New) The method of Claim 38, wherein the electrical activity comprises local activation time values.
+
+<br>
+
+<br>
+40. (New) The method of Claim 39, wherein outputting, to the display, the region indicative of the focus of the arrhythmia comprises plotting the local activation time values against their respective locations.
+
+<br>
+
+<br>
+41. (New) The method of Claim 40 further comprising: 
+<br>
+generating an anatomical map indicative of the electrical activity of the myocardial tissue; 
+<br>
+and outputting, to the display, the anatomical map. 
+
+<br>
+
+<br>
+42. (New) The method of Claim 41 further comprising outputting, to the display, an overlay of the geometric shape and the region and the anatomical map.
+<br>
+43. (New) The method of Claim 42, wherein the second signal is received from the catheter.
+
+<br>
+
+<br>
+44. (New) The method of Claim 42, wherein the second signal is received from a body surface electrode applied to a body surface. 
+<br>
+ 
+4
+5
+6
+7
+132490143
+</body></html>

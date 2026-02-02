@@ -1,0 +1,101 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Priority
+Receipt is acknowledged of certified copies of papers required by 37 CFR 1.55.
+Drawings
+The drawings are objected to under 37 CFR 1.83(a).  The drawings must show every feature of the invention specified in the claims.  Therefore, the “privacy screen” of claim 21 must be shown or the feature(s) canceled from the claim(s).  No new matter should be entered.
+Corrected drawing sheets in compliance with 37 CFR 1.121(d) are required in reply to the Office action to avoid abandonment of the application. Any amended replacement drawing sheet should include all of the figures appearing on the immediate prior version of the sheet, even if only one figure is being amended. The figure or figure number of an amended drawing should not be labeled as “amended.” If a drawing figure is to be canceled, the appropriate figure must be removed from the replacement sheet, and where necessary, the remaining figures must be renumbered and appropriate changes made to the brief description of the several views of the drawings for consistency. Additional replacement sheets may be necessary to show the renumbering of the remaining figures. Each drawing sheet submitted after the filing date of an application must be labeled in the top margin as either “Replacement Sheet” or “New Sheet” pursuant to 37 CFR 1.121(d). If the changes are not accepted by the examiner, the applicant will be notified and informed of any required corrective action in the next Office action. The objection to the drawings will not be held in abeyance.
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claim 39 is rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Regarding claim 39, claim 39 recites the limitation the angle of the privacy screen in line 2.  There is insufficient antecedent basis for this limitation in the claim. It should also be noted that the privacy screen is not described in the specification nor depicted in the figures. As such it is unclear what the scope of this term is and what limitations are imparted and hence this claim can not be understood.
+Claim Rejections - 35 USC § 102
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+(a)(2) the claimed invention was described in a patent issued under section 151, or in an application for patent published or deemed published under section 122(b), in which the patent or application, as the case may be, names another inventor and was effectively filed before the effective filing date of the claimed invention.
+Claim(s) 38-41 is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Dowty (US 20180281963 A1).
+Regarding claim 38, Dowty discloses an aircraft passenger seat unit comprising:
+a seat (Dowty, ¶127, suite includes a seat);
+a privacy shell at least partially surrounding the seat (Dowty, items 2510, 2504, 2508, and 2506, and ¶127-128, form a privacy shell surrounding the seat), the privacy shell having a primary opening to allow entry to and exit from the seat unit (Dowty, figure 26e, items 2609 and 2502, door at opening for the privacy shell); and
+a door (Dowty, figure 26e, items 2609 and 2502), movable between a first position in which the door at least partially blocks off the primary opening (Dowty, figure 26e, item 2609, solid line shows door in a position where the door partially blocks of the primary opening), and a second position, in which the door provides at least partial access to the primary opening (Dowty, figure 26e, item 2609 and ¶134, door moves between an opened and a closed position wherein it closes to cover the side edge where the storage opening is located), wherein the door is arranged to move between the first and second positions in a direction offset from an angle of the privacy shell adjacent the opening (Dowty, figure 26e, see callout below, door direction of movement is offset from an angle of an interior face of the privacy shell adjacent to the opening).
+PNG
+media_image1.png
+530
+715
+media_image1.png
+Greyscale
+Regarding claim 39 (as best understood), Dowty discloses the aircraft passenger seat unit according to claim 38 (see the above rejection of claim 38), wherein the movement direction of the door is offset from the angle of the privacy screen by between 1° and 30° (Unclear per rejection of this claim under 112b above).
+Regarding claim 40, Dowty discloses the aircraft passenger seat unit according to claim 38, the door is located further away from a side of the seat unit providing the opening when in the first position than it is when in the second position (Dowty, figure 26e, door is further away from the side of the seat unit having an opening when open than when closed).
+Regarding claim 41, Dowty discloses the aircraft passenger seat unit according to claim 38, wherein the door is arranged to slide between the first position and the second position (Dowty, figure 26e, items 2602 and 2609, door slides between different positions).
+Claim Rejections - 35 USC § 103
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+The text of those sections of Title 35, U.S. Code not included in this action can be found in a prior Office action.
+The factual inquiries for establishing a background for determining obviousness under 35 U.S.C. 103 are summarized as follows:
+1. Determining the scope and contents of the prior art.
+2. Ascertaining the differences between the prior art and the claims at issue.
+3. Resolving the level of ordinary skill in the pertinent art.
+4. Considering objective evidence present in the application indicating obviousness or nonobviousness.
+This application currently names joint inventors. In considering patentability of the claims the examiner presumes that the subject matter of the various claims was commonly owned as of the effective filing date of the claimed invention(s) absent any evidence to the contrary.  Applicant is advised of the obligation under 37 CFR 1.56 to point out the inventor and effective filing dates of each claim that was not commonly owned as of the effective filing date of the later invention in order for the examiner to consider the applicability of 35 U.S.C. 102(b)(2)(C) for any potential 35 U.S.C. 102(a)(2) prior art against the later invention.
+Claim(s) 24-36 is/are rejected under 35 U.S.C. 103 as being unpatentable over Dowty (US 20180281963 A1) in view of Kroll (US 20130248655 A1).
+Regarding claim 24, Dowty (US 20180281963 A1) teaches an aircraft passenger seat unit (Dowty, ¶127, passenger suite) comprising:
+a seat (Dowty, ¶127, suite includes a seat);
+a privacy shell at least partially surrounding the seat (Dowty, items 2510, 2504, 2508, and 2506, and ¶127-128, form a privacy shell surrounding the seat), the privacy shell having a primary opening to allow entry to and exit from the seat unit (Dowty, figure 26e, items 2602 and 2609, door over opening which allows entry and exit from seat);
+a storage unit (Dowty, figure 26a item 2606, storage space in forward monument) and being located against an interior face of the privacy shell adjacent the primary opening (Dowty, item 2604, storage space located against interior face of privacy shell);
+a door (Dowty, figure 26e, items 2609 and 2502), movable in relation to the storage unit (Dowty, figure 26e door move with respect to the storage unit) between a first position in which the door at least partially blocks off the primary opening (Dowty, figure 26e, item 2609, solid line shows door in a position where the door partially blocks of the primary opening), and a second position in which the door at least partially closes access to holders of the storage unit (Dowty, figure 26e, item 2609 and ¶134, door moves between an opened and a closed position wherein it closes to cover the side edge where the storage opening is located), except:
+wherein the storage unit comprises one or more holders for supporting clothes stored in the storage unit
+Kroll (US 20130248655 A1) teaches one or more holders for supporting clothes stored in the storage unit (Kroll, ¶50, hanger for hang items such as a suit coat).
+Dowty and Kroll are both considered analogous art as they are both in the same field of aircraft seat design. It would have been obvious before the effective filing date of the application for one of ordinary skill in the art to modify the storage unit of Dowty with the holders of Kroll with a reasonable expectation of success in order to provide a space to hang garments (Kroll, ¶50).
+Regarding claim 25, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the door in the first position fully blocks off the primary opening (Dowty, ¶134, when filler door is closed, the primary opening is blocked).
+Regarding claim 26, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24.
+Dowty also discloses a door which comprises a movable or removable portion, and wherein moving or removal of the portion provides a user with a secondary opening to allow an emergency exit from the seat unit when the door is in the first position (Dowty, figures 17a-b, item 1700 and 1704, ¶104, removable panel provides an opening in an emergency which would allow for an emergency exit).
+It would have been obvious before the effective filing date of the application for one of ordinary skill in the art to modify the door of an embodiment of Dowty with the door having a movable or removable portion for emergency egress of another embodiment of Dowty with a reasonable expectation of success in order to allow for emergency egress (Dowty, ¶104).
+Regarding claim 27, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 26, wherein the removable portion is frangible, such that the removable portion can be broken from the rest of the door to provide the secondary opening (Dowty, figures 17a-b, item 1700 and 1704, ¶104, removable panel provides an opening in an emergency which would allow for an emergency exit).
+Regarding claim 28, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the storage unit is fixed in relation to the privacy shell (Dowty, figure 26e item 2606, storage space in forward monument).
+Regarding claim 29, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the holders of the storage unit are located above a floor of the aircraft passenger seat unit (Kroll, figure 2, items 40 and 44, holder located above the floor of the seat).
+The exact height of the holder above the floor of the passenger seat is unclear.
+It would have been obvious to one having ordinary skill in the art before the effective filing date of the application to locate the holder at least 20 cm above the floor of the aircraft passenger seat unit in order to prevent hung garments from touching the floor, since it has been held that rearranging parts of an invention involves only routine skill in the art.  In re Japikse, 86 USPQ 70.
+Regarding claim 30, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the storage unit is a wardrobe (Dowty, figure 26e item 2606, storage space in forward monument can be used as a wardrobe).
+Regarding claim 31, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the one or more holders of the storage unit comprise a number of a hooks, shelves, and/or rails (Kroll, figure 2, items 40 and 44, holder is a hook).
+In arguendo, should applicant argue that the one hook is not a number of hooks, it would have been obvious to one having ordinary skill in the art before the effective filing date of the application to have multiple hooks in order to hang multiple garments, since it has been held that mere duplication of the essential working parts of a device involves only routine skill in the art. St. Regis Paper Co. v. Bemis Co., 193 USPQ 8.
+Regarding claim 32, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the door is arranged to slide between the first position and the second position (Dowty, figure 26e, items 2602 and 2609, door slides between different positions).
+Regarding claim 33, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein a back side of the storage unit is located against the interior face of the privacy shell and wherein a front side of the storage unit provides access to the holders of the storage unit when the door is in the second position (Dowty, figure 26e, see callout below, rear of storage unit located against interior face of privacy shell; front of storage provides access to storage when door is in position).
+PNG
+media_image2.png
+418
+623
+media_image2.png
+Greyscale
+Regarding claim 34, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 33, wherein a depth of the storage unit between the front side and the back side is deeper at a first end of the storage unit than at a second end of the storage unit (Dowty, figure 26e, see callout above, depth at first end larger than second end).
+Regarding claim 35, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 34, wherein the first end of the storage unit is distal from the primary opening and the second end of the storage unit is proximate the opening (Dowty, figure 26e, see callout above, first end and second end).
+Regarding claim 36, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the door is arranged to move between the first position and the second position in a direction offset from an angle of the interior face of the privacy shell (Dowty, figure 26e, see callout below, door direction of movement is offset from an angle of an interior face of the privacy shell).
+PNG
+media_image1.png
+530
+715
+media_image1.png
+Greyscale
+Claim(s) 37 is/are rejected under 35 U.S.C. 103 as being unpatentable over Dowty (US 20180281963 A1) in view of Kroll (US 20130248655 A1) as applied to claim 24 above, and in the alternative further in view of Riedinger (US 5024398 A).
+Regarding claim 37, Dowty as modified by Kroll teaches the aircraft passenger seat unit according to claim 24, wherein the privacy shell extends to a height above a floor of the aircraft passenger seat unit (Dowty, items 2510, 2504, 2508, and 2506, shell has a height above the passenger seat floor), except:
+wherein the height is at least 100 cm.
+However, Dowty shows a privacy shell having a dimension that is in a similar range to the claimed range and the privacy shell has inherent dimensions.
+The applicant has not established criticality for the privacy shell being at least 100 cm. It would have been obvious for one of ordinary skill in the art to modify the privacy shell to be at least 100 cm in order to obscure the view into the privacy shell thereby providing privacy to any occupant.
+Alternatively, Riedinger (US 5024398 A) teaches an aircraft passenger seat unit with a privacy shell wherein the privacy shell extends to a height above a floor of the aircraft passenger seat unit (Riedinger, ¶5, privacy shell height is above eye level; eye level is above 100 cm).
+Dowty as modified by Kroll and Riedinger are both considered analogous art as they are both in the same field of aircraft passenger accommodations. It would have been obvious before the effective filing date of the application for one of ordinary skill in the art to modify the privacy shell height of Dowty as modified by Kroll with the privacy shell extending to eye level height of Riedinger with a reasonable expectation of success in order to provide privacy to occupants.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+Wallace (US 20130241247 A1) teaches a seat unit except the particulars of the storage unit
+Scown (US 20140077033 A1) teaches a lavatory with a door/wall which can be reconfigured to merge compartments
+Bock (US 7934679 B2) teaches a passenger compartments wherein the door moves between positions to cover up window or egress. Note window has space for wash basin and could be used as a storage unit. See fig 13, 9, and 6.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to RYAN ANDREW YANKEY whose telephone number is (571)272-9979. The examiner can normally be reached Monday-Thursday 8:30 - 5:00.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Joshua Michener can be reached on (571) 272-1467. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/RYAN ANDREW YANKEY/Examiner, Art Unit 3642
+/JOSHUA J MICHENER/Supervisory Patent Examiner, Art Unit 3642

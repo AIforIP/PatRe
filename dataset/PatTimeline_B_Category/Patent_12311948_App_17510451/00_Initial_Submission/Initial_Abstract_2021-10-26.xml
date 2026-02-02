@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2021-10-26</h3>
+<p>21</p>
+<h1>ABSTRACT</h1>
+<p>The present disclosure relates to a vehicle motion management system as well as a</p><p>motion support system for a vehicle. The vehicle motion management system and</p><p>the motion support system are arranged to control operation of at least one actuator configured to apply a torque to at least one wheel of the vehicle. The vehicle motion management system is configured to transmit a control signal indicative of a desired</p><p>torque and a wheel speed limit to the motion support system, whereby the motion</p><p>support system is, based on the received signal, configured to transmit an actuator</p><p>signal to the actuator for the actuator to generate an operating torque on the at least one wheel without exceeding an actuator rotational speed limit.</p>5
+10
+</body></html>

@@ -1,0 +1,69 @@
+<html><head></head><body><h3>Date: 2025-03-19</h3>
+
+<h1><u>LISTING OF THE CLAIMS</u></h1>
+<p>The listing of the claims provided below has not been amended, but is provided herein for convenience:</p><br>
+<br>
+1. (Currently Amended)    An autonomous driving apparatus for generating an intersection path reflecting a driving record, the autonomous driving apparatus comprising:<br>
+a path generating device configured to generate information on a first path for driving of an autonomous vehicle at an intersection based on map information;<br>
+a path comparison operating device configured to generate offset information between the generated information on the first path and information on a second path along which the autonomous vehicle is <u>driving, wherein the second path is a driver's actual drivin</u><u>g</u><u> path;</u><br>
+a comparison operation evaluating device configured to determine whether to store the information on the second path based on the generated offset information; and<br>
+a comparison operation storage configured to store the information on the second path and the offset information based on the determination of whether to store the information on the second path,<br>
+<u>wherein the comparison operation storage is configured to store the information on the second path and the offset information in response to the offset information being smaller than a preset threshold, and</u><br>
+<u>wherein the autonomous driving apparatus is configured to learn the second path.</u><br>
+<br>
+2. (Original) The autonomous driving apparatus of claim 1, wherein the offset information includes distance offset information and attribute offset information,<br>
+wherein the distance offset information indicates distance information between a first point located on the first path and a second point located on the second path, and<br>
+wherein the attribute offset information indicates a difference between attribute information corresponding to the first point and attribute information corresponding to the second point.<br>
+<br>
+3. (Original) The autonomous driving apparatus of  The autonomous driving apparatus of <br>
+wherein the attribute information includes at least one of heading angle information, steering angle information, and/or lateral acceleration information of the vehicle, and/or curvature information at a point located on a path.<br>
+<br>
+4. (Original) The autonomous driving apparatus of claim 2, wherein the second point located on the second path is located on a straight line connecting the first point, which is located on the first path and a center point, and<br>
+wherein the center point indicates a central point of a circle having a smallest curvature among one or more circles connecting an entry location and an exit location for the intersection.<br>
+<br>
+5. (Original) The autonomous driving apparatus of claim 2, wherein the comparison operation evaluating device is configured to:<br>
+determine to store the information on the second path in response to the distance offset information and the attribute offset information being smaller than a preset threshold, and<br>
+determine not to store the information on the second path in response to the distance offset information or the attribute offset information being greater than the preset threshold.<br>
+<br>
+6. (Currently Amended)    The autonomous driving apparatus of claim 2, <del>wherein the comparison operation storage is configured to store the information on the second path and the offset information in response to the distance offset information and the attribute offset information being smaller than a preset threshold, and</del><br>
+wherein the information on the second path includes the attribute information corresponding to the second point.<br>
+<br>
+7. (Original) The autonomous driving apparatus of claim 6, wherein the comparison operation storage is configured to further store identification information on the intersection in response to the distance offset information and the attribute offset information being smaller than the preset threshold.<br>
+<br>
+8. (Original) The autonomous driving apparatus of claim 1, wherein the path generating device is configured to generate the information on the first path based on one of a global path for the autonomous vehicle or a lane link path for the intersection.<br>
+<br>
+9. (Original) The autonomous driving apparatus of claim 8, wherein the global path is generated based on source location information, destination location information, and/or current location information of the vehicle, and wherein the source location information, the destination location information, and the current location information are expressed based on GPS(Global Positioning System), and<br>
+wherein the lane link path corresponds to a path corresponding to a circle having the smallest curvature among one or more circles connecting an entry location and an exit location of the intersection.<br>
+<br>
+10. (Original) The autonomous driving apparatus of claim 8, wherein the information on the first path is generated further based on at least one of a speed of the vehicle, an acceleration of the vehicle, or a distance between an object located on the intersection and the vehicle, in response to the information on the first path being generated based on the global path.<br>
+<br>
+11. (Currently Amended)   An autonomous driving method for generating an intersection path reflecting a driving record, the method comprising:<br>
+generating information on a first path for driving of an autonomous vehicle at an intersection based on map information;<br>
+generating offset information between the generated information on the first path and information on a second path along which the autonomous vehicle is <u>driving, wherein the second path is a driver's actual driving path;</u><br>
+determining whether to store the information on the second path based on the generated offset information;[[ and]] storing the information on the second path and the offset information based on the determination of whether to store the information on the second path;<u> and</u><br>
+<u>learning the second path,</u><br>
+<u>wherein the determining of whether to store the information on the second path based on the generated offset information further includes storing the information on the second path and the offset information in response to the offset information being smaller than a preset threshold.</u><br>
+<br>
+12. (Original) The method of claim 11, wherein the offset information includes distance offset information and attribute offset information,<br>
+wherein the distance offset information indicates distance information between a first point located on the first path and a second point located on the second path, and<br>
+wherein the attribute offset information indicates a difference between attribute information corresponding to the first point and attribute information corresponding to the second point.<br>
+<br>
+13. (Original) The method of claim 12, wherein the attribute information includes at least one of heading angle information, steering angle information, and/or lateral acceleration information of the vehicle, and/or curvature information at a point located on a path.<br>
+<br>
+14. (Original) The method of claim 12, wherein the second point located on the second path is located on a straight line connecting the first point, which is located on the first path and a center point, and<br>
+wherein the center point indicates a central point of a circle having a smallest curvature among one or more circles connecting an entry location and an exit location for the intersection.<br>
+<br>
+15. (Original) The method of claim 12, wherein the determining of whether to store the information on the second path based on the generated offset information includes determining to store the information on the second path in response to the distance offset information and the attribute offset information being smaller than a preset threshold, and<br>
+determining not to store the information on the second path in response to the distance offset information or the attribute offset information being greater than the preset threshold.<br>
+<br>
+16. (Currently Amended)   The method of claim 12, <del>wherein the determining of whether to store the information on the second path based on the generated offset information further includes storing the information on the second path and the offset information in response to the distance offset information and the attribute offset information being smaller than a preset threshold, and</del><br>
+wherein the information on the second path includes the attribute information corresponding to the second point.<br>
+<br>
+17. (Original) The method of claim 16, wherein the determining of whether to store the information on the second path based on the generated offset information further includes storing identification information on the intersection in response to the distance offset information and the attribute offset information being smaller than the preset threshold.<br>
+<br>
+18. (Original) The method of claim 11, wherein the generating of the information on the first path for driving of the autonomous vehicle at the intersection includes generating information on the first path based on one of a global path for the autonomous vehicle or a lane link path for the intersection.<br>
+<br>
+19. (Original) The method of claim 18, wherein the global path is generated based on source location information, destination location information, and/or current location information of the vehicle, and wherein the source location information, the destination location information, and the current location information are expressed based on GPS(Global Positioning System), and wherein the lane link path corresponds to a path corresponding to a circle having the smallest curvature among one or more circles connecting an entry location and an exit location of the intersection.<br>
+<br>
+20. (Original) The method of claim 18, wherein the information on the first path is generated further based on at least one of a speed of the vehicle, an acceleration of the vehicle, or a distance between an object located on the intersection and the vehicle, in response to the information on the first path being generated based on the global path.
+</body></html>

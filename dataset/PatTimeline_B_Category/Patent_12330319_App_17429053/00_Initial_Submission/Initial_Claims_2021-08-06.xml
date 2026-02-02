@@ -1,0 +1,159 @@
+<html><head></head><body><h3>Date: 2021-08-06</h3>
+<p><u>Amendments to the Claims:</u></p>
+<p>This listing of claims will replace all prior version, and listings, of claims in the application:</p>
+<br>
+
+<br>
+Claim 1    (Original) A robot for assembling a piece of furniture, the robot comprising: 
+<br>
+a base; 
+<br>
+a robotic arm coupled to the base at a first end of the robotic arm; 
+<br>
+a multi-functional robotic head coupled to the robotic arm at a second end of the robotic arm, the multi-functional robotic head comprising: 
+<br>
+a camera configured to scan a barcode positioned on a part presented to the robot, the barcode providing instructions to the robot for attaching one or more hardware components to the part to assemble the piece of furniture; 
+<br>
+a first applicator mechanism configured to apply an adhesive to the part; 
+<br>
+a first gripping mechanism configured to grip a first hardware component, the first hardware component being manoeuvred by the robotic arm to a first position to be attached to the part; 
+<br>
+a first attachment mechanism configured to attach the first hardware component to the part at the first position via a fastener to assemble the piece of furniture; and 
+<br>
+a computing unit in communication with the robotic arm and the multi-functional robotic head, the computing unit configured to receive the instructions from the camera and to control the robotic arm and the multi-functional robotic head to assemble the piece of furniture. 
+
+<br>
+
+<br>
+Claim 2    (Original) The robot of claim 1, wherein the camera is further configured to scan the part to determine dimensions of the part.
+
+<br>
+
+<br>
+Claim 3    (Original) The robot of claim 1, wherein the instructions provided by the barcode include co-ordinates on the part for applying the adhesive or attaching the first hardware component.
+<br>
+Claim 4    (Original) The robot of claim 1, wherein the processor is configured to determine a position on the part to apply the adhesive based on the instructions provided by the barcode.
+
+<br>
+
+<br>
+Claim 5    (Original) The robot of claim 1, wherein the processor is configured to determine the position on the part to attach the first hardware component based on the instructions provided by the barcode.
+
+<br>
+
+<br>
+Claim 6    (Original) The robot of claim 1, wherein the gripping mechanism is a pair of parallel plates.
+
+<br>
+
+<br>
+Claim 7    (Original) The robot of claim 1, wherein the first hardware component is a hinge mounting plate.
+
+<br>
+
+<br>
+Claim 8    (Original) The robot of claim 1, wherein the processor is further configured to direct the robotic arm to pick up the hinge mounting plates from a hardware provider.
+
+<br>
+
+<br>
+Claim 9    (Original) The robot of claim 1, wherein the multi-functional robotic head further comprises a second gripping mechanism configured to grip a second hardware component.
+
+<br>
+
+<br>
+Claim 10   (Original) The robot of claim 9, wherein the second hardware component is one or a slide and a slide spacer
+
+<br>
+
+<br>
+Claim  11  (Cancelled).
+
+<br>
+
+<br>
+Claim 12   (Original) The robot of claim 1, wherein the multi-functional robotic head further comprises a second applicator mechanism configured to apply a third hardware component to the part.
+
+<br>
+
+<br>
+Claims 13-15 (Cancelled).
+
+1414
+<br>
+<br>
+
+<br>
+Claim 16   (Original) A method of assembling a piece of furniture with a robot, the method comprising: 
+<br>
+scanning a barcode on a part by the robot, the barcode providing instructions to the robot for attaching one or more hardware components to the part to assemble the piece of furniture; 
+<br>
+selecting a first hardware component to attach to the part by the robot, the first hardware component selected based on the instructions provided to the robot; 
+<br>
+manoeuvring the first hardware component to a first position of the part to be attached to the part, the first position of the part determined by the robot based on the instructions provided to the robot; and 
+
+attaching the first hardware component to the part by the robot to assemble the piece of furniture.
+
+<br>
+
+<br>
+Claims 17-19 (Cancelled).
+
+1818
+<br>
+<br>
+
+<br>
+Claim 20   (Original) The method of claim 16, wherein selecting the first hardware component to attach to the part by the robot includes selecting a hinge mounting plate to attach to the part by the robot.
+
+<br>
+
+<br>
+Claim 21   (Original) The method of claim 20, wherein selecting the hinge mounting plate to attach to the part by the robot includes manoeuvring a multi-functional robotic head of the robot to a first storage location and gripping the hinge mounting plate by the first gripper of the multi-functional robotic head of the robot.
+
+<br>
+
+<br>
+Claim 22   (Cancelled).
+
+<br>
+
+<br>
+Claim 23   (Original) The method of claim 21, wherein selecting the second hardware component to attach to the part by the robot includes selecting a slide and a slide spacer to attach to the part by the robot.
+
+<br>
+
+<br>
+Claim 24   (Original) The method of claim 23, wherein selecting the slide and slide spacer to attach to the part by the robot includes manoeuvring a multi-functional robotic head of the robot to a second storage location and gripping the slide and a slide spacer by the second gripper of the multi-functional robotic head of the robot.
+
+<br>
+
+<br>
+Claim 25   (Original) The method of claim 24, further comprising manoeuvring the second hardware component to a second position to be attached to the part, the second position determined by the robot based on the instructions provided to the robot.
+
+<br>
+
+<br>
+Claim 26   (Original) The method of claim 25, further comprising attaching the second hardware component to the part by the robot.
+
+<br>
+
+<br>
+Claim 27   (Original) The method of claim 26 further comprising, after attaching the second hardware component to the part by the robot, selecting a third hardware component to attach to the part.
+
+<br>
+
+<br>
+Claim 28   (Original) The method of claim 27, wherein selecting the third hardware component to attach to the part by the robot includes selecting an adjustable shelf bracket to attach to the part by the robot.
+
+<br>
+
+<br>
+Claims 29-37 (Cancelled). 
+<br>
+3036
+<br>
+-3-
+-4-
+-5-
+</body></html>

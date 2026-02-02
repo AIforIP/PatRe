@@ -1,0 +1,61 @@
+<html><head></head><body><h3>Date: 2024-03-01</h3>
+
+<h1>CLAIMS</h1>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.    A system comprising:an audio processing circuit that is configured to:<br>
+identify in audio signals, based on parameters or criteria associated with a user of the system, one or more components in the audio signals;<br>
+determine characteristics of the one or more components based on perception of the audio signals by the user; and<br>
+adjust based on the characteristics of the one or more components, the one or more components and/or one or more other components in the audio signals.<br>
+2.    The system of claim 1, wherein the audio processing circuit is configured to enhance at least one of the one or more other components SVG
+{EMBED HERE}
+0.080.083<br>
+<br>
+3.    The system of claim 1, wherein the parameters or criteria comprise field-of-view of the user; and wherein the audio processing circuit is configured to select the one or more components based on identifying of audio perceived as being within the field-of-view of the user.<br>
+<br>
+4.    The system of claim 1, wherein the audio signals comprise a plurality of channel signals;<br>
+and wherein the audio processing circuit is configured to identify the one or more components based on identifying of one or more elements in the plurality of channel signals.<br>
+<br>
+5.    The system of claim 4, wherein the plurality of channel signals comprises at least a left channel and a right channel; and wherein the audio processing circuit is configured to identify the one or more components based on identifying of common elements in the left channel and the right channel.<br>
+<br>
+<br>
+6.    The system of claim 1, comprising an audio output device configured to output the audio signals.<br>
+<br>
+7.    The system of claim 6, wherein the audio output device comprises a headset.<br>
+<br>
+8.    The system of claim 6, wherein the audio processing circuit is embedded in the audio output device.<br>
+<br>
+9.    A system comprising:a detection circuit configured to identify in audio signals, based on parameters or criteria associated with a user of the system, one or more components in the audio signals;<br>
+one or more adjustment circuits configured to:<br>
+identify in audio signals, based on parameters or criteria associated with a user of the system, one or more components in the audio signals; and<br>
+apply one or more adjustments to the one or more components and/or one or more other components in the audio signals, wherein the adjustment is based on characteristics of the one or more components as perceived by the user.<br>
+<br>
+10.   The system of claim 9, wherein the parameters or criteria comprise field-of-view of the user; and wherein the detection circuit is configured to select the one or more components based on identifying of audio perceived as being within the field-of-view of the user.<br>
+<br>
+11.   The system of claim 9, wherein the audio signals comprise a plurality of channel signals;<br>
+and wherein the detection circuit is configured to identify the one or more components based on identifying of one or more elements in the plurality of channel signals.<br>
+<br>
+12.   The system of claim 11, wherein the plurality of channel signals comprises at least a left channel and a right channel; and wherein the detection circuit is configured to identify the one or more components based on identifying of common elements in the left channel and the right channel.<br>
+<br>
+<br>
+13.   The system of claim 9, comprising a controller circuit configured to provide settings for controlling at least one adjustment applied via the one or more adjustment circuits.<br>
+<br>
+14.   The system of claim 13, wherein the controller circuit is configured to determine the settings based on one or both of the identification of the one or more components and pre- configured data.<br>
+<br>
+15.   A method comprising:identifying in audio signals, based on parameters or criteria associated with a user of the system, one or more components in the audio signals;<br>
+determining characteristics of the one or more components based on perception of the audio signals by the user; and<br>
+adjusting based on the characteristics of the one or more components, the one or more components and/or one or more other components in the audio signals.<br>
+<br>
+16.   The method of claim 15, comprising enhancing at least one of the one or more other components.<br>
+<br>
+17.   The method of claim 15, wherein the parameters or criteria comprise field-of-view of the user; and further comprising selecting the one or more components based on identifying of audio perceived as being within the field-of-view of the user.<br>
+<br>
+18.   The method of claim 15, wherein the audio signals comprise a plurality of channel signals; and further comprising identifying the one or more components based on identifying of one or more elements in the plurality of channel signals.<br>
+<br>
+19.   The method of claim 18, wherein the plurality of channel signals comprises at least a left channel and a right channel; and further comprising identifying the one or more components based on identifying of common elements in the left channel and the right channel.<br>
+<br>
+<br>
+20.   The method of claim 15, further comprising determining based on the identification of the one or more components, settings for controlling, at least in part, the adjusting of the one or more components and/or one or more other components in the audio signals.
+</body></html>

@@ -1,0 +1,48 @@
+PNG
+media_image1.png
+172
+172
+media_image1.png
+Greyscale
+United States Patent and Trademark Office
+Commissioner for Patents
+United States Patent and Trademark Office
+P.O. Box 1450
+Alexandria, VA 22313-1450
+www.uspto.gov
+In re Application of
+Sony Interactive Entertainment Inc.
+Application No. 17/810,556
+Filed: 1 Jul 2022
+For: USE OF MACHINE LEARNING TO TRANSFORM SCREEN RENDERS FROM THE PLAYER VIEWPOINT
+:
+:	REDETERMINATION OF
+:	PATENT TERM ADJUSTMENT
+:	AND NOTICE OF INTENT
+:	TO ISSUE
+:	CERTIFICATE OF CORRECTION
+:
+Patent No. 12,318,693
+Issued: 3 Jun 2025
+Docket No. 59152-0023001 / SCEA22010US00
+This is a redetermination of the patent term adjustment in response to the application for patent term adjustment, filed July 25, 2025, requesting that the patent term adjustment determination for the above-identified patent be corrected from 102 days to 147 days.
+On June 3, 2025, the above-identified application issued into U.S. Patent No. 12,318,693. The patent issued with a PTA of 102 days. The PTA of 102 days was based on 235 days of “A” delay, reduced by 133 days of Applicant delay.  The present request for redetermination of the patent term adjustment was timely filed within two months of the patent issue date.
+The present petition
+Patentee avers that he was improperly assessed 45 days of Applicant delay under                         37 CFR 1.704(c)(10) for filing a Request for Initialed Form PTO-1449 on April 16, 2205, subsequent to a Notice of Allowance mailed March 3, 2025.
+Discussion
+Patentee and the Office are in agreement regarding the amount of “A” delay under 35 U.S.C. 154(b)(1)(A). At issue is the number of days of Applicant delay.
+Under the circumstances of this case, it is concluded that the filing of Applicant’s “Request for Initialed Form PTO-1449” is not a failure to engage under 37 CFR 1.704(c)(10).  See MPEP 2732, which states that a request for acknowledgement of an IDS, provided the request was Applicant’s first opportunity to request that the Examiner acknowledge the IDS, will not be considered a failure to engage
+Overall PTA Calculation
+Formula:
+“A” delay + “B” delay + “C” delay - Overlap - applicant delay = X
+USPTO’s Calculation:
+235 + 0 + 0 – 0 – 88 = 147
+Conclusion
+Patentee is entitled to PTA of one hundred forty-seven (147) days. Using the formula “A” delay + “B” delay + “C” delay - overlap - applicant delay = X, the amount of PTA is calculated as follows: 235 + 0 + 0 – 0 – 88 = 147 days.
+The application is being forwarded to the Certificate of Corrections Branch for issuance of a certificate of correction. The Office will issue a certificate of correction indicating that the term of the above-identified patent is extended or adjusted by one hundred forty-seven (147) days.
+Telephone inquiries specific to this matter should be directed to the undersigned at (571) 272-3207.
+/Cliff Congo/
+Cliff Congo
+Attorney Advisor
+Office of Petitions
+Enclosure:  Copy of DRAFT Certificate of Correction

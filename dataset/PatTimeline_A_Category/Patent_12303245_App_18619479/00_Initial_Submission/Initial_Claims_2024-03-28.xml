@@ -1,0 +1,76 @@
+<html><head></head><body>18619479
+
+   
+   WHAT IS CLAIMED IS:
+   
+
+<br>
+
+1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A method for monitoring tissues with respect to a posture of a patient using at least one hardware processor and at least one antenna element, comprising: 
+intercepting, using the at least one antenna element, radio frequency (RF) signals at a range of 0.3 gigahertz (GHZ) to 20 GHZ from the at least one thoracic tissue of the patient 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; using at least one hardware processor to:
+extract at least one feature from the intercepted RF signals, the at least one feature is selected from a group including a phase and an amplitude of the RF signals;
+computing a current posture of the patient;
+computing a dielectric related property of the at least one thoracic tissue from an analysis of the at least one feature and with respect to an effect of the current posture on the dielectric property; and
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outputting a notification indicative of the dielectric related property.
+<br>
+
+2. The method of claim 1, further comprising analyzing the intercepted RF signals for computing the current posture.
+<br>
+
+3. The method of claim 2, wherein analyzing the intercepted RF signals for computing the current posture comprises matching the intercepted RF signals to intercepted RF signals captured during at least one previous transmission session labelled with an indication of posture, and wherein the current posture comprises the indication of posture of the matched intercepted RF signals.
+<br>
+
+4. The method of claim 1, wherein computing the dielectric related property with respect to the effect of the current posture comprises reducing or cancelling the effect of the current posture on computation of the computed dielectric related property. 
+<br>
+
+5. The method of claim 1, further comprising:
+analyzing the current posture for determining whether the patient is in a posture suitable for a radiation session or not;
+in response to the patient being in the posture suitable for the radiation session, computing the dielectric related property; and
+in response to the patient not being in the posture suitable for the radiation session, ignoring or not computing the dielectric related property. 
+<br>
+
+6. The method of claim 1, further comprising:
+analyzing the current posture for determining whether the patient is in a posture that is substantially optimal for a radiation session;
+in response to determining that the patient is in a posture different from the posture that is substantially optimal, instructing a user interface for  guiding the patient into the posture that is substantially optimal.
+<br>
+
+7. The method of claim 6, wherein the analyzing the current posture and the instructing the user interface are iterated until at least one of: the patient reaches the posture that is substantially optimal, and the patient moves through a plurality of predefined postures.
+<br>
+
+8. The method of claim 1, further comprising extracting at least one second feature from the intercepted RF signals, the at least one second feature indicative to the current posture, wherein the at least one second feature is analyzed for computing the current posture.
+<br>
+
+9. The method of claim 8, wherein the at least one second feature comprises the intercepted RF signals gated to a near-antenna layers reflections.
+<br>
+
+10. The method of claim 8, wherein the at least one second feature comprises a position of a highest peak in a differential signal based on EM radiation reflected from the thorax, wherein the position of the highest peak is indicative of a relative position of a muscle-lung boundary and used for classifying the posture of the user.
+<br>
+
+11. The method of claim 8, wherein the at least one second feature used for the computation of the current posture is selected from: morphologies reflections, amplitudes, positions of peak of signals from reflections of selected tissue boundaries, and differences of amplitudes in signals which are based on reflections and/or peak positions.
+<br>
+
+12. The method of claim 1, further comprising extracting at least one second feature from the intercepted RF signals, feeding the at least one second feature into a machine learning model, and obtaining the current posture as an outcome of the machine learning model.
+<br>
+
+13. The method of claim 12, wherein the machine learning model is trained on a training dataset of a plurality of records, wherein a record includes a sample at least one second feature extracted from RF signals intercepted from a sample subject, and a ground truth of a current posture of the sample subject during the interception.
+<br>
+
+14. The method of claim 8, wherein the current posture is computed based on the at least one second feature comprising EM reflection from an exit boundary between tissues.
+<br>
+
+15. The method of claim 1, wherein the current posture is computed based on a tissue model, wherein an expected intercepted RF signal is used as a baseline, and a different between the baseline and a signal based on the intercepted RF signals is analyzed to extract changes and/or values related to the dielectric related property.
+<br>
+
+16.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A wearable monitoring apparatus configured for monitoring tissues with respect to a posture of a patient using at least one hardware processor and at least one antenna element, comprising: 
+at least one antenna element configured for intercepting radio frequency (RF) signals at a range of 0.3 gigahertz (GHZ) to 20 GHZ from the at least one thoracic tissue of the patient; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at least one processor executing a code for:
+extracting at least one feature from the intercepted RF signals, the at least one feature is selected from a group including a phase and an amplitude of the RF signals;
+
+computing a current posture of the patient;
+computing a dielectric related property of the at least one thoracic tissue from an analysis of the at least one feature and with respect to an effect of the current posture on the dielectric property; and
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outputting a notification indicative of the dielectric related property.
+
+   
+
+</body></html>

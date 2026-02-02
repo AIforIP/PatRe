@@ -1,0 +1,72 @@
+<html><head></head><body><h3>Date: 2025-02-10</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<br>
+<br>
+1. (Currently Amended) A control process for an industrial robot, the robot comprising:<br>
+a multi-axis robot arm comprising at least two electric actuators each apt to move one part of the robot arm with respect to another part of the robot arm about or along an axis of movement, each electric actuator being associated with a sensor configured for measuring an articular position of the corresponding actuator,<br>
+an effector placed at [[the]] <u>a</u><u>n</u> end of the robot arm,<br>
+a robot control system comprising a central unit,<br>
+an auxiliary unit configured for controlling power units, implementing an axis controller module comprising current control loops apt to generate setpoints for controlling the power units,<br>
+power units apt to supply an appropriate electric current to the electric actuators,<br>
+a data acquisition interface configured for receiving and sending the measurements from the sensors associated with the electric actuators,<br>
+a communication link connecting the central unit, the auxiliary unit and the data acquisition interface, the communication link comprising a data bus,<br>
+wherein the control process comprises:<br>
+calculating, in <del>the </del>modules implemented by the central unit, a time-dependent composite setpoint defining articular forces and velocities, according to target trajectory and to an operating mode,<br>
+calculating, in the modules implemented by the central unit, a behavior matrix which describes a desired behavior of the robot arm, defining directions along which the calculated composite setpoint is to be applied,<br>
+calculating, in an articular impedance controller module implemented by the auxiliary unit, an articular force setpoint for controlling the axis controller module according to said previously calculated composite setpoint and said behavior matrix,<br>
+<br>
+<br>
+calculating, in the axis controller module implemented by the auxiliary unit, the control setpoints for the power units according to the articular force setpoint.<br>
+<br>
+2. (Currently Amended) The control process according to claim 1, wherein the power units comprise sensors for measuring phase currents of said electric actuators, and wherein the calculation of the control setpoints is implemented by [[the]] a current controller loop, and further depends on the measurements of the phase currents of said electric actuators.<br>
+<br>
+3. (Currently Amended) The control process according to claim 1, wherein the calculation of an articular force setpoint i comprises the calculation of [[the]] a time derivative qmv of an internal state qmv at an articular position, such calculation being performed according to said previously calculated composite setpoint, said behavior matrix, the measured articular positions qr, articular velocities 4r derived from the measured articular positions qr, and to the internal state.<br>
+<br>
+4. (Currently Amended) The control process according to claim 3, wherein the articular force setpoint for controlling the axis controller module is calculated from a control function which adjusts [[the]] a difference between the articular position and the internal state, the internal state being determined by integrating said time derivative of the internal state.<br>
+<br>
+5. (Original) The control process according to claim 1, wherein the central unit recalculates the composite setpoint and the behavior matrix with a first frequency and the auxiliary unit recalculates the articular force setpoint for controlling the axis controller module with a second frequency higher than the first frequency.<br>
+<br>
+6. (Currently Amended) The control process according to claim 5, wherein the second frequency is between two and twenty times higher than the first frequency<del>, preferentially between five and ten times higher than the first frequency, preferentially still eight times higher than the first frequency</del>.<br>
+<br>
+<br>
+<br>
+<br>
+7. (Currently Amended) The control process according to claim 5, wherein the auxiliary unit calculates the articular force setpoints for controlling the axis controller module with a frequency chosen between 500 Hz and 20 kHz<del>, preferentially between 5 kHz and 12 kHz, preferentially equal to 8 kHz</del>.<br>
+<br>
+8. (Original) The control process according to claim 7, wherein the axis controller module takes into account the measured forces by a force sensor when calculating the control setpoints for the power units according to the articular force setpoint.<br>
+<br>
+9. (Currently Amended) The control process according to claim 8 wherein the central unit uses a gravity compensator which calculates [[the]] a weight of the effector and a Cartesian articular converter which calculates [[the]] a conversion matrix from the articular positions and sends the weight of the effector and the conversion matrix to the axis controller module for taking into account the forces measured by a force sensor mounted at the end of the robot arm.<br>
+<br>
+10. (Currently amended) The control process according to claim 9, wherein the central unit uses [[a]] the gravity compensator which calculates the weight of the effector and [[a]] the Cartesian articular converter which calculates the conversion matrix from the articular positions and sends to the axis controller module, at the first frequency, the weight of the effector and the conversion matrix for taking into account forces measured by a force sensor mounted at the end of the robot arm.<br>
+<br>
+11. (Currently Amended) The control process according to claim 1, wherein the communication link is configured so that the central unit cyclically sends communication frames over the data bus, the axis controller modules and [[the]] a force sensor being configured for reading or adding data in the data frame during the frame passage, the data frame being fed back to the central unit at the end of each communication cycle.<br>
+<br>
+<br>
+<br>
+<br>
+12. (Currently Amended) An industrial robot control system, the robot comprising:<br>
+a multi-axis robot arm comprising at least two electric actuators each apt to move one part of the robot arm with respect to another part of the robot arm about or along an axis of movement, each electric actuator being associated with a sensor configured for measuring an articular position of the corresponding actuator,<br>
+an effector placed at [[the]] <u>an</u> end of the robot arm,<br>
+the robot control system comprising a central unit,<br>
+an auxiliary unit configured for controlling power units, implementing an axis controller module comprising current control loops apt to generate setpoints for controlling the power units,<br>
+power units apt to supply an appropriate electric current to the electric actuators,<br>
+a data acquisition interface configured for receiving and sending the measurements from the sensors associated with the electric actuators,<br>
+a communication link connecting the central unit, the auxiliary unit and the data acquisition interface, the communication link comprising a data bus,<br>
+wherein:<br>
+the central unit implements modules configured for calculating a time-dependent composite setpoint defining articular forces and velocities, according to a target trajectory and a chosen mode of operation, and for calculating [[the]] a behavior matrix which describes a desired behavior of the robot arm, defining directions along which the calculated composite setpoint is to be applied,<br>
+the auxiliary unit implements an articular impedance controller module configured for calculating an articular force setpoint for controlling the axis controller module according to said previously calculated composite setpoint, and said behavior matrix, and the axis controller module configured for calculating the setpoints for controlling the power units according to the articular force setpoint.<br>
+<br>
+<br>
+<br>
+<br>
+13. (Currently Amended) An industrial robot comprising a control system according to claim 12<del> and </del><del>configured to implement a control proce</del><del>ss</del><del> according to claim 1</del>.<br>
+<br>
+14. (New) The control process according to claim 5, wherein the second frequency is between five and ten times higher than the first frequency.<br>
+<br>
+15. (New) The control process according to claim 5, wherein the second frequency is eight times higher than the first frequency.<br>
+<br>
+16. (New) The control process according to claim 5, wherein the auxiliary unit calculates the articular force setpoints for controlling the axis controller module with a frequency chosen between 5 kHz and 12 kHz.<br>
+<br>
+17. (New) The control process according to claim 5, wherein the auxiliary unit calculates the articular force setpoints for controlling the axis controller module with a frequency equal to 8 kHz.
+</body></html>

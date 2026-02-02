@@ -1,0 +1,50 @@
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Remarks
+35 USC § 112 Rejections
+Based on the changes introduced by amendment of (November 13, 2024), the 35 U.S.C. 112 (pre-AIA ), first paragraph Rejections of Claims 21-23, 25-38 and 40 are withdrawn.
+Claims 21-23, 25-38 and 40 amendments have overcome the 35 USC § 112 rejections.
+Allowable Subject Matter
+Claims 21-23, 25-38 and 40 are allowed.
+The following is an examiner’s statement of reasons for allowance:
+Regarding Claim 21, Gottlieb et al., (US Pub.20100030045 A1), [hereinafter Gottlieb’045] disclose a system comprising:
+a glucose sensor device for determining a concentration of glucose in a body of a user (Fig. 4A, para [0032], para [0093]), the sensor device comprising:
+a first electrochemical peroxide-based glucose sensor ([0190]; anodic polarization measures hydrogen peroxide);
+a first electrochemical oxygen-based sensor ([0190]); and
+a second electrochemical oxygen-based sensor ([0190]);
+a processor (para [00126]); and
+a memory storing instructions (para [0092], where a memory for storing a plurality of measurements) thereon which, when executed by the processor, cause the sensor device to:
+receive a peroxide-based output signal from the first electrochemical peroxide-based glucose sensor, the peroxide-based output signal (Fig. 4a; sensor reading (graph glucose detection), para [0019]) being indicative of a level of glucose in the body of the user (para [0190]);
+receive a first oxygen-based output signal from the first electrochemical oxygen-based sensor and a second oxygen-based output signal from the second electrochemical oxygen-based sensor(para [0190] and [0019]);
+determine a sensor glucose value for a blood glucose level in the body of the user based on the peroxide-based output signal and the first and second oxygen-based output signals ([0190]).
+Gottlieb et al., (US Pub.20110319734),[hereinafter Gottlieb’734] disclose a sensor system used for sensing glucose (Abstract) where signal data from different electrodes is weighted and computationally fused to determine an analyte concentration (para [0010] and [0037]).
+According to Gottlieb et al., (US Pub.20110319734), the advantage of fusing sensor signals is that it allows for assessment of the reliability of the glucose sensor system (see para [0037]).
+The closest prior arts either singularity or in combination, fail to anticipate or render obvious that step of define:
+“calculate, based on a membrane resistance of each sensor of the sensor device, a first weight for the peroxide-based output signal and a second weight for the first and second oxygen-based output signals, wherein the sensor glucose value is determined  based on the peroxide-based output signal and the first and second oxygen-based output signal using the first weight and the second weight, respectively”.
+Claims 22-23 and 25-31 are allowed due to their dependency on claim 21.
+Regarding Claim 32, Gottlieb’045 disclose a computer-implemented method for determining a level of glucose in a body of a user (para [005]), the computer implemented method comprising:
+receiving a peroxide-based output signal (Fig. 4a; sensor reading (graph glucose detection), also see para [0019) from a first electrochemical peroxide-based glucose sensor of a glucose sensor device, the peroxide-based output signal being indicative of a level of glucose in the body of the user (para [0190]);
+receiving a first oxygen-based output signal from a first electrochemical oxygen- based sensor ([0190]) of the glucose sensor device and a second oxygen-based output signal  from a second electrochemical oxygen-based sensor ([0190) of the glucose sensor device (para [0190]);
+determine a sensor glucose value for a blood glucose level in the body of the user based on the peroxide-based output signal and the first and second oxygen-based output signals  ([0190]).
+Gottlieb’734 disclose a sensor system used for sensing glucose (Abstract) where signal data from different electrodes is weighted and computationally fused to determine an analyte concentration (para [0010], see para [0037]).
+According to Gottlieb‘734, the advantage of fusing sensor signals is that it allows for assessment of the reliability of the glucose sensor system ([0037]).
+The closest prior arts either singularity or in combination, fail to anticipate or render obvious that step of define:
+“ calculate, based on a membrane resistance of each sensor of the sensor device, a first weight for the peroxide-based output signal and a second weight for the first and second oxygen-based output signals, wherein the sensor glucose value is determined based on the peroxide-based output signal and the firs and second oxygen-based output signals using the first weight and the second weight, respectively”.
+Claims 33-38 are allowed due to their dependency on claim 32.
+Regarding Claim 40, Gottlieb’045 disclose a non-transitory machine-readable medium comprising instructions which, when executed by one or more processors, cause operations comprising:
+receiving a peroxide-based output signal (Fig. 4a; sensor reading (graph glucose detection), also see para [0019]) from a first electrochemical peroxide-based glucose sensor of a glucose sensor device, the peroxide-based output signal being indicative of a level of glucose in a body of a user (para [0190]);
+receiving a first oxygen-based output signal from a first electrochemical oxygen- based sensor of the glucose sensor device ([0190]) from a second electrochemical oxygen-based sensor of the glucose sensor device (para [0190]);
+determine a sensor glucose value for a blood glucose level in the body of the user based on the peroxide-based output signal and the first and second oxygen-based output signals ([0190]).
+Gottlieb’734 disclose a sensor system used for sensing glucose (Abstract) where signal data from different electrodes is weighted and computationally fused to determine an analyte concentration (para [0010], see para [0037]).
+According to Gottlieb‘734, the advantage of fusing sensor signals is that it allows for assessment of the reliability of the glucose sensor system ([0037]).
+The closest prior arts either singularity or in combination, fail to anticipate or render obvious that step of define:
+“calculate, based on a membrane resistance of each sensor of the sensor device, a first weight for the peroxide-based output signal and a second weight for the first and second oxygen-based output signals, wherein the sensor glucose value is determined  based on the peroxide-based output signal and the first and second oxygen-based output signal using the first weight and the second weight, respectively”.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to KALERIA KNOX whose telephone number is(571)270-5971. The examiner can normally be reached M-F 8am-5pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Andrew Schechter can be reached on (571)2722302. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/KALERIA KNOX/
+Examiner, Art Unit 2857
+/MICHAEL J DALBO/Primary Examiner, Art Unit 2857

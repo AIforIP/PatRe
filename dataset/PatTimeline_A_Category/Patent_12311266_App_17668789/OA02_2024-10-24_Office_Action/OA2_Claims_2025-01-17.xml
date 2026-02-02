@@ -1,0 +1,100 @@
+<html><head></head><body><h3>Date: 2025-01-17</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions, and listings of claims in the application:</p><br>
+<br>
+1. (Currently Amended) A method for using a virtual prop, performed by a computer device, the method comprising:<br>
+displaying a first user interface (UI), the first UI comprising a first virtual environment image, the first virtual environment image corresponding to an image of a virtual environment observed from a perspective of a first virtual <del>character,</del><u>chara</u><u>cte</u><u>r;</u><br>
+controlling, in response to a use instruction for a first virtual prop, the first virtual character to use the first virtual prop<del>, the first virtual prop being a virtual prop used for generating a defense range, the defense range being a range in which the first virtual prop is capable of producing a defense effect against an attack from a second virtual prop, the second virtual prop having a function of chasing a target virtual character</del>;<br>
+<u>determining whether the first virtual prop may be placed at a region in contact with a placement point;</u><br>
+<u>controllin</u><u>g</u><u>, based on a tri</u><u>gg</u><u>erin</u><u>g</u><u> option for the first virtual prop and a determination that the first virtual prop may be placed at the re</u><u>g</u><u>ion, the first virtual character to launch the first virtual prop to the placement point using a predetermined flight path, wherein the first virtual prop is confi</u><u>g</u><u>ured to intercept, within a defense ran</u><u>g</u><u>e of the re</u><u>g</u><u>ion, a tar</u><u>g</u><u>et virtual prop confi</u><u>g</u><u>ured to chase a tar</u><u>g</u><u>et virtual character;</u><br>
+<u>detectin</u><u>g</u><u> a presence of a second virtual prop that is confi</u><u>g</u><u>ured to chase the first virtual </u><u>chara</u><u>cter</u><u>;</u><u></u>and<br>
+intercepting the second virtual prop based on <del>determining </del><u>a determination </u>that the second virtual prop <del>will fall within</del><u>has entered </u>the defense range.<br>
+<br>
+2. (Currently Amended) The method according to  The method according to <br>
+wherein the target virtual character is at least one of the first virtual character <del>and </del><u>or</u><u></u>a second virtual character, the second virtual character and the first virtual character belonging to a same <del>team; </del><u>team </u>and wherein the intercepting the second virtual prop <del>comprises:</del><br>
+<br>
+<del>intercepting the second virtual prop</del><u>is further </u>based on determining that <del>the second virtual prop will fall within the defense range and </del>the target virtual character <del>being locatedi</del>s within the defense range.<br>
+<br>
+3. (Currently Amended) The method according to claim 2, wherein the intercepting the second virtual prop further comprises:<br>
+destroying the second virtual prop; or controlling the first virtual prop to launch a third virtual prop to shoot the second virtual prop down.<br>
+<br>
+4. (Currently Amended) The method according to claim 2, wherein the defense range comprises a space range with a distance to a-theplacement point of the first virtual prop less than an effective radius; and<u> wherein </u>the method further comprises:<br>
+obtaining a position of the second virtual prop in a release process; and<br>
+determining that the second virtual prop <del>will fall within</del><u>has entered </u>the defense range based on a distance between the placement point of the first virtual prop and the position of the second virtual prop being less than or equal to the effective radius.<br>
+<br>
+5. (Currently Amended) The method according to claim 1, wherein the controlling the first virtual character to use the first virtual prop comprises:<br>
+<del>placing, in response to a use instruction for a launch prop, the launch prop in the virtual environment, the launch prop being a virtual prop used for launching the first virtual prop;</del><br>
+determining thea placement point of the first virtual prop in response to the use instruction for the first virtual prop<del>; and</del><br>
+<del>controlling the first virtual character to launch the first virtual prop to the placement point by using the launch prop</del>.<br>
+<br>
+6. (Currently Amended) The method according to claim 5, wherein the determining the placement point of the first virtual prop comprises:<br>
+<br>
+<u>calculating </u><del>determining a flight path of the first virtual prop, </del>the <u>predetermined </u>flight path <del>being calculated </del>according to at least one parameter of the perspective and a position of the first virtual character, and at least one of a throwing direction, a starting point for throwing, a throwing force,<del>and </del><u>or</u> a throwing speed of the first virtual prop; and<br>
+determining an end point of the <u>predetermined </u>flight path as the placement point of the first virtual prop.<br>
+<br>
+7. (Currently Amended) The method according to claim 5, further comprising:<br>
+displaying a first action effect based on the placement point being an effective region, the first action effect being used for prompting that the first virtual prop is capable of being placed at the placement point; <del>and</del>or displaying a second action effect based on the placement point not being the effective region, the second action effect being used for prompting that the first virtual prop is incapable of being placed at the placement point.<br>
+<br>
+8. (Currently Amended) The method according to claim 7, wherein:<br>
+the first action effect comprises at least one of a first light circle special effect <del>and </del><u>or </u>a first prompt information; and<br>
+the second action effect comprises at least one of a second light circle special effect <del>and</del><u></u><u>or </u>a second prompt information,<br>
+<del>the first action effect being different from the second action effect</del>.<br>
+<br>
+9. (Original) The method of claim 1, further comprising:<br>
+destroying the first virtual prop based on a quantity of intercepted second virtual props reaching a first threshold; or destroying the first virtual prop based on a use duration of the first virtual prop reaching a second threshold.<br>
+<br>
+10. (Currently Amended) An apparatus <del>for using a virtual prop, </del>comprising:<br>
+<del>at least one memory configured to store program code</del><u>one or more processors;</u> and<br>
+<br>
+<del>at least one processor configured to read the program code and operate as instructed by the program code, the program code comprising</del><u>memor</u><u>y</u><u> storin</u><u>g</u><u> instructions that when executed by the one or more processors, cause the apparatus to:</u><br>
+<del>displaying code configured to cause the at least one processor to </del>display a first user interface (UI), the first UI comprising a first virtual environment image, the first virtual environment image being an image corresponding to an image of a virtual environment observed from a perspective of a first virtual <del>character;</del><u>chara</u><u>cte</u><u>r;</u><br>
+<del>controlling code configured to cause the at least one processor to </del>control, in response to a use instruction for a first virtual prop, the first virtual character to use the first virtual prop<del>, the first virtual prop being a virtual prop used for generating a defense range, the defense range being a range in which the first virtual prop is capable of producing a defense effect against an attack from a second virtual prop, the second virtual prop having a function of chasing a target virtual character</del>;<br>
+<u>determine whether the first virtual prop may be placed at a re</u><u>g</u><u>ion in contact with a placement point</u><u>;</u><br>
+<u>control, based on a triggering option for the first virtual prop and a determination that the first virtual prop may be placed at the re</u><u>g</u><u>ion, the first virtual character to launch the first virtual prop to the placement point usin</u><u>g</u><u> a predetermined fli</u><u>g</u><u>ht path, wherein the first virtual prop is configured to intercept, within a defense ran</u><u>g</u><u>e of the re</u><u>g</u><u>ion, a tar</u><u>g</u><u>et virtual prop conf</u><u>i</u><u>gured to chase a tar</u><u>g</u><u>et virtual character</u><u>;</u><br>
+<u>detect a presence of a second virtual prop that is configured to chase the first virtual </u><u>chara</u><u>cte</u><u>r; </u>and<br>
+<del>the controlling code further configured to cause the at least one processor to </del>intercept the second virtual prop based on determining that the second virtual prop <del>will fall within</del><u>has entered</u> the defense range.<br>
+<br>
+11. (Currently Amended) The apparatus according to claim 10, wherein the target virtual character is at least one of the first virtual character <del>and </del><u>or</u> a second virtual character, the second virtual character and the first virtual character belonging to a same <del>team;</del><del>t</del><u>eam,</u><u></u>and<br>
+<br>
+wherein the <del>controlling code is further configured to cause the at least one processor to intercept</del><u>interceptin</u><u>g</u><u></u>the second virtual prop <u>is further </u>based on determining that <del>the second virtual prop </del><del>will</del><del> fall within the defense range and </del>the target virtual character <del>being located</del>is within the defense range.<br>
+<br>
+12. (Currently Amended) The apparatus according to claim 11, <del>whereint</del><u>he memory further storin</u><u>g</u><u> instructions that when executed by the one or more processors cause the apparatus</u> to:<br>
+<del>the controlling code is further configured to cause the at least one processor to perform at least one of</del><del>:</del><del></del>destroy the second virtual prop or control the first virtual prop to launch a third virtual prop to shoot the second virtual prop down.<br>
+<br>
+13. (Currently Amended) The apparatus according to claim 11, wherein the defense range comprises a space range with a distance to a-theplacement point of the first virtual prop less than an effective radius,<del>; and </del>the <u>memory further storing instructions that when executed by the one or more processors cause the apparatus to</u><del>apparatus further comprises</del>:<br>
+<del>obtaining code configured to cause the at least one processor to obtain a p</del>osition of the second virtual prop in a release process; and<br>
+<del>determining code configured to cause the at least one processor to </del>determine that the second virtual prop <del>will fall within</del><u>has entered </u>the defense range based on a distance between the placement point of the first virtual prop and the position of the second virtual prop being less than or equal to the effective radius.<br>
+<br>
+<br>
+<br>
+14. (Currently Amended) The apparatus according to claim 13, <u>the memory further storing instructions that when executed by the one or more processors cause the apparatus</u>to:<del>w</del><del>herein the controlling code is further configured to cause the at least one processor to place, in response to a use instruction for a launch prop, the launch prop in the virtual environment, the launch prop being a virtual prop used for launching the first virtual prop;</del><br>
+<del>the determining code is further configured to causes the at least one processor to</del> determine <del>the </del>a placement point of the first virtual prop in response to the use instruction for the first virtual prop<del>; and</del><br>
+<del>the controlling code is further configured to cause the at least one processor to control the first virtual character to launch the first virtual prop to the placement point by using the launch prop</del>.<br>
+<br>
+15. (Currently Amended) The apparatus according to claim 14, <u>the memory further storing instructions that when executed by the one or more processors cause the apparatus</u>to<del>wherein the determining code is further configured to cause the at least one processor to</del>:<br>
+<del>determine </del><u>calculate </u>a flight path of the first virtual prop<del>, the flight path being calculated</del> according to at least one parameter of the perspective and a position of the first virtual character, and at least one of a throwing direction, a starting point for throwing, a throwing force,<del>and </del><u>or </u>a throwing speed of the first virtual prop; and<br>
+determine an end point of the flight path as the placement point of the first virtual prop.<br>
+<br>
+16. (Currently Amended) The apparatus according to claim 14, <u>the memory further storing instructions that when executed by the one or more processors cause the apparatus</u>to<del>wherein the displaying code is further configured to cause the at least one processor to</del>:<br>
+display a first action effect based on the placement point being an effective region, the first action effect being used for prompting that the first virtual prop is capable of being placed at the placement point; <del>and</del>or<br>
+<br>
+display a second action effect based on the placement point not being the effective region, the second action effect being used for prompting that the first virtual prop is incapable of being placed at the placement point.<br>
+<br>
+17. (Currently Amended) The apparatus according to claim 16, wherein the first action effect comprises at least one of a first light circle special effect <del>and </del><u>or</u><u></u>a first prompt information; and<br>
+the second action effect comprises at least one of a second light circle special effect <del>and</del><u></u><u>or </u>a second prompt information<del>, the first action effect being different from the second action effect</del>.<br>
+<br>
+18. (Currently Amended) The apparatus according to claim 10, <u>the memory further storing instructions that when executed by the one or more processors cause the apparatus</u>to<del>wherein the controlling code is further configured to cause the at least one processor to</del>:<br>
+destroy the first virtual prop based on a quantity of intercepted second virtual props reaching a first threshold; or destroy the first virtual prop based on a use duration of the first virtual prop reaching a second threshold.<br>
+<br>
+19. (Currently Amended) A non-transitory computer-readable storage medium, storing<u> computer-executable instructions that when executed by one or more processors, cause the one or more processors to</u><del> at least one computer program, the at least one computer program being executable by a processor to perform</del>:<br>
+display a first user interface (UI), the first UI comprising a first virtual environment image, the first virtual environment image corresponding to an image of a virtual environment observed from a perspective of a first virtual character;<br>
+control, in response to a use instruction for a first virtual prop, the first virtual character to use the first virtual prop<del>, the first virtual prop being a virtual prop used for generating a defense range, the defense range being a range in which the first virtual prop is capable of producing a defense effect against an a</del><del>tt</del><del>ack from a second virtual prop, the second virtual prop having a function of chasing a target virtual character</del>;<br>
+<br>
+<u>determine whether the first virtual prop may be placed at a region in contact with a placement point</u><u>;</u><br>
+<u>control, based on a tri</u><u>gg</u><u>erin</u><u>g</u><u> option for the first virtual prop and a determination that the first virtual prop may be placed at the region, the first virtual character to launch the first virtual prop to the placement point using a predetermined flight path, wherein the first virtual prop is configured to intercept, within a defense range of the region, a target virtual prop configured to chase a target virtual character</u><u>;</u><br>
+<u>detect a presence of a second virtual prop that is configured to chase the first virtual </u><u>character</u><u></u>and intercept the second virtual prop based on determining that the second virtual prop <del>will fall withinh</del><u>as entered </u>the defense range.<br>
+<br>
+20. (Currently Amended) The non-transitory computer-readable storage medium of claim 19, wherein the target virtual character is at least one of the first virtual character <del>and </del><u>or</u><u></u>a second virtual character, the second virtual character and the first virtual character belonging to a same team; and<br>
+wherein the intercepting the second virtual prop <del>comprises intercepting the second virtual prop </del><u>is further based</u> on determining that <del>the second virtual prop will fall within the defense range and t</del>he target virtual character <del>being located </del><u>is</u><u></u>within the defense range.
+</body></html>

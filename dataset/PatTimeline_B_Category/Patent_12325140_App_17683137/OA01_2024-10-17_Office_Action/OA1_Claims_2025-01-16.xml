@@ -1,0 +1,88 @@
+<html><head></head><body><h3>Date: 2025-01-16</h3>
+
+<h1>IN THE CLAIMS</h1>
+
+<h1>What is claimed is:</h1>
+<br>
+1.
+(Currently amended) A manufacturing system comprising:<br>
+a robot arm comprising an end effector, wherein the robot arm is configured to transport objects within the manufacturing system; and<br>
+a controller operatively coupled to the robot arm, wherein the controller is to:<br>
+detect a presence of an object placed on the end effector of the robot arm;<br>
+apply vacuum pressure to a space between the object and the end effector via one or more vacuum grip pads of the end effector, wherein the vacuum pressure is applied to secure the object to the end effector;<br>
+obtain, by one or more pressure sensors of the robot arm, a vacuum pressure measurement indicating an amount of vacuum pressure between the object and the end effector;<br>
+determine whether the obtained vacuum pressure measurement satisfies a vacuum pressure criterion;<br>
+<u>responsive to determining that the obtained vacuum pressure measurement does not satisfy the vacuum pressure criterion, </u><del>determine </del><u>identify </u>a transport speed setting for transporting the object using the robot arm based on <u>a frictional force associated with the object and the end effector, the frictional force determined based on at least a weight of the object, a material of the object, and a material of the vacuum grip pads </u><del>whether the obtained vacuum pressure measurement satisfies the vacuum pressure criterion</del>; and<br>
+causing the robot arm to move the object according to the transport speed setting.<br>
+2.
+(Currently amended) The manufacturing system of claim 1, wherein <del>determining</del><u> identifying </u>the transport speed setting comprises:<br>
+<del>responsive to determining that the obtained vacuum pressure measurement does not satisfy the vacuum pressure criterion, </del>determining a first transport speed setting;<br>
+<del>wherein the first transport speed setting </del>correspond[[s]]ing to a first transport speed <del>that</del><br>
+<br>
+<del>is slow enough </del>such that the object is secured to the end effector based on [[a]] the frictional force between the object and the end effector.<br>
+3.
+(Currently amended) The manufacturing system of claim [[2]] 1, <u>further comprising </u><del>wherein determining the transport speed setting comprises</del>:<br>
+responsive to determining that the obtained vacuum pressure measurement satisfies the vacuum pressure criterion, <del>determining </del><u>identifying </u>[[a]] the <del>second </del>transport speed setting <u>for transporting the object using the robot arm based on a default transport speed associated with the robot arm</u><del>, wherein the second transport speed setting corresponds to a second transport speed that is faster than the first transport speed</del>.<br>
+4.
+(Canceled)<br>
+5.
+(Canceled)<br>
+6.
+(Currently amended) The manufacturing system of claim [[5]] 1,<del>wherein the controller is further to:</del><br>
+<del>determine a second material type associated with the one or more vacuum grip pads;</del><br>
+<del>wherein the transport speed is determined based on the first material type and the </del><del>s</del><del>econd material type, and </del>wherein the [[first]] material [[type]] <u>of the object </u>comprises a silicon-based material <del>type and the second material type comprises at least one of a polyaryletherketone-based material type, a polybenzimidazole-based material type, a polyimide-based material type, a polyethylene-based material type, or a perfluoroelastomer-based material type</del>.<br>
+7.
+(Currently amended) The manufacturing system of claim 1, wherein to determine whether the obtained vacuum pressure measurement satisfies the vacuum pressure criterion, the controller is <u>configured </u>to:<br>
+determine whether the obtained vacuum pressure measurement exceeds a vacuum pressure measurement threshold,<br>
+<br>
+wherein the obtained vacuum pressure measurement is determined to satisfy the vacuum pressure criterion responsive to the obtained vacuum pressure measurement exceeding the vacuum pressure measurement threshold.<br>
+8.
+(Currently amended) The manufacturing system of claim 1, wherein the controller is <u>configured </u>to detect the presence of the object placed based on one or more readings by a presence sensor of the end effector, wherein the presence sensor comprises at least one of a thru-beam sensor, an optical sensor, a reflective sensor, a capacitance sensor, a Halifax sensor, an ultrasonic sensor, or a weight-based sensor.<br>
+9.
+(Original) The manufacturing system of claim 1, wherein the object comprises at least one of a substrate, a process kit ring, a process kit ring carrier, a diagnostic wafer, or a cover wafer.<br>
+<br>
+10.   (Currently amended) A method comprising:detecting a presence of an object placed on an end effector of a robot arm;<br>
+applying vacuum pressure to a space between the object and the end effector via one or more vacuum grip pads of the end effector, wherein the vacuum pressure is applied to secure the object to the end effector;<br>
+obtaining, by one or more pressure sensors of the robot arm, a vacuum pressure measurement indicating an amount of vacuum pressure between the object and the end effector;<br>
+determining whether the obtained vacuum pressure measurement satisfies a vacuum pressure criterion;<br>
+<u>responsive to determining that the obtained vacuum pressure measurement does not satisfy the vacuum pressure criterion, </u><del>determining </del><u>identifyin</u><u>g</u><u></u>a transport speed setting for transporting the object using the robot arm based on <u>a frictional force associated with the object and the end effector, the frictional force determined based on at least a weight of the object, a material of the object, and a material of the vacuum </u><u>g</u><u>rip </u><u>p</u><u>ads</u><del>w</del><del>hether the obtained vacuum pressure measurement satisfies the vacuum pressure criterion</del>; and<br>
+causing the robot arm to move the object according to the transport speed setting.<br>
+<br>
+<br>
+11.    (Currently amended) The method of claim 10, wherein <del>determining </del><u>identifying</u> the transport speed setting comprises:<del>responsive to determining that the obtained vacuum pressure measurement does not satisfy the vacuum pressure criterion, </del>determining a first transport speed setting;<br>
+<del>w</del><del>herein the first transport speed setting </del>corresponding to a first transport speed that is<del> slo</del><del>w</del><del> enough </del>such that the object is secured to the end effector based on [[a]] the frictional force between the object and the end effector.<br>
+<br>
+12.    (Currently amended) The method of claim 1 [[1]]0, wherein determining the transport speed setting comprises:responsive to determining that the obtained vacuum pressure measurement satisfies the vacuum pressure criterion, <del>determining </del><u>identifying </u>[[a]] the <del>second </del>transport speed setting <u>for transporting the object using the robot arm based on a default transport speed associated with the robot arm</u><del>, </del><del>w</del><del>herein the second transport speed setting corresponds to a second transport speed that is faster than the first transport speed</del>.<br>
+<br>
+13.    (Canceled)<br>
+<br>
+14.    (Canceled)<br>
+<br>
+15.    (Currently amended) The method of claim 1 [[4]]0,<del>wherein f</del><del>ur</del><del>ther comprising:</del><del>determining a second material type associated </del><del>w</del><del>ith the vacuum grip pads, </del><del>w</del><del>herein the transport speed is determined based on the first material type and the second material type, and </del>wherein the [[first]] material [[type]] <u>of the object </u>comprises a silicon-based material <del>type and the second material type comprises at least one of a polyaryletherketone-based material type, a polybenzimidazole-based material type, a polyimide-based material type, a</del><del></del><del>polyethylene-based material type, or a perfluoroelastomer-based material type</del><del>.</del><br>
+<br>
+16.    (Original) The method of claim 10, wherein determining whether the obtained vacuum pressure measurement satisfies the vacuum pressure criterion comprises:determining whether the obtained vacuum pressure measurement exceeds a vacuum pressure measurement threshold,<br>
+<br>
+wherein the obtained vacuum pressure measurement is determined to satisfy the vacuum pressure criterion responsive to the obtained vacuum pressure measurement exceeding the vacuum pressure measurement threshold.<br>
+<br>
+17.    (Original) The method of claim 10, wherein the presence of the object is detected based on one or more readings by a presence sensor of the end effector, wherein the presence sensor comprises at least one of a thru-beam sensor, an optical sensor, a reflective sensor, a capacitance sensor, a Halifax sensor, an ultrasonic sensor, or a weight-based sensor.<br>
+<br>
+18.   (Currently amended) A robot arm for a manufacturing system, comprising:an end effector, comprising:<br>
+one or more vacuum grip pads configured to apply a vacuum to a space between the vacuum grip pads and an object to secure the object to the end effector; and<br>
+a detector to detect a presence of the object on the end effector, wherein the detector comprises at least one of an optical sensor or a capacitance sensor;<br>
+[[and]] a pressure sensor to measure a pressure of the space between the one or more vacuum grip pads and the object; <u>and</u><u>a weight sensor to measure a weight of the object on the end effector,</u><br>
+wherein the robot arm is configured to move according to a first motion profile responsive to the pressure of the space between the vacuum grip pads and the object satisfying a pressure criterion and to move according to a second motion profile responsive to the pressure of the space between the vacuum grip pads and the object failing to satisfy the pressure criterion <u>wherein the second motion profile is based on at least the weight of the object on the end effector, a material of the object, and a material of the one or more vacuum </u><u>g</u><u>rip pads.</u><br>
+<br>
+19.    (Original) The robot arm of claim 18, wherein the end effector further comprises one or more friction grip pads configured to contact the object to secure the object.<br>
+<br>
+<br>
+20.    (Currently amended) The robot arm of claim 18, wherein the first motion profile corresponds to a first transport speed and the second motion profile corresponds to a second transport speed, wherein the second transport speed is <del>slo</del><del>w</del><del> enough </del>such that the object is secured to the end effector based on a frictional force between the object and the end effector<del>, and </del><del>w</del><del>herein the first transport speed is faster than the second transport speed</del>.<br>
+<br>
+21.    (New) The manufacturing system of claim 1, wherein the material of the one or more vacuum grip pads comprises at least one of a polyaryletherketone-based material, a polybenzimidazole-based material, a polyimide-based material, a polyethylene-based material, or a perfluoroelastomer-based material.<br>
+<br>
+22.    (New) The manufacturing system of claim 1, further comprising:determining the weight of the object based on one or more readings of a weight sensor of the robot arm.<br>
+<br>
+23.    (New) The method of claim 10, wherein the material of the one or more vacuum grip pads comprises at least one of a polyaryletherketone-based material, a polybenzimidazole-based material, a polyimide-based material, a polyethylene-based material, or a perfluoroelastomer-based material.<br>
+<br>
+24.    (New) The method of claim 10, further comprising:determining the weight of the object based on one or more readings of a weight sensor of the robot arm.<br>
+
+</body></html>

@@ -1,0 +1,52 @@
+<html><head></head><body><h3>Date: 2021-09-22</h3>
+
+<h1><u>Claims:</u></h1>
+<br>
+<br>
+1.    A system for measuring and assessing anesthesia of an animal subject based on electroencephalography of the animal subject, the system comprising:a signal pre-processor comprising at least two filters in different filtering frequency and a down-sampler for removing unwanted signals and noise from incoming signal stream of the system to generate an incoming signal for subsequent epoch generation;<br>
+an epoch generator for generating an epoch signal containing 1-second and<br>
+ 10% overlapping epochs comprising a two-input multiplexer, an address generator and a memory, the two-input multiplexer receiving the incoming signal from the signal pre-processor and also a selector input from the address generator to feed an input signal stream to the memory after a counter value of a counter at a relatively higher frequency from the address generator reaches 500; the address generator having two counters at different frequencies and generating two counter signals with write address and read address, respectively, to be fed to the memory, and also a control signal to be fed directly for subsequent feature extraction; the memory receiving the input signal stream from the two-input multiplexer and two counter signals with the write address and read address, respectively, from the address generator and then generating the epoch signal containing the 1-second and 10% overlapping epochs for subsequent feature extraction;a feature extractor comprising a derivative calculator and a variance calculator, the derivative calculator receiving the epoch signal containing 1-second and 10% overlapping epochs from the memory of the epoch generator and<br>
+ calculating a mean of accumulated squared-differences among different epochs; the variance calculator receiving absolute value of each of the epochs accumulated and determining a mean of the accumulated epochs, obtaining a deviation of an epoch by subtracting the mean from one of the absolute values of the epoch, calculating a squared deviation followed by determining square root of an average squared deviation for subsequent classification;a classifier comprising two cascaded units for expanding features extracted by the feature extractor by double the number of the features followed by feature mapping to set a classification boundary, and subsequently using an output of the<br>
+<br>
+feature mapping to obtain a sigmoid function as a decision boundary in order for subsequent prediction;a predictor comprising a predictor circuit for accumulating the classifier's outputs, constraining a decision value of the classifier's outputs between 0 and 1, and determining level of anesthesia of the animal subject in terms of the constrained decision value based on the animal subject's real-time electroencephalogram.<br>
+<br>
+2.    The system of claim 1, wherein a first filter of the signal pre-processor has a filtering frequency to compensate the power-line interference of the incoming signal<br>
+ from the electroencephalography of the animal subject.<br>
+<br>
+3.    The system of claim 1, wherein a second filter of the signal pre-processor has a filtering frequency comparable to an average frequency of a wide electroencephalography frequency region in a range of 0-250 Hz of the incoming<br>
+ signal from the animal subject.<br>
+<br>
+4.    The system of claim 1, wherein the incoming signal is down sampled at least ten times after being subject to the second filter using the down-sampler.<br>
+<br>
+5.
+The system of claim 1, wherein the epoch generator creates a sliding window to divide each electroencephalography channel into short-overlapped epochs. It is optimally designed to consume lower resources and the smallest possible size of memory unit (RAM).<br>
+<br>
+6.
+The system of claim 1, wherein the derivative calculator of the feature extractor comprises a multiplier to square the differences among different epochs before calculating the mean of the accumulated squared-differences, and further comprises an accumulator and divisor for calculating the mean.<br>
+<br>
+7.
+The system of claim  1, wherein the variance calculator comprises a multiplier, an accumulator and a divisor circuit to consecutively calculate the average squared deviation; the variance calculator further comprises a register to store the average squared deviation for being fed to the classifier subsequently.<br>
+<br>
+<br>
+8.    The system of claim 1, wherein the two cascaded units of the classifier comprises a feature mapping unit for said expanding and feature mapping to enhance classification accuracy by setting the classification boundary with an increase in classifier variance, and an exponential and reciprocal computation circuit for<br>
+ receiving the output of the feature mapping unit to determine the sigmoid function as the decision boundary for being fed to the subsequent predictor.<br>
+<br>
+9.    The system of claim 1, wherein the predictor is configured to accumulate the level of anesthesia in terms of percentage and constrain an output value as a decision<br>
+ score between 0 and I with respect to the percentage of the anesthesia of the animal subject, wherein a 100% anesthesia corresponds to the decision score of 1, while a 0% anesthesia corresponds to the decision score of 0.<br>
+<br>
+10.   A method for determining depth of anesthesia of an animal subject from a<br>
+ transient behavior of an electroencephalography using machine learning techniques thereof, the method comprising:recording electroencephalographic (EEG) signal of the animal subject and filtering thereof within a relatively lower frequency band to remove unwanted signals and noise;<br>
+down-sampling the filtered EEG signal to at least ten times for reducing data size and accelerating subsequent processing without losing essential features of the EEG for subsequent classification;<br>
+generating epochs from the down-sampled EEG signals comprising segmenting each EEG channel with a shortened signal time and overlapping one<br>
+EEG signal with a preceding EEG signal thereof;extracting two features from each epoch selected from derivative and variance thereof;<br>
+mapping the derivative and variance features to determine a classification boundary followed by using an output of the mapping to determine a sigmoid<br>
+ function as a decision boundary between awake and anesthetized states:if the output value is lower than 0.5, the epoch is classified as awake; otherwise, the epoch is classified as anesthetized;<br>
+<br>
+accumulating the output value of consecutive awake and anesthetized epochs, respectively, and constraining each of the output value between 0 and 1 in order to predict a likelihood of a successive awake or anesthetized epoch.<br>
+5
+10
+15
+20
+25
+30
+</body></html>

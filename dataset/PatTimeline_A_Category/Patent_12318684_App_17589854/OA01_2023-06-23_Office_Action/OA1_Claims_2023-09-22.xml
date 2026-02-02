@@ -1,0 +1,107 @@
+<html><head></head><body><h3>Date: 2023-09-22</h3>
+
+<h1>IN THE CLAIMS</h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1>Listing of Claims:</h1>
+<br>
+<br>
+1.    (Currently amended) A method for determining a type of material of an object in a real-world environment, comprising:capturing a set of audio data from the real-world environment, wherein the real-world environment includes the object having the type of material; [[and]]<del> applying an artificial intelligence (A</del><del>l</del><del>) model to </del><u>providing </u>the set of audio data captured from the real-world environment to <u>an artificial intelligence (A</u><u>l</u><u>) model to </u>determine the type of material of the object within the real-world environment;<br>
+<u>rendering a virtual object having the type of material in a virtual environment</u><u>;</u><u> and</u><br>
+<u>providing the set of audio data to be output as sound when the virtual object interacts with another virtual object in the virtual environment.</u><br>
+2.
+(Original) The method of claim 1, further comprising:<br>
+receiving a plurality of sets of audio data based on sounds received from a plurality of objects within a plurality of environments;<br>
+additionally receiving a plurality of output parameters regarding the plurality of objects within the plurality of environments;<br>
+training the Al model based on the plurality of sets of audio data and the plurality of output parameters.<br>
+3.
+(Original) The method of claim 2, further comprising extracting a plurality of features from the plurality of sets of audio data, wherein the plurality of features include a plurality of amplitudes of the plurality of sets of audio data and a plurality of frequencies of the plurality of sets of audio data.<br>
+4.
+(Original) The method of claim 3, further comprising:<br>
+classifying the plurality of features to output associations between the plurality of features and the plurality of output parameters,<br>
+wherein said training the Al model includes providing, to the Al model, the associations between the plurality of features and the plurality of output parameters,<br>
+<br>
+<br>
+<br>
+wherein said applying the Al model includes determining, by the Al model, based on the associations between the plurality of features and the plurality of output parameters, a probability that the set of audio data captured from the real-world environment indicates the type of material of the object.<br>
+5.
+(Original) The method of claim 3, further comprising receiving a plurality of sets of input data including a plurality of sets of image data captured by a plurality of cameras in the plurality of environments, or light detection and ranging (LiDAR) data captured from the plurality of environments, or inertial measurement unit (IMU) data captured from the plurality of environments, or a combination thereof, wherein said extracting the plurality of features comprises extracting the plurality of features from the plurality of sets of input data, wherein the plurality of features include a plurality of identities of the plurality of objects, a plurality of physical parameters defining movements of the plurality of objects and a plurality of graphical parameters of the plurality of objects.<br>
+6.
+(Original) The method of claim 5, wherein the plurality of physical parameters include a first physical parameter and a second physical parameter, wherein the plurality of graphical parameters include a first graphical parameter and a second graphical parameter, the method further comprising:<br>
+classifying the plurality of features to output associations between the plurality of features and the plurality of output parameters,<br>
+wherein said training the Al model includes providing, to the Al model, the associations between the plurality of features and the plurality of output parameters.<br>
+7.
+(Original) The method of claim 6, wherein said determining the type of material of the object within the real-world environment includes determining a probability that the object has the type of material, wherein the probability is determined based on the associations between the plurality of features and the plurality of output parameters.<br>
+8.
+(Currently amended) The method of claim 7, further comprising:<br>
+generating virtual object data for display of [[a]] the virtual object as interacting with the type of material in a virtual environment;<br>
+<del>generating </del><u>accessing the set of </u>audio data to be output by the virtual object as the virtual object interacts with the type of material; and<br>
+<br>
+<br>
+<br>
+generating haptic feedback data to be output by a body connected device as the virtual object interacts with the type of material, wherein the virtual object data represents the type of material of the object in the real-world environment, a movement of the object from the first physical parameter to the second physical parameter in the real-world environment, and a change from the first graphical parameter to the second graphical parameter of the object in the real-world environment.<br>
+9.
+(Currently amended) The method of claim   2, wherein the plurality of output parameters include data identifying the plurality of materials of the plurality of objects in the plurality of environments, the method further comprising simulating a virtual interaction between [[a]] <u>the other </u>virtual object of a video game and the object based on the type of material of the object.<br>
+<br>
+10.   (Original) The method of claim 2, further comprising receiving a plurality of sets of input data, wherein the plurality of sets of input data include a plurality of sets of image data captured by a plurality of cameras in the plurality of environments, wherein the plurality of sets of audio data and the plurality of image data sets are captured when the plurality of objects interact with a plurality of users in the plurality of environments.<br>
+<br>
+11.   (Currently amended) A server for determining a type of material of an object in a real- world environment, comprising:a processor configured to:<br>
+capture a set of audio data from the real-world environment, wherein the real- world environment includes the object having the type of material; [[and]]<del> apply an artificial intelligence (</del><del>AI</del><del>) model to </del><u>p</u><u>rovide</u> the set of audio data captured from the real-world environment to <u>an artificial intelligence (A</u><u>I</u><u>) model to</u> determine the type of material of the object within the real-world environment;<br>
+<u>render a virtual object having the type of material in a virtual environment</u><u>;</u><br>
+<u>and provide the set of audio data to be output as sound when the virtual object interacts with another virtual object in the virtual environment;</u> and<br>
+a memory device coupled to the processor.<br>
+<br>
+12.   (Original) The server of claim 11, wherein the processor is configured to:<br>
+<br>
+<br>
+<br>
+receive a plurality of sets of audio data based on sounds received from a plurality of objects within a plurality of environments; and<br>
+additionally receive a plurality of output parameters regarding the plurality of objects within the plurality of environments; and<br>
+train the AI model based on the plurality of sets of audio data and the plurality of output parameters.<br>
+<br>
+13.    (Original) The server of claim 12, wherein the processor is configured to extract a plurality of features from the plurality of sets of audio data, wherein the plurality of features include a plurality of amplitudes of the plurality of sets of audio data and a plurality of frequencies of the plurality of sets of audio data.<br>
+<br>
+14.    (Original) The server of claim 13, wherein the processor is configured to train the AI model based on the plurality of sets of audio data and the plurality of output parameters.<br>
+<br>
+15.    (Original) The server of claim 14, wherein the processor is configured to:classify the plurality of features to output associations between the plurality of features and the plurality of output parameters,<br>
+wherein to train the AI model, the processor is configured to provide, to the AI model, the associations between the plurality of features and the plurality of output parameters,<br>
+wherein to apply the AI model, the processor is configured to determine, using the AI model, based on the associations between the plurality of features and the plurality of output parameters, a probability that the set of audio data captured from the real-world environment indicates the type of material of the object.<br>
+<br>
+16.    (Original) The server of claim 13, wherein the processor is configured to receive a plurality of sets of input data, wherein the plurality of sets of input data include a plurality of sets of image data captured by a plurality of cameras in the plurality of environments, or light detection and ranging (LiDAR) data captured from the plurality of environments, or inertial measurement unit (IMU) data captured from the plurality of environments, or a combination thereof, wherein to extract the plurality of features, the processor is configured to obtain the plurality of features from the plurality of sets of input data, wherein the plurality of features include a plurality of identities of the plurality of objects, a plurality of physical parameters defining movements of the plurality of objects and a plurality of graphical parameters of the plurality of objects.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+17.    (Original) The server of claim  16, wherein the plurality of physical parameters include a first physical parameter and a second physical parameter, wherein the plurality of graphical parameters include a first graphical parameter and a second graphical parameter, wherein the processor is configured to:classify the plurality of features to output associations between the plurality of features and the plurality of output parameters,<br>
+wherein the processor is configured to train the AI model based on the plurality of sets of audio data and the plurality of output parameters, wherein to train the AI model, the processor is configured to provide, to the AI model, the associations between the plurality of features and the plurality of output parameters.<br>
+<br>
+18.    (Original) The server of claim 17, wherein to determine the type of material of the object within the real-world environment, the processor is configured to determine a probability that the object has the type of material, wherein the probability is determined based on the associations between the plurality of features and the plurality of output parameters.<br>
+<br>
+19.    (Currently amended) The server of claim 18, wherein the processor is configured to:generate virtual object data for display of [[a]] the virtual object as interacting with the type of material in a virtual environment;<br>
+<del>generate </del><u>access </u>audio data to be output by the virtual object as the virtual object interacts with the type of material; and<br>
+generate haptic feedback data to be output by a body connected device as the virtual object interacts with the type of material, wherein the virtual object data represents the type of material of the object in the real-world environment, a movement of the object from the first physical parameter to the second physical parameter in the real-world environment, and a change from the first graphical parameter to the second graphical parameter of the object in the real-world environment.<br>
+<br>
+20.    (Currently amended) A system for determining a type of material of an object in a real-world environment, comprising:a client device configured to capture a set of audio data from the real-world environment; and<br>
+<br>
+<br>
+<br>
+a server coupled to the client device via a computer network, wherein the server is configured to:<br>
+receive the set of audio data from the client device via the computer network;<br>
+[[and]]<del> apply an artificial intelligence (</del><del>AI</del><del>) model to </del><u>p</u><u>rovide</u> the set of audio data captured from the real-world environment to <u>an artificial intelligence (A</u><u>I</u><u>) model to</u> determine the type of material of the object within the real-world environment;<u>render a virtual object having the type of material in a virtual environment</u><u>;</u><br>
+<u>and provide the set of audio data to be output as sound when the virtual object interacts with another virtual object in the virtual environment.</u><br>
+<br>
+21.    (Original) The system of claim 20, further comprising:a plurality of client devices configured to:<br>
+generate a plurality of sets of audio data based on sounds received from a plurality of objects within a plurality of environments;<br>
+receive a plurality of output parameters regarding a plurality of types of materials of the plurality of objects,<br>
+wherein the server is coupled to the plurality of client devices via the computer network, wherein the server is configured to:<br>
+receive the plurality of sets of audio data via the computer network from the plurality of client devices;<br>
+receive the plurality of output parameters via the computer network from the plurality of client devices;<br>
+train the AI model based on the plurality of sets of audio data and the plurality output parameters; and<br>
+extract a plurality of features from the plurality of sets of audio data, wherein the plurality of features include a plurality of amplitudes of the plurality of sets of audio data and a plurality of frequencies of the plurality of sets of audio data.<br>
+22.    (Original) The system of claim 21, wherein the server is configured to classify the plurality of features to output associations between the plurality of features and the plurality of output parameters,wherein to train the AI model, the server is configured to provide, to the AI model, the associations between the plurality of features and the plurality of output parameters, Attorney Docket No. SONYP489
+7<br>
+<br>
+<br>
+wherein to apply the AI model, the server is configured to determine, using the AI model, based on the associations between the plurality of features and the plurality of output parameters, a probability that the set of audio data captured from the real-world environment indicates the type of material of the object.<br>
+
+</body></html>

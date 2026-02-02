@@ -1,0 +1,69 @@
+<html><head></head><body><h3>Date: 2024-06-12</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1><u>Listing of the claims:</u></h1>
+<br>
+<br>
+1.    (Currently Amended) A method of calibrating a deformable sensor, the method comprising:capturing image data of the deformable sensor using an external image sensor, wherein the deformable sensor comprises a deformable membrane defining an enclosure that is configured to be filled with a <u>medium, and the deformable membrane comprises a filter la</u><u>y</u><u>er on a surface of the deformable membrane configured to assist in detection of a deformation of the deformable membrane;</u><br>
+comparing the image data of the deformable sensor to a metric<u> to </u><u>g</u><u>enerate a similarity value defining a de</u><u>g</u><u>ree of a difference between the deformable membrane in the ima</u><u>g</u><u>e data and a </u><u>g</u><u>eometry of the deformable membrane corresponding to the metric;</u> and<br>
+<del>when the image data does not satisfy the metric, </del>adjusting a pressure within the enclosure<u> based on the similarity value.</u><br>
+2.
+(Original) The method of claim 1, wherein the deformable sensor further comprises an optical sensor disposed within the enclosure and having a field of view configured to be directed toward a bottom surface of the deformable membrane.<br>
+3.
+(Original) The method of claim 1, wherein:<br>
+comparing the image data of the deformable sensor comprises determining a geometry of the deformable membrane based on the image data; and<br>
+the metric is satisfied when the geometry of the deformable membrane is within a threshold tolerance of an ideal geometry.<br>
+4.
+(Currently Amended) The method of claim 3[[1]], wherein:<br>
+<br>
+<br>
+when the geometry of the deformable membrane is larger than the ideal geometry,<del> the adjustment </del><u>ad</u><u>j</u><u>ustin</u><u>g</u><del> of </del>the pressure within the enclosure<del> is performed by </del><u>comprises </u>decreasing the pressure; and<br>
+when the geometry of the deformable membrane is smaller than the ideal geometry,<del> the adjustment </del><u>adjusting</u><del> of </del>the pressure within the enclosure<del> is performed by </del><u>comprises </u>increasing the pressure.<br>
+5.
+(Original) The method of claim 1, wherein the external image sensor comprises a depth sensor.<br>
+6.
+(Original) The method of claim 1, wherein the comparing of the image data of the deformable sensor to the metric comprises applying an image similarity algorithm.<br>
+7.
+(Original) The method of claim 1, further comprising, using the image data, detecting at least one of a type of an object, a geometry of the object and a pose of the object.<br>
+<br>
+8.    (Currently Amended) A system comprising:a deformable sensor comprising a deformable membrane defining an enclosure that is configured to be filled with a <u>medium, and the deformable membrane comprises a filter la</u><u>y</u><u>er on a surface of the deformable membrane confi</u><u>g</u><u>ured to assist in detection of a deformation of the deformable membrane;</u><br>
+an external image sensor external to the deformable sensor;<br>
+a processor; and<br>
+a non-transitory computer readable medium storing instructions that, when executed by the processor, causes the processor to:<br>
+capture image data of the deformable sensor using the external image sensor;<br>
+compare the image data of the deformable sensor to a metric<u> to </u><u>g</u><u>enerate a similarity value defining a de</u><u>g</u><u>ree of a difference between the deformable membrane in the image data and a </u><u>g</u><u>eometry of the deformable membrane corresponding to the metric;</u> and<br>
+<br>
+<del>when the image data does not satisfy the metric, </del>adjust a pressure within the enclosure<u> based on the similarity value.</u><br>
+9.
+(Original) The system of claim 8, wherein the deformable sensor further comprises an optical sensor disposed within the enclosure and having a field of view configured to be directed toward a bottom surface of the deformable membrane.<br>
+<br>
+10.   (Original) The system of claim 8, wherein:comparing the image data of the deformable sensor comprises determining a geometry of the deformable membrane based on the image data; and<br>
+the metric is satisfied when the geometry of the deformable membrane is within a threshold tolerance of an ideal geometry.<br>
+<br>
+11.   (Currently Amended) The system of claim 10[[8]], wherein:when the geometry of the deformable membrane is larger than the ideal geometry,<del> the adjustment of </del><u>to adjust </u>the pressure within the enclosure is performed by decreasing the pressure;<br>
+and when the geometry of the deformable membrane is smaller than the ideal geometry,<del> the adjustment </del><u>to adjust </u>of the pressure within the enclosure is performed by increasing the pressure.<br>
+<br>
+12.   (Original) The system of claim 8, wherein the external image sensor comprises a depth sensor.<br>
+<br>
+13.   (Original) The system of claim 8, wherein the comparing of the image data of the deformable sensor to the metric comprises applying an image similarity algorithm.<br>
+<br>
+14.   (Original) The system of claim 8, wherein the instructions further cause the processor to, using the image data, detect at least one of a type of an object, a geometry of the object and a pose of the object.<br>
+<br>
+<br>
+<br>
+15.    (Withdrawn) A method of controlling a robot, the method comprising:controlling the robot to position a deformable sensor associated with the robot within a field of view of at least one an external image sensor;<br>
+receiving, from the external image sensor, image data of the deformable sensor;<br>
+comparing the image data of the deformable sensor to a metric; and<br>
+when the image data does not satisfy the metric, adjusting a pressure within the enclosure.<br>
+<br>
+16.    (Withdrawn) The method of claim   15, wherein controlling the robot to position the deformable sensor within the field of view of the external image sensor comprises moving the robot through a gate and the at least one external image sensor is disposed on or within the gate.<br>
+<br>
+17.    (Withdrawn) The method of claim   15, wherein controlling the robot to position the deformable sensor within the field of view of the external image sensor comprises positioning an arm of the robot within the field of view of the external image sensor.<br>
+<br>
+18.    (Withdrawn) The method of claim 15, wherein the external image sensor comprises a depth sensor.<br>
+<br>
+19.    (Withdrawn) The method of claim 15, wherein the comparing of the image data of the deformable sensor to the metric comprises applying an image similarity algorithm.<br>
+<br>
+20.    (Withdrawn) The method of claim 15, further comprising, using the image data, detecting at least one of a type of an object and a pose of the object.
+</body></html>

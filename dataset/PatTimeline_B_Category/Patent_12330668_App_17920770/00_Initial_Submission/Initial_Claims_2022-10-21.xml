@@ -1,0 +1,135 @@
+<html><head></head><body><h3>Date: 2022-10-21</h3>
+<p>CLAIMS</p>
+<br>
+
+1.
+A control system for controlling a total driven wheel torque for a vehicle by controlling torque output of a first torque source of the vehicle and of a second torque source of the vehicle, wherein the first torque source is configured to provide drive torque to a first axle of the vehicle for generating first axle wheel torque, wherein the second torque source is configured to provide drive torque to a second axle of the vehicle for generating second axle wheel torque, the control system comprising one or more controllers, wherein the control system is configured to: 
+<br>
+receive a total torque request for total driven wheel torque; 
+<br>
+produce a first torque requestfor the first torque source and a second torque request for the second torque source, in dependence on the total torque request for the total driven wheel torque; and 
+<br>
+when at least one of the first and second torque requests is not satisfiable modify at least one of the first and second torque requests to enable a sum of the first axle wheel torque and the second axle wheel torque to approach or satisfy the total torque request, wherein the modification of at least one of the torque requests is controlled by at least one torque rate modifier configured to increase or decrease a rate of change of at least one of the torque requests.
+<br>
+
+2.
+The control system of claim 1, wherein the modification of at least one of the torque requests comprises modifying the first torque request and modifying the second torque request.
+<br>
+
+3.
+The control system of claim 1 or 2, wherein the modification of at least one of the torque requests is in dependence on a wheel torque response capability of at least one of the first torque source and the second torque source.
+<br>
+
+4.
+The control system of claim 3, wherein one of the first and second torque sources has a faster wheel torque response capability than the other and when both the first and second torque requests are not satisfiable, the control system is configured to: control the modification of at least one of the first and second torque requests to enable an increased rate of torque change from the one of the first and second torque sources having a greater wheel torque response capability, relative to the other of the first and second torque sources.
+<br>
+
+5.
+The control system of claim 3 or 4, wherein one of the first and second torque sources has a faster wheel torque response capability than the other and when one of the first and second torque requests, but not the other, is satisfiable, the control system is configured to: control the modification of at least one of the torque requests to enable an increased rate of torque change from the one of the first and second torque sources that satisfies its corresponding torque request.
+<br>
+
+6.
+The control system of claim 3, 4 or 5, wherein one of the first and second torque sources has a faster wheel torque response capability than the other, and when the first and second torque requests are changing in opposite directions and at least one of the corresponding torque requests is not satisfiable, the control system is configured to: control the modification of at least one of the torque requests to cause a reduction of torque rate from the torque source having a faster wheel torque response capability.
+<br>
+
+7.
+The control system of any preceding claim, wherein the at least one torque rate modifier comprises a first torque rate modifier for the first torque source and a second torque rate modifier for the second torque source.
+<br>
+
+8.
+The control system of claim 7, wherein controlling the torque shaping function comprises enabling relative variation of the first torque rate modifier and the second torque rate modifier; 
+
+ optionally, a sum of torque rate limits specified by the first torque rate modifier and the second torque rate modifier is configured to match a target combined torque rate modifier to enable the sum of the first axle wheel torque and the second axle wheel torque to approach or satisfy the total torque request.
+<br>
+
+9.
+The control system of claim 8, wherein one of the first and second torque sources has a faster wheel torque response capability than the other and when both of the first and second torque requests are not satisfiable, the relative variation is dependent on the relationship: 
+<br>
+MTSprjm = MTSTotai - (s); and 
+<br>
+MTSsecnd = MTSTotai- (1 - s); 
+<br>
+wherein MTS refers to a torque rate modifier, wherein Prim refers to a primary one of the first and second torque sources, wherein Secnd refers to a secondary one of the first and second torque sources, wherein MTSTotai comprises a target combined torque rate modifier of 
+<br>
+both the first and second axles, wherein s comprises PTS   or (1 -  wherein PTS indicates a wheel torque response capability PTS+STS   PTS+STS of the primary torque source, and wherein STS indicates a wheel torque response capability of the secondary torque source.
+<br>
+
+10.
+The control system of claim 8 or 9, wherein one of the first and second torque sources has a faster wheel torque response capability than the other and when one of the first and second torque requests, but not the other, is satisfiable, the relative variation is dependent on the relationship: 
+<br>
+MTSon = MTSTotaI - MTSoff; 
+<br>
+wherein CTS refers to a torque rate modifier, wherein on refers to the one of the first and second torque sources meeting its corresponding first or second torque request, wherein off refers to the other of the first and second torque sources not meeting its corresponding first or second torque request, and wherein MTSTotai comprises a target combined torque rate modifier of both the first and second axles; 
+<br>
+optionally: 
+MTSoff = min (xTSOff, MTSTotai - d(T  )) wherein xTSof indicates a wheel torque response capability of the off torque source, and wherein d(Tq<del>0</del>n<del>)</del> indicates a rate of torque ff
+
+dt change provided by the on torque source.
+<br>
+
+11.
+The control system of any one of claims 8 to 10, wherein one of the first and second torque sources has a faster wheel torque response capability than the other, and when the first and second torque requests are changing in opposite directions and at least one of the corresponding torque requests is not satisfiable, the relative variation is dependent on the relationship: 
+<br>
+MTSINC = -MTSDEC; 
+<br>
+wherein MTS refers to a torque rate modifier, wherein INC refers to the one of the first and second torque sources providing a positive rate of torque change, and wherein DEC refers to the other of the first and second torque sources providing a negative rate of torque change; 
+<br>
+optionally: 
+MTSINC = -MTSDEC = min(xTSINC
+yTSDEC) 
+ wherein xTSINC indicates a wheel torque response capability of the one of the first and second torque sources providing a positive rate of torque change, and wherein yTSDEC indicates a wheel torque response capability of the other of the first and second torque sources providing a negative rate of torque change. d(TQDTS)
+<br>
+
+12.
+The control system of claim 11, configured to enable a torque rate increase dependent on  dt ) from the one of the first and second torque sources having a faster wheel torque response capability than the other of the first and second torque sources, wherein d(TDTS) d(TQ<del>DT</del>S) is indicative of a rate of change of the total torque request.
+<br>
+
+13.
+The control system of any preceding claim, wherein when both of the first and second torque requests are satisfiable, the total torque request, and/or the first and second torque requests, is dependent on a drivability torque rate modifier, and wherein when at least one of the first and second torque requests is not satisfiable, the drivability torque rate modifier can be exceeded.
+<br>
+
+14.
+The control system of any preceding claim, wherein when both of the first and second torque requests are satisfiable, the modification of at least one of the torque requests maintains a predetermined torque split between the first axle and the second axle, and 
+<br>
+when at least one of the first and second torque requests is not satisfiable, the modification of at least one of the torque requests enables a provided torque split to deviate from the predetermined torque split. 
+
+<br>
+
+15.
+The control system of any preceding claim, wherein the control system is configured to provide lash crossing protection to reduce a rate of torque change around a torque reversal, causing the provided torque to not meet its corresponding torque request during the torque reversal.
+<br>
+
+16.
+A system comprising the control system of any preceding claim, the first torque source, and the second torque source.
+<br>
+
+17.
+A vehicle comprising the system of claim 16.
+<br>
+
+18.
+A method of controlling a total driven wheel torque for a vehicle by controlling torque output of a first torque source of the vehicle and of a second torque source of the vehicle, wherein the first torque source is configured to provide drive torque to a first axle of the vehicle for generating first axle wheel torque, wherein the second torque source is configured to provide drive torque to a second axle of the vehicle for generating second axle wheel torque, the method comprising: 
+<br>
+receiving a total torque request for total driven wheel torque; 
+<br>
+producing a first torque request for the first torque source and a second torque request for the second torque source, in 
+<br>
+dependence on the total torque request for the total driven wheel torque; and 
+<br>
+when at least one of the first and second torque requests is not satisfiable, modifying at least one of the first and second torque requests to enable a sum of the first axle wheel torque and the second axle wheel torque to approach or satisfy the total torque request, wherein the modification of at least one of the torque requests is controlled by at least one torque rate modifier configured to increase or decrease a rate of change of at least one of the torque requests. 
+
+<br>
+
+19.
+Computer software that, when executed, is arranged to perform a method according to claim 18.
+18
+19
+20
+
+5
+10
+15
+20
+25
+30
+</body></html>

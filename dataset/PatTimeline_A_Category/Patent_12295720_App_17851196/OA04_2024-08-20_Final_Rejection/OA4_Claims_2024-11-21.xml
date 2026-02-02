@@ -1,0 +1,83 @@
+<html><head></head><body><h3>Date: 2024-11-21</h3>
+
+<h1><u>LISTING</u> <u>OF</u> <u>THE</u> <u>CLAIMS</u></h1>
+<br>
+<br>
+1-23. (Canceled)222<br>
+<br>
+<br>
+24.   (Currently Amended) A medical system comprising:a tubular shaft having a proximal end and a distal end, the tubular shaft extending along a longitudinal axis;<br>
+an expandable basket assembly coupled to the distal end of the tubular shaft, the expandable basket assembly comprising:<br>
+a plurality of splines configured to bow radially outward from the longitudinal axis; and<br>
+a plurality of electrodes attached to the plurality of splines;<br>
+a processor; and<br>
+a memory in communication with the processor and storing instructions configured to cause the system to:<br>
+receive a first signal indicative of electrical activity in myocardial tissue, the first signal being received from the plurality of electrodes <u>of</u><u>the expandable basket assembly;</u><br>
+receive a second signal indicative of a respective position of the plurality of electrodes <u>of</u><u>the expandable basket assembly;</u><br>
+determine a geometric center of the plurality of electrodes <u>of</u><u>the expandable basket assembl</u><u>y;</u><br>
+determine a focus of an arrhythmia in the myocardial tissue;<br>
+output, to a display, a geometric shape corresponding to an area proximate the geometric center;<br>
+output, to the display, a region indicative of the focus of the arrhythmia; and<br>
+output, to the display, an indication of a spatial relationship between the geometric center and the focus of the arrhythmia.<br>
+<br>
+25.   (Previously Presented) The medical system of claim 24, wherein the instructions are further configured to cause the system to:<br>
+<br>
+<br>
+<br>
+generate an anatomical map indicative of the electrical activity of the myocardial tissue;<br>
+and output, to the display, the anatomical map.<br>
+<br>
+26.   (Previously Presented) The medical system of claim 25, wherein the instructions are further configured to cause the system to output, to the display, an overlay of the geometric shape and the region and the anatomical map.<br>
+<br>
+27.   (Previously Presented) The medical system of claim 24, the plurality of electrodes comprising at least three electrodes.<br>
+<br>
+28.   (Canceled)<br>
+<br>
+29.   (Previously Presented) The medical system of claim 24, wherein the electrical activity comprises local activation time values.<br>
+<br>
+30.   (Previously Presented) The medical system of claim 29, wherein outputting, to the display, the region indicative of the focus of the arrhythmia comprises plotting the local activation time values against their respective locations.<br>
+<br>
+31.   (Previously Presented) The medical system of claim 24, wherein the geometric shape comprises a circle and the indication of the spatial relationship between the geometric center and the focus of the arrhythmia comprises displaying the region within the circle.<br>
+<br>
+32.   (Previously Presented) The medical system of claim 24 further comprising outputting, to the display, a path of the arrhythmia from the focus of the arrhythmia.<br>
+<br>
+33.   (Previously Presented) The medical system of claim 24, wherein the region is indicative of the arrhythmia comprising more than one focus.<br>
+<br>
+<br>
+<br>
+<br>
+34.   (Previously Presented) The medical system of claim 24, wherein the plurality of electrodes are configured to deliver ablation energy to the myocardial tissue.<br>
+<br>
+35.   (Canceled)<br>
+<br>
+36.   (Previously Presented) The medical system of claim 24, wherein the second signal is received from a body surface electrode applied to a body surface.<br>
+<br>
+37.   (Currently Amended) A method, comprising:receiving, from a plurality of electrodes disposed on a distal end of a catheter, a first signal indicative of electrical activity in myocardial tissue, the catheter comprising an expandable basket assembly coupled to the distal end of the catheter, the expandable basket assembly comprising a plurality of splines configured to bow radially outward from a longitudinal axis and the plurality of electrodes attached to the plurality of splines;<br>
+receiving a second signal indicative of a respective position of the plurality of electrodes<u> of the expandable basket assembly;</u><br>
+determining a geometric center of the plurality of electrodes <u>of the expandable basket assembly;</u><br>
+determining a focus of an arrhythmia in the myocardial tissue;<br>
+outputting, to a display, a geometric shape corresponding to an area proximate the geometric center;<br>
+outputting, to the display, a region indicative of the focus of the arrhythmia; and<br>
+outputting, to the display, an indication of a spatial relationship between the geometric center and the focus of the arrhythmia.<br>
+<br>
+38.   (Previously Presented) The method of claim 37, the plurality of electrodes comprising at least three electrodes.<br>
+39.   (Previously Presented) The method of claim 38, wherein the electrical activity comprises local activation time valuesSVG
+{EMBED HERE}
+0.080.087<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+40.   (Previously Presented) The method of claim 39, wherein outputting, to the display, the region indicative of the focus of the arrhythmia comprises plotting the local activation time values against their respective locations.<br>
+<br>
+41.   (Previously Presented) The method of claim 40 further comprising:generating an anatomical map indicative of the electrical activity of the myocardial tissue; and<br>
+outputting, to the display, the anatomical map.<br>
+<br>
+42.   (Previously Presented) The method of claim 41 further comprising outputting, to the display, an overlay of the geometric shape and the region and the anatomical map.<br>
+<br>
+43.   (Previously Presented) The method of claim 42, wherein the second signal is received from the catheter.<br>
+<br>
+44.   (Previously Presented) The method of claim 42, wherein the second signal is received from a body surface electrode applied to a body surface.<br>
+
+</body></html>

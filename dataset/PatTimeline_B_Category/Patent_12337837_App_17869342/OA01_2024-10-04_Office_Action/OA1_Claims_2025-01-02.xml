@@ -1,0 +1,72 @@
+<html><head></head><body><h3>Date: 2025-01-02</h3>
+
+<h1><u>Listing of Claims:</u></h1>
+<p><u>AMENDMENT TO THE CLAIMS</u>This listing of claims will replace all prior versions, and listings, of claims in the application.</p><br>
+<br>
+1. (Currently Amended) An apparatus for preventing car collision, the apparatus comprising:<br>
+a communication unit configured to communicate with a preceding vehicle or a camera;<br>
+and a processor operatively connected to the communication unit,wherein the processor is configured to:<br>
+obtain information about a <u>third </u>vehicle <del>stopped </del>in front of the preceding vehicle acquired by the preceding vehicle;<br>
+calculate a deceleration amount for preventing a collision with the <u>third </u><del>stopped </del>vehicle based on the information about the <u>third </u><del>stopped </del>vehicle;<br>
+predict a preset event related to the preceding vehicle based on a change in a position of the preceding vehicle; and<br>
+control an autonomous driving vehicle based on the deceleration amount according to a prediction result regarding the preset events<u> wherein the processor detects the change in the position of the preceding vehicle and predicts occurrence of the preset event using an event prediction model based on the detected change in the position of the preceding vehicle, and wherein the event prediction model is trained based on information related to the detected change in the position of the preceding vehicle using a machine learning algorithm.</u><br>
+<br>
+2. (Currently Amended) The apparatus of claim 1, wherein, when it is not possible to obtain, from the preceding vehicle, the information about the <u>third </u>vehicle <del>stopped </del>in front of the preceding vehicle, the processor obtains the information about the <u>third </u>vehicle <del>stopped </del>in front of the preceding vehicle detected by one or more cameras installed on a road on which the autonomous driving vehicle is traveling.<br>
+<br>
+<br>
+<br>
+3. (Currently Amended) The apparatus of claim 2, wherein the information about the<u> third vehicle</u><del>stopped </del>in front of the preceding vehicle includes at least one piece of information among the group of information about a distance between the preceding vehicle and the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle and information about a lane in which the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle is located.<br>
+<br>
+4. (Cancelled)<br>
+<br>
+5. (Currently Amended) The apparatus of <del>claim 4</del><u>claim 1,</u>wherein the preset event includes an event where one side of the preceding vehicle is positioned at a point in an adjacent lane of either side of a lane in which the preceding vehicle is traveling, the point being separated by a distance exceeding 1/3 of a total width of the preceding vehicle from any one lane marking of a corresponding side of the lane in which the preceding vehicle is traveling.<br>
+<br>
+6. (Currently Amended) The apparatus of claim 1, wherein the information about the<u> third vehicle</u><del>stopped </del>in front of the preceding vehicle includes at least one piece of information among the group of information about a distance between the preceding vehicle and the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle and information about a lane in which the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle is located.<br>
+<br>
+7. (Cancelled)<br>
+<br>
+8. (Currently Amended) A method for preventing car collision, the method comprising:<br>
+obtaining information about a <u>third </u>vehicle <del>stopped </del>in front of a preceding vehicle acquired by the preceding vehicle;<br>
+calculating a deceleration amount for preventing a collision with the <u>third </u><del>stopped v</del>ehicle based on the obtained information about the <u>third </u><del>stopped v</del>ehicle;<br>
+predicting a preset event related to the preceding vehicle based on a change in a position of the preceding vehicle; and<br>
+controlling an autonomous driving vehicle based on the deceleration amount according to a prediction result regarding the preset events<u> wherein the predicting of the preset event related to the preceding vehicle comprises:</u><br>
+<br>
+<u>detecting the change in the position of the preceding vehicle</u><u>;</u><br>
+<u>training an event prediction model based on information related to the detected change in the position of the preceding vehicle using a machine learning algorithm</u><u>;</u><u> and</u><br>
+<u>predicting occurrence of the preset event using the event prediction model based on the change in the position of the preceding vehicle.</u><br>
+<br>
+9. (Currently Amended) The method of claim 8, further comprising obtaining the information about the <u>third </u>vehicle <del>st</del><del>opped </del>in front of the preceding vehicle detected by one or more cameras installed on a road on which the autonomous driving vehicle is traveling when it is not possible to obtain, from the preceding vehicle, the information about the <u>third </u>vehicle<del> stopped </del>in front of the preceding vehicle.<br>
+<br>
+10. (Currently Amended) The method of claim 9, wherein the information about the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle includes at least one piece of information among the group of information about a distance between the preceding vehicle and the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle and information about a lane in which the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle is located.<br>
+<br>
+11. (Cancelled)<br>
+<br>
+12. (Currently Amended) The method of <del>claim 11</del><del></del><u>claim 8,</u>wherein the preset event includes an event where one side of the preceding vehicle is positioned at a point in an adjacent lane of either side of a lane in which the preceding vehicle is traveling, the point being separated by a distance exceeding 1/3 of a total width of the preceding vehicle from any one lane marking of a corresponding side of the lane in which the preceding vehicle is traveling.<br>
+<br>
+13. (Currently Amended) The method of claim 8, wherein the information about the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle includes at least one piece of information among the group of information about a distance between the preceding vehicle and the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle and information about a lane in which the <u>t</u><u>hird</u> vehicle <del>stopped </del>in front of the preceding vehicle is located.<br>
+<br>
+<br>
+<br>
+14. (Cancelled)<br>
+<br>
+15. (New) The apparatus of claim 1, wherein the third vehicle includes a vehicle that is stopped in front of the preceding vehicle.<br>
+<br>
+16. (New) The apparatus of claim 1, wherein the processor performs deceleration control of the autonomous driving vehicle based on the deceleration amount, at a point in time at which the processor determines that the preset event will occur based on the prediction result of the event prediction model, before a point in time at which the preset event actually occurs.<br>
+<br>
+17. (New) The apparatus of claim 1, wherein the event prediction model is trained from a first point in time to a second point in time, the first point in time is a point in time at which the preceding vehicle starts to move from a same lane as a lane in which the autonomous driving vehicle is traveling to an adjacent lane, the second point in time is a point in time at which a portion of the preceding vehicle is located at a point in the adjacent lane, the point in the adjacent lane being separated by a predetermined distance from any one lane marking of the lane in which the preceding vehicle is traveling, and<br>
+the second point in time is a point in time at which the preset event related to the preceding vehicle occurs.<br>
+<br>
+18. (New) The apparatus of claim 1, wherein the processor predicts that the preset event will occur based on data regarding a probability of the occurrence of the preset event generated by the trained event prediction model.<br>
+<br>
+19. (New) The method of claim 8, wherein the third vehicle includes a vehicle that is stopped in front of the preceding vehicle.<br>
+20. (New) The method of claim 8, wherein the controlling of the autonomous driving vehicle comprises performing deceleration control of the autonomous driving vehicle based on the deceleration amount, at a point in time at which the processor determines that the preset event DB1/ 151595431.1
+6<br>
+<br>
+will occur based on the prediction result of the event prediction model, before a point in time at which the preset event actually occurs.<br>
+<br>
+21. (New) The method of claim 8, wherein the training of the event prediction model comprises training the event prediction model from a first point in time to a second point in time, the first point in time is a point in time at which the preceding vehicle starts to move from a same lane as a lane in which the autonomous driving vehicle is traveling to an adjacent lane, the second point in time is a point in time at which a portion of the preceding vehicle is located at a point in the adjacent lane, the point in the adjacent lane being separated by a predetermined distance from any one lane marking of the lane in which the preceding vehicle is traveling, and<br>
+the second point in time is a point in time at which the preset event related to the preceding vehicle occurs.<br>
+<br>
+22. (New) The method of claim 20, wherein the predicting of the preset event related to the preceding vehicle further comprises predicting that the preset event will occur based on data regarding a probability of the occurrence of the preset event generated by the trained event prediction model.<br>
+
+</body></html>

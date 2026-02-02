@@ -1,0 +1,67 @@
+<html><head></head><body><h3>Date: 2025-04-29</h3>
+
+<h1><u>LISTING OF THE CLAIMS</u></h1>
+<p>AMENDMENT UNDER 37 C.F.R. § 1.312</p><br>
+<br>
+1-20. (Canceled)219<br>
+<br>
+<br>
+21.  (Previously Presented) An audio device comprising:a plurality of input controls;<br>
+mixing circuitry;<br>
+a left speaker; and<br>
+a right speaker;<br>
+wherein the mixing circuitry is configured to:<br>
+determine a desired balance, between a first type of audio signal and a second type of audio signal, according to the plurality of input controls;<br>
+determine a desired volume, of the first type of audio signal and the second type of audio signal, according to the plurality of input controls;<br>
+determine a virtualization, of one or both of the first type of audio signal and the second type of audio signal, according to a head related transfer function;<br>
+generate a stereo signal by combining the first type of audio signal and the second type of audio signal according to the desired balance, the desired volume, and the virtualization;<br>
+output a left channel of the stereo signal to the left speaker; and<br>
+output a right channel of the stereo signal to the right speaker.<br>
+<br>
+22.  (Currently Amended) The audio device of claim 21, wherein the mixing circuitry is configured to determine or adjust one or more of the desired balance,<u> the </u>desired volume, and the stereo signal based on a data set characterizing one or more of the audio device, a component comprising the mixing circuitry,<del></del><del>and </del>a component comprising the left speaker, and a component comprising the right speaker.<br>
+<br>
+AMENDMENT UNDER 37 C.F.R. § 1.312<br>
+<br>
+23.  (Previously Presented) The audio device of claim 22, wherein the data set is pre- programmed and/or determined based on testing of the audio device.<br>
+<br>
+24.  (Previously Presented) The audio device of claim 22, wherein the mixing circuitry is configured to dynamically determine at least a portion of the data set based on testing of the audio device.<br>
+<br>
+25.  (Previously Presented) The audio device of claim 21, wherein the mixing circuitry is configured to determine, based on a user input, a volume setting for use when outputting the stereo signal.<br>
+<br>
+26.  (Previously Presented) The audio device of claim 25, wherein the mixing circuitry is configured to apply the volume setting such that volume adjustments based on the volume setting are time synchronized to the combining the first type of audio signal and the second type of audio signal.<br>
+<br>
+27.  (Currently Amended) The audio device of claim 25, wherein<u></u><u>the </u>mixing circuitry is configured to apply a delay to applying of the volume setting and/or the combining of the first type of audio signal and the second type of audio signal, based on one or more pre- defined delay time values.<br>
+<br>
+28.  (Currently Amended) The audio device of claim 25, wherein<u></u><u>the </u>mixing circuitry is configured to use a plurality of ramp up or down steps, to effectuate gradual or stepped changes, when applying of the volume setting and/or the combining of the first type of audio signal and the second type of audio signal.<br>
+<br>
+29.  (Previously Presented) The audio device of claim 21, wherein the first type of audio signal comprises game audio and the second type of audio signal comprises chat audio.<br>
+<br>
+AMENDMENT UNDER 37 C.F.R. § 1.312<br>
+<br>
+30.  (Previously Presented) The audio device of claim 21, wherein the mixing circuitry comprises a signal processor.<br>
+<br>
+31.  (Previously Presented) A method for processing audio in an audio device that comprises a plurality of input controls, mixing circuitry, a left speaker, and a right speaker, the method comprising:determining, by the mixing circuity, a desired balance, between a first type of audio signal and a second type of audio signal, according to the plurality of input controls;<br>
+determining, by the mixing circuity, a desired volume, of the first type of audio signal and the second type of audio signal, according to the plurality of input controls;<br>
+determining, by the mixing circuity, a virtualization, of one or both of the first type of audio signal and the second type of audio signal, according to a head related transfer function;<br>
+generating, by the mixing circuity, a stereo signal by combining the first type of audio signal and the second type of audio signal according to the desired balance, the desired volume, and the virtualization;<br>
+outputting a left channel of the stereo signal to the left speaker; and<br>
+outputting a right channel of the stereo signal to the right speaker.<br>
+<br>
+32.  (Currently Amended) The method of claim 31, comprising determining or adjusting one or more of the desired balance,<u></u><u>the </u>desired volume, and the stereo signal based on a data set characterizing one or more of the audio device, a component comprising the mixing circuitry,<del></del><del>and </del>a component comprising the left speaker, and a component comprising the right speaker.<br>
+<br>
+33.  (Previously Presented) The method of claim 32, wherein the data set is pre- programmed and/or determined based on testing of the audio device.<br>
+<br>
+AMENDMENT UNDER 37 C.F.R. § 1.312<br>
+<br>
+34.  (Previously Presented) The method of claim 32, comprising dynamically determining at least a portion of the data set based on testing of the audio device.<br>
+<br>
+35.  (Previously Presented) The method of claim 31, comprising determining, based on a user input, a volume setting for use when outputting the stereo signal.<br>
+<br>
+36.  (Previously Presented) The method of claim 35, comprising applying the volume setting such that volume adjustments based on the volume setting are time synchronized to the combining the first type of audio signal and the second type of audio signal.<br>
+<br>
+37.  (Previously Presented) The method of claim 35, comprising applying a delay to applying of the volume setting and/or the combining of the first type of audio signal and the second type of audio signal, based on one or more pre-defined delay time values.<br>
+<br>
+38.  (Previously Presented) The method of claim 35, comprising using a plurality of ramp up or down steps, to effectuate gradual or stepped changes, when applying of the volume setting and/or the combining of the first type of audio signal and the second type of audio signal.<br>
+<br>
+39.  (Previously Presented) The method of claim 31, wherein the first type of audio signal comprises game audio and the second type of audio signal comprises chat audio.
+</body></html>

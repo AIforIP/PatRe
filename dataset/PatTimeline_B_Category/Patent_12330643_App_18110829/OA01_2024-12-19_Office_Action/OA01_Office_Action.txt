@@ -1,0 +1,42 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Claims
+Claims 1-20 are pending in the application.
+Drawings
+The drawings are objected to because in Fig. 2, “Object Node” is referred to by 114 (which is found in Fig. 1 labeling “Object Node”, while in Fig.2, “Map Node” is referred to by 204 (different from the label found in Fig. 1, where “Mapping Node” is labeled with 116.  Is there a reason why Mapping Node is labeled with a different label in Fig. 2 than in claim 1?
+The drawings are objected to as failing to comply with 37 CFR 1.84(p)(5) because they do not include the following reference sign(s) mentioned in the description:
+Fig. 2: the description in [0041] mentions “an object node 202”. 202 is missing from Fig. 2 (see comments above.)
+Fig. 6: 612 and 614 are missing. [0057] mentions “a trajectory distance 612” and “a specific duration (or “time” 614).”
+Fig. 7a does not show what its description in [0061] states. See comments below.
+Corrected drawing sheets in compliance with 37 CFR 1.121(d) are required in reply to the Office action to avoid abandonment of the application. Any amended replacement drawing sheet should include all of the figures appearing on the immediate prior version of the sheet, even if only one figure is being amended. The figure or figure number of an amended drawing should not be labeled as “amended.” If a drawing figure is to be canceled, the appropriate figure must be removed from the replacement sheet, and where necessary, the remaining figures must be renumbered and appropriate changes made to the brief description of the several views of the drawings for consistency. Additional replacement sheets may be necessary to show the renumbering of the remaining figures. Each drawing sheet submitted after the filing date of an application must be labeled in the top margin as either “Replacement Sheet” or “New Sheet” pursuant to 37 CFR 1.121(d). If the changes are not accepted by the examiner, the applicant will be notified and informed of any required corrective action in the next Office action. The objection to the drawings will not be held in abeyance.
+Specification
+The disclosure is objected to because of the following informalities:
+[0041]: as mentioned above, 202 as a label is missing from Fig.2, where the object node is labeled 114.
+[0049]:  “…consuming one or more distance and/or velocity bounds.”  Is this really the word wanted here?
+[0061]: The situation shown in Fig. 7a does NOT show what is described here.  Note that the dotted line supposedly indicating the second step (determining the target velocity corresponding to the total distance) is not at a distance of 200 meters but something obviously short of it. Nor is “the target velocity is 15 m/s” what is pictured here.
+[0066]: “position bound(trajectory end time) can be the position or distance of the maximum distance bound at the end of the candidate trajectory…” should probably be restated as “position bound(trajectory end time) can be the position or distance of the maximum distance bound at the end time of the candidate trajectory;…”
+[0066]: “trajectory end position(trajectory end time) can be the position or distance of the vehicle relative to the initial position of the vehicle at the end of the candidate trajectory;…” is confusing because “initial position of the vehicle at the end of the candidate trajectory” makes no sense.  If this phrase has been interpreted correctly, it would be better stated as: “trajectory end position(trajectory end time) can be the position or distance of the vehicle at the end of the candidate trajectory, relative to the initial position of the vehicle;…”
+[0066]: “the comfort deceleration parameter can be a or a defined value”; it looks like there is a word missing.
+[0068]: “Using the slope of the maximum distance bound and transforming the slope into an available distance…” would seem to have a different interpretation of “available distance” than what is found in earlier paragraphs. Isn’t “available distance” supposed to be the distance necessary for a comfortably decelerating vehicle, starting at the final velocity of the trajectory, to reach zero? (as in [0059].)
+[0072]: the second instance of “At step 812,…” should be “At step 814,..”
+[0073]: The two mentions of “candidate trajectory” in line 2 should probably be “candidate trajectories”.
+[0073]: “…at step 814,…” should be “…at step 816,…”
+[0073]: “At step 816, the data processing system…”  should be “At step 818, the data processing system…”
+Appropriate correction is required.
+Allowable Subject Matter
+Claims 1-20 allowed.
+The following is an examiner’s statement of reasons for allowance: No applicable prior art was found. The closest art is US 2021/0089036 (Banzhaf) and US 2021/0034072 (Max. et al., hence Max). Banzhaf teaches a method and a device for calculating a trajectory of a vehicle through calculating a number of possible trajectories, but links the beginning and end of each of the trajectories to a fixed starting position and a fixed ending position, rather than the multiple ends of possible trajectories as is done by applicant.  Max teaches how to produce swarm trajectories for a specified lane of a roadway section, where each of the trajectories used in producing the swarm trajectory has different boundaries and constraints, which are taken into account when determining the swarm trajectory.
+In particular, the following was not found in either of the above:  the consolidation of maximum distance/velocity bounds in one general maximum distance/velocity bound, then used to compare with a set of trajectories such that the final distance and velocity of a picked trajectory remained within bounds, with the further constraint that the vehicle is able to comfortably come to a stop from the final velocity.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+This application is in condition for allowance except for the following formal matters:
+Correction of the diagrams and specification as outlined above.
+Prosecution on the merits is closed in accordance with the practice under Ex parte Quayle, 25 USPQ 74, 453 O.G. 213, (Comm’r Pat. 1935).
+A shortened statutory period for reply to this action is set to expire TWO (2) MONTHS from the mailing date of this letter. Extensions of time may be granted under  37 CFR 1.136 but in no case can any extension carry the date for reply to this Office action beyond the maximum period of SIX MONTHS set by statute (35 U.S.C. 133).
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to TANYA CHRISTINE SIENKO whose telephone number is (571)272-5816. The examiner can normally be reached Mon - Fri 8:00-5:00.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Kito Robinson can be reached on 571-270-3912. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/TANYA C SIENKO/Examiner, Art Unit 3664
+/MICHAEL V KERRIGAN/Primary Examiner, Art Unit 3664

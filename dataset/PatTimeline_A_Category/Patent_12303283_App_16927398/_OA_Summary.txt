@@ -1,0 +1,14 @@
+Total Office Actions: 7
+Application Number: 16927398
+Patent Number: 12303283
+
+OA Timeline:
+  OA1: 2021-05-25 - Office_Action
+  OA2: 2021-08-25 - Office_Action
+  OA3: 2022-03-21 - Office_Action
+  OA4: 2022-11-25 - Office_Action
+  OA5: 2023-10-10 - Office_Action
+  OA6: 2024-04-15 - Office_Action
+  OA7: 2025-01-22 - Final_Rejection
+
+Final Status: Final_Rejection

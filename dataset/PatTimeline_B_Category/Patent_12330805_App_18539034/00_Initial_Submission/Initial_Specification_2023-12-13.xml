@@ -1,0 +1,251 @@
+<html><head></head><body>18539034
+
+   
+SYSTEM AND METHOD FOR DETECTING THE POSITION AND/OR THE OPERATING STATE OF A MOVABLE COMPONENT OF AN AIRCRAFT
+   
+   
+CROSS REFERENCE TO RELATED APPLICATION
+<p>
+[0001]
+ The present application claims priority to German Patent Application No. 10 2022 133 268.3 filed on December 14, 2022. The entire contents of the above-listed application are hereby incorporated by reference for all purposes.</p>
+   
+   
+TECHNICAL FIELD
+<p>
+[0002]
+ The present disclosure relates to a system for detecting the position and/or the operating state of a movable component of an aircraft, wherein the system has one movable component, two actuators, two motion sensors, one asymmetry sensor, one drive train, and one monitoring device, wherein the component can be actuated by the at least two mutually offset actuators, wherein at least one motion sensor is provided for one respective actuator, wherein the motion sensor can monitor a mechanical movement of the drive train, and wherein the monitoring device is connected to the motion sensor and to the asymmetry sensor.</p>
+   
+   BACKGROUND
+   <p>
+[0003]
+ Sensor systems are known from the prior art for monitoring the correct function of control surfaces, in particular on the wings of an aircraft. The aircraft are equipped in a known manner with control surfaces such as slats and landing flaps to vary the aerodynamic properties of the wings. </p>
+   <p>SUMMARY</p>
+   <p>
+[0004]
+ Individual flaps of such lift aids are as a rule driven together by a plurality of actuators, with the actuators being arranged offset over the length of the flap and thus driving different partial regions of the flap.</p>
+   <p>
+[0005]
+ If the two actuators do not run synchronously, flap skew occurs up to a complete failure due to mechanical deadlock. The flap can also release (“disconnect”) from the actuator.</p>
+   <p>
+[0006]
+ Skew produces a fault categorized as a “catastrophic failure”. The position of the flaps must therefore be continuously monitored, with a monitoring typically being necessary on an independent monitoring channel. A disconnect only leads to a catastrophic failure in combination with a further fault. The disconnect fault may therefore not be dormant and is monitored by checking intervals or by other monitoring devices. Since a reduced availability of the monitoring is possible, it can be accepted that a disconnect is recognized within a flight.</p>
+   <p>
+[0007]
+ Faults such as skew and disconnect are sometimes recognized by an increased maintenance effort using visual inspections in aircraft of older designs. </p>
+   <p>
+[0008]
+ This requires the actuators to be adapted to a higher load, that can arise, for example, by the breakage of a second actuator, and thus to have an increased weight, while taking account of an inspection interval, e.g. to the amount of 10,000 flight cycles.</p>
+   <p>
+[0009]
+ Aircraft of more recent designs or licensed according to new licensing regulations use sensor systems, that have to be reinitialized again on a replacement of the sensor or on other changes to the system, for the recognition of the position of movable elements or flaps. The initialization can also be called “rigging”.</p>
+   <p>
+[0010]
+ In accordance with the prior art, when a failure occurs all the sensors or the connections of the flap to the structure, and also the actuators, are inspected since which component is affected is not known.</p>
+   <p>
+[0011]
+ To enable a monitoring of a plurality of actuators at a flap, the kinematics or the connection of the sensors in accordance with the prior art are adapted such that a comparability of the measured values of the sensors with one another is possible.</p>
+   <p>
+[0012]
+ Existing position based monitoring systems, in particular for a disconnect recognition, provide lower resolution and are thus less robust. Further measures such as a reduced clearance at the flap or such as reduced precision at the sensor are therefore necessary to enable the recognition likelihood of skew or disconnect.</p>
+   <p>
+[0013]
+ The monitoring systems of the prior art inter alia have the following disadvantages: The actuators require mutually comparable kinematics at a flap. A higher effort is required after replacement of parts as part of maintenance. The sensor system has lower resolution or causes higher costs. The sensor system has less robustness in operation. Absolute sensors are required. The installation of a sensor at kinematically different positions is not possible.</p>
+   <p>
+[0014]
+ Against this background, it is the underlying object of the present disclosure to provide a system that is improved with respect to the prior art, in particular with respect to initialization.</p>
+   <p>
+[0015]
+ This object is satisfied by the subject matter as described herein.</p>
+   <p>
+[0016]
+ Provision is accordingly made in accordance with the disclosure that the system is configured such that an initialization of the monitoring device and/or of the motion sensors and/or of the asymmetry sensor can take place after the booting of the system and/or when the component has adopted a fully retracted and/or a fully extended position.</p>
+   <p>
+[0017]
+ The initialization optionally only takes place at a fully retracted or extended position, but can also take place in any other position.</p>
+   <p>
+[0018]
+ A sensor is optionally understood under the term “asymmetry sensor” that is configured to recognize asymmetries, but with also any desired sensor also being able to be understood under this term.</p>
+   <p>
+[0019]
+ The drive train optionally runs through practically the whole wing.</p>
+   <p>
+[0020]
+ Provision is optionally made that the monitoring device is configured such that a limit value and/or a limiting curve can be calculated by means of the asymmetry sensor while taking account of correction values for kinematic conditions and/or tolerances and/or operational conditions, with the limit value and/or the limiting curve being able to be used for the recognition of skew of the component and/or for the recognition of the disconnect of the component from an actuator. </p>
+   <p>
+[0021]
+ Provision is optionally made that the monitoring device is configured such that the initialization takes place by an initialization angle of the component calculated by means of the asymmetry sensor and a correlation curve.</p>
+   <p>
+[0022]
+ Provision is optionally made that the monitoring device is configured such that an angle of the component takes place based on the correlation curve by adding or subtracting a converted differential flap able from the initialization angle.to/</p>
+   <p>
+[0023]
+ Provision is optionally made that the monitoring device is configured such that an absolute difference of the angles of the component from a limit value can be compared, with an exceeding of the limit value being able to result in a switching off of the system and a setting of a brake.</p>
+   <p>
+[0024]
+ Provision is optionally made that the monitoring device is configured such that a value of the asymmetry sensor can be converted into a theoretical angle of the component.</p>
+   <p>
+[0025]
+ Provision is optionally made that the monitoring device is configured such that a difference between an angle of the component and the theoretical angle of the component can be formed, with the difference from a limit value being able to be compared, with an exceeding of the limit value being able to result in a report.</p>
+   <p>
+[0026]
+ Provision is optionally made that the monitoring device is configured such that an isolation of a cause of skew of the component and/or a disconnect of the component from an actuator can take place.</p>
+   <p>
+[0027]
+ A system in accordance with any of the preceding elements, characterized in that the component is an actuable lift aid, in particular a slat or a landing flap.</p>
+   <p>
+[0028]
+ Provision is optionally made that the motion sensors and/or the asymmetry sensor are/is an incremental sensor.</p>
+   <p>
+[0029]
+ The disclosure also relates to an aircraft, in particular to an aircraft having a system in accordance with the disclosure.</p>
+   <p>
+[0030]
+ The disclosure also relates to a method of detecting the position and/or the operating state of a movable component of an aircraft having a system in accordance with the disclosure, wherein an initialization of the monitoring device and/or of the motion sensors and/or of the asymmetry sensor takes place after a booting of the system and/or when the component has adopted a fully retracted and/or a fully extended position,</p>
+   <p>
+[0031]
+ The initialization or “rigging” on a replacement of a sensor is advantageously dispensed with by the system and method in accordance with the disclosure. The system likewise has a greater robustness in operation. The recognition of disconnect faults is improved. A simple failure isolation can take place after the occurrence of skew and/or a disconnect. Different kinematic sensor connections within a flap or its drive system are made possible. The use of less expensive incremental sensors can take place.</p>
+   <p>
+[0032]
+ The mechanical to electrical rigging that is always required in accordance with the prior art can optionally be bypassed by the system and method in accordance with the disclosure so that the maintenance effort on the replacement of a sensor or the monitoring device can be reduced. </p>
+   <p>
+[0033]
+ Fault isolation is optionally made possible after a recognized skew.</p>
+   <p>
+[0034]
+ Optionally, the resolution of the system is increased and thus a recognizability of a possible disconnect fault is increased since the recognized movement difference becomes larger.</p>
+   <p>
+[0035]
+ The threshold value of the monitoring device corresponding to the position is offset with correction values for tolerances and operational conditions using an asymmetry sensor to ensure higher robustness and also the required trigger threshold. Possible differences in the kinematics of the flaps or of the measuring device are optionally compensated to make a conversion to a common reference value.</p>
+   <p>
+[0036]
+ An automatic rigging optionally takes place, in particular on the basis of the asymmetry sensor, in the fully retracted and/or fully extended position of the component and/or after booting the system. A booting of the system can be understood as a switching on or as a first time supply of electrical energy to the electrical component of the system.</p>
+   <p>
+[0037]
+ Compensation optionally takes place on the basis of kinematics and/or an operational state on the basis of measured values of the asymmetry sensor and/or of further sensors present in the system.</p>
+   <p>
+[0038]
+ A comparison optionally takes place of the difference of compensated curves of two sensors of a flap from one another with a variable limit value that is fixed on the basis of the asymmetry sensor and also of the operational state of the aircraft. </p>
+   <p>
+[0039]
+ The operational state of the aircraft can comprise a state in which the aircraft is on the ground or is in flight and/or can comprise a direction of travel of the system and/or can comprise a fully retracted and/or fully extended position of the component and/or can comprise a flight speed. The list is not exclusive. Additional examples include: angle of attack, load status, outside temperature, and/or altitude of the aircraft.</p>
+   <p>
+[0040]
+ A comparison optionally takes place of the difference of compensated motion sensor and asymmetry sensor curves with a variable limit value that is fixed on the basis of the asymmetry sensor and also of the operational state of the aircraft.</p>
+   <p>
+[0041]
+ An increase of the resolution of the disconnect monitoring optionally takes place by utilizing the deformation of the gasket load reactions in the fully retracted state of the component and a rigging in this state.</p>
+   <p>
+[0042]
+ An implementation is optionally possible with sensors that do not have any absolute position, that is with incremental sensors.</p>
+   <p>
+[0043]
+ The features of the system are optionally mutatis mutandis also features of the method.</p>
+   <p>
+[0044]
+ It is pointed out at this point that the terms “a” and “one” do not necessarily refer to exactly one of the elements, even though this represents a possible embodiment, but can also designate a plurality of the elements. The use of the plural equally includes the presence of the element in question in the singular and conversely the singular also comprises a plurality of the elements in question. Furthermore, all the features of the disclosure described herein can be combined with one another or can be claimed in isolation from one another as desired,</p>
+   
+BRIEF DESCRIPTION OF THE FIGURES
+<p>
+[0045]
+ Further advantages, features, and effects of the present disclosure result from the following description of preferred embodiments with reference to the Figures in which components that are the same or similar are designated by the same reference numerals. There are shown:</p>
+<p>
+[0046]
+ Fig. 1:  a schematic view of an embodiment of a system in accordance with the disclosure;</p>
+<p>
+[0047]
+ Fig. 2: a diagram of a correlation curve;</p>
+<p>
+[0048]
+ Fig. 3: a diagram of a limit value curve; and</p>
+<p>
+[0049]
+ Fig. 4: two schematic views of an embodiment of a system in accordance with the disclosure.</p>
+   
+   DETAILED DESCRIPTION
+   <p>
+[0050]
+ A system in accordance with the disclosure is shown in Fig. 1 having two flaps 1, two motion sensors 2 per flap, an asymmetry sensor 3, optionally per flap 1, a brake 4, two drive stations 5 per flap 1, and a drive unit 6.</p>
+   <p>
+[0051]
+ The calculated value of the flap angle is initialized for the recognition of skew on a power-up or booting of the system or when the fully retracted state of the flap 1, based on the asymmetry sensor 3, has been reached. This value is converted from the value of the asymmetry sensor 3 with the aid of a correlation curve and/or is initialized for the respective flap.</p>
+   <p>
+[0052]
+ Such a correlation curve is shown in Fig. 2, with the angular value of the asymmetry sensor 3 being shown in degrees on the abscissa of the diagram and the flap angle in degrees being shown on the ordinate.</p>
+   <p>
+[0053]
+ A further movement of the motion sensor is calculated on the basis of the correlation curve by adding or subtracting the converted differential flap angle to/from the initial value of the flap angle.</p>
+   <p>
+[0054]
+ In the next step, the absolute difference of the current flap angle of the flap from a limit value is compared. With the limit value being defined on the basis of a limit value cure dependent on the asymmetry sensor. In addition, the limit value curve can be dependent on further measured data that are available to the evaluation unit, e.g., for instance, the direction of travel of the system, the load state (flight, ground), or also the flight speed.</p>
+   <p>
+[0055]
+ Such a limit value curve is shown in Fig. 3, with the angular value of the asymmetry sensor 3 in degrees being shown on the abscissa of the diagram and the limit angle in degrees being shown on the ordinate.</p>
+   <p>
+[0056]
+ An exceeding of the limit value results in the immediate switching off of the system and the setting of the brakes 4 of the system to set it into a safe state.</p>
+   <p>
+[0057]
+ For the failure isolation, the difference of the affected sensors of a flap 1 from the theoretical flap angle value, that is derived from the asymmetry sensor 3, is formed, as also takes place on the recognition of the disconnect.</p>
+   <p>
+[0058]
+ Unlike the above-presented recognition of the skew, the value of the asymmetry sensor 3 is converted into a theoretical flap angle value on the recognition of the disconnect. The difference between the respective current flap angle value and the theoretical flap angle is formed. As also in the recognition of the skew, this value is then compared with a limit value on the basis of the limit value curve.</p>
+   <p>
+[0059]
+ A triggering of the monitoring device or of the monitor or of the recognition does not result in the immediate switching off of the system, but rather in the display of a maintenance message after the end of the flight. This results in a maintenance action before the next flight can be started.</p>
+   <p>
+[0060]
+ An increase in the resolution of the system is achieved in that the rigging is carried out every time the retracted position of the flap has been reached. In the event of an existing disconnect of an actuator, the flap will not reach the fully retracted position due to the applied forces of friction in the kinematics and gaskets that urge the flap outwardly. The flap is urged outwardly within the flap stiffness.</p>
+   <p>
+[0061]
+ If the system then reverses the direction of rotation and travels the flap in the direction of “extended”, the direction of load or friction reverses and the flap will in turn execute a smaller movement. This produces an increase in the difference that is measured in comparison with a system rigged in the intact state.</p>
+   <p>
+[0062]
+ The operating states in the event of a disconnect are shown in more detail in Fig. 4, with the flap 1 being shown in the retracted state in the left view in Fig. 4 and in the extended state in the right view in Fig. 4.</p>
+   <p>
+[0063]
+ The disconnect has occurred at the right drive station 5 in Fig. 4. </p>
+   <p>
+[0064]
+ In the retracted state, the damping forces D act on the flap 1.</p>
+   <p>
+[0065]
+ In the extended state, the aerodynamic forces A act on the flap 1.</p>
+   <p>
+[0066]
+ The disclosure has the following advantages:</p>
+   <p>reduced maintenance effort on an replacement of a sensor and/or computer</p>
+   <p>faster replacement of affected units due to failure isolation</p>
+   <p>greater robustness of the skew detection</p>
+   <p>greater robustness and/or resolution of the disconnect detection</p>
+   <p>use of different kinematically linked sensors within a flap for skew/disconnect detection</p>
+   <p>implementation possible with incremental sensors.</p>
+   <p>
+[0067]
+ The recognition of skew can take place as follows:</p>
+   <p>preprocessing of the position values of a sensor;</p>
+   <p>the position value is set to approximately zero when switching on and in the fully retracted state;</p>
+   <p>the position value is increased or decreased as the sensor moves;</p>
+   <p>an FSPS value is used to recognize whether the flap has been fully retracted and the FSDS value is reset to determine the actual value;</p>
+   <p>a kinematic correction is applied to the FSPS value so that the final calculated value corresponds to the angle of the slat on every flap track;</p>
+   <p>the skew recognition compares the preprocessed values of the two FSDS values of a flap. The difference of the preprocessed values indicates the degree of skew of the flap;</p>
+   <p>the isolation function indicates a fault for the one flap track, that is whether the fault is present internally or externally at the flap that deviates more from the preprocessed position of the flap track on the opposite wing.</p>
+   <p>
+[0068]
+ The recognition of a disconnect can take place as follows:</p>
+   <p>the disconnect recognition used preprocessed values as defined above;</p>
+   <p>the disconnect recognition is only activated after the autorigging has been carried out at least once;</p>
+   <p>the individual FSDS is compared with a minimum threshold value calculated from the FSPS;</p>
+   <p>
+[0069]
+ the disconnect recognition converts the current transmission position (i.e. the FSPS position) into an expected FSDS position for this purpose;</p>
+   <p>the nonlinear transmission characteristic and the expected stiffness are taken into account in the limit value;</p>
+   <p>due to the autorigging function that occurs on the retraction of the flaps after landing, the mechanical disconnect fault results in a skewed flap due to the weight of the flap when the flap is fully withdrawn. The produces a preload of the disconnect recognition and ensures the recognition in the subsequent flight;</p>
+   <p>the functional principle of the comparison of the value of the motion sensor (FSDS) with the value of the asymmetry sensor (FSPS) allows both the continuous monitoring of the sensor values for plausibility and an immediate failure localization on the affected flap track.</p>
+   <p>
+[0070]
+ The flap sensors are located at the track structure and are mechanically connected to the flap track carriage by levers and rods. Unlike sensors for the recognition of skew of slats, the flap sensors are absolute sensors such as resolvers; however, the evaluation units (FSCUs) treat them as non-absolute sensors to avoid a rigging of the sensors becoming necessary. For this purpose, the position value is set to approximately zero on the switching on and in the fully retracted state and the value is increased or decreased as the sensor moves. The FSPS value is used to recognize whether the flap has been fully retracted and to determine the actual value to which the FSDS value is reset. A kinematic correction can be applied to the FSPS value so that the calculated end value corresponds to the flap angle on every track. The value can also be used in the recognition without any kinematic correction. Due to the architecture, every FSCU is connected to a channel of a duplex sensor that is located at both tracks of the same flap. Every FSCU monitors two flap fields; the flap FSCUs 1 and 2 monitor the left and right fields 2 and the slat FSCUs 1 and 2 monitor the left and right flaps 1. The skew avoidance works fully independently in every FSCU. The recognition compares the converted values of the two FSDS values of a flap. The difference of the converted (or not converted) values indicates the degree of skew of the flap; The skew monitor triggers on a significant discrepancy between the values. If both flap FSCUs recognize the skew of the flap, the flap FSCU responds by switching off its drive; a slat FSCU reports the recognition to both flap FSBs. The receiving FSCUs for flaps switch off their drives when they receive a signal from both slat FSCUs. As with the slat skew recognition, the above consolidation pattern does not take any received information into account, e.g. because the transmission unit cannot transmit, e.g. power failure or no transmission error, e.g. wire break identical to the state “skew recognized” received by the communication partner. On the one hand, this logic ensures that in the event of a skew of the panel both slat FSCUs recognized the failure and switch of their motors and thus stop the slat system; on the other hand, it ensures that the FSCUs remain ready for operation in the event of a single electrical fault (e.g. sensor failure). It is thereby ensured that the slat system remains ready for operation (and consequently that the skew avoidance function remains available in the most unfavorable case, i.e. on a failure of the FSCU for the landing flaps and of an FSCU for the slats). If the skew position monitor triggers, the isolation function reports a failure for the one track (internally or externally on the switch panel on which the skew was recognized) that differs more from the position of the opposite wing track.</p>
+   <p>
+[0071]
+ The function of disconnect recognition uses the preprocessed FSDS sensor values from the function of skew avoidance. The preprocessing comprises setting to zero (autorigging) when the flap has been fully retracted while it is on the ground and also comprises kinematic compensation. The disconnect recognition is only activated after the autorigging has been carried out at least once; Similar to the function for avoiding skew, the flap FSCUs 1 and 2 observe the left and right flaps 2 while the slat FSCUs 1 and 2 monitor the left and right flaps 1. The disconnect recognition works fully independently in every FSCU. Unlike the disconnect recognition for slats, the disconnect recognition for flaps is fully available under all dispatch configurations. Differing from the skew avoidance that compares the converted FSDS values of a flap with one another, every single FSDS is compared with a minimum threshold value that is calculated by the FSPS. For this purpose, the flat disconnect recognition converts the actual transmission position, i.e. the FSPS position, into an expected minimal FSDS position and in so doing takes account of the nonlinear transmission characteristic and the expected stiffness of the kinematics. One track more than in normal operation is inwardly urged in the event of a disconnect. The sensitivity of the disconnect monitoring varies over the stroke since the expected compression effect of the air load varies in normal operation. Since the compression also varies over the stroke of the flap extension on a failure, the recognition does not recognize the mechanical failure immediately, but rather when the system is changed to a position having a high monitoring sensitivity and a high effect of the air load. The effect of the air load could even then be too small to be recognized by the disconnect monitoring during this flight cycle. Due to the autorigging function that takes place on the retraction of the flaps after landing, the mechanical disconnect results in a skewed flap due to the weight of the flap. The disconnect monitoring is thereby preloaded and the recognition takes place in the subsequent flight. The system thus recognizes the disconnect at the latest in the subsequent flight after the occurrence of the disconnect. It may occur due to the different design that the skew recognition recognizes a defect, but the disconnect does not, with the defect nevertheless being recognized, however. This is taken into account in the prediction of the system availability. Since the mechanical switching off of the flap does not represent a direct threat, the disconnect recognition does not protect against direct threats, but rather delivers a CAS display to avoid latency time for the mechanical failure. To force the required maintenance measures, the slat system is switched off as soon as the aircraft is on the ground after a disconnect of a partial system has been recognized by all of the active FSCUs that can be in the normal mode or the failsafe mode. The functional principle of the comparison of the FSDS with the FSPS value allows both the continuous monitoring of the sensor track values for plausibility and an immediate defect localization for the affected flap trajectory. Defective FSDS signals can be recognized on a plurality of levels. If the signal quality, i.e. the voltage, is outside an acceptable range, the RCDS recognizes the defect that is displayed by the FSDS monitoring device. If one FSDS signal is defective while the others are correct, the flap skew recognition recognizes a significant difference and results in a defect report. If a plurality of FSDS signals are defective, e.g. static, the disconnect recognition recognizes the delay of the FSDS signal relative to the transfer movement during the movement. These defects are thus recognized within a flight.</p>
+
+</body></html>

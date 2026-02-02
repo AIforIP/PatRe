@@ -1,0 +1,142 @@
+<html><head></head><body><h3>Date: 2022-12-12</h3>
+<p>AMENDMENTS TO THE CLAIMS</p>
+<p>This listing of the claims will replace all prior versions, and listings, of the claims in this application.</p>
+<p><u>Listin</u><u>g</u><u> of Claims:</u></p>
+<br>
+
+<br>
+1-15. (Canceled)
+
+214
+<br>
+<br>
+
+<br>
+16. (Currently amended) A method comprising: 
+<br>
+deriving, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency based data into the pseudo sensor data; and 
+<br>
+providing the pseudo sensor data derived based on at least the machine learning model to an application to enable the application to process the pseudo sensor data and native sensor data to enable tracking the activity of the user; 
+<br>
+<u>wherein the pseudo sensor data is provided during a time interval when the native sensor data representative of activity of the user is not provided or is unavailable</u>. 
+
+<br>
+
+<br>
+17. (Previously presented) The method of claim 16, wherein the radio frequency based data is generated from radio frequency signals reflected from at least the user.
+
+<br>
+
+<br>
+18. (Previously presented) The method of claim 16, wherein the pseudo sensor data represents data derived from the radio frequency based data, rather than data obtained directly from a sensor that generates the native sensor data indicative of the activity of the user.
+<br>
+
+<br>
+19. (Currently amended) The method of claim 18, wherein the sensor is coupled to, or included in, a user equipment associated with the user, wherein the sensor or the user equipment is worn by [[with]] the user or not worn by [[with]] the user.
+
+<br>
+
+<br>
+20. (Previously presented) The method of claim 18, wherein the pseudo sensor data is provided from a first device that generates the pseudo sensor data using the machine learning model to a second device comprising the application to process the pseudo sensor data and the native sensor data, the native sensor data generated with the second device using the sensor.
+
+<br>
+
+<br>
+21. (Previously presented) The method of claim 18, wherein the pseudo sensor data and the native sensor data provide a stream of data to the application to enable tracking the activity of the user, or wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part with the sensor not being able to generate the native sensor data representative of the activity of the user.
+
+<br>
+
+<br>
+22. (Currently amended) The method of claim 21, wherein the sensor is not able to generate the native sensor data when the sensor is not worn by [[with]] the user or a user equipment is being charged.
+
+<br>
+
+<br>
+23. (Previously presented) The method of claim 18, wherein the pseudo sensor data is derived in response to an indication that a user equipment or the sensor is not providing the native sensor data for the user.
+
+<br>
+
+24. (Currently amended) The method of claim 16, wherein the machine learning model is trained 
+  with training data comprising at least reference radio frequency based data and reference sensor data, <u>the reference radio frequency based data and</u> the reference sensor data collected from at least one reference user performing at least one activity, [[and]] wherein the machine learning model is trained using supervised training with the reference sensor data<u>, and wherein the training comprises learning at least one relationship between the reference radio frequency based data and the reference sensor data</u>.
+
+<br>
+
+<br>
+25. (Previously presented) The method of claim 17, wherein: 
+<br>
+the machine learning model comprises a neural network, a linear regression model, a regression neural network, or a regression learning technique, and wherein the machine learning model is configured with machine learning based on at least reference radio frequency based data and reference sensor data collected from at least one reference user performing activities comprising walking, running, jumping, gesturing, standing, or sitting, wherein the application comprises a health and fitness tracker application, and wherein a user equipment comprises a health and fitness tracker; and 
+<br>
+wherein the native sensor data comprises accelerometer data, gyroscope data, or barometer data, wherein the pseudo sensor data comprises pseudo accelerometer data, pseudo gyroscope data, or pseudo barometer data, and wherein the radio frequency based data is generated from radar signals reflected from at least the user. 
+
+<br>
+
+<br>
+26. (Previously presented) The method of claim 17, wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part with a sensor, that generates the native sensor data representative of activity of the user, not being able to generate the native sensor data representative of the activity of the user.
+
+<br>
+
+27. (Currently amended) An apparatus comprising 
+  at least one processor; and 
+<br>
+at least one non-transitory memory <u>storing instructions that, when executed by</u> <del>including computer program code; the at least one memory and the computer program code configured to, with</del> the at least one processor, cause the apparatus at least to: 
+<br>
+derive, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency based data into the pseudo sensor data; 
+<br>
+wherein the pseudo sensor data is derived in response to an indication that a user equipment or a sensor is not providing native sensor data for the user, the sensor data indicative of the activity of the user; and 
+<br>
+provide the pseudo sensor data<u>, wherein the pseudo sensor data is provided during a time interval when the native sensor data representative of activity of the user is not provided or is unavailable</u>. 
+
+<br>
+
+<br>
+28. (Previously presented) The apparatus of claim 27, wherein the radio frequency based data is generated from radio frequency signals reflected from at least the user.
+
+<br>
+
+<br>
+29. (Previously presented) The apparatus of claim 27, wherein the pseudo sensor data represents data derived from the radio frequency based data, rather than data obtained directly from a sensor that generates the native sensor data indicative of the activity of the user.
+
+<br>
+
+<br>
+30. (Currently amended) The apparatus of claim 29, wherein the sensor is coupled to, or included in, the user equipment associated with the user, wherein the sensor or the user equipment is worn <u>b</u><u>y</u> [[with]] the user or not worn <u>by</u> [[with]] the user.
+<br>
+
+<br>
+31. (Currently amended) The apparatus of claim 29, wherein the pseudo sensor data is provided to an application to enable the application to process the pseudo sensor data and the native sensor data to enable tracking the activity of the user, wherein the application comprises a health and fitness tracker application, <u>wherein the pseudo sensor data is compatible with an application programming interface of the health and fitness tracker application, and the radio frequency based data is not compatible with the application programming interface of the health and fitness tracker application,</u> and wherein the user equipment comprises a health and fitness tracker.
+
+<br>
+
+<br>
+32. (Previously presented) The apparatus of claim 31, wherein the pseudo sensor data and the native sensor data provide a stream of data to the application to enable tracking the activity of the user, or wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part with the sensor not being able to generate the native sensor data representative of the activity of the user.
+
+<br>
+
+<br>
+33. (Currently amended) The apparatus of claim 32, wherein the sensor is not able to generate the native sensor data when the sensor is not worn by [[with]] the user or the user equipment is being charged.
+
+<br>
+
+<br>
+34. (Previously presented) The apparatus of claim 27, wherein the pseudo sensor data is no longer derived in response to an indication that the user equipment or the sensor is providing native sensor data for the user.
+
+<br>
+
+<br>
+35. (Currently amended) A non-transitory computer readable medium comprising program instructions for causing an apparatus to perform at least the following: 
+<br>
+deriving, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model 
+
+  configured to transform the radio frequency based data into the pseudo sensor data; 
+<br>
+wherein the pseudo sensor data is derived in response to an indication that a user equipment or a sensor is not providing native sensor data for the user, the sensor data indicative of the activity of the user; and 
+<br>
+providing the pseudo sensor data<u>, wherein the pseudo sensor data is provided during a time interval when the native sensor data representative of activity of the user is not provided or is unavailable</u>. 
+<br>
+2
+3
+4
+5
+6
+7
+</body></html>

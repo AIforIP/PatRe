@@ -1,0 +1,146 @@
+<html><head></head><body>18883733
+
+   
+   
+CLAIMS
+   
+   
+
+<br>
+
+1. A balancing and measuring circuit for a high voltage system, comprising:
+a first capacitor electrically connected between a first voltage and a chassis voltage, wherein the first voltage is greater than the chassis voltage;
+a second capacitor electrically connected between a second voltage and the chassis voltage, wherein the second voltage is less than the chassis voltage;
+a first circuit associated with the first capacitor; and
+a second circuit associated with the second capacitor,
+wherein the first circuit and the second circuit each comprise:
+a resistive element; 
+a switching element; 
+a voltage circuit configured to generate a reference voltage; and
+a controller configured to monitor a voltage of a reference capacitor and to control the switching element based on the monitored voltage, 
+wherein the resistive element and the switching element are connected in series.
+<br>
+
+2. The circuit of claim 1, wherein each controller is configured to monitor the voltage and a current of the reference capacitor.
+<br>
+
+3. The circuit of claim 1, wherein each resistive element has a resistance greater than or equal to a minimum insulation resistance of the high voltage system.
+<br>
+
+4. The circuit of claim 1, wherein a first terminal of the first capacitor is coupled to the resistive element of the first circuit and a second terminal is coupled to the switching element of the first circuit.
+<br>
+
+5. The circuit of claim 4, wherein the first terminal is a positive terminal and the second terminal is a negative terminal.
+<br>
+
+6. The circuit of claim 4, wherein the first terminal is a negative terminal and the second terminal is a positive terminal.
+<br>
+
+7. The circuit of claim 1, wherein a third terminal of the second capacitor is coupled to the resistive element of the second circuit and a fourth terminal is coupled to the switching element of the second circuit.
+<br>
+
+8. The circuit of claim 7, wherein the third terminal is a positive terminal and the fourth terminal is a negative terminal.
+<br>
+
+9. The circuit of claim 7, wherein the third terminal is a negative terminal and the fourth terminal is a positive terminal.
+<br>
+
+10. The circuit of claim 1, wherein a resistance value of each resistive element is selected to reduce a shock voltage potential below a shock threshold.
+<br>
+
+11. The circuit of claim 10, wherein the resistance value is at least 200 kiloohms.
+<br>
+
+12. The circuit of claim 10, wherein the resistance value is at least 400 kiloohms.
+<br>
+
+13. The circuit of claim 1, wherein the voltage circuit includes one or more of:
+a voltage sensor;
+a voltage divider; and
+a voltage source.
+<br>
+
+14. The circuit of claim 1, wherein the reference voltage is equal to a half of a measured voltage.
+<br>
+
+15. The circuit of claim 1, wherein each controller is configured to control the corresponding switching element using analog control.
+<br>
+
+16. The circuit of claim 1, wherein each controller is configured to control the corresponding switching element using pulse width modulation (PWM) control.
+<br>
+
+17. The circuit of claim 1, wherein each controller includes one or more of:
+a compensator;
+a processor; and
+an operational amplifier.
+<br>
+
+18. The circuit of claim 1, wherein the controller includes a closed loop control process.
+<br>
+
+19. The circuit of claim 1, wherein the first circuit and the second circuit each further comprise a current-blocking element coupled between the resistive element and the switching element.
+<br>
+
+20. The circuit of claim 1, wherein the first circuit and the second circuit are configured to independently:
+determine a first impedance;
+modify the reference voltage by a predetermined value; 
+determine a second impedance; and
+determine a result based on the first impedance and the second impedance.
+<br>
+
+21. The circuit of claim 20, wherein the first circuit and the second circuit are each configured to modify the reference voltage by the predetermined value at a respective predetermined interval.
+<br>
+
+22. The circuit of claim 1, wherein the first circuit and the second circuit are configured to output a status to a central processor, wherein the status includes one or more of:
+a determined impedance;
+a working status indicator; and
+a failure status indicator.
+<br>
+
+23. The circuit of claim 1, wherein each controller is configured to switch between controlling the corresponding switching element using analog control and controlling the corresponding switching element using PWM control based on a received signal from a central processor. 
+<br>
+
+24. A method for balancing and measuring a voltage in a circuit, comprising:
+receiving a reference voltage;
+controlling a switching element until a voltage of a capacitor is equal to the received reference voltage;
+determining a first impedance of the capacitor;
+modifying the received reference voltage by a predetermined value;
+controlling the switching element until the voltage of the capacitor is equal to the modified reference voltage;
+determining a second impedance of the capacitor;
+determining a result based on the first impedance and the second impedance; and
+outputting the result.
+<br>
+
+25.  The method of claim 24, wherein controlling the switching element includes analog control.
+<br>
+
+26.  The method of claim 24, wherein controlling the switching element includes pulse width modulation (PWM) control.
+<br>
+
+27. The method of claim 24, wherein controlling the switching element includes a closed loop control process.
+<br>
+
+28. The method of claim 24, wherein modifying the received reference voltage occurs at a respective predetermined interval.
+<br>
+
+29. The method of claim 24, wherein the result includes an impedance of a leakage of the circuit.
+<br>
+
+30. An aircraft comprising:
+a high voltage system;
+one or more flight control computers; and
+a balancing and measuring circuit, comprising:
+a first capacitor electrically connected between a first voltage and a chassis voltage, wherein the first voltage is greater than the chassis voltage;
+a second capacitor electrically connected between a second voltage and the chassis voltage, wherein the second voltage is less than the chassis voltage;
+a first circuit associated with the first capacitor; and
+a second circuit associated with the second capacitor,
+wherein the first circuit and the second circuit each comprise:
+a resistive element; 
+a switching element; 
+a voltage circuit configured to generate a reference voltage; and
+a controller configured to monitor a voltage of a reference capacitor and to control the switching element based on the monitored voltage, 
+wherein the resistive element and the switching element are connected in series. 
+
+   
+
+</body></html>

@@ -1,0 +1,180 @@
+<html><head></head><body><h3>Date: 2022-06-10</h3>
+<p>First Named Inventor  Santiago Munne
+Attorney Docket: 19671-0349002    <u>Amendments to the Claims</u>:</p>
+<p>This listing of claims replaces all prior versions and listings of claims in the application:</p>
+<p><u>Listing of Claims</u>:</p>
+<br>
+
+<br>
+1-29. (Canceled)
+
+228
+<br>
+<br>
+
+<br>
+30. (New) A method of predicting endometrial receptivity status for embryonic implantation in a human subject, the method comprising: 
+<br>
+(a) providing a first biological sample obtained from a human subject at a first time point within a menstrual cycle; 
+<br>
+(b) determining a gene expression profile of a panel of genes in the first biological sample, wherein the panel of genes comprises: Arginase 2 (ARG2), Glutathione peroxidase 3 (GPX3), Mucin 1 (MUC1), Apolipoprotein D (APOD) and Secretoglobin family 2A member 2 (SCGB2A2), using reverse transcription polymerase chain reaction analysis; and 
+<br>
+(c) comparing the determined gene expression profile in step (b) with a gene expression profile of the same panel of genes listed in step (b) of a receptive endometrial receptivity reference group, a non-receptive endometrial receptivity reference group, a pre-receptive endometrial receptivity reference group, and a post-receptive endometrial receptivity reference group; 
+<br>
+(d) identifying the human subject as having: 
+<br>
+(i) a receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a receptive endometrial receptivity reference group, 
+<br>
+(ii) a non-receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a non-receptive endometrial receptivity reference group, 
+
+First Named Inventor  Santiago Munne
+Attorney Docket: 19671-0349002    (iii) a pre-receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a pre-receptive endometrial receptivity reference group, or 
+<br>
+(iv) a post-receptive endometrial status, wherein the determined gene expression profile corresponds to a gene expression profile of the panel of genes of a post-receptive endometrial receptivity reference group; and 
+<br>
+(e) transferring a pre-implantation embryo into the human subject identified as having a receptive endometrial status. 
+
+<br>
+
+<br>
+31.   (New) The method of claim 30, wherein the first biological sample is an endometrial biopsy obtained from an uterine fundus.
+
+<br>
+
+<br>
+32.   (New) The method of claim 30, wherein the human subject has undergone assisted reproductive treatment, and the first time point is seven days after a luteinizing hormone surge.
+
+<br>
+
+<br>
+33.   (New) The method of claim 30, wherein the human subject has undergone assisted reproductive treatment, and the first time point is seven days after administration of human chorionic gonadotropin (hCG).
+
+<br>
+
+<br>
+34.   (New) The method of claim 30, wherein the human subject has undergone hormone replacement therapy cycles, and the first time point is five days after progesterone impregnation.
+
+<br>
+
+<br>
+35.   (New) The method of claim 30, further comprising after identifying the human subject as having a non-receptive endometrial status, a pre-receptive endometrial status, or a post-receptive endometrial status, (f) obtaining a second biological sample from the human subject at a second time point and repeating steps (b), (c), and (d) on the second biological sample.
+
+<p>
+First Named Inventor  Santiago Munne
+Attorney Docket: 19671-0349002</p>
+<br>
+
+<br>
+36.   (New) The method of claim 35, further comprising after identifying the human subject has having a receptive endometrial status, (g) transferring a pre-implantation embryo into the identified human subject.
+
+<br>
+
+<br>
+37.   (New) The method of claim 35, wherein the second biological sample is an endometrial biopsy obtained from an uterine fundus.
+
+<br>
+
+<br>
+38.   (New) The method of claim 35, wherein the subject is identified as having a post- receptive endometrial status, and the second biological sample is obtained in another menstrual cycle one or two days earlier in the another menstrual cycle as compared to when the first biological sample was taken in the previous menstrual cycle.
+
+<br>
+
+<br>
+39.   (New) The method of claim 35, wherein the subject is identified as having a pre- receptive endometrial status, and the second biological sample is obtained in another menstrual cycle one or two days later in the another menstrual cycle as compared to when the first biological sample was taken in the previous menstrual cycle.
+
+<br>
+
+<br>
+40.   (New) The method of claim 35, wherein the subject is identified as having a non- receptive endometrial status, further comprising instructing a healthcare professional to select a treatment plan for the identified subject.
+
+<br>
+
+<br>
+41.   (New) The method of claim 35, wherein the subject is identified as having a non- receptive endometrial status, further comprising selecting a treatment plan for the identified subj ect.
+
+<br>
+
+<br>
+42.   (New) The method of claim 41, wherein the treatment plan comprises a hormone replacement therapy cycle.
+
+<br>
+
+<br>
+43.   (New) The method of claim 30, wherein the subject has a history of miscarriages or stillbirths, and/or a history of fertility issues.
+
+<p>
+First Named Inventor  Santiago Munne
+Attorney Docket: 19671-0349002</p>
+<br>
+
+<br>
+44.    (New) The method of claim 30, wherein the subject has had one or more cycles of in vitro fertilization (IVF).
+
+<br>
+
+<br>
+45.    (New) The method of claim 30, wherein the subject has previously not had IVF.
+
+<br>
+
+<br>
+46.    (New) The method of claim 30, wherein the determining step occurs on a chip, an array, a multi-well plate, or a tube.
+
+<br>
+
+<br>
+47.    (New) The method of claim 30, wherein the determining step of each gene within the panel of genes is performed in a reaction volume of 0.005  L to 100  L.
+
+<br>
+
+<br>
+48.    (New) The method of claim 30, wherein the determining step of each gene within the panel of genes is performed in a reaction volume of 0.005  L to 50  L.
+
+<br>
+
+<br>
+49.    (New) The method of claim 30, wherein the determining step is performed using a computer-assisted algorithm.
+
+<br>
+
+<br>
+50.    (New) The method of claim 30, wherein the comparing step is performed using a classification model, wherein the classification model is principal component analysis and/or discriminant functional analysis.
+
+<br>
+
+<br>
+51.    (New) The method of claim 30, further comprising modifying the subject's clinical record to identify the subject as having a receptive endometrial status, as having a non- receptive endometrial status, as having a pre-receptive endometrial status, or as having a post- receptive endometrial status.
+
+<br>
+
+<br>
+52.    (New) The method of claim 51, wherein the clinical record is stored in a computer readable medium.
+
+<p>
+First Named Inventor  Santiago Munne
+Attorney Docket: 19671-0349002</p>
+<br>
+
+<br>
+53. (New) A kit comprising: reagents suitable for determining an endometrial gene expression profile of a panel of genes, wherein the panel of genes comprises: ARG2, GPX3, MUC1, APOD and SCGB2A2, in a biological sample obtained from a subject.
+
+<br>
+
+<br>
+54.    (New) The kit of claim 53, wherein the biological sample is an endometrial biopsy obtained from an uterine fundus.
+
+<br>
+
+<br>
+55.    (New) The kit of claim 53, wherein the reagents are suitable for reverse transcription polymerase chain reaction.
+
+<br>
+
+<br>
+56.    (New) The kit of claim 53, further comprising a chip, an array, a multi-well plate or a tube.
+
+<br>
+
+<br>
+57.    (New) The kit of claim 53, further comprising instructions for use of the kit according to claim 1.
+</body></html>

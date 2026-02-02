@@ -1,0 +1,90 @@
+<html><head></head><body><h3>Date: 2024-12-20</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims replaces all prior versions and listings of claims in the application:</p>
+<h1><u>Listing of Claims:</u></h1>
+<br>
+<br>
+1-16 (Canceled)215<br>
+<br>
+<br>
+17.    (Currently Amended) An apparatus comprising an elongate probe, said elongate probe being an electrical impedance spectroscopy probe suitable for investigating the electrical conductivity or bioimpedance of cervical tissue, the apparatus capable of determining a force Ftip applied to the tip of said elongate probe, the apparatus comprising:a handle;<br>
+said elongate probe comprising said probe tip attached to said handle, <u>wherein the probe tip comprises an </u><u>E</u><u>EPROM within the probe tip and wherein a mass of the probe tip is stored on the </u><u>E</u><u>EPROM;</u><br>
+a load cell located in said handle and capable of measuring a force Floadeell applied axially to said probe tip along a longitudinal axis thereof when said probe tip is in contact with said human or animal cervical tissue, wherein said load cell comprises four strain gauges in a bridge configuration, wherein the bridge configuration is excited by bursts of square wave pulses at a frequency of 1 kHz;<br>
+an accelerometer located in the handle for measuring a gravity vector Aaxial, the accelerometer in fixed relationship with the probe tip and the load cell; and<br>
+a microcontroller for compensating for the mass of the probe tip using said measured force and gravity vector to produce a calibrated measurement of said force Ftip applied to said probe tip, the microcontroller generating a displayable output for indicating to a user the calibrated measurement of said force Ftip;<br>
+wherein said probe tip is an interchangeable probe tip removably attached to said handle.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+18.    (Previously Presented) The apparatus as claimed in claim 17, wherein microcontroller is further capable of determining an electrical conductivity of said human or animal cervical tissue to which the distal end of the probe tip is applied.<br>
+<br>
+19.    (Cancelled)<br>
+<br>
+20.    (Cancelled)<br>
+<br>
+21.    (Previously Presented) The apparatus as claimed in claim 17, wherein said accelerometer is an analogue tri-axial MEMS accelerometer.<br>
+<br>
+22.    (Previously Presented) The apparatus as claimed in claim 17, wherein the microcontroller includes analogue to digital converters to digitize outputs of said load cell and said accelerometer.<br>
+<br>
+23.    (Previously Presented) The apparatus as claimed in claim 17, wherein said calibrated measurement of force Ftip = Floadcell-Aaxial* (Mtip + Mioad), where Aaxial is a component of an output of the accelerometer corresponding to the axial-aligned direction of the probe tip, Mtip is the mass of the probe tip and Mioad is the free mass of the load cell and a connector for the probe tip.<br>
+<br>
+24.    (Previously Presented) The apparatus as claimed in claim 17, wherein said displayable output is capable of indicating real-time calibrated measurements of force applied to the probe tip.<br>
+<br>
+25.    (Previously Presented) The apparatus as claimed in claim 17, wherein said displayable output includes threshold indications configured for indicating whether too much or too little force is being applied to the probe tip.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+26.    (Previously Presented) The apparatus as claimed in claim 17, further including recording means for recording measurements produced by said load cell and said accelerometer to facilitate a repeatable application of force to the probe tip.<br>
+<br>
+27.    (Previously Presented) The apparatus as claimed in claim 17, wherein the elongate probe takes electrical impedance spectroscopy measurements only when the calibrated measurement of said force Ftip is within acceptable limits.<br>
+<br>
+28.    (Withdrawn) A method of determining a force F applied to a tip of a probe using apparatus, wherein the probe is an electrical impedance spectroscopy probe suitable for investigating the electrical conductivity or bioimpedance of cervical tissue, the method including the steps of:obtaining a raw load cell output from a load cell in a handle of the probe, wherein said load cell comprises four strain gauges in a bridge configuration;<br>
+obtaining a raw accelerometer output from an accelerometer in the handle of the probe;<br>
+obtaining the mass of said tip of the probe;<br>
+obtaining the area of the distal end of the tip of the probe;<br>
+applying the distal end of the tip of the probe to human or animal tissue and measuring a force Floadeell applied axially to said probe along a longitudinal axis when said tip of the probe is in contact with said human or animal tissue;<br>
+using said accelerometer to measure a gravity vector Aaxial;<br>
+using a processing means to compensate for the mass of the tip of the probe using said measured force and gravity vector to produce a calibrated measurement of said force F applied to said tip of the probe;<br>
+displaying the displayable output to indicate to a user the calibrated measurement of said force F.<br>
+<br>
+29.    (Withdrawn) The method as claimed in claim 28, further comprising exciting the bridge configuration in bursts of square wave pulses.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+30.    (Withdrawn) The method as claimed in claim 28, further comprising only taking, via the elongate probe, electrical impedance spectroscopy measurements when the calibrated measurement of said force F is within acceptable limits.<br>
+<br>
+31.    (Withdrawn) An apparatus for determining tissue bioimpedance, comprising:a handle;<br>
+an elongate probe tip having a distal end, the elongate probe tip removably attached to the handle at a proximate end of the elongate probe tip;<br>
+at least one electrode at the distal end of the elongate probe;<br>
+a load cell in the handle for measuring force on a longitudinal axis of the elongate probe tip, wherein said load cell comprises four strain gauges in a bridge configuration;<br>
+an accelerometer in fixed relationship with the elongate probe tip and the load cell, in the handle for measuring a gravity vector of the elongate probe tip; and<br>
+a microcontroller operatively connected to the load cell and the accelerometer for calculating force at the probe tip; and<br>
+a display operatively connected to the load cell comprising indicator lights illumination of which is indicative of force on the distal probe end calculated according to the force on the longitudinal axis, the gravity vector of the elongate probe tip and a known mass of the elongate probe tip, wherein the elongate probe is an electrical impedance spectroscopy probe suitable for investigating the electrical conductivity or bioimpedance of cervical tissue.<br>
+<br>
+32.    (Withdrawn) The apparatus of claim 31, wherein the elongate probe tip comprises a substantially planar end.<br>
+<br>
+33.    (Withdrawn) The apparatus of claim 31, wherein the bridge configuration is excited by bursts of square wave pulses.<br>
+<br>
+34.    (Withdrawn) The apparatus of claim 31, wherein the elongate probe tip further comprises a memory storing therein the known mass of the elongate probe tip.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+35.    (Withdrawn) The apparatus of claim 31, wherein the microcontroller is configured to compensate for the mass of the probe tip using said measured force and gravity vector to produce a calibrated measurement of said force applied to said probe tip.<br>
+<br>
+36.    (Withdrawn) The apparatus of claim 31, wherein said accelerometer is an analogue tri- axial MEMS accelerometer.<br>
+<br>
+37.    (Withdrawn) The apparatus of claim 31, wherein the microcontroller includes analogue to digital converters to digitise outputs of said load cell and said accelerometer.<br>
+<br>
+38.    (Withdrawn) The apparatus of claim 31, further including recording means for recording measurements produced by said load cell and said accelerometer to facilitate a repeatable application of force to the probe tip.<br>
+<br>
+39.    (Withdrawn) The apparatus of claim 31, wherein the elongate probe only takes electrical impedance spectroscopy measurements when the force on the distal probe end is within acceptable limits.
+</body></html>

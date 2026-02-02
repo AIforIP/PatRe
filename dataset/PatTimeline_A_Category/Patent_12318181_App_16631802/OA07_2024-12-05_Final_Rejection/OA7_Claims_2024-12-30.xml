@@ -1,0 +1,84 @@
+<html><head></head><body><h3>Date: 2024-12-30</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>This listing of the claims will replace all prior versions, and listings, of the claims in this application.</p>
+<h1><u>Listing of Claims:</u></h1>
+<p>Response to Office Action</p><br>
+<br>
+1-15. (Canceled)214<br>
+<br>
+<br>
+16. (Currently amended) A method comprising:deriving using a first apparatus comprising a radio frequency based tracker, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency based data into the pseudo sensor data; and<br>
+providing, using the first apparatus comprising the radio frequency based tracker, the pseudo sensor data derived from the radio frequency based data based on at least the machine learning model to a second apparatus comprising a health or fitness tracker application to enable the health or fitness tracker application to process the pseudo sensor data and native sensor data to enable tracking the activity and health or fitness of the user, wherein the first apparatus is different from the second apparatus, and the first apparatus is configured to be separate from the second apparatus;<br>
+wherein the pseudo sensor data is derived and provided to the second apparatus using the first apparatus comprising the radio frequency based tracker during a time interval when the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application is not provided, or when the native sensor data representative of the activity of the user is unavailable to the second apparatus comprising the health or fitness tracker application;<br>
+<br>
+<br>
+Response to Office Action wherein an amount of time between when the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application begins to not be provided to the second apparatus <u>comprising the health or fitness tracker application </u>or when the native sensor data representative of the activity of the user begins to be unavailable to the second apparatus comprising the health or fitness tracker application, and when the pseudo sensor data begins to be provided to the second apparatus<u> comprisin</u><u>g</u><u> the health or fitness tracker application </u>using the first apparatus comprising the radio frequency based tracker, is less than a threshold amount of time.<br>
+<br>
+17. (Previously presented) The method of claim 16, wherein the radio frequency based data is generated from radio frequency signals reflected from at least the user, wherein the health or fitness tracker application does not process the radio frequency based data.<br>
+<br>
+18. (Previously presented) The method of claim 16, wherein the pseudo sensor data represents data derived from the radio frequency based data, rather than data obtained directly from a sensor that generates the native sensor data indicative of the activity of the user.<br>
+<br>
+19. (Previously presented) The method of claim 18, wherein the sensor is coupled to, or included in, a user equipment associated with the user, wherein the sensor or the user equipment is worn by the user or not worn by the user.<br>
+<br>
+20. (Previously presented) The method of claim 18, wherein the pseudo sensor data is provided from a first device that generates the pseudo sensor data using the machine learning model to a second device comprising the health or fitness tracker application to process the pseudo sensor data and the native sensor data, the native sensor data generated with the second device using the sensor.<br>
+<br>
+Response to Office Action<br>
+<br>
+21. (Previously presented) The method of claim 18, wherein the pseudo sensor data and the native sensor data provide a stream of data to the health or fitness tracker application to enable tracking the activity of the user, or wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part with the sensor not being able to generate the native sensor data representative of the activity of the user.<br>
+<br>
+22. (Previously presented) The method of claim 16, further comprising performing at least one or more of:docking, using the first apparatus, the second apparatus, wherein the first apparatus comprising the radio frequency based tracker provided the pseudo sensor data during the time interval when the first apparatus is docking the second apparatus, or charging, using the first apparatus, the second apparatus, wherein the first apparatus comprising the radio frequency based tracker provides the pseudo sensor data during the time interval when the first apparatus is charging the second apparatus.<br>
+<br>
+23. (Previously presented) The method of claim 18, wherein the pseudo sensor data is derived in response to an indication that a user equipment or the sensor is not providing the native sensor data for the user.<br>
+<br>
+24. (Previously presented) The method of claim 16, wherein the machine learning model is trained with training data comprising at least reference radio frequency based data and reference sensor data, the reference radio frequency based data and the reference sensor data collected from at least one reference user performing at least one activity, wherein the machine learning model is trained using supervised training with the reference sensor data, and wherein the training comprises learning at least one relationship between the reference radio frequency based data obtained at<br>
+<br>
+Response to Office Action points in time and the reference sensor data obtained at the respective points in time, wherein the training of the machine learning model with the reference radio frequency based data and the reference sensor data comprises learning at least one parameter used to derive the pseudo sensor data with the first apparatus from the radio frequency based data.<br>
+<br>
+25. (Previously presented) The method of claim 17, wherein:the machine learning model comprises a neural network, a linear regression model, a regression neural network, or a regression learning technique, and wherein the machine learning model is configured with machine learning based on at least reference radio frequency based data and reference sensor data collected from at least one reference user performing activities comprising walking, running, jumping, gesturing, standing, or sitting, and wherein a user equipment comprises the health or fitness tracker application; and<br>
+wherein the native sensor data comprises accelerometer data, gyroscope data, or barometer data, wherein the pseudo sensor data comprises pseudo accelerometer data, pseudo gyroscope data, or pseudo barometer data, and wherein the radio frequency based data is generated from radar signals reflected from at least the user.<br>
+<br>
+26. (Previously presented) The method of claim 17, wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part with a sensor, that generates the native sensor data representative of activity of the user, not being able to generate the native sensor data representative of the activity of the user.<br>
+<br>
+27. (Currently amended) An apparatus comprising:at least one processor; and<br>
+at least one memory storing instructions that, when executed by the at least one processor,<br>
+<br>
+<br>
+Response to Office Action cause the apparatus at least to:derive using the apparatus comprising a radio frequency based tracker, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency based data into the pseudo sensor data; and<br>
+provide, using the apparatus comprising the radio frequency based tracker, the pseudo sensor data derived from the radio frequency based data based on at least the machine learning model to another apparatus comprising a health or fitness tracker application to enable the health or fitness tracker application to process the pseudo sensor data and native sensor data to enable tracking the activity and health or fitness of the user, wherein the apparatus is different from the another apparatus, and the apparatus is configured to be separate from the another apparatus;<br>
+wherein the pseudo sensor data is derived and provided to the another apparatus using the apparatus comprising the radio frequency based tracker during a time interval when the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application is not provided, or when the native sensor data representative of the activity of the user is unavailable to the second apparatus comprising the health or fitness tracker application;<br>
+wherein an amount of time between when the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application begins to not be provided to the second apparatus <u>comprising the health or fitness tracker application </u>or when the native sensor data representative of the activity of the user begins to be unavailable to the second apparatus comprising the health or fitness tracker application, and when the pseudo sensor data begins to be provided to the second apparatus<u> comprising the health or fitness tracker application </u>using the first apparatus comprising the radio frequency based tracker, is less than a threshold amount of time.<br>
+<br>
+28. (Previously presented) The apparatus of claim 27, wherein the radio frequency based data is generated from radio frequency signals reflected from at least the user.<br>
+<br>
+Response to Office Action<br>
+<br>
+29. (Previously presented) The apparatus of claim 27, wherein the pseudo sensor data represents data derived from the radio frequency based data, rather than data obtained directly from a sensor that generates the native sensor data indicative of the activity of the user.<br>
+<br>
+30. (Previously presented) The apparatus of claim 29, wherein the sensor is coupled to, or included in, a user equipment associated with the user, wherein the sensor or the user equipment is worn by the user or not worn by the user.<br>
+<br>
+31. (Previously presented) The apparatus of claim 29, wherein the health or fitness tracker application does not process the radio frequency based data, and wherein a user equipment comprises the health or fitness tracker application.<br>
+<br>
+32. (Previously presented) The apparatus of claim 31, wherein the pseudo sensor data and the native sensor data provide a stream of data to the health or fitness tracker application to enable tracking the activity of the user, or wherein the pseudo sensor data is derived in response to at least one gap in the native sensor data, the at least one gap caused at least in part with the sensor not being able to generate the native sensor data representative of the activity of the user.<br>
+<br>
+33. (Previously presented) The apparatus of claim 32, wherein the sensor is not able to generate the native sensor data when the sensor is not worn by the user and the user equipment is being charged.<br>
+<br>
+34. (Previously presented) The apparatus of claim 27, wherein the instructions, when executed by the at least one processor, cause the apparatus at least to:<br>
+<br>
+Response to Office Action receive, with the apparatus comprising the radio frequency based tracker from the another apparatus comprising the health or fitness tracker application, an indication to track the user; andprovide, with the apparatus comprising the radio frequency based tracker to the another apparatus comprising the health or fitness tracker application, the pseudo sensor data in response to receiving, with the apparatus comprising the radio frequency based tracker from the another apparatus comprising the health or fitness tracker application, the indication to track the user.<br>
+<br>
+35. (Currently amended) A non-transitory computer readable medium comprising program instructions for causing a first apparatus to perform at least the following:deriving using a first apparatus comprising a radio frequency based tracker, from radio frequency based data, pseudo sensor data representative of at least an activity of a user, the pseudo sensor data derived based on at least a machine learning model configured to transform the radio frequency based data into the pseudo sensor data; and<br>
+providing, using the first apparatus comprising the radio frequency based tracker, the pseudo sensor data derived from the radio frequency based data based on at least the machine learning model to a second apparatus comprising a health or fitness tracker application to enable the health or fitness tracker application to process the pseudo sensor data and native sensor data to enable tracking the activity and health or fitness of the user, wherein the first apparatus is different from the second apparatus, and the first apparatus is configured to be separate from the second apparatus;<br>
+wherein the pseudo sensor data is derived and provided to the second apparatus using the first apparatus comprising the radio frequency based tracker during a time interval when the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application is not provided, or when the native sensor data representative of the activity of the user is unavailable to the second apparatus comprising the health or fitness tracker application;<br>
+wherein an amount of time between when the native sensor data representative of the<br>
+<br>
+<br>
+Response to Office Action activity of the user that is associated with the second apparatus comprising the health or fitness tracker application begins to not be provided to the second apparatus comprising the health or fitness tracker application or when the native sensor data representative of the activity of the user begins to be unavailable to the second apparatus comprising the health or fitness tracker application, and when the pseudo sensor data begins to be provided to the second apparatus comprising the health or fitness tracker application using the first apparatus comprising the radio frequency based tracker, is less than a threshold amount of time.<br>
+<br>
+36. (Previously presented) The method of claim 16, further comprising:sending, by the second apparatus comprising the health and fitness tracker application to the first apparatus comprising the radio frequency based tracker, a trigger message that indicates to the first apparatus comprising the radio frequency based tracker to begin providing the pseudo sensor data;<br>
+wherein the trigger message that indicates to the first apparatus comprising the radio frequency based tracker to begin providing the pseudo sensor data that is sent by the second apparatus comprising the health and fitness tracker application is based on the threshold amount of time.<br>
+<br>
+37. (Previously presented) The method of claim 16, wherein the threshold amount of time comprises a gap in time when the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application is not provided, or when the native sensor data representative of the activity of the user is unavailable to the second apparatus comprising the health or fitness tracker application.<br>
+<br>
+38. (New) The method of claim 16, wherein the pseudo sensor data begins to be provided to the second apparatus comprising the health or fitness tracker application using the first apparatus comprising the radio frequency based tracker due to the native sensor data representative of the activity of the user that is associated with the second apparatus comprising the health or fitness tracker application not being provided to the second apparatus comprising the health or fitness tracker application or the native sensor data representative of the activity of the user being unavailable to the second apparatus comprising the health or fitness tracker application.
+</body></html>

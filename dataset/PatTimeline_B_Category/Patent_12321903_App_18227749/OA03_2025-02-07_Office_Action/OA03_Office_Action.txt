@@ -1,0 +1,21 @@
+Allowable Subject Matter
+Claims 1-20 are allowed in light of the terminal disclaimer filed on 01/23/2025.
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+The following is an examiner’s statement of reasons for allowance:
+The prior art does not anticipate nor render obvious the claimed subject matter of:
+A robot comprising: an optical marker disposed to be visible in a top-view image of the robot; a receiver configured to receive, from an image sensor, a top-down image of an area of interest surrounding the robot within a property, the top-down image including the top-view image of the robot; and a processor configured to: distinguish the robot from structural features on the property based on an image of the optical marker, determine, based on the top-down image, a position and an orientation of the robot and the structural features relative to the property, determine, among the structural features, a subset of features classified as obstacles inhibiting an operation of the robot as the robot moves within the area of interest, determine an operating path for the robot within the area of interest so as to avoid the obstacles, and cause the robot to operate along the determined operating path.
+No particular single feature of the claim renders the claim as a whole patentable. Only the claim taken as a whole combination is deemed new and unobvious.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to MCDIEUNEL MARC whose telephone number is(571) 272-6964.  The examiner can normally be reached on Work 9:00 AM to 7:30.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, WADE MILES can be reached on (571) 270-777.  The fax phone number for the organization where this application or proceeding is assigned is (571) 273-3976.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+PNG
+media_image1.png
+275
+275
+media_image1.png
+Greyscale
+/McDieunel Marc/
+Primary Examiner, Art Unit 3665

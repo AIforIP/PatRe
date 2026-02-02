@@ -1,0 +1,34 @@
+<html><head></head><body><h3>Date: 2023-12-18</h3>
+
+<h1>CLAIMS</h1>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.    A   system for augmenting expulsive uterine forces towards a cervical canal during delivery of a fetus from a uterine cavity, the system comprising:<br>
+a balloon body configured to be placed in the uterine cavity; and<br>
+a controller configured to:detect one of an onset of an intrinsic uterine contraction, an increase in uterine contraction forces, and a decrease in uterine contraction forces,<br>
+responsive to either of a detection of an onset of an intrinsic uterine contraction or an increase in uterine contraction forces, at least partially expand the balloon body, and<br>
+responsive to a detection of a decrease in uterine contraction forces, at least partially collapse the balloon body.<br>
+2.
+The system of claim 1, further comprising an agent source coupled to the controller and in fluid communication with the balloon body, wherein the agent source holds an agent and the controller is configured to at least partially expand the balloon body by causing agent to be delivered from the agent source to the balloon body.<br>
+3.
+The system of claim 2, wherein the controller is configured to at least partially collapse the balloon body by causing agent to be discharged from the balloon body.<br>
+4.
+The system of claim 3, wherein the agent is discharged into the agent source.<br>
+5.
+The system of claim 1, wherein the balloon body is configured to be placed in a region of a fundus near a proximal end of the uterine cavity between the fetus and endometrium lining.<br>
+<br>
+<br>
+6.
+The system of claim 1, wherein the controller is configured to detect one of an onset of an intrinsic uterine contraction, an increase in uterine contraction forces, and a decrease in uterine contraction forces by processing electrical signals indicative of intrinsic uterine contractions.<br>
+7.
+The system of claim 6, further comprising a sensor configured to obtain electrical signals indicative of intrinsic uterine contractions.<br>
+8.
+The system of claim 7, further comprising a catheter configured to be placed in the uterine cavity, wherein the sensor is associated with the catheter.<br>
+9.
+The system of claim 1, wherein the controller is further configured to:<br>
+obtain an intrauterine pressure measurement;<br>
+compare the intrauterine pressure measurement to a threshold; and<br>
+responsive to the intrauterine pressure measurement exceeding the threshold, cause agent to discharge from the balloon body.
+</body></html>

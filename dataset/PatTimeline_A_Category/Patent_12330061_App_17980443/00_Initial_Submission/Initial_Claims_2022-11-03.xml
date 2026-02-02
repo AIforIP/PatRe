@@ -1,0 +1,199 @@
+<html><head></head><body><h3>Date: 2022-11-03</h3>
+<p>CLAIMS</p>
+<p><u>What is claimed is:</u></p>
+<br>
+
+<br>
+1.    A mark processing method, performed by a computer device, the method comprising: 
+<br>
+displaying an aiming prompt mark on a display picture of a virtual environment, the aiming prompt mark being used for indicating a target aimed position at which a target virtual object in the virtual environment aims; 
+<br>
+displaying a position prompt mark on the display picture of the virtual environment according to a first transparency, the position prompt mark being used for indicating a target environment position in the virtual environment; and 
+<br>
+adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark. 
+
+<br>
+
+<br>
+2.    The method according to claim 1, wherein the adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark comprises: 
+<br>
+determining, based on a position of the target virtual object in the virtual environment and the target environment position, a first vector pointing from the position of the target virtual object to the target environment position; 
+<br>
+determining, based on the position of the target virtual object in the virtual environment and the target aimed position, a second vector pointing from the position of the target virtual object to the target aimed position; 
+<br>
+determining an adjusted second transparency based on the first vector and the second vector; and 
+<br>
+displaying the position prompt mark according to the second transparency. 
+
+<br>
+
+<br>
+3.    The method according to claim 1, wherein the adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark comprises: 
+<br>
+acquiring a display distance between the aiming prompt mark and the position prompt mark on a user interface; 
+<br>
+determining an adjusted second transparency according to a preset relationship 
+
+between the display distance and the second transparency; and 
+<br>
+displaying the position prompt mark according to the second transparency. 
+
+<br>
+
+<br>
+4.    The method according to claim 1, further comprising: 
+<br>
+determining whether the target environment position is within a field of view of the target virtual object, the field of view being used for indicating a virtual environment region currently observed by the target virtual object; 
+<br>
+displaying the position prompt mark at the target environment position when the target environment position is within the field of view; and 
+<br>
+displaying the position prompt mark on an edge of the display picture of the virtual environment when the target environment position is outside the field of view. 
+
+<br>
+
+<br>
+5.    The method according to claim 1, wherein the position prompt mark comprises a direction mark, the direction mark pointing to the target environment position.
+<br>
+
+<br>
+6.    The method according to claim 1, further comprising: 
+<br>
+receiving a transparency setting operation for the position prompt mark, and updating at least one of a maximum rated transparency value of the position prompt mark or a minimum rated transparency value of the position prompt mark. 
+
+<br>
+
+<br>
+7.    The method according to claim 1, further comprising: 
+<br>
+receiving a size setting operation for the position prompt mark, and updating a size of the position prompt mark. 
+
+<br>
+
+<br>
+8.    A computer device, comprising a memory and one or more processors, the memory storing computer-readable instructions, the computer-readable instructions, when executed by the one or more processor, causing the computer device to implement a mark processing method including: 
+<br>
+displaying an aiming prompt mark on a display picture of a virtual environment, the aiming prompt mark being used for indicating a target aimed position at which a target virtual object in the virtual environment aims; 
+<br>
+displaying a position prompt mark on the display picture of the virtual environment according to a first transparency, the position prompt mark being used for indicating a target 
+
+environment position in the virtual en ironment: and 
+<br>
+adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark. 
+
+<br>
+
+<br>
+9.    The computer device according to claim 8, Nwherein the adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark comprises: 
+<br>
+determining, based on a position of the target virtual object in the virtual environment and the target environment position, a first vector pointing from the position of the target virtual object to the target environment position: 
+<br>
+determining, based on the position of the target virtual object in the virtual environment and the target aimed position, a second vector pointing from the position of the target virtual object to the target aimed position: 
+<br>
+determining an adjusted second transparency based on the first vector and the second vector: and 
+<br>
+displaying the position prompt mark according to the second transparency. 
+
+<br>
+
+<br>
+10.   The computer device according to claim 8. wherein the adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark comprises: 
+<br>
+acquiring a display distance between the aiming prompt mark and the position prompt mark on a user interface: 
+<br>
+determining an adjusted second transparency according to a preset relationship between the display distance and the second transparency: and 
+<br>
+displaying the position prompt mark according to the second transparency. 
+
+<br>
+
+<br>
+11.   The computer device according to claim 8, wherein the method further comprises: 
+<br>
+determining whether the target environment position is within a field of view of the target virtual object, the field of view being used for indicating a virtual environment region currently observed by the target v irtual object: 
+<br>
+displaying the position prompt mark at the target environment position when the target environment position is within the field of \ ienx: and 
+
+displaying the position prompt mark on an edge of the display picture of the virtual environment when the target environment position is outside the field of view.
+<br>
+
+<br>
+12.   The computer device according to claim 8, wherein the position prompt mark comprises a direction mark, the direction mark pointing to the target environment position.
+<br>
+
+<br>
+13.   The computer device according to claim 8, wherein the method further comprises: 
+<br>
+receiving a transparency setting operation for the position prompt mark, and updating at least one of a maximum rated transparency value of the position prompt mark or a minimum rated transparency value of the position prompt mark. 
+
+<br>
+
+<br>
+14.   The computer device according to claim 8, wherein the method further comprises: 
+<br>
+receiving a size setting operation for the position prompt mark, and updating a size of the position prompt mark. 
+
+<br>
+
+<br>
+15.   One or more non-transitory computer-readable storage media storing computer- readable instructions, the computer-readable instructions, when executed by one or more processors of a computer device, causing the computer device to implement a mark processing method including: 
+<br>
+displaying an aiming prompt mark on a display picture of a virtual environment, the aiming prompt mark being used for indicating a target aimed position at which a target virtual object in the virtual environment aims; 
+<br>
+displaying a position prompt mark on the display picture of the virtual environment according to a first transparency, the position prompt mark being used for indicating a target environment position in the virtual environment; and 
+<br>
+adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark. 
+
+<br>
+
+<br>
+16.   The non-transitory computer-readable storage media according to claim 15, wherein the adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark comprises: 
+<br>
+determining, based on a position of the target virtual object in the virtual environment and the target environment position, a first vector pointing from the position of the target virtual object to the target environment position; 
+
+determining, based on the position of the target v irtual object in the virtual environment and the target aimed position, a second x ector pointing from the position of the target virtual object to the target aimed position; 
+<br>
+determining an adjusted second transparency based on the first vector and the second vector; and 
+<br>
+displaying the position prompt mark according to the second transparency. 
+
+<br>
+
+<br>
+17.   The non-transitory computer-readable storage media according to claim 15. wherein the adjusting the transparency of the position prompt mark in response to a change in relative positions between the aiming prompt mark and the position prompt mark comprises: 
+<br>
+acquiring a display distance bete een the aiming prompt mark and the position prompt mark on a user interface; 
+<br>
+determining an adjusted second transparency according to a preset relationship between the display distance and the second transparency; and 
+<br>
+displaying the position prompt mark according to the second transparency. 
+
+<br>
+
+<br>
+18.   The non-transitory computer-readable storage media according to claim 15. wherein the method further comprises: 
+<br>
+determining whether the target environment position is within a field of view of the target virtual object, the field of view being used for indicating a virtual environment region currently observed by the target virtual object; 
+<br>
+displaying the position prompt mark at the target environment position when the target environment position is within the field of view: and 
+<br>
+displaying the position prompt mark on an edge of the display picture of the virtual environment when the target environment position is outside the field of view. 
+
+<br>
+
+<br>
+19.   The non-transitory computer-readable storage media according to claim 15, wherein the position prompt mark comprises a direction mark, the direction mark pointing to the target environment position.
+<br>
+
+<br>
+20.   The non-transitory computer-readable storage media according to claim 15, wherein the method further comprises: 
+<br>
+receiving a transparency setting operation for the position prompt mark, and updating 
+
+at least one of a maximum rated transparency value of the position prompt mark or a minimum rated transparency value of the position prompt mark.
+031384-7466-US28
+031384-7466-US29
+031384-7466-US31
+031384-7466-US32
+031384-7466-US33
+031384-7466-US30
+</body></html>

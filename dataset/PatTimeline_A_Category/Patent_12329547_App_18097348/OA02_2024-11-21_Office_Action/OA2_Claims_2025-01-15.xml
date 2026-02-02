@@ -1,0 +1,93 @@
+<html><head></head><body><h3>Date: 2025-01-15</h3>
+
+<h1><u>IN THE CLAIMS</u></h1>
+<p>Please amend the claims as follows:</p><br>
+<br>
+1.    (Currently Amended) A medical-device system, comprising:a risk stratification circuit configured to:<br>
+receive physiological information <u>including respiration information and heart sound information </u>sensed from a patient;<br>
+generate distinct first, second, and third signal metrics using the received physiological <u>information, the first signal metric generated using the received respiration information, the second or the third si</u><u>g</u><u>nal metric </u><u>g</u><u>enerated usin</u><u>g</u><u> the received heart sound information;</u><br>
+calculate a primary pulmonary risk score using the first signal metric, and calculate a secondary pulmonary risk score using the second and the third signal metrics, the primary pulmonary risk score and the secondary pulmonary risk score each taking a numerical value;<br>
+and calculate a composite pulmonary risk score using the primary and the secondary pulmonary risk scores; and<br>
+<del>an output </del><u>a physiological event detector </u>circuit configured to <del>provide </del><u>detect a cardiorespiratory event of the patient based at least in part on the</u> calculated composite pulmonary ris<del>k to a user or a process </del><u>score.</u><br>
+2.
+(Currently Amended) The medical-device system of claim 1, <del>comprising a </del><u>wherein the</u> physiological event detector circuit is configured to <u>determine or adjust a detection threshold based at least in part on the calculated composite pulmonary risk score, and to </u>automatically detect [[a]]the cardiorespiratory event of the patient <del>based at least in part on </del><u>using </u>the<del> calculated composite pulmonary risk score </del><u>determined or adjusted detection threshold.</u><br>
+3.
+(Currently Amended) The medical-device system of claim [[2]]1, wherein to automatically detect the cardiorespiratory event, the physiological event detector circuit is configured to:<br>
+calculate a cardiorespiratory event score using one or more physiological signals sensed from the patient;<br>
+<br>
+<br>
+<br>
+determine or adjust an alert threshold based at <u>least </u>in part on the calculated composite pulmonary risk score; and<br>
+generate an alert of the cardiorespiratory event when the cardiorespiratory event score exceeds the alert threshold.<br>
+4.
+(Currently Amended) The medical-device system of claim [[2]]1, wherein the cardiorespiratory event includes at least one of worsening heart failure (WHF), chronic obstructive pulmonary disease (COPD), asthma, or pulmonary edema.<br>
+5.
+(Currently Amended) The medical-device system of claim 1, wherein <del>the first, t</del>he second,-<del> and</del><del></del><u>or</u> the third signal <del>metrics are each </del><u>metric is </u>selected from the group consisting of:<br>
+<del>a respiration rate;</del><br>
+<del>a ratio of respiration rate to tidal volume;</del><br>
+<del>a third heart sound (S3) intensity;</del><br>
+<u>an intensity of a first (S</u><u>1</u><u>), a second (S2), or a third (S3) heart sound</u><u>;</u><br>
+<u>a timin</u><u>g</u><u> of the S</u><u>l</u><u>, the S2, or the S3 heart sound</u><u>;</u><br>
+<u>a Q</u><u> wave to S2 interval</u><u>;</u><br>
+<u>an S</u><u>i</u><u> to S2 interval</u><u>;</u><u> or</u> a ratio of the S3 intensity to a reference heart sound intensity;<br>
+<del>a heart rate;</del><br>
+<del>a thoracic impedance; and</del><br>
+<del>a physical activity level</del>.<br>
+6.
+(Currently Amended) The medical-device system of claim 1, wherein the risk stratification circuit is configured to calculate the secondary pulmonary risk score using measurements of the second signal metric <del>obtained </del><u>sampled only </u>at times when the third signal metric satisfies a specified condition.<br>
+7.
+(Original) The medical-device system of claim 6, wherein the second signal metric include a respiratory rate and the third signal metric incudes a physical activity intensity or duration,<br>
+<br>
+<br>
+<br>
+wherein the measurements of the second signal metric include respiratory rates measured during a time period when the physical activity intensity or duration exceeds a threshold.<br>
+8.
+(Original) The medical-device system of claim 1, wherein the risk stratification circuit is configured to calculate the secondary pulmonary risk score using the second signal metric weighted by the third signal metric.<br>
+9.
+(Original) The medical-device system of claim 1, wherein the risk stratification circuit is configured to calculate the composite pulmonary risk score using a linear or a nonlinear combination of the primary and secondary pulmonary risk scores.<br>
+<br>
+10.    (Original) The medical-device system of claim 1, wherein the risk stratification circuit is configured to calculate the composite pulmonary risk score using a neural network taking the primary and the secondary pulmonary risk scores as input.<br>
+<br>
+11.    (Canceled)<br>
+<br>
+12.    (Original) The medical-device system of claim 1, comprising a therapy circuit configured to initiate or adjust a therapy to treat a cardiorespiratory disease in accordance with the calculated composite pulmonary risk score.<br>
+<br>
+13.    (Currently Amended) A method, comprising:receiving physiological information <u>including respiration information and heart sound information </u>sensed from a patient;<br>
+generating, via a risk stratification circuit of a medical-device system, distinct first, second, and third signal metrics using the received physiological <u>information, the first signal metric generated using the received respiration information, the second or the third signal metric generated using the received heart sound information;</u><br>
+calculating, via the risk stratification circuit, a primary pulmonary risk score using the first signal metric, and calculate a secondary pulmonary risk score using the second and the third signal<br>
+<br>
+<br>
+<br>
+<br>
+metrics, the primary pulmonary risk score and the secondary pulmonary risk score each taking a numerical value;calculating, via the risk stratification circuit, a composite pulmonary risk score using the primary and the secondary pulmonary risk scores; and<br>
+<del>providing, via an output circuit, </del><u>automatically detecting, via a physiological event detector circuit, a cardiorespiratory event of the patient based at least in part on </u>the calculated composite pulmonary ris<del>k to a user or a process </del><u>score.</u><br>
+<br>
+14.    (Currently Amended) The method of claim 13, <del>further comprising automatically detecting a cardiorespiratory event of the patient based at least in part on the calculated composite pulmonary risk score, w</del><u>herein </u>the cardiorespiratory event <del>including </del><u>includes </u>at least one of worsening heart failure (WHF), chronic obstructive pulmonary disease (COPD), asthma, or pulmonary edema.<br>
+<br>
+15.   (Currently Amended) The method of claim [[14]]13, wherein automatically detecting the cardiorespiratory even includes:calculating a cardiorespiratory event score using one or more physiological signals sensed from the patient;<br>
+determining or adjusting an alert threshold based at <u>least </u>in part on the calculated composite pulmonary risk score; and<br>
+generating an alert of the cardiorespiratory event when the cardiorespiratory event score exceeds the alert threshold.<br>
+<br>
+16.   (Currently Amended) The method of claim 13, wherein calculating the secondary pulmonary risk score includes using measurements of the second signal metric <del>obtained </del><u>sampled only </u>at times when the third signal metric satisfies a specified condition.<br>
+<br>
+17.    (Original) The method of claim 13, wherein calculating the secondary pulmonary risk score includes using the second signal metric weighted by the third signal metric.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+18.   (Original) The method of claim 13, wherein calculating the composite pulmonary risk score includes using a neural network taking the primary and the secondary pulmonary risk scores as input.<br>
+<br>
+19.   (Canceled)<br>
+<br>
+20.    (Original) The method of claim 13, further comprising initiating or adjusting a therapy to treat a cardiorespiratory disease in accordance with the calculated composite pulmonary risk score.<br>
+<br>
+21.    (Withdrawn-Currently Amended) A medical-device system, comprising:a risk stratification circuit configured to:<br>
+receive physiological information sensed from a patient;<br>
+generate distinct first, second, and third signal metrics using the received physiological information;<br>
+calculate a primary pulmonary risk score using <u>measurements of </u>the first signal metric, and calculate a secondary pulmonary risk score using <u>measurements of </u>the second [[and <u>]]si</u><u>g</u><u>nal metric sampled only at times when </u>the third signal<del> metrics </del><u>metric satisfies a specific condition,</u> the primary pulmonary risk score and the secondary pulmonary risk score each taking a numerical value; and<br>
+calculate a composite pulmonary risk score using the primary and the secondary pulmonary risk scores; and<br>
+a physiological event detector circuit configured to detect a cardiorespiratory event of the patient based at least in part on the calculated composite pulmonary risk score.<br>
+<br>
+22.    (Withdrawn-Currently Amended) The medical-device system of claim 21, wherein the physiological event detector circuit is configured to determine or adjust a detection threshold based at <u>least </u>in part on the calculated composite pulmonary risk score, and to detect the cardiorespiratory event using the determined or adjusted detection threshold.
+</body></html>

@@ -1,0 +1,46 @@
+<html><head></head><body><h3>Date: 2025-02-19</h3>
+
+<h1><u>AMEND</u><u>MENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions, and listings, of claims in the application:</p>
+<h1><u>Listin</u><u>g</u><u> of Claims:</u></h1>
+<br>
+<br>
+1. (Currently Amended) A questionnaire apparatus comprising:<u>an autonomous driving vehicle that includes one or more sensors</u><u>;</u><br>
+a server that includes:<br>
+one or more processors; and<br>
+one or more memories storing one or more programs that, when executed by the one or more processors, cause the one or more processors to execute:<br>
+managing one or more questions prepared for a passenger of [[an]]the autonomous driving vehicle to evaluate autonomous driving performed by the autonomous driving vehicle;<br>
+<u>acquiring, via the one or more sensors, </u>driving environment information and driving state information related to the autonomous driving, including an occurrence of rapid acceleration or deceleration of the autonomous driving vehicle to determine a vehicle control state, a driving route undertaken by the autonomous driving vehicle, and a driving position of the autonomous driving vehicle when the vehicle control state becomes a particular state that includes rapid steering or evacuation driving or the rapid acceleration or deceleration;<br>
+determining one or more request questions for requesting an answer from the passenger from among one or more managed questions based on the driving environment information and the driving state information<u> and in accordance with the vehicle control </u><u>state</u><u>,</u> wherein the one or more request questions includes at least one question related to a specific scene encountered during the autonomous traveling by the autonomous driving vehicle, and at least one question unaffected by the specific scene encountered during the autonomous traveling by the autonomous driving vehicle; and<br>
+transmitting the one or more request questions at a predetermined timing in response to determining a time at which the autonomous driving vehicle is caused to autonomously arrive at a destination from the acquired driving state information;<u> and</u><br>
+<br>
+<u>an answer terminal that includes one or more processors and a display device, wherein the one or more processors of the answer terminal are configured to receive the one or more request </u><u>q</u><u>uestions from the one or more processors of the server, and control an output of the one or more </u><u>req</u><u>uest </u><u>q</u><u>uestions via the display device.</u><br>
+<br>
+2. (Previously Presented) The questionnaire apparatus according to claim 1, wherein the determining the one or more request questions includes prioritizing the one or more questions, and when a number of the one or more request questions exceeds a predetermined number, determining the one or more request questions in descending order of priority so that the number of the one or more request questions is equal to or less than the predetermined number.<br>
+<br>
+3. (Cancelled)<br>
+<br>
+4. (Previously Presented) The questionnaire apparatus according to claim 1, wherein the one or more programs, when executed by the one or more processors, cause the one or more processors to execute:acquiring an answer to the one or more request questions; and<br>
+evaluating the autonomous driving based on the answer.<br>
+<br>
+5. (Previously Presented) The questionnaire apparatus according to claim 1, wherein the one or more programs, when executed by the one or more processors, cause the one or more processors to execute:acquiring an answer to the one or more request questions; and<br>
+evaluating the autonomous driving based on the answer.<br>
+<br>
+6. (Previously Presented) The questionnaire apparatus according to claim 5, wherein the at least one question unaffected by the specific scene encountered during the autonomous traveling by the autonomous driving vehicle includes one or more mandatory questions, and the evaluating the autonomous driving is performed only when an answer to the one or more mandatory questions is acquired.<br>
+<br>
+<br>
+<br>
+7. (Currently Amended) A questionnaire method<u> performed by a questionnaire apparatus, t</u><u>he</u><u> method </u>comprising:<u>managing, by one or more processors of a server of the </u><u>q</u><u>uestionnaire apparatus, </u>one or more questions prepared for a passenger of an autonomous driving vehicle to evaluate autonomous driving performed by the autonomous driving vehicle;<br>
+<u>acquiring, by one or more sensors of the autonomous driving vehicle of the questionnaire apparatus, </u>driving environment information and driving state information related to the autonomous driving, including an occurrence of rapid acceleration or deceleration of the autonomous driving vehicle to determine a vehicle control state, a driving route undertaken by the autonomous driving vehicle, and a driving position of the autonomous driving vehicle when the vehicle control state becomes a particular state that includes rapid steering or evacuation driving or the rapid acceleration or deceleration;<br>
+<u>determining, by the one or more processors of the server, </u>one or more request questions for requesting an answer from the passenger from among one or more managed questions based on the driving environment information and the driving state information<u> and in accordance with the vehicle control state,</u> wherein the one or more request questions includes at least one question related to a specific scene encountered during the autonomous traveling by the autonomous driving vehicle, and at least one question unaffected by the specific scene encountered during the autonomous traveling by the autonomous driving vehicle; [[and]]<u> transmitting, by the one or more processors of the server, </u>the one or more request questions at a predetermined timing in response to determining a time at which the autonomous driving vehicle is caused to autonomously arrive at a destination from the acquired driving state<u> informatio</u><u>n;</u><u> and</u><br>
+<u>receiving, by one or more processors of an answer terminal of the </u><u>q</u><u>uestionnaire apparatus, the one or more request questions from the one or more processors of the server, and controlling an output of the one or more request questions via a display device of the answer terminal.</u><br>
+<br>
+8. (Currently Amended) A non-transitory computer-readable storage medium storing a program configured to cause a computer to execute:managing one or more questions prepared for a passenger of an autonomous driving vehicle to evaluate autonomous driving performed by the autonomous driving vehicle;<br>
+<br>
+<br>
+<u>acquiring, by one or more sensors of the autonomous driving vehicle, </u>driving environment information and driving state information related to the autonomous driving, including an occurrence of rapid acceleration or deceleration of the autonomous driving vehicle to determine a vehicle control state, a driving route undertaken by the autonomous driving vehicle, and a driving position of the autonomous driving vehicle when the vehicle control state becomes a particular state that includes rapid steering or evacuation driving or the rapid acceleration or deceleration;<br>
+determining one or more request questions for requesting an answer from the passenger from among one or more managed questions based on the driving environment information and the driving state <u>information and in accordance with the vehicle control state,</u> wherein the one or more request questions includes at least one question related to a specific scene encountered during the autonomous traveling by the autonomous driving vehicle, and at least one question unaffected by the specific scene encountered during the autonomous traveling by the autonomous driving vehicle; [[and]] transmitting the one or more request questions at a predetermined timing in response to determining a time at which the autonomous driving vehicle is caused to autonomously arrive at a destination from the acquired driving state information;<u> and</u><br>
+<u>receiving, by one or more processors of an answer terminal, the one or more request questions, and controlling an output of the one or more request questions via a display device of the answer terminal.</u><br>
+<br>
+9. (Cancelled)
+</body></html>

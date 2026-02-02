@@ -1,0 +1,48 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Priority
+Receipt is acknowledged of certified copies of papers required by 37 CFR 1.55.
+Information Disclosure Statement
+The information disclosure statement (IDS) submitted on March 19, 2024 has been considered by the Examiner.
+Drawings
+The drawings are objected to because item 231, which refers to a central through-hole, and item 232, which refers to steel wire through-holes, point to the wrong holes in Fig. 2.
+The drawings are further objected to under 37 CFR 1.83(a) because they fail to show the steel wire rope through-hole 252 as described in the specification.  Any structural detail that is essential for a proper understanding of the disclosed invention should be shown in the drawing. MPEP § 608.02(d).
+Corrected drawing sheets in compliance with 37 CFR 1.121(d) are required in reply to the Office action to avoid abandonment of the application. Any amended replacement drawing sheet should include all of the figures appearing on the immediate prior version of the sheet, even if only one figure is being amended. The figure or figure number of an amended drawing should not be labeled as “amended.” If a drawing figure is to be canceled, the appropriate figure must be removed from the replacement sheet, and where necessary, the remaining figures must be renumbered and appropriate changes made to the brief description of the several views of the drawings for consistency. Additional replacement sheets may be necessary to show the renumbering of the remaining figures. Each drawing sheet submitted after the filing date of an application must be labeled in the top margin as either “Replacement Sheet” or “New Sheet” pursuant to 37 CFR 1.121(d). If the changes are not accepted by the examiner, the applicant will be notified and informed of any required corrective action in the next Office action. The objection to the drawings will not be held in abeyance.
+Specification
+The disclosure is objected to because of the following informalities:  reference characters 232 and 252 have been used to designate steel wire rope through-holes, see page 11, lines 20-24 and page 12, lines 5-10.
+Appropriate correction or clarification is required.
+Claim Objections
+Claim 1 is objected to because of the following informalities:
+Applicant, at claim 1, line 10, may wish to replace “two ends” with “each end” and “when” with “where” or “wherein”;
+Applicant, at claim 1, line 11, may wish to replace “the two ends” with “one end”;
+Applicant, at claim 1, line 11, may wish to add “relative to an other platform” after “fixed”;
+Applicant, at claim 1, line 13, may wish to delete “always”;
+claim 1, at lines 13-14, the phrase, “the movable linkage comprises at least a link” is redundant to the limitation found at lines 7-8;
+Applicant, at claim 1, line 15, may wish to replace “each link” with “a respective link”;
+Applicant, at claim 1, line 16, may wish to replace “one link” with “a respective link”;
+Appropriate clarification or correction is required.
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 1-10 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+Claim 8 describes a middle section of the sleeve steel wire rope passing through each platform.  As each sleeve steel wire rope is connected to the base of the driving body, does each sleeve steel wire rope pass through each platform?  Also, are the sleeve steel wire ropes from claim 8 the same as the steel wire ropes from claim?  Please clarify.
+Claim 1 recites the limitation “the two adjacent platforms” in line 12.
+Claim 8 recites the limitation “the sleeve” in line 4.
+Claim 8 recites the limitation “the sleeves of m steel wire ropes” in line 8.
+Claim 8 recites the limitation “the other joints” in line 11.
+There is insufficient antecedent basis for these limitation in the claims.
+Claims 2-7, 9 and 10 are rejected for their dependence to claims 1 or 8.
+Allowable Subject Matter
+Claims 1-10 would be allowable if rewritten or amended to overcome the rejection(s) under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), 2nd paragraph, set forth in this Office action.
+The following is a statement of reasons for the indication of allowable subject matter:  the prior art neither anticipates nor renders obvious snake arm robot comprising a series of parallel joints where the individual joints are driven by wires connected to parallel links between a base platform and a movable platform.  Typical parallel robots may have wires connected to and driving the movable platform and not connected to links between the base and movable platform.  Typical snake robots lack parallel robot assemblies that serve as individual links.
+The closest, relevant prior art is to Ji et al (CN 111113390) which shows a snake robot having individual joints and wires that drive the individual joints are connected to a proximal end of the joints.  It would not have been obvious to arrange parallel robots as individual links in a snake robot nor drive the movable platform of each parallel link via wires connected to corresponding parallel linkages of each parallel link.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to BOBBY RUSHING, JR whose telephone number is(571) 270-0501. The examiner can normally be reached Monday - Friday, 8AM-5PM EST.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Victor Macarthur can be reached on (571) 272-7085. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/BOBBY RUSHING, JR/            Primary Examiner, Art Unit 3618

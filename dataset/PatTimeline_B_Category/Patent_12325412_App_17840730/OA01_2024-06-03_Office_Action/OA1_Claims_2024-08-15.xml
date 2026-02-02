@@ -1,0 +1,45 @@
+<html><head></head><body><h3>Date: 2024-08-15</h3>
+
+<h1><u>Amendments to the Claims:</u></h1>
+<p>Without prejudice, this listing of the claims replaces all prior versions and listings of the claims in the present application:</p>
+<h1><u>Listing of the Claims:</u></h1>
+<p>Reply to Office Action of June 3, 2024</p><br>
+<br>
+1. (Currently Amended) A method for operating a transverse stabilization system of a vehicle, the method comprising the following steps:<br>
+reading in a steering direction of the vehicle and a setpoint direction of the vehicle;<br>
+<u>determining, based on a comparison of the steering and setpoint directions to each other, that there is satisfaction of a condition that there is greater than a threshold deviation between steering and setpoint directions, indicating that a steering being performed is towards a first target point that is different than a second target point to which the setpoint direction is to lead</u><u>;</u><u></u><del>and determining</del><u> responsive to the satisfaction of the condition, performing the following:</u><u>setting </u>a transverse stabilization <u>direction that is different than the steering direction and the setpoint direction, the transverse stabilization direction being towards a third </u>target<del> for </del><u>point that is different than each of </u>the <u>first and second target points</u><u>;</u><u> and</u><br>
+<u>performing a </u>transverse stabilization <u>automatically </u><del>system using the </del>steering <u>t</u><u>he</u><u> vehicle in </u><del>direction and </del>the <del>setpoint </del><u>transverse stabilization </u>direction.<br>
+<br>
+2. (Currently Amended) The method as recited in claim 1, wherein the transverse stabilization <u>direction </u><del>target </del>is <del>determined as lying </del>between the setpoint direction and the steering direction.<br>
+<br>
+3. (Currently Amended) The method as recited in claim 1, wherein, in the <u>setting</u><del> determining </del>of the transverse stabilization <del>target </del><u>direction is performed such that,</u><u>a degree, relative to the steering direction, to which </u>the setpoint direction <u>factors into the setting of the transverse stabilization </u>is <u>such that the greater </u><del>weighted dependent on </del>a deviation between the setpoint direction and the steering direction <u>is, the greater is the degree to which the setpoint direction factors into the setting.</u><br>
+<br>
+4. (Canceled).<br>
+<br>
+<br>
+<br>
+Reply to Office Action of June 3, 2024<br>
+<br>
+5. (Currently Amended) The method as recited in claim 1, wherein the setpoint direction is used <u>for the setting of </u><del>to determine </del>the transverse stabilization target <u>conditional upon that </u><del>when</del> a confidence value of the setpoint direction is greater than a predetermined threshold value.<br>
+<br>
+6. (Original) The method as recited in claim 1, wherein the setpoint direction is derived from a recognized line of the road.<br>
+<br>
+7. (Original) The method as recited in claim 1, wherein the setpoint direction is determined using an environment capture system of the vehicle.<br>
+<br>
+8. (Currently Amended) The method as recited in claim 1, wherein the setpoint direction is derived from a [[n]] setpoint trajectory for the vehicle.<br>
+<br>
+9. (Currently Amended) A control unit for a transverse stabilization system, the control unit configured to:<br>
+read in a steering direction of the vehicle and a setpoint direction of the vehicle;<br>
+<u>determine, based on a comparison of the steering and setpoint directions to each other, that there is satisfaction of a condition that there is greater than a threshold deviation between steering and setpoint directions, indicating that a steering being performed is towards a first target point that is different than a second target point to which the setpoint direction is to lead</u><u>;</u><u></u><del>and determine</del><u> responsive to the satisfaction of the condition, performing the following:</u><u>s</u><u>et</u> a transverse stabilization <u>direction that is different than the steering direction and the setpoint direction, the transverse stabilization direction being towards a third </u>target<del> for </del><u>point</u><u></u><u>that is different than each of </u>the <u>first and second target points</u><u>;</u><u> and</u><br>
+<u>perform a </u>transverse stabilization <u>automatically </u><del>system using the </del>steering <u>the vehicle in </u><del>direction and </del>the <del>setpoint </del><u>transverse stabilization </u>direction.<br>
+<br>
+<br>
+<br>
+Reply to Office Action of June 3, 2024<br>
+<br>
+10. (Currently Amended) A non-transitory machine-readable storage medium on which is stored a computer program for operating a transverse stabilization system of a vehicle, the computer program, when executed by a processor, causing the processor to perform the following steps:<br>
+reading in a steering direction of the vehicle and a setpoint direction of the vehicle;<br>
+<u>determining, based on a comparison of the steering and setpoint directions to each other, that there is satisfaction of a condition that there is greater than a threshold deviation between steering and setpoint directions, indicating that a steering being performed is towards a first target point that is different than a second target point to which the setpoint direction is to lead; </u><del>and determining</del><u> responsive to the satisfaction of the condition, performing the following:</u><u>setting </u>a transverse stabilization <u>direction that is different than the steering direction and the setpoint direction, the transverse stabilization direction being towards a third </u>target<del> for </del><u>point that is different than each of </u>the <u>first and second target points</u><u>;</u><u> and</u><br>
+<u>performing a </u>transverse stabilization <u>automatically </u><del>system using the </del>steering <u>t</u><u>he</u><u> vehicle in </u><del>direction and </del>the <del>setpoint </del><u>transverse stabilization </u>direction.<br>
+
+</body></html>

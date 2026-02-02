@@ -1,0 +1,90 @@
+<html><head></head><body><h3>Date: 2024-09-23</h3>
+<p><u>AMENDMENT TO CLAIMS</u></p><br>
+<br>
+1. (Currently amended) A method of managing monitoring data based on a probe assembly, comprising:<br>
+establishing, by the probe assembly, communication connection with a first monitor;<br>
+receiving, by the probe assembly in response to a data-transfer instruction, first monitoring data from the first monitor; after transferring the first monitoring data being completed, disconnecting the communication connection with the first <u>monitor</u><u>;</u><u> wherein, the first monitorin</u><u>g</u><u> data comprises: monitoring data collected by the probe assembly from a patient, emergency treatment information recorded by the first monitor, and information of the patient;</u><br>
+establishing, by the probe assembly, communication connection with a second monitor; and sending, by the probe assembly, at least the first monitoring data to the second monitor and performing, by the probe assembly, a monitoring task cooperatively with the second monitor.<br>
+<br>
+2. (Original) The method according to claim 1, wherein the data-transfer instruction comprises: first access information, and the probe assembly comprises more than one probes;<br>
+and the receiving, in response to a data-transfer instruction, first monitoring data from the first monitor; after transferring the first monitoring data being completed, disconnecting the communication connection with the first monitor, comprises:selecting, based on the first access information, one probe from the probe assembly to serve as a temporary host probe; and<br>
+receiving the first monitoring data via the temporary host probe, and disconnecting the communication connection between the probe assembly and the first monitor after transmitting the first monitoring data is completed.<br>
+<br>
+3. (Original) The method according to claim 2, wherein the selected probe comprises: a pre- defined probe or a probe which is in a first operating state; the probe which is in the first state has a power level and/or a signal strength greater than a power and/or a signal strength of any of the remaining probes of the more than one probes; and the first access information comprises access information of the selected probe.<br>
+<br>
+4. (Original) The method according to claim 3, wherein before the establishing communication connection with a second monitor, the method further comprises:<br>
+performing access configuration on the temporary host probe and the remaining probes by taking the first access information to establish temporary communication connection;<br>
+collecting, continually by the temporary host probe and the remaining probes, monitoring data; storing, by the temporary host probe, the monitoring data that is continually collected by the temporary host probe; receiving and storing, by the temporary host probe, the monitoring data that is transmitted from the remaining probes; and generating temporary monitoring data based on the monitoring data collected by the temporary host probe and the monitoring data collected by the remaining probes.<br>
+<br>
+5. (Original) The method according to claim 4, wherein before the establishing communication connection with a second monitor, the method further comprises:<br>
+obtaining an unbonding instruction and disconnecting the communication connection between the temporary host probe and the remaining probes.<br>
+<br>
+6. (Original) The method according to claim 5, wherein the data-transfer instruction further comprises: second access information corresponding to the second monitor; and<br>
+the obtaining an unbonding instruction and disconnecting the communication connection between the temporary host probe and the remaining probes, comprises:<br>
+determining, by the temporary host probe based on the second access information, whether a second monitor satisfying communication connection requirements is searched and found; and<br>
+sending, by the temporary host probe, the unbonding instruction in response to the second monitor satisfying communication connection requirements being found, and disconnecting the communication connection between the temporary host probe and the remaining probes, enabling the temporary host probe and the remaining probes to be ready to take the second access information to establish communication connection with the second monitor.<br>
+<br>
+7. (Original) The method according to claim 5, wherein the obtaining an unbonding instruction and disconnecting the communication connection between the temporary host probe and the remaining probes, comprises:<br>
+determining, by the temporary host probe, whether connection information from the second monitor is received; and<br>
+sending, by the temporary host probe, the connection information to the remaining probes in response to the connection information from the second monitor being received, sending, by the temporary host probe, the unbonding instruction, disconnecting the communication connection<br>
+between the temporary host probe and the remaining probes, enabling the temporary host probe and the remaining probes to be ready to take the connection information to establish communication connection with the second monitor.<br>
+<br>
+8. (Original) The method according to claim 1, wherein the receiving, in response to a data- transfer instruction, first monitoring data from the first monitor; after transferring the first monitoring data being completed, disconnecting the communication connection with the first monitor, comprises:<br>
+receiving, by the probe assembly, the first monitoring data and verifying whether the first monitoring data is complete;<br>
+in response to the first monitoring data being complete, determining that transmitting the first monitoring data is completed and disconnecting communication connection between the probe assembly and the first monitor; and<br>
+in response to the first monitoring data being incomplete, sending, by the probe assembly, a data retransmission instruction to the first monitor and receiving, by the probe assembly, the first monitoring data, which is retransmitted by the first monitor in response to the data retransmission instruction.<br>
+<br>
+9. (Original) The method according to claim 4, wherein the sending at least the first monitoring data to the second monitor and performing a monitoring task cooperatively with the second monitor, comprises:<br>
+reconstituting the first monitor data and the temporary monitor data based on a predetermined data transmission protocol to obtain a monitoring data packet; and<br>
+sending, by the temporary host probe, the monitoring data packet to the second monitor.<br>
+<br>
+10. (Original) The method according to claim 4, wherein before the establishing communication connection with a second monitor, the method further comprises:<br>
+triggering an alarm to prompt establishing communication connection between the probe assembly and the second monitor as soon as possible, in response to a time length that the probe assembly is disconnected from the first monitor being greater than or equal to a preset transferring-out time length.<br>
+<br>
+11. (Currently amended) A probe assembly, comprising a plurality of probes, wherein the plurality of probes in the probe assembly are configured to cooperate with each other to perform the operations of:<br>
+establishing communication connection with a first monitor;<br>
+receiving, in response to a data-transfer instruction, first monitoring data from the first monitor; after transferring the first monitoring data being completed, disconnecting the communication connection with the first monitor;<br>
+establishing communication connection with a second monitor; and<br>
+sending at least the first monitoring data to the second monitor and performing a monitoring task cooperatively with the second monitor;<br>
+<u>wherein the data-transfer instruction comprises: first access information</u><u>;</u><u> and</u><br>
+<u>while receiving, in response to the data-transfer instruction, first monitoring data from the first monitor; after transferring the first monitoring data being completed, disconnecting the communication connection with the first monitor, the plurality of probes are further configured to perform the operations o</u><u>f:</u><br>
+<u>selecting, based on the first access information, one probe from the plurality of probes to serve as a temporary host probe; and</u><br>
+<u>receiving the first monitoring data via the temporary host probe, and disconnecting the communication connection between the probe assembly and the first monitor after transmitting the first monitoring data is completed.</u><br>
+<br>
+12 (Canceled)<br>
+<br>
+13. (Currently amended) The probe assembly according to claim [[12]]11, wherein the selected probe comprises: a pre-defined probe or a probe which is in a first operating state; the probe which is in the first state has a power level and/or a signal strength greater than a power and/or a signal strength of any of the remaining probes of the plurality of probes; and the first access information comprises access information of the selected probe.<br>
+<br>
+14. (Original) The probe assembly according to claim 13, wherein before establishing communication connection with the second monitor, the probe assembly are further configured to perform operations of:<br>
+performing access configuration on the temporary host probe and the remaining probes by taking the first access information to establish temporary communication connection;<br>
+collecting, continually by the temporary host probe and the remaining probes, monitoring data; storing, by the temporary host probe, the monitoring data that is continually collected by the temporary host probe; receiving and storing, by the temporary host probe, the monitoring data that is transmitted from the remaining probes; and generating temporary monitoring data based on the monitoring data collected by the temporary host probe and the monitoring data collected by the remaining probes.<br>
+<br>
+15. (Original) The probe assembly according to claim 14, wherein before establishing communication connection with the second monitor, the probe assembly are further configured to perform operations of:<br>
+obtaining an unbonding instruction and disconnecting the communication connection between the temporary host probe and the remaining probes.<br>
+<br>
+16. (Original) The probe assembly according to claim 15, wherein the data-transfer instruction further comprises: second access information corresponding to the second monitor;<br>
+and while obtaining the unbonding instruction and disconnecting the communication connection between the temporary host probe and the remaining probes, the probe assembly is configured to perform operations of:determining, by the temporary host probe based on the second access information, whether a second monitor satisfying communication connection requirements is searched and found; and<br>
+sending, by the temporary host probe, the unbonding instruction in response to the second monitor satisfying communication connection requirements being found, and disconnecting the communication connection between the temporary host probe and the remaining probes, enabling the temporary host probe and the remaining probes to be ready to take the second access information to establish communication connection with the second monitor.<br>
+<br>
+17. (Original) The probe assembly according to claim 15, wherein while obtaining the unbonding instruction and disconnecting the communication connection between the temporary host probe and the remaining probes, the probe assembly is configured to perform operations of:<br>
+determining, by the temporary host probe, whether connection information from the second monitor is received; and<br>
+sending, by the temporary host probe, the connection information to the remaining probes in response to the connection information from the second monitor being received, sending, by the<br>
+temporary host probe, the unbonding instruction, disconnecting the communication connection between the temporary host probe and the remaining probes, enabling the temporary host probe and the remaining probes to be ready to take the connection information to establish communication connection with the second monitor.<br>
+<br>
+18. (Currently amended) A management system of monitoring data, comprising: a probe assembly, a first monitor, and a second monitor, wherein the probe assembly is configured to operate cooperatively with the first monitor and the second monitor to perform the operations of:<br>
+establishing communication connection between the probe assembly and the first monitor;<br>
+receiving, by the probe assembly in response to a data-transfer instruction, first monitoring data from the first monitor; after transferring the first monitoring data being completed, disconnecting the communication connection with the first monitor;<br>
+establishing communication connection between the probe assembly and the second monitor; and<br>
+sending, by the probe assembly, at least the first monitoring data to the second monitor and performing, by the probe assembly, a monitoring task cooperatively with the second monitor;<br>
+<u>wherein, the probe assembly comprises at least one probe</u><u>;</u><br>
+<u>during receiving the first monitoring data from the first monitor, one probe of the at least one probe is selected to serve as a temporary host probe to receive and store the first monitoring </u><u>data; </u><u>and</u><br>
+<u>the communication connection between the probe assembly and the first monitor is disconnected after transmitting the first monitoring data is completed.</u><br>
+<br>
+19. (Currently amended) The management system according to claim 18, wherein the data- transfer instruction comprises: first access information, and the <u>at least one probe </u><del>p</del><del>robe</del><del>=</del><del>assembly</del> comprises more than one probes; and<u>during receiving the first monitoring data from the first monitor, one of the more than one probes is selected to serve as the temporary host probe</u><del></del><del>while=</del><del>receiving</del><del>,=in=</del><del>response</del><del>=to =</del><del>the data-transfer</del><del></del><del>instruction</del><del>=</del><del>first=monitoring</del><del>=</del><del>data=from=the= first moni</del><del>tor; </del><del>after transferring the first </del><del>monitering-data-being-eempleted, d </del>SVG
+{EMBED HERE}
+0.1170.253<del> nnecting the-</del><del> communication connection with the first monitor, the probe assembly is further configured to operate cooperatively with the first monitor and the second monitor to perform the operations of</del><del>:</del><br>
+<br>
+<del>sel</del><del>eeting</del><del>;-b</del><del>ased</del><del>-en-t</del><del>he fir</del><del>st-</del><del>aeeess informati</del><del>on-o</del><del>ne-pr</del><del>obe-from-t</del><del>he-pr</del><del>o</del><del>be-</del><del>ass</del><del>embl</del><del>y-t-serve-</del><del></del><del>as-a-tem</del><del>por</del><del>ary-host-</del><del>probe</del><del>-a</del><del>nd- receiving=the=first=monitoring</del><del>=</del><del>data</del><del>=</del><del>via</del><del>=</del><del>the</del><del>=</del><del>temporary=host=probe,</del><del>=</del><del>and=disconnecting=the= </del><del>communic-ationo</del><del>nne</del><del>etio</del><del>n between the</del><del>-p</del><del>robe</del><del>-ass</del><del>embl</del><del>y-</del><del>and the first monit</del><del>o</del><del>r-after transmitting</del><del>-</del><del> the first monitoring data is completed</del>.<br>
+<br>
+20. (Original) The management system according to claim 19, wherein the selected probe comprises: a pre-defined probe or a probe which is in a first operating state; the probe which is in the first state has a power level and/or a signal strength greater than a power and/or a signal strength of any of the remaining probes of the more than one probes; and the first access information comprises access information of the selected probe.
+</body></html>

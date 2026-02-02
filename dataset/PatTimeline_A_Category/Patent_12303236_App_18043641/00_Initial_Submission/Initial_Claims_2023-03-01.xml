@@ -1,0 +1,264 @@
+<html><head></head><body><h3>Date: 2023-03-01</h3>
+ We claim:
+<br>
+
+<br>
+1.    A system comprising: 
+<br>
+a wireless transmit and receive circuit comprising one or more transmit antenna elements and one or more receive antenna elements, at least two transmit-receive antenna element pairs configured to receive wireless reflections derived from a heart; and 
+<br>
+a cardiac beamformer comprising: 
+<br>
+a phase extractor configured to extract phase information from time-domain signals output from the at least two transmit-receive antenna element pairs, the phase information corresponding to one or more regions in a surrounding environment, and 
+<br>
+a heart signal extractor comprising a convolutional neural network (CNN) configured to receive signals from the at least two transmit-receive antenna element pairs and in response extract an estimated heart signal. 
+
+<br>
+
+2.
+The system of claim 1, wherein the heart signal extractor includes: 
+<br>
+an extractor configured to identify a spatial beam based on the extracted phase information and the estimated heart signal and to extract time-series phase information of a signal received via the identified spatial beam. 
+
+<br>
+
+3.
+The system of claim 1, wherein the wireless transmit and receive circuit comprises one transmit antenna element and a plurality of receive antenna elements.
+<br>
+
+4.
+The system of claim 1, wherein the wireless transmit and receive circuit comprises a plurality of transmit antenna elements and one receive antenna element.
+<br>
+
+5.
+The system of claim 1, wherein the wireless transmit and receive circuit is configured to transmit and receive frequency modulated continuous wave (FMCW) signals.
+<br>
+
+6.
+The system of claim 1, wherein: 
+<br>
+the wireless transmit and receive circuit comprises a one-dimensional (iD) array of antenna elements, and 
+<br>
+the wireless transmit and receive circuit is configured to transmit and receive frequency modulated continuous wave (FMCW) signals. 
+
+<br>
+
+7.
+The system of claim 1, wherein: 
+<br>
+the wireless transmit and receive circuit comprises a two-dimensional (2D) array of antenna elements, and 
+<br>
+the wireless transmit and receive circuit is configured to transmit and receive frequency modulated continuous wave (FMCW) signals. 
+
+<br>
+
+8.
+The system of claim 1, wherein: 
+<br>
+the heart signal extractor is configured to receive phase data from the at least two transmit-receive antenna element pairs, and 
+<br>
+the CNN is configured to extract the estimated heart signal based on at least the phase data. 
+
+<br>
+
+9.
+The system of claim 1, wherein: 
+<br>
+the heart signal extractor is configured to receive a filtered time series of phase data from the at least two transmit-receive antenna element pairs, and 
+<br>
+the CNN is configured to extract the estimated heart signal based on at least the filtered time series of phase data. 
+<br>
+
+<br>
+10.    The system of claim 1, wherein the wireless transmit and receive circuit is configured to operate in the radio frequency (RF) range.
+<br>
+
+<br>
+11.    The system of claim 11, wherein the wireless transmit and receive circuit is configured to operate in the millimeter wave (MIN/W) frequency range.
+<br>
+
+<br>
+12.    The system of claim 1, wherein the wireless transmit and receive circuit is configured to operate in the acoustic frequency range.
+<br>
+
+<br>
+13.    The system of claim 1, wherein the wireless transmit and receive circuit is configured to operate in the ultrasonic frequency range.
+<br>
+
+<br>
+14.    A wireless-to-seismocardiogram translator, comprising: 
+<br>
+a receiver configured to receive wireless signals derived from a heart; and 
+<br>
+at least one processor configured to implement a machine-learning model to translate the wireless signals to a seismocardiogram. 
+
+<br>
+
+<br>
+15.   The translator of claim 14, wherein the receiver is configured to receive the wireless signals from a beamformer.
+<br>
+
+<br>
+16.    The translator of claim 14, wherein the machine-learning model comprises a CNN-based model.
+<br>
+
+<br>
+17.    The translator of claim 14, wherein the machine-learning model comprises an RNN-based model.
+<br>
+
+<br>
+18.   The translator of claim 14, wherein the receiver is configured to receive radio frequency signals.
+<br>
+
+<br>
+19.   The translator of claim 14, wherein the receiver is configured to receive acoustic signals.
+<br>
+
+<br>
+20.    The translator of claim 14, wherein the receiver is configured to receive ultrasonic frequency signals.
+<br>
+
+<br>
+21.    A method for automatically labeling a cardiac event, the method comprising: 
+<br>
+receiving unlabeled time-series data output from a translator, the unlabeled time-series data based on wireless signals derived from a heart and the translator configured to translate the wireless reflections into a seismocardiogram; 
+<br>
+determining a feature of the time-series data; 
+<br>
+implementing a machine-learning model to compare the feature to a reference corresponding to a fiducial point, the fiducial point correlated to a health state; 
+<br>
+determining existence of the health state based on a result of the comparison; and 
+<br>
+automatically labeling the seismocardiogram to indicate the health state. 
+
+<br>
+
+<br>
+22.    The method of claim 21, wherein the feature is one of a time position, an amplitude, or pattern of one or more data points of the time-series data.
+<br>
+
+<br>
+23.    The method of claim   21, wherein the machine-learning model is a convolutional neural network.
+<br>
+
+<br>
+24.    The method of claim 21, wherein the fiducial point is correlated to one of: 
+<br>
+opening of an aortic valve, closing of an aortic valve, opening of a mitral valve, closing of a mitral valve, or 
+<br>
+isovolumetric contraction of one or more ventricles. 
+
+<br>
+
+<br>
+25.    The method of claim 21, wherein the wireless signals include radio frequency (RF) signals.
+<br>
+
+<br>
+26.    A contactless seismocardiography system comprising: 
+<br>
+a wireless transmit and receive circuit comprising one or more transmit antenna elements and one or more receive antenna elements, the wireless transmit and receive circuit configured to receive signals from at least two transmit-receive antenna element pairs; 
+<br>
+a cardiac beamformer configured to receive input signals from the wireless transmit and receive system, wherein the input signals correspond to wireless signals reflected from a human heart, the cardiac beamformer configured to process the input signals to provide a beamformer output signal; 
+<br>
+a wireless-to-seismocardiogram translator configured to transform the beamformer output signal into a seismocardiogram recording; and 
+
+ an automatic labeler configured to extract timing of one or more micro- cardiac movements of the human heart and to automatically label the seismocardiogram recording corresponding to the one or more micro-cardia movements.
+<br>
+
+<br>
+27.   A translation filter, comprising: 
+<br>
+an input layer configured to receive time-series data; 
+<br>
+a plurality of convolutional neural network (CNN) layers, each of the plurality of CNN layers grouped with a rectified linear unit (ReLU) function, a batch normalization (BN) layer, and a dropout layer. 
+
+<br>
+
+<br>
+28.   The translation filter of claim 27, wherein the input layer is configured to receive wireless time-series data.
+<br>
+
+<br>
+29.   The translation filter of claim 27, wherein wireless time-series data includes millimeter-wave time-series data.
+<br>
+
+<br>
+30.   A contactless sensor, comprising: 
+<br>
+a radar detector configured to detect reflected signals from a heart; 
+<br>
+a system configured to implement a machine-learning model to generate a seismocardiogram based on the reflected signals, the machine-learning model configured to modify a transformation function that converts the reflected signals to information in the seismocardiogram that corresponds to one or more micro-cardiac events; and 
+<br>
+labeling logic configured to implementing a deep-learning model to correlate at least one chest vibration to one or more micro-cardiac events based on the information in the seismocardiogram, wherein the reflected signals include wireless signals. 
+<br>
+
+<br>
+31.   The contactless sensor of claim 30, wherein the wireless signals are radio frequency signals in a millimeter wavelength range.
+<br>
+
+<br>
+32.   The contactless sensor of claim 30, wherein the machine-learning model includes a time-domain convolutional neural network (CNN).
+<br>
+
+<br>
+33.   The contactless sensor of claim 30, wherein the machine-learning model includes a time-domain convolutional neural network (CNN).
+<br>
+
+<br>
+34.   A method for auto-labeling a cardiac event in a motion-based contactless measurement of a human heart, the method comprising: 
+<br>
+encoding unlabeled seismocardiogram signals from at least one channel to signals with a predetermined number of sample points and multiple channels; and 
+<br>
+decoding the encoded signals to labeled SCG signals which have same data points as the unlabeled signals and a channel size of micro-cardiac events. 
+
+<br>
+
+<br>
+35.   The method of claim 34, wherein the encoding includes receiving wireless input signals.
+<br>
+
+<br>
+36.   The method of claim 35, wherein the wireless input signals are radio frequency signals.
+<br>
+
+<br>
+37.   The method of claim 35, wherein the wireless input signals are acoustic signals.
+<br>
+
+<br>
+38.   The method of claim 34, receiving accelerometer input signals as a reference.
+<br>
+
+<br>
+39,   The method of claim 34, wherein the signals are electrophysiology input signals.
+<br>
+
+<br>
+40.   The method of claim 34, wherein: 
+<br>
+the encoding is performed by a plurality of encoding modules, each of the plurality encoding modules comprises CNN layers, and 
+<br>
+each of the CNN layers are grouped with a rectified linear unit (ReLU) function and a batch normalization (BN) layer. 
+
+<br>
+
+<br>
+41.   The method of claim   34, wherein the decoding includes receiving intermediate and final outputs of the encoded signals.
+<br>
+
+<br>
+42.   The method of claim 34, wherein: 
+<br>
+the decoding is performed by a plurality of encoding modules, each of the plurality encoding modules comprises CNN layers, and 
+<br>
+each of the CNN layers are grouped with a rectified linear unit (ReLU) function and a batch normalization (BN) layer. 
+66
+67
+68
+69
+70
+71
+72
+73
+</body></html>

@@ -1,0 +1,6 @@
+<html><head></head><body><h3>Date: 2022-03-29</h3>
+<h1>ABSTRACT</h1>
+
+<p>Various embodiments provide a computer device for attenuating motion artifacts in photoplethysmography (PPG) in real time and a method using the same. The computer device obtains a primarily restored PPG AC signal from a distorted PPG signal by using an exponentially weighted moving average filter and restores the final PPG AC signal from the primarily restored PPG AC signal through block interleaving. The computer device includes an initial unit obtaining a basic period of a PPG signal from a PPG sensor in an initial state, an update unit obtaining a waveform and period of a PPG signal not having distortion from the PPG sensor in the state in which motion artifacts are not present, a compensation unit detecting the final PPG AC signal by restoring a waveform of the distorted PPG signal, and a command unit outputting the final PPG AC signal.</p>
+I
+</body></html>

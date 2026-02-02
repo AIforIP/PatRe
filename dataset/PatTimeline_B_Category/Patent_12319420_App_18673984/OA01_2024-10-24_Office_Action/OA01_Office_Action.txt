@@ -1,0 +1,101 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Priority
+Receipt is acknowledged of certified copies of papers required by 37 CFR 1.55.
+Claim Rejections - 35 USC § 112
+The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 2-3 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+The term “near” in claims 2 and 3 is a relative term which renders the claim indefinite. The term “near” is not defined by the claim, the specification does not provide a standard for ascertaining the requisite degree, and one of ordinary skill in the art would not be reasonably apprised of the scope of the invention.
+For examination purposes, as best understood by the Examiner in view of the specification the limitation will be construed to mean “at any distance”.
+Claim 2 recites the limitation the front in line 2.  There is insufficient antecedent basis for this limitation in the claim.  The limitation will be interpreted as the front end of the of the nacelle.
+Claim Rejections - 35 USC § 102
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+(a)(2) the claimed invention was described in a patent issued under section 151, or in an application for patent published or deemed published under section 122(b), in which the patent or application, as the case may be, names another inventor and was effectively filed before the effective filing date of the claimed invention.
+Claim(s) 1-3, 8-9 and 14-15 is/are rejected under 35 U.S.C. 102(a)(1)/(a)(2) as being anticipated by Porte et al. (FR 2978731), hereinafter: “Porte”.
+In Regard to Claim 1
+Porte teaches:
+A propulsion assembly(12) comprising:
+a fan casing(28) which extends between front and rear ends(56,58),
+a nacelle(20) which comprises, in a backward direction, an air inlet(34) which is connected to the front end of the fan casing(at 72; Fig 5), an intermediate portion(36) which is positioned around the fan casing(Fig 2-5), and a rear portion(38) which cooperates with the rear end of the fan casing(Fig 2), the intermediate portion extending between a front edge(forward edge proximate 34) which is attached to the air inlet(Fig 2-5) and a rear edge(aft edge proximate 38) which is attached to the rear portion(Fig 2-5) and which comprises at least one aerodynamic panel(40) which extends from the front edge as far as the rear edge of the intermediate portion(Fig 2),
+wherein the intermediate portion comprises at least one intermediate radial support(48, 82, 84; Fig 4-5) comprising an internal edge(at 50, at 86, at 90, respectively) which is connected to the fan casing(either directly or indirectly as visually apparent from Fig 4-5) and an external edge(not numbered in Fig 4; at 94 and at 94’ in Fig 5) which is connected to the at least one aerodynamic panel(either directly or indirectly as visually apparent from Fig 4-5) which comprises a front edge which is connected to the air inlet by a first connection system(the forward edge of 40 is connected at 68 to the air inlet 34 via 46; Fig 4-5, 11-12).
+In Regard to Claim 2
+Porte teaches:
+The propulsion assembly according to claim 1(see rejection of claim 1 above), wherein the air inlet comprises a lip(42) which is located at the front(Fig 2-5), an internal conduit which extends the lip towards an interior of the nacelle(inner radial wall of 20 extending between 42 and 62; Fig 5), a first external wall which extends the lip towards an exterior of the nacelle(outer radial wall of 20 extending between 42 and 66; Fig 5) and a first annular frame(70) which has an internal edge which is connected to the internal conduit and an external edge which is connected to the first external wall(visually apparent from Fig 5), and
+wherein the first connection system comprises at least a first edge(at 66) which is fixedly joined to the first annular frame(Fig 5) and which is positioned in a region of or near the external edge of the first annular frame(Fig 5), and a plurality of connection elements(46, 68, 66) which connect the at least one aerodynamic panel and the first edge and which are distributed over at least a portion of a circumference of the nacelle(Fig 5 being an sectional view of an annular structure, each of the components extend over at least a portion of a circumference of the nacelle).
+In Regard to Claim 3
+Porte teaches:
+The propulsion assembly according to claim 1(see rejection of claim 1 above), wherein each aerodynamic panel comprises a rear edge(aft edge of 40) which is connected by a second connection system to the at least one intermediate radial support(Fig 2), and
+wherein the second connection system comprises at least a second edge which is fixedly joined to the at least one intermediate radial support and which is positioned in a region of or near the external edge of the at least one intermediate radial support(Fig 2), and a plurality of connection elements which connect the at least one aerodynamic panel and the second edge and which are distributed over at least a portion of a circumference of the nacelle(Fig 2 being an sectional view of an annular structure, each of the components extend over at least a portion of a circumference of the nacelle).
+In Regard to Claim 8
+Porte teaches:
+The propulsion assembly according to claim 1(see rejection of claim 1 above), wherein the intermediate portion comprises a plurality of aerodynamic panels(two panels 40; P[0002]) which are attached to each other(at least via 34,38 and 14) and which are distributed over a circumference of the nacelle(each panel 40 is distributed over at least a portion of the circumference of the nacelle 20).
+In Regard to Claim 9
+Porte teaches:
+The propulsion assembly according to claim 8(see rejection of claim 8 above), wherein the intermediate portion comprises at least one longitudinal reinforcement(82 extends in the longitudinal direction; Fig 5) which has a first end which is connected to the air inlet(Fig 5) and a second end which is connected to the at least one intermediate radial support(via various intermediate components, such as 46, 68, 98, as visually apparent from Fig 5).
+In Regard to Claim 14
+Porte teaches:
+The propulsion assembly according to claim 1(see rejection of claim 1 above), wherein the at least one intermediate radial support extends over an entire circumference of the nacelle and comprises a plurality of recesses(as shown in Fig 3, 84 extends over an entire circumference and comprises a plurality of recesses 100; P[0002]).
+In Regard to Claim 15
+Porte teaches:
+An aircraft(Fig 1) comprising:
+the propulsion assembly according to claim 1(see rejection of claim 1 above),
+Allowable Subject Matter
+Claims 4-7 and 10-13 are objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Regarding Claim 4, the prior art of record fails to fairly teach or suggest the rear portion comprises at least a second external wall and at least a second annular frame which has an internal edge which cooperates with the rear end of the fan casing and an external edge which is connected to the second external wall,
+wherein the intermediate radial support is spaced apart from the second annular frame of the rear portion, and
+wherein the second external wall of the rear portion comprises at least one extension which extends in front of the second annular frame and which has a front edge spaced apart from the at least one aerodynamic panel.
+Claims 5-7 would also be allowable by virtue of their dependency on Claim 4.
+Regarding Claim 10, the prior art of record fails to fairly teach or suggest the intermediate portion comprises as many longitudinal reinforcements as aerodynamic panels, each longitudinal reinforcement being positioned in a region of a junction zone of two aerodynamic panels and being configured to form a support surface at a first longitudinal edge of a first aerodynamic panel and at a second longitudinal edge of a second aerodynamic panel.
+Regarding Claim 11, the prior art of record fails to fairly teach or suggest each aerodynamic panel has an internal face which is orientated towards the fan casing, a front edge which is positioned in a first transverse plane, a rear edge which is positioned in a second transverse plane, a first longitudinal edge which is positioned in a first longitudinal plane and a second longitudinal edge which is positioned in a second longitudinal plane, and
+wherein each aerodynamic panel comprises in a region of the internal face thereof a central portion which is reinforced and spaced apart from the front and rear edges and which forms an excess thickness relative to the front and rear edges.
+Regarding Claim 12, the prior art of record fails to fairly teach or suggest the intermediate portion comprises, for each aerodynamic panel, at least one centering system configured to position each aerodynamic panel during a mounting thereof.
+Claim 13 would also be allowable by virtue of their dependency on Claim 12.
+Conclusion
+The following prior art made of record and not relied upon is considered pertinent to applicant's disclosure:
+US 20020148929 A1
+Andre, Robert  et al.
+US 20140147270 A1
+Porte; Alain et al.
+US 20160251085 A1
+Stark; Richard L.
+US 20220082064 A1
+BOILEAU; Patrick et al.
+US 20130111873 A1
+BALK; Wouter et al.
+US 20220042454 A1
+CARUEL; Pierre et al.
+US 10589869 B2
+Wittman; Paul C. et al.
+US 9663238 B2
+Kane; Daniel J. et al.
+US 11753968 B2
+Nikolaus; Roland et al.
+US 8092169 B2
+Cloft; Thomas G. et al.
+US 12116931 B2
+Guillois; Denis et al.
+US 7334393 B2
+Porte; Alain
+US 11840352 B2
+Ferrier; Gina et al.
+US 7090165 B2
+Jones; Emlyn et al.
+US 8197191 B2
+Binks; Alan et al.
+US 12103694 B2
+Ferrier; Gina et al.
+FR 2978731 A1
+PORTE ALAIN et al.
+The above references are cited for teaching nacelles with a similar configuration to the invention.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to BRIAN P WOLCOTT whose telephone number is (571)272-9837. The examiner can normally be reached M-F 8:00am-4:30pm.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Court D. Heinle can be reached on (571) 270-3508. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/BRIAN P WOLCOTT/Primary Examiner, Art Unit 3745

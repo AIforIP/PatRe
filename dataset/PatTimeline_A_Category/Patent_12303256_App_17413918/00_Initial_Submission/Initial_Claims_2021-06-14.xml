@@ -1,0 +1,444 @@
+<html><head></head><body><h3>Date: 2021-06-14</h3>
+<p>CLAIMS:</p>
+<br>
+
+<br>
+1.   A system for assessment of head impacts, comprising: 
+<br>
+a head-mounted device capable of being worn on or secured to the head of an individual, wherein the device is further capable of measuring angular head motion when worn or secured to the head of an individual; 
+<br>
+memory in communication with the device via an interface; 
+<br>
+a processor that reads instructions stored in the memory, wherein the instructions direct the processor to: 
+<br>
+obtain head kinematic measurements in at least one anatomical direction from the head-mounted device; 
+<br>
+compute, utilizing the head kinematic measurements, a head kinematic metric for the at least one anatomical direction; 
+<br>
+determine that a concussive event occurs utilizing a trained classifier and the head kinematic metric. 
+
+<br>
+
+<br>
+2.   The system of claim 1, wherein the head mounted device is a helmet, a mouth guard, a hat, an ear protection, an eye-wear, a skin-mounted sensor, or a head band.
+<br>
+
+<br>
+3.   The system of claim 1 further comprising a gyroscope, a rotational accelerometer, or an array of linear accelerometers to measure head angular motion.
+<br>
+
+<br>
+4.   The system of claim 1, wherein the head kinematic metric is peak angular acceleration (a), peak change in rotational velocity (A), or peak translational acceleration (a).
+<br>
+
+<br>
+5.   The system of claim 1, wherein the head kinematic metric is a brain angle metric that is computed utilizing a mass-deformation brain model.
+<br>
+
+<br>
+6.   The system of claim 5, wherein the mass-deformation brain model is a mass- spring-damper model.
+<br>
+
+<br>
+7.   The system of claim 6, wherein the mass-spring-damper model models the rotational deformation of the brain from skull loading.
+<br>
+
+8.   The system of claim 6, wherein the mass-spring-damper model computes motion for each anatomical direction utilizing the following equation:
+SVG
+
+{EMBED HERE}
+
+0.2
+2.81
+ 
+<br>
+wherein I is the moment of inertia of the mass, k and c are the stiffness and damping values of the system, and 0brain and 0skull represent the angles of the brain (the mass) and the skull (the base). 
+
+<br>
+
+<br>
+9.   The system of claim 1, wherein the head kinematic measurements include head angle motion measurements in at least three anatomical directions.
+<br>
+
+<br>
+10.  The system of claim 9, wherein the three anatomical directions are coronal, axial, and sagittal.
+<br>
+
+<br>
+11.  The system of claim 1, wherein the classifier is a regression model.
+<br>
+
+<br>
+12.  The system of claim 11, wherein the regression model is a linear regression model, a logistic regression model, an elastic net regression model, a polynomial regression model, a stepwise regression model, a ridge regression model, a LASSO regression model, or a combined regression model.
+<br>
+
+13.  The system of claim 11, wherein the regression model is the following logistic model:
+SVG
+
+{EMBED HERE}
+
+0.25
+2.03
+ 
+<br>
+where piniwy is the probability of concussive event, xi are the components of the injury criterion, and #3i are the fitted coefficients, with i = 1, ..., n, representing each of the at least one anatomical directions and n representing the number of anatomical directions. 
+<br>
+
+<br>
+14.  The system of claim 1, wherein the concussive event is determined by a risk curve that determines the percent likelihood that a head impact was a concussive event.
+<br>
+
+<br>
+15.  The system of claim 14, wherein a threshold is utilized to signify whether the head impact was concussive event.
+<br>
+
+<br>
+16.  The system of claim 15, wherein the threshold is set to capture at least 50%, 60%, 70%, 80%, 90%, 95%, or 99% of concussive events.
+<br>
+
+<br>
+17.  The system of claim 1, wherein the determination that a concussive event occurs is determined in real time.
+<br>
+
+<br>
+18.  The system of claim 17, wherein the instructions further direct the processor to: 
+<br>
+signal in real time that the concussive event has occurred. 
+
+<br>
+
+<br>
+19.  The system of claim 1, wherein the memory and processor are incorporated within the head-mounted device.
+<br>
+
+<br>
+20.  The system of claim 1, wherein the memory and processor are remote from the head-mounted device.
+<br>
+
+<br>
+21.  A method for assessment of head impacts, comprising: 
+<br>
+measuring head kinematics in at least one anatomical direction of an individual via a head-mounted device that is worn on or secured to the head of the individual; 
+<br>
+communicating between the head-mounted device and a computer the system the head kinematic measurements; 
+<br>
+computing via the computer system a head kinematic metric for the at least one anatomical direction utilizing the head kinematic measurements; and 
+<br>
+determining via the computer system that a concussive event occurs utilizing a trained classifier and the brain angle metric. 
+<br>
+
+<br>
+22.  The method of claim 21, wherein the head mounted device is a helmet, a mouth guard, a hat, an ear protection, an eye-wear, a skin-mounted sensor, or a head band.
+<br>
+
+<br>
+23.  The method of claim 21, wherein a gyroscope, a rotational accelerometer, or an array of linear accelerometers is associated with the head-mounted device to measure head angular motion.
+<br>
+
+<br>
+24.  The method of claim 21, wherein the head kinematic metric is peak angular acceleration (a), peak change in rotational velocity (A), or peak translational acceleration (a).
+<br>
+
+<br>
+25.  The method of claim 21, wherein the head kinematic metric is a brain angle metric that is computed utilizing a mass-deformation brain model.
+<br>
+
+<br>
+26.  The method of claim 25, wherein the mass-deformation brain model is a mass- spring-damper model.
+<br>
+
+<br>
+27.  The method of claim 26, wherein the mass-spring-damper model models the rotational deformation of the brain from skull loading.
+<br>
+
+28.  The method of claim 26, wherein the mass-spring-damper model computes motion for each anatomical direction utilizing the following equation:
+SVG
+
+{EMBED HERE}
+
+0.21
+2.81
+ 
+<br>
+wherein I is the moment of inertia of the mass, k and c are the stiffness and damping values of the system, and 0brain and 0skull represent the angles of the brain (the mass) and the skull (the base). 
+
+<br>
+
+<br>
+29.  The method of claim 21, wherein the head kinematic measurements include head angle motion measurements in at least three anatomical directions.
+<br>
+
+<br>
+30.  The method of claim 29, wherein the three anatomical directions are coronal, axial, and sagittal.
+<br>
+
+<br>
+31.  The method of claim 21, wherein the classifier is a regression model.
+<br>
+
+<br>
+32.  The method of claim 31, wherein the regression model is a linear regression model, a logistic regression model, an elastic net regression model, a polynomial regression model, a stepwise regression model, a ridge regression model, a LASSO regression model, or a combined regression model.
+<br>
+
+33.  The method of claim 31, wherein the regression model is the following logistic model:
+SVG
+
+{EMBED HERE}
+
+0.25
+2.03
+ 
+<br>
+where pin;jy is the probability of concussive event, x; are the components of the injury criterion, and 8i are the fitted coefficients, with i = 1, ..., n, representing each of the at least one anatomical directions and n representing the number of anatomical directions. 
+
+<br>
+
+<br>
+34.  The method of claim 21, wherein the concussive event is determined by a risk curve that determines the percent likelihood that a head impact was a concussive event.
+<br>
+
+<br>
+35.  The method of claim 34, wherein a threshold is utilized to signify whether the head impact was concussive event.
+<br>
+
+<br>
+36.  The method of claim 35, wherein the threshold is set to capture at least 50%, 60%, 70%, 80%, 90%, 95%, or 99% of concussive events.
+<br>
+
+<br>
+37.  The method of claim 21, wherein the determination that a concussive event occurs is determined in real time.
+<br>
+
+<br>
+38.  The method of claim 37, further comprising signaling in real time via the computer system that the concussive event has occurred.
+<br>
+
+<br>
+39.  The method of claim 21, wherein the computing system is incorporated within the head-mounted device.
+<br>
+
+<br>
+40   The method of claim 21, wherein the computing system is remote from the head- mounted device.
+<br>
+
+<br>
+41.  A non-transitory machine readable medium containing processor instructions, where execution of the instructions by a processor causes the processor to perform a process comprising: 
+<br>
+retrieving head kinematic measurements from a head-mounted device, wherein the head-mounted device measures head angular motion in at least one anatomical direction of an individual when the head-mounted device is worn on or secured to the head of the individual; 
+<br>
+computing, utilizing the head kinematic measurements, a head kinematic metric for the at least one anatomical direction utilizing the head angular motion measurements; 
+<br>
+and determining that a concussive event occurs utilizing a trained classifier and the head kinematic metric. 
+
+<br>
+
+<br>
+42.  The non-transitory machine readable medium of claim 41, wherein the head mounted device is a helmet, a mouth guard, a hat, an ear protection, an eye-wear, a skin- mounted sensor, or a head band.
+<br>
+
+<br>
+43.  The non-transitory machine readable medium of claim 41, wherein a gyroscope, a rotational accelerometer, or an array of linear accelerometers is associated with the head- mounted device to measure head angular motion.
+<br>
+
+<br>
+44.  The non-transitory machine readable medium of claim 41, wherein the head kinematic metric is peak angular acceleration (a), peak change in rotational velocity (A), or peak translational acceleration (a).
+<br>
+
+<br>
+45.  The non-transitory machine readable medium of claim 41, wherein the head kinematic metric is a brain angle metric that is computed utilizing a mass-deformation brain model.
+<br>
+
+<br>
+46.  The non-transitory machine readable medium of claim 45, wherein the mass- deformation brain model is a mass-spring-damper model.
+<br>
+
+<br>
+47.  The non-transitory machine readable medium of claim 46, wherein the mass- spring-damper model models the rotational deformation of the brain from skull loading.
+<br>
+
+48.  The non-transitory machine readable medium of claim 46, wherein the mass- spring-damper model computes motion for each anatomical direction utilizing the following equation:
+SVG
+
+{EMBED HERE}
+
+0.2
+2.81
+ 
+<br>
+wherein I is the moment of inertia of the mass, k and c are the stiffness and damping values of the system, and 0brain and 0skull represent the angles of the brain (the mass) and the skull (the base). 
+
+<br>
+
+<br>
+49.  The non-transitory machine readable medium of claim 41, wherein the head angular motion measurements includes head angular motion measurements in at least three anatomical directions.
+<br>
+
+<br>
+50.  The non-transitory machine readable medium of claim 49, wherein the three anatomical directions are coronal, axial, and sagittal.
+<br>
+
+<br>
+51.  The non-transitory machine readable medium of claim 50, wherein the classifier is a regression model.
+<br>
+
+<br>
+52.  The method of claim 51, wherein the regression model is a linear regression model, a logistic regression model, an elastic net regression model, a polynomial regression model, a stepwise regression model, a ridge regression model, a LASSO regression model, or a combined regression model.
+<br>
+
+53.  The non-transitory machine readable medium of claim 51, wherein the regression model is the following logistic model:
+SVG
+
+{EMBED HERE}
+
+0.25
+2.03
+ 
+<br>
+where pin;jy is the probability of concussive event, x; are the components of the injury criterion, and 8i are the fitted coefficients, with i = 1, ..., n, representing each of the at least one anatomical directions and n representing the number of anatomical directions. 
+
+<br>
+
+<br>
+54.  The non-transitory machine readable medium of claim 41, wherein the concussive event is determined by a risk curve that determines the percent likelihood that a head impact was a concussive event.
+<br>
+
+<br>
+55.  The non-transitory machine readable medium of claim 54, wherein a threshold is utilized to signify whether the head impact was concussive event.
+<br>
+
+<br>
+56.  The non-transitory machine readable medium of claim 55, wherein the threshold is set to capture at least 50%, 60%, 70%, 80%, 90%, 95%, or 99% of concussive events.
+<br>
+
+<br>
+57.  The non-transitory machine readable medium of claim 41, wherein the determination that a concussive event occurs is determined in real time.
+<br>
+
+<br>
+58.  The non-transitory machine readable medium of claim 57 where execution of the instructions by the processor further causes the processor to perform a process comprising: 
+<br>
+signaling in real time via an output interface that the concussive event has occurred. 
+<br>
+
+<br>
+59.  The non-transitory machine readable medium of claim 41, wherein the processor is incorporated within the head-mounted device.
+<br>
+
+<br>
+60.  The non-transitory machine readable medium of claim 41, wherein the processor is remote from the head-mounted device.
+<br>
+
+<br>
+61. A method to perform a medical intervention on an individual based upon the determination that the individual has suffered a concussive event, comprising: 
+<br>
+computing or having computed a head kinematic metric for the at least one anatomical direction, wherein the head kinematic metric is computed using head kinematic measurements that are measured via a head-mounted device that is worn on or secured to the head of an individual; 
+<br>
+determining or having determined that the individual has suffered a concussive event utilizing a trained classifier and the head kinematic metric; 
+<br>
+performing a medical intervention on the individual based upon the determination that the individual suffered a concussive event. 
+
+<br>
+
+<br>
+62.  The method of claim 61, wherein the medical intervention is a medical procedure selected from the group consisting of: field test, neurological assessment, cognitive testing, medical imaging and observation.
+<br>
+
+<br>
+63.  The method of claim 61, wherein the medical intervention is administration of a treatment selected from the group consisting of: physical rest, mental rest, and pain and anti-inflammatory medicine.
+<br>
+
+<br>
+64.  The  method  of claim  61, wherein the  individual is an athlete, fighter, military personnel, or epileptic.
+<br>
+
+<br>
+65.  The method of claim 61, wherein the determination that the individual has suffered a concussive event is determined in real time.
+<br>
+
+<br>
+66.  The method of claim 61, wherein the head mounted device is a helmet, a mouth guard, a hat, an ear protection, an eye-wear, a skin-mounted sensor, or a head band.
+<br>
+
+<br>
+67.  The method of claim 61, wherein the head angular motion measurements are measured using a gyroscope, a rotational accelerometer, or an array of linear accelerometers in association with the head-mounted device.
+<br>
+
+<br>
+68.  The method of claim 61, wherein the head kinematic metric is peak angular acceleration (a), peak change in rotational velocity (A), or peak translational acceleration (a).
+<br>
+
+<br>
+69.  The method of claim 61, wherein the head kinematic metric is a brain angle metric that is computed utilizing a mass-deformation brain model.
+<br>
+
+<br>
+70.  The method of claim 69, wherein the mass-deformation brain model is a mass- spring-damper model.
+<br>
+
+<br>
+71.  The method of claim 70, wherein the mass-spring-damper model models the rotational deformation of the brain from skull loading.
+<br>
+
+72.  The method of claim 70, wherein the mass-spring-damper model computes motion for each anatomical direction utilizing the following equation:
+SVG
+
+{EMBED HERE}
+
+0.2
+2.81
+ 
+<br>
+wherein I is the moment of inertia of the mass, k and c are the stiffness and damping values of the system, and 0brain and 0skull represent the angles of the brain (the mass) and the skull (the base). 
+<br>
+
+<br>
+73.  The method of claim 61, wherein the head angular motion measurements includes head angle motion measurements in at least three anatomical directions.
+<br>
+
+<br>
+74.  The method of claim 73, wherein the three anatomical directions are coronal, axial, and sagittal.
+<br>
+
+<br>
+75.  The method of claim 61, wherein the classifier is a regression model.
+<br>
+
+<br>
+76.  The method of claim 75, wherein the regression model is a linear regression model, a logistic regression model, an elastic net regression model, a polynomial regression model, a stepwise regression model, a ridge regression model, a LASSO regression model, or a combined regression model.
+<br>
+
+77.  The method of claim 75, wherein the regression model is the following logistic model:
+SVG
+
+{EMBED HERE}
+
+0.25
+2.03
+ 
+<br>
+where piniwy is the probability of concussive event, x; are the components of the injury criterion, and 8i are the fitted coefficients, with i = 1, ..., n, representing each of the at least one anatomical directions and n representing the number of anatomical directions. 
+
+<br>
+
+<br>
+78.  The method of claim 61, wherein the concussive event is determined by a risk curve that determines the percent likelihood that a head impact was a concussive event.
+<br>
+
+<br>
+79.  The method of claim 78, wherein a threshold is utilized to signify whether the head impact was concussive event.
+<br>
+
+<br>
+80.  The method of claim 79, wherein the threshold is set to capture at least 50%, 60%, 70%, 80%, 90%, 95%, or 99% of concussive events.
+- 38 -
+- 39 -
+-40 -
+-41 -
+-42 -
+-43 -
+-44 -
+-45-
+-46 -
+-47 -
+-48 -
+</body></html>

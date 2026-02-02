@@ -1,0 +1,149 @@
+<html><head></head><body>18339037
+
+   CLAIMS
+   What is claimed is:
+   
+
+<br>
+
+1. A method, comprising:
+receiving, by a processor, an ejection command for ejecting an ejection seat from an aircraft;
+determining, by the processor, an airspeed and an altitude of the ejection seat; 
+responsive to the altitude of the ejection seat indicating a second mode of operation, determining, by the processor, whether the airspeed of the ejection seat is at or above a first threshold and below a second threshold; and
+responsive to the airspeed of the ejection seat being at or above the first threshold and below the second threshold:
+sending, by the processor, a command to deploy a drogue parachute; and
+responsive to a first predetermined time period expiring, sending, by the processor, a command to deploy a main parachute and sever the drogue parachute based on a variable drogue severance delay.
+<br>
+
+2. The method of claim 1, further comprising:
+responsive to the airspeed of the ejection seat being at or above the first threshold and at or above the second threshold, determining, by the processor, whether the airspeed of the ejection seat is below a third threshold; and
+responsive to the airspeed of the ejection seat being below the third threshold:
+sending, by the processor, a command to deploy the drogue parachute; and
+responsive to a second predetermined time period expiring, sending, by the processor, a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay, wherein the second predetermined time period is longer than the first predetermined time period.
+<br>
+
+3. The method of claim 2, further comprising:
+responsive to the airspeed of the ejection seat being at or above the third threshold:
+sending, by the processor, a command to deploy the drogue parachute; and
+responsive to a third predetermined time period expiring, sending, by the processor, a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay, wherein the third predetermined time period is longer than the second predetermined time period.
+<br>
+
+4. The method of claim 1, further comprising:
+responsive to the airspeed and the altitude indicating a first mode of operation, sending, by the processor, a command to deploy the main parachute without deploying the drogue parachute.
+<br>
+
+5. The method of claim 1, further comprising:
+responsive to the altitude indicating a third mode of operation, determining, by the processor, whether the airspeed of the ejection seat is below a fourth threshold; and
+responsive to the airspeed of the ejection seat being below the fourth threshold:
+sending, by the processor, a command to deploy the drogue parachute;
+determining, by the processor, whether a predetermined altitude has been achieved; and
+responsive to the predetermined altitude being achieved and responsive to a fourth predetermined time period expiring, sending, by the processor, a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay.
+<br>
+
+6. The method of claim 5, further comprising:
+responsive to the airspeed of the ejection seat being at or above the fourth threshold:
+sending, by the processor, a command to deploy the drogue parachute;
+determining, by the processor, whether the predetermined altitude has been achieved; and
+responsive to the predetermined altitude being achieved and responsive to a fifth predetermined time period expiring, sending, by the processor, a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay.
+<br>
+
+7. The method of claim 1, wherein the variable drogue severance delay is determined using at least one of a polynomial calculation, a quadratic calculation, or a linear calculation, to include minimum and maximum bounds.
+<br>
+
+8. The method of claim 7, wherein the polynomial calculation uses a static pressure of the ejection seat for the altitude, a dynamic pressure of the ejection seat for the airspeed, and four constants.
+<br>
+
+9. The method of claim 8, wherein the static pressure is determined using a static pressure sensor coupled to the ejection seat and wherein the dynamic pressure is determined using at least one dynamic pressure sensor coupled to a pitot tube coupled to the ejection seat.
+<br>
+
+10. The method of claim 1, wherein the determining of the airspeed and the altitude of the ejection seat is further based on an equivalent altitude and an equivalent airspeed relative to sea level conditions.
+<br>
+
+11. A system, comprising:
+an ejection seat including a drogue parachute and a main parachute;
+a dynamic pressure sensor;
+a static pressure sensor;
+a processor; and
+memory operatively coupled to the processor, the memory comprising instructions stored thereon that, when executed by the processor, cause the processor:
+receive an ejection command for ejecting the ejection seat from an aircraft;
+determine an airspeed and an altitude of the ejection seat; 
+responsive to the altitude of the ejection seat indicating a second mode of operation, determine whether the airspeed of the ejection seat is at or above a first threshold and below a second threshold; and
+responsive to the airspeed of the ejection seat being at or above the first threshold and below the second threshold:
+send a command to deploy the drogue parachute; and
+responsive to a first predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on a variable drogue severance delay.
+<br>
+
+12. The system of claim 11, wherein the instructions further cause the processor to:
+responsive to the airspeed of the ejection seat being at or above the first threshold and at or above the second threshold, determine whether the airspeed of the ejection seat is below a third threshold; and
+responsive to the airspeed of the ejection seat being below the third threshold:
+send a command to deploy the drogue parachute; and
+responsive to a second predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay, wherein the second predetermined time period is longer than the first predetermined time period.
+<br>
+
+13. The system of claim 12, wherein the instructions further cause the processor to:
+responsive to the airspeed of the ejection seat being at or above the third threshold:
+send a command to deploy the drogue parachute; and
+responsive to a third predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay, wherein the third predetermined time period is longer than the second predetermined time period.
+<br>
+
+14. The system of claim 11, wherein the instructions further cause the processor to:
+responsive to the airspeed and the altitude indicating a first mode of operation, send a command to deploy the main parachute without deploying the drogue parachute.
+<br>
+
+15. The system of claim 11, wherein the instructions further cause the processor to:
+responsive to the altitude indicating a third mode of operation, determine whether the airspeed of the ejection seat is below a fourth threshold;
+responsive to the airspeed of the ejection seat being below the fourth threshold:
+send a command to deploy the drogue parachute;
+determine whether a predetermined altitude has been achieved; and
+responsive to the predetermined altitude being achieved and responsive to a fourth predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay; and
+responsive to the airspeed of the ejection seat being at or above the fourth threshold:
+send a command to deploy the drogue parachute;
+determine whether the predetermined altitude has been achieved; and
+responsive to the predetermined altitude being achieved and responsive to a fifth predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay.
+<br>
+
+16. An ejection seat, comprising:
+a drogue parachute;
+a main parachute;
+a dynamic pressure sensor;
+a static pressure sensor; and
+an electronic sequencer configured to:
+receive an ejection command for ejecting the ejection seat from an aircraft;
+determine an airspeed and an altitude of the ejection seat; 
+responsive to the altitude of the ejection seat indicating a second mode of operation, determine whether the airspeed of the ejection seat is at or above a first threshold and below a second threshold; and
+responsive to the airspeed of the ejection seat being at or above the first threshold and below the second threshold:
+send a command to deploy the drogue parachute; and
+responsive to a first predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on a variable drogue severance delay.
+<br>
+
+17. The ejection seat of claim 16, wherein the electronic sequencer is further configured to:
+responsive to the airspeed of the ejection seat being at or above the first threshold and at or above the second threshold, determine whether the airspeed of the ejection seat is below a third threshold; and
+responsive to the airspeed of the ejection seat being below the third threshold:
+send a command to deploy the drogue parachute; and
+responsive to a second predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay, wherein the second predetermined time period is longer than the first predetermined time period.
+<br>
+
+18. The ejection seat of claim 17, wherein the electronic sequencer is further configured to:
+responsive to the airspeed of the ejection seat being at or above the third threshold:
+send a command to deploy the drogue parachute; and
+responsive to a third predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay, wherein the third predetermined time period is longer than the second predetermined time period.
+<br>
+
+19. The ejection seat of claim 16, wherein the electronic sequencer is further configured to:
+responsive to the airspeed and the altitude indicating a first mode of operation, send a command to deploy the main parachute without deploying the drogue parachute.
+<br>
+
+20. The ejection seat of claim 16, wherein the electronic sequencer is further configured to:
+responsive to the altitude indicating a third mode of operation, determine whether the airspeed of the ejection seat is below a fourth threshold;
+responsive to the airspeed of the ejection seat being below the fourth threshold:
+send a command to deploy the drogue parachute;
+determine whether a predetermined altitude has been achieved; and
+responsive to the predetermined altitude being achieved and responsive to a fourth predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay; and
+responsive to the airspeed of the ejection seat being at or above the fourth threshold:
+send a command to deploy the drogue parachute;
+determine whether the predetermined altitude has been achieved; and
+responsive to the predetermined altitude being achieved and responsive to a fifth predetermined time period expiring, send a command to deploy the main parachute and sever the drogue parachute based on the variable drogue severance delay.
+
+   
+
+</body></html>

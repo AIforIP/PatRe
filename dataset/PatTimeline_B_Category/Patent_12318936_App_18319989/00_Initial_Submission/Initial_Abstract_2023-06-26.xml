@@ -1,0 +1,7 @@
+<html><head></head><body><h3>Date: 2023-06-26</h3>
+<p>Abstract</p><p>The invention relates to a method for determining a torque for</p><p>an operation of a robot that includes multiple components, using</p><p>a model (200) of the robot, two components each of the robot</p><p> being movable with the aid of an actuator relative to one another at a connection point, and the model (200) mapping parameters for the connection points onto a torque for the</p><p>respective actuator, including: providing values for the</p><p>parameters, the parameters including: a position or an angle (q), a velocity (q), and an acceleration (4) of the respective</p><p>actuator, the model (200) including a rigid body model (210), a</p><p>friction model (220), and a machine learning model (230);</p><p>determining one value each of the rigid body partial torque, of the friction partial torque and of the machine learning partial torque based on the values of the parameters and the model</p><p>(200); determining a value of the torque (TH) of the respective</p><p>actuator based on the values of the rigid body partial torque,</p><p>of the friction partial torque and of the machine learning</p><p>partial torque; and providing the value of the torque (TH) for the respective actuator for use during the operation, in</p><p>particular, of a control or regulating of the robot. The</p><p>invention also relates to a method for teaching such a model</p><p>(200).</p><p>(Figure 2)</p><p>30
+Literal Translation</p>5
+10
+15
+20
+</body></html>

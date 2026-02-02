@@ -1,0 +1,44 @@
+PNG
+media_image1.png
+340
+340
+media_image1.png
+Greyscale
+United States Patent and Trademark Office
+Commissioner for Patents
+United States Patent and Trademark Office
+P.O. Box 1450
+Alexandria, VA 22313-1450
+www.uspto.gov
+BEFORE THE PATENT TRIAL AND APPEAL BOARD
+Application Number: 16/242,313
+Filing Date: 8 Jan 2019
+Appellant(s): KONINKLIJKE PHILIPS N.V.
+__________________
+Van C. Ernest
+For Appellant
+EXAMINER’S ANSWER
+This is in response to the appeal brief filed 12/12/2022.
+(1) Grounds of Rejection to be Reviewed on Appeal
+Every ground of rejection set forth in the Office action dated 7/15/2022 from which the appeal is taken is being maintained by the examiner except for the grounds of rejection (if any) listed under the subheading “WITHDRAWN REJECTIONS.”  New grounds of rejection (if any) are provided under the subheading “NEW GROUNDS OF REJECTION.”
+WITHDRAWN REJECTIONS
+The following grounds of rejection are not presented for review on appeal because they have been withdrawn by the examiner.  The 112(b) rejections as well as the 103 rejections have been withdrawn.
+(2) Response to Argument
+7. Argument
+I. Rejection under 35. U.S.C. 112(a) or 35 U.S.C. 112, 1st paragraph
+B. Final Office Action- Examiner Response to Appellant’s arguments
+Claim 16 recites instructions that cause the computer to determine a plurality of curves defined by the bendable segment…using optical shape sensing information from the catheter…the plurality of curves comprise at least one contact curve… and at least one non-contact curve. Appellant argues that the curves are shapes of the bendable segment and that determining the shape of a segment of a catheter using optical shape sensing information is well-known. See, e.g. page 2, lines 14-17.
+Examiner notes that page 2, lines 14-17 do not provide support for how the curve is determined. Also, Appellant themselves define a curve as a “one-dimensional line describing the shape, orientation, and location of the bendable segment”. Based on the search history of this case, it does not seem that determining a curve defined by a bendable segment is well-known. Appellant must explain how the curve itself is determined. It is unclear how the optical shape sensing information provides data regarding a “curve”. In addition, Appellant also notes the use of non-contact and contact curves. How are the contact and non-contact curves determined? Are they determined through the same optical shape sensing information or determined through a separate means? Appellant cites page 7, lines 22-25, and page 9, lines 13-16. Both sections broadly explain the arrangement of the catheter either conforming with the inner wall which in that case the determined curve would define a contact curve OR the bendable segment not in contact with the inner wall such that the determined curves are non-contact curves. Examiner notes that page 9, lines 19-20 state that electrodes 13 and 14 are used to determine non-contact and contact curves. How would single electrodes determine curves? Particularly, when the entire premise is bendable segment of the catheter using optical shape sensing information is used to determine curves.
+Appellant notes that reconstructing the cavity in response to the at least one contact curve and the at least non-contact curve, wherein the contact curves are interpolated to reconstruct the cavity. Firstly, the specification does not explain how at least one contact curve could be interpolated to reconstruct the cavity. Page 7, lines 31- page 8, line 2 states contact curves (plural) are used to determine the cavity. It does not explain how these contact curves are determined or used to create a cavity model or interpolated to reconstruct the cavity. Appellant cites page 8, lines 16-22 which states “interpolating the determined contact curves, wherein the interpolation can include a triangulation, a Fourier-based interpolation, or another interpolation techniques.
+Appellant repeatedly argues that the techniques used here are well-known to one of ordinary skill in the art and therefore, the specification provides sufficient support. Appellant does not support this contention and is a conclusory statement without evidentiary support. Examiner notes that page 2, lines 14-17 do not provide support for how the curve is determined as Appellant themselves define a curve as a “one-dimensional line describing the shape, orientation, and location of the bendable segment”. This definition does not support the contention of a well-known technique. In addition, the specification does not provide sufficient detail regarding how the curves, themselves, are gathered and determined, what algorithm is used to make such a curve determination, and how those curves are used to reconstruct a cavity. The use of both optical shape sensing as well as contact electrodes seems to be crucial to the invention, but the specification does not designate between the curves gathered from optical shape sensing vs. contact and non-contact curves and how each are used to reconstruct the cavity.
+III. Rejection under 35 U.S.C. 101
+B. Final Office Action-Examiner’s Response to Arguments
+i. 35 U.S.C. 101 reads as follows: Claims 16-17, 19-22, 24-31, 33-36 are rejected under 35 U.S.C. 101 because the claimed invention is directed to an abstract idea without significantly more. Particularly, Claims 16, 24, and 26 recite “determine whether the bendable segment…”; “determine a plurality of curves…”; “reconstruct the cavity…”. These limitations, as drafted, are processes that, under their broadest reasonable interpretation, covers performance of the limitations in the mind with the use of generic computer. That is, other than reciting “computer,” nothing in the claim element precludes the step from practically being performed in the mind. If a claim limitation, under its broadest reasonable interpretation, covers performance of the limitation in the mind, and/or performance of the limitation in the mind but for the recitation of generic computer components, then it falls within the “Mental Processes” grouping of abstract ideas. Accordingly, the claims recite an abstract idea. This judicial exception is not integrated into a practical application.  In particular, Claim 16, 24, and 26 only recite the following additional elements – a catheter which is shape sensing enabled. The gathering of data using the catheter simply amounts mere data gathering and insignificant, extra-solution activity, particular pre-solution activity. Accordingly, this additional element does not integrate the abstract idea into a practical application because it does not impose any meaningful limits on practicing the abstract idea. Additionally, Claim 16, 24, 26 recite a computer that is recited at such a high level of generality that it amounts no more than mere instructions to apply the exception using a generic computer component. Accordingly, this additional element does not integrate the abstract idea into a practical application because it does not impose any meaningful limits on practicing the abstract idea. The claims are directed to an abstract idea.
+Conclusion
+For the above reasons, it is believed that the rejections should be sustained.
+Respectfully submitted,
+/YASMEEN S WARSI/Examiner, Art Unit 3791
+Conferees:
+/ALEX M VALVIS/Supervisory Patent Examiner, Art Unit 3791
+/NATHAN J JENNESS/Primary Examiner, Art Unit 3792
+Requirement to pay appeal forwarding fee.  In order to avoid dismissal of the instant appeal in any application or ex parte reexamination proceeding, 37 CFR 41.45 requires payment of an appeal forwarding fee within the time permitted by 37 CFR 41.45(a), unless appellant had timely paid the fee for filing a brief required by 37 CFR 41.20(b) in effect on March 18, 2013.

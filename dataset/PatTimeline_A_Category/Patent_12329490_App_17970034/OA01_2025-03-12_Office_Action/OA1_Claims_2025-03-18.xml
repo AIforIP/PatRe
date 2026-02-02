@@ -1,0 +1,62 @@
+<html><head></head><body><h3>Date: 2025-03-18</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>Please amend the claims as follows:</p><br>
+<br>
+1.    (Previously Presented) A conversion adapter comprising:a communication unit configured to receive biological information transmitted from an external apparatus by wireless communication;<br>
+a converter configured to convert the biological information received by the communication unit to biological information processible by an external biological-information processing apparatus;<br>
+a connection unit configured to be connected to the external biological-information processing apparatus and configured to output the biological information converted by the converter to the biological-information processing apparatus;<br>
+a power supply unit configured to supply power to the communication unit and the converter;<br>
+an operation input configured to receive an operation from a user; and a main body provided with the connection unit and the operation input,<br>
+wherein the communication unit is disposed inside the main body on a different end portion side than the connection unit.<br>
+<br>
+2.    (Original) The conversion adapter according to Claim 1, wherein the communication unit is configured to wirelessly receive the biological information transmitted from an external biological sensor by using radio communication and further configured to transmit information to at least one of the biological sensor and an external medical apparatus by using radio communication.<br>
+<br>
+3.    (Previously Presented) The conversion adapter according to Claim 1, wherein the connection unit is provided on end portion side of the main body that opposes the end portion side on which the communication unit is disposed.<br>
+<br>
+<br>
+4.
+(Canceled)<br>
+5.
+(Original) The conversion adapter according to Claim 1, wherein the operation input includes a plurality of operation switches that are each different in at least one of an operation method, a size, and a shape.<br>
+6.
+(Original) The conversion adapter according to Claim 5, wherein at least part of an outer surface of the main body comprises a concave shape<br>
+7.
+(Original) The conversion adapter according to Claim 6, wherein the operation input is disposed on the concave shape of the outer surface.<br>
+<br>
+8.    (Original) The conversion adapter according to Claim 5, further comprising:a circuit board disposed inside the main body and having a through-hole that extends in a thickness direction of the circuit board; and<br>
+a switch cover that includes a pair of protruding portions parallel to each other and that is attached to a top surface of the main body to slide freely.<br>
+9.
+(Original) The conversion adapter according to  The conversion adapter according to <br>
+wherein one operation switch of the plurality of operation switches is mounted on the circuit board such that a slidable movable part protrudes parallel to a main surface of the circuit board, and<br>
+wherein the switch cover is attached such that the pair of protruding portions extend in a direction perpendicular to the main surface of the circuit board and protrude through the through- hole in the circuit board, such that tip ends of the pair of protruding portions abut on an inner side of a lower surface of the main body, and such that the movable part of the one operation switch is engaged between the pair of protruding portions.<br>
+<br>
+<br>
+<br>
+<br>
+10.    (Original) The conversion adapter according to  The conversion adapter according to wherein the main body has an operable and closable opening and closing part, and<br>
+wherein opening and closing directions of the opening and closing part are different from inserting and removing directions of the connection unit.<br>
+<br>
+11.    (Original) The conversion adapter according to Claim 1, further comprising a presentation part configured to present at least one of the biological information and operation information regarding the operation input.<br>
+<br>
+12.    (Original) The conversion adapter according to Claim 1, wherein an exterior of the main body comprises a crystalline material.<br>
+<br>
+13.    (Original) The conversion adapter according to Claim 1, further comprising a fixing member configured to fix the conversion adapter.<br>
+<br>
+14. (Original) The conversion adapter according to Claim 1, further comprising an information processing unit configured to convert the biological information to a digital value that corresponds to an analog amount of the biological information received by the communication unit and further configured to provide the digital value of the biological information to the converter.<br>
+<br>
+15. (Original) The conversion adapter according to Claim 14, wherein the information processing unit is configured to convert the biological information based on one of a transformation or a reference table.<br>
+<br>
+16. (Original) The conversion adapter according to Claim 14, wherein the converter is configured to convert the digital value of the biological information to a resistance value that corresponds to a resistance value of the analog amount received by the communication unit.<br>
+<br>
+<br>
+<br>
+17. (Original) The conversion adapter according to Claim 16, wherein the converter comprises a plurality of resistors connected in series and switching elements that are respectively connected in parallel to the plurality of resistors and that respectively turn on and off the plurality of resistors.<br>
+<br>
+18. (Original) The conversion adapter according to Claim 17, wherein the converter is configured to obtain the resistance value to match a combined series resistance value by turning on and off of the switching elements to achieve an obtained combination of the plurality of resistors.<br>
+<br>
+19.    (Original) The conversion adapter according to Claim 1, wherein the main body includes an upper case, a lower case, and an operable and closable back lid, with the operation input provided on the upper surface of the main body.<br>
+<br>
+20.    (Currently Amended)  The conversion adapter according to Claim [[4]]_1, wherein the connection unit comprises a hinge on a proximal end of the end portion side of the main body, such that the connection unit is rotatable.<br>
+
+</body></html>

@@ -1,0 +1,106 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Double Patenting
+The nonstatutory double patenting rejection is based on a judicially created doctrine grounded in public policy (a policy reflected in the statute) so as to prevent the unjustified or improper timewise extension of the “right to exclude” granted by a patent and to prevent possible harassment by multiple assignees. A nonstatutory double patenting rejection is appropriate where the conflicting claims are not identical, but at least one examined application claim is not patentably distinct from the reference claim(s) because the examined application claim is either anticipated by, or would have been obvious over, the reference claim(s). See, e.g., In re Berg, 140 F.3d 1428, 46 USPQ2d 1226 (Fed. Cir. 1998); In re Goodman, 11 F.3d 1046, 29 USPQ2d 2010 (Fed. Cir. 1993); In re Longi, 759 F.2d 887, 225 USPQ 645 (Fed. Cir. 1985); In re Van Ornum, 686 F.2d 937, 214 USPQ 761 (CCPA 1982); In re Vogel, 422 F.2d 438, 164 USPQ 619 (CCPA 1970); In re Thorington, 418 F.2d 528, 163 USPQ 644 (CCPA 1969).
+A timely filed terminal disclaimer in compliance with 37 CFR 1.321(c) or 1.321(d) may be used to overcome an actual or provisional rejection based on nonstatutory double patenting provided the reference application or patent either is shown to be commonly owned with the examined application, or claims an invention made as a result of activities undertaken within the scope of a joint research agreement. See MPEP § 717.02 for applications subject to examination under the first inventor to file provisions of the AIA  as explained in MPEP § 2159. See MPEP § 2146 et seq. for applications not subject to examination under the first inventor to file provisions of the AIA . A terminal disclaimer must be signed in compliance with 37 CFR 1.321(b).
+The filing of a terminal disclaimer by itself is not a complete reply to a nonstatutory double patenting (NSDP) rejection. A complete reply requires that the terminal disclaimer be accompanied by a reply requesting reconsideration of the prior Office action. Even where the NSDP rejection is provisional the reply must be complete. See MPEP § 804, subsection I.B.1. For a reply to a non-final Office action, see 37 CFR 1.111(a). For a reply to final Office action, see 37 CFR 1.113(c). A request for reconsideration while not provided for in 37 CFR 1.113(c) may be filed after final for consideration. See MPEP §§ 706.07(e) and 714.13.
+The USPTO Internet website contains terminal disclaimer forms which may be used. Please visit www.uspto.gov/patent/patents-forms. The actual filing date of the application in which the form is filed determines what form (e.g., PTO/SB/25, PTO/SB/26, PTO/AIA /25, or PTO/AIA /26) should be used. A web-based eTerminal Disclaimer may be filled out completely online using web-screens. An eTerminal Disclaimer that meets all requirements is auto-processed and approved immediately upon submission. For more information about eTerminal Disclaimers, refer to www.uspto.gov/patents/apply/applying-online/eterminal-disclaimer.
+Claims 21-40 are rejected on the ground of nonstatutory double patenting as being unpatentable over claims 1-20 of U.S. Patent No. 11806122 B2. Although the claims at issue are not identical, they are not patentably distinct from each other because they are a broader version of the patented claim language, as mapped in the table below.
+Application 18/381739
+U.S. Pat No. 11806122 B2
+Claim 21
+See Claim: 1
+Claim 22
+See Claim: 1
+Claim 23
+See Claim: 7
+Claim 24
+See Claim: 2
+Claim 25
+See Claim: 3
+Claim 26
+See Claim: 4
+Claim 27
+See Claim: 5
+Claim 28
+See Claim: 6
+Claim 29
+See Claim: 6
+Claim 30
+See Claim: 8
+Claim 31
+See Claim: 8
+Claim 32
+See Claim: 8
+Claim 33
+See Claim: 15
+Claim 34
+See Claim: 8
+Claim 35
+See Claim: 9
+Claim 36
+See Claim: 8 + 10
+Claim 37
+See Claim: 16
+Claim 38
+See Claim: 17
+Claim 39
+See Claim: 18
+Claim 40
+See Claim: 16 + 19 + 20
+Claim Rejections - 35 USC § 102
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of the appropriate paragraphs of 35 U.S.C. 102 that form the basis for the rejections under this section made in this Office action:
+A person shall be entitled to a patent unless –
+(a)(1) the claimed invention was patented, described in a printed publication, or in public use, on sale, or otherwise available to the public before the effective filing date of the claimed invention.
+Claim(s) 21, 23-24, 26 and 29-33 is/are rejected under 35 U.S.C. 102(a)(1) as being anticipated by Standley (US 5830235).
+With respect to claim 21, Standley discloses a method of utilizing a motor device to activate an audio device, the method comprising the steps of:
+providing an motor device (fig.1 #11) comprising a sensor (fig.1 #19) and a depressible portion (fig.1 #15) producing an output signal when said depressible portion is compressed yielding a first measured pressure over an age appropriate predetermined threshold applied to the depressible portion (col.3 ln.37-67; col.4 ln.1-9; sensitivity dial #25 provides an adjustable pressure threshold of the sensor #19 for pressure applied to the nipple #15); and
+responsive to said output signal, playing an age appropriate audio recording for a predetermined duration on an audio device (col.4 ln.3-9;  tape recorder #35 plays an audio recording via speakers #37 when a pressure or a minimum intensity of sucking meets the threshold set by sensitivity dial #25; wherein the audio recording may play for a predetermined duration, see col.4 ln.65-67, col.5 ln.1-5).
+With respect to claim 23, Standley discloses the method of claim 21, wherein the providing the depressible portion comprises providing at least one of a nipple (fig.1 #15), a ball, and a mat.
+With respect to claim 24, Standley discloses the method of claim 23, further comprising the step of signaling that the motor device has had a measured pressure below the age appropriate predetermined threshold applied to the depressible portion (col.3 ln.62-67; col.4 ln.1-9; pressure sensor #19 signals measured pressures above and below the threshold set by sensitivity dial #25).
+With respect to claim 26, Standley discloses the method of claim 21, further comprising the step of playing the age appropriate audio recording for between 5 seconds to 25 seconds (col.4 ln.65-67, col.5 ln.1-5).
+With respect to claim 29, Standley discloses the method of claim 21, wherein the playing an age appropriate audio recording comprises providing and playing an age appropriate audio recording in a foreign language (col.10 ln.15-17; the invention of Standley does not limit the language that is spoken via the method, therefor any language of audio recording may be played via the device).
+With respect to claim 30, Standley discloses a non-transitory computer readable medium storing machine executable instructions for utilizing a sensing device to activate an audio device comprising:
+a language system (fig.1 #23) in electronic communication with the audio device (fig.1 #35,37),
+a sensing device comprising a sensor (fig.1 #19), and
+an interface (fig.1 #25,27), the interface configured to receive user data and the sensing device configured to send signals to the language system, the language system providing a sensor threshold and sensor readings of the sensing device, the language system, based upon the signal from the sensing device, indicating the sensor threshold has been exceeded, sends instructions to the audio device to emit an appropriate audio recording that conforms to specific parameters for audio output for the assigned duration of audio output (col.3 ln.37-67; col.4 ln.1-9; sensitivity dial #25 provides a user interface for adjusting a pressure threshold of the sensor #19 related to pressure applied to the nipple #15; col.4 ln.3-9;  tape recorder #35 plays an audio recording via speakers #37 when a pressure or a minimum intensity of sucking meets the threshold set by sensitivity dial #25; wherein the audio recording may play for a predetermined duration, see col.4 ln.65-67, col.5 ln.1-5).
+With respect to claim 31, Standley discloses the non-transitory computer readable medium of claim 30, wherein the language system provides a duration of audio output (col.4 ln.65-67, col.5 ln.1-5).
+With respect to claim 32, Standley discloses the non-transitory computer readable medium of claim 30, wherein the language system provides the specific parameters for audio output (col.4 ln.24-44; “suck parameter thresholds” may be set by a computer #29 as shown in figure 2).
+With respect to claim 33, Standley discloses the non-transitory computer readable medium of claim 32, wherein the language system at least one of alters and combines a user recording to conform to the specific parameters for audio output to comprise altered or combined user recordings, the altered or combined user recordings comprises the appropriate audio recording (col.4 ln.65-67; col.5 ln.1-5 “Pressure sensitivity and length of music activation was controlled for each suck and for the purpose of this study was set at 15% pressure to activate ten seconds of music”).
+Claim Rejections - 35 USC § 103
+In the event the determination of the status of the application as subject to AIA  35 U.S.C. 102 and 103 (or as subject to pre-AIA  35 U.S.C. 102 and 103) is incorrect, any correction of the statutory basis (i.e., changing from AIA  to pre-AIA ) for the rejection will not be considered a new ground of rejection if the prior art relied upon, and the rationale supporting the rejection, would be the same under either status.
+The following is a quotation of 35 U.S.C. 103 which forms the basis for all obviousness rejections set forth in this Office action:
+A patent for a claimed invention may not be obtained, notwithstanding that the claimed invention is not identically disclosed as set forth in section 102, if the differences between the claimed invention and the prior art are such that the claimed invention as a whole would have been obvious before the effective filing date of the claimed invention to a person having ordinary skill in the art to which the claimed invention pertains. Patentability shall not be negated by the manner in which the invention was made.
+Claim(s) 27 is/are rejected under 35 U.S.C. 103 as being unpatentable over Standley (US 5830235) in view of Mathew et al (US 9369537 B1).
+With respect to claim 27, Standley discloses the method of claim 21, however does not disclose expressly further comprising the step of limiting daily playing of the age appropriate audio recording to between ten (10) minutes to about 1 hour.
+Mathew discloses a method of limiting a child to a playing time of a device to a set duration, including ten minutes to an hour (See: Abstract; col.13 ln.62-67, col.14 ln.1-4).
+It would have been obvious before the effective filing date of the present invention to a person of ordinary skill in the art to limit the daily playing time of the device of Standley, as taught by Mathew.  The motivation for doing so would have been to prevent detrimental effects to the infant by overuse of the motor device.
+Claim(s) 28 is/are rejected under 35 U.S.C. 103 as being unpatentable over Standley (US 5830235) in view of Kamm (US 20080119108 A1).
+With respect to claim 28, Standley discloses the method of claim 21, however does not disclose expressly wherein the playing an age appropriate audio recording comprises playing a recording of a voice of a caretaker.
+Kamm discloses a method of utilizing a motor device to activate an audio device, wherein an age appropriate audio recording comprising a voice of a caretaker is played upon detection of an infant sucking the device (Par.[0023][0028] “familiar speaking voice”).
+It would have been obvious before the effective filing date of the present invention to a person of ordinary skill in the art to play an audio recording of a voice of a caretaker in the method of Standley, as performed by Kamm. The motivation for doing so would have been to comfort the infant with a familiar voice.
+Claim(s) 37-38 is/are rejected under 35 U.S.C. 103 as being unpatentable over Standley (US 5830235) in view of Wild (US 3678212).
+With respect to claim 37, Standley discloses a language system comprising an audio device (fig.1 #35,37) coupled a motor device (fig.1 #13,19,23), the system comprising:
+the motor device comprising a housing for a sensor (fig.1 #19), wherein the sensor produces an output signal when said housing is compressed to a pressure over a first measured pressure over an age appropriate predetermined threshold (col.3 ln.37-67; col.4 ln.1-9; sensitivity dial #25 provides an adjustable pressure threshold of the sensor #19 for pressure applied to the nipple #15);
+the audio device comprising a microcomputer (fig.2 #29) in electrical communication with the motor device, and a speaker (fig.2 #37), the microcomputer comprising a language system, the language system responsive to an input, assigns a sensor threshold and sensor readings of the motor device, assigns a duration of audio output, and identifies specific parameters for audio output, the language system based upon the output signal from the motor device indicating the age appropriate predetermined threshold has been exceeded, sends instructions to the audio device to emit an appropriate audio recording that conforms to the specific parameters for audio output for the assigned duration of audio output (col.4 ln.24-44; specific parameters, such as suck parameter thresholds may be set by a language model of computer #29; where an audio recording may be played upon meeting the threshold criteria; and wherein the audio recording may play for a predetermined duration, see col.4 ln.65-67, col.5 ln.1-5).
+Standley does not disclose expressly wherein the audio device is in electrical communication with a microphone.
+Wild discloses a cassette recorder #10 comprising a microphone #88 (col.1 ln.65-75, col.2 ln.1-2).
+It would have been obvious before the effective filing date of the present invention to a person of ordinary skill in the art to use the cassette recorder of Wild as the audio device of Standley.  The motivation for doing so would have been to use a readily available audio device to record and play back the audio recordings of Standley.
+With respect to claim 38, Standley discloses the language system of claim 37, wherein the specific parameters for audio output comprise at least one of an age dependent volume, an age dependent number of intervals per day and per week, and age appropriate content (col.6 ln.20-26  a “lullaby” is age appropriate content).
+Allowable Subject Matter
+Claims 25, 34-36 and 39-40 are objected to as being dependent upon a rejected base claim, but would be allowable if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Claim 22 would be rejected under Statutory Double Patenting if rewritten in independent form including all of the limitations of the base claim and any intervening claims.
+Conclusion
+The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.
+Chin et al (US 20160288983 A1) discloses a system for controlling delivery of breast milk supplementation.
+Aron et al (US 9974476 B2) discloses a handheld cordless non-nutritive suck assessment device.
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to JASON R KURR whose telephone number is (571)270-5981. The examiner can normally be reached M-F: 9-5.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Vivian Chin can be reached on (571-272-7848. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+JASON R. KURR
+Primary Examiner
+Art Unit 2695
+/JASON R KURR/Primary Examiner, Art Unit 2695

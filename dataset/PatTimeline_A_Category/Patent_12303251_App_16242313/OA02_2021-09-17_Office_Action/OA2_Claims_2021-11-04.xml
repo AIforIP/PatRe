@@ -1,0 +1,148 @@
+<html><head></head><body><h3>Date: 2021-11-04</h3>
+<p>Application Serial Number 16/242,313
+Expedited Procedure</p>
+<p><u>2. Amendments to the Claims</u>: A listing of the entire set of pending claims (including amendments to the claims, if any) is submitted herewith per 37 CFR 1.121. This listing of claims will replace all prior versions, and listings, of claims in the application.</p>
+<p>Listing of Claims:</p>
+<br>
+
+<br>
+1-15. (Canceled)
+
+214
+<br>
+<br>
+
+<br>
+16. (Currently amended) An apparatus for determining a cavity within an object, the apparatus comprising: 
+<br>
+a catheter for being introduced into the cavity, wherein the catheter is shape sensing enabled and comprises a bendable segment for being arranged within the cavity in different arrangements; and 
+<br>
+a computer including a non-transitory storage medium for storing instructions that, when executed by the computer, cause the computer to: 
+<br>
+<u>determine whether the bendable segment is in contact with an inner wall of the cavity in each arrangement of a plurality of different arrangements of the bendable segment introduced within the cavity</u><u>;</u> 
+<br>
+determine <del>a set of curves</del> <u>at least one contact curve</u> defined by the bendable segment <u>in each arrangement of the bendable segment determined to be in contact with the inner wall of the cavity, and determine at least one non-contact curve defined by the bendable segment in each arrangement of the bendable segment determined not to be in contact with the inner wall of the cavity,</u> using shape sensing information from the catheter, wherein each curve is defined by an introduction of the bendable segment within the cavity in a-the respective arrangement of the <u>plurality of</u> different arrangements, <del>and</del> 
+<br>
+<del>wherein the determined set of curve</del><del>s</del><del> comprises contact curve</del><del>s</del><del> and non contact curves</del>; 
+<br>
+and 
+
+Application Serial Number 16/242,313
+  Expedited Procedure   reconstruct the cavity, in response to the determined <del>set of curves</del><u>at least one contact curve and the at least one non-contact curve, to provide a map for guiding the catheter</u>.
+
+<br>
+
+<br>
+17. (Currently amended) The apparatus of claim 16, wherein the instructions cause the computer to reconstruct the cavity using a regularization in response to the set <del>of the determined curves</del> <u>at least one non-contact curve</u> and a morphological opening or closing of the <del>set of the determined curves</del> <u>at least one non-contact curve</u> to estimate which points of the <del>set of the determined curves lie</del> <u>at least one non-contact curve lies</u> necessarily within the cavity.
+
+<br>
+
+<br>
+18. (Canceled)
+
+<br>
+
+<br>
+19. (Previously presented) The apparatus of claim 16 further comprising a display device, operatively coupled to the computer, configured to display a representation of the reconstructed cavity.
+
+<br>
+
+<br>
+20. (Currently amended) The apparatus of claim 16, wherein the instructions further cause the computer to adapt an adaptable cavity model to the <del>determined curves</del> <u>a</u><u>t</u> <u>least one contact curve and the least one non-contact curve</u> defined by the bendable segment in the different arrangements for reconstructing the cavity.
+
+<br>
+
+<br>
+21. (Currently amended) The apparatus of claim 20, wherein the cavity model is adapted to wrap <del>determined curves that are not contact curves</del><u>the at least one non-contact curve</u>.
+
+<br>
+
+<br>
+22. (Original) The apparatus of claim 20, wherein the adaptable cavity model is an anatomical model.
+
+<p>
+Application Serial Number 16/242,313
+Expedited Procedure</p>
+<br>
+
+<br>
+23. (Previously presented) The apparatus of claim 16, wherein the shape sensing information comprises optical shape sensing information.
+
+<br>
+
+<br>
+24. (Currently amended) A method for <del>determining</del> <u>mapping</u> a cavity within an object, the method comprising: 
+<br>
+<u>determining contact curves defined by a bendable segment of a catheter introduced into a cavity in different arrangements within the cavity, using shape sensing information from the catheter and contact information from at least one electrode</u><u>;</u> 
+<br>
+determining non-contact curves defined by a-the bendable segment of <u>the</u> catheter introduced into the cavity in different arrangements within the cavity, using shape sensing information from the catheter; and 
+<br>
+reconstructing the cavity from the determined <u>contact and non-contact</u> curves<del> by a cavity reconstruction unit</del> <u>to provide a map for guiding the catheter</u>. 
+
+<br>
+
+<br>
+25. (Currently amended) The method of claim 24, further comprising: 
+<br>
+adapting a cavity model to the determined <u>contact and non-contact</u> curves defined by the bendable segment in the different arrangements for reconstructing the cavity. 
+
+<br>
+
+<br>
+26. (Currently amended) A non-transitory computer readable medium that stores program code for <del>determining</del> <u>mapping</u> a cavity within an object using a shape sensing enabled catheter for being introduced into the cavity, wherein the catheter comprises a bendable segment for being arranged within the cavity in different arrangements, wherein, when executed by a computer, the program code causes the computer to carry out steps including: 
+<br>
+determining <del>a set of</del> <u>contact</u> curves, <u>defined by the bendable segment of the catheter introduced into the cavity in arrangements of the different arrangements in which the bendable segment contacts an inner wall of the cavity,</u> using shape sensing information <u>and contact information</u> from the catheter,<del> each curve being defined by the bendable segment of the catheter introduced into the cavity in the resp</del><del>o</del><del>ctive arrangement</del> 
+
+Application Serial Number 16/242,313
+Expedited Procedure   <del>of different arrangements within the cavity</del>, <del>the determined set of curves comprising contact curves and non contact curves</del>; 
+<br>
+<u>determining non-contact curves, defined by the bendable segment of the catheter introduced into the cavity in arrangements of the different arrangements in which the bendable segment does not contact the inner wall of the cavity, using shape sensing information from the catheter</u><u>;</u> 
+<br>
+reconstructing the cavity from the determined <u>contact and non-contact</u> curves<u> to provide a map for guiding the catheter</u>; and 
+<br>
+displaying, on a display device operatively coupled to the computer, a representation of the <del>reconstructed cavity</del><u>map</u>. 
+
+<br>
+
+<br>
+27. (Currently amended) The non-transitory computer readable medium of claim 26, wherein the program code causes the computer to reconstruct the cavity using a regularization in response to the <del>set of the</del> determined <u>non-contact</u> curves and a morphological opening or closing of <del>the set of</del> the determined <u>non-contact</u> curves to estimate which points of the <del>set of the</del> determined <u>non-contact</u> curves lie necessarily within the cavity.
+
+<br>
+
+<br>
+28. (Previously presented) The non-transitory computer readable medium of claim 26, wherein the program code causes the computer to carry further steps including display a representation of the reconstructed cavity on a display.
+
+<br>
+
+<br>
+29. (Currently amended) The <del>apparatus</del> <u>non-transitory computer readable medium</u> of claim 26, wherein the program code causes the computer to carry further steps including adapting an adaptable cavity model to the determined <u>contact and non-contract</u> curves defined by the bendable segment in the different arrangements for reconstructing the cavity.
+
+<p>
+Application Serial Number 16/242,313
+   Expedited Procedure</p>
+<br>
+
+<br>
+30. (Currently amended) The non-transitory computer readable medium of claim 29, wherein the cavity model is adapted to wrap <u>the</u> determined <del>curves that are not</del> <u>non-</u> contact curves.
+
+<br>
+
+<br>
+31. (Previously presented) The non-transitory computer readable medium of claim 29, wherein the adaptable cavity model is an anatomical model.
+
+<br>
+
+<br>
+32. (Previously presented) The non-transitory computer readable medium of claim 26, wherein the shape sensing information comprises optical shape sensing information.
+
+<br>
+
+<br>
+33. (Previously presented) The apparatus of claim t6, wherein the catheter comprises an ablation catheter, and wherein a distal tip of the ablation catheter is introduced into the cavity and the bendable segment is located at the distal tip. 
+<br>
+PCIP.20723Attorney Docket No. 2012P00019 US
+PCIP.20724Attorney Docket No. 2012P00019 US
+PCIP.20725Attorney Docket No. 2012P00019 US
+PCIP.20722Attorney Docket No. 2012P00019 US
+PCIP.20726Attorney Docket No. 2012P00019 US
+</body></html>

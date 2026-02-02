@@ -1,0 +1,99 @@
+<html><head></head><body>CLM
+14772042
+4
+
+2015-09-01
+WO 2014/134631
+
+PCT/US2014/020326 WE CLAIM: 
+SVG
+14772042.09-01-2015.IEBTVDMIPXXIFW4.CLM.1.svg
+0.54
+4.62
+ one or more pressure sensors secured to the glove, the pressure sensors conf for detecting pressure applied to a vertebra or soft tissue by one or more parts of a hand of a user wearing the glove, and 
+a microcontroller secured to the glove, the microcontroller electrically connected to the one or more pressure sensors, the microcontroller receiving electrical signal inputs from the one or more sensors and generating an output signal.
+<br>
+
+2.   The glove according to claim 1, wherein the glove comprises multiple pressure sensors.Dependent
+<br>
+
+3.   The glove according to claim 2, wherein the glove comprises multiple spaced apart pressure sensors.Dependent
+<br>
+
+4.   The glove according to claim 3, wherein one of the pressure sensors in located in a thumb portion of the glove.Dependent
+<br>
+
+5.   The glove according to claim 3, wherein one of the pressure sensors is located in a finger portion of the glove.Dependent
+
+29
+WO 2014/134631
+
+PCT/US2014/020326
+<br>
+
+6.   The glove according to claim 3, wherein one of the pressure sensors is located in a rear portion of the glove.Dependent
+<br>
+
+7.   The glove according to claim 3, wherein one of the pressure sensors is located on an edge of the glove.Dependent
+<br>
+
+8.   The glove according to claim 1, wherein the glove comprises an inner liner and exterior layer.Dependent
+<br>
+
+9.   The glove according to claim 8, wherein the one or more pressure sensors and microcontroller secured between the exterior layer and inner liner of the glove.Dependent
+<br>
+
+10.  The glove according to claim 1, wherein the one or more pressure sensor is one selected from the group consisting of a force measuring capacitor, force-sensitive resistor, and a tactile pressure sensor.Dependent
+<br>
+
+11.  The glove according to claim 1, wherein the one or more pressure sensor comprises a first sensor positioned to detect pressure applied by a thumb of a user and a second sensor positioned to detect pressure applied by a side of an index finger of the user.Dependent
+
+30
+WO 2014/134631
+
+PCT/US2014/020326
+<br>
+
+12.  The glove according to claim 11, wherein the one or more pressure sensor further comprises a third sensor positioned to detect pressure applied by a back of a hand of a user.Dependent
+<br>
+
+13.  The glove according to claim 12, wherein the one or more pressure sensor comprises a fourth and a fifth sensor positioned to detect pressure applied by an edge of a hand of the user.Dependent
+<br>
+
+14.  A glove system comprising a microprocessor electrically connect and receiving a signal input from the microcontroller of the glove according to claim 1.Dependent
+<br>
+
+15.  The glove system according to claim 8, wherein the microprocessor is remote relative to the glove.Dependent
+<br>
+
+16.  A palpation evaluation or diagnosis system, comprising: 
+a physical therapy or palpation glove device comprising one or more pressure sensors; 
+a patient pain indicator device; and 
+a microprocessor for receiving input signals from the physical therapy glove and patient pain indicator device. 
+Independent
+<br>
+
+17.  The system according to claim 16, wherein the physical therapy glove is one according to claim 1.Dependent
+
+31
+WO 2014/134631
+    PCT/US2014/020326
+<br>
+
+18.  The system according to claim 16, wherein the microprocessor is programmed to compute a pain force index using an input corresponding to a minimum pressure applied to a vertebra of a patient from one or more parts of a hand of a user and an input corresponding to pain intensity.Dependent
+<br>
+
+19.  The system according to claim 16, wherein the physical therapy glove device comprises a microcontroller and the microprocessor receives a pressure signal input from the microcontroller, the pressure signal input corresponding to pressure applied to a selected vertebra of a patient, the microprocessor receiving patient pain intensity input, and the microprocessor generates a pain force index for a vertebra using the pressure signal input and the pain intensity input, the pain force index being determined using the formula 10 - painLevel + minForce.Dependent
+<br>
+
+20.  A spine palpation evaluation or diagnosis method comprising: 
+detecting a force applied to a patient's vertebra; 
+detecting a level of pain by a patient; and 
+evaluating progress in a treatment of a particular vertebrae and/or soft tissue of the patient. 
+Independent
+<br>
+
+21.  The method according to claim 19, further comprising capturing pain or discomfort in real-time from a patient using a patient pain indicator device for logging in the pressure when pain is encountered by the patient while being medically treated for a problem. 
+32 Dependent
+
+</body></html>

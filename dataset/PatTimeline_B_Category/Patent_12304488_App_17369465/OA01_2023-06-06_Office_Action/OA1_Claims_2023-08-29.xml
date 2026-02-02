@@ -1,0 +1,41 @@
+<html><head></head><body><h3>Date: 2023-08-29</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application:</p>
+<h1>LISTING OF CLAIMS:</h1>
+<br>
+<br>
+1.    (currently amended): A vehicle control device configured to control a <del>vehicle provided with v</del><u>ehicle, comprising:</u><br>
+an information provision device configured to provide information to a<del> driver</del>,<del></del><u>driver of the vehicle</u><u>;</u><br>
+<del>the vehicle control device provided with </del>a <u>processor</u><u>,</u><u> during automated driving control of the vehicle, </u><del>being </del>configured to:perform <u>the </u>automated driving control [[for]] by automatically performing a driving operation of the<del> vehicle and </del><u>vehicle relating to a driving plan of the vehicle control device, the automated driving control comprising operations relating to at least one of acceleration, steering, and braking, according to the driving plan;</u><br>
+<u>provide, through the information provision device to the driver, </u>a driving event<del> which will </del><u>that is to </u>occur at a point ahead in [[the]] a direction of advance from a current<del> point </del><u>po</u><u>int, based</u> on [[a]] <u>an automated </u>driving<del> plan for automated driving through the information provision device to the driver</del>,<del> wherein </del><u>plan;</u><br>
+<del>the process</del><del>or i</del><del>s further confi</del><del>gu</del><del>red to:</del>judge [[the]] a_suitability of [[the]] <u>a driver </u>driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving event; and<br>
+<br>
+provide the driver with judgment information [[so]] <u>indicating </u>that the driver [[does]] not perform the <u>driver </u>driving <del>operation corresponding to the driving event at a point before the point of the driving event when </del><u>operation, based on the judging</u><del> it is not suitable to perform it </del><u>of the suitability determining that performing the driver driving operation is unsuitable according to the driving plan being executed by the vehicle control device.</u><br>
+<br>
+2.    (currently amended): The vehicle control device according to claim 1,<del></del><del>wherein</del><u> wherein:</u><br>
+the <u>driver </u>driving operation corresponding to the driving event is a lane change, and<br>
+the processor is further configured to provide to the driver, as the judgment information, lane change inhibiting information <del>showing whether a </del><u>indicating that the </u>lane to be changed to<del> will disappear due to a lane reduction or will become </del><u>is</u><u></u>unable to be driven on at [[a]] <u>t</u><u>he </u>point before the point of the driving event.<br>
+<br>
+3.    (currently amended): The vehicle control device according to claim 2, wherein the processor is further configured [[to]] <u>to</u><del> display </del><u>display, </u>on an information display screen visible to the driver, as the lane change inhibiting information, a specialized icon showing that the lane to be changed to [[will]] <u>is to at least one of </u>disappear due to [[a]] <u>t</u><u>he </u>lane reduction <del>or will become </del><u>and be </u>unable to be driven on<u> at the point before the point of the driving event.</u><br>
+<br>
+<br>
+<br>
+4.    (currently amended): The vehicle control device according to claim 2, wherein the processor is further configured [[to]] <u>to</u><del> display </del><u>display, </u>on an information display screen visible to the driver, as the lane change inhibiting information, the lane to be changed to <del>which will </del><u>is to at least one of </u>disappear due to [[a]] <u>t</u><u>he </u>lane reduction <del>or will become </del><u>and be </u>unable to be driven on at [[a]] <u>t</u><u>he </u>point before the point of the driving event.<br>
+<br>
+5.    (currently amended): The vehicle control device according to claim 2, wherein the processor is further configured [[to]] <u>to</u> provide <u>t</u><u>o </u><u>the</u><u>driver, together with the lane change inhibiting information, </u>[[with]] distance information from the current point to the point where the lane to be changed to <del>will i</del><u>s</u><u> to</u><u> at least one of </u>disappear due to [[a]] <u>t</u><u>he </u>lane reduction <del>or will become </del><u>and be </u>unable to be driven<del> together with the lane change inhibiting information</del>.<br>
+<br>
+6.    (currently amended): An information provision method providing a driver through an information provision device mounted in a vehicle with a driving event which [[will]]<u> is to </u>occur at a point ahead in [[the]] a direction of advance from a current point based on a driving plan prepared during automated driving where a driving operation of the vehicle is automatically performed<u> that relates to the driving plan, the driving operation comprising operations relating to at least one of acceleration, steering, and braking, according to the driving </u><u>plan,</u><br>
+the information provision method<del> provided with </del><u>comprising:</u><br>
+<br>
+<del>a step of</del><del></del><del>j</del>udging [[the]] a suitability of [[the]] <u>a driver </u>driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving event; and<br>
+<del>a step of </del>providing the driver with judgment information [[so]] <u>indicating </u>that the driver [[does]] not perform the <u>driver </u>driving <del>operation corresponding to the driving event at a point before the point of the driving event when </del><u>operation, based on the</u> judging<del> it is not suitable to perform it </del><u>of the suitability determining that performing the driver driving operation is unsuitable according to the driving plan being performed.</u><br>
+<br>
+7.    (currently amended): A <del>nontransitory </del><u>non-transitory computer-readable </u>recording medium <del>provided with </del><u>storing </u>a <u>computer-executable </u>program<del> making a computer </del><u>that, when executed by at least one processor of a device, cause the device to:</u><br>
+provide a driver through an information provision device mounted in a vehicle with a driving event which [[will]] <u>is to </u>occur at a point ahead in [[the]] <u>a </u>direction of advance from a current point based on a driving plan prepared during automated driving where a driving operation of the vehicle is automatically performed<u> that relates to the driving plan, the driving operation comprising operations relating to at least one of acceleration, steering, and braking</u><u>,</u><u> according to the driving plan;</u><br>
+judge [[the]] a_suitability of [[the]] <u>a driver </u>driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving event; and<br>
+provide the driver through the information provision device with judgment information [[so]] <u>indicating </u>that the driver [[does]] not perform the <u>driver </u>driving <del>operation corresponding to the driving event at a point before the point of the driving event when </del><u>operation, based on the</u><br>
+<br>
+<br>
+judging<del> it i</del><del>s</del><del> not suitable to perform it </del><u>of the suitability determining that performing the driver driving operation is unsuitable, according to the driving plan being performed.</u>
+</body></html>

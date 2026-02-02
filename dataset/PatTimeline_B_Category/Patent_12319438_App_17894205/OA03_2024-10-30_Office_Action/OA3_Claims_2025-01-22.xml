@@ -1,0 +1,49 @@
+<html><head></head><body><h3>Date: 2025-01-22</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS:</u></h1>
+<p>Please replace all previous versions of the claims with the following listing.</p><br>
+1.   (Currently Amended)
+A dynamically controlled cargo loading system for an aircraft, comprising:<br>
+electrical cargo conveying devices to convey cargo items on a cargo <u>deck, wherein the electrical cargo conveying devices comprise drive rollers which are configured to orient from a horizontal orientation into an inclined orientation;</u><br>
+speed sensors configured to capture current conveying speeds of at least one of the cargo conveying devices or the conveyed cargo items;<br>
+electrical measuring devices configured to capture current electrical parameters of the cargo conveying devices; and<br>
+a controller configured to control the cargo conveying devices depending on at least one of the captured current conveying speeds or the captured current electrical parameters such that at least one of the following variables is <del>optimized</del>adiusted:electrical power consumption of the cargo conveying devices,<br>
+mechanical wear of the cargo conveying devices,<br>
+mechanical load action on the cargo items,<br>
+conveying time of the cargo items, and<br>
+noise generation during transport of the cargo items.<br>
+<br>
+2.    (Original)  The cargo loading system according to claim 1, wherein the control device is configured to continuously control the conveying speeds of the cargo conveying devices according to a characteristic electrical power profile of the cargo conveying devices.<br>
+<br>
+3.    (Original)  The cargo loading system according to claim 1, wherein the control device is configured to operate the cargo conveying devices when activating a conveying operation, each with an electrical starting power which is less than a maximum<br>
+<br>
+electrical output of the respective cargo conveying device, and the starting power must then be increased gradually or continuously according to a characteristic electrical power profile of the respective cargo conveying device.<br>
+<br>
+4.    (Original)  The cargo loading system according to claim  1, wherein the control device is configured to at least one of activate multiple cargo conveying devices in a staggered manner one after the other or change their conveying speed in a staggered manner one after the other.<br>
+<br>
+5.    (Original)  The cargo loading system according to claim  1, wherein the control device is configured to reduce the electrical power of at least individual cargo conveying devices if at least one of a total electrical power of the cargo conveying devices or an individual electrical power of the respective cargo conveying device, exceeds a specified limit value.<br>
+<br>
+6.    (Original)  The cargo loading system according to claim  1, wherein the control device is configured to increase the electrical power of at least individual cargo conveying devices if additional electrical power is available.<br>
+<br>
+7.    (Original)  The cargo loading system according to claim  1, wherein the control device is configured to at least one of reduce the conveying speed for a cargo item according to a reducing speed profile in order to bring the cargo into a rest position, or increase the speed according to an increasing profile to move the cargo from a rest position.<br>
+<br>
+8.    (Original)  The cargo loading system according to claim  1, wherein the control device is configured to adjust the conveying speed for a cargo item as a function of a characteristic cargo item parameter of the cargo item.<br>
+<br>
+<br>
+9.    (Original)  The cargo loading system according to claim 8, wherein the characteristic cargo item parameter comprises a weight of the cargo item.<br>
+<br>
+10.   (Original)  The cargo loading system according to claim  1, wherein the control device is configured to determine the conveying speed when transferring a cargo item from a first cargo conveying device to a second cargo conveying device between the first and second cargo conveying devices.<br>
+<br>
+11.   (Original)  The cargo loading system    according to claim   1, further comprising:<br>
+a number of safety latches for locking the cargo items in a respective rest position on the cargo loading deck, wherein the safety latches are configured to take one of three operational states at any time: open, closed and locked; and<br>
+a latch monitoring device, which is configured to monitor the operational states taken up by the respective safety latches.<br>
+<br>
+12.   (Original)  The cargo loading system according to claim 11, wherein the latch monitoring device is integrated into at least one of the control device of the cargo loading system or an aircraft controller or is communicatively connected to at least one of the control device of the cargo loading system or the aircraft controller.<br>
+<br>
+13.   (Cancelled)<br>
+<br>
+14.   (Original)  The cargo loading system according to claim  1, wherein the control device is configured to capture an operating history of the freight conveying devices, to compare the operating history with comparative operational profiles and based on the comparison, to output at least one of a functional status of the cargo conveying devices or an estimated remaining operating life of the cargo conveying devices.<br>
+<br>
+<br>
+15.  (Original)  An aircraft with a cargo loading system according to claim 1.
+</body></html>

@@ -1,0 +1,237 @@
+<html><head></head><body><h3>Date: 2020-10-30</h3>
+<p>CLAIMS</p>
+<p>WHAT IS CLAIMED IS:</p>
+<br>
+
+<br>
+1.   An analyte monitor, comprising: 
+<br>
+a controller including a processor coupled to a memory, the memory having instructions stored therein that, when executed by the processor, cause the controller to: 
+<br>
+provide a working electrode voltage to a working electrode of an analyte sensor; 
+<br>
+selectively provide a first counter electrode voltage and a second counter electrode voltage to a counter electrode of the analyte sensor; and 
+<br>
+provide a guard ring voltage to a guard ring that at least partially surrounds a contact region of the working electrode; 
+<br>
+a current measurement circuit coupled to the controller and configured to measure current flow to the working electrode; and 
+<br>
+a reference resistor electrically coupled between the working electrode and the guard ring; 
+<br>
+wherein the memory further comprises instructions that, when executed by the processor, cause the controller to perform at least one integrity check by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the first counter electrode voltage or the second counter electrode voltage to the counter electrode, applying the guard ring voltage to the guard ring, and measuring current flow to the working electrode using the current measurement circuit. 
+
+<br>
+
+2.   The analyte monitor of claim 1, wherein the memory further comprises instructions that, when executed by the 
+ processor, cause the controller to measure an analyte concentration by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the first counter electrode voltage to the counter electrode, wherein the first counter electrode voltage is not equal to the working electrode voltage, and 
+<br>
+applying the guard ring voltage to the guard ring, wherein the guard ring voltage is equal to the working electrode voltage. 
+
+<br>
+
+<br>
+3.   The analyte monitor of claim 2, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to generate a signal in response to measured current flow to the working electrode exceeding a predetermined amperage during measurement of an analyte concentration.
+<br>
+
+<br>
+4.   The analyte monitor of claim 1, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to perform a first integrity check by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the second counter electrode voltage to the counter electrode, wherein the second counter electrode voltage is equal to the working electrode voltage, and 
+<br>
+applying the guard ring voltage to the guard ring, wherein the guard ring voltage is equal to the working electrode voltage. 
+
+<br>
+
+5.   The analyte monitor of claim 4, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to generate a signal in 
+ response to measured current flow to the working electrode exceeding a predetermined amperage during the first integrity check.
+<br>
+
+<br>
+6.   The analyte monitor of claim 5, wherein the predetermined amperage is greater than 20 nanoamperes during the first integrity check.
+<br>
+
+<br>
+7.   The analyte monitor of claim 4, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to apply a reference electrode voltage equal to the second counter electrode voltage to a reference electrode of the analyte sensor during the first integrity check.
+<br>
+
+<br>
+8.   The analyte monitor of claim 1, wherein: 
+<br>
+the memory further comprises instructions that, when executed by the processor, cause the controller to selectively provide a first guard ring voltage and a second guard ring voltage to the guard ring; and 
+<br>
+the memory further comprises instructions that, when executed by the processor, cause the controller to perform at least one integrity check by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the second counter electrode voltage to the counter electrode, wherein the second counter electrode voltage is equal to the working electrode voltage, and 
+<br>
+applying the second guard ring voltage to the guard ring, wherein the second guard ring voltage is not equal to the working electrode voltage. 
+
+<br>
+
+9.   The analyte monitor of claim 8, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to generate a signal in 
+ response to measured current flow to the working electrode exceeding a first predetermined amperage or being less than a second predetermined amperage during the at least one integrity check.
+<br>
+
+<br>
+10. The analyte monitor of claim 9, wherein the first predetermined amperage is at least 2% greater than a difference between the working electrode voltage and the second guard ring voltage divided by the resistance of the reference resistor, and the second predetermined amperage is at least 2% less than a difference between the working electrode voltage and the second guard ring voltage divided by the resistance of the reference resistor during the at least one integrity check.
+<br>
+
+<br>
+11. The analyte monitor of claim 8, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to apply a reference electrode voltage equal to the second counter electrode voltage to a reference electrode of the analyte sensor during the at least one integrity check.
+<br>
+
+<br>
+12. An analyte monitoring system, comprising: 
+<br>
+an analyte sensor having a working electrode and a counter electrode; 
+<br>
+a guard ring surrounding at least a portion of a contact region of the working electrode; 
+<br>
+a reference resistor electrically coupled between the working electrode and the guard ring; and 
+<br>
+an analyte transmitter coupled to the analyte sensor, the analyte transmitter including: 
+<br>
+a controller including a processor coupled to a memory, the memory having instructions stored therein that, when executed by the processor, cause the controller to: 
+
+ provide a working electrode voltage to the working electrode; 
+<br>
+selectively provide a first counter electrode voltage and a second counter electrode voltage to the counter electrode; and 
+<br>
+provide a guard ring voltage to the guard ring; 
+<br>
+and a current measurement circuit coupled to the controller and configured to measure current flow to the working electrode; 
+<br>
+wherein the memory further comprises instructions that, when executed by the processor, cause the controller to perform at least one integrity check by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the first counter electrode voltage or the second counter electrode voltage to the counter electrode, and applying the guard ring voltage to the guard ring; and 
+<br>
+measuring current flow to the working electrode using the current measurement circuit. 
+
+<br>
+
+<br>
+13. The analyte monitoring system of claim 12, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to measure an analyte concentration by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the first counter electrode voltage to the counter electrode, wherein the first counter electrode voltage is not equal to the working electrode voltage, and 
+<br>
+applying the guard ring voltage to the guard ring, wherein the guard ring voltage is equal to the working electrode voltage. 
+<br>
+
+<br>
+14. The analyte monitoring system of claim 13, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to generate a signal in response to measured current flow to the working electrode exceeding a predetermined amperage during measurement of an analyte concentration.
+<br>
+
+<br>
+15. The analyte monitoring system of claim 13, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to perform a first integrity check by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the second counter electrode voltage to the counter electrode, wherein the second counter electrode voltage is equal to the working electrode voltage, and 
+<br>
+applying the guard ring voltage to the guard ring, wherein the guard ring voltage is equal to the working electrode voltage. 
+
+<br>
+
+<br>
+16. The analyte monitoring system of claim 15, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to generate a signal in response to measured current flow to the working electrode exceeding a predetermined amperage during the first integrity check.
+<br>
+
+<br>
+17. The analyte monitoring system of claim 16, wherein the predetermined amperage is greater than 20.0 nanoamperes.
+<br>
+
+18. The analyte monitoring system of claim 15, wherein the analyte sensor has a reference electrode, and wherein the memory further comprises instructions that, when executed by the processor, cause the controller to apply a reference electrode voltage equal to the second counter electrode 
+ voltage to the reference electrode during the first integrity check.
+<br>
+
+<br>
+19. The analyte monitoring system of claim 13, wherein: 
+<br>
+the memory has instructions stored therein that, when executed by the processor, cause the controller to: 
+<br>
+selectively provide a first guard ring voltage and a second guard ring voltage to the guard ring; and 
+<br>
+perform at least one integrity check by: 
+<br>
+applying the working electrode voltage to the working electrode, applying the second counter electrode voltage to the counter electrode, wherein the second counter electrode voltage is equal to the working electrode voltage, and 
+<br>
+applying the second guard ring voltage to the guard ring, wherein the second guard ring voltage is not equal to the working electrode voltage. 
+
+<br>
+
+<br>
+20. The analyte monitoring system of claim 19, wherein the memory further comprises instructions that, when executed by the processor, cause the controller to generate a signal in response to measured current flow to the working electrode exceeding a first predetermined amperage or being less than a second predetermined amperage during the at least one integrity check.
+<br>
+
+21. The analyte monitoring system of claim 20, wherein the first predetermined amperage is at least 2% greater than a difference between the working electrode voltage and the second guard ring voltage divided by the resistance of the reference resistor, and the second predetermined amperage is at least 2% less than a difference between the working electrode voltage and the second guard ring voltage divided by 
+ the resistance of the reference resistor during the at least one integrity check.
+<br>
+
+<br>
+22. The analyte monitoring system of claim 19, wherein the analyte sensor has a reference electrode, and wherein the memory further comprises instructions that, when executed by the processor, cause the controller to apply a reference electrode voltage equal to the first counter electrode voltage to the reference electrode during the at least one integrity check.
+<br>
+
+<br>
+23. A method of operating an analyte monitoring system, comprising: 
+<br>
+providing an analyte sensor having a working electrode and a counter electrode; 
+<br>
+providing a guard ring surrounding at least a portion of a contact region of the working electrode; 
+<br>
+providing a reference resistor coupled between the working electrode and the guard ring; 
+<br>
+applying a working electrode voltage to the working electrode; 
+<br>
+selectively applying one of a first counter electrode voltage and a second counter electrode voltage to the counter electrode; 
+<br>
+applying at least a first guard ring voltage to the guard ring; and 
+<br>
+measuring current flow to the working electrode. 
+
+<br>
+
+<br>
+24. The method of claim 23, further comprising measuring an analyte concentration by: 
+<br>
+applying the first counter electrode voltage to the counter electrode, wherein the first counter electrode voltage is not equal to the working electrode voltage, and 
+
+ applying the first guard ring voltage to the guard ring, wherein the first guard ring voltage is equal to the working electrode voltage.
+<br>
+
+<br>
+25. The method of claim 23, further comprising performing a first integrity check by: 
+<br>
+applying the second counter electrode voltage to the counter electrode, and 
+<br>
+applying the first guard ring voltage to the guard ring, wherein the second counter electrode voltage and the first guard ring voltage are equal to the working electrode voltage. 
+
+<br>
+
+<br>
+26. The method of claim 23, further comprising performing a second integrity check by: 
+<br>
+applying the second counter electrode voltage to the counter electrode, wherein the second counter electrode voltage is equal to the working electrode voltage, and 
+<br>
+applying a second guard ring voltage to the guard ring, wherein the second guard ring voltage is not equal to the working electrode voltage. 
+
+<br>
+
+<br>
+27. An analyte sensor configured to attach to skin, comprising: 
+<br>
+a working electrode; 
+<br>
+a guard ring surrounding at least a portion of a contact region of the working electrode; and 
+<br>
+a reference resistor connected between the working electrode and the guard ring. 
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</body></html>

@@ -1,0 +1,111 @@
+<html><head></head><body><h3>Date: 2022-05-27</h3>
+<p>AMENDMENTS TO THE CLAIMS * Please amend claims as indicated below:</p>
+<br>
+
+<br>
+1. (Currently Amended) (eait4e- A com j ? -implemented method for labelling a training set, p-ie&amp;4for training a NN, with respect to a 3D physical object _'-by tat±s-&gt; -a Giraotcalier IntaceGUI 9'-' 9s, the method comprising the steps of: 
+<br>
+- obtaining the training set relating to a plurality of training objects--,9}, each of the training objects ('--comprising a 3D surface similar to the 3D surface of said object+l, the training set comprising at least two images for each training object -  generating, for each training object--i4, a respective 3D voxel representation based on the respective at least two images-(34 ; 
+-  receiving, via said GU1494 --, manual annotations  -[;--r-t- with respect to a plurality of segment classes
+=-9 a;..Qr.3.from a user of said GUI 9 for labelling each of the training objects;.andw -  p&lt;4Ji4-e-s=y-training, based on said manual annotations1:?:.,t-}, at least one NN, for obtaining said at least one trained NN; 
+<br>
+wherein the GUI comprises -  a 3D reconstruction view 4l.showing said 3D voxel representation for a respective one of the plurality of training objects; and 
+<br>
+- at least one image view (4442-showing at least one of the respective at least two images associated with the respective training object; said at least one image view 2 `5--being displayed along with said 3D reconstruction view; 
+<br>
+and wherein the method comprises the further step of: 
+-  for at least one training object, e y --    -;;-:a
+based on the manual annotation 6k-++--4of at least one of o a first image belonging to said at least two images, via said at least one image view-¾1i¾, and 
+<br>
+o   said 3D voxel representation, via said 3D reconstruction view --44, and 
+<br>
+automatically annotate the other one of said first image and said 3D voxel representation, based on automatically projecting the manual annotation of the at least 
+
+  one of the first image and the 3D voxel representation to the other one of said first image and said 3D voxel representation.
+
+<br>
+
+2. (Currently Amended) G-:t'bc
+e-implemented method of claim 1, wherein the GUI is configured to let the receipt of the manual annotation {4-1.SC t-from the user via at least one of said 3D reconstruction view  and said at least one image view '4-4-4cause the other one of said 3D reconstruction view 4-1-}-and one of said at least one image view 4I-to be updated according to said automatic annotation.
+
+<br>
+
+<br>
+3. (Currently Amended) Ti"ee--------(?;_ t-mpttr-implemented method of 4 -4:--&amp; t1±i~m_, wherein said automatic annotation is performed based on manual annotation of either of said first image or said 3D voxel representation to automatically annotate the other one of said first image and said 3D reconstruction view.
+
+<br>
+
+<br>
+4. (Currently Amended) Thectn mm-tcr G.._   te--implemented method of claim 3, wherein the GUI is configured to let said receipt of the manual annotation  4-;-}-from the user via either one of said 3D reconstruction view (4-and one of said at least one image view  -4-k-cause the other one of said 3D reconstruction view  -i--4-`-and one of said at least one image view (-14-to be updated according to said automatic annotation.
+
+<br>
+
+5. (Currently Amended) The c;, i er G
+method of c
+-k-b- 4, further comprising the step of: 
+<br>
+-  for at least one training object, tir&amp;+IQ e-eak-ti+wgsh'  ian based on the manual annotation 4-91;93--of at least said first image belonging to said at least two images, automatically annotate at least one second image belonging to said at least two images and different from said at least one first image, based on automatically projecting the manual annotation of the at least one first image to the 3D voxel representation and back to the second image. 
+
+<br>
+
+<br>
+6. (Currently Amended) ,co m   e _ G   4,--implemented method of cim cha;ims-l- $, wherein the GUI is configured to let the receipt of the manual annotation tk49--93: 
+<br>
+cause each of the at least one image view 112-2-and the 3D reconstruction view {.- )-to be updated according to said automatic annotation. 
+
+<br>
+
+7. (Currently Amended) '_m
+method of Jzsg i
++ 6, wherein the GUI comprises at least two image views 4I2 -each showing one of the 
+  respective at least two images, and wherein each of said at least two image views v4 is displayed along with said 3D reconstruction view.
+
+<br>
+
+<br>
+8. (Currently Amended) The cmvi1erfGsm*H4E-implemented method of ckamlajm+- , wherein for each training object-64, the respective at least two images originate from a plurality of respective predetermined camera angles and respective predetermined camera positions with respect to said training object-9), said predetermined camera angles and predetermined camera positions being the same for each training object.
+
+<br>
+
+9. (Currently Amended) Thc
+;rG
+-implemented method of claim 8, wherein said predetermined camera positions and predetermined camera angles relate to respective ones of a plurality of cameras with fixed relative positions.
+
+<br>
+
+10.
+(Currently Amended)
+,_coY:u:erG   `=u-plemented method of Jznm I*3i+ i-r , wherein said plurality of respective segment classes t94e-94m-3it-are associated with a respective highlighting type, each highlighting type pr&amp;4v--relating at least to a distinct color, and wherein the GUI is configured to let the receipt of the manual annotation vv   -", rQ-relating to a first segment class via at least one of said 3D reconstruction view Q4-}-and said at least one image view  -3-' =--cause the each of said 3D reconstruction view 614-Iand one of said at least one image view k-i--to be updated in accordance with the highlighting type associated with said first segment class.
+
+<br>
+
+11.
+(Currently Amended) The x' mipeG _ ,
+-implemented method of Am :efa4§-4-%?, wherein said training of the NN is directed at least at discriminating between each of said plurality of segment classes, and wherein the NN comprises a semantic segmentation NN.
+
+<br>
+
+12.
+(Currently Amended)-----------CGeyie-implemented method of claim 11, wherein said semantic segmentation NN comprises any or any combination of: 2D U-net, 3D U-net, Dynamic Graph CNN, DGCNN, PointNet++
+
+<br>
+
+13.
+(Currently Amended) Th
+m
+_ G'  tet-implemented method of clam &amp;el'n-4-i--2, wherein the training of the NN is directed at least at discriminating between each of two or more instances of said 3D physical object or two or more instances of a portion of said 3D physical object, and wherein the NN comprises an instance segmentation NN.
+<br>
+
+14. (Currently Amended) T,..e.c.n..i.erG:..-implemented method of claim
+13, wherein said instance segmentation NN comprises any or any combination of: Mask R- CNN, DeepMask, TensorMask, 3D-BoNet, ASIS.
+
+<br>
+
+<br>
+15. (Currently Amended) A labelled training set or a trained NN obtained by the computer- implemented method according to d  Ie    -44. 
+<br>
+-3-
+-4-
+-5-
+-6-
+</body></html>

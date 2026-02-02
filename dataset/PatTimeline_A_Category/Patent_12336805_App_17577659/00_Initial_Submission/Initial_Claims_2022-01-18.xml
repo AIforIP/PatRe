@@ -1,0 +1,252 @@
+<html><head></head><body><h3>Date: 2022-01-18</h3>
+<p>Applicant:  VIVONICS, INC.</p>
+<p>For:
+System and Method for Detecting and/or Monitoring the Presence of At Least One of Pneumothorax, Hemopneumothorax, or Hemothorax in a Living Subject Using One or More Light Sources and One or More Light Detectors CLAIMS I.    A system for detecting and/or monitoring at least one of pneumothorax, hemopneumothorax, or hemothorax using one or more light sources and one or more light detectors, the system comprising: one or more light sources adapted to be placed on skin of a living subject; one or more light detectors adapted to be placed on the skin of the living subject; and a processing subsystem coupled to the one or more light sources and the one or more light detectors configured to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.</p>
+<br>
+
+2.
+The system of claim I in which the one or more light sources are configured to emit light which penetrates a thoracic cavity of the living subject at one or more predetermined penetration depths and the one or more light detectors are configured to detect at least one of reflected light from tissue between a lung of the living subject and the skin or reflected light from the lung of the living subject and generate output signals.
+<br>
+
+3.    The system of claim 2 in which the processing subsystem is responsive to  
+I
+the output signals and is configured to detect and/or monitor the presence of pneumothorax, 2
+hemopneumothorax, or hemothorax based on an amount of light reflected or not reflected from the thoracic cavity.
+<br>
+
+4.
+The system of claim 2 in which the one or more light detectors are spaced from the one or more light sources by one or more predetermined separation distances such that the one or more light detectors detect at least one of the light reflected from tissue between the lung and the skin of the living subject or light reflected from the lung of the living subject and generate the output signals.
+<br>
+
+<br>
+5.    The system of claim 4 in which the processing subsystem is configured to generate one or more tomography curves representative of the amount of reflected light from varying penetration depths and to detect and/or monitor the presence of pneumothorax, hemopneumothorax, or hemothorax based on the shape of the one or more tomography curves.
+<br>
+
+<br>
+6.    The system of claim 1 in which the one or more light sources are configured to emit light into tissue of the living subject and the one or more light detectors are configured to detect light from the tissue and generate one or more physiological output signals.
+<br>
+
+7.    The system of claim 6 in which the processing subsystem is responsive to the one or more physiological output signals and is configured to determine at least one of a  
+3
+respiration rate of the living subject, a tissue oxygen saturation of the living subject, blood 4
+oxygenation of the living subject, or a heart rate of the living subject.
+<br>
+
+<br>
+8.    The system of claim 7 in which the processing subsystem is configured to determine characteristic change in the respiration rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or 
+<br>
+hemothorax in the living subject.
+<br>
+
+9.
+The system of claim 7 in which the processing subsystem is configured to determine at least one of a characteristic change in the tissue oxygen saturation or blood oxygenation to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+<br>
+10.  The system of claim 7 in which the processing subsystem is configured to determine characteristic change in the heart rate to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+<br>
+11.   The system of claim 7 in which the processing subsystem is configured to determine at least one of a characteristic change in the respiration rate of the living subject, a characteristic change in the tissue oxygen saturation of the living subject, a characteristic change in blood oxygenation of the living subject, or a characteristic change in the heart rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+1
+12.   The system of claim 7 in which the one or more light sources are 2
+configured to emit light at two or more predetermined wavelengths and the one or more light detectors are configured to generate the physiological output signals responsive to each of the two or more wavelengths for the processing subsystem to determine at least one of the respiration rate of the living subject, the tissue oxygen saturation of the living subject, the blood oxygenation of the living subject, or a heart rate of the living subject.
+<br>
+
+<br>
+13.   The system of claim 12 in which one of the predetermined wavelengths is configured to target oxyhemoglobin chromophores and another of the predetermined wavelengths is configured to target deoxyhemoglobin chromophores.
+<br>
+
+<br>
+14.  The system of claim 6 in which the one or more light sources include near infrared spectroscopy (NIRS) light sources.
+<br>
+
+<br>
+15.   The system of claim I in which the one or more light sources are adapted to be placed above a rib of the living subject and configured to emit light into the rib of the living subject and the one or more light detectors are adapted to be placed over the rib and configured to detect reflected light from the rib and generate one or more physiological output signals.
+<br>
+
+<br>
+16.   The system of claim 15 in which the processing subsystem is responsive to the one or more physiological output signals and is configured to determine a respiration rate of the living subject.
+<br>
+1
+17.  The system of claim 16 in which the processing subsystem is configured 2
+to determine characteristic change in the respiration rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or 
+<br>
+hemothorax in the living subject.
+<br>
+
+<br>
+18.  The system of claim I in which the one or more light sources are placed over at least a portion of an intercostal space of the living subject and the one or more light detectors are adapted to be placed over at least a portion of the intercostal space and configured to detect reflected light from the intercostal space and generate one or more physiological output signals.
+<br>
+
+<br>
+19.  The system of claim 18 in which the processing subsystem is responsive to the one or more physiological output signals and is configured to determine at least one of a respiration rate of the living subject, a tissue oxygen saturation of the living subject, blood oxygenation of the living subject, or a heart rate of the living subject.
+<br>
+
+<br>
+20.   The system of claim 19 in which the processing subsystem is configured to determine characteristic change in the respiration rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or 
+<br>
+hemothorax in the living subject.
+<br>
+
+21.   The system of claim 19 in which the processing subsystem is configured to determine characteristic change in the tissue oxygen saturation to detect and/or monitor  
+I
+the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the 2
+living subject.
+<br>
+
+<br>
+22.   The system of claim 19 in which the processing subsystem is configured to determine characteristic change in the heart rate to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+<br>
+23.   The system of claim 19 in which the processing subsystem is configured to determine at least one of a characteristic change in respiration rate of the living subject, a characteristic change in the tissue oxygen saturation of the living subject, and/or a characteristic change in the heart rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+<br>
+24.   The system of claim t in which the one or more light sources, the one or more light detectors, and the processing subsystem are housed in an adhesive patch attachable to the living subject.
+<br>
+
+<br>
+25.   The system of claim 24 in which the adhesive patch includes an outlined needle zone, the adhesive patch attachable to the living subject using a physiological reference point on the living subject to ensure the outlined needle zone is located at an intercostal space of the living subject for insertion of a needle to treat at least one of pneumothorax, hemopneumothorax, or hemothorax.
+<br>
+1
+26.   The system of claim 25 in which the physiological reference point 2
+includes at least one of a second intercostal space-mid clavicula line, a fourth and a fifth intercostal space-mid axillary line, or the fourth and the fifth intercostal space-anterior axillary line.
+<br>
+1
+27.   A method for detecting and/or monitoring at least one of pneumothorax, 2
+hemopneumothorax, or hemothorax using light; 
+<br>
+emitting light into a human subject; 
+<br>
+detecting light reflected from the human subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or 
+<br>
+hemothorax in the living subject.
+<br>
+
+<br>
+28.   The method of claim 27 including emitting light which penetrates a thoracic cavity of the living subject at one or more predetermined penetration depths and detecting at least one of reflected light from tissue between lung of the living subject and skin of the living subject or reflected light from the lung of the living subject and generating output signals.
+<br>
+
+<br>
+29.   The method of claim 28 including responding to the output signals and detecting and/or monitoring the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax based on an amount of light reflected or not reflected from the thoracic cavity.
+<br>
+
+<br>
+30.   The method of claim 28 in which the light emitted is spaced by one of more predetermined separation distances to detect at least one of light reflected from tissue between the lung and the skin of the living subject or light reflected from the lung of the living subject and generating output signals.
+<br>
+1
+31.   The method of claim 30 including generating one or more tomography 2
+curves representative of an amount of reflected light from varying penetration depths to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax based on the shape of the one or more tomography curves.
+<br>
+
+<br>
+32.   The method of claim 27 including emitting light into tissue of the living subject, detecting light from the tissue, and generating one or more physiological output signals.
+<br>
+
+<br>
+33.   The method of claim 32 including responding to the one or more physiological output signals and determining at least one of the respiration rate of the living subject, a tissue oxygen saturation of the living subject, blood oxygenation of the living subject, or a heart rate of the living subject.
+<br>
+
+<br>
+34.   The method of claim 33 including determining a characteristic change in the respiration rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax.
+<br>
+
+<br>
+35.   The method of claim of 34 including determining at least one of a characteristic change in tissue oxygen saturation or blood oxygenation to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or 
+<br>
+hemothorax in a living subject.
+
+<br>
+36.   The method of claim 33 including determining a characteristic change in 2
+the heart rate to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in a living subject.
+<br>
+
+<br>
+37.   The method of claim 33 including determining at least one of a characteristic change in the respiration rate of a living subject, a characteristic change in the tissue oxygenation saturation of a living subject, a characteristic change in blood oxygenation of a living subject, or a characteristic change in the heart rate in a living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in a living subject.
+<br>
+
+<br>
+38.   The method of claim 37 including emitting light at two or more predetermined wavelengths and detecting and generating the physiological output signals responsive to each of the two more wavelengths to determine at least one of the respiration rate of the living subject, the tissue oxygen saturation of the living subject, the blood oxygenation of the living subject, or the heart rate of the living subject.
+<br>
+
+<br>
+39.   The method of claim 38 in which one of the predetermined wavelengths is configured to target oxyhemoglobin chromophores and another of the predetermined wavelengths is configured to target deoxyhemoglobin chromophores.
+<br>
+
+40.   The method of claim 27 including emitting light into the rib of the living subject and detecting light from the rib and generating one or more physiological output  
+3
+signals.
+<br>
+
+1
+41.   The method of claim 40 including responding to the one or more physiological signals and determining a respiration rate of the human subject.
+<br>
+
+<br>
+42.  The method of claim 41 including determining a characteristic change in the respiration rate of the living subject and detecting and/or monitoring the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+<br>
+43.  The method of claim 27 including emitting light over an intercostal space of the living subject and detecting light reflected from the intercostal space and generating one or more physiological output signals.
+<br>
+
+<br>
+44.  The method of claim 43 including responding to the one or more physiological output signals and determining at least one of a respiration rate of the living subject, a tissue oxygenation of the living subject, blood oxygenation of the living subject, or a heart rate of the living subject.
+<br>
+
+<br>
+45.  The method of claim 44 including determining a characteristic change in the respiration of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+46.   The method of claim 44 including determining a characteristic change in  
+2
+the tissue oxygen saturation to detect and/or monitor the presence of at least one of 3
+pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+<br>
+
+<br>
+47.   The method of claim 44 including determining at least one of a characteristic change in respiration rate of the living subject, a characteristic change in tissue oxygen saturation of the living subject, or a characteristic change in the heart rate of the living subject to detect and/or monitor the presence of at least one of pneumothorax, hemopneumothorax, or hemothorax in the living subject.
+RJC/jmc48
+RJC/jmc41
+RJC/jmc43
+RJC/jmc45
+VIVO-175J
+RJC/jmc44
+RJC/jmc46
+RJC/jmc40
+RJC/jmc38
+RJC/jmc39
+RJC/jmc42
+RJC/jmc49
+RJC/jme47
+VIVO-175J
+VIVO-175J
+VIVO-1751
+VIVO-175J
+VIVO-175J
+VIVO-175J
+VIVO-175J
+1
+1
+1
+1
+2
+2
+2
+3
+3
+3
+4
+5
+6
+7
+8
+9
+l
+I
+I
+l
+</body></html>

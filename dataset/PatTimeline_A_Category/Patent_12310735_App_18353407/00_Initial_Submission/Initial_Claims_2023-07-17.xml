@@ -1,0 +1,72 @@
+<html><head></head><body><h3>Date: 2023-07-17</h3>
+
+<h1>What is claimed is:</h1>
+<br>
+<br>
+1.    An electrocardiography monitor, comprising:<br>
+a housing comprising rounded edges along top and bottom surfaces of the housing;<br>
+a processor secured by the housing;<br>
+an electrographic front end circuit to sense electrocardiographic signals;<br>
+a microcontroller interfaced to the electrocardiographic front end circuit to sample the electrocardiographic signals; and<br>
+electrical contacts that protrude from the bottom surface of the housing to connect to a battery to power the processor.<br>
+2.
+An electrocardiography monitor according to Claim 1, comprising:<br>
+a seal coupling surrounding the electrical contacts.<br>
+3.
+An electrocardiography monitor according to Claim 1, further comprising:<br>
+further electrical contacts to establish an electrical connection with one or more electrodes for sensing the electrocardiographic signals.<br>
+4.
+An electrocardiography monitor according to Claim  1, wherein the housing is shaped for placement over the battery.<br>
+5.
+An electrocardiography monitor according to Claim 1, further comprising:<br>
+circuitry for an actigraphy sensor.<br>
+6.
+An electrocardiography monitor according to Claim 5, wherein the actigraphy sensor generates interrupt signals to the microcontroller based on a position of the housing.<br>
+7.
+An electrocardiography monitor according to Claim  1, wherein the housing comprises polycarbonate, ABS, or an alloy of polycarbonate and ABS.<br>
+8.
+An electrocardiography monitor according to Claim 1, further comprising:<br>
+<br>
+<br>
+flash memory configured to store the electrocardiographic signals.<br>
+9.
+An electrocardiography monitor according to Claim 1, further comprising:<br>
+an expansion port via which an external device interfaces to the microcontroller.<br>
+<br>
+10.   An electrocardiography monitor according to Claim 9, wherein the external device comprises a physiological sensor.<br>
+<br>
+11.   An electrocardiography monitor assembly, comprising:<br>
+a housing comprising rounded edges along top and bottom surfaces of the housing;<br>
+a processor secured by the housing;<br>
+an electrographic front end circuit to sense electrocardiographic signals;<br>
+a microcontroller interfaced to the electrocardiographic front end circuit to sample the electrocardiographic signals memory;<br>
+electrical contacts that protrude from the bottom surface of the housing to connect to a battery to power the processor; and<br>
+a backing configured to receive the sealed housing.<br>
+<br>
+12.   An electrocardiography monitor assembly according to Claim 11, comprising:<br>
+a seal coupling surrounding the electrical contacts.<br>
+13.   An electrocardiography monitor assembly according to Claim
+11, further comprising:<br>
+further electrical contacts to establish an electrical connection with one or more electrodes for sensing the electrocardiographic signals.<br>
+<br>
+14.   An electrocardiography monitor assembly according to Claim  11, wherein the housing is shaped to fit over the battery.<br>
+15.   An electrocardiography monitor assembly according to Claim
+11, further comprising:<br>
+<br>
+<br>
+circuitry for an actigraphy sensor comprised within the housing.<br>
+<br>
+16.   An electrocardiography monitor assembly according to Claim 15, wherein the actigraphy sensor generates interrupt signals to the microcontroller based on a position of the housing.<br>
+<br>
+17.   An electrocardiography monitor assembly according to Claim 11, wherein the housing comprises polycarbonate, ABS, or an alloy of polycarbonate and ABS.<br>
+<br>
+18.   An electrocardiography monitor assembly according to Claim   11, further comprising:<br>
+flash memory configured to store the electrocardiographic signals.<br>
+<br>
+19.   An electrocardiography monitor assembly according to Claim   11, further comprising:<br>
+an expansion port comprised in the circuitry via which an external device interfaces to the microcontroller.<br>
+<br>
+20.   An electrocardiography monitor assembly according to Claim 19, wherein the external device comprises a physiological sensor.
+1
+
+</body></html>

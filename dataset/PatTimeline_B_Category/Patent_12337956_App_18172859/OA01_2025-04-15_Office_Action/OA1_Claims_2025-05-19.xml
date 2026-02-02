@@ -1,0 +1,69 @@
+<html><head></head><body><h3>Date: 2025-05-19</h3>
+
+<h1>IN THE CLAIMS:</h1>
+<br>
+1.
+(Original)   A method, comprising:<br>
+measuring a first rotational speed of a first element of a sprag clutch of a rotorcraft;<br>
+measuring a second rotational speed of a second element of the sprag clutch;<br>
+determining if the sprag clutch is in an overrunning condition, wherein the determining is based on the first rotational speed and the second rotational speed;<br>
+generating an estimation of an instantaneous wear rate of the sprag clutch, wherein the estimation of the instantaneous wear rate is generated based on the first rotational speed and the second rotational speed; and<br>
+displaying an indication of the estimation of the instantaneous wear rate of the sprag clutch.<br>
+2.
+(Original)    The method of claim 1 further comprising:<br>
+generating an estimation of an accumulated wear of the sprag clutch, wherein the estimation of the accumulated wear is based on the estimation of the instantaneous wear rate;<br>
+and displaying an indication of the estimation of the accumulated wear of the sprag clutch.<br>
+3.
+(Original)    The method of claim 2, wherein the indication of the estimation of the accumulated wear of the sprag clutch comprises an indication of the used life of the sprag clutch, wherein the indication of the used life of the sprag clutch is based on the estimation of the accumulated wear of the sprag clutch.<br>
+4.
+(Original)    The method of claim 1 further comprising determining a wear range of a plurality of wear ranges that corresponds to the estimation of the instantaneous wear rate, wherein the indication of the estimation of the instantaneous wear rate is based on the determined wear range.<br>
+<br>
+5.
+(Currently Amended) The method of claim 1, wherein generating [[an]] <u>the</u> estimation of the instantaneous wear rate of the sprag clutch is based on a pressure-velocity factor, in which the pressure-velocity factor is a non-linear function of the first rotational speed and the second rotational speed.<br>
+6.
+(Currently Amended) The method of claim 1, wherein generating [[an]] <u>the</u> estimation of the instantaneous wear rate of the sprag clutch is based on a ratio between lubricant film thickness and surface roughness within the sprag clutch.<br>
+7.
+(Original)    The method of claim 6, wherein the surface roughness is based on a previously generated estimation of the instantaneous wear rate of the sprag clutch.<br>
+8.
+(Original)    The method of claim 1, wherein the sprag clutch mechanically couples two engines of the rotorcraft.<br>
+9.
+(Original)    A clutch wear monitoring system, comprising:<br>
+a first sensor operable to measure a first rotational speed of a first element of a clutch and generate a first sensor signal associated with the first rotational speed;<br>
+a second sensor operable to measure a second rotational speed of a second element of the clutch and generate a second sensor signal associated with the second rotational speed;<br>
+a controller configured to:<br>
+receive the first sensor signal from the first sensor;<br>
+receive the second sensor signal from the second sensor;<br>
+determine an overrunning condition of the clutch based on the first sensor signal and the second sensor signal;<br>
+determine a surface wear rate for the clutch based on the overrunning condition, the first sensor signal, and the second sensor signal; and<br>
+generate a wear signal, wherein the wear signal is associated with the surface wear<br>
+<br>
+rate; anda display panel configured to receive the wear signal from the controller and display an indication of the surface wear rate based on the wear signal.<br>
+<br>
+10.    (Original)    The clutch wear monitoring system of claim 9, wherein the clutch is a sprag clutch.<br>
+<br>
+11.    (Original)    The clutch wear monitoring system of claim 9, wherein the controller is further configured to determine a total amount of surface wear and generate a total wear signal associated with the total amount of surface wear.<br>
+<br>
+12.    (Currently Amended) The clutch wear monitoring system of claim 11, wherein the display panel is further configured to receive the [[wear]] total <u>wear </u>signal from the controller and display an indication of the total amount of surface wear based on the total wear signal.<br>
+<br>
+13.    (Original)    The clutch wear monitoring system of claim 12, wherein the display panel is configured to provide an alert when the total amount of surface wear reaches a threshold value.<br>
+<br>
+14.    (Original)    The clutch wear monitoring system of claim 9, wherein the display panel is configured to display a first indication when the surface wear rate is within a first range of values and is configured to display a second indication when the surface wear rate is within a second range of values, wherein the first indication is visually distinguished from the second indication.<br>
+<br>
+15.    (Original)    The clutch wear monitoring system of claim 14, wherein the display panel is configured to provide an alert when the surface wear rate is within a third range of values.<br>
+<br>
+<br>
+16.    (Original)    A device, comprising:a processor; and<br>
+a non-transitory computer-readable storage medium storing a program to be executed by the processor, the program comprising instructions for:monitoring an inner element speed of an inner element of a sprag clutch;<br>
+monitoring an outer element speed of an outer element of the sprag clutch;<br>
+determining a pressure-velocity parameter for the sprag clutch, wherein the pressure-velocity parameter is based on the inner element speed and the outer element speed;<br>
+determining a wear rate for the inner element of the sprag clutch, wherein the wear rate is based on the pressure-velocity parameter; and<br>
+providing an indication of the wear rate on an instrument panel.<br>
+<br>
+17.    (Original)    The device of claim 16, wherein the pressure-velocity parameter depends on a difference between the inner element speed and the outer element speed.<br>
+<br>
+18.    (Original)    The device of claim 16, wherein the program comprises instructions for integrating the wear rate to determine an accumulated wear.<br>
+<br>
+19.    (Original)    The device of claim 16, wherein the processor is a flight control computer (FCC) of a fly-by-wire (FBW) system of a rotorcraft.<br>
+<br>
+20.    (Original)    The device of claim 19, wherein the program comprises instructions for controlling the flight of the rotorcraft based on the wear rate.<br>
+</body></html>

@@ -1,0 +1,19 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Response to Amendment
+The amendment filed 12/16/2024 has been entered. Claims 1, 11, and 16 have been amended. Claims 4, 14, and 19 have been cancelled. Claims 1-3, 5-13, 15-18 and 20 remain pending in the application. Examiner appreciates the thorough explanation of the invention and amendments provided in the applicant’s response. Applicant’s amendments to the claims have overcome each and every objection and rejection set forth in the Non-Final Office Action mailed on 9/23/2024.
+Response to Arguments
+Applicant’s arguments, see pages 9-11, filed 12/16/2024, with respect to claims 1, 11, and 16 have been fully considered and are persuasive.  The previous rejections under 35 U.S.C. § 102 have been withdrawn. The Double Patenting rejections have also been withdrawn.
+Allowable Subject Matter
+Claims 1-3, 5-13, 15-18 and 20 are allowed.
+The following is an examiner’s statement of reasons for allowance: the prior art of record failed to show either alone or in combination a system and/or method wherein responsive to the airspeed and the altitude indicating a first mode of operation, a processor sends a command to deploy the main parachute without deploying the drogue parachute, along with all other listed limitations of the independent claim(s).
+The prior art of record failed to show either alone or in combination a system wherein responsive to the airspeed and the altitude indicating a first mode of operation, an electronic sequencer sends a command to deploy the main parachute without deploying the drogue parachute, along with all other listed limitations of the independent claim(s).
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to JUSTIN MICHAEL HESTON whose telephone number is(571)272-3099. The examiner can normally be reached Sun-Tues: 0500-1700, Wed-Thurs by appointment only.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Timothy D Collins can be reached on 571-272-6886. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/JUSTIN MICHAEL HESTON/Examiner, Art Unit 3644
+/TIMOTHY D COLLINS/Supervisory Patent Examiner, Art Unit 3644

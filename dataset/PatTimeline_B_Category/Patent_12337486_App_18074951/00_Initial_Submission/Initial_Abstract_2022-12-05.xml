@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2022-12-05</h3>
+
+<h1>ABSTRACT</h1>
+<p>An operation controller configured to give a fine operation command to a master shaft in a state in which servomotors are excited and respective excitation brakes of the master shaft and the slave shaft are released, and an abnormality detector configured to perform detection of an abnormality of the excitation brake of the slave shaft by detecting an operation amount of the slave shaft that is obtained when the slave shaft is finely operated in accordance with the fine operation command to the master shaft in a controlled manner, and comparing the operation amount with a reference value are included.</p><p>14</p></body></html>

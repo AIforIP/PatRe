@@ -1,0 +1,63 @@
+<html><head></head><body><h3>Date: 2023-07-24</h3>
+
+<h1>CLAIMS</h1>
+
+<h1><u>What is claimed is:</u></h1>
+<br>
+<br>
+1.    An implantable encapsulation device for housing cells, the device comprising:<br>
+a lumen for receiving and housing cells;<br>
+a vascularization membrane at least partially surrounding the lumen, and wherein the vascularization membrane is permeable to cells and comprises pores of less than 10 micrometers;<br>
+an immuno-isolation membrane provided adjacent the vascularization membrane and wherein the immuno-isolation membrane comprises smaller pores than the vascularization membrane;<br>
+an oxygen delivery system and a gas channel operable to deliver gas to the device;<br>
+a sensor provided in the device; and<br>
+wherein the sensor is operable to determine at least one of an oxygen level and an oxygen consumption rate.<br>
+2.
+The device of claim 1, wherein the sensor comprises at least one of an optical sensor, an electrochemical sensor, and a nuclear magnetic resonance-based sensor.<br>
+3.
+The device of claim 1, wherein the sensor is provided within the gas channel.<br>
+4.
+The device of claim 1, wherein the device comprises a cell loading port that provides access to the lumen.<br>
+5.
+The device of claim 1, further comprising a reader adapted to communicate with the sensor.<br>
+6.
+The device of claim 5, wherein the reader comprises a wireless reader provided external to the lumen and operable to be provided external to the skin of a patient.<br>
+7.
+The device of claim  1, wherein the sensor is selected from  the group comprising: oxygen sensors, glucose sensors, pH sensors, lactate sensors, carbon dioxide<br>
+<br>
+sensors, optical sensors, and electrochemical sensors.<br>
+8.
+An implantable encapsulation device for housing cells, the device comprising:<br>
+a lumen for receiving and housing cells;<br>
+a vascularization membrane at least partially surrounding the lumen, and wherein the vascularization membrane is permeable to cells;<br>
+a sensor provided within the lumen or on the vascularization membrane;<br>
+wherein the sensor is operable to detect vascularization within the device based on at least one of oxygen level and an oxygen consumption rate.<br>
+9.
+The device of claim 8, further comprising a second sensor and wherein the first sensor and the sensor are spaced apart by a physical distance and are operable to determine at least one of: oxygen centration at different locations, and oxygen consumption rate over the physical distance.<br>
+<br>
+10.   The device of claim   8, further comprising an immuno-isolation member provided adjacent to the vascularization membrane.<br>
+<br>
+11.   The device of claim 8, wherein the device comprises a cell loading port that provides access to the lumen.<br>
+<br>
+12.   The device of claim 9, further comprising a reader adapted to read at least one of the first sensor and the second sensor.<br>
+<br>
+13.   The device of claim   12, wherein the reader comprises a wireless reader provided external to the lumen and operable to be provided external to the skin of a patient.<br>
+<br>
+14.   The device of claim   8, further comprising an oxygen delivery system comprising an implantable oxygen generator and a microprocessor that is operable to regulate oxygen delivery from the oxygen delivery system to the lumen.<br>
+<br>
+15.   A method for detecting vascularization of an implantable device, the method comprising:<br>
+providing an implantable device comprising a lumen for receiving and housing cells; a vascularization membrane at least partially surrounding the lumen, and wherein the vascularization membrane is permeable to cells; a first sensor and a second sensor;<br>
+monitoring a first oxygen level at a first location of the implantable device by reading the first sensor;<br>
+monitoring a second oxygen level at a second location of the implantable device by reading the second sensor;<br>
+determining at least one of an oxygen concentration and oxygen consumption rate; and wherein vascularization is detected or determined based on at least one of the oxygen consumption rate and oxygen concentration.<br>
+<br>
+16.   The method of claim 15, wherein a microprocessor and an oxygen delivery system are provided, and wherein the microprocessor commands the oxygen delivery system to increase oxygen delivery to the implantable device based on the oxygen concentration ortheoxygen consumption rate.<br>
+<br>
+17.   The method of claim 15, further comprising providing a wireless reader on a patient's skin.<br>
+<br>
+18.   The method of claim 15, wherein at least one of the first sensor and the second sensor is selected from the group comprising: oxygen sensors, glucose sensors, pH sensors, lactate sensors, carbon dioxide sensors, optical sensors, and electrochemical sensors.<br>
+<br>
+19.   Themethod of claim 15, wherein at least one of the sensors is provided withinthe lumen.<br>
+<br>
+20. The method of claim 15, wherein at least one of the first sensor and the second sensor comprises at least one of an optical sensor, an electrochemical sensor, and a nuclear magnetic resonance-based sensor.
+</body></html>

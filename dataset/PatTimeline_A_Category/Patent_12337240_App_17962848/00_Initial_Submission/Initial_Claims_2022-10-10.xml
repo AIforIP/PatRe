@@ -1,0 +1,283 @@
+<html><head></head><body><h3>Date: 2022-10-10</h3>
+<p>CLAIMS</p>
+<p><u>What is claimed is:</u></p>
+<br>
+
+<br>
+1. A method for interactive plot jumping, executed by a computer device, the method comprising: 
+<br>
+obtaining current node information comprising a first plot path that reaches a current node and a plot parameter of the current node, the current node indicating a plot where a user is currently located, and the plot parameter reflecting a user status of the user at the current node; 
+<br>
+obtaining target node information in response to a plot jump instruction for a target node, the target node information comprising a plot parameter of the target node and a historical plot path by which the target node has been reached, and the plot jump instruction instructing a plot to jump from the current node to the target node; 
+<br>
+performing path splicing on the first plot path and the historical plot path to obtain a spliced plot path that conforms to a plot logic rule and satisfies a plot parameter condition, the spliced plot path leading to the target node; and 
+<br>
+updating the plot parameter corresponding to the target node based on the spliced plot path. 
+
+<br>
+
+<br>
+2. The method according to claim 1, wherein the performing path splicing on the first plot path and the historical plot path to obtain a spliced plot path that conforms to a plot logic rule and satisfies a plot parameter condition comprises: 
+<br>
+performing the path splicing on the first plot path and the historical plot path according to a default splicing rule to obtain a default spliced plot path; 
+<br>
+when the default spliced plot path conforms with the plot logic rule, using the default spliced plot path as the spliced plot path; and 
+<br>
+when the default spliced plot path does not conform to the plot logic rule, performing the path 
+
+splicing on the first plot path and the historical plot path based on a superior-subordinate relationship between the current node and the target node, to obtain the spliced plot path that conforms to the plot logic rule and satisfies the plot parameter condition.
+<br>
+
+<br>
+3. The method according to claim 2, wherein the performing the path splicing on the first plot path and the historical plot path based on a superior-subordinate relationship between the current node and the target node, to obtain the spliced plot path that conforms to the plot logic rule and satisfies the plot parameter condition comprises: 
+<br>
+when the superior-subordinate relationship exists between the current node and the target node, performing depth-first search processing in plot nodes before the target node to obtain a plot splicing node that conforms to the plot logic rule, wherein plot nodes after the current node do not change the plot parameter of the current node; and generating the spliced plot path based on the plot splicing node; 
+<br>
+when the superior-subordinate relationship does not exist between the current node and the target node, changing, based on a target plot parameter that causes the default spliced plot path to not conform to the plot logic rule, a plot node involving a change of the target plot parameter in the default spliced plot path to obtain the spliced plot path that conforms to the plot logic rule, wherein plot parameters in the spliced plot path other than the target plot parameter satisfy the plot parameter condition. 
+
+<br>
+
+<br>
+4. The method according to claim 3, wherein before the performing depth-first search processing in plot nodes before the target node to obtain a plot splicing node that conforms to the plot logic rule, the method further comprises: 
+<br>
+obtaining read plot nodes after a target determination node, the target determination node being a plot node that causes the default spliced plot path to not conform to the plot logic rule and involving a determination of the target plot parameter, and the read plot nodes being plot nodes that have been 
+
+reached; and 
+<br>
+the performing depth-first search processing in plot nodes before the target node to obtain plot splicing nodes that conform to the plot logic rule comprises: 
+<br>
+performing the depth-first search processing in the read plot nodes after the target determination node to obtain the plot splicing node that conforms to the plot logic rule. 
+
+<br>
+
+<br>
+5. The method according to claim 4, wherein the performing the depth-first search processing in the read plot nodes after the target determination node to obtain the plot splicing node that conforms to the plot logic rule comprises: 
+<br>
+removing plot nodes that are on the historical path among exit nodes of the target determination node to obtain remaining read plot nodes; and 
+<br>
+performing the depth-first search processing in the remaining read plot nodes to obtain the plot splicing node that conforms to the plot logic rule. 
+
+<br>
+
+<br>
+6. The method according to claim 4, wherein the performing the depth-first search processing in the read plot nodes after the target determination node to obtain the plot splicing node that conforms to the plot logic rule comprises: 
+<br>
+detecting a number of recursions of the depth-first search processing; 
+<br>
+when the number of recursions is fewer than a threshold, performing node determination processing on a current search node, the current search node being a plot node that the depth-first search processing reaches at a current moment, and a starting position of the depth-first search processing being a target exit node of the target determination node; 
+<br>
+when the current search node fails the node determination processing, using a next exit node of the current search node as the current search node, incrementing the number of recursions, and 
+
+performing the operation of detecting a number of recursions of the depth-first search processing; 
+<br>
+when the current search node passes the node determination processing, performing plot logic verification on the current search node; when the current search node passes the plot logic verification, determining the current search node as the plot splicing node; 
+<br>
+when the current search node fails the plot logic verification, using a next exit node of the current search node as the current search node, incrementing the number of recursions, and 
+<br>
+performing the operation of detecting a number of recursions of the depth-first search processing; 
+<br>
+when the number of recursions reaches the threshold, detecting whether any of exit nodes of the current search node is on the historical plot path that reaches the target node; 
+<br>
+when none of the exit nodes of the current search node is on the historical plot path, removing a recursive branch where the current search node is located; 
+<br>
+when the exit nodes of the current search node comprise a target exit node on the historical plot path, performing the plot logic verification on the target exit node; 
+<br>
+when the target exit node passes the plot logic verification, using the target exit node as the plot splicing node; 
+<br>
+when the target exit node fails the plot logic verification, removing the recursive branch where the current search node is located. 
+
+<br>
+
+<br>
+7. The method according to claim 6, wherein the performing node determination processing on a current search node comprises: 
+<br>
+when the current search node is the target node or is on the historical plot path, determining that the current search node passes the node determination processing; otherwise, determining that the current search node does not pass the node determination processing; and 
+
+the performing plot logic verification on the current search node comprises: 
+<br>
+performing path splicing on the first plot path and a historical path after the current search node to generate a temporary spliced path; and when the temporary spliced path conforms to the plot logic rule, determining that the current search node passes the plot logic verification; otherwise, determining that the current search node does not pass the plot logic verification. 
+
+<br>
+
+<br>
+8. The method according to claim 4, wherein the generating the spliced plot path based on the plot splicing node comprises: 
+<br>
+performing path splicing on the first plot path and a historical path after the plot splicing node on the historical plot path to generate the spliced plot path; or 
+<br>
+using the temporary spliced path that conforms to the plot logic rule as the spliced plot path. 
+
+<br>
+
+<br>
+9. The method according to claim 3, wherein the changing, based on a target plot parameter that causes the default spliced plot path to not conform to the plot logic rule, a plot node involving a change of the target plot parameter in the default spliced plot path to obtain the spliced plot path that conforms to the plot logic rule comprises: 
+<br>
+marking the target plot parameter; 
+<br>
+obtaining all intersection nodes of the first plot path and the historical plot path; 
+<br>
+checking a parameter modification on a path interval between every two adjacent intersection nodes on the first plot path by checking whether a plot node in the path interval is associated with a value change operation performed on the marked target plot parameter; 
+<br>
+when no plot node in the path interval is associated with the value change operation performed on the target plot parameter, using, in the target path interval, a path formed between adjacent intersection nodes on the first plot path that correspond to the target path interval; 
+
+when a plot node in the path interval is associated with the value change operation performed on the target plot parameter, using, in the target path interval, a path formed between adjacent intersection nodes on the historical plot path that correspond to the target path interval, to obtain an adjusted first plot path; 
+<br>
+splicing the adjusted first plot path with the historical plot path after a last intersection node to obtain a replacing spliced path; 
+<br>
+when the replacing spliced path conforms to the plot logic rule, determining the replacing spliced path as the spliced plot path, and stopping checking the parameter modification on a next path interval; 
+<br>
+and when the replacing spliced path does not conform to the plot logic rule, checking the parameter modification on the next path interval. 
+
+<br>
+
+<br>
+10. The method according to claim 3, wherein before the performing depth-first search processing in plot nodes before the target node to obtain a plot splicing node that conforms to the plot logic rule, the method further comprises: 
+<br>
+determining a target determination node in intersection nodes of the first plot path and the historical plot path, the target determination node being a node that causes the default spliced plot path to not conform to the plot logic rule, and the target determination node being associated with a plot parameter determination. 
+
+<br>
+
+<br>
+11. A method for displaying an interactive plot interface, executed by a computer device, the method comprising: 
+<br>
+displaying a current node and a first plot path that reaches the current node in a plot structure interface, the current node indicating a plot where a user is currently located; 
+
+obtaining, in response to a plot jump operation for a target node, a plot parameter of the current node and a historical plot path by which the target node has been reached, the plot jump operation instructing a plot to jump from the current node to the target node; 
+<br>
+performing path splicing on the first plot path and the historical plot path, and displaying a spliced plot path obtained by the splicing, the first plot path being spliced with the historical plot path when the plot parameter of the current node satisfies a plot parameter condition, to obtain the spliced plot path leading to the target node and conforming to a plot logic rule; and 
+<br>
+updating and displaying a plot parameter corresponding to the target node based on the plot parameter of the current node and the spliced plot path. 
+
+<br>
+
+<br>
+12. A non-transitory computer-readable storage medium, storing at least one instruction, at least one program, a code set, or an instruction set, the at least one instruction, the at least one program, the code set, or the instruction set being loaded and executed by a processor to implement the method, the method comprising: 
+<br>
+obtaining current node information comprising a first plot path that reaches a current node and a plot parameter of the current node, the current node indicating a plot where a user is currently located, and the plot parameter reflecting a user status of the user at the current node; 
+<br>
+obtaining target node information in response to a plot jump instruction for a target node, the target node information comprising a plot parameter of the target node and a historical plot path by which the target node has been reached, and the plot jump instruction instructing a plot to jump from the current node to the target node; 
+<br>
+performing path splicing on the first plot path and the historical plot path to obtain a spliced plot path that conforms to a plot logic rule and satisfies a plot parameter condition, the spliced plot path leading to the target node; and 
+
+updating the plot parameter corresponding to the target node based on the spliced plot path.
+<br>
+
+<br>
+13. The computer-readable storage medium according to claim 12, wherein the performing path splicing on the first plot path and the historical plot path to obtain a spliced plot path that conforms to a plot logic rule and satisfies a plot parameter condition comprises: 
+<br>
+performing the path splicing on the first plot path and the historical plot path according to a default splicing rule to obtain a default spliced plot path; 
+<br>
+when the default spliced plot path conforms with the plot logic rule, using the default spliced plot path as the spliced plot path; and 
+<br>
+when the default spliced plot path does not conform to the plot logic rule, performing the path splicing on the first plot path and the historical plot path based on a superior-subordinate relationship between the current node and the target node, to obtain the spliced plot path that conforms to the plot logic rule and satisfies the plot parameter condition. 
+
+<br>
+
+<br>
+14. The computer-readable storage medium according to claim 12, wherein the performing the path splicing on the first plot path and the historical plot path based on a superior-subordinate relationship between the current node and the target node, to obtain the spliced plot path that conforms to the plot logic rule and satisfies the plot parameter condition comprises: 
+<br>
+when the superior-subordinate relationship exists between the current node and the target node, performing depth-first search processing in plot nodes before the target node to obtain a plot splicing node that conforms to the plot logic rule, wherein plot nodes after the current node do not change the plot parameter of the current node; and generating the spliced plot path based on the plot splicing node; 
+<br>
+when the superior-subordinate relationship does not exist between the current node and the target node, changing, based on a target plot parameter that causes the default spliced plot path to not 
+
+conform to the plot logic rule, a plot node involving a change of the target plot parameter in the default spliced plot path to obtain the spliced plot path that conforms to the plot logic rule, wherein plot parameters in the spliced plot path other than the target plot parameter satisfy the plot parameter condition.
+<br>
+
+<br>
+15. The computer-readable storage medium according to claim 14, wherein before the performing depth-first search processing in plot nodes before the target node to obtain a plot splicing node that conforms to the plot logic rule, the method further comprises: 
+<br>
+obtaining read plot nodes after a target determination node, the target determination node being a plot node that causes the default spliced plot path to not conform to the plot logic rule and involving a determination of the target plot parameter, and the read plot nodes being plot nodes that have been reached; and 
+<br>
+the performing depth-first search processing in plot nodes before the target node to obtain plot splicing nodes that conform to the plot logic rule comprises: 
+<br>
+performing the depth-first search processing in the read plot nodes after the target determination node to obtain the plot splicing node that conforms to the plot logic rule. 
+
+<br>
+
+<br>
+16. The computer-readable storage medium according to claim 15, wherein the performing the depth-first search processing in the read plot nodes after the target determination node to obtain the plot splicing node that conforms to the plot logic rule comprises: 
+<br>
+removing plot nodes that are on the historical path among exit nodes of the target determination node to obtain remaining read plot nodes; and 
+<br>
+performing the depth-first search processing in the remaining read plot nodes to obtain the plot splicing node that conforms to the plot logic rule. 
+<br>
+17. The computer-readable storage medium according to claim 15, wherein the performing the depth-first search processing in the read plot nodes after the target determination node to obtain the plot splicing node that conforms to the plot logic rule comprises: 
+<br>
+detecting a number of recursions of the depth-first search processing; 
+<br>
+when the number of recursions is fewer than a threshold, performing node determination processing on a current search node, the current search node being a plot node that the depth-first search processing reaches at a current moment, and a starting position of the depth-first search processing being a target exit node of the target determination node; 
+<br>
+when the current search node fails the node determination processing, using a next exit node of the current search node as the current search node, incrementing the number of recursions, and 
+<br>
+performing the operation of detecting a number of recursions of the depth-first search processing; 
+<br>
+when the current search node passes the node determination processing, performing plot logic verification on the current search node; when the current search node passes the plot logic verification, determining the current search node as the plot splicing node; 
+<br>
+when the current search node fails the plot logic verification, using a next exit node of the current search node as the current search node, incrementing the number of recursions, and 
+<br>
+performing the operation of detecting a number of recursions of the depth-first search processing; 
+<br>
+when the number of recursions reaches the threshold, detecting whether any of exit nodes of the current search node is on the historical plot path that reaches the target node; 
+<br>
+when none of the exit nodes of the current search node is on the historical plot path, removing a recursive branch where the current search node is located; 
+<br>
+when the exit nodes of the current search node comprise a target exit node on the historical 
+
+plot path, performing the plot logic verification on the target exit node; 
+<br>
+when the target exit node passes the plot logic verification, using the target exit node as the plot splicing node; 
+<br>
+when the target exit node fails the plot logic verification, removing the recursive branch where the current search node is located. 
+
+<br>
+
+<br>
+18. The computer-readable storage medium according to claim 17, wherein the performing node determination processing on a current search node comprises: 
+<br>
+when the current search node is the target node or is on the historical plot path, determining that the current search node passes the node determination processing; otherwise, determining that the current search node does not pass the node determination processing; and 
+<br>
+the performing plot logic verification on the current search node comprises: 
+<br>
+performing path splicing on the first plot path and a historical path after the current search node to generate a temporary spliced path; and when the temporary spliced path conforms to the plot logic rule, determining that the current search node passes the plot logic verification; otherwise, determining that the current search node does not pass the plot logic verification. 
+
+<br>
+
+<br>
+19. The computer-readable storage medium according to claim 15, wherein the generating the spliced plot path based on the plot splicing node comprises: 
+<br>
+performing path splicing on the first plot path and a historical path after the plot splicing node on the historical plot path to generate the spliced plot path; or 
+<br>
+using the temporary spliced path that conforms to the plot logic rule as the spliced plot path. 
+
+<br>
+
+20. The computer-readable storage medium according to claim 14, wherein the changing, based on a target plot parameter that causes the default spliced plot path to not conform to the plot logic rule, 
+a plot node involving a change of the target plot parameter in the default spliced plot path to obtain the spliced plot path that conforms to the plot logic rule comprises: 
+<br>
+marking the target plot parameter; 
+<br>
+obtaining all intersection nodes of the first plot path and the historical plot path; 
+<br>
+checking a parameter modification on a path interval between every two adjacent intersection nodes on the first plot path by checking whether a plot node in the path interval is associated with a value change operation performed on the marked target plot parameter; 
+<br>
+when no plot node in the path interval is associated with the value change operation performed on the target plot parameter, using, in the target path interval, a path formed between adjacent intersection nodes on the first plot path that correspond to the target path interval; 
+<br>
+when a plot node in the path interval is associated with the value change operation performed on the target plot parameter, using, in the target path interval, a path formed between adjacent intersection nodes on the historical plot path that correspond to the target path interval, to obtain an adjusted first plot path; 
+<br>
+splicing the adjusted first plot path with the historical plot path after a last intersection node to obtain a replacing spliced path; 
+<br>
+when the replacing spliced path conforms to the plot logic rule, determining the replacing spliced path as the spliced plot path, and stopping checking the parameter modification on a next path interval; 
+<br>
+and when the replacing spliced path does not conform to the plot logic rule, checking the parameter modification on the next path interval. 
+21PCT571/US44
+21PCT571/US45
+21PCT571/US46
+21PCT571/US47
+21PCT571/US48
+21PCT571/US49
+21PCT571/US50
+21PCT571/US51
+21PCT571/US52
+21PCT571/US53
+21PCT571/US54
+21PCT571/US55
+</body></html>

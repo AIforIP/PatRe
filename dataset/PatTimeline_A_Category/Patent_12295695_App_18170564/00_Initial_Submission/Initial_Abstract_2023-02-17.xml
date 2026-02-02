@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2023-02-17</h3>
+
+<h1>ABSTRACT</h1>
+<p>The present application relates to the technical field of medical monitoring. Specifically disclosed are a method for managing monitoring data, a probe assembly, and a system for managing monitoring data. The method for managing monitoring data based on the probe assembly comprises the following steps: establishing a communication connection with a first monitor; in response to a data roll-out instruction, receiving first monitoring data from the first monitor, and after the transmission of the first monitoring data is completed, breaking the communication connection with the first monitor; establishing a communication connection with a second monitor; and sending at least the first monitoring data to the second monitor, and cooperating with the second monitor to execute a monitoring task.</p><p>1</p></body></html>

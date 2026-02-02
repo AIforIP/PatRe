@@ -1,0 +1,65 @@
+<html><head></head><body><h3>Date: 2024-08-09</h3>
+
+<h1><u>IN THE CLAIMS</u></h1>
+<p>Please amend the claims as follows:</p><br>
+<br>
+1.    (Currently Amended) A method for gait-based testing for a neurodegenerative condition in a patient, the method comprising:acquiring gait kinematic data for the <u>patient, the gait kinematic data comprising one or more time-dependent signals each representing a kinematic parameter of a joint or body segment;</u><br>
+processing the gait kinematic dat<del>a</del><del>, </del><del>using </del><u>with </u>one or more computer processors[[,]] to<u> derive, from the one or more time-dependents signals, </u>one or more <u>respective </u>gait metrics<u> each indicative of a degree of variability, between curve segments for multiple strides within the respective time-dependent signal, in characteristic shapes of the curve segments </u><del>co</del><del>ll</del><del>ective</del><del>ly</del><del> constituting a gait signature associated with the neurodegenerative condition</del>; and<br>
+operating a machine-learning model on input comprising the <u>one or more gait metric</u><u>s</u><del>gait signature</del>, using the one or more computer processors, to determine at least one predictive score associated with the neurodegenerative condition and the patient, the machine-learning model trained on a training dataset comprising gait metrics derived from gait kinematic data for a plurality of patients along with evaluation scores quantifying the neurodegenerative condition in the respective one of the plurality of patients.<br>
+2.
+(New) The method of claim 1, wherein the time-dependent signals each representing a kinematic parameter comprise one or more of a linear position, a linear velocity, a linear acceleration, an angular position, an angular velocity, or an angular acceleration of a joint or body part.<br>
+3.
+(New) The method of claim 1, wherein acquiring the gait kinematic data comprises processing video data of the patient walking.<br>
+4.
+(New) The method of claim 3, wherein the video data is acquired by a single camera.<br>
+<br>
+<br>
+<br>
+<br>
+5.
+(New) The method of claim 3, wherein processing the video data comprises using a machine-learning motion-analysis model to determine, based on the video data, time-dependent three-dimensional linear positions of joints or body parts.<br>
+6.
+(New) The method of claim 5, wherein processing the video data further comprises calculating time-dependent angular positions of joints or body segments from the time-dependent three-dimensional linear positions.<br>
+7.
+(New) The method of claim 6, wherein the time-dependent angular positions of joints or body segments comprise one or more of: pelvic tilt, pelvic list, pelvic rotation, hip flexion, hip adduction, hip rotation, knee angle, or ankle angle.<br>
+8.
+(New) The method of claim 6, wherein the one or more gait metrics comprise one or more gait complexity metrics.<br>
+9.
+(New) The method of claim 1, wherein the evaluation scores comprise neuropathology scores derived of the plurality of patients.<br>
+<br>
+10.   (New) The method of claim 1, wherein the evaluation scores comprise cognitive scores based on cognitive testing of the plurality of patients.<br>
+<br>
+11.   (New) The method of claim 1, wherein the neurodegenerative condition comprises at least one of Alzheimer's disease, Parkinson's disease, Huntington's disease, dementia, or heightened fall risk.<br>
+<br>
+12.   (New) The method of claim 1, wherein the at least one predictive score comprises at least one of a likelihood that the neurodegenerative condition is present in the patient or a quantifier of the degree to which the neurodegenerative condition is present.<br>
+<br>
+13.   (New) A non-transitory machine-readable medium storing instructions which, when executed by one or more hardware processors, cause the one or more hardware processors to perform operations for gait-based testing for a neurodegenerative condition in a patient, the operations comprising:<br>
+<br>
+<br>
+<br>
+acquiring gait kinematic data for the patient, the gait kinematic data comprising one or more time-dependent signals each representing a kinematic parameter of a joint or body segment;<br>
+processing the gait kinematic data to derive, from the one or more time-dependents signals, one or more respective gait metrics each indicative of a degree of variability, between curve segments for multiple strides within the respective time-dependent signal, in characteristic shapes of the curve segments; and<br>
+operating a machine-learning model on input comprising the one or more gait metrics to determine at least one predictive score associated with the neurodegenerative condition and the patient, the machine-learning model trained on a training dataset comprising gait metrics derived from kinematic data for a plurality of patients along with evaluation scores quantifying the neurodegenerative condition in the respective one of the plurality of patients.<br>
+<br>
+14.   (New) The machine-readable medium of claim 13, wherein acquiring the gait kinematic data comprises processing video data of the patient walking, the video data acquired by a single camera.<br>
+<br>
+15.   (New) The machine-readable medium of claim 14, wherein processing the video data comprises using a machine-learning motion-analysis model to determine, based on the video data, time-dependent three-dimensional linear positions of joints or body parts.<br>
+<br>
+16.   (New) The machine-readable medium of claim 15, wherein processing the video data further comprises calculating time-dependent angular positions of joints or body segments from the time-dependent three-dimensional linear positions.<br>
+<br>
+17.   (New) The machine-readable medium of claim 13, wherein the one or more gait metrics comprise one or more gait complexity metrics.<br>
+<br>
+18.   (New) The machine-readable medium of claim 13, wherein the evaluation scores comprise neuropathology scores derived from brain scans of the plurality of patients or cognitive scores based on cognitive testing of the plurality of patients.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+19.    (New) The machine-readable medium of claim 13, wherein the neurodegenerative condition comprises at least one of Alzheimer's disease, Parkinson's disease, Huntington's disease, dementia, or heightened fall risk.<br>
+<br>
+20.    (New) A system for gait-based testing for a neurodegenerative condition in a patient, the system comprising:a camera to capture video data of a patient walking; and<br>
+one or more computer processors executing instructions stored in memory to perform operations comprising:<br>
+processing the video data to obtain gait kinematic data for the patient, the gait kinematic data comprising one or more time-dependent signals each representing a kinematic parameter of a joint or body segment;<br>
+processing the gait kinematic data to derive, from the one or more time- dependents signals, one or more respective gait metrics each indicative of a degree of variability, between curve segments for multiple strides within the respective time- dependent signal, in characteristic shapes of the curve segments; and<br>
+operating a machine-learning model on input comprising the one or more gait metrics to determine at least one predictive score associated with the neurodegenerative condition and the patient, the machine-learning model trained on a training dataset comprising gait metrics derived from kinematic data for a plurality of patients along with evaluation scores quantifying the neurodegenerative condition in the respective one of the plurality of patients.
+</body></html>

@@ -1,0 +1,31 @@
+DETAILED ACTION
+Claims 1-5 are pending.
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Priority
+Acknowledgment is made of applicant’s claim for priority of U.S provisional application under 35 U.S.C. 119(e).
+Acknowledgment is made of the claim for priority or continuation and divisional applications under 35 U.S.C. 120.
+Information Disclosure Statement
+The information disclosure statements provided complies with the provisions of MPEP § 609.  It has been placed in the application file, and the information referred to therein has been considered as to the merits.  A signed copy of the form is attached.
+Specification
+The abstract of the disclosure is objected to because of the word “disclosed” and the title of the invention should be deleted on top of the page that contains the abstract.  Correction is required.  See MPEP § 608.01(b).
+Double Patenting
+The nonstatutory double patenting rejection is based on a judicially created doctrine grounded in public policy (a policy reflected in the statute) so as to prevent the unjustified or improper timewise extension of the “right to exclude” granted by a patent and to prevent possible harassment by multiple assignees.  A nonstatutory double patenting rejection is appropriate where the claims at issue are not identical, but at least one examined application claim is not patentably distinct from the reference claim(s) because the examined application claim is either anticipated by, or would have been obvious over, the reference claim(s). See, e.g., In re Berg, 140 F.3d 1428, 46 USPQ2d 1226 (Fed. Cir. 1998); In re Goodman, 11 F.3d 1046, 29 USPQ2d 2010 (Fed. Cir. 1993); In re Longi, 759 F.2d 887, 225 USPQ 645 (Fed. Cir. 1985); In re Van Ornum, 686 F.2d 937, 214 USPQ 761 (CCPA 1982); In re Vogel, 422 F.2d 438, 164 USPQ 619 (CCPA 1970); and In re Thorington, 418 F.2d 528, 163 USPQ 644 (CCPA 1969).
+A timely filed terminal disclaimer in compliance with 37 CFR 1.321(c) or 1.321(d) may be used to overcome an actual or provisional rejection based on a nonstatutory double patenting ground provided the reference application or patent either is shown to be commonly owned with this application, or claims an invention made as a result of activities undertaken within the scope of a joint research agreement. A terminal disclaimer must be signed in compliance with 37 CFR 1.321(b).
+The USPTO internet Web site contains terminal disclaimer forms which may be used.  Please visit http://www.uspto.gov/forms/.  The filing date of the application will determine what form should be used.  A web-based eTerminal Disclaimer may be filled out completely online using web-screens. An eTerminal Disclaimer that meets all requirements is auto-processed and approved immediately upon submission.  For more information about eTerminal Disclaimers, refer to http://www.uspto.gov/patents/process/file/efs/guidance/eTD-info-I.jsp.
+Claims 1-20 are rejected on the ground of non-statutory obviousness-type double patenting as being unpatentable over claims 1-20 of U.S. Patent No. 7,359,782.  Although the conflicting claims are not identical, they are not patentably distinct from each other because removing inherent and/or unnecessary limitations/step would be within the level of one of ordinary skill in the art.  It is well settled that the omission of an element/limitation, e.g. “which detects the type and length of interference” and its function is an obvious expedient if the remaining elements perform the same function as before.  In re Karlson, 136 USPQ 184 (CCPA 1963).  Also note Ex parte Rainu, 168 USPQ 375 (Bd. App. 1969). Omission of a reference element or step whose function is not needed would be obvious to one of ordinary skill in the art.
+Claims 1-5 are rejected on the ground of non-statutory obviousness-type double patenting as being unpatentable over claims 1-20 of U.S. Patent No. 11,715,072.  Although the conflicting claims are not identical, they are not patentably distinct from each other because it is well settled that the omission of an element and its function is an obvious expedient if the remaining elements perform the same function as before.  In re Karlson, 136 USPQ 184 (CCPA 1963).  Also note Ex parte Rainu, 168 USPQ 375 (Bd. App. 1969).  Omission of a reference element of step whose function is not needed would be obvious to one of ordinary skill in the art.
+Hence, it is obvious that the claimed combination or the narrower claims of the patent would encompass the broader claimed combination of the claims of the instant application.
+Furthermore, it would have been obvious to one of ordinary skill in the art to add “obstacles inhibition; and obstacles avoidance…” into 879’ to come up with the intended use of the application.
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to MCDIEUNEL MARC whose telephone number is (571)272-6964.  The examiner can normally be reached on Work 9:00 AM to 7:30.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, JEFFREY BURKE can be reached on (571) 270-3844.  The fax phone number for the organization where this application or proceeding is assigned is (571)-273-3976.
+Information regarding the status of an application may be obtained from the Patent Application Information Retrieval (PAIR) system.  Status information for published applications may be obtained from either Private PAIR or Public PAIR.  Status information for unpublished applications is available through Private PAIR only.  For more information about the PAIR system, see http://pair-direct.uspto.gov. Should you have questions on access to the Private PAIR system, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative or access to the automated information system, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+PNG
+media_image1.png
+275
+275
+media_image1.png
+Greyscale
+/McDieunel Marc/
+Primary Examiner, Art Unit 3664B

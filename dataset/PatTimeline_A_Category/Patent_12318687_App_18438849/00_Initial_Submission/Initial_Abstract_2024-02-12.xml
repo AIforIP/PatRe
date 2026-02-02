@@ -1,0 +1,7 @@
+<html><head></head><body>18438849
+
+   
+   ABSTRACT
+   <p>Methods and systems are provided for independent audio volume control.  For example, an audio component (e.g., implemented in an element of an audio setup) may control generation and/or outputting of a combined-game-and-chat audio signals.  The audio component may receive user input comprising one or both of: a setting for a desired volume of a chat audio component of the combined-game-and-chat audio signal, and a setting for a desired volume of a game audio component of the combined-game-and-chat audio signal.  The audio component may determine, based on the user input, a corresponding mix setting for mixing together of the chat audio component and the game audio component in an audio source to generate the combined-game-and-chat audio signal and a corresponding volume setting applicable at an audio output element; provide the mix setting to the audio source; and provide the volume setting to the audio output element.</p>
+
+</body></html>

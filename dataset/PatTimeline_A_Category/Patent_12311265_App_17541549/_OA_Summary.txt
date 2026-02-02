@@ -1,0 +1,12 @@
+Total Office Actions: 5
+Application Number: 17541549
+Patent Number: 12311265
+
+OA Timeline:
+  OA1: 2023-11-24 - Office_Action
+  OA2: 2024-05-23 - Office_Action
+  OA3: 2024-09-06 - Final_Rejection
+  OA4: 2024-12-11 - Office_Action
+  OA5: 2025-04-24 - Granted
+
+Final Status: Granted

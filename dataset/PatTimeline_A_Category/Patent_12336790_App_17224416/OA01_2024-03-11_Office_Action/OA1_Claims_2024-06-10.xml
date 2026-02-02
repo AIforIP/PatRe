@@ -1,0 +1,92 @@
+<html><head></head><body><h3>Date: 2024-06-10</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>Please amend the claims as follows:</p><br>
+<br>
+1. (Cancelled)<br>
+<br>
+2. (Currently Amended) A monitoring and defibrillation system for assisting a caregiver in treating a subject and acquiring images and video of the subject during an emergency, the system comprising:a video camera configured to acquire one or more still images and real-time video of the subject <u>at a first framerate </u>during the emergency;<br>
+a data collection unit configured to collect data comprising at least ECG signals, SpO2 levels and blood pressure of the subject;<br>
+a communications unit configured to establish a communication channel with a remote location; and<br>
+at least one processor communicatively coupled with the video camera, the data collection unit and the communications unit, the at least one processor configured to:<br>
+establish at least one of cellular or wireless communication channel with the remote location,<br>
+transmit the ECG signals, SpO2 levels and blood pressure of the subject to the remote location,<br>
+transmit the acquired one or more still images of the subject to the remote location, determine, before transmitting the real-time video of the subject to the remote location, an available bandwidth of the communication channel, and<br>
+<u>in response to the available bandwidth exceedin</u><u>g</u><u></u><del>if the available bandwidth exceeds </del>a predetermined threshold bandwidth, transmit the real-time video of the subject to the remote location <u>at the first framerate, and</u><br>
+<u>in response to the available bandwidth not exceedin</u><u>g</u><u> the predetermined threshold bandwidth, transmit the real-time video of the subject to the remote location at a second </u><u>fr</u><u>amerate less than the first f</u><u>r</u><u>amerate.</u><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+3. (Currently Amended) The monitoring and defibrillation system of claim 2, wherein the at least one processor is configured to receive a <del>responder </del>selection from the remote location of the transmitted one or more still images.<br>
+<br>
+4. (Currently Amended) The monitoring and defibrillation system of claim 3, wherein the at least one processor is configured to receive an indication of the <del>responder </del>selection from the remote location.<br>
+<br>
+5. (Currently Amended) The monitoring and defibrillation system of claim [[2]] 3, wherein the<del> responder </del>selection comprises a prompt for a responder to select at least one image of the transmitted one or more still images.<br>
+<br>
+6. (Currently Amended) The monitoring and defibrillation system of claim 5, wherein the<del> responder </del>selection comprises an indication that the at least one image provides at least one of:a view of the subject, a view of a large part of the emergency, or a view of the caregiver's treatment of the subject.<br>
+<br>
+7. (Previously Presented) The monitoring and defibrillation system of claim 2, comprising one or more medical devices configured to provide life-saving care.<br>
+<br>
+8. (Previously Presented) The monitoring and defibrillation system of claim 7, wherein the one or more medical devices comprises one or more of: a defibrillator, a ventilation bag, a mechanical chest compressor, or a data collection device configured to monitor physical parameters of the subject.<br>
+<br>
+9. (Previously Presented) The monitoring and defibrillation system of claim 8, wherein the video camera is attached to the one or more medical devices.<br>
+<br>
+10. (Previously Presented) The monitoring and defibrillation system of claim 9, wherein the one or more medical devices comprises a defibrillator.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+11. (Previously Presented) The monitoring and defibrillation system of claim 2, wherein the at least one processor is configured to transmit to the remote location the ECG signals, SpO2 levels and blood pressure of the subject, both when the real-time video of the subject is being transmitted and when transmission of the real-time video of the subject is limited.<br>
+<br>
+12. (Previously Presented) The monitoring and defibrillation system of claim 2, wherein the at least one processor is configured to preferentially transmit to the remote location the ECG signals, SpO2 levels and blood pressure of the subject when transmission of the real-time video of the subject is limited.<br>
+<br>
+13. (Previously Presented) The monitoring and defibrillation system of claim 2, comprising one or more sensors configured to collect real-time subject monitoring data for the data collection unit, the real-time subject monitoring data comprising one or more of: ECG, oxygen saturation, blood pressure, cardiac output, heart rate, heart sounds, phonocardiography, heart imaging, ultrasound, or impedance cardiography.<br>
+<br>
+14. (Previously Presented) The monitoring and defibrillation system of claim 13, wherein the at least one processor is configured to transmit to the remote location the real-time subject monitoring data.<br>
+<br>
+15. (Previously Presented) The monitoring and defibrillation system of claim 14, wherein the at least one processor is configured to:compare available bandwidth of the communication channel to a threshold bandwidth, and if the available bandwidth exceeds or is equal to the threshold bandwidth, transmit both the real-time video of the subject and the real-time subject monitoring data to the remote location, and if the available bandwidth is less than the threshold bandwidth, transmit the real-time subject monitoring data without the real-time video of the subject to the remote location.<br>
+<br>
+16. (Previously Presented) The monitoring and defibrillation system of claim 14, wherein the at least one processor is configured to:<br>
+<br>
+<br>
+<br>
+cause transmission of identifiers of the real-time subject monitoring data to the remote location,<br>
+receive from the remote location a selection of at least one of the real-time subject monitoring data,<br>
+compare available bandwidth of the communication channel to a threshold bandwidth, and if the available bandwidth exceeds or is equal to the threshold bandwidth, transmit both the real-time video of the subject and the selected real-time subject monitoring data, and<br>
+if the available bandwidth is less than the threshold bandwidth, transmit only the selected real-time subject monitoring data.<br>
+<br>
+17. (Previously Presented) The monitoring and defibrillation system of claim 2, comprising one or more sensors configured to collect compression parameter data for the data collection unit, the compression parameter data comprising one or more of: sternal motion, compression rate, compression depth, compression velocity, duty cycle, downstroke velocity, upstroke velocity, intrathoracic pressure during compression, pleural pressure during compression, sternal position, sternal acceleration, chest wall or sternal strain or deformation, force applied to a chest of the subject, or compression pressure.<br>
+<br>
+18. (Previously Presented) The monitoring and defibrillation system of claim 17, wherein the at least one processor is configured to transmit to the remote location the compression parameter data, both when the real-time video of the subject is being transmitted and when transmission of the real-time video of the subject is limited.<br>
+<br>
+19. (Previously Presented) The monitoring and defibrillation system of claim 17, wherein the compression parameter data comprises one or more of: compression rate, or compression depth.<br>
+<br>
+20. (Previously Presented) The monitoring and defibrillation system of claim 19, wherein the at least one processor is configured to transmit to the remote location the compression parameter data, both when the real-time video of the subject is being transmitted and when transmission of the real-time video of the subject is limited.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+21. (Previously Presented) The monitoring and defibrillation system of claim 20, wherein the at least one processor is configured to:compare available bandwidth of the communication channel to a threshold bandwidth, and if the available bandwidth exceeds or is equal to the threshold bandwidth, transmit both the real-time video of the subject and the compression parameter data to the remote location, and<br>
+if the available bandwidth is less than the threshold bandwidth, transmit the compression parameter data without the real-time video of the subject to the remote location.<br>
+<br>
+22. (Previously Presented) The monitoring and defibrillation system of claim 20, wherein the at least one processor is configured to:cause transmission of identifiers of the real-time subject monitoring data to the remote location,<br>
+receive from the remote location a selection of at least one of the real-time subject monitoring data,<br>
+compare available bandwidth of the communication channel to a threshold bandwidth, and if the available bandwidth exceeds or is equal to the threshold bandwidth, transmit both the real-time video of the subject and the selected real-time subject monitoring data, and<br>
+if the available bandwidth is less than the threshold bandwidth, transmit only the selected real-time subject monitoring data.<br>
+<br>
+23. (Previously Presented) The monitoring and defibrillation system of claim 2, comprising a microphone configured to capture audio associated with the caregiver treating the subject.<br>
+<br>
+24. (Previously Presented) The monitoring and defibrillation system of claim 23, wherein the at least one processor is configured to transmit audio to the remote location based on the available bandwidth.<br>
+<br>
+25. (Previously Presented) The monitoring and defibrillation system of claim 2, wherein the at least one processor is configured to temporarily halt transmission of the real-time video of the subject when the available bandwidth is less than the threshold bandwidth.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+26. (Currently Amended) The monitoring and defibrillation system of claim 2, wherein <del>the at least one processor is configured to transmit the real-time video of the subject at a lower frame rate than </del>a <u>ratio of the first framerate to the second framerate is at least 2:1 </u><del>frame rate at which the real-time video was acquired by the video camera</del>.
+</body></html>

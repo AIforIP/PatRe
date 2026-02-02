@@ -1,0 +1,98 @@
+<html><head></head><body><h3>Date: 2024-11-19</h3>
+<br>
+1.
+(original)    An apparatus, comprising:<br>
+at least one computer storage that is not a transitory signal and that comprises instructions executable by at least one processor to:<br>
+generate a first screen render from a first viewpoint, the first viewpoint being of a first character, the first character being a player's character;<br>
+input the first screen render to at least one machine learning (ML) model;<br>
+receive from the ML model at least one transform of the first screen render, the transform comprising at least a second screen render from a second viewpoint, the second viewpoint being of a non-player character (NPC); and<br>
+input the second screen render to a ML-implemented agent controlling the NPC, or present on at least one display the second screen render, or both input the second screen render to a ML-implemented agent controlling the NPC and present on at least one display the second screen render.<br>
+2.
+(original)    The apparatus of Claim 1, wherein the first and second screen renders comprise respective first and second game videos.<br>
+3.
+(original)    The apparatus of Claim 1, wherein the ML model is trained using game images captured during a human play session.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+4.
+(original)    The apparatus of Claim  1, wherein the instructions are executable to avoid rendering multiple viewpoints simultaneously at least in part by:<br>
+rendering a single viewpoint;<br>
+using the ML model, transforming the single viewpoint to output video at viewpoints of one or more other NPCs in the area in a single inference pass.<br>
+5.
+(original)    The apparatus of Claim 1, wherein the first screen render is sent from a cloud server to at least one display for presentation of the first screen render at a first time and actions of NPCs are delayed for at least one frame while the ML model generates the second screen render.<br>
+6.
+(original)    The device of Claim
+1, comprising the at least one processor programmed with the instructions.<br>
+7.
+(original)    The apparatus of Claim 1, wherein the instructions are executable to:<br>
+input the second screen render to a ML-implemented agent controlling the NPC; and<br>
+execute the ML-implemented agent to control the NPC.<br>
+8.
+(currently amended) A method, comprising:<br>
+inputting, to at least one machine learning (ML) model, at least a player character (PC) video stream of at least one computer simulation;<br>
+<br>
+<br>
+<br>
+<br>
+receiving, from the ML model, at least one non-player character (NPC) video stream for the computer simulation;<br>
+presenting the PC video stream on at least one video display; and<br>
+inputting the NPC video stream to a ML-implemented agent controlling the <u>NPC, wherein the method comprises avoiding rendering multiple viewpoints simultaneously at least in part b</u><u>y:</u><br>
+<u>inputting only the PC video stream to the ML model</u><u>;</u><u> and</u><br>
+<u>using the ML model, transforming the PC video stream to output the NPC video stream.</u><br>
+9.
+(original)   The method of Claim 8, comprising presenting the PC video stream on a player display and presenting the NPC video stream on a video display other than the player display.<br>
+<br>
+10.   (original)    The method of Claim 8, comprising inputting information related to one or more NPCs to the ML model.<br>
+<br>
+11.   (original)    The method of Claim 10, wherein the information related to one or more NPCs comprises geometric information indicating a virtual spatial relationship between at least one NPC and at least one player character.<br>
+<br>
+12.   (original)    The method of Claim 8, comprising training the ML model using game images captured during a human play session.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+13.    (currently amended) The method of Claim 8, comprising <del>avoiding rendering multiple viewpoints simultaneously at least in part by:</del><br>
+<del>rendering a single viewpoint;</del><br>
+<del>using the ML model, transforming the single viewpoint to output video at viewpoints of one or more other NPCs </del><u>transforming the PC video stream to output the NPC video stream </u>in a single inference pass.<br>
+<br>
+14.    (original)   The method of Claim 8, comprising:<br>
+sending the PC video stream from a cloud server to at least one display for presentation of the PC video stream at a first time; and<br>
+delaying actions of NPCs for at least one frame while the ML model generates the NPC video stream.<br>
+<br>
+15.    (currently amended) An apparatus, comprising:<br>
+at least one processor configured to:<br>
+generate, using computer simulation video techniques, a first video from a viewpoint of a first character controllable by a player;<br>
+present the first video on at least one display;<br>
+input the first video to at least one machine learning (ML) model <u>and not input a second video from a viewpoint of a second character not controllable by a player to the ML model;</u><br>
+<br>
+<br>
+<br>
+<br>
+receive from the ML model at least [[a]] the second video from [[a]] the viewpoint of [[a]] the second character not controllable by a player; and<br>
+use the second video to control the second character not controllable by a player.<br>
+<br>
+16.    (original)   The apparatus of Claim 15, wherein the processor is configured to:<br>
+present the first and second videos on respective first and second displays.<br>
+<br>
+17.    (original)   The apparatus of Claim 15, wherein the processor is configured to:<br>
+input information related to one or more NPCs to the ML model.<br>
+<br>
+18.   (original)    The apparatus of Claim 17, wherein the information related to one or more NPCs comprises geometric information indicating a virtual spatial relationship between at least one NPC and at least one player character.<br>
+<br>
+19.    (original)   The apparatus of Claim 15, wherein the processor is configured to:<br>
+render the first video as a single video;<br>
+using the ML model, transform the single video plural NPC videos in a single inference pass.<br>
+<br>
+20.    (original)    The apparatus of Claim 15, wherein the processor is configured to:<br>
+send the first video from a cloud server to at least one display for presentation of the first video at a first time; and<br>
+<br>
+<br>
+<br>
+<br>
+delay actions of NPCs for at least one frame while the ML model generates the second video.<br>
+
+</body></html>

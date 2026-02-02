@@ -1,0 +1,36 @@
+<html><head></head><body><h3>Date: 2025-01-24</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>Please amend the claims as set forth in the following listing of claims. In the claim amendments below, deletions are shown by strikethrough or enclosure in [[double brackets]], and additions are underlined.</p><br>
+1. - 12 (Canceled)SVG
+{EMBED HERE}
+0.146.513211<br>
+<br>
+<br>
+13. (Previously Presented) A mobile warning apparatus for issuing a warning in response to observation of a mobile object approaching a vehicle, the mobile warning apparatus comprising:<br>
+a velocity calculator configured to calculate, based on observation information observed by a sensor installed in the vehicle, one or more relative velocities of one or more observed points;<br>
+a position determiner configured to perform:a first determination of whether the observed points include a pair of first and second observed points, the first observed point having a first relative velocity in a first direction approaching the vehicle, and the second observed point having a second relative velocity in a second direction moving away from the vehicle;<br>
+a second determination of whether a difference between azimuths of the respective first and second observed points of the pair relative to the vehicle observed by the sensor is smaller than or equal to a predetermined azimuth threshold in response to the first determination that the observed points include the pair of the first observed point and the second observed point; and<br>
+a third determination that the first and second observed points of the pair are observed points obtained from a fixed rotor in response to the second determination that the difference between the azimuths of the respective first and second observed points of the pair relative to the vehicle observed by the sensor is smaller than or equal to the predetermined azimuth threshold; and<br>
+an eliminator configured to eliminate the first and second observed points from a warning target.<br>
+<br>
+14. (Previously Presented) The mobile warning apparatus according to claim 13, wherein:<br>
+the position determiner is configured to:determine whether a difference between positions of the respective first and second observed points of the pair observed by the sensor is smaller than or equal to a predetermined position threshold in response to determination that the observed points includes the pair of the first observed Page 2of7<br>
+SVG
+{EMBED HERE}
+0.146.513point and the second observed point; and<br>
+determine that the first and second observed points of the pair are observed points obtained from the fixed rotor in response to determination that the difference between the positions of the respective first and second observed points of the pair observed by the sensor is smaller than or equal to the predetermined position threshold.<br>
+<br>
+15. (Previously Presented) The mobile warning apparatus according to claim 13, wherein:<br>
+the position determiner is configured to:determine whether a difference between distances of the respective first and second observed points of the pair relative to the vehicle observed by the sensor is smaller than or equal to a predetermined distance threshold; and<br>
+determine that the first and second observed points are observed points obtained from the fixed rotor in response to determination that the difference between the distances of the respective first and second observed points relative to the vehicle observed by the sensor is smaller than or equal to the predetermined distance threshold.<br>
+<br>
+16. (Previously Presented) The mobile warning apparatus according to claim 13, further comprising:<br>
+an azimuth threshold determiner configured to determine a value of the azimuth threshold as a function of a distance of at least one observed point relative to the vehicle, the at least one observed point being included in the observed points.<br>
+<br>
+17. (Previously Presented) The mobile warning apparatus according to claim  15, further comprising:<br>
+a distance threshold determiner configured to determine a value of the distance threshold as a function of an echo intensity of at least one observed point included in the observed points.<br>
+<br>
+18. (Cancelled)
+
+</body></html>

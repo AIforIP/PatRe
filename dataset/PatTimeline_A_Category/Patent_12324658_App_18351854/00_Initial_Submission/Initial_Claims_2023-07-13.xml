@@ -1,0 +1,44 @@
+<html><head></head><body><h3>Date: 2023-07-13</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application.</p>
+<h1>Listing of Claims:</h1>
+<p>This listing of claims will replace all prior versions and listings of claims in the application.</p><br>
+<br>
+Claims 1-17. (Cancelled).216<br>
+<br>
+<br>
+Claim 18.    (Currently Amended) A method of operating a capnography system, comprising:receiving, at <del>a processor </del><u>one or more processors,</u> a carbon dioxide (C02) concentration in exhaled breath of a subject from a CO2 sensor of a CO2 sensing system;<br>
+<u>determining, by </u><del>deriving, using </del>the <del>processor </del><u>one or more processors,</u> one or more breath related parameters based on the CO2 concentration;<br>
+receiving, at the <del>processor </del><u>one or more processors,</u> an indication of a type of a tubing system connected to the CO2 sensing system; and<br>
+changing or suggesting a <u>change, by the one or more processors, </u>of an operation mode of the CO2 sensing syste<del>m, using the processor, </del>based on the indication of the type of the tubing system.<br>
+<br>
+Claim 19.    (Currently Amended) The method of claim [[19]] <u>18,</u><u>further </u>comprising:receiving, at the <del>processor </del><u>one or more processors,</u> a second indication regarding a property of the tubing system; and<br>
+changing or suggesting the <u>change, by the one or more processors, </u>of the operation mode of the CO2 sensing syste<del>m, using the processor, </del>based on the second indication[[;]],<br>
+wherein the property of the tubing system comprises a length of the sampling system, a diameter of the tubing system, a target group of the tubing system, an intended duration of the tubing system, or any combination thereof.<br>
+<br>
+<br>
+<br>
+Claim 20.    (Currently Amended) The method of claim [[19]] <u>18</u><u>further </u>comprising:receiving, at the <del>processor </del><u>one or more processors,</u> a second indication regarding a manufacturing detail of the tubing system; and<br>
+changing or suggesting the <u>change, by the one or more processors, </u>of the operation mode of the CO2 sensing system<del>, using the processor</del>, based on the second indication[[;]],<br>
+wherein the property of the tubing system comprises a production site, a production date, a production station, a lot number, a serial number, an expiration date, or any combination thereof.<br>
+<br>
+Claims 21-24. (Cancelled).2223<br>
+<br>
+<br>
+Claim 25.    (New) The method of claim 18, wherein changing or suggesting the change of the operation mode comprises suggesting the change of the operation mode, the method further comprising, sending, by the one or more processors, the suggested change in the operation mode of the CO2 sensing system to a user interface.<br>
+<br>
+Claim 26.    (New) The method of claim 18, wherein the tubing system comprises an intubation tube, and wherein changing the operation mode of the CO2 sensing system comprises enhancing or suggesting an enhancement, by the one or more processors, of an operation of a pump of the CO2 sensing system upon intubation and until a first CO2 signal is obtained by the CO2 sensor, thereby reducing a time required for verification of correct intubation.<br>
+<br>
+Claim 27.    (New) The method of claim 18, wherein the tubing system comprises a bite block, and wherein changing the operation mode of the CO2 sensing system comprises, by the one or more processors, at least one of identifying CO2 concentration peaks resulting from insufflation of the subject, initiating use of an algorithm configured to reduce nuisance alarms during insufflation, or suggesting use of the algorithm configured to reduce nuisance alarms during insufflation.<br>
+<br>
+<br>
+Claim 28.    (New) The method of claim 18, wherein the tubing system comprises an oral nasal cannula, and wherein changing the operation mode of the CO2 sensing system comprises, by the one or more processors, at least one of identifying a high respiration rate resulting from pain, initiating use of an algorithm configured to reduce nuisance alarms during pain management, or suggesting the use of the algorithm configured to reduce nuisance alarms during pain management.<br>
+<br>
+Claim 29.   (New) The method of claim 18, wherein the tubing system comprises an oxygen supply tube, and wherein changing the operation mode of the CO2 sensing system comprises, by the one or more processors, at least one of identifying aberrations in CO2 measurements resulting from dilution of the exhaled breath with oxygen, initiating use of an algorithm configured to at least one of correct, normalize, or adjust the one or more breath related parameters based on the identified dilution, or suggest use of the algorithm configured to at least one of correct, normalize, or adjust the one or more breath related parameters based on the identified dilution.<br>
+<br>
+Claim 30.   (New) The method of claim 18, further comprising:receiving, at the one or more processors, usage data, wherein the usage data comprises a number of occlusion of the tubing system, a duration of use, a number of uses/connections of the tubing system to a CO2 sensing system, or any combination thereof; and<br>
+generating, by the one or more processors, a signal terminating the usability of the tubing system, in response to determining, based on the usage data, that the tubing system has run obsolete.<br>
+<br>
+Claim 31.   (New) The method of claim 18, wherein changing or suggesting the change of the operation mode of the CO2 sensing system comprises changing or suggesting the change in an operation of the pump based on the indication of the type of the tubing system.
+</body></html>

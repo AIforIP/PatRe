@@ -1,0 +1,99 @@
+<html><head></head><body>18353073
+
+   
+CLAIMS
+   
+   What is claimed is:
+   
+
+<br>
+
+1. A method, comprising: 
+setting, by an information handling system through a wireless connection to a gaming controller, a plurality of light sources of the gaming controller to a respective plurality of light settings;
+receiving, by the information handling system, image data capturing the plurality of light sources set to the plurality of light settings; and
+calibrating, by an information handling system, the plurality of light sources by 
+comparing a first portion of the image data corresponding to a first light source of the plurality of light sources to a second portion of the image data corresponding to a second light source of the plurality of light sources, and
+adjusting at least one of the plurality of light settings, based on comparing the first portion of the image data to the second portion of the image data.
+<br>
+
+2. The method of claim 1, wherein the first portion of the image data corresponding to the first light source of the plurality of light sources and the second portion of the image data corresponding to the second light source of the plurality of light sources are determined by an image recognition artificial intelligence.
+<br>
+
+3. The method of claim 1, wherein calibrating, by an information handling system, the plurality of light sources further comprises, prior to adjusting at least one of the plurality of light settings, determining an estimated adjustment for at least one of the plurality of light settings using a calibrating artificial intelligence. 
+<br>
+
+4. The method of claim 1, wherein calibrating, by an information handling system, the plurality of light sources further comprises:
+receiving, by the information handling system, updated image data capturing the plurality of light sources adjusted based on the plurality of light settings;
+determining, from the updated image data, whether additional calibration is required; and 
+if additional calibration is required, repeating the steps for calibrating the plurality of light sources until no additional calibration is required. 
+<br>
+
+5. The method of claim 1, wherein adjusting at least one of the plurality of light settings is further based on a lighting configuration in an environment.
+<br>
+
+6. The method of claim 1, wherein the plurality of light settings include at least one of the following: a brightness setting, a color setting, a timing setting, or a context setting. 
+<br>
+
+7. The method of claim 1, further comprising, after adjusting at least one of the plurality of light settings, storing information relating to the plurality of light settings in a database.
+<br>
+
+8. An information handling system, comprising: 
+a memory;
+a processor coupled to the memory, wherein the processor is configured to perform steps comprising:
+setting, by an information handling system through a wireless connection to a gaming controller, a plurality of light sources of the gaming controller to a respective plurality of light settings;
+receiving, by the information handling system, image data capturing the plurality of light sources set to the plurality of light settings; and
+calibrating, by an information handling system, the plurality of light sources by 
+comparing a first portion of the image data corresponding to a first light source of the plurality of light sources to a second portion of the image data corresponding to a second light source of the plurality of light sources, and
+adjusting at least one of the plurality of light settings, based on comparing the first portion of the image data to the second portion of the image data.
+<br>
+
+9. The information handling system of claim 8, wherein the first portion of the image data corresponding to the first light source of the plurality of light sources and the second portion of the image data corresponding to the second light source of the plurality of light sources are determined by an image recognition artificial intelligence.
+<br>
+
+10. The information handling system of claim 8, wherein calibrating, by an information handling system, the plurality of light sources further comprises, prior to adjusting at least one of the plurality of light settings, determining an estimated adjustment for at least one of the plurality of light settings using a light output matching artificial intelligence.
+<br>
+
+11. The information handling system of claim 8, wherein calibrating, by an information handling system, the plurality of light sources further comprises:
+receiving, by the information handling system, updated image data capturing the plurality of light sources set based on the  plurality of light settings;
+determining, from the updated image data, whether additional calibration is required; and 
+if additional calibration is required, repeating the steps for calibrating the plurality of light sources until no additional calibration is required.
+<br>
+
+12. The information handling system of claim 8, wherein adjusting at least one of the plurality of light settings is further based on a lighting configuration in an environment.
+<br>
+
+13. The information handling system of claim 8, wherein the plurality of light settings include at least one of the following: a brightness setting, a color setting, a timing setting, or a context setting. 
+<br>
+
+14. The information handling system of claim 8, further comprising, after adjusting at least one of the plurality of light settings, storing information relating to the plurality of light settings in a database.
+<br>
+
+15. A computer program product, comprising:
+a non-transitory computer readable medium comprising code for performing steps comprising:
+setting, by an information handling system through a wireless connection to a gaming controller, a plurality of light sources of the gaming controller to a respective plurality of light settings;
+receiving, by the information handling system, image data capturing the plurality of light sources set to the plurality of light settings; and
+calibrating, by an information handling system, the plurality of light sources by 
+comparing a first portion of the image data corresponding to a first light source of the plurality of light sources to a second portion of the image data corresponding to a second light source of the plurality of light sources, and
+adjusting at least one of the plurality of light settings, based on comparing the first portion of the image data to the second portion of the image data.
+<br>
+
+16. The computer program product of claim 15, wherein the first portion of the image data corresponding to the first light source of the plurality of light sources and the second portion of the image data corresponding to the second light source of the plurality of light sources are determined by an image recognition artificial intelligence.
+<br>
+
+17. The computer program product of claim 15, wherein calibrating, by an information handling system, the plurality of light sources further comprises, prior to adjusting at least one of the plurality of light settings, determining an estimated adjustment for at least one of the plurality of light settings using a light output matching artificial intelligence.
+<br>
+
+18. The computer program product of claim 15, wherein calibrating, by an information handling system, the plurality of light sources further comprises:
+receiving, by the information handling system, updated image data capturing the plurality of light sources set based on the  plurality of light settings;
+determining, from the updated image data, whether additional calibration is required; and 
+if additional calibration is required, repeating the steps for calibrating the plurality of light sources until no additional calibration is required.
+<br>
+
+19. The computer program product of claim 15, wherein adjusting at least one of the plurality of light settings is further based on a lighting configuration in an environment.
+<br>
+
+20. The computer program product of claim 15, wherein the plurality of light settings include at least one of the following: a brightness setting, a color setting, a timing setting, or a context setting.
+
+   
+
+</body></html>

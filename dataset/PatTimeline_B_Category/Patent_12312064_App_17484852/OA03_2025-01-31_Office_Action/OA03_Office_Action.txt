@@ -1,0 +1,60 @@
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with Gerard Moy (Reg. No. 52,054) on 1/14/2025.
+The application has been amended as follows:
+In the Claims:
+Claims 1-7 have been cancelled.
+Claim 8:
+In line 5 of claim 8, the phrase “a shaped fuel cell comprising” has been replaced with --a shaped fuel cell configured to contain a liquid or gaseous fuel, comprising--.
+In line 8 of claim 8, the phrase “into the area of the aircraft designated to house the fuel cell.” has been replaced with --into the area of the aircraft designated to house the fuel cell and into the location of the through-void or the edge cavity.--
+Claim 9:
+In line 6 of claim 9, the phrase “a plurality of shaped fuel cells” has been replaced with --a plurality of shaped fuel cells configured to contain a liquid or gaseous fuel--.
+In lines 10-11 of claim 9, the phrase “into a respective one of the areas of the aircraft designated to house the fuel cells.” has been replaced with -- into a respective one of the areas of the aircraft designated to house the fuel cells and into the location of the respective one of the one or more through-voids or edge cavities.--
+Claim 16 has been amended to read as follows (marked-up version):
+16.	A method for preventing rupture of fuel cells in an aircraft during a drop impact of the aircraft comprising:
+reviewing a layout of an aircraft and determining aircraft structures that will translate, during a drop impact of the aircraft, into a fuel cell area of the aircraft;
+providing a shaped fuel cell configured to hold a liquid or gaseous fuel, comprising:
+defining one or more through-voids in the shaped fuel cell, each through-void corresponding to an aircraft structure determined to translate, during the drop impact of the aircraft, into the fuel cell area of the aircraft and into the location of the one or more through-voids; [[and/]]or
+defining one or more edge cavities in the shaped fuel cell, each edge cavity corresponding to an aircraft structure determined to translate, during the drop impact of the aircraft, into the fuel cell area of the aircraft and into the location of the one or more edge cavities; and
+installing the shaped fuel cell in the fuel cell area of the aircraft with the one or more through-voids [[and/]]or the one or more edge cavities corresponding to the aircraft structures determined to translate, during the drop impact of the aircraft, into the fuel cell area of the aircraft.
+Claim 16 has been amended to read as follows (clean version):
+16.	A method for preventing rupture of fuel cells in an aircraft during a drop impact of the aircraft comprising:
+reviewing a layout of an aircraft and determining aircraft structures that will translate, during a drop impact of the aircraft, into a fuel cell area of the aircraft;
+providing a shaped fuel cell configured to hold a liquid or gaseous fuel, comprising:
+defining one or more through-voids in the shaped fuel cell, each through-void corresponding to an aircraft structure determined to translate, during the drop impact of the aircraft, into the fuel cell area of the aircraft and into the location of the one or more through-voids; or
+defining one or more edge cavities in the shaped fuel cell, each edge cavity corresponding to an aircraft structure determined to translate, during the drop impact of the aircraft, into the fuel cell area of the aircraft and into the location of the one or more edge cavities; and
+installing the shaped fuel cell in the fuel cell area of the aircraft with the one or more through-voids or the one or more edge cavities corresponding to the aircraft structures determined to translate, during the drop impact of the aircraft, into the fuel cell area of the aircraft.
+Claim 17:
+In line 2 of claim 17, the phrase “and/or” has been replaced with --or--.
+Claim 19:
+In line 2 of claim 19, the phrase “a plurality of shaped fuel cells” has been replaced with --a plurality of shaped fuel cells configured to contain a liquid or gaseous fuel--.
+In line 3 of claim 19, the phrase “reviewing layout” has been replaced with --reviewing the layout--.
+In line 5 of claim 19, the phrase “providing the shaped fuel cells” has been replaced with --providing the plurality of shaped fuel cells--.
+In lines 8-9 of claim 19, the phrase “into a respective fuel cell area of the aircraft; and/or” has been replaced with --into a respective fuel cell area of the aircraft and into the location of the one or more through-voids; or--.
+In line 12 of claim 19, the phrase “into the respective fuel cell area of the aircraft; and” has been replaced with --into the respective fuel cell area of the aircraft and into the location of the one or more edge cavities; and--.
+In line 14 of claim 19, the phrase “and/or” has been replaced with --or--.
+Claim 20:
+In line 2 of claim 20, the phrase “and/or” has been replaced with --or--.
+Election/Restrictions
+Claims 8-15 allowable. The restriction requirement between Invention Groups II (Claims 8-15) and III (claims 16-20), as set forth in the Office action mailed on 2/16/2024, has been reconsidered in view of the allowability of claims to the elected invention pursuant to MPEP § 821.04(a). The restriction requirement is hereby withdrawn as to any claim that requires all the limitations of an allowable claim. Specifically, the restriction requirement of 2/16/2024 is partially withdrawn.  Claims 16-20, directed to Invention Group III are no longer withdrawn from consideration because the claim(s) requires all the limitations of an allowable claim. However, claims 1-7, directed to Invention Group I remain withdrawn from consideration because they do not all require all the limitations of an allowable claim. As discussed with Applicant’s Representative in the interview on 1/14/2025, Claims 1-7 were noted to only require a shaped fuel cell having a through-void or an edge cavity with intended usage/functional capabilities or adaptations with respect to unclaimed structure(s) (e.g. an aircraft, a fuel cell area, and aircraft structures that translate). Without the combination of elements as recited in claims 8 and 16, any fuel cell comprising a through-void or edge cavity would appear to read upon the claim as they could be arranged to provide the same intended use/functional capability or adaptation. Examiner notes that with respect to fuel cells having a through-hole, US 2943815; FR 926522; and GB 558459 appear to contain such features, while US 2015/0136906, US 2017/0313434, US 4345698, US 2013/0214095, EP 3296214, EP 3366592, and GB 640293 appear to contain a fuel cell with an edge cavity. In view of this discussion, it was agreed to cancel claims 1-7 as noted above.
+In view of the above noted withdrawal of the restriction requirement, applicant is advised that if any claim presented in a divisional application is anticipated by, or includes all the limitations of, a claim that is allowable in the present application, such claim may be subject to provisional statutory and/or nonstatutory double patenting rejections over the claims of the instant application.
+Once a restriction requirement is withdrawn, the provisions of 35 U.S.C. 121 are no longer applicable. See In re Ziegler, 443 F.2d 1211, 1215, 170 USPQ 129, 131-32 (CCPA 1971). See also MPEP § 804.01.
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance:
+First, it is noted that the term “fuel cell” in the present application is not being utilized in the modern context as defined by the Cambridge Aerospace Dictionary as a “Device which converts chemical energy directly into electricity; differs from storage battery in that reactants are supplied at rate determined by electrical load.” but is instead being utilized to define a structure configured to hold a liquid or gaseous fuel, which is colloquially referred to as a “fuel cell” in the earlier prior art (- See “Aircraft” section which recites “Bladder tanks, or fuel cells”) and depicted the following figure ():
+PNG
+media_image1.png
+300
+365
+media_image1.png
+Greyscale
+The aforementioned distinction has been clarified by the present amendment reciting “a fuel cell configured to contain a liquid or gaseous fuel” such that the previous rejection under 35 USC 112(a) for enablement is no longer valid.
+The prior art (see references cited above and on the attached PTO-892) contain a plurality of shaped fuel cells configured to contain a liquid or gaseous fuel while additionally comprising a through-void or edge cavity, however, the prior art is completely silent on the combination of such fuel cells with an aircraft having structures which translate into a region of the aircraft housing such fuel cells and into the location of the through-void or edge cavity, during a drop impact of the aircraft. While several of the prior art references (e.g. US 2017/0313434) might allow for the translation of an aircraft strut or rotor mast into the region of an edge cavity/through-void during a drop impact, the potential for an event to occur does not mean that it will or that it was designed in that particular manner. As this critical structural relationship had no teaching, suggestion, or motivation outlined in any of the prior art, it appears as though impermissible hindsight of the present application would be required to modify the prior art references to achieve the claimed invention.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to MICHAEL A FABULA whose telephone number is(571)270-7772. The examiner can normally be reached Monday - Friday 10:00AM-6:00PM Eastern.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, TIEN Q DINH can be reached on (571)272-6899. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/Michael A. Fabula/Examiner, Art Unit 3647
+/Richard Green/Primary Examiner, Art Unit 3647

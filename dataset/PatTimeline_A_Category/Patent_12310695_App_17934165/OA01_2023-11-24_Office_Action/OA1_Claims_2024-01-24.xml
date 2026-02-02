@@ -1,0 +1,61 @@
+<html><head></head><body><h3>Date: 2024-01-24</h3>
+
+<h1>AMENDMENTS TO THE CLAIMS</h1>
+<p>The following listing of claims replaces all prior versions thereof. Changes are shown below in highlighted form, where insertions appear as underlined text (e.g., <u>insertions)</u> while deletions appear as strikethrough text (e.g., <del>deletions</del>) or double brackets (e.g., [[deletions]]).</p><br>
+<br>
+1.- 6. (CANCELED)25<br>
+<br>
+<br>
+7.    (Withdrawn) A system for displaying a health parameter of a user, the system comprising:an optical sensor configured to measure raw data responsive to detection of an interaction of emitted light with a skin of a user;<br>
+a display configured to display a health parameter of the user; and<br>
+one or more hardware processors configured to:<br>
+determine one or more physiological measurements from the measured raw data acquired by the optical sensor with a native software;<br>
+download a third party software, wherein the third party software is configured to execute one or more post-processing functions on the determined one or more physiological measurements;<br>
+provide an option in a graphical user interface presented on the display for a user to select the native software or the third party software for a determination of a health parameter;<br>
+enable the third party software to execute one or more post-processing functions on the determined one or more physiological parameters based on the selection of the third party software, wherein the one or more post processing functions are configured to determinate the health parameter; and<br>
+display the health parameter according to a display layout corresponding to the third party software on the display.<br>
+<br>
+8.    (Withdrawn) The system of Claim 7, wherein the one or more hardware processors is further configured to generate a standard format for the determined one or more physiological parameters to enable the one or more post-processing functions by the third party software.<br>
+<br>
+9.    (Withdrawn) The system of Claim 7, wherein the determination of the one or more physiological measurements is decoupled from the post-processing functions.<br>
+<br>
+<br>
+<br>
+10.   (Withdrawn) The system of Claim 7, wherein the post-processing functions include producing alerts on the display.<br>
+<br>
+11.   (Withdrawn) The system of Claim 7, wherein the health parameter is proprietary to the third party software.<br>
+<br>
+12.   (Withdrawn) The system of Claim 7, wherein the display is configured to display the health parameter and native software processed parameters simultaneously on the display.<br>
+<br>
+13.   (Withdrawn) The system of Claim 7, wherein the one or more hardware processors is configured to run the third party software simultaneously with the native software.<br>
+<br>
+14.   (Withdrawn) The system of Claim 7, wherein the third party software is configured to operate with the native software or in conjunction with a virtual machine.<br>
+<br>
+15.   (Withdrawn) The system of Claim 7, wherein the health parameter comprises a proprietary wellness indicator.<br>
+<br>
+16.   (Previously Presented) A method for displaying a health parameter of a user, the method comprising:measuring, with an optical sensor, raw data responsive to detection of an interaction of emitted light with a skin of a user;<br>
+determining one or more physiological measurements from the measured raw data acquired by the optical sensor with a native software;<br>
+downloading a third party software, wherein the third party software is configured to execute one or more post-processing functions on the determined one or more physiological measurements;<br>
+providing an option in a graphical user interface presented on the display for a user to select the native software or the third party software for a determination of a health parameter;<br>
+enabling the third party software to execute one or more post-processing functions on the determined one or more physiological parameters based on the selection of the third party software, wherein the one or more post processing functions are configured to determinate the health parameter; and<br>
+displaying the health parameter according to a display layout corresponding to the third party software on a display.<br>
+<br>
+<br>
+<br>
+<br>
+17.   (Previously Presented) The method of Claim 16, further comprising generating a standard format for the determined one or more physiological parameters to enable the one or more post- processing functions by the third party software.<br>
+<br>
+18.   (Previously Presented) The method of Claim 16, wherein the determination of the one or more physiological measurements is decoupled from the post-processing functions.<br>
+<br>
+19.   (Previously Presented) The method of Claim 16, wherein the post-processing functions include producing alerts on the display.<br>
+<br>
+20.   (Previously Presented) The method of Claim  16, wherein the health parameter is proprietary to the third party software.<br>
+<br>
+21.   (Previously Presented) The method of Claim 16, further comprising displaying the health parameter and native software processed parameters simultaneously on the display.<br>
+<br>
+22.   (Previously Presented) The method of Claim 16, further comprising running the third party software simultaneously with the native software.<br>
+<br>
+23.   (Previously Presented) The method of Claim 16, wherein the third party software is configured to operate with the native software or in conjunction with a virtual machine.<br>
+<br>
+24.   (Previously Presented) The method of Claim 16, wherein the health parameter comprises a proprietary wellness indicator.
+</body></html>

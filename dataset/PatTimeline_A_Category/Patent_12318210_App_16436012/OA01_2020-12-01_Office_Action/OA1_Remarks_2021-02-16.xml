@@ -1,0 +1,51 @@
+<html><head></head><body><h3>Date: 2021-02-16</h3>
+<h1>REMARKS</h1>
+
+<p>This Amendment is responsive to the Office Action dated December 1, 2020. Applicant has amended paragraphs [0037], [0043], [0072], [0077], [0091], and [0097]. No claim amendments were submitted with this communication. Claims 1-26 remain pending upon entry of this communication. Applicant respectfully requests reconsideration and withdrawal of the objections and the rejections in view of the following remarks.</p>
+<p><u>Obi</u><u>ection to the Specification</u></p>
+<p>As requested by the Office, the specification has been amended. Paragraphs [0037] and [0043] have been amended to change "Bluetooth" to "Bluetooth®." Paragraph [0072], lines 18- 19 has been amended to change "depolarization in a PVC depolarization" to "depolarization is a PVC depolarization." Paragraph [0077], line 1 has been amended to change "then" to "than." Paragraph [0091], line 5 has been amended to change "used identify" to "used to identify." Paragraph [0097], line 3 has been amended to change "less then" to "less than." Applicant respectfully requests reconsideration and withdrawal of this objection.</p>
+
+<h1><u>Claim Re</u><u>i</u><u>ection Under 35 U.S.C. 102(a)(1)</u></h1>
+
+<p>The Office Action rejected claims 1 and 13 under 35 U.S.C. § 102(a)(1) as being anticipated by U.S. Patent No. 8,855,755 by Zhang et al. (hereinafter, "Zhang"). Applicant respectfully traverses the rejections. Zhang fails to disclose all of the elements of the claims, and there would have been no apparent reason for modification to the device disclosed by Zhang to include such features.</p>
+<p>Zhang fails to disclose or suggest "for <u>each of the plurality of ventricular depolarizations</u>, identify[ing] a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point" and "determin[ing] that the intervals... <u>for the current ventricular depolarization, a preceding ad</u><u>j</u><u>acent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent ad</u><u>j</u><u>acent ventricular depolarization </u>of the plurality of ventricular depolarizations satisfy one or more slope criteria. Instead, Zhang describes an IMD 14 that "determine[s] whether the rhythm is indicative of a treatable rhythm by analyzing a 
+morphology of the EGM associated with <u>a beat located immediately adjacent to a location at which the sudden rate onset is determined to occur</u>."</p>
+<p>Zhang discloses that "[t]o reduce the likelihood of such a false detection, the techniques of this disclosure analyze an EGM morphology of <u>a beat </u>within the first few beats after the sudden rate onset initiation to distinguish between treatable and non-treatable arrhythmias."2 Analyzing "an EGM morphology of <u>a beat</u>"3 is not the same as "for <u>each </u>of the plurality of ventricular depolarizations, identify[ing] a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point" and "determin[ing] that the intervals... <u>for the current ventricular depolarization, a preceding adjacent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent adjacent ventricular depolarization</u>... satisfy one or more slope criteria." Thus, Zhang fails to recite "for each of the plurality of ventricular depolarizations, identify[ing] a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point" and "determin[ing] that the intervals... for the current ventricular depolarization, a preceding adjacent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent adjacent ventricular depolarization of the plurality of ventricular depolarizations satisfy one or more slope criteria," as recited by claim 1.</p>
+<p>Moreover, Zhang fails to disclose or suggest "determin[ing] that the current ventricular depolarization is a premature ventricular contraction (PVC) depolarization <u>based on the intervals</u> from the maximum slope point to the minimum slope point satisfying the one or more slope criteria," as recited by claim 1. Instead, Zhang describes obtaining "[t]he max slope <u>of the onset initiation beat</u>."4</p>
+<p>Zhang discloses that "processor 70 obtains a portion of a far-field EGM around <u>a beat of interest</u>. The portion of the EGM may, for example, include forty-eight data points centered at a ventricular sense marker <u>of the beat of interest</u>. Processor 70 initially obtains a slope (first order derivative) of the input data in the window, and if the max slope (MaxSlope)?96 ADC units (e.g., 24 mV per second) processor 70 continues to calculate beat morphology parameters."' 1 Zhang, col. 5, lines 54-56 (emphasis added).</p>
+<p>2 Zhang, col. 5, lines 50-54 (emphasis added).</p>
+<p>3 Zhang, col. 5, lines 51-52 (emphasis added).</p>
+<p>4 Zhang, col. 14, line 39 (emphasis added). s Zhang, col. 18, lines 23-30 (emphasis added).</p>
+
+ <p>Obtaining "[a max slope of] <u>a beat of interest</u>"6 is not the same as "determin[ing] that the current ventricular depolarization is a premature ventricular contraction (PVC) depolarization based on the intervals," where the intervals are "the intervals from the maximum slope point to the minimum slope point <u>for the current ventricular depolarization, a preceding adjacent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent adjacent ventricular depolarization</u>." Thus, Zhang fails to disclose or suggest "determin[ing] that the current ventricular depolarization is a premature ventricular contraction (PVC) depolarization based on the intervals from the maximum slope point to the minimum slope point satisfying the one or more slope criteria," as recited by claim 1.</p>
+<p>Independent claims 13 and 23 recite features similar to those of independent claim 1 discussed above. For at least the reasons discussed above, independent claims 1, 13, and 23 are patentable over Zhang. The dependent claims, i.e., claims 2-12, 14-22, 18, 20-22, and 24-26 incorporate the requirements of the respective independent claims.7 Accordingly, the dependent claims are likewise patentable over the applied art. Applicant respectfully requests reconsideration and withdrawal of the rejection of the claims.</p>
+
+<h1><u>Claim Re</u><u>i</u><u>ection Under 35 U.S.C. 103</u></h1>
+
+<p>The Office Action rejected claims 2-12, and 14-26 under 35 U.S.C. § 103 as allegedly being unpatentable.</p>
+<p>"  Claims 2-9 and 14-21 were rejected as allegedly being unpatentable over Zhang, in view of U.S. Patent No. 9,675,270 by Sarkar (hereinafter, "Sarkar");</p>
+<p>"  Claims 10 and 22 were rejected as allegedly being unpatentable over Zhang, in view of Sarkar, and further in view of U.S. Patent No. 7,751,876 by Healey (hereinafter, "Healey");</p>
+<p>"  Claims 11 and 12 were rejected as allegedly being unpatentable over Zhang, in view of U.S. Patent No. 7,027,858 by Cao et al. (hereinafter, "Cao"); and "  Claims 23-26 were rejected as allegedly being unpatentable over Sarkar, in view of Healey.</p>
+<p>6 Zhang, col. 18, line 24 (emphasis added).</p>
+<p>2 35 U.S.C. § 112, ¶ 4.</p>
+
+ <p>Applicant respectfully traverses the rejections. The applied references, alone or in any proper combination, fail to disclose or suggest the features defined by Applicant's claims, and there would have been no apparent reason that would have caused one of ordinary skill in the art to modify the applied references to arrive at the claimed features.</p>
+<p>For example, as discussed above, Zhang fails to disclose or suggest "for <u>each of the plurality of ventricular depolarizations</u>, identify[ing] a maximum slope point, a minimum slope point, and an interval from the maximum slope point to the minimum slope point" and "determin[ing] that the intervals... <u>for the current ventricular depolarization, a preceding</u> <u>adj</u><u>acent ventricular depolarization of the plurality of ventricular depolarizations, and a subsequent ad</u><u>j</u><u>acent ventricular depolarization </u>of the plurality of ventricular depolarizations satisfy one or more slope criteria. Sarkar, Healey, and Cao, alone or in any proper combination, do not cure this deficiency or the other deficiencies of Zhang, nor were Sarkar, Healey, and Cao cited for this purpose.</p>
+<p>For at least the reasons discussed above, claims 2-12, and 14-26 are patentable over Zhang in view of Sarkar, Healey, and Cao, alone or in any proper combination. Applicant therefore respectfully requests reconsideration and withdrawal of this rejection.</p>
+
+<h1>CONCLUSION</h1>
+
+<p>All claims in this application are in condition for allowance. Applicant respectfully requests reconsideration and prompt allowance of all pending claims.</p>
+<p>Applicant does not concede that the subject matter encompassed by the claims prior to this Response is unpatentable over the art cited by the Office. While several distinctions have been noted over the art of record, Applicant notes that there may be several other limitations that are neither taught nor suggested by the art of record. Applicant expressly reserves all rights and arguments with respect to distinctions not explicitly noted herein. In addition, to the extent that amendments included herein constitute a narrowing of the claims, such narrowing of the claims should not be construed as an admission as to the merits of the prior rejections. Indeed, Applicant traverses the rejections and preserves all rights and arguments. To the extent that any particular statement or argument by the Office has not been explicitly addressed herein, the same should not be construed as an acquiescence or admission by the Applicant that such statements or arguments by the Office are accurate and proper.</p>
+
+<p>Please charge any additional fees or credit any overpayment to deposit account number 50-1778. The Examiner is invited to telephone the below-signed attorney to discuss this application.</p>
+<p>Date:
+  By:</p>
+<p><u>February 16, 2021 /Zachary Y. Zhou/</u>SHUMAKER &amp; SIEFFERT, P.A.
+Name: Zachary Y. Zhou, Reg No. 79,187Telephone: (651) 286.8064</p>
+6
+7
+8
+9
+10
+</body></html>

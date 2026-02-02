@@ -1,0 +1,215 @@
+<html><head></head><body><h3>Date: 2021-06-10</h3>
+<p><u>AMENDMENT TO THE CLA</u><u>IMS</u></p>
+<br>
+
+<br>
+1. (Original) A non-invasive detection method for tissue element, comprising: 
+<br>
+an emitting step, wherein incident light of multiple predetermined wavelengths is respectively emitted to a detected site; 
+<br>
+an obtaining step, wherein for each predetermined wavelength, light intensity values emitted from a surface of the detected site are obtained based on multiple photosensitive surfaces, and the multiple photosensitive surfaces are located at predetermined distances from a center of the incident light; 
+<br>
+and a determination step, wherein a concentration of tissue element to be detected is determined according to the light intensity values in multiple predetermined wavelengths. 
+
+<br>
+
+<br>
+2. (Original) The method according to claim 1, wherein the obtaining step comprises: 
+<br>
+for each predetermined wavelength, at each predetermined distance, obtaining a light intensity value emitted from the surface of the detected site based on a photosensitive area comprising the photosensitive surfaces, wherein the photosensitive area is in one-to-one correspondence with the light intensity value. 
+
+<br>
+
+<br>
+3. (Original) The method according to claim 2, wherein the obtaining step further comprises: 
+<br>
+for each predetermined wavelength, obtaining the light intensity value emitted from the surface of the detected site based on M ring-shaped photosensitive surfaces, wherein multiple photosensitive surfaces are in one-to-one correspondence with the light intensity values, and 
+
+SVG
+
+{EMBED HERE}
+
+0.12
+0.42
+<br>
+
+4. (Cancelled)
+<br>
+
+<br>
+5. (Cancelled)
+
+<br>
+
+<br>
+6. (Cancelled)
+
+<br>
+
+<br>
+7. (Currently Amended) The method according to <del>any one of claims</del> <del>1</del> <del>6</del><del>c</del><u>laim</u> <u>1</u>, wherein each predetermined wavelength is greater than or equal to 900nm and less than or equal to 2400nm.
+
+<br>
+
+<br>
+8. (Currently Amended) The method according to <del>any one of claims</del> <del>2</del> <del>7</del><del>c</del><u>laim</u> <u>2</u>, wherein the determination step comprises: 
+<br>
+from the light intensity values in multiple predetermined wavelengths, determining one light intensity value as a light intensity target value in the multiple predetermined wavelengths; 
+<br>
+and determining the concentration of the tissue element to be detected according to the light intensity target value in the multiple predetermined wavelengths. 
+
+<br>
+
+<br>
+9. (Currently Amended) The method according to <del>any one of claims</del> <del>2</del> <del>7</del><del>c</del><u>laim</u> <u>2</u>, wherein the determination step comprises: 
+<br>
+determining a light intensity measurement value and a light intensity reference value from the light intensity values in multiple predetermined wavelengths; and 
+<br>
+determining the concentration of the tissue element to be detected according to the light intensity measurement value and the light intensity reference value in the multiple predetermined wavelengths. 
+
+<br>
+
+<br>
+10. (Original) The method according to claim 9, wherein the determining the light intensity measurement value and the light intensity reference value from the light intensity values in multiple predetermined wavelengths comprises: 
+<br>
+for each predetermined wavelength, determining the light intensity measurement value and the light intensity reference value from the light intensity values corresponding to the 
+
+ predetermined wavelength according to predetermined conditions, wherein the predetermined conditions comprise at least one of a wavelength characteristic, an optical parameter and a skin structure parameter.
+
+<br>
+
+<br>
+11. (Original) The method according to claim 10, wherein for each predetermined wavelength, the determining the light intensity measurement value and the light intensity reference value from the light intensity values corresponding to the predetermined wavelength according to predetermined conditions comprises: 
+<br>
+for each predetermined wavelength, according to a light intensity variation, determining the light intensity measurement value and the light intensity reference value from the light intensity values corresponding to the predetermined wavelength, wherein the light intensity measurement value is a light intensity value of which an absolute value of the light intensity variation is greater than or equal to a first variation threshold, the light intensity reference value is a light intensity value of which an absolute value of the light intensity variation is smaller than or equal to a second variation threshold, the light intensity variation is a variation between the light intensity value and corresponding predetermined light intensity value, the first variation threshold is greater than the second variation threshold, and the predetermined light intensity value is the light intensity value emitted from the surface of the detected site when the concentration of the tissue element to be detected is a predetermined concentration. 
+
+<br>
+
+<br>
+12. (Original) The method according to claim 9, wherein the determining the concentration of the tissue element to be detected according to the light intensity measurement value and the light intensity reference value in the multiple predetermined wavelengths comprises: 
+<br>
+for each predetermined wavelength, performing a differential operation on the light intensity measurement value and the light intensity reference value corresponding to the predetermined wavelength to obtain a differential light intensity value; and 
+<br>
+determining the concentration of the tissue element to be detected according to differential light intensity values in the multiple predetermined wavelengths. 
+<br>
+
+<br>
+13. (Cancelled)
+
+<br>
+
+<br>
+14. (Original) A non-invasive detection device for tissue element, comprising: a light source module, a detection module and a processing module; the detection module is in communication with the processing module; 
+<br>
+wherein the light source module is configured for respectively emitting incident light of multiple predetermined wavelengths to a detected site; 
+<br>
+the detection module is configured to obtain, for each predetermined wavelength, light intensity values emitted from a surface of the detected site based on multiple photosensitive surfaces, and to send the light intensity values to the processing module, wherein the multiple photosensitive surfaces are located at predetermined distances from a center of the incident light, and there are at least one predetermined distances; and 
+<br>
+the processing module is configured for determining the concentration of the tissue element to be detected according to the light intensity values in the multiple predetermined wavelengths. 
+
+<br>
+
+<br>
+15. (Original) The device according to claim 14, wherein the detection module comprises at least one photosensitive surface; anodes of different photosensitive surfaces in a same predetermined distance are electrically connected with each other; 
+<br>
+for each predetermined distance, at least one photosensitive surface is provided; 
+<br>
+the detection module is configured to obtain, under each predetermined distance, the light intensity value emitted from the surface of the detected site based on a photosensitive area comprising the photosensitive surfaces, wherein the photosensitive area is in one-to-one correspondence with the light intensity value. 
+
+<br>
+
+16. (Original) The device according to claim 15, wherein each of the multiple photosensitive surfaces is a ring-shaped photosensitive surface, different ring-shaped photosensitive surfaces are
+ provided with a same geometric center, and M ring-shaped photosensitive surfaces are provided, wherein M&gt; 1.
+
+<br>
+
+<br>
+17. (Original) The device according to claim 16, wherein an inner diameter of each ring-shaped photosensitive surface is greater than or equal to 0.5mm and less than or equal to 6mm, and a ring width of each ring-shaped photosensitive surface is greater than or equal to 0.05mm and less than or equal to 0.3mm.
+
+<br>
+
+<br>
+18. (Cancelled)
+
+<br>
+
+<br>
+19. (Cancelled)
+
+<br>
+
+<br>
+20. (Cancelled)
+
+<br>
+
+<br>
+21. (Currently Amended) The device according to claim 14<del> or</del> <del>15</del>, further comprising a first sleeve: the first sleeve is provided on an upper surface of the detection module, and an inner diameter of the first sleeve is greater than a diameter of an aperture on the detection module; and 
+<br>
+the first sleeve is configured for preventing surface reflected light that is generated by incident light passing through the surface of the detected site from entering the detection module, and, 
+<br>
+preventing diffracted light that is generated by incident light passing through the aperture of the detection module from entering the detection module<u>: and/or</u> 
+<br>
+<u>wherein the detection mod</u><u>u</u><u>le is further provided with a second sleeve connected integrally; the second sleeve is provided on an upper surface of the detection module, and an inner diameter of the second sleeve is greater than a diameter of an aperture on the detection module; and the second sleeve is configured for preventing surface reflected light that is generated by incident light passing through the surface of the detected site from entering the detection module, and preventing diffracted light that is generated by incident light passing</u> 
+
+ <u>through the aperture of the detection module from entering the detection module; and/or,</u> 
+<br>
+<u>wherein the device further comprises a third sleeve, an upper surface of the third sleeve passes through an aperture of the detection module, and exceeds an upper surface of the detection module; and the third sleeve is configured for preventing surface reflected light that side generated by incident light passing through the surface of the detected site from entering the detection module, and preventing diffracted light that is generated by incident light passing through the aperture of the detection module from entering the detection module</u>. 
+
+<br>
+
+<br>
+22. (Cancelled)
+
+<br>
+
+<br>
+23. (Cancelled)
+
+<br>
+
+<br>
+24. (Currently Amended) The device according to claim <del>14</del><del> or</del> <del>15</del>, further comprising a housing; 
+<br>
+wherein the light source module, the detection module and the processing module are provided inside the housing, and an upper surface of the detection module is lower than an upper surface of the housing. 
+
+<br>
+
+<br>
+25. (Original) The device according to claim 24, further comprising a protection member; 
+<br>
+wherein the protection member is provided at an aperture of the upper surface of the housing, and an upper surface of the protection member is lower than the upper surface of the housing, the protection member is provided with an aperture, and has a same geometric center with the housing; a light transmittance of the protection member is greater than or equal to a light transmittance threshold; 
+<br>
+the protection member is configured for protecting the detection module, and, when the non- invasive detection device for tissue element is worn to the detected site, ensuring that a skin condition of the detected site remains in a natural state and realizing a non-contact detection. 
+
+<br>
+
+26. (Original) The device according to claim 24, further comprising a contact member; wherein
+ the contact member is provided on the upper surface of the housing, and a thermal conductivity of material of the contact member is within a range of air thermal conductivity; 
+<br>
+the contact member is configured for ensuring that a skin condition of the detected site is remained in a natural state and realizing a non-contact detection when the non- invasive detection device for tissue element is worn to the detected site, and shortening a time for a thermal conduction between the non-invasive detection device when it is worn to the detected site and the detected site to reach a thermal equilibrium state by setting the thermal conductivity of the material of the contact member within the range of air thermal conductivity. 
+
+<br>
+
+<br>
+27. (Original) The device according to claim 26, wherein the upper surface of the housing is plated with a heat-insulating material, and the thermal conductivity of the heat-insulating material is within the range of air thermal conductivity; 
+<br>
+the heat-insulating material is configured for ensuring that the skin condition of the detected site is remained in the natural state and realizing a non-contact detection when the non-invasive detection device for tissue element is worn to the detected site, and shortening a time for a thermal conduction between the non-invasive detection device when it is worn to the detected site and the detected site to reach a thermal equilibrium state by setting the thermal conductivity of the heat-insulating material within the range of air thermal conductivity. 
+
+<br>
+
+<br>
+28. (Currently Amended) The device according to claim 1<del>4</del><del> or</del> <del>15</del>, wherein the light source module further comprises a light source emitting unit or an incident optical fiber.
+
+<br>
+
+<br>
+29. (Currently Amended) A wearable apparatus, comprising: a body and the non-invasive detection device for tissue element according to <del>any one of claims</del> <del>1</del> <del>28</del><del>c</del><u>laim</u> <u>14</u>; 
+<br>
+wherein the non-invasive detection device for tissue element is provided on the body; and the wearable apparatus is worn to a detected site. 
+
+<br>
+
+<br>
+30. (Cancelled)
+</body></html>

@@ -1,0 +1,54 @@
+<html><head></head><body><h3>Date: 2021-07-07</h3>
+<p><u>CLAIMS</u></p>
+<br>
+
+<br>
+[Claim 1] A vehicle control device configured to control a vehicle provided with an information provision device configured to provide information to a driver, the vehicle control device provided with processor being configured to: 
+<br>
+perform automated driving control for automatically performing a driving operation of the vehicle and provide a driving event which will occur at a point ahead in the direction of advance from a current point based on a driving plan for automated driving through the information provision device to the driver, wherein the processor is further configured to: 
+<br>
+judge the suitability of the driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving event; and 
+<br>
+provide the driver with judgment information so that the driver does not perform the driving operation corresponding to the driving event at a point before the point of the driving event when judging it is not suitable to perform it. 
+
+<br>
+
+<br>
+[Claim 2] The vehicle control device according to claim 1, wherein the driving operation corresponding to the driving event is a lane change, and 
+<br>
+the processor is further configured to provide to the driver, as the judgment information, lane change inhibiting information showing whether a lane to be changed to will disappear due to a lane reduction or will become unable to be driven on at a point before the point of the driving event. 
+
+<br>
+
+<br>
+[Claim 3] The vehicle control device according to claim 2, wherein the processor is further configured to display on an information display screen visible to the driver, as the lane change inhibiting information, a specialized icon showing that the lane to be changed to will disappear due to a lane reduction or will become unable to be driven on.
+<br>
+
+[Claim 4] The vehicle control device according to claim 2, wherein the processor is further configured to display on an information display screen visible to the driver, as the lane change inhibiting information, the lane to be changed to which will disappear due to a lane reduction or will become unable to be driven on at a point before the 
+point of the driving event.
+<br>
+
+<br>
+[Claim 5] The vehicle control device according to claim 2, wherein the processor is further configured to provide the driver with distance information from the current point to the point where the lane to be changed to will disappear due to a lane reduction or will become unable to be driven together with the lane change inhibiting information.
+<br>
+
+<br>
+[Claim 6] An information provision method providing a driver through an information provision device mounted in a vehicle with a driving event which will occur at a point ahead in the direction of advance from a current point based on a driving plan prepared during automated driving where a driving operation of the vehicle is automatically performed, the information provision method provided with: 
+<br>
+a step of judging the suitability of the driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving event; and 
+<br>
+a step of providing the driver with judgment information so that the driver does not perform the driving operation corresponding to the driving event at a point before the point of the driving event when judging it is not suitable to perform it. 
+
+<br>
+
+<br>
+[Claim 7] A nontransitory recording medium provided with a computer program making a computer: 
+<br>
+provide a driver through an information provision device mounted in a vehicle with a driving event which will occur at a point ahead in the direction of advance from a current point based on a driving plan prepared during automated driving where a driving operation of the vehicle is automatically performed; 
+<br>
+judge the suitability of the driving operation corresponding to the driving event being performed by the driver at a point before the point of the driving event; and 
+<br>
+provide the driver through the information provision device with judgment information so that the driver does not perform the driving operation corresponding to the driving event at a point before the point of the driving event when judging it is not suitable to perform it. 
+10
+11
+</body></html>

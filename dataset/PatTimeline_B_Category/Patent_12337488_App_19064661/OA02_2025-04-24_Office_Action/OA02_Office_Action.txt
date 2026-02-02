@@ -1,0 +1,92 @@
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+The application has been amended as follows:
+Claim 1, lines 7-23:
+step 3: collecting n sets of point cloud data, applying depth scaling coefficients to the n sets of point cloud data to perform Singular Value Decomposition (SVD), and solving for an optimal depth scaling coefficient using a Nelder-Mead algorithm; wherein in the step 3, the robotic arm is driven using a given set of known joint angles, an end effector position
+P
+b
+a
+s
+e
+t
+o
+o
+l
+of the robotic arm is obtained using a kinematic model of the robotic arm, an axial difference
+P
+t
+o
+o
+l
+c
+a
+l
+of a checkerboard corner point at a specified position relative to the end effector of the robotic arm is manually measured, and
+P
+b
+a
+s
+e
+t
+o
+o
+l
+and
+P
+t
+o
+o
+l
+c
+a
+l
+are combined to obtain
+P
+b
+a
+s
+e
+c
+a
+l
+; the above operation is repeated to obtain a set of point cloud data relative to a base coordinate system of the robotic arm; the depth camera obtains a pixel coordinate of the checkerboard corner point at the specified position relative to the image coordinate system of the depth camera and a depth value of the checkerboard corner point relative to the camera coordinate system through corner detection, the pixel coordinate and the depth value are substituted into the pinhole camera model to obtain a 3D coordinate
+P
+c
+a
+m
+e
+r
+a
+c
+a
+l
+of the checkerboard corner point relative to the depth camera; the above operation is repeated to obtain a set of point clouds relative to the camera coordinate system, depth values of all point cloud data collected by the depth camera are processed through a first-order Kalman filter, and after the depth values measured by the depth camera are filtered and converged, complete point cloud data are calculated using an intrinsic parameter matrix of the depth camera;
+Claim 5, lines 4-8:
+rotating the coordinate system n-1 around the X axis by
+α
+i
+-
+1
+; translating the coordinate system n-1 along the X axis by
+α
+i
+-
+1
+; rotating the coordinate system n-1 around the Z axis of the coordinate system n-1 by
+θ
+i
+; and translating the coordinate system n-1 along the Z axis of the coordinate system n-1 by [[di]]
+d
+i
+; and achieving complete overlap between the coordinate system n and the coordinate system n-1; wherein
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance: the available prior art fails to teach or suggest using the claimed algorithms in combination to calibrate a 3D imaging system with a robotic manipulator.
+Sivanath et al. (US Publication No. 2022/0402131) teaches calibrating a structured-light based 3D machine-vision system for use with a robotic manipulator using Singular Value Decomposition (SVD) at paragraphs [0039-0041], but fails to teach utilizing the Nelder-Mead algorithm to solve for an optimal depth scaling coefficient.
+Kubota et al. (US Patent No. 5,280,436) teaches, at column 5, line 26 through column 6, line 46, depth scaling for such structured light systems, but fails to teach the specific algorithms and methods detailed in independent claim 1, such as using the Nelder-Mead algorithm.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to SPENCER D PATTON whose telephone number is(571)270-5771. The examiner can normally be reached Monday to Friday 9:00-5:00 ET.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Khoi Tran can be reached on (571)272-6919. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/SPENCER D PATTON/Primary Examiner, Art Unit 3656

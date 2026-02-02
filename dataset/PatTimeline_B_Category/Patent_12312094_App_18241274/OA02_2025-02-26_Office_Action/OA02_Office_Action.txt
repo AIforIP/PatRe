@@ -1,0 +1,23 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+Response to Arguments
+Applicant’s arguments, see Remarks, filed 1/30/2025, with respect to the claim objections and rejections of claims 1-16 have been fully considered and are persuasive.  The objections and rejections of claims 1-16 have been fully withdrawn.
+Allowable Subject Matter
+Claims 1-16 are allowed.
+EXAMINER'S AMENDMENT
+An examiner’s amendment to the record appears below. Should the changes and/or additions be unacceptable to applicant, an amendment may be filed as provided by 37 CFR 1.312. To ensure consideration of such an amendment, it MUST be submitted no later than the payment of the issue fee.
+Authorization for this examiner’s amendment was given in an interview with M. Brad Lawrence (Registration No. 47,210) on Wednesday, February 5, 2025.
+The application has been amended as follows:
+In claim 1, Line 24,  following the word “bypass” and preceding the word ”is” remove the word “controlled” and insert the word --controller--.
+Reasons for Allowance
+The following is an examiner’s statement of reasons for allowance: Regarding claims 1-16, the prior art of record fails to teach either alone or in combination all of the limitations of claim 1, especially wherein the bypass controller is configured to switch the bypass switch on before the solid state power switching device is switched on; and wherein the bypass controller is configured to switch the bypass switch off before the breakdown voltage (Ubreak2) of the second bypass diode drops below the bus voltage[O) in combination with other limitations recited in the claimed invention.
+Any comments considered necessary by applicant must be submitted no later than the payment of the issue fee and, to avoid processing delays, should preferably accompany the issue fee.  Such submissions should be clearly labeled “Comments on Statement of Reasons for Allowance.”
+Conclusion
+Any inquiry concerning this communication or earlier communications from the examiner should be directed to MICHAEL J WARMFLASH whose telephone number is(571)270-1434. The examiner can normally be reached 8AM-6PM EST M-Th.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Jared Fureman can be reached on (571) 272-2391. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/JARED FUREMAN/Supervisory Patent Examiner, Art Unit 2836
+MW
+2/4/2025

@@ -1,0 +1,27 @@
+DETAILED ACTION
+Notice of Pre-AIA  or AIA  Status
+The present application, filed on or after March 16, 2013, is being examined under the first inventor to file provisions of the AIA .
+1.	This application has been examined.  Claims 1-20 are pending.
+2.	Receipt is acknowledged of certified copies of papers required by 37 CFR 1.55.
+3.	The IDS filed 12/14/22 has been considered.
+4.	The disclosure is objected to because of the following informalities:
+• Paragraph [0112]- at line 4 it appears that either text is missing or the punctuation is misplaced causing confusion.
+Appropriate correction is required.
+5.	The following is a quotation of 35 U.S.C. 112(b):
+(b)  CONCLUSION.—The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the inventor or a joint inventor regards as the invention.
+The following is a quotation of 35 U.S.C. 112 (pre-AIA ), second paragraph:
+The specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention.
+Claims 11-20 are rejected under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), second paragraph, as being indefinite for failing to particularly point out and distinctly claim the subject matter which the inventor or a joint inventor (or for applications subject to pre-AIA  35 U.S.C. 112, the applicant), regards as the invention.
+A.	As per claim 11, the claim preamble sets forth a method of controlling a vehicle; however, the body of the claim fails to positively recite a controlling step.  The examiner suggests amending the claim to include the step of “performing avoidance control or warning control based on the determined collision risk” (see for example Fig. 3:309).
+B.	All claims dependent from a rejected claim are also rejected for the same reasons.
+6.	Claim 1 is distinguishable over the prior art insofar as the prior art of record does not disclose or reasonably suggest, in combination with the other claimed limitations, generating a plurality of virtual lines in a moving direction of the vehicle within an entire width of the vehicle, obtaining a plurality of contour points of the object by processing the lidar data, and determining a collision risk for the avoidance control or the warning control based on a number of crossing points between the plurality of virtual lines and the plurality of contour points.  Claim 11 recites similar subject matter.  Dependent claims 2-10 and 12-20 are distinguishable for at least the same reasons.
+7.	The prior art made of record and not relied upon is considered pertinent to applicant's disclosure.  In particular,
+• Chen et al. (US 2022/0204029)- collision avoidance system which uses contour of a detection object to determine distance to object; lidar sensor obtains information regarding external environment of the vehicle; determines likelihood of a collision; may provide collision avoidance and/or warning.
+• DE102018105665- collision avoidance system which calculates TTC with an object; determines obstacle point with minimum collision time period.
+None of the cited references, either alone or in combination with the other prior art of record, disclose or reasonably suggest the distinguishing features noted above.
+8.	Claims 1-10 are allowed.  Claims 11-20 would be allowable if rewritten or amended to overcome the rejection(s) under 35 U.S.C. 112(b) or 35 U.S.C. 112 (pre-AIA ), 2nd paragraph, set forth in this Office action.
+9.	Any inquiry concerning this communication or earlier communications from the examiner should be directed to MICHAEL J ZANELLI whose telephone number is (571)272-6969. The examiner can normally be reached M-W 9-4; Th 9-2.
+Examiner interviews are available via telephone, in-person, and video conferencing using a USPTO supplied web-based collaboration tool. To schedule an interview, applicant is encouraged to use the USPTO Automated Interview Request (AIR) at http://www.uspto.gov/interviewpractice.
+If attempts to reach the examiner by telephone are unsuccessful, the examiner’s supervisor, Elaine Gort can be reached on 571-272-6781 or you can reach supervisor Peter Nolan at 571-270-7016. The fax phone number for the organization where this application or proceeding is assigned is 571-273-8300.
+Information regarding the status of published or unpublished applications may be obtained from Patent Center. Unpublished application information in Patent Center is available to registered users. To file and manage patent submissions in Patent Center, visit: https://patentcenter.uspto.gov. Visit https://www.uspto.gov/patents/apply/patent-center for more information about Patent Center and https://www.uspto.gov/patents/docx for information about filing in DOCX format. For additional questions, contact the Electronic Business Center (EBC) at 866-217-9197 (toll-free). If you would like assistance from a USPTO Customer Service Representative, call 800-786-9199 (IN USA OR CANADA) or 571-272-1000.
+/MICHAEL J ZANELLI/Primary Examiner, Art Unit 3661

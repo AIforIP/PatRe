@@ -1,0 +1,770 @@
+<html><head></head><body><h3>Date: 2021-04-02</h3>
+<p>TITLE:
+Methods and Systems for Precise Quantification of Human Sensory Cortical Areas</p>
+<p>INVENTORS:
+Yanshuai Tu</p>
+<p>Yalin Wang</p>
+<p>Zhong-Lin Lu</p>
+
+<h1>CROSS REFERENCE TO RELATED APPLICATIONS</h1>
+
+<p>[001]
+This application claims priority to and the benefit of U.S. Provisional Patent Application No. 63/004,721, filed on April 3, 2020 and entitled "Methods and Systems for Precise Quantification of Human Sensory Cortical Areas," which is hereby incorporated by reference in its entirety (but excepting any subject matter disclaimers or disavowals, and except to the extent that the incorporated material is inconsistent with the express disclosure herein, in which case the language in this disclosure shall control).</p>
+
+<h1>FEDERALLY SPPONSORED RESEARCH OR DEVELOPMENT</h1>
+
+<p>[002]
+This invention was made with government support under 1413417 and 1412722 awarded by the National Science Foundation. The government has certain rights in the invention.</p>
+
+<h1>TECHNICAL FIELD</h1>
+
+<p>[003]
+The present disclosure relates to imaging, and in particular to techniques for imaging brain structure and activity.</p>
+
+<h1>SUMMARY</h1>
+
+<p>[004]
+Methods and systems for precise quantification of human sensory cortical areas are disclosed.</p>
+<p>In an exemplary embodiment, a sensory mapping method for a human brain comprises flattening the cortical surface of the human brain, projecting functional imaging data onto the flattened surface, smoothing the functional imaging data or processing the functional imaging data to produce topological results, generating the sensory map, registering sensory maps across individuals, and analyzing the maps in the common space. The sensory mapping method may further comprise rendering the sensory map with an image of stimuli that activate the cortical surface.</p>
+<p>[005]
+The flattening may comprise a conformal parametrization method. The flattening may comprise applying harmonic mapping to a unit disk and refining repetitively parametric coordinate for each point on a parameter domain to produce conformal mapping.</p>
+<p>
+[006]
+The smoothing may comprise a topological smoothing method that utilizes a diffeomorphic smoother. The smoothing may comprise applying Beltrami coefficient to quantify diffeomorphism and modeling the smoothing in an optimization framework.</p>
+<p>[007]
+The processing may comprise a topology-preserving cortical surface segmentation method. The processing may comprise segmenting the cortical surface of the human brain by preserving the prior connectivity pattern of the cortical surface areas, decoding the functional imaging data based on at least one topological condition within each cortical area, and repeating the segmentation and decoding.</p>
+<p>[008]
+The registering may be diffeomorphic. The registering may comprise a method that aligns a human brain sensory map of an individual to a predefined template.</p>
+<p>[009]
+In another exemplary embodiment, a sensory mapping method for a human brain comprises flattening the cortical surface of the human brain, projecting functional imaging data onto the flattened surface, processing the functional imaging data to produce topological results, and generating a sensory map. The processing may comprise a topology-preserving cortical surface segmentation method.</p>
+<p>[010]
+The contents of this section are intended as a simplified introduction to the disclosure, and are not intended to be utilized to limit the scope of any claim.</p>
+
+<h1>BRIEF DESCRIPTION OF THE DRAWINGS</h1>
+
+<p>[011]
+With reference to the following description and accompanying drawings:</p>
+<p>[012]
+FIG. 1 illustrates a conformal parameterization process in accordance with various exemplary embodiments: (a) harmonic map of the region of interest; (b) cortical surface and region of interest; the checker-board texture inferred from the conformal map is applied on the region of interest; and (c) the resulting conformal map of the region of interest;</p>
+<p>[013]
+FIG. 2 illustrates a texture map between visual field image and visual cortex in accordance with various exemplary embodiments;</p>
+<p>[014]
+FIG. 3 illustrates a human visual system in accordance with various exemplary embodiments;</p>
+<p>[015]
+FIG. 4 illustrates several spaces and relations between them in accordance with various exemplary embodiments;</p>
+<p>[016]
+FIG. 5 illustrates (a) approximate a mapping in discrete and (b) a divergence approximation on the vertex ring in accordance with various exemplary embodiments;</p>
+<p>
+[017]
+FIG. 6 illustrates a function domain, mapping result, and mapping results with noise in accordance with various exemplary embodiments: (a) mapping domain on the visual field; (b) mapping result without noise; (c) mapping result with weak noise (Peak Signal-Noise Ratio (PSNR) = 20 dB); and (d) mapping result with strong noise (PSNR = 10 dB);</p>
+<p>[018]
+FIG. 7 illustrates smoothing results for map with big noise in accordance with various exemplary embodiments:(a) average smoothing; (b) median smoothing; (c) Laplacian smoothing; and (d) exemplary smoothing;</p>
+<p>[019]
+FIG. 8 illustrates a subject's left retinotopic mapping in accordance with various exemplary embodiments: (a) raw retinotopic mapping; (b)-(e) smoothing results of average, median, Laplacian, and proposed smoothing methods; (f) the raw mapping on cortical surface; (g)-(j) smoothing results on inflated surface of each method, in the same order of (b)-(e); and (k) the left inflated cortex;</p>
+<p>[020]
+FIG. 9 illustrates a retinotopic map experiment and the pipelines of population receptive field (pRF) / topological receptive field (tRF) models in accordance with various exemplary embodiments;</p>
+<p>[021]
+FIG. 10 illustrates a parametrization and segmentation process in accordance with various exemplary embodiments: (a) the visual field; (b) the region of interest (ROI); (c) conformal parametrization of ROI; and (d) the topology-prior (the label is defined for each point);</p>
+<p>[022]
+FIG. 11 illustrates comparison of various methods for the V1-V3 model in accordance with various exemplary embodiments: (a) Ground-truth; (b) pRF; (c) model-fitting; (d) smoothing; (e) registration; and (f) the proposed tRF;</p>
+<p>[023]
+FIG. 12 illustrates results of: (a) pRF; (b) model-fitting; (c) smoothing; (d) registration; and (e) tRF in accordance with various exemplary embodiments;</p>
+<p>[024]
+FIG. 13 illustrates the visual system in accordance with various exemplary embodiments;</p>
+<p>[025]
+FIG. 14 illustrates several spaces and registration in accordance with various exemplary embodiments;</p>
+<p>[026]
+FIG. 15 illustrates (a) approximate the mapping in discrete and (b) the divergence approximation on the vertex ring in accordance with various exemplary embodiments;</p>
+<p>[027]
+FIG. 16 illustrates template and subject in accordance with various exemplary embodiments: (a) template; (b) perfect subject; (c) subject data with a small added noise (Peak Signal-Noise Ratio is 20 dB); (d) Subject data with a big added noise (Peak Signal-Noise Ratio is 10 dB); (e) ground truth displacement (curves are for eccentricity/angle contour: landmarks are marked for (a)-(d));</p>
+<p>
+[028]
+FIG. 17 illustrates: (a)-(b) Before and (c)-(d) After Registration of the left hemisphere of the subject '102816' in accordance with various exemplary embodiments;</p>
+<p>[029]
+FIG. 18 illustrates the template morphing process in accordance with various exemplary embodiments; and</p>
+<p>[030]
+FIG. 19 illustrates a flow chart of a sensory mapping method for a human brain in accordance with various exemplary embodiments.</p>
+
+<h1>DETAILED DESCRIPTION</h1>
+
+<p>[031]
+The following description is of various exemplary embodiments only, and is not intended to limit the scope, applicability or configuration of the present disclosure in any way. Rather, the following description is intended to provide a convenient illustration for implementing various embodiments including the best mode. As will become apparent, various changes may be made in the function and arrangement of the elements described in these embodiments without departing from principles of the present disclosure.</p>
+<p>[032]
+For the sake of brevity, conventional techniques and components for mathematical processes, transforms, mapping, smoothing, and/or the like may not be described in detail herein.</p>
+<p>Furthermore, the connecting lines shown in various figures contained herein are intended to represent exemplary functional relationships and/or physical couplings between various elements.</p>
+<p>It should be noted that many alternative or additional functional relationships or physical connections may be present in exemplary methods and systems for imaging and/or components thereof.</p>
+<p>[033] Sensory maps of the human brain are of great scientific interest and could have important medical applications. fMRI makes it possible to define the sensory maps for an individual in vivo.</p>
+<p>However, due to the low signal-noise ratio and low spatial resolution of fMRI, the sensory maps are usually noisy and don't preserve topology.</p>
+<p>[034]
+In particular, in clinical settings, doctors require quantitative scores. The current mapping methods of the sensory areas of the human brain can only generate qualitative maps with high uncertainty. To address these shortcomings of prior approaches, exemplary embodiments provide smoothing tools, topology correction tools, quantification tools, and multi-subject alignment tools to generate a complete quantitative description of the maps. The quantitative scores are desirable, for example in connection with disease diagnosis and prognosis.</p>
+<p>[035]
+The sensory areas of the brain, including the auditory cortex, visual cortex, and so forth, contain topographical representations of the sensory space. Functional magnetic resonance 
+imaging (fMRI) signals have produced subject-specific cortical maps. However, such maps are noisy, incomplete, and even contradict neurophysiological results. In contrast, the methods and systems in this disclosure can reduce the noise, fix topology violations, and quantify the properties of the maps across time and/or individuals. In particular, exemplary systems and methods can precisely smooth, register, and quantify sensory maps of the human brain. The methods and systems can be used to quantify properties of the sensory areas of the human brain that are associated with normal and abnormal development, aging, and diseases related to sensory processing.</p>
+<p>[036] An exemplary method for quantification of a sensory map comprises: (1) flattening the cortical surface; (2) projecting the functional imaging data onto the flattened surface; (3) smoothing the functional imaging data or processing the functional imaging data to produce topological results; (4) generating the sensory map; (5) registering sensory maps across individuals; (6) analyzing the maps in the common space. The sensory map may be a retinotopic map.</p>
+<p>[037] With reference now to Figs. 1 through 18, in accordance with various exemplary embodiments, exemplary methods utilize concepts from computational geometry and provide techniques to reduce noise, fix topology violations, and precisely quantify the properties of the sensory maps. In an exemplary embodiment, the disclosed systems and methods may be applied to visual retinotopic maps with excellent results. However, all practical applications of principles of the present disclosure are contemplated herein.</p>
+<p>[038] Figs. 1-2 illustrate methods and systems for flattening a cortical surface. Figs. 3-8 illustrate methods and systems for smoothing the functional imaging data. Figs. 9-13 illustrate methods and systems for processing the functional imaging data to produce topological results. Figs. 13-18 illustrate methods and systems for registering sensory maps.</p>
+<p>[039]
+Exemplary systems and methods may use a conformal mapping method together with a geodesic disk to reduce angle distortion and geodesic distortion. Exemplary systems and methods may correct topology violations and perform topology-preserving smoothing. Exemplary systems and methods may reduce angle distortion as well as geodesic distortion and produce high quality mapping. Exemplary systems and methods may provide utilities to register or align sensory maps across subjects based on both structural and functional MRI data. The exemplary systems and methods disclosed herein may be integrated to allow the quantification of human brain sensory maps.</p>
+<p>[040] In an exemplary embodiment, in a sensory mapping method, visual cortical surfaces are conformally mapped to a topological disk on which local geometry structures are well preserved.</p>
+<p>
+Then retinotopy data are smoothed to ensure that topology is preserved on the maps. Specifically, the Beltrami coefficient is adopted as the metric of topology, and a topology-preserving smoothing formulation is solved efficiently. It is believed that the disclosed method may be the first method that can smooth the retinotopic maps and fix topology violations. Thereafter, quantitative properties of the maps, e.g., cortical magnification factor, can be measured precisely using differential geometry tools on the smoothed cortical maps.</p>
+<p>[041]
+In addition to use for analyzing the sensory maps of individual subjects, principles of the present disclosure also provide the capability to better align and analyze sensory maps across time and/or subjects. By considering the intrinsic structure in the sensory maps, exemplary methods can achieve better cortical registration across subjects.</p>
+<p>[042]
+Exemplary systems and methods make it possible to precisely quantify sensory maps of individuals and further improve the quality of sensory maps with data from multiple individuals. Although various exemplary embodiments disclosed herein are discussed in the context of visual retinotopic maps, those skilled in the art will appreciate that principles of the present disclosure can also be applied to all the other sensory areas, including the auditory cortex, somatosensory cortex, and olfactory cortex.</p>
+<p>[043] Methods and Systems for Flattening a Cortical Surface</p>
+<p>[044]
+As shown in Fig. 1, an exemplary method is disclosed herein for conformal disk parameterization, c: M <u>- </u>D, to flatten the cortical surface patch M to the disk domain D, the check-board region in and the disk in Fig. 1.</p>
+<p>[045]
+To achieve quality conformal mapping results, a new algorithm is introduced to achieve conformal mapping of the V1 retinotopic map on the unit disk D. First, the harmonic mapping is applied to the unit disk as the initial mapping. Fig. 1(a) illustrates harmonic mapping of a region of interest whose location in the cortical surface is labeled in Fig. 1(b). This produces the result that the boundary of M is on the boundary of the D. Second, the conformality of the patch is iteratively optimized until the BC within V1 is within the predefined error  pl' &lt; E, as shown in Fig. 1(c).</p>
+<p>[046] <u>Harmonic Maps</u></p>
+<p>[047]
+The harmonic map h: M -- D can be found by minimizing the following energy.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.39
+1.43
+</p>
+<p>The harmonic map for disk-like surfaces h: M -- D can be found by setting VE(h) = 0, which 
+yields the Laplace equation</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.62
+0.85
+</p>
+<p>where A is the Laplacian operator and g: dM <u>- </u>G can be given by the arc length parameterization.</p>
+<p>[048]
+In the discrete case, the Laplace equation is a sparse linear system, written as Lhh = 0. The matrix element Lk is</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+1.13
+3.01
+</p>
+<p>Here, the boundary vertices are set by their boundary length. Each vertex {v,}- - is mapped to the unit circle according to the ratio of the edge lengths along the boundary loop. The harmonic map h is efficiently obtained by solving the linear system.</p>
+<p>[049] <u>Optimizing Conformality in the Primar</u><u>y</u><u> Visual Cortex (V</u><u>1)</u></p>
+<p>[050]
+After the harmonic mapping is achieved, the parametric coordinate is iteratively refined for each point on the parameter domain to achieve conformal mapping in the primary visual cortex (V1). Let r be the desired refinement map, such that the result r is conformal mapping to 3D cortical surface in V1. The mapping that this method is seeking r = c o h-1 is illustrated in Fig. 1 (a)-(c). As described above, if there is the Beltrami coefficient pr of r, r can be reconstructed. If c is conformal, the Beltrami coefficient of the composite map is pr = ph-1. Since h is given, its inverse h-1 can be computed. To compute the Beltrami coefficients for the inverse harmonic map in the discrete case, i.e., h-1 . D <u>- </u>Mbetween the corresponding triangular faces, the first step is to use piece-wise rigid motion transformation R to translate each triangular face of M onto R2. Then the next step is to compute the Beltrami coefficient, NRoh, of the map R o h-1. Since rigid motions are conformal, the resulting Beltrami coefficient p-Roh equals  h-1. With the defined yr the next step is to compute a new mapping r and achieve the desired conformality. Numerically, to achieve the best quality, the refinement is repeated until the mapping is conformal, i.e., uc falls below a predefined error bound 'pr, I prl  &lt; £1ur.</p>
+<p>[051]
+Because a goal is to achieve a conformal parameterization of the primary visual cortical surface (V1), pr = yh-1 is set for the faces in the V1 area. For other parts, ur is kept unchanged.</p>
+<p>
+The conformal procedure for the primary visual cortex (V1) is summarized in the following Algorithm 1. Finally, an observer-wise Mobius transformation is applied on the disk, a conformal transformation with analytical scaling and rotating, to eliminate conformal mapping ambiguity and roughly align the visual regions between observers.</p>
+<p>[052]
+Once the conformal parameterization is obtained, the next step is Vi's retinotopic mapping from the parametric disk to the visual field. More specifically, the 2D map isf r: c(VI) <u>- </u>D, from the parametric domain of V1 cortex to the visual field. With the bijective conformal parameterization c, the retinotopic mapping can be evaluated through a planar-to-planar function f-Dvi <u>-</u><u> </u>D such that Dvi = c(VI) andf=fr o c1.</p>
+<p>Algorithm 1: Conformal parametrization of the visual cortex.</p>
+<p>Input: Cut patch M= (PM, EM, FM), where PM= {P,} is the mesh vertex set; vertex indices IP and face indices IF for the primary visual cortex respectively, and a tolerance 81Ur</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.16
+3.67
+</p>
+<p>I begin 2
+Compute the harmonic parametric h = {hIP, E PM};</p>
+<p>3
+Initialize u, &lt;- h, ,u &lt;- o;</p>
+<p>4
+Compute the Beltrami coefficient {,jf, E FM} for the inverse map u-'</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.16
+1.65
+</p>
+<p>6
+Change BC to zero in visual cortex, i.e., pu° = 0,Vi E IF, and p ° = p,Vi E IF ;</p>
+<p>7
+Fix the boundary points and compute the refined coordinate {uilPi E PM} 8
+Compute the Beltrami coefficient {pi fi E FM} for the inverse map u- 9
+Update maximal BC in V1, by p &lt;-- maxjpil: i E IF 10
+end</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.23
+1.3
+</p>
+<p>12 end</p>
+<p>[053] <u>Illustrative Visualization of the Retinotopic map</u></p>
+<p>[054]
+Once a complete retinotopic map is processed by the method described herein, the following method provides an intuitive illustration of the perception centers by texture mapping, as shown in Fig. 2. This texture map becomes meaningful with the smooth and topological retinotopic map. Specifically, the visual coordinate for each visual cortex is first computed, as shown in Fig. 2a. Then the next step is to interpret visual coordinate for point within the triangular face with the utilities of OpenGL. The final step is to render the cortical surface with the visual image shown in 
+Fig. 2b. This method can easily be used to check, invest, and verify discoveries relates to the retinotopic map.</p>
+<p>[055] Methods and Systems for Smoothing the Functional Imaging Data</p>
+<p>[056] <u>Summary</u></p>
+<p>[057]
+Retinotopic mapping, the mapping of visual input on the retina to cortical neurons, is an important topic in vision science. Typically, cortical neurons are related to visual input on the retina using functional magnetic resonance imaging (fMRI) of cortical responses to slowly moving visual stimuli on the retina. Although it is known from neurophysiology studies that retinotopic mapping is locally diffeomorphic (i.e., smooth, differentiable, and invertible) within each local area, the retinotopic maps from fMRI are not diffeomorphic, especially near the fovea, because of the low signal-noise ratio of fMRI. The present disclosure discloses a mathematical model that produces diffeomorphic retinotopic mapping from fMRI data. In an exemplary embodiment, the present disclosure adopts a geometry concept, the Beltrami coefficient, as the tool to define diffeomorphism, and models the problem in an optimization framework. Efficient numerical methods are applied to produce the model. Experimental results with both synthetic and real retinotopy data demonstrate that the method disclosed herein is superior to conventional smoothing methods.</p>
+<p>[058] <u>Introduction</u></p>
+<p>[059]
+Almost half of the human cerebral cortex is dedicated to visual processing. Identifying and analyzing visual areas of the human brain is an important topic in vision science and neurobiology. Retinotopic mapping via functional magnetic resonance imaging (fMRI) provides a noninvasive way of defining the location and size of receptive filed of populations of visual neurons on the retina. Typically, cortical neurons are related to visual input on the retina using fMRI of cortical responses to slowly moving visual stimuli on the retina. The visual stimulus is carefully designed so that the stimulus pattern is unique with respect to each retinal location. By recording and analyzing the fMRI signals at each cortical location, one can decode the retinal visual input coordinate that generates such fMRI signals. Previous studies have revealed that much of the visual cortex is organized into visual regions (e.g., V1, V2) with a retinotopic map in each region. It is known from neurophysiology studies that retinotopic mapping is topology preserving (i.e., local neighborhood relationships are maintained) and diffeomorphic (i.e., smooth, differentiable, and invertible) within each visual area. However, the decoded visual coordinates from fMRI retinotopic mapping studies are not diffeomorphic or topological preserving. One reason is that the signal-noise ratio and spatial resolution of fMRI signals are low. Another reason is that the 
+decoding process largely deciphers the fMRI signal point by point without considering the local smoothness, although Gaussian spatial smoother has been applied to fMRI signal processing.</p>
+<p>[060]
+Spatial smoothing was previously conducted on retinotopic maps to perform automatic delineation of visual regions. However, the smoothing is applied to the visual coordinates one dimension at a time, e.g., the x and y visual coordinates separately. There is no guarantee of diffeomorphism. Another approach is registering the noisy retinotopic maps to a diffeomorphic template and assigning the template retinotopic coordinates after registration. It relies on diffeomorphic registration of two surfaces, which is difficult to achieve. Even if the registration issue can be solved, how to define the right template will remain a big problem. Therefore, there is a need to solve the smoothing issue.</p>
+<p>[061]
+In an exemplary embodiment, a method is disclosed that applies the Beltrami coefficient to quantify the diffeomorphism as well as angle deviation. It is known that retinotopic mappings preserve angles to a considerable extent. The method further models the smoothing process as an optimization procedure with diffeomorphic constraints and elaborates the numerical steps to solve the optimization problem. The algorithm was tested on a synthetic dataset and a real dataset. The synthetic data is generated using an ideal retinotopic mapping model (ground truth) with added noise. The application of the method to the synthetic data generates diffeomorphic results without any large deviations, while other methods violate the condition. The real dataset is the Human Connectome Project 7T retinotopy (HCP) data (See Noah C. Benson and Others, "The Human Connectome Project 7 Tesla retinotopy dataset: Description and population receptive field analysis," Journal of Vision, vol. 18, no. 13, pp. 1-22, Dec. 2018.). Diffeomorphic retinotopic mapping was also achieved with HCP data. In addition, the Beltrami coefficients were obtained that quantify angle distortions for each subject. The method produces diffeomorphic results and minimizes the angle distortion, two important conditions for a valid retinotopic mapping research.</p>
+<p>[062] <u>Problem Restatement</u> A problem involved here is restated in a biological intuitive and mathematically rigorous way. Assume there is a light spot on point v  (v(), v(2)) E R2 in the visual field, as shown in Fig. 3, an illustration of visual system to the visual cortex. After the visual system's perception, propagation, and dispensation, the light spot will eventually active a population of neurons. The main purpose of retinotopic mapping is to find the center v and the extent  E R' of its receptive field on the retina, for each point P = (X, Y, Z) E Ilk3 on visual cortex.</p>
+<p>[063] fMRI provides a noninvasive way to determine v and - for P, based on the following procedure. (1) Design a stimulus time sequence s(t; v), such that the stimulus sequence is unique 
+for every visual coordinate, i.e., s(t; vi) # s(t; v2), Vv1 # v2; (2) Present the stimulus sequence to an individual and record the fMRI signals from the visual cortex; (3) For each fMRI time sequence on a cortical location, y(t; P), determine the corresponding receptive field, including its center location v and its size a on the retina, that most-likely generated the fMRI signals. Specifically, given the neurons' spatial response r(v'; v, a) (a predefined model depicts neural response around v) and the hemodynamic function h(t) (a model of the time course of neural activation to a stimulus), the predicted fMRI signal can be written as:</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.18
+3.94
+</p>
+<p>where, (3 is a coefficient that converts the units of response to the unit of fMRI activation. Then the parameters v and a are given by minimizing the prediction error,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.27
+3.3
+</p>
+<p>
+[064]
+The retinotopic mapping of the entire visual cortex is obtained when (v, a) is solved for every point on the cortical surface. It is known that nearby visual cortex will share nearby visual coordinates, i.e., topology preserving. The notion retinotopic mapping preserves topology means that, if f is the retinotopic mapping, f: P - v, then a neighboring point P' of P, will have visual coordinate v' close to v. That is, f is diffeomorphic in the domain of cortical surface.</p>
+<p>[065]
+Due to the low signal-noise ratio of fMRI, f is not diffeomorphic. In an exemplary embodiment, a method is disclosed herein that achieves a diffeomorphic smoothing on f, such that the new mapping f: P - D is diffeomorphic and D is close to v. The Beltrami coefficient is adopted to quantify the diffeomorphism,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.9
+6.49
+</p>
+<p>the bigger yr is, the larger angle deviation is. Therefore, the diffeomorphism defined in this way also provides a measure of angle deviation. The aim is to find p = f(P), such that,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.25
+3.8
+</p>
+<p>
+[066] <u>Model and Method</u></p>
+<p>[067] <u>Model in Discrete</u></p>
+<p>[068]
+In practice, cortical surface S is usually not an analytical function but consists of a bunch of vertices Vs and triangular faces Fs, i.e. Ss = (Fs, Vs). Similarly, visual space can also be 
+discretized. Instead of taking another discretization, it is beneficial to take the same discretization as S. Then, the remaining problem is to find a visual coordinate vi for every vertex Pi E Vs.</p>
+<p>In an exemplary embodiment, the problems are analyzed and solved on 2D instead of the original 3D cortical surface. Since diffeomorphism is transitive (If f and c are both diffeomorphic function, then the composite function f o c is also diffeomorphic), a method in the present disclosure computes a conformal mapping (diffeomorphic and angle preserving) from the occipital region of the cortex to a parametric disk to simplify the problem to 2D. As shown in Fig. 4, an illustration of several spaces and relations between them, the gray colored region is mapped to the unit disk by c: P - u, u = (u(1), u(2)) E R2.</p>
+<p>[069]
+Although conformal mapping is angle preserving, it introduces distance distortion. To reduce the distortion, the method cuts a geodesic disk patch: picks a point on the cortical surface that corresponds to the fovea as the center point, then calculates the geodesic distances from all cortical position to the center point and only keep the portion of cortical surface whose geodesic distance to the center point is within a certain value. If f, = f o c-1: u E R2 - v E R2 is solved with constraint I g| &lt; 1, then diffeomorphic retinotopic mapping is obtained by f = f, o c. Accordingly, Eq. (4) is simplified to,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.32
+3.44
+</p>
+<p>To solve Eq. (5) in discrete, the energy is formed as, E = Zi|Fi -p 12| +A,|pg|2 +A2 Vp 2
+(6) where F = fc(ui) is the raw result from Eq. (2), Pi is to be solved, [yi = pf (pi) is the Beltrami coefficient at pi, A1 and A2 are constants. Compared to Eq. (5), gradient of P, VPi, is introduced to increase smoothness, and Ip,|2 is used to reduce non-diffeomorphism as well as angle distortion.</p>
+<p>[070] <u>Numerical Method</u></p>
+<p>[071]
+It is difficult to minimize the energy in Eq. (6) directly, as it mixes the Beltrami coefficient and the mapping function together. A solution is to alternatively solve with respect to function and Beltrami coefficient in separate steps. Tools are utilized to convert the mapping function and Beltrami coefficient back and forth.</p>
+<p>[072] <u>Beltrami Coefficient</u></p>
+<p>[073]
+Since there is a parametric coordinate u for the cortical surface S, the definition, Eq. (3), can be simplified to, 
+</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.28
+3.44
+</p><p>Given the explicit form of function f(u), [f is computed according to Eq. (7). In the discrete case,</p>
+<p>f, is interpreted linearly on each triangle. As shown in Fig. 5(a), for u within the triangle Auiujuk,fc(u) - aivi + ai vi + akVk, where vi = fc(ui),vi = fc(u1), and Vk - fc (uk). Fig.</p>
+<p>5(b) illustrates the divergence approximation on the vertex ring. The coefficients a, a, and ak are called barycentric coefficients. Specifically, a (similarly for a and ak) is the area portion of triangle Duujuk to Augujuk, i.e. ai = Area(Auujuk)/Area(Auujuk). Now the Beltrami coefficient yfc is computed according to Eq. (7). It is easy to see that [Lc is a constant for each triangle.</p>
+<p>[074] <u>Linear Beltrami Solver (LBS)</u> LBS is introduced to recovery function f = (f(1), f(2)) for the given Beltrami coefficient [ = p + iz. According to the definition in Eq. (7), the following is the result,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.28
+3.93
+</p>
+<p>After re-organizing Eq. (8) and eliminating f (2), the following is derived,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.72
+6.5
+</p>
+<p>du(') + Of()/du(2)), and the divergence V - on vector G = AVf(1) = (G(1), G(2)) is defined as V - G = dG(')/du(') + dG(2)/du(2). By solving the partial equation Eq. (9) with certain boundary conditions, f(1) is solved. Similarly, f(2) is solved.</p>
+<p>[075]
+In the discrete case, the function is linearly interpreted on each triangle. The gradient of f, Vf(u), can be written out. For the divergence on vector G, V - G, it is approximated on the dual cell of each vertex (a cell consisted of circumcenters of neighboring triangles). As shown in Fig.</p>
+<p>5(b), consider the vertex u with its neighbors N(un), the divergence on vector G is approximated by,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.28
+4.39
+</p>
+<p>Fig. 5(a) is an illustration of approximate the mapping in discrete. Applying the approximations, the result is a linear equation for each fi together with its neighboring vertices, according to Eq.</p>
+<p>(9). Finally, f is solved efficiently by collecting all the equations and write them in a matrix form.</p>
+<p>[076] <u>Laplacian Smoothing and Chopping</u> 
+[077]
+Now, the function and Beltrami coefficient are converted. The purpose is to make a smooth result. The next step is to apply the smooth operation on the function and Beltrami coefficient by the Laplacian smoothing. For instance, to get a smooth Beltrami coefficient v, the following is solved,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.24
+3.39
+</p>
+<p>where A is a constant. Eq. (11) can be efficiently solved by its Euler-Lagrange equation (-V - V + 2X1)v = 2AM.</p>
+<p>[078]
+Although the non-diffeomorphism is penalized in Eq. (6), if there is a consistent point whose LIy &gt; 1, it breaks the diffeomorphic result. To avoid this situation, one can shrink ' v/vI, ifivi &gt; 1. This process is called Chop.</p>
+<p>[079] <u>Algorithm</u></p>
+<p>[080] An overall smoothing process is summarized in the following Algorithm 2 Algorithm 2: Diffeomorphic Smoother</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+3.24
+5.06
+</p>
+<p>
+[081] <u>Results</u></p>
+<p>[082] <u>Synthetic Data</u></p>
+<p>[083]
+Performance of the algorithm may be evaluated on synthetic data. The ground truth mapping is given by,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.2
+3.4
+</p>
+<p>
+[084]
+Then log function is chosen as it is a good approximation of the retinotopic mapping from visual space to the flattened cortical surface. As shown in Fig. 6(a), the visual domain is mapped to the parametric space Fig. 6(b). Also, the results show the mapping with a small amount of noise in Fig. 6(c) and a large amount of noise in Fig. 6(d). Several smoothing methods are applied on the synthetic mapping data in both small and big noise cases, including Average Smoothing in Fig. 7(a), Median Smoothing in Fig. 7(b), and Laplacian Smoothing in Fig. 7(c) and their results were compared with the method in the present disclosure in Fig. 7(d). The results for the big noisy case are shown in Fig. 7. All of them are spatial smoothing procedures. As shown in Fig. 7(a), Average Smoothing takes the average around each neighborhood. As shown in Fig. 7(b), Median Smoothing takes the median value of each neighborhood. As shown in Fig. 7(c), Laplacian smoothing is the so-called "Perfect Smoothing". Except for the method of the present disclosure as shown in Fig. 7(d), all other smoothing procedures process the coordinates u) and u) separately. The following Table 1 lists the performance metric of all the methods.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+2.82
+6.28
+</p>
+<p>
+[085]
+It was found that (1) all the smoothing methods helped reduce the noise, and reduce flipped triangles (i.e. triangle violates the topology preserving condition); (2) with a small amount of added noise, the topology violation problem is not severe, average smoothing can also achieve almost diffeomorphic results; (3) however, with a large amount of added noise, only exemplary methods in the present disclosure can achieve a diffeomorphic result.</p>
+<p>[086] <u>HCP Data</u></p>
+<p>[087]
+With 7-Tesla MRI systems, the signal-to-noise ratio of retinotopic mapping has been dramatically improved. Still, the mapping is noisy and non-diffeomorphic. A smoother in the present disclosure may be applied to data from a 7T MRI system. The details of the dataset are 
+known (See Noah C. Benson and Others, "The Human Connectome Project 7 Tesla retinotopy dataset: Description and population receptive field analysis," Journal of Vision, vol. 18, no. 13, pp. 1-22, Dec. 2018.). Because smoothing is a primary interest here, the evaluation process used publicly available data of the decoded retinotopic coordinate for each cortical vertex of five subjects, and evaluated the performance of an exemplary smoother. The total number of flipped triangles for raw data is 1313, for the average, median, and Laplacian methods are 1289, 1312, and 1337, respectively. The smoother has no flipped triangles (i.e., zero).</p>
+<p>[088]
+For a persuasive and intuitive comparison, Fig. 8 shows the retinotopic mapping of the left hemisphere of the subject, and the smoothed results of different methods. As shown in Figs. 8(a) and (f), the original mapping is not diffeomorphic. Figs. 8(b)-(e) show smoothing results of average, median, Laplacian, and smoother methods respectively while Figs. 8 (g)-(j) show smoothing results on inflated surface of each of the methods in Figs. 8(b)-(e) respectively. Fig. 8(k) is an illustration of the left inflated cortex. Although all smoothing methods improved the smoothness, only an exemplary smoother herein can generate diffeomorphic result, especially near the fovea.</p>
+<p>[089] <u>Conclusion</u></p>
+<p>[090]
+The smoother of the present disclosure adopts the Beltrami coefficient to quantify diffeomorphism of retinotopic mapping and forms a mathematical model to generate diffeomorphic maps. The smoother produces results of diffeomorphism and minimizes angle distortion.</p>
+<p>[091] Methods and Systems for Processing Functional Imaging Data</p>
+<p>[092]
+In an exemplary embodiment, a method is disclosed that applies a topological receptive field model (tRF) for human retinotopic mapping, as shown in Figs. 9-12.</p>
+<p>[093] <u>Summary</u></p>
+<p>[094]
+The mapping between visual inputs on the retina and neuronal activations in the visual cortex, i.e., retinotopic map, is an essential topic in vision science and neuroscience. Human retinotopic maps can be revealed by analyzing the functional magnetic resonance imaging (fMRI) signal responses to designed visual stimuli in vivo. Neurophysiology studies indicated that visual areas are topological (i.e., nearby neurons have receptive fields at nearby locations in the image). However, conventional fMRI-based analyses generate nontopological results because they process fMRI signals on a voxel-wise basis, without considering the neighbor relations on the surface. The present disclosure applies a topological receptive field (tRF) model which imposes the topological condition when decoding retinotopic fMRI signals. More specifically, the method parametrizes the 
+cortical surface to a unit disk, characterizes the topological condition by tRF, and employs an efficient scheme to solve the tRF model. The framework was tested on both synthetic and human fMRI data. Experimental results showed that the tRF model removes the topological violations, improves model explaining power, and generates biologically plausible retinotopic maps. This framework is general and can be applied to other sensory maps.</p>
+<p>[095] <u>Introduction</u></p>
+<p>[096]
+It is of great interest to quantify, simulate, and understand the relation between the visual inputs and the neuronal response with the retinotopic maps. A precise retinotopic map provides opportunities to understand or even simulate various aspects of the visual system. For instance, the complex-log model, which depicted a rough position map between the retina and the primal visual cortex (V1), explained the dynamics of spiral visual illusions. The retinotopic maps discovered some stable visual regions. Additionally, retinotopic map research holds great promise in understanding brain plasticity and improving rehabilitation's efficacy from visual impairments. Further, retinotopic maps have been clinically adopted to monitor the progress and recovery under amblyopia treatment, a disorder that affects about 2% of children and may cause significant visual impairment if untreated.</p>
+<p>[097]
+Typically, human retinotopic maps are obtained in vivo by analyzing cortical functional magnetic resonance imaging (fMRI) response signals to visual stimuli. Since the first fMRI work on retinotopic mapping, several analysis models were proposed to decode perception parameters from the noisy fMRI signals. Among them, the population receptive field (pRF) model generates state-of-the-art results and becomes a cornerstone in fMRI signal analysis of retinotopic maps.</p>
+<p>[098]
+Although the pRF model achieved great success, the pRF results are not topological. The topological condition is an essential requirement of retinotopic maps since neurophysiology studies have revealed nearby neurons have receptive fields at nearby locations in the image (the topological condition). The topological condition is also the requirement of the vision system's hierarchical organization: each visual area represents a unique map of a portion of retina. If there are duplicated representations in a visual area, this visual area should be further divided into more areas. Besides, it is challenging to infer accurate visual-related quantification without a topological retinotopic map, e.g., visual boundaries, cortical magnification factor, visual anisomery. Therefore, topological retinotopic map results are vital for neuroscience research.</p>
+<p>[099]
+A variety of methods have been developed to reduce topological violations in the postprocessing of pRF results. For instance, the model fitting is widely used to fit the decoded parameters with an algebraic model for V1-V3. Smoothing methods, e.g., Laplacian smoothing, 
+process visual parameters one by one but cannot ensure the topological condition. Surface registration of retinotopic mesh is also developed for post-processing of pRF results. However, none of the existing methods have considered the topological condition when decoding fMRI signals. It is advantageous but challenging to impose the topological condition when decoding fMRI. First, the topological condition is different across visual areas, while the precise visual areas are delineated upon the decoding results. One may think the segmentation is available through the anatomical surface. However, all anatomical-based segmentation is not accurate, limited by its modality. Second, because the fMRI signal is noisy, it is challenging to segment visual areas from the noisy decoded results.</p>
+<p>[0100]    Various exemplary embodiments apply a topological receptive field (tRF) framework, which imposes the topological conditions by integrating the topology-preserving segmentation and topological fMRI decoding into a coherent system. The framework first segments the visual areas by preserving the prior connectivity pattern of visual areas based on initial decoding and then models the fMRI decoding with the topological condition within each visual area. Since the new fMRI decoding results can refine the segmentation, the framework repeats the segmentation and decoding until theoretically guaranteed convergence.</p>
+<p>[0101]
+This exemplary framework has been validated on both synthetic data and human retinotopy data. The experiments showed the superiority of tRF over other methods, including the population receptive field (pRF) model, post-processing by model fitting, smoothing, or registration methods.</p>
+<p>In summary, (1) it is the first method that enforces the topological condition in decoding retinotopic fMRI signals; (2) it is also the first automatic visual area segmentation with the topology organization preserved. The framework is general and can be extended to other sensory maps because most of the human perception maps are spatially organized, e.g., auditory map is spatially related to sound frequency.</p>
+<p>[0102] <u>Retinotopic Mapping Experiment</u></p>
+<p>[0103] Here is a brief introduction of an exemplary retinotopic mapping experiment. Such an experiment acquires both structural MRI and fMRI signals, as illustrated in Fig. 9. The structural MRI (Fig. 9g) is used to reconstruct the cortical surface. The fMRI (Fig. 9b) is acquired to monitor neuron activities during the visual stimuli (Fig. 9a). The visual stimulation is carefully designed to encode the visual space (Fig. 9f) uniquely. Before the analysis, the fMRI volumes are preprocessed (Fig. 9c) and projected onto the cortical surface (Fig. 9h). Eventually, for each subject, there is a high-quality anatomical/structural cortical surface in the form of discrete manifold S = (V, E, F) 
+(where V is the surface vertex set, E is the edge set, and F is the face set), together with fMRI time series yi(t) for each vertex Vi E V on the cortical surface.</p>
+<p>[0104] <u>pRF Model</u></p>
+<p>[0105]
+The population receptive field (pRF) model decodes fMRI signals vertex by vertex. Namely, on the measurement yi(t), the pRF predicts perception parameters, including the population perception center v= (v' , v 2)) and population receptive field size Ui. The model takes the polar coordinates for the visual fields, as shown in Fig. 9f. Namely, v and v(2&gt; are the eccentricity and polar angle, respectively. Given the receptive model r(v'; vi, a), and the hemodynamic model h(t), the predicted fMRI is, yet; vi, a) = /3(f r(v'; vi, a)s(t, v')dv') * h(t), where /3 is the activation level (a time-independent scalar). The perception center vi and population receptive field size ai are estimated by minimizing the error between the measured and predicted fMRI activation signal,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.36
+4.09
+</p>
+<p>Solving Eq. 13 for all points generates the pRF retinotopic map. This model shows a typical pRF retinotopic map on the visual cortex in Fig. 9d. Still, a large portion of the result is not topological (the visual coordinates' contour curves are messed up in Fig. 9e). An exemplary framework applies the tRF (Figs. 9i &amp; j) to improve the retinotopic maps.</p>
+<p>[0106] <u>Parametrization</u> First, a parametrization is established between the 3D visual cortex and the 2D planar disk. A geodesic patch containing the visual areas is cut. In specific, the framework picks a point po on the cortex, then encloses a patch P comprising cortical points within a certain geodesic to Po, as illustrated in Fig. 10b. The next step is to compute the conformal parametrization for patch P to planar disk D. If c: P <u>- </u>D is the conformal parameterization, then ut = c(Vi) where ui E R2 is the parametric coordinate for Vi. The conformal mapping may be done via spherical conformal mapping of the double coverings of surface patches, followed by stereographic projection. With the parametrization c, the topology condition within the planar domains can be discussed. Fig. 10(a), (c) and (d) illustrates the visual field, the conformal parametrization of the region of interest, and the topology-prior respectively.</p>
+<p>[0107] <u>Topology conditions</u></p>
+<p>[0108]
+The topology conditions have two inferences. First, the visual coordinates are topological with respect to the surface parametrization within each visual area (this condition is called the topological condition within each visual area). Second, because the human visual cortex is 
+organized into several visual areas, and the visual areas hold the same organization (for instance, V1 is adjacent to V2d and V2v) across subjects (to distinguish, this condition is called topology- preserving condition across visual areas).</p>
+<p>[0109] Both conditions can be quantified by the Beltrami coefficient of quasiconformal maps. Namely, the framework disclosed herein uses the Beltrami coefficient to enforce a topology- preserving surface segmentation and uses the concept again to ensure the topological condition for the retinotopic map within each visual area. The following will introduce the Beltrami coefficient's definition and then explain how it is adopted into these two conditions.</p>
+<p>[0110] An orientation-preserving homeomorphism tp(z): C <u>-</u><u> </u>C is quasiconformal if it satisfies the Beltrami equation ap(z) -  ap(z) where [a is the Beltrami coefficient satisfying lqpl1 &lt; 1. In 0z
+0Z particular, if pw = 0 then 'p is conformal.</p>
+<p>[0111] The topological condition requires the retinotopic map from each visual area to the retina to be orientation consistent. The orientation (biologically the visual field sign, VES) for the visual area can be either positive or negative, depending on the parametrization and visual area. Once fixing a parametrization, the map (from parametric space to retina) orientation for a specific visual area is then fixed. Of course, one can treat the negative visual field area to be positive by flipping the parametrization vertically (u'(2) - -u(2)). Without losing generality, considering a positive visual area, it is required that the VFS is consistently positive. Mathematically, it requires the Beltrami coefficient pf, associated with the retinotopic map from parametric space (within the unit disk) to visual field space f:ui -+ vi, satisfies l f &lt; 1.</p>
+<p>[0112]
+A registration-akin method may be used for topology-preserving segmentation. The method diffeomorphically morphs the topology-prior (which has the right topology) to the subject's parametrization disk and then uses prior's label information for the subject. The segmentation is topology-preserving if the morphing is diffeomorphic. Let g: D <u>- </u>D be the morph function. If the Beltrami coefficient [g satisfies [pgLJ &lt; 1, g is diffeomorphic. Compared to retinotopic registration, where visual coordinates are required when defining a template, the prior label is required in this exemplary framework, which is easier to give and reduces the model visual coordinates hypothesis.</p>
+<p>[0113] <u>tRF Model</u></p>
+<p>[0114] Here is an introduction of the tRF model, which includes fMRI decoding T = {(vi, a-i)I Vi E V} and visual areas segmentation L = {Li E N I Vi E V}, (one value for an area) altogether.</p>
+<p>[0115] <u>Topology-preserving segmentation</u> 
+[0116]
+A wrapping function g is searched that maximizes the label alignment between subject and wrapped-prior. However, there are no labels before segmentation. As an alternative, this framework maximizes the alignment between VFS of topology prior and VFS of a subject. Let J = (Fj, Ej, uj, Lj) be the topology-prior mesh, where Fj is face set, Ej is edge set, uj = {uj} is vertex set and Lj = {Lj E NJ uj E uJ} is label set, Sg: D <u>- </u>{-1,1} be the VFS for topology-prior after wrapping, and s := sign(1 - pL) be the VFS function of the subject, where  = aX /  (v = v=1O + iv(2&gt; and u = u) + iu(2) ). This framework models the registration by E = D
+2+ Ag f Vg2 du, such that  pg| &lt; 1, where I .g - sl is the VFS mismatch cost, and Ag is a positive constant that controls the smoothness of g. The mismatch cost is formulated to encourage the subject, and the wrapped topology-prior shares the same VFS at each position.</p>
+<p>[0117] <u>Topological fMRI decoding</u></p>
+<p>[0118]
+Without losing generality, for a positive orientated visual area V+, the topological fMRI</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.19
+6.5
+</p>
+<p>IVvI i du, s. t. l[p &lt; 1, where 1lvl2 <u>-</u> <u> </u>+V(172 - V(2)&gt;2 Similarly, the tRF model can be applied to the negative area by flipping the parametrization vertically. To avoid over smoothing, the values of Au are chosen based on the Generalized Cross-Validation.</p>
+<p>[0119] <u>tRF model</u></p>
+<p>[0120]    The tRF finds the visual parameters for the visual cortex via two modules,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.63
+5.02
+</p>
+<p>
+[0121] <u>Numerical Method</u></p>
+<p>[0122]    A direct search for (L, T) is computationally infeasible because the number of parameters are typically high and y is also computationally heavy. The problem may be divided into two subproblems, segmentation and fMRI decoding, and the two subproblems are updated iteratively. Since both subproblems constrain the norm of Beltrami, a technique is introduced in advance, which is called topology-projection.</p>
+<p>[0123] <u>Topolog</u><u>y</u><u>-projection with smoothing</u></p>
+<p>[0124]
+Given a map f, the topology-projection computes a smooth and topological map f' with small changes of f According to Measurable Riemannian Mapping Theorem, the Beltrami coefficient uniquely encodes a map upon suitable normalization. Therefore, a map can be 
+manipulated by its Beltrami coefficient. If a map whose pfI &gt; 1 for some points, its norm is adjusted for those points by ['f= ap/I Lpuf (a = 0.95 in this disclosure). Then [' is used to recover the topological map f'. In specific, one can find f' by solving V -AFVf' = 0, with Dirichlet boundary condition. Here A is a 2-by-2 matrix upon ['f [28], V and V are the gradient and divergence operators, respectively. f' can be solved efficiently by writing V AV as a matrix. After the topology-projection, Laplacian smoothing is applied to f' to make it smooth.</p>
+<p>[0125] <u>Topology-preserving segmentation</u></p>
+<p>[0126]
+To solve Eq. 14, it is divided into two subproblems: naive g searching and topology projection. Specifically, (1) for u E u, the target of g(u) is updated to nearest point g' such that s(ui) = 9(g'), since it minimizes the VFS mismatch; (2) the topological projection is used to fix the topological condition for g' (see SI for segmentation results).</p>
+<p>[0127] <u>Topological fMRI decoding</u></p>
+<p>[0128]
+Eq. 15 is also split into two subproblems: parameter searching and topology-projection. Specifically, (1) the topology-projection is used for each visual area respectively to get topological visual parameters T'; (2) the gradient descent is used to update T' parameters, T' &lt;- T'- 71</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.34
+6.49
+</p>
+<p>to improve the segmentation, described in Eq. 14.</p>
+<p>[0129] <u>Algorithm</u></p>
+<p>[0130]
+The overall procedures of the tRF framework is summarized in the following Algorithm 3. Note that the updating step is decayed by i(t+') = kol(t), kfl &lt; 1, to ensure tRF converges. Its convergence proof is provided in SM.</p>
+<p><u>Algorithm 3: The tRF framework</u> Input: Discrete region of interest S = (V, E, F); fMRI signal yt for each point; a tolerance E E R+; and a decay factor kfl&lt; 1.</p>
+<p>Results: The topology-preserving segmentation L and topological retinotopic map T = {(vi, a1-)} that sufficiently explains the fMRI signal.</p>
+<p>Solve the pointwise pRF parameter (vi, ai) by Eq. 13 Compute the conformal disk parametrization u, = c(Vi), Vi E V</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.34
+2.35
+</p>
+<p>Compute the segmentation L, by solving Eq. 14 Update T' on given segmentation L by solving Eq. 15</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.19
+2.96
+</p>
+<p><u>end</u></p>
+<p>[0131] <u>Dataset</u> 
+[0132] <u>Synthetic data</u></p>
+<p>[0133]
+An exemplary framework has been evaluated on synthetic data. The evaluation process used double-sech model as ground truth and assigned a receptive field size a = k2v(i) (k2= 0.01, 0.02, 0.03 for V1, V2, and V3, respectively). The next step is to generate the normalized fMRI signal yo(t) with a known specific stimulation pattern (see Kay, N., Benson, C., Jamison, K., Arcaro, M., Vu, A., Coalson, T., Essen, D. Van, Yacoub, E., Ugurbil, K., Winawer, J., Kay, K.: The HCP 7T Retinotopy Dataset, https://osf.io/bw9ec/.) and add two levels of noise to the fMRI signal y(t) = yo(t) + r(t), where r-N(0, y) (y = 0.1 and y = 0.5 respectively).</p>
+<p>[0134] <u>Real data with 7T MRI system</u></p>
+<p>[0135]
+An exemplary framework was also tested on the Human Connectome Project (HCP) dataset (See Benson, N.C., Jamison, K.W., Arcaro, M.J., Vu, A.T., Glasser, M.F., Coalson, T.S., Van Essen, D.C., Yacoub, E., Ugurbil, K., Winawer, J., Kay, K.: The Human Connectome Project 7 Tesla retinotopy dataset: Description and population receptive field analysis. J. Vis. 18, 1-22 (2018). https://doi.org/10.1167/18.13.23.). The HCP dataset is a publicly available retinotopy dataset on 7T fMRI scanners with high spatial and temporal resolutions.</p>
+<p>[0136] <u>Results</u></p>
+<p>[0137] <u>Results on Synthetic Data</u></p>
+<p>[0138]    The performance of an exemplary framework disclosed herein was compared with several methods, including the pRF model, the model fitting result, the Laplacian smoothing, and the registration method (which registers pRF to another parameterized Double-Sech template and uses the template's value). More specifically, given the noisy functional signal y(t) for each vertex, the errors were compared between methods' output and ground truth in Table 2, including the perception center error  Avl, receptive field size error lAo-, and the numbers of triangles that violates the required VFS within its segmentation.</p>
+<p>[0139]
+The results indicate that: (1) only the exemplary framework disclosed herein makes topological results (T, = 0), and the smoothing achieved the worst results, which means the smoothing does not contribute to the exemplary method's topological results in topology- projection; (2) on the other hand, the smoothing method also achieved decent precision (Avl~2. ); (3) the model-fitting method is promising in topological condition (T, &lt; 5). However, it is only applicable to the V1-V3 complex but not to other visual areas (see Table 3; the flipping number is significant due to regions beyond V3); (4) the TPS registration method can ensure the topology in theory. However, because of the noisy measure of retinotopic coordinates, the anchors/landmarks 
+are noisy and may destroy the topological condition. Those results suggest the framework of the present disclosure achieves the best accuracy under topological condition. An illustrative comparison is provided in Fig. 11 for various methods. Figs. 11(a)-(f) illustrate the results for the V1-V3 model by ground-truth method in Fig. 11(a), pRF model in Fig. 11(b), model-fitting method in Fig. 11(c), smoothing method in Fig. 11(d), registration method in Fig. 11(e), and the tRF framework in Fig. 11(f).</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+1.68
+6.52
+</p>
+<p>
+[0140] <u>Results on the Real Data</u></p>
+<p>[0141] An exemplary tRF was applied to subjects in the HCP dataset. Since no ground-truth is available for the real dataset, the methods were compared based on the fMRI fitting goodness (the RMSE of fitting error e) and the number of non-topology triangles (Tn). The fitting error e and topology violations T, for the first three observers were listed in Table 3. The tRF achieved the best fMRI fitting and zero topology violations. The results also showed the intuitive comparison between the methods for the first observer in Figs. 12a-e. The proposed tRF (Fig. 12e) fixed the topology violations (T, = 0) compared to the pRF model (Fig. 12a, T, = 870), model-fitting (Fig.</p>
+<p>12b, T= 489), smoothing (Fig. 12c, T, = 842), or registration (Fig. 12d, Tn = 953). Besides, the tRF achieved the smallest fMRI fitting error (RMSE is 0.296), compared to pRF (0.300), model- fitting (0.335), smoothing (0.301), or registration method (0.305). The average results for the first twenty observers were also reported in the dataset. The tRF reduced the mean fitting error from the second-best method's 0.376 (pRF method) to 0.372, and the topology violations were reduced from 1234 (median value) to 0. Those results showed that the tRF not only reduced the topology violation (i.e., compatible with neurophysiology conclusions) but also improved/kept the fitting power.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.45
+6.5
+</p>
+
+<p>
+SVG
+
+{EMBED HERE}
+
+0.81
+6.5
+</p><p>[0142] Methods and Systems for Registering Sensory Maps</p>
+<p>
+[0143] In an exemplary embodiment, a method is disclosed herein that registers sensory maps, as shown in Figs. 13-18.</p>
+<p>[0144] <u>Summary</u></p>
+<p>[0145] It is an important topic in vision science and neurobiology to identify and analyze visual areas of the human brain (i.e. the visual atlas). Retinotopic mapping with functional magnetic resonance imaging (fMRI), provides a non-invasive way to delineate the boundaries of the visual areas. It is known in neurophysiology that retinotopic mapping is locally diffeomorphic (i.e. smooth, differentiable, and invertible) within each local area. However, the decoded visual coordinates from fMRI retinotopic mapping studies are not diffeomorphic because of the low signal-noise ratio of fMRI. The non-diffeomorphic problem is more severe near the most important fovea region because the size of the neuronal receptive field is much smaller and the retinotopic organization is more complicated. As a result, it is unreliable to directly delineate the visual atlas from a single subject's retinotopy.</p>
+<p>[0146] To get a better visual atlas, especially for the fovea, it is preferable to use more subjects and take advantage of the group average. However, individuals' visual regions are different in size, shape and even location. Directly averaging several individuals' retinotopic maps cannot improve the result. Indeed, there are lots of methods and packages to register cortical surfaces, e.g. FreeSurfer, FSL, and Brain-Suite. These methods are designed for diffeomorphic cortical wrapping using anatomical scalar information (e.g. curvature, thickness) only.</p>
+<p>[0147]
+There is an opportunity to use retinotopic maps to improve registration of cortical areas. First, unlike image registration where only scalar features are available, retinotopic mapping associates an estimated visual coordinate (although noisy) to each location of the visual cortex. Second, the quality of the estimated visual coordinates can be assessed with performance metrics, which can help emphasize high-quality locations and under-weight poor-quality locations. These features have been used to register retinotopic measurements to a template. The used algorithm morphs the subject's surface to fit template data and introduces several penalties to avoid overstretching. However, these penalties compromise registration accuracy.</p>
+<p>
+[0148]
+There is a need to model retinotopic registration, especially the diffeomorphic constraint. Visual coordinate differences may be quantified after registration, e.g., with Euclidean distance. The question is how to define and quantify diffeomorphism. Diffeomorphism has been long discussed in geometry. The registration method is disclosed herein that applies the Beltrami coefficient, an important concept in quasiconformal geometry, to quantify the diffeomorphic condition and model the registration as a function optimization problem with constraints. The present registration  method  eliminates redundant registration  limitations and  ensures diffeomorphic result. Then the linear Beltrami solver is applied to solve the registration model. The present model may also adopt human-based landmarks as a rough/precise guideline to help registration. The method of the present disclosure improves the accuracy and robustness of retinotopic map registration</p>
+<p>[0149] A purpose of exemplary systems and methods is to generate diffeomorphic retinotopic maps and improve the accuracy of the retinotopic atlas from fMRI measurements through the development of a specifically designed registration procedure. In consideration of retinotopic mapping features, a quasiconformal geometry-based registration model is formed and solved with efficient numerical methods. An exemplary registration method was compared with existing methods on synthetic data. The results demonstrate that it is superior to conventional methods for the registration of retinotopic maps. The application of an exemplary method to a real retinotopic mapping dataset also reduces registration errors.</p>
+<p>[0150] <u>Problem Restatement</u></p>
+<p>[0151] <u>Retinotopic Mapping</u></p>
+<p>[0152]
+The idea of retinotopic mapping via fMRI is briefly introduced here. Assume a unit illumination light spot is on point v = (v('), v (2)) E R2 in the visual field, as shown in Fig. 13. After the visual system's processing, the light spot will eventually activate a population of neurons. The main purpose of retinotopic mapping is to find, the center v and the extent 6 E R+ of its receptive field on the retina, for each point P = (X, Y, Z) E 1183 on visual cortex.</p>
+<p>[0153]    fMRI provides a noninvasive way to determine v and a for P, based on the following procedure. (1) Design a stimulus time sequence s (t; v), such that the stimulus sequence is unique for every visual coordinate, i.e., s(t; vi) # s(t; v2), Vv1 # v2; (2) Present the stimulus sequence to an individual and record the fMRI signals from the visual cortex; (3) For each fMRI time sequence on a cortical location, y(t; P), determine the corresponding receptive field, including its central location v and its size a on the retina, that most-likely generated the fMRI signals. Specifically, given the neurons' spatial response r(v'; v, a) (a predefined model depicts of neural 
+response around v) and the hemodynamic response function h(t) (a model of the time course of neural activation to a stimulus), the predicted fMRI signal can be written as:</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.21
+3.78
+</p>
+<p>where, (3 is a coefficient that converts the units of response to the unit of fMRI activation, and * is the convolution operator. Then the perceptive center v and perceptive field size a are estimated by minimizing the difference between predicted signal and measurement,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.27
+3.26
+</p>
+<p>The retinotopic mapping of the entire visual cortex is obtained when (v, a) is solved for every point on the cortical surface. The goodness of the estimation for each location is inferred by the variance explained, R2  _1 - y2dt/ f ly - y|2dt</p>
+<p>[0154] <u>Mathematical Model</u></p>
+<p>[0155] In practice, cortical surface S is usually represented by a set of vertices Ps = {P1, P2, ..., P} = {Pi} and triangular faces Fs = {Fl}, denoted by Ss = (Fs, Ps). The fMRI signal is decoded for each location on cortical surface Pi E Ps according to Eq. (17). The decoding process generates a raw visual coordinate vi, perception size a, and variance explained Ri for each vertex Pi. S = (Fs, Ps, vs, as, R2) is used to denote the bundle data of cortical surface as well as the raw retinotopic measurements. Here the capitalized subscript is used to denote all data of a subject, e.g. Ps means all the point collection of the subject, and lowercase subscript to denote data of a point, e.g. Pi is for i-th point of the subject. If the visual coordinate vs is accurate, then the visual atlas is of high quality. However, vs is influenced by the fMRI signal-noise ratio, head movement, subject's behavior and so on.</p>
+<p>[0156] The next question is how to assign a new visual coordinate 13, such that it is most likely inferred by the measurements from all the subjects' data. One approach is registering each subject to a presumed template or mathematical model and then assigning the registered template value to the subject. An exemplary approach is to find a registration method and a presumed template T = (FT, PT, VT, T, R2), such that T the overall registration cost from all subjects' data to the template is minimal, i.e., T = arg minT Z. R(T, S) , where R is the registration cost between the template T and J-th subject's data S.</p>
+<p>[0157] A remaining problem may be to define the diffeomorphic registration function and its cost. It may be easy to understand the problems on 2D instead of the original 3D cortical surface. If a 
+diffeomorphic function can be found from the cortical surface to a parametric domain, then the 3D registration can be simplified as a 2D problem, because the composite of two diffeomorphic functions is still diffeomorphic. A discrete conformal (angle preserving) mapping of the occipital region may be helpful. Specifically, as shown in Fig. 14 which is an illustration of several spaces and registration, a feature point is first defined that corresponds to the fovea as the center point. The geodesic distances from all vertices to the center point are calculated. Only the portion of cortical surface whose geodesic distance to the center point is within a certain value is considered, and this patch is mapped to a unit disk, c: P - u, u = (u('), u(2)) E R2.</p>
+<p>[0158]
+Similarly, a similar portion of cortical surface is obtained and mapped to a parametric space, c': P' - u', u' = (u'('), u'(2)) E R2 for template cortical surface (Fig. 14(c) gray color region). If a registration function f: u - u' is found in the parametric space, the registration for the two cortical mesh as P' = c-1 o f o c(P) can be obtained. Ideally, f tries to: (1) minimize the retinotopic visual coordinate differences between the subject and the template, i.e. f wIvM(f) - VTI2 du (w is proportional to the variance R2 ); (2) ensure diffeomorphism; (3) introduces some smoothness. In geometry, diffeomorphism can be quantified by Jacobian, Beltrami coefficient, and so forth.</p>
+<p>[0159]
+Beltrami coefficient is adopted to quantify the diffeomorphism, considering that Beltrami coefficient also quantifies angle deviation. Angle deviation is considered here because retinotopic mapping preserves angle to a considerable extent. Since cortical surface is conformal to visual space to some extent and cortical surface is mapped to the parametric space by conformal mapping, the registration f should also preserve the angle to some extent. The Beltrami coefficient, associated with f is defined as,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.28
+3.02
+</p>
+<p>If Ipg| &lt; 1 then f is diffeomorphic. Considering the diffeomorphic condition, angle minimization, and smoothness requirements, the next is to seek f minimizing the energy in Eq. (19),</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.25
+3.52
+</p>
+<p>
+[0160] <u>Numerical Method</u></p>
+<p>[0161]
+It is costly to minimize energy in Eq. (19) directly as it mixes Beltrami coefficient Itr and mapping function f. An exemplary solution is to alternatively solve with respect to the mapping 
+function and Beltrami coefficient in separate steps. Tools may be utilized to convert the mapping function and Beltrami coefficient back and forth.</p>
+<p>[0162] <u>Beltrami Coefficient</u></p>
+<p>[0163]
+Given the explicit form of function f, it is possible to compute the Beltrami coefficient py according to Eq. (18). In the discrete case, f is interpreted linearly on each triangle. As shown in Fig. 15(a), for u within the triangle, f(u) = aivi + a vj + akVk, where vi = fc(u), v1 = fc(uj), and Vk   fC (uk). The coefficients a, a, ak are called the barycentric coefficients. Specifically, at (similarly for aj and ak) is the area portion of triangle Duujuk relative to Auiujuk, i.e. ai - Area (Auujuk)/Area(Aulujuk). Now it is possible to compute the Beltrami coefficient pf, according to Eq. (18).</p>
+<p>[0164] <u>Linear Beltrami Solver (LBS</u><u>)</u></p>
+<p>[0165]
+The Linear Beltrami Solver (LBS) is introduced to recovery function f = (f (), f (2)) for the given Beltrami coefficient [ = p + iz. According to the definition, i.e. Eq. (19), the following is obtained,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.28
+3.51
+</p>
+<p>After reorganizing Eq. (20) and eliminating f (2), the following is derived,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.63
+6.5
+</p>
+<p>du(1' + Of(')/du(2)), and the divergence V on vector G = AVf(1) = (G(1), G(2)) is defined as V - G = G(1)/au(0 + a(). By solving the partial equation Eq. (21) with certain boundary conditions, f(1) is solved. Similarly, f(2) is solved.</p>
+<p>[0166]
+In the discrete case, gradient operator Vf(') (u) can be written out with the linear interpretation. For discrete divergence V - G operator, it is approximated on each vertex of its dual- cell (a cell includes neighboring triangles' circumcenters). In specific, as shown in Fig. 15(b), in consideration of the center vertex with its neighbors N(un), the method of the present disclosure approximates V - G(uy) as the average of divergence on D, which is written as,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.28
+4.02
+</p>
+<p>According to these approximations, there are a set of linear equations for f  and its neighbors. Finally, Eq. (21) is written in a matrix form and f is solved efficiently.</p>
+<p>[0167] <u>Laplacian Smoothing and Chopping</u> 
+[0168]
+Now it is possible to convert between the mapping function and Beltrami coefficient back and forth. During the registration, the smooth operation is applied to the function f to make the registration smooth, namely the Laplacian smoothing. In specific, for a scalar function g, a smooth version of g' is obtained by solving the following equation,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.27
+3.52
+</p>
+<p>where /I is a constant. Eq. (23) can be efficiently solved by its Euler-Lagrange equation, i.e. (-V - V + 2X1)v = 2At. The smooth process is applied to f () and f (2), separately. For diffeomorphic mapping, the Beltrami coefficient Al &lt; 1. Similarly, if there is a point whose 1 j &gt; 1, the mapping is non-diffeomorphic. To pursue a diffeomorphic mapping, the present method shrinks the magnitude of Imul and keeps the argument arg y (notice p is a complex function), i.e. v' = v/lv, iflvl &gt; 1. This is called Chop.</p>
+<p>[0169] <u>Simple Registration Regardless Diffeomorphism</u></p>
+<p>[0170] To use the features from retinotopic mapping, instead of updating the registration function using scalar features, the present method searches (by brute-force) retinotopic visual coordinates within the nearby cortical surface region If' - f I &lt; ro, and updates the registration by,</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.3
+3.53
+</p>
+<p>
+[0171] <u>Algorithm</u></p>
+<p>[0172]
+The overall registration process is summarized in the following Algorithm 4.</p>
+<p>Algorithm 4: Diffeomorphic Registration 
+</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+0.5
+3.97
+</p><p>Result: Registration function f</p>
+<p>1 begin 2
+Compute the conformal maps ua
+= c, (F. P   ) and UT = CT (FT. PT);</p>
+<p>3
+Take Identical mapping as initial UT = f (uT), :</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+1.63
+4.29
+</p>
+<p>io end</p>
+<p>[0173] <u>Results</u></p>
+<p>[0174] <u>Performance on Synthetic Data</u></p>
+<p>[0175]
+Synthetic subject and template data in the scenario of retinotopic mapping are generated according to the double-sech model. The subject and template data are generated by two different sets of parameters, as shown Figs. 16(a)-(e). The subject data is added with a small, as shown in Fig. 16(d), and big amount, as shown in Fig. 16(d), of uniform noise, respectively. The next step is to calculate the ground truth registration displacement from the subject to the template, as shown in Fig. 16(e). Then several methods are used to register the noisy subject data to the predefined template and get registration displacement. Eventually, the registration error (difference between method's registration displacement and ground truth displacement) is reported in the following Table 4.</p>
+<p>[0176]
+The results indicate that: (1) an exemplary algorithm of the present disclosure achieves the smallest registration error and ensures diffeomorphism; (2) LDDMM and QCHR can also achieve almost diffeomorphic result, however, the method of the present disclosure is more precise; (3) TPS is fast, but its accuracy is poor; (4) LDDMM, D-Demos, and QCHR ensure diffeomorphism for image registration, however, they cannot guarantee overall diffeomorphism when the visual coordinates are considered as intensity of image; and (5) Because of an alternative scheme in an exemplary method of the present disclosure, it usually takes approximately 100 to 150 seconds to register.</p>
+<p>
+SVG
+
+{EMBED HERE}
+
+2.37
+6.51
+</p><p>[0177] <u>HCP Data</u></p>
+<p>
+[0178]
+A registration method of the present disclosure has been applied to the first twenty subjects of the Human Connectome Project (HCP) retinotopic dataset. The original retinotopic result is known. The first step of test is to initialize a template by averaging the subjects' data. Then, all subjects' data are registered to the initial template. Fig. 17 shows one subject's registration process. The curves are the boundaries of V1/V2/V3 inferred from the template. Before application of an exemplary registration method, as shown in Figs. 17(a)-(b), the boundary is not aligned especially in the fovea region. Figs. 17(a)-(b) result is from a registration result which used both the structural as well as some fMRI feature. Figs. 17(c)-(d) illustrate results after application of an exemplary registration method. This means the alignment performed herein can further improve the result by incorporation of more retinotopic information.</p>
+<p>[0179]
+Besides the subject registration, the overall registration cost is defined as the sum of visual coordinate error across subjects in the dataset. After registering all subjects' data, the average of the subjects is obtained and the same method to register the template is applied to the average data. This process is repeated until satisfactory results are obtained. Fig. 18(a)-(c) shows the first, second, and last iteration of the template, respectively. Fig. 18(d) shows the registration cost, overall visual error, is decreased during the process. The decreased overall visual error means the template is improved for human retinotopic maps. The registration method is also applicable in higher visual regions.</p>
+<p>[0180] Sensory Mapping Method for a Human Brain</p>
+<p>[0181]
+In various exemplary embodiments, a sensory mapping method 100 for a human brain is illustrated by the flow chart in Fig. 19. Method 100 comprises flattening the cortical surface of the human brain (step 102). In various embodiments, the flattening may comprise a conformal 
+parametrization method. The flattening may comprise applying harmonic mapping to a unit disk and refining repetitively parametric coordinate for each point on a parameter domain to produce conformal mapping.</p>
+<p>[0182]
+Method 100 further comprises projecting functional imaging data onto the flattened surface (step 104). Method 100 further comprises smoothing the functional imaging data or processing the functional imaging data to produce topological results (step 106). In various embodiments, the smoothing may comprise a topological smoothing method that utilizes a diffeomorphic smoother. In various embodiments, the smoothing may comprise applying Beltrami coefficient to quantify diffeomorphism and modeling the smoothing in an optimization framework.</p>
+<p>[0183]    In various embodiments, the processing may comprise a topology-preserving cortical surface segmentation method. In various embodiments, the processing may comprise segmenting the cortical surface of the human brain by preserving the prior connectivity pattern of the cortical surface areas, decoding the functional imaging data based on at least one topological condition within each cortical area, and repeating the segmentation and decoding.</p>
+<p>[0184]    In various embodiments, method 100 further comprises generating the sensory map (step 108). Method 100 may comprise registering sensory maps across individuals (step 110). In various embodiments, the registering may be diffeomorphic. In various embodiments, the registering may comprise a method that aligns a human brain sensory map of an individual to a predefined template. In some exemplary embodiments, method 100 comprises analyzing the maps in the common space (step 112).</p>
+<p>[0185]
+While the principles of this disclosure have been shown in various embodiments, many modifications of structure, arrangements, proportions, the elements, materials and components, used in practice, which are particularly adapted for a specific environment and operating requirements may be used without departing from the principles and scope of this disclosure. These and other changes or modifications are intended to be included within the scope of the present disclosure.</p>
+<p>[0186]
+The present disclosure has been described with reference to various embodiments. However, one of ordinary skill in the art appreciates that various modifications and changes can be made without departing from the scope of the present disclosure. Accordingly, the specification is to be regarded in an illustrative rather than a restrictive sense, and all such modifications are intended to be included within the scope of the present disclosure. Likewise, benefits, other advantages, and solutions to problems have been described above with regard to various embodiments. However, benefits, advantages, solutions to problems, and any element(s) that may cause any benefit, 
+advantage, or solution to occur or become more pronounced are not to be construed as a critical, required, or essential feature or element.</p>
+<p>[0187] As used herein, the terms "comprises," "comprising," or any other variation thereof, are intended to cover a non-exclusive inclusion, such that a process, method, article, or apparatus that comprises a list of elements does not include only those elements but may include other elements not expressly listed or inherent to such process, method, article, or apparatus. Also, as used herein, the terms "coupled," "coupling," or any other variation thereof, are intended to cover a physical connection, an electrical connection, a magnetic connection, an optical connection, a communicative connection, a functional connection, and/or any other connection. When language similar to "at least one of A, B, or C" or "at least one of A, B, and C" is used in the specification or claims, the phrase is intended to mean any of the following: (1) at least one of A; (2) at least one of B; (3) at least one of C; (4) at least one of A and at least one of B; (5) at least one of B and at least one of C; (6) at least one of A and at least one of C; or (7) at least one of A, at least one of B, and at least one of C.</p>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+Attorney Docket No. 60980.10800
+</body></html>

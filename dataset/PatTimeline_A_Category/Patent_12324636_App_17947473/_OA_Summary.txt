@@ -1,0 +1,9 @@
+Total Office Actions: 2
+Application Number: 17947473
+Patent Number: 12324636
+
+OA Timeline:
+  OA1: 2024-09-26 - Final_Rejection
+  OA2: 2025-04-10 - Final_Rejection
+
+Final Status: Final_Rejection

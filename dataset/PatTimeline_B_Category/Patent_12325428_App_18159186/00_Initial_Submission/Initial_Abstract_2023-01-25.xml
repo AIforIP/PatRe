@@ -1,0 +1,8 @@
+<html><head></head><body>18159186
+
+   
+ABSTRACT
+   
+   <p>A method of monitoring passenger health and comfort onboard a vehicle, including: transmitting a request to connect to a user device associated with a passenger on the vehicle; receiving a connection confirmation from the user device; obtaining, from one or more sensors associated with the user device, passenger health data; receiving from one or more other sensors onboard the vehicle, environmental data; generating, based on the passenger health data and the environmental data, an indicator value for each of a plurality of parameters; determining whether the indicator value for any of the plurality of parameters has reached a threshold value; generating, responsive to determining that the indicator value has reached the threshold value for any of the plurality of parameters, a recommended action; and automatically transmitting the recommended action to a designated device</p>
+
+</body></html>

@@ -1,0 +1,54 @@
+<html><head></head><body><h3>Date: 2024-11-22</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>Upon entry of the present amendment, the status of the claims will be as is shown below.This listing of claims replaces all previous versions and listings of claims in the present application.</p>
+<h1><u>Listing of Claims:</u></h1>
+<br>
+1. (Currently Amended)
+A display control device that performs display control on a first display and a second display of a vehicle, the second display being different from the first display, the display control device comprising:<br>
+<u>a processor</u><u>;</u><u> and</u><br>
+<u>a memory including a program that, when executed by the processor, causes the processor to perform functions, the functions including:</u><del>an obtainer that obtains </del><u>obtaining </u>switching information indicating that switching between driving modes, including an autonomous driving mode and a manual driving mode, is to be performed in the vehicle; and<br>
+<del>a display controller that causes </del><u>causing,</u> before completion of <u>a</u> first switching, (i) the first display to display first information and third information and (ii) the second display to display second information when the switching information indicates that the first switching is to be performed, <u>wherein</u> the first switching <del>being switching </del>is from the autonomous driving mode to the manual driving mode,<br>
+the first information <del>indicating </del><u>indicates </u>that the first switching is to be performed,<br>
+the second information <del>being information for assisting </del><u>assists </u>a user of the vehicle in driving in the manual driving mode, <u>and</u><br>
+the third <u>information, which is displayed on the first display, indicates </u><del>indicating </del>that the se ond <u>display, which is different from the first display, </u>is displaying the second information <u>that assists the user of the vehicle in driving in the manual mode.</u><br>
+2. (Currently Amended)
+The display control device according to 
+The display control device according to <br>
+wherein the third information indicates a position of an area <u>in the second display, which</u> is displaying the second information.<br>
+3. (Currently Amended)
+The display control device according to 
+The display control device according to <br>
+wherein the <del>obtainer </del><u>processor </u>obtains gaze information indicating a gaze of the user,<br>
+the second information includes a plurality of notices, and<br>
+when the second display is displaying the plurality of notices, the <del>display controller</del><u> processor </u>identifies, according to the gaze of the user indicated by the gaze information, a notice displayed in an area at which the gaze of the user is directed and causes the second display to hide the notice identified <u>by the processor.</u><br>
+4. (Currently Amended)
+The display control device according to 
+The display control device according to <br>
+wherein in a period until the completion of the first switching, the <del>display controller</del><u> processor </u>changes a display style of at least one of the first information, the second information, or the third information from a first display style to a second display style.<br>
+<br>
+5. (Currently Amended)
+The display control device according to 
+The display control device according to <br>
+wherein when the <del>obtainer </del><u>processor </u>obtains, before the completion of the first switching, new switching information indicating that <u>a</u> second switching is to be performed, the <del>display controller </del><u>processor </u>causes, before completion of the second switching, the first display to display fourth information indicating that the second switching is to be performed, the second switching being <del>switching </del>from the manual driving mode to the autonomous driving mode.<br>
+6. (Currently Amended)
+The display control device according to 
+The display control device according to <br>
+wherein in a period until the completion of the first switching, the <del>display controller</del><u> processor </u>changes a display style of at least one of the first information, the second information, or the third information from a first display style to a second display style, and<br>
+when the <del>obtainer </del><u>processor </u>obtains, before the completion of the first switching, new switching information indicating that <u>a</u> second switching <del>which is switching </del>from the manual driving mode to the autonomous driving mode is to be performed,before completion of the second switching, the <del>display controller </del><u>processor </u>(i) causes the first display to display fourth information indicating that the second switching is to be performed and (ii) changes [[a]] <u>the</u> display style of at least one of the first information, the second information, or the third information from the second display style to the first display style.<br>
+7. (Currently Amended)
+The display control device according to 
+The display control device according to <br>
+wherein the first display is a head-up display, and<br>
+the second display is <del>a display </del>mounted on a dashboard of the vehicle.<br>
+<br>
+8. (Currently Amended)
+A display control method for performing display control on a first display and a second display of a vehicle, the second display being different from the first display, the display control method comprising:<br>
+obtaining switching information indicating that switching between driving modest, including an autonomous driving mode and a manual driving mode, is to be performed in the vehicle; and<br>
+causing, before completion of <u>a</u> first switching, (i) the first display to display first information and third information and (ii) the second display to display second information when the switching information indicates that the first switching is to be performed, <u>wherein</u> the first switching <del>being switching </del>is from the autonomous driving mode to the manual driving mode,<br>
+the first information <del>indicating </del><u>indicates </u>that the first switching is to be performed,<br>
+the second information <del>being information for assisting </del><u>assists </u>a user of the vehicle in driving in the manual driving mode, <u>and</u><br>
+the third information <del>indicating </del><u>indicates </u>that the second <u>display, which is different from the first display on which the third information is displayed, </u>is displaying the second information<u> that assists the user of the vehicle in driving in the manual mode.</u><br>
+<br>
+9. (Original) A non-transitory computer-readable recording medium having stored there on a program for causing a computer to execute the display control method according to claim 8.
+</body></html>

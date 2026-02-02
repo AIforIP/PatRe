@@ -1,0 +1,94 @@
+<html><head></head><body><h3>Date: 2024-08-13</h3>
+
+<h1>CLAIM AMENDMENTS</h1>
+
+<h1><u>IN T</u><u>H</u><u>E CLA</u><u>IMS</u></h1>
+<p>This listing of the claims will replace all prior versions, and listing, of claims in the application or previous response to office action:1-9.  (Previously Cancelled)</p><br>
+<br>
+10.   (Previously Presented) A method for managing a turn protocol for a person, the method comprising:<br>
+providing the turn protocol for the person supported at least temporarily by a support surface, wherein the turn protocol defines a pressurization measure representing a pressurization of a particular body region and at least one pressurization threshold value,<br>
+receiving, at a processor, sensor signals from one or more sensors,<br>
+identifying, by the processor, based on the received sensor signals, when the person is in a pressurization position corresponding with the particular body region,<br>
+monitoring the pressurization measure over time, including (a) increasing the pressurization measure as a function of a first pressurization period spent on the support surface and in the pressurization position and (b) decreasing the pressurization measure as a function of a first depressurization period spent on the support surface but out of the pressurization position;<br>
+comparing the monitored pressurization measure to the at least one pressurization threshold value over time;<br>
+outputting turn protocol alerts based on the comparisons;<br>
+detecting, based on the received sensor signals, the person has exited the support surface; and<br>
+automatically suspending the turn protocol alerts in response to the detection that the person has exited the support surface.<br>
+<br>
+<br>
+<br>
+11.   (Previously Presented) The method of claim 10, further comprising:<br>
+after detecting the person has exited the support surface, detecting the person has returned to the support surface, based on additional sensor signals from the one or more sensors;<br>
+and automatically resuming the turn protocol alerts in response to the detection that the person has returned to the support surface.<br>
+<br>
+12.   (Withdrawn)    The method of claim   11, further comprising resetting the pressurization measure upon detecting the person has returned to the support surface.<br>
+<br>
+13.   (Currently Amended) The method of claim 11, further comprising:<br>
+continuing to monitor the pressurization measure for a second depressurization period spent off the support surface, between exiting the support surface and returning to the support surface; <u>and</u><br>
+decreasing the pressurization measure as a function of the second depressurization period spent off the support surface[[;]].<br>
+<br>
+14.   (Previously Presented) The method of claim 13, comprising:<br>
+decreasing the pressurization measure at a first depressurization rate for the first depressurization period spent on the support surface but out of the pressurization position; and<br>
+decreasing the pressurization measure at a second depressurization rate for the second depressurization period spent off the support surface;<br>
+wherein the second depressurization period is greater than the first depressurization rate.<br>
+<br>
+15.   (Previously Presented) The method of claim 10, wherein the pressurization measure representing the pressurization of the particular body region comprises a pressurization timer representing a duration spent in the pressurization position.<br>
+<br>
+<br>
+<br>
+16.   (Previously Presented) The method of claim 10, wherein the step of receiving the sensor signals from the one or more sensors comprises receiving the sensor signals from the one or more sensors provided in a sensor device affixed to the person or carried by an article worn by the person.<br>
+<br>
+17.   (Previously Presented) The method of claim 10, wherein the step of receiving the sensor signals from the one or more sensors comprises receiving acceleration data from one or more accelerometers.<br>
+<br>
+18.   (Previously Presented) A method for managing a turn protocol for a person, the method comprising:<br>
+providing the turn protocol for the person supported at least temporarily by a support surface, wherein the turn protocol defines a pressurization measure representing a pressurization of a particular body region and at least one pressurization threshold value,<br>
+receiving, at a processor, sensor signals from one or more sensors,<br>
+identifying, by the processor, based on the received sensor signals, when the person is in a pressurization position corresponding with the particular body region,<br>
+monitoring the pressurization measure over time, including (a) increasing the pressurization measure as a function of a first pressurization period spent on the support surface and in the pressurization position and (b) decreasing the pressurization measure as a function of a first depressurization period spent on the support surface but out of the pressurization position;<br>
+comparing the monitored pressurization measure to the at least one pressurization threshold value over time;<br>
+outputting turn protocol alerts based on the comparisons;<br>
+suspending the turn protocol alerts for a first period during which the person has exited the support surface; and<br>
+resuming the turn protocol alerts for a subsequent second period during which the person has returned to the support surface.<br>
+<br>
+<br>
+<br>
+19.   (Previously Presented) The method of claim 18, further comprising:<br>
+continuing to monitor the pressurization measure for the first period during which the person has exited the support surface; and<br>
+decreasing the pressurization measure as a function of the first period during which the person has exited the support surface.<br>
+<br>
+20.    (Previously Presented)  A system for automated monitoring of a person, comprising:<br>
+a wearable sensor device body configured to be secured to the person or to an article worn by the person;<br>
+at least one sensor provided in the wearable sensor device body and configured to generate sensor signals regarding an orientation of the person; and<br>
+a processor configured to:receive sensor signals from the at least one sensor,<br>
+identify, based on the received sensor signals, when the person is in a pressurization position corresponding with a particular body region,<br>
+monitor the pressurization measure over time, including (a) increasing the pressurization measure as a function of a first pressurization period spent on the support surface and in the pressurization position and (b) decreasing the pressurization measure as a function of a first depressurization period spent on the support surface but out of the pressurization position;<br>
+compare the monitored pressurization measure to the at least one pressurization threshold value over time;<br>
+output turn protocol alerts based on the comparisons;<br>
+detect, based on the received sensor signals, the person has exited the support surface; and<br>
+automatically suspend the turn protocol alerts in response to the detection that the person has exited the support surface.<br>
+<br>
+<br>
+<br>
+21.   (Withdrawn) The system of claim 20, wherein the processor is provided in the wearable sensor device body.<br>
+<br>
+22.   (Previously Presented) The system of claim 20, wherein the processor is remote from the wearable sensor device body and configured to receive the sensor signals from the at least one sensor via wireless communications.<br>
+<br>
+23.   (Previously Presented) The system of claim 20, wherein the processor is configured to:<br>
+after detecting the person has exited the support surface, detect the person has returned to the support surface, based on additional sensor signals from the one or more sensors; and<br>
+resume the turn protocol alerts in response to the detection that the person has returned to the support surface.<br>
+<br>
+24.   (Withdrawn) The system of claim 23, wherein the processor is configured to reset the pressurization measure upon detecting the person has returned to the support surface.<br>
+<br>
+25.   (Currently Amended) The system of claim 23, wherein the processor is configured to:<br>
+continue monitoring the pressurization measure for a second depressurization period spent off the support surface, between exiting the support surface and returning to the support surface; <u>and</u><br>
+decrease the pressurization measure as a function of the second depressurization period spent off the support surface[[;]].<br>
+<br>
+<br>
+<br>
+26.    (Previously Presented) The system of claim 20, wherein the processor is configured to:<br>
+decrease the pressurization measure at a first depressurization rate for the first depressurization period spent on the support surface but out of the pressurization position; and<br>
+decrease the pressurization measure at a second depressurization rate for the second depressurization period spent off the support surface;<br>
+wherein the second depressurization period is greater than the first depressurization rate.<br>
+<br>
+27.    (Previously Presented) The system of claim 20, wherein the pressurization measure representing the pressurization of the particular body region comprises a pressurization timer representing a duration spent in the pressurization position.
+</body></html>

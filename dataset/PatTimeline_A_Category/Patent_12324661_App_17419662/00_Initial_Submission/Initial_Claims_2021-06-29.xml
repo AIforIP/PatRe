@@ -1,0 +1,222 @@
+<html><head></head><body><h3>Date: 2021-06-29</h3>
+<p>Application No.: National Stage of PCT/US 19/69160   Docket No.: 37866-639N01US/2018-330-2 <u>AMENDMENTS TO THE CLAIMS</u></p>
+<br>
+
+<br>
+1.    (Original) A system, comprising: 
+<br>
+a plurality of sensors, each of the plurality of sensors configured to engage with an article on which a first user is positioned, and each of the plurality of sensors configured to measure force; 
+<br>
+a communication module in communication with each of the plurality of sensors, wherein the communication module receives force data transmitted from each of the plurality of sensors; 
+<br>
+and an apparatus comprising: 
+<br>
+at least one data processor; and 
+<br>
+at least one memory storing instructions which, when executed by the at least one data processor, cause the apparatus to at least: 
+<br>
+receive, from the communication module, the force data; 
+<br>
+transform, in response to a change in the force data indicative of a change in a load on the article and based on a determination of a plurality of physiological sources on the article, the force data from each of the plurality of sensors into a corresponding plurality of physiological signals; and 
+<br>
+determine, based on the plurality of physiological signals, a source physiological signal for each of the plurality of physiological sources; 
+<br>
+wherein the determination of the source physiological signal for each of the plurality of physiological sources comprises: 
+<br>
+separating into components each of the plurality of physiological signals, wherein the components correspond to each of the plurality of physiological sources at each of the plurality of sensors; and 
+<br>
+compositing the separated components for each of the plurality of physiological sources, wherein the compositing forms the source physiological signal for each of the plurality of physiological sources. 
+
+<br>
+
+2.    (Original) The system of claim 1, wherein the determination of the source physiological signal for each of the plurality of physiological sources is based on a model for each of the plurality of physiological sources, wherein each model comprises the components, the 
+Application No.: National Stage of PCT/US19/69160
+Docket No.: 37866-639N01US/2018-330-2 components defining a contribution of a respective physiological source to each of the plurality of physiological sources.
+
+<br>
+
+3.
+(Currently Amended) The system of <del>either</del> claim 1<del> or claim</del> <del>2</del>, wherein, based on the determination of the plurality of physiological sources on the article, the physiological signals are based on the force data from at least two of the plurality of sensors.
+
+<br>
+
+4.
+(Canceled)
+
+<br>
+
+5.
+(Currently Amended) The system o<u>f claim</u> <u>1</u><del> any of claims</del> <del>1</del> <del>d</del>, wherein transforming the force data comprises time-domain and/or frequency-domain filtering the force data to obtain a plurality of respiratory signals corresponding to each of the plurality of sensors.
+
+<br>
+
+6.
+(Original) The system of claim 5, wherein a source respiratory signal is determined, based on the plurality of respiratory signals, for each of the plurality of physiological sources, and wherein the execution of the instructions further cause the apparatus to at least: 
+<br>
+identify, from the source respiratory signal for each of the plurality of physiological sources, one or more respiratory parameters. 
+
+<br>
+
+7.
+(Currently Amended) The system o<u>f claim</u> <u>1</u><del> any of claims</del> <del>1</del> <del>6</del>, wherein transforming the force data comprises time-domain and/or frequency-domain filtering the force data to obtain a plurality of ballistocardiogram signals corresponding to each of the plurality of sensors.
+
+<br>
+
+8.
+(Original) The system of claim 7, wherein a source ballistocardiogram signal is determined, based on the plurality of ballistocardiogram signals, for each of the plurality of physiological sources, and wherein the execution of the instructions further cause the apparatus to at least: 
+<br>
+identify, from the source ballistocardiogram signal for each of the plurality of physiological sources, one or more ballistocardiogram parameters. 
+
+<br>
+
+9.
+(Currently Amended) The system o<u>f claim</u> <u>1</u><del> any of claims</del> <del>1</del> <del>8</del>, wherein the change in the force data indicative of the change in the load on the article is determined based on identifying the change in the force data greater than a predefined threshold of force for a predefined duration threshold.
+
+<p>
+Application No.: National Stage of PCT/US 19/69160   Docket No.: 37866-639N01US/2018-330-2</p>
+<br>
+
+<br>
+10.   (Currently Amended) The system o<u>f claim</u> <u>1</u><del> any of claims</del> <del>1</del> <del>9</del>, wherein the determination of the plurality of physiological sources on the article is based on identification of alterations in the physiological signals transformed from the force data.
+
+<br>
+
+<br>
+11-16. (Canceled)
+
+1215
+<br>
+<br>
+
+<br>
+17.   (Original) A method, comprising: 
+<br>
+receiving, by a remote processing device and from a communication module in communication with a plurality of sensors, force data, wherein each of the plurality of sensors is configured to engage with a member of an article on which a first user is positioned, and further wherein each of the plurality of sensors is configured to measure force; 
+<br>
+transforming, by the remote processing device and in response to a change in the force data indicative of a change in a load on the article and based on a determination of a plurality of physiological sources on the article, the force data from each of the plurality of sensors into a corresponding plurality of physiological signals; and 
+<br>
+determining, by the remote processing device and based on the plurality of physiological signals, a source physiological signal for each of the plurality of physiological sources; 
+<br>
+wherein the determination of the source physiological signal for each of the plurality of physiological sources comprises: 
+<br>
+separating into components each of the plurality of physiological signals, wherein the components correspond to each of the plurality of physiological sources at each of the plurality of sensors; and 
+<br>
+compositing the separated components for each of the plurality of physiological sources, wherein the compositing forms the source physiological signal for each of the plurality of physiological sources. 
+
+<br>
+
+<br>
+18.   (Original) The method of claim 17, wherein the determination of the source physiological signal for each of the plurality of physiological sources is based on a model for each of the plurality of physiological sources, wherein each model comprises the components, the components defining a contribution of a respective physiological source to each of the plurality of physiological sources.
+
+<p>
+Application No.: National Stage of PCT/US 19/69160    Docket No.: 37866-639N01US/2018-330-2</p>
+<br>
+
+<br>
+19.   (Currently Amended) The method of <del>either</del> claim 17<del> or claim</del> <del>18</del>, wherein, based on the determination of the plurality of physiological sources on the article, the physiological signals are based on the force data from at least two of the plurality of sensors.
+
+<br>
+
+<br>
+20.    (Canceled)
+
+<br>
+
+<br>
+21.    (Currently Amended) The method o<u>f claim</u> <u>17</u><del> any of claims</del> <del>17</del> <del>20</del>, wherein transforming the force data comprises time-domain and/or frequency-domain filtering the force data to obtain a plurality of respiratory signals corresponding to each of the plurality of sensors.
+
+<br>
+
+<br>
+22.    (Original) The method of claim 21, wherein a source respiratory signal is determined, based on the plurality of respiratory signals, for each of the plurality of physiological sources, and wherein the method further comprises: 
+<br>
+identifying, from the source respiratory signal for each of the plurality of physiological sources, one or more respiratory parameters. 
+
+<br>
+
+<br>
+23.    (Currently Amended) The method o<u>f claim</u> <u>17</u><del> any of claim</del><del>s</del> <del>17</del> <del>22</del>, wherein transforming the force data comprises time-domain and/or frequency-domain filtering the force data to obtain a plurality of ballistocardiogram signals corresponding to each of the plurality of sensors.
+
+<br>
+
+<br>
+24.    (Original) The method of claim 23, wherein a source ballistocardiogram signal is determined, based on the plurality of ballistocardiogram signals, for each of the plurality of physiological sources, and wherein the method further comprises: 
+<br>
+identifying, from the source ballistocardiogram signal for each of the plurality of physiological sources, one or more ballistocardiogram parameters. 
+
+<br>
+
+<br>
+25.    (Currently Amended) The method o<u>f claim</u> <u>17</u><del> any of claims</del> <del>17</del> <del>24</del>, wherein the change in the force data indicative of the change in the load on the article is determined based on identifying the change in the force data greater than a predefined threshold of force for a predefined duration threshold.
+
+<p>
+Application No.: National Stage of PCT/US 19/69160   Docket No.: 37866-639N01US/2018-330-2</p>
+<br>
+
+<br>
+26.   (Currently Amended) The method o<u>f claim</u> <u>17</u><del> any of claims</del> <del>17</del> <del>25</del>, wherein the determination of the plurality of physiological sources on the article is based on identification of alterations in the physiological signals transformed from the force data.
+
+<br>
+
+<br>
+27-30. (Canceled)
+
+2829
+<br>
+<br>
+
+<br>
+31.   (Original) An apparatus, comprising: 
+<br>
+at least one data processor; and 
+<br>
+at least one memory storing instructions which, when executed by the at least one data processor, cause the apparatus to at least: 
+<br>
+receive, from a communication module in communication with a plurality of sensors, force data, wherein each of the plurality of sensors is configured to engage with a member of an article on which a first user is positioned, and further wherein each of the plurality of sensors is configured to measure force; 
+<br>
+transform, in response to a change in the force data indicative of a change in a load on the article and based on a determination of a plurality of physiological sources on the article, the force data from each of the plurality of sensors into a corresponding plurality of physiological signals; and 
+<br>
+determine, based on the plurality of physiological signals, a source physiological signal for each of the plurality of physiological sources; 
+<br>
+wherein the determination of the source physiological signal for each of the plurality of physiological sources comprises: 
+<br>
+separating into components each of the plurality of physiological signals, wherein the components correspond to each of the plurality of physiological sources at each of the plurality of sensors; and 
+<br>
+compositing the separated components for each of the plurality of physiological sources, wherein the compositing forms the source physiological signal for each of the plurality of physiological sources. 
+
+<br>
+
+<br>
+32-44. (Canceled)
+
+3343
+<br>
+<br>
+
+<br>
+45.   (Original) A non-transitory computer-readable storage medium including program code, which when executed by at least one data processor, causes operations comprising: 
+
+Application No.: National Stage of PCT/US 19/69160   Docket No.: 37866-639N01US/2018-330-2 receiving, by a remote processing device and from a communication module in communication with a plurality of sensors, force data, wherein each of the plurality of sensors is configured to engage with a member of an article on which a first user is positioned, and further wherein each of the plurality of sensors is configured to measure force; 
+<br>
+transforming, by the remote processing device and in response to a change in the force data indicative of a change in a load on the article and based on a determination of a plurality of physiological sources on the article, the force data from each of the plurality of sensors into a corresponding plurality of physiological signals; and 
+<br>
+determining, by the remote processing device and based on the plurality of physiological signals, a source physiological signal for each of the plurality of physiological sources; 
+<br>
+wherein the determination of the source physiological signal for each of the plurality of physiological sources comprises: 
+<br>
+separating into components each of the plurality of physiological signals, wherein the components correspond to each of the plurality of physiological sources at each of the plurality of sensors; and 
+<br>
+compositing the separated components for each of the plurality of physiological sources, wherein the compositing forms the source physiological signal for each of the plurality of physiological sources. 
+
+<br>
+
+<br>
+46-47. (Canceled) 
+<br>
+Page 3 of 9
+Page 4 of 9
+Page 5 of 9
+Page 6 of 9
+Page 7 of 9
+Page 8 of 9
+</body></html>

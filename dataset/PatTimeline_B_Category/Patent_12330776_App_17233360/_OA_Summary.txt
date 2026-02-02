@@ -1,0 +1,11 @@
+Total Office Actions: 4
+Application Number: 17233360
+Patent Number: 12330776
+
+OA Timeline:
+  OA1: 2022-12-30 - Office_Action
+  OA2: 2023-06-22 - Office_Action
+  OA3: 2024-01-05 - Office_Action
+  OA4: 2024-05-15 - Final_Rejection
+
+Final Status: Final_Rejection

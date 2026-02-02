@@ -1,0 +1,8 @@
+<html><head></head><body>18151826
+
+   
+ABSTRACT
+   
+   <p>A method used for deriving a control variable for lateral guidance of a motor vehicle by means of images of at least one camera of the motor vehicle, wherein the at least one camera captures images of a roadway. A more precise and/or resource-saving derivation of the control variable, and thus lateral guidance, of the motor vehicle is achieved by projecting a traffic lane to be followed as well as a travel trajectory of the motor vehicle onto the images, and by a control variable for lateral guidance of the motor vehicle being derived by comparing the traffic lane projected onto the images with the travel trajectory projected onto the images. A motor vehicle in which the method is performed is also described.</p>
+
+</body></html>

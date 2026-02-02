@@ -1,0 +1,56 @@
+<html><head></head><body><h3>Date: 2025-01-23</h3>
+
+<h1><u>IN THE CLAIMS</u></h1>
+<p>Please amend claim 47 as follows:</p><br>
+<br>
+1-46. (Cancelled)245<br>
+<br>
+<br>
+47. (Currently Amended) An apparatus, comprising:a positioning element sized and shaped to be capable of registering with the size and shape of a particular anatomic location on a chest of a patient, such that the positioning element can be repeatedly and stably positionable on the body of the patient with respect to the anatomic location;<br>
+a reference structure connected to or integrated with the positioning element, the reference structure having known spatial characteristics and being positionable with respect to the neck of the patient by positioning of <u>the positioning element </u><del>a-</del><del>loeater</del><del> object</del>;<br>
+an imaging assembly coupled to and spaced from the positioning element, the imaging assembly configured to capture imaging data of at least a portion of a neck of the patient and at least a portion of the reference structure; and<br>
+a processor operatively coupled to the imaging assembly, the processor configured to determine a jugular venous pressure (JVP) height relative to an anatomical feature of the patient based on the imaging data and the known spatial characteristics of the reference structure.<br>
+<br>
+48. (Previously Presented) The apparatus of claim 47, wherein the positioning element includes the reference structure.<br>
+<br>
+49. (Previously Presented) The apparatus of claim 47, wherein the positioning element includes a spherical portion that is configured to fit within a suprasternal notch of the patient.<br>
+<br>
+50. (Previously Presented) The apparatus of claim 47, wherein the positioning element is a first positioning element, the apparatus further comprising a second positioning element configured to rest against a portion of the chest of the patient.<br>
+<br>
+51. (Previously Presented) The apparatus of claim 47, wherein the positioning element, the reference structure, and the imaging assembly are disposed on a sensing device, and the processor is disposed within a base,the base including a surface including a set of structures configured to receive a portion of the sensing device and to stably support the sensing device on the surface of the base.<br>
+<br>
+52. (Previously Presented) The apparatus of claim 47, wherein the imaging assembly is coupled to the positioning element such that, when the positioning element is positioned within the anatomic location, the imaging assembly can be positioned to capture the imaging data of the at least the portion of the neck of the patient and the portion of the reference structure.<br>
+<br>
+53. (Previously Presented) The apparatus of claim 47, wherein the imaging assembly includes a near infrared (NIR) light source configured to emit NIR light toward the neck of the patient and a NIR camera configured to capture NIR light reflected by the neck of the patient.<br>
+<br>
+54. (Previously Presented) The apparatus of claim 47, wherein the imaging assembly includes first and second cameras, each of the first and second cameras configured to capture light in different wavelength ranges.<br>
+<br>
+55. (Original) The apparatus of claim 54, wherein the first camera is configured to capture optical light, and the second camera is configured to capture NIR light.<br>
+<br>
+56. (Previously Presented) The apparatus of claim 47, wherein the imaging assembly includes first and second cameras configured to capture light in the same wavelength ranges to provide stereovision.<br>
+<br>
+57. (Previously Presented) The apparatus of claim 47, wherein the processor is configured to determine the JVP height relative to the anatomical feature of the patient by: determining, based on the portion of the reference structure captured in the image data, a conversion between pixels of the imaging data and a physical measure of distance.<br>
+<br>
+58. (Previously Presented) The apparatus of claim 47, wherein the processor is configured to determine the JVP height relative to the anatomical feature of the patient by:determining, based on the portion of the reference structure captured in the image data, a conversion between pixels of the imaging data and a physical measure of distance;<br>
+determining, from the imaging data, a highest point of a pulsation of an internal jugular vein (IJV) of the patient; and<br>
+determining, based on at least the conversion between the pixels of the imaging data and the physical measure of distance, a vertical height between a sternal angle and the highest point of the pulsation of the IJV of the patient.<br>
+<br>
+59. (Previously Presented) The apparatus of claim 58, further comprising at least one of an accelerometer or a gyroscope configured to measure an orientation of the neck of the patient relative to a horizontal plane,wherein the determination of the vertical height is further based on an angle of inclination of the neck of the patient as determined based on the measured orientation of the neck.<br>
+<br>
+60. (Previously Presented) The apparatus of claim 47, wherein the processor is configured to determine the JVP of the patient by:<br>
+determining, based on a static image of the portion of the neck of the patient and a portion of the apparatus, an angle of a longitudinal axis of the neck relative to an angle of the apparatus;<br>
+determining, from the imaging data, a highest point of pulsation of an internal jugular vein (IJV) of the patient; and<br>
+determining, based on the angle of the longitudinal axis of the neck and highest point of pulsation of the IJV, a vertical height between a sternal angle and the highest point of the pulsation of the IJV of the patient.<br>
+<br>
+61. (Previously Presented) The apparatus of claim 47, further comprising an actuator configured to be actuated by the patient to cause the processor to activate the imaging assembly to capture the imaging data.<br>
+<br>
+62. (Previously Presented) The apparatus of claim 47, further comprising one or more sensors including at least one of: an electrocardiogram sensor, a photoplethysmography sensor, an electrodermal activity sensor, or a temperature sensor.<br>
+<br>
+63. (Previously Presented) The apparatus of claim 62, wherein the one or more sensors are disposed on a body coupled to the imaging assembly and the positioning element such that, when the patient grips the body for positioning of the positioning element relative to the anatomic location, a portion of a hand of the patient is in contact with the one or more sensors to facilitate measurement by the one or more sensors.<br>
+<br>
+64. (Previously Presented) The apparatus of claim 62, wherein the one or more sensors are disposed on a body coupled to the imaging assembly and the positioning element such that, when the positioning element is positioned relative to the anatomic location, the one or more sensors are in contact with a skin of the patient to facilitate measurement by the one or more sensors.<br>
+<br>
+65. (Previously Presented) The apparatus of claim 47 further comprising a second reference element that is physically separate from the positioning element, wherein the second reference element is positionable such that the imaging data captured by the imaging assembly includes at least a portion of the second reference element.<br>
+<br>
+66. (Previously Presented) The apparatus of claim 65 wherein the second reference element is positionable on the neck of the patient.
+</body></html>

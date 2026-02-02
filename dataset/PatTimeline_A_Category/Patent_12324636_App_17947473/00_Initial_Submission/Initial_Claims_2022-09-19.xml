@@ -1,0 +1,37 @@
+<html><head></head><body><h3>Date: 2022-09-19</h3>
+ WHAT IS CLAIMED IS:
+<br>
+
+1.
+A transducer-activation system comprising: 
+<br>
+a data processing device system; 
+<br>
+an input-output device system communicatively connected to the data processing device system; 
+<br>
+and a memory device system communicatively connected to the data processing device system and storing a program executable by the data processing device system, the program comprising: 
+<br>
+graphical interface instructions configured to cause the input-output device system to display a 
+<br>
+graphical interface including a graphical representation of at least some of a plurality of graphical elements, each of the plurality of graphical elements respectively associated with a respective one of a plurality of transducer sets, each respective transducer set including at least one of a plurality of transducers included as part of a transducer-based device, and each respective transducer set having at least one different transducer than another of the other transducer sets; 
+<br>
+input instructions configured to cause reception of transducer data via the input-output device system, the transducer data indicating data acquired by the plurality of transducers; 
+<br>
+identification instructions configured to cause identification of ablation-ready transducers of the plurality of transducers as transducers that are adjacent a region of space deemed, based at least on an analysis of the transducer data, acceptable for ablation, and not-ablation-ready transducers of the plurality 
+<br>
+of transducers as transducers that are adjacent a region of space deemed, based at least on the analysis of the transducer data, not acceptable for ablation, wherein the graphical interface includes a first set of visual characteristics associated with the graphical elements that are associated with each of the transducers sets comprising the ablation-ready transducers, and includes a second set of visual characteristics associated with the graphical elements that are associated with the transducer sets comprising the not-ablation-ready transducers, the first set of visual characteristics being different than the second set of visual characteristics; 
+<br>
+ablation request instructions configured to cause reception of an ablation request from the input- output device system, the ablation request configured to request ablation by at least some of the plurality of transducers; 
+<br>
+activation instructions configured to, in response to receiving the ablation request from the input- output device system, cause energy from an energy source device system to be delivered to each of the plurality of ablation-ready transducers in the at least some of the plurality of transducers; and 
+
+ non-activation instructions configured to cause prevention of delivery of energy from the energy source device system to each of the plurality of not-ablation-ready transducers.
+121
+122
+5
+10
+15
+20
+25
+30
+</body></html>

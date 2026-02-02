@@ -1,0 +1,267 @@
+<html><head></head><body>18650650
+
+   
+   
+DISTRIBUTED PROPULSION SYSTEM
+   
+   
+CROSS-REFERENCE TO RELATED APPLICATIONS
+<p>
+[0001]
+ This application is a continuation application of U.S. Patent Application Serial No. 18/168,257, filed February 13, 2023, which is a continuation application of U.S. Patent Application Serial No. 16/717,524, filed December 12, 2019, which is a continuation application of U.S. Patent Application Serial No. 15/593,458, filed May 12, 2017, now U.S. Patent No. 10,556,680, which claims priority to U.S. Provisional Application Serial No. 62/336,290, filed May 13, 2016 entitled “Distributed Propulsion”, U.S. Provisional Application Serial No. 62/336,432, filed May 13, 2016 entitled “Forward Folding Rotor Blades”, U.S. Provisional Application Serial No. 62/336,363, filed May 13, 2016 entitled “Vertical Take Off and Landing Closed Wing Aircraft”, U.S. Provisional Application Serial No. 62/336,420, filed May 13, 2016 entitled “Distributed Propulsion System for Vertical Take Off and Landing Closed Wing Aircraft”, and U.S. Provisional Application Serial No. 62/336,465, filed May 13, 2016 entitled “Modular Fuselage Sections for Vertical Take Off and Landing Distributed Airframe Aircraft”, the entire contents of which are incorporated herein by reference.</p>
+<p>STATEMENT OF FEDERALLY FUNDED RESEARCH</p>
+<p>
+[0002]
+ None. </p>
+   
+   
+TECHNICAL FIELD OF THE INVENTION
+<p>
+[0003]
+ The present invention relates in general to the field of power units for aircraft, and more particularly, to a distributed propulsion system for use with aircraft.</p>
+   
+   BACKGROUND OF THE INVENTION
+   <p>
+[0004]
+ Without limiting the scope of the invention, its background is described in connection with aircraft.  Based on a classical helicopter configuration improvements in helicopter productivity have been, at best, only incremental.  A classical helicopter configuration includes certain fundamental limitations that hamper improvements, e.g., retreating blade stall, blade loading, advancing blade tip Mach number, and the large increases in power that are required with increased speed.  These physical limitations contribute to increased vibration resulting poor ride quality and reduced component life.  In addition, certain physical limitations lead to increased size and weight.</p>
+   
+   <p>
+[0005]
+ The classical approach to this problem is to develop helicopters in which these configuration limitations are addressed via ancillary devices, such as wings, additional engines, and propellers.  Incorporation of these approaches, due to their increased complexity and weight, reduces the economic load carrying capability of the helicopter and raises questions as to the safety of operation of the helicopter and its long term reliability.  Although the development of compound helicopters with wings, additional engines, and propellers represents significant improvements in helicopter productivity, considerable shortcomings remain.</p>
+   
+SUMMARY OF THE INVENTION
+<p>
+[0006]
+ The present invention includes a distributed propulsion system for a craft that comprises a frame, a plurality of hydraulic or electric motors disposed within or attached to the frame in a distributed configuration; a propeller operably connected to each of the hydraulic or electric motors, a source of hydraulic or electric power disposed within or attached to the frame and coupled to each of the disposed within or attached to the frame, wherein the source of hydraulic or electric power provides sufficient energy density for the craft to attain and maintain operations of the craft, a controller coupled to each of the hydraulic or electric motors, and one or more processors communicably coupled to each controller that control an operation and speed of the plurality of hydraulic or electric motors.  In one aspect, the hydraulic or electric motors are selected based on at least one of aerodynamics, propulsive efficiency, structural efficiency, aeroelasticity, or weight of the craft.  The craft can further comprise one or more control surfaces on or about the craft.  The craft can be an aircraft, which can be manned and/or unmanned.  In one example, the craft is a helicopter or a vertical take off and landing aircraft, and the helicopter can be a vertical take off and landing aircraft does not comprise a rotor cyclic control.  In another aspect, the source of hydraulic or electric power is one or more batteries, a piston engine, or a turboshaft engine.  In another aspect, the craft is a closed wing aircraft.  The&nbsp;plurality of hydraulic or electric motors comprise 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, or 25 hydraulic or electric motors.  The propeller can be at least one of a variable pitch, a constant pitch, a rear folding, or a forward folding propeller.  The&nbsp;hydraulic motors can be defined further as a variable displacement hydraulic engine, wherein a speed and a torque are controlled by changing a displacement of the variable displacement hydraulic engine.  The hydraulic or electric motors can be self-cooling.  In another aspect, the electric pumps are piezo-hydraulic motors.  In another aspect, the source of hydraulic or electric power comprises a turboshaft engine or an internal combustion engine, by a variable displacement hydraulic pump, or generator connected between the turboshaft engine or the internal combustion engine and the plurality of hydraulic or electric motors.  In another aspect, the source of hydraulic or electric power comprises a battery that is connected to the plurality of hydraulic or electric motors. </p>
+   
+   
+BRIEF DESCRIPTION OF THE DRAWINGS
+<p>
+[0007]
+ For a more complete understanding of the features and advantages of the present invention, reference is now made to the detailed description of the invention along with the accompanying figures and in which:</p>
+<p>
+[0008]
+ FIG. 1 shows a schematic of a hybrid turboshaft engine hydraulic distributed propulsion system of the present invention.  </p>
+<p>
+[0009]
+ FIG. 2 shows a schematic of a hybrid internal combustion engine - engine hydraulic distributed propulsion system of the present invention.  </p>
+<p>
+[0010]
+ FIG. 3 shows a schematic of a hybrid electric hydraulic distributed propulsion system of the present invention.  </p>
+<p>
+[0011]
+ FIG. 4 shows a schematic of a hybrid electric hydraulic with a piezo-electric pump distributed propulsion system of the present invention.  </p>
+<p>
+[0012]
+ FIG. 5A is a perspective view of a closed wing aircraft in accordance with one embodiment of the present invention; </p>
+<p>
+[0013]
+ FIG. 5B is a front elevation view of the closed wing aircraft of FIG. 5A;</p>
+<p>
+[0014]
+ FIG. 5C is a rear elevation view of the closed wing aircraft of FIG. 5A;</p>
+<p>
+[0015]
+ FIG. 5D is a right side elevation view of the closed wing aircraft of FIG. 5A;</p>
+<p>
+[0016]
+ FIG. 5E is a left side elevation view of the closed wing aircraft of FIG. 5A;</p>
+<p>
+[0017]
+ FIG. 5F is a top plan view of the closed wing aircraft of FIG. 5A;</p>
+<p>
+[0018]
+ FIG. 5G is a bottom plan view of the closed wing aircraft of FIG. 5A;</p>
+<p>
+[0019]
+ FIG. 6A depicts the closed wing aircraft of FIG. 1A in stationary flight (hover mode including vertical take off and landing) in accordance with one embodiment of the present invention;</p>
+<p>
+[0020]
+ FIG. 6B depicts the closed wing aircraft of FIG. 1A in transition from stationary flight to forward flight and vice versa in accordance with one embodiment of the present invention;</p>
+<p>
+[0021]
+ FIG. 6C depicts the closed wing aircraft of FIG. 1A in forward flight in accordance with one embodiment of the present invention;</p>
+<p>
+[0022]
+ FIG. 7A is a perspective view of a closed wing aircraft in accordance with one embodiment of the present invention in which the rotors on the spokes are deployed and the rotors on the closed wing are folded forward; </p>
+<p>
+[0023]
+ FIG. 7B is a front elevation view of the closed wing aircraft of FIG. 7A;</p>
+<p>
+[0024]
+ FIG. 7C is a rear elevation view of the closed wing aircraft of FIG. 7A;</p>
+<p>
+[0025]
+ FIG. 7D is a right side elevation view of the closed wing aircraft of FIG. 7A;</p>
+<p>
+[0026]
+ FIG. 7E is a left side elevation view of the closed wing aircraft of FIG. 7A;</p>
+<p>
+[0027]
+ FIG. 7F is a top plan view of the closed wing aircraft of FIG. 7A;</p>
+<p>
+[0028]
+ FIG. 7G is a bottom plan view of the closed wing aircraft of FIG. 7A;</p>
+<p>
+[0029]
+ FIG. 8 is a perspective view of a closed wing aircraft in accordance with one embodiment of the present invention in which the rotors on the spokes are deployed and the rotors on the closed wing are folded backward;</p>
+<p>
+[0030]
+ FIG. 9A is a perspective view of a closed wing aircraft having a sinusoidal-shaped circular wing in accordance with one embodiment of the present invention; </p>
+<p>
+[0031]
+ FIG. 9B is a front elevation view of the closed wing aircraft of FIG. 9A;</p>
+<p>
+[0032]
+ FIG. 9C is a rear elevation view of the closed wing aircraft of FIG. 9A;</p>
+<p>
+[0033]
+ FIG. 9D is a right side elevation view of the closed wing aircraft of FIG. 9A;</p>
+<p>
+[0034]
+ FIG. 9E is a left side elevation view of the closed wing aircraft of FIG. 9A;</p>
+<p>
+[0035]
+ FIG. 9F is a top plan view of the closed wing aircraft of FIG. 9A;</p>
+<p>
+[0036]
+ FIG. 9G is a bottom plan view of the closed wing aircraft of FIG. 9A;</p>
+<p>
+[0037]
+ FIG. 10 shows a schematic of an electric distributed propulsion system in accordance with one embodiment of the present invention; and</p>
+<p>
+[0038]
+ FIG. 11 shows a schematic of three or more propellers coupled to one or more engines or motors in accordance with one embodiment of the present invention. </p>
+   
+   DETAILED DESCRIPTION OF THE INVENTION
+   <p>
+[0039]
+ While the making and using of various embodiments of the present invention are discussed in detail below, it should be appreciated that the present invention provides many applicable inventive concepts that can be embodied in a wide variety of specific contexts.  The&nbsp;specific embodiments discussed herein are merely illustrative of specific ways to make and use the invention and do not delimit the scope of the invention.</p>
+   <p>
+[0040]
+ To facilitate the understanding of this invention, a number of terms are defined below.  Terms defined herein have meanings as commonly understood by a person of ordinary skill in the areas relevant to the present invention.  Terms such as “a”, “an” and “the” are not intended to refer to only a singular entity, but include the general class of which a specific example may be used for illustration.  The terminology herein is used to describe specific embodiments of the invention, but their usage does not delimit the invention, except as outlined in the claims. 
+   </p>
+   <p>
+[0041]
+ In aerospace technology, distributed propulsion is defined as distributing the airflows and forces generated by the propulsion system about an aircraft in a way that improves the vehicle 's aerodynamics, propulsive efficiency, structural efficiency, and aeroelasticity.  While&nbsp;designs have been proposed in which airplanes include a series of small engines or motors along the surfaces and on vertical lift platforms by the assembly of a matrix of small engines or motors.  However, the complexity and weight of installing large numbers of conventional turbine or internal combustion engines to achieve distributed propulsion is impractical for all but very large aircraft.  For example, mechanically interconnecting multiple propellers using gearboxes and shafts to achieve distributed propulsion can reduce weight, but it sacrifices the ability to independently control propellers or fans to provide thrust vectoring for control and aerodynamic efficiency.</p>
+   
+   <p>
+[0042]
+ While many applications of electric motors to achieve practical distributed propulsion has attracted major interest by NASA, DARPA, and the aerospace industry, the power density necessary to attain and maintain flight using electric motors and batteries has simply not been feasible.  While higher energy density batteries are in development, pure electric propulsion in combination with distributed propulsion, while attractive, has not been attained for anything except small drones and toys.  </p>
+   <p>
+[0043]
+ For example, current Li-ion battery technology is capable of achieving an energy density that would require an impractically heavy Li-ion battery.  Thus, using current battery technology, electric distributed propulsion development requires the application of electric generators driven by turbo shaft engines.  Replacing battery technology with generators driven by turbo shaft engines reduces system weight only marginally.</p>
+   <p>
+[0044]
+ With the adoption of generators driven by turbo shaft engines in place of battery technology, the remaining major obstacle to achieving practical electric distributed propulsion is electric motor and associated controller technology.  However, current electric motor technology and performance falls short of meeting the requirements for supporting practical application of distributed electric propulsion.  As electric motor power and torque output is increased beyond the requirements of small drones to levels suitable for larger aircraft, the issues of power density (Watts of shaft power generated per kilogram of weight), cooling and lubrication lead to impractical increases in weight.  Further, even when analyzing the performance of the most advanced electric motors the additional weight for cooling systems, lubrication systems, or required electric power controllers that regulate motor speed and torque are impractical or lead to no significant improvements in overall aircraft performance.  </p>
+   <p>
+[0045]
+ The present invention can use variable displacement hydraulic motors, with the advantage that speed and torque are controlled by changing the displacement of the motor.  This&nbsp;is equivalent to having a variable speed transmission in a gearbox or being able to instantly change the size of an electric motor to suit required power demands.  Changing the motor displacement requires very little power and can be achieved using servo valve adding very little weight.  This added weight to control the hydraulic motor is independent of the rated power on the motor.  When the added weight for the hydraulic motor controllers is added to the motor weight a significant improvement was obtained.  Further, no additional weight for hydraulic motor lubrication or motor and controller cooling is required for hydraulic motors, as these are already part of the motor weight.</p>
+   
+   <p>
+[0046]
+ Further, when one compares the weight and volume of hydraulic tubing versus electrical cable required for transmission of power at the magnitudes required for larger aircraft, a benefit is also obtained, or, the values are basically equivalent.  Thus, the hydraulic distributed propulsion system of the present invention is lighter than the most efficient, equivalent electric system.  </p>
+   <p>
+[0047]
+ Thus, the present invention takes advantage of the best cost-to-benefit ratio for use of hydraulic and electric motor propulsion.  For example, the present invention uses the best of the possible high power systems performance aspects, including but not limited to, weight motor and controller, envelope for motor and controller installation, supplemental motor cooling required, supplemental motor lubrication required, high motor torque and low rotational inertia, motor reliability (not including controller), weight for transmission of power, and total system efficiency using engine. </p>
+   <p>
+[0048]
+ The invention addresses the limitations of electric motor, generator and battery technology as applied to the field of distributed propulsion for aircraft.  By using variable displacement hydraulic pump and motor technology, distributed propulsion for larger aircraft is practical.  In variable displacement hydraulic motors, speed and torque is controlled by changing the displacement of the motor.  This is equivalent to having a variable speed transmission in a gearbox or being able to instantly change the size of an electric motor to suit required power demands.  Compared with controlling electric motor speed using Pulse Width Modulation, changing hydraulic motor displacement requires very little power and negligible weight.  Shown in FIGS. 1 to 4 are schematics describing the various preferred implementations of hydraulic distributed propulsion.</p>
+   <p>
+[0049]
+ FIG. 1 shows a schematic of a hybrid turboshaft engine hydraulic distributed propulsion system 10 of the present invention.  In the hybrid turboshaft engine hydraulic distributed propulsion system 10 a source of fuel 12 is connected to fuel line 14 that feeds a turboshaft engine 16 that generates a mechanical force that is transmitted by a mechanical shaft 18 that is connected to a variable displacement hydraulic pump 20.  The variable displacement hydraulic pump 20 is connected to, and provides hydraulic power to, hydraulic lines 22.  The hydraulic fluid in hydraulic lines 22 are connected to hydraulic controllers 24a-24f, which are connected mechanically by mechanical shafts 19a-19f to the variable displacement hydraulic motors 26a-26f, respectively, each of which is depicted being connected by a mechanical shafts 21a-21f each to propeller 28a-28f, respectively.  This schematic shows the Hybrid Turboshaft Engine Hydraulic distributed propulsion system 10 as having six (6) hydraulic controllers 24a-24f, and six (6) variable displacement hydraulic motors 26a-26f.  However, the skilled artisan will recognize that the present invention can include a smaller or larger number of variable displacement hydraulic motors and propellers, for example 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or more.  In this embodiment, the fuel is converted into mechanical power/energy via the turboshaft engine 16, which provides the hydraulic power that drives the variable displacement hydraulic motors 26a-26f and therefore the propellers 28a-28f.</p>
+   
+   <p>
+[0050]
+ FIG. 2 shows a schematic of a hybrid internal combustion engine - engine hydraulic distributed propulsion system 30 of the present invention.  In this embodiment, the hybrid internal combustion engine - engine hydraulic distributed propulsion system 30 uses a source of fuel 12 that is connected to fuel line 14 that feeds an internal combustion engine 32 that generates a mechanical force that is transmitted by a mechanical shaft 18 that is connected to a variable displacement hydraulic pump 20.  The variable displacement hydraulic pump 20 is connected to, and provides hydraulic power to, hydraulic lines 22.  The hydraulic fluid in hydraulic lines 22 is connected to hydraulic controllers 24a-24f, which are connected via shafts 19a-19f to variable displacement hydraulic motors 26a-26f, respectively, each of which is depicted being connected by a mechanical shafts 21a-21f each to propeller 28a-28f, respectively.  This&nbsp;schematic shows the Hybrid Internal Combustion Engine - Engine Hydraulic distributed propulsion system 30 as having six (6) hydraulic controllers 24a-24f, and six (6) variable displacement hydraulic motors 26a-26f.  However, the skilled artisan will recognize that the present invention can include a smaller or larger number of variable displacement hydraulic motors and propellers, for example 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or more.  In this embodiment, the fuel is converted into mechanical power/energy via the internal combustion engine 32, which provides the hydraulic power that drives the variable displacement hydraulic motors 26a-26f and therefore the propellers 28a-28f.</p>
+   
+   <p>
+[0051]
+ FIG. 3 shows a schematic of a hybrid electric hydraulic distributed propulsion system 40 of the present invention.  In this embodiment, the hybrid electric hydraulic distributed propulsion system 40 uses a battery 42 that is connected to electrical cable 44 that directly powers a variable displacement hydraulic motor pump 46.  The variable displacement hydraulic motor pump 46 is connected to, and provides hydraulic power to, hydraulic lines 22.  The&nbsp;hydraulic fluid in hydraulic lines 22 are connected to hydraulic controllers 24a-24f, which are connected via shafts 19a-19f to variable displacement hydraulic motors 26a-26f, respectively, each of which is depicted being connected by mechanical shafts 21a-21f each to propeller 28a-28f, respectively.  This schematic shows the Hybrid Internal Combustion Engine - Engine Hydraulic distributed propulsion system 30 as having six (6) hydraulic controllers 24a-24f, and six (6) variable displacement hydraulic motors 26a-26f.  However, the skilled artisan will recognize that the present invention can include a smaller or larger number of variable displacement hydraulic motors and propellers, for example 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or more.  In this embodiment, the electrical power is converted into mechanical power/energy via the variable displacement hydraulic motor pump 46, which provides the hydraulic power that drives the variable displacement hydraulic motors 26a-26f and therefore the propellers 28a-28f.</p>
+   <p>
+[0052]
+ FIG. 4 shows a schematic of a hybrid electric hydraulic with a piezo-electric pump distributed propulsion system 50 of the present invention.  In this embodiment, the hybrid electric hydraulic with a piezo-electric pump distributed propulsion system 50 uses a battery 42 that is connected to electrical cable 44 that directly powers a piezo-hydraulic pump 48.  The piezo-hydraulic pump 48 is connected to, and provides hydraulic power to, hydraulic lines 22.  The hydraulic fluid in hydraulic lines 22 are connected to hydraulic controllers 24a-24f, which are connected via shafts 19a-19f to variable displacement hydraulic motors 26a-26f, respectively, each of which is depicted being connected by a mechanical shafts 21a-21f each to propeller 28a-28f, respectively.  This schematic shows the Hybrid Internal Combustion Engine - Engine Hydraulic distributed propulsion system 30 as having six (6) hydraulic controllers 24a-24f, and six (6) variable displacement hydraulic motors 26a-26f.  However, the skilled artisan will recognize that the present invention can include a smaller or larger number of variable displacement hydraulic motors and propellers, for example 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or more.  In this embodiment, the electrical power is converted into mechanical power/energy via the piezo-hydraulic pump 48, which provides the hydraulic power that drives the variable displacement hydraulic motors 26a-26f and therefore the propellers 28a-28f.</p>
+   
+   <p>
+[0053]
+ Some of the benefits of the distributed hydraulic system of the present invention, in conjunction with electric propulsion, can be attained by the present invention, for craft of all sizes.  For example, for use with Vertical Take-Off and Landing (VTOL) aircraft the advantages of the present invention include: (1) a reduction in aircraft propulsion installation weight through greater structural integration; (2) the elimination of (rotor cyclic) control through differential and vectoring thrust for pitch, roll, and yaw moments; (3) high production rates and easy replacement of motors or propulsors that are small and light; (4) in the case of turbine/IC engine electric power generation, reduced fuel consumption and emissions through independent control of engine and rotor speeds; and (5) using electric batteries provided for more efficient energy usage, reduced emissions, and lower noise.  </p>
+   <p>
+[0054]
+ Further advantages of the present invention include addressing certain road blocks to distributed electric propulsion for larger VTOL aircraft.  The present invention provides one or more of the following benefits: (1) the elimination of electric motor and required controller power densities are low at required power levels (excessive weight); (2) eliminate electric motor torque capacity that is inadequate for speed changes required for thrust vectoring of larger rotors; (3) with increased power, electric motors require large diameters with ducted air or liquid cooling to prevent over heating (increased weight/envelope/complexity); (4) with increased power electric motor bearings require active lubrication (increased weight/complexity); and (5) current battery technology energy density insufficient for practical applications due to excessive weight.</p>
+   <p>
+[0055]
+ Now referring to FIGS. 5A-5G, various views of a closed wing aircraft 100 in accordance with one embodiment of the present invention are shown.  More specifically, FIG.&nbsp;5A is a perspective view, FIG. 5B is a front elevation view, FIG. 5C is a rear elevation view, FIG. 5D is right side elevation view, FIG. 5E is a left side elevation view, FIG. 5F is a top plan view, and FIG. 5G is a bottom plan view.  This closed wing aircraft 100 features the following: 1) Tail sitter configuration provides for conversion to airplane mode without reconfiguration; 2)&nbsp;Circular wing optimizes propulsion, structural, aerodynamic, and center of gravity (CG) requirements; 3) Gearboxes and drive train are completely eliminated; 4)&nbsp;Rotor cyclic and collective controls are replaced by variable speed constant pitch propellers; and 5)&nbsp;Yaw in vertical flight and roll in hover mode are provided by trailing edge surfaces on the spokes connecting the closed wing to the fuselage. </p>
+   
+   <p>
+[0056]
+ The closed wing aircraft 100 utilizes the ring wing configuration to provide a symmetric matrix distribution of hydraulic or electric motor driven propellers to maximize controllability and provide safety in the event of a hydraulic or electric motor failure.  The&nbsp;ring wing also reduces the effects of cross winds during takeoff and landing by minimizing the affected wing area and eliminating induced yaw.  In airplane mode flight the ring wing allows the aircraft maintain any roll position in order to position sensors as required.  For noise reduction the propellers within the ring provide an acoustic barrier.  Structurally, the combination of distributed propulsion and the ring wing minimizes bending moments allowing for lighter and stiffer structure compared with distributed propulsion on straight wings. Engines or fuel/batteries can be housed in the base of the fuselage or at the intersection of the spokes to the ring wing for strength and minimization of weight.  Landing gear is positioned at these points for similar reasons.</p>
+   <p>
+[0057]
+ More specifically, the aircraft 100 can be manned or unmanned and is capable of vertical takeoff and landing, stationary flight and forward flight.  The aircraft 100 includes a closed wing 102, a fuselage 104 at least partially disposed within a perimeter of the closed wing 102, and one or more spokes 106 coupling the closed wing 102 to the fuselage 104.  The closed wing 102 can be circular-shaped, oval-shaped, triangular-shaped, polygonal-shaped or any other shape suitable for the desired operational and aerodynamic requirements of the aircraft 100.  In&nbsp;addition, the closed wing can be made up of a plurality of wing segments 102a, 102b, 102c and wing-spoke intersections or junctions 108a, 108b, 108c connected together.  The cross-sectional profile of the closed wing 102 between the leading edge 110 and trailing edge 112 can be a symmetrical airfoil or any desirable aerodynamic shape.  The number of spokes 106 can be determined, in part, by the shape and size of the closed wing 102, and the shape, size and payload of the fuselage 104.  The cross-sectional profile of the spokes 106 between the leading edge 114 and the trailing edge 116 can be a symmetrical airfoil or any desirable aerodynamic shape.  The closed wing 102, the fuselage 104 and the one or more spokes 106 are preferably symmetrically shaped to provide transition between vertical takeoff and landing, stationary flight and forward flight in any direction.  However, non-symmetrical shapes can be used.  As a result, the shape of the closed wing 102 and number of spokes 106 shown in the figures is only one example and is not intended to limit the scope of the invention.  The closed wing 102 may also include one or more doors or removable sections that provide access to the fuselage 104 when the aircraft 100 is in a landed position.</p>
+   
+   <p>
+[0058]
+ The fuselage 104 may include one or more sections or modules that have a longitudinal axis 116 substantially parallel to a rotational axis 118 of the propellers 120.  The&nbsp;shape and length of the fuselage 104 will vary depending on the desired mission and flight characteristics.  As a result, the shape and length of the fuselage 104 shown in the figures is only one example and is not intended to limit the scope of the invention.  For&nbsp;example, the fuselage 104 may include a rear section or module 122 substantially disposed at a center of the closed wing 102 that provides a fuselage-spoke intersection or junction, a middle section or module 124 connected to the rear section or module 122, a front section or module 126 connected to the middle module 124, and a nose section or module 128 connected to the front section or module 126.  Sections or modules 122, 124, 126, 128 can be removably connected to one another, which makes the aircraft 100 configurable for any desired mission or function.  In other words, the closed wing 102 and one or more spokes 106 provide a stable flight platform any desired payload.  Moreover, the middle 124, front 126 and nose 128 sections or modules can detach, pivot, or retract at least partially into one or more of the other sections or modules for storage or transport of the aircraft 100.  The&nbsp;rear 122, middle 124, front 126 and nose 128 sections or modules can be individually configured to be a cockpit module, a cabin module, an escape module, a payload module, a sensor module, a surveillance module, a power source module, a fuel module, or any combination thereof.  Note that the nose section or module 128 may contain one or more parachutes.</p>
+   
+   <p>
+[0059]
+ The aircraft 100 also includes three or more landing gear, pads or skids 130 operably attached to the closed wing 102.  Typically, the landing gear, pads or skids 130 will be disposed proximate to the wing-spoke intersections or junctions 108a, 108b, 108c where there is more structural support.  The landing gear, pads or skids 130 can be retractable.</p>
+   <p>
+[0060]
+ One or more engines or motors 132 are disposed within or attached to the closed wing 102, fuselage 104 or spokes 106 in a distributed configuration.  Three or more propellers 120 are proximate to the leading edge 110 of the closed wing 102 or the leading edge 114 of the one or more spokes 106, distributed along the closed wing 102 or the one or more spokes 106, and operably connected to the one or more engines or motors 132 (see also FIG. 11).  In the embodiment shown, nine propellers 120 are disposed proximate to the closed wing 102, and one propeller 120 is disposed proximate to each spoke 106.  The propellers 120 can be variable speed constant pitch propellers or other type of propeller.  The distribution and number of propellers 120 are designed to provide stability during the failure of one or more propellers 120, or engines or motors 132.</p>
+   <p>
+[0061]
+ In one embodiment, a source of hydraulic or electric power is disposed within or attached to the closed wing 102, fuselage 104 or spokes 106 and coupled to each of the of hydraulic or electric motors 132 disposed within or attached to the closed wing 102, fuselage 104 or spokes 106.  The source of hydraulic or electric power provides sufficient energy density for the aircraft to attain and maintain operations of the aircraft 100.  The source of hydraulic or electric power can be one or more batteries, a piston engine, or a turboshaft engine.  A&nbsp;controller is coupled to each of the hydraulic or electric motors 132, and one or more processors are communicably coupled to each controller that control an operation and speed of the plurality of hydraulic or electric motors 132.  Note that a single source of hydraulic or electric power can drive multiple hydraulic or electric motors 132.  For example, a source of hydraulic or electric power can be located in the wing-spoke intersections or junctions 108a, 108b, 108c or the rear fuselage 122 where there is more structural support.  Hydraulic or electric power distribution systems can be used to transmit the power to the hydraulic or electric motors 132, which in turn drive the propellers 120.  The hydraulic or electric motors 132 are selected based on at least one of aerodynamics, propulsive efficiency, structural efficiency, aeroelasticity, or weight of the aircraft.  Moreover, the propellers 120, or the engines or motors 132 can be mounted to pivot to provide directional thrust.  Similarly, additional thrusters can be disposed on the closed wing 102, fuselage 104 or spokes 106.  Various examples of distributed power systems are shown in FIGS. 1-4 and 10-11.</p>
+   
+   <p>
+[0062]
+ Referring now to FIGS. 6A-6C, the aircraft 100 is shown in stationary flight (hover mode including vertical take off and landing) (FIG. 6A), transition from stationary flight to forward flight and vice versa (FIG. 6B), and forward flight (FIG. 6C).  The closed wing 102 provides lift whenever the aircraft 100 is in forward flight.  The three or more propellers 120 provide lift whenever the aircraft 100 is in vertical takeoff and landing and stationary flight, and provide thrust whenever the aircraft 100 is in forward flight.  During forward flight, the propellers 120 can be selectively feathered or operated in a low power mode because the closed wing 102 and spokes 106 provide lift.  One or more flight control surfaces are disposed on or extending from the closed wing 102, spokes 106 or the fuselage 104 to provide improved control and flight characteristics.  The one or more control surfaces may include one or more air foils, winglets, elevators or ailerons.  For example and as shown in FIGS. 5A-5G, winglets 134 mounted on the forward section or module 126 of the fuselage 104.  Note that the one or more airfoils or winglets can be retractable, removable, stowable or variable swept.  Note also that the rotation of the propellers 120 can be counter-clockwise (as shown), or clockwise, or a combination (i.e., a first group of propellers rotates counter-clockwise and a second group of propellers rotates clockwise).</p>
+   <p>
+[0063]
+ As shown, the closed wing 102, fuselage 104 and spokes 106 are not substantially reconfigured for transition between vertical takeoff and landing, stationary flight and forward flight.  However, in some embodiments it may be desirable to have the one or more spokes 106 operable to change a position of the closed wing 102 with respect to the fuselage 104 or vice versa.  In other words, the spokes 106 would selectively pivot the closed wing 102 to act like a giant flap in horizontal mode and/or assist in transition to/from vertical mode.</p>
+   <p>
+[0064]
+ The aircraft 100 provides a stable platform for one or more sensors or surveillance packages disposed on, disposed within or attached to the closed wing 102, spokes 106 or fuselage 104.  In fact, the configuration of the aircraft 100 allows the placement of the one or more sensors or surveillance packages to provide a 360 degree view.  Moreover, the extension of the fuselage 104 from the engines or motors 132 provides a wide unobstructed view for the one or more sensors or surveillance packages.</p>
+   
+   <p>
+[0065]
+ As shown in FIG. 6C and FIGS. 7A-7G, the propellers 120 can be selectively folded in a forward direction.  The propellers 120 could also be folded in a backward direction.  In&nbsp;the embodiment having the forward folding propellers 700, each propeller 700 includes two or more rotor blades 702, each rotor blade 702 in mechanical communication with a hub 704 and pivotable about an axis of rotation 118.  A fold linkage mechanically couples a rotating portion of a bearing plate to the rotor blade 702.  An actuator is coupled to a non-rotating portion of the bearing plate and is operable to reposition the bearing plate from a first position to a second position such that the folding links pivot the rotor blades 702 from a deployed position to a folded position.  The folded position can be a forward direction, which extends past the hub 704 with the first position of the bearing plate is closer to the hub 704 than the second position of the bearing plate.  A tip of all the rotors 702 can be preloaded together in the forward folded position such that a vibration of the rotors 702 is minimized.</p>
+   <p>
+[0066]
+ Alternatively and as shown in FIG. 8, the folded position can be a backward direction, which extends away from the hub 704, and the first position of the bearing plate is closer to the hub 304 than the second position of the bearing plate.  The angle or distance that the rotors 702 can fold will depend on the relative size and shape of the closed wing with respect to the pivot point and size of the rotors.  For example, FIG. 8 shows the rotors 702 folded in a backward position, but not against the surface of the closed wing 102 or substantially parallel to the rotational axis 118 of the rotors 702.  Some embodiments of the present invention will have the rotors 702 resting against or close to the surface of the closed wing 102 and/or substantially parallel to the rotational axis 118 of the rotors.  An example of backward folding rotor blades is disclosed in U.S. Patent No. 9,156,545 which is hereby incorporated by reference in its entirety.</p>
+   <p>
+[0067]
+ Now referring to FIGS. 9A-9G, various views of a closed wing aircraft 900 having a sinusoidal-shaped circular wing in accordance with one embodiment of the present invention are shown.  More specifically, FIG. 9A is a perspective view, FIG. 9B is a front elevation view, FIG. 9C is a rear elevation view, FIG. 9D is right side elevation view, FIG. 9E is a left side elevation view, FIG. 9F is a top plan view, and FIG. 9G is a bottom plan view.  As&nbsp;shown, the leading edge 902 and trailing edge 904 of the closed wing 906 are sinusoidal-shaped.  Instead of the circular wing being a constant height around the center fuselage 104 as previously shown, the wing rises and falls to create three sinusoidal humps 908a, 908b, 908c.  The humps 908a, 908b, 908c are at their highest between the three spokes 106 and lowest where the wing 906 attaches to the spokes 106.  The advantages of this configuration are as follows:  1) Additional wing ground clearance to the circular wing when landing.  With&nbsp;the flat circular wing landing must be close to perpendicular to avoid damaging the wing or the landing gear must be made much longer.  2) Improved access to center fuselage.  With&nbsp;the flat circular wing access to the center fuselage is restricted by the height of the wing.  3) Improved stability by moving the wing center of pressure closer to the aircrafts center of gravity.  The&nbsp;same benefits are achieved but to a lesser degree with four sinusoidal humps and four spokes and two sinusoidal humps with two spokes.  With more than four sinusoidal humps the benefits are negligible.  Alternatively, only one of the leading edge 902 or the trailing edge 904 of the closed wing 906 is sinusoidal-shaped.  Moreover, other wing shapes can be used.</p>
+   
+   <p>
+[0068]
+ Referring now to FIG. 10, a schematic of an electric distributed propulsion system 1000 in accordance with one embodiment of the present invention is shown.  In the electric distributed propulsion system 1000, a source of electric power 1002 is connected to, and provides electrical power to electric motors 1016a-1016f, respectively, each of which is depicted being connected by mechanical shafts 218a-218f to propellers 120a-120f, respectively.  The source of electric power 1002 can be one or more batteries, an internal combustion engine, or a turboshaft engine.  One skilled in the art would recognize that a generator would be connected between the internal combustion engine or the turboshaft engine and the electric motors 1016a-1016f.  Controllers 1014a-1014f are connected to the electric motors 1016a-1016f and can control the speed and torque of the electric motors 1016a-1016f.  The electric motors 1016a-1016f can be self-cooling.  This schematic shows the electric distributed propulsion system 1000 as having six (6) controllers 1014a-1014f, and six (6) electric motors 1016a-1016f.  However, the skilled artisan will recognize that the present invention can include a smaller or larger number of electric motors and propellers, for example 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or more.</p>
+   
+   <p>
+[0069]
+ Now referring to FIG. 11, a schematic of three or more propellers 120 coupled to one or more engines or motors 132 in accordance with one embodiment of the present invention is shown.  The skilled artisan will recognize that the present invention can include a smaller or larger number of electric motors and propellers, for example 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or more.</p>
+   <p>
+[0070]
+ It will be understood that particular embodiments described herein are shown by way of illustration and not as limitations of the invention.  The principal features of this invention can be employed in various embodiments without departing from the scope of the invention.  Those skilled in the art will recognize, or be able to ascertain using no more than routine experimentation, numerous equivalents to the specific procedures described herein.  Such&nbsp;equivalents are considered to be within the scope of this invention and are covered by the claims.</p>
+   <p>
+[0071]
+ All publications and patent applications mentioned in the specification are indicative of the level of skill of those skilled in the art to which this invention pertains.  All&nbsp;publications and patent applications are herein incorporated by reference to the same extent as if each individual publication or patent application was specifically and individually indicated to be incorporated by reference.</p>
+   <p>
+[0072]
+ The use of the word “a” or “an” when used in conjunction with the term “comprising” in the claims and/or the specification may mean “one,” but it is also consistent with the meaning of “one or more,” “at least one,” and “one or more than one.”  The use of the term “or” in the claims is used to mean “and/or” unless explicitly indicated to refer to alternatives only or the alternatives are mutually exclusive, although the disclosure supports a definition that refers to only alternatives and “and/or.”  Throughout this application, the term “about” is used to indicate that a value includes the inherent variation of error for the device, the method being employed to determine the value, or the variation that exists among the study subjects.</p>
+   
+   <p>
+[0073]
+ As used in this specification and claim(s), the words “comprising” (and any form of comprising, such as “comprise” and “comprises”), “having” (and any form of having, such as “have” and “has”), “including” (and any form of including, such as “includes” and “include”) or “containing” (and any form of containing, such as “contains” and “contain”) are inclusive or open-ended and do not exclude additional, unrecited elements or method steps.  In embodiments of any of the compositions and methods provided herein, “comprising” may be replaced with “consisting essentially of” or “consisting of”.  As used herein, the phrase “consisting essentially of” requires the specified integer(s) or steps as well as those that do not materially affect the character or function of the claimed invention.  As used herein, the term “consisting” is used to indicate the presence of the recited integer (e.g., a feature, an element, a characteristic, a property, a method/process step or a limitation) or group of integers (e.g., feature(s), element(s), characteristic(s), propertie(s), method/process steps or limitation(s)) only.</p>
+   <p>
+[0074]
+ The term “or combinations thereof” as used herein refers to all permutations and combinations of the listed items preceding the term.  For example, “A, B, C, or combinations thereof” is intended to include at least one of: A, B, C, AB, AC, BC, or ABC, and if order is important in a particular context, also BA, CA, CB, CBA, BCA, ACB, BAC, or CAB.  Continuing with this example, expressly included are combinations that contain repeats of one or more item or term, such as BB, AAA, AB, BBC, AAABCCCC, CBBAAA, CABABB, and so forth.  The skilled artisan will understand that typically there is no limit on the number of items or terms in any combination, unless otherwise apparent from the context.  </p>
+   <p>
+[0075]
+ As used herein, words of approximation such as, without limitation, “about”, “substantial” or “substantially” refers to a condition that when so modified is understood to not necessarily be absolute or perfect but would be considered close enough to those of ordinary skill in the art to warrant designating the condition as being present.  The extent to which the description may vary will depend on how great a change can be instituted and still have one of ordinary skilled in the art recognize the modified feature as still having the required characteristics and capabilities of the unmodified feature.  In general, but subject to the preceding discussion, a numerical value herein that is modified by a word of approximation such as “about” may vary from the stated value by at least ±1, 2, 3, 4, 5, 6, 7, 10, 12 or 15% from the stated value.  </p>
+   
+   <p>
+[0076]
+ All of the methods disclosed and claimed herein can be made and executed without undue experimentation in light of the present disclosure.  While the methods of this invention have been described in terms of preferred embodiments, it will be apparent to those of skill in the art that variations may be applied to the methods and in the steps or in the sequence of steps of the method described herein without departing from the concept, spirit and scope of the invention.  All such similar substitutes and modifications apparent to those skilled in the art are deemed to be within the spirit, scope and concept of the invention as defined by the appended claims.</p>
+
+</body></html>

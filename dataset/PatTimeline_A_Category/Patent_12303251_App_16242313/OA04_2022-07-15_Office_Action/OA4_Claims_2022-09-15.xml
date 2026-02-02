@@ -1,0 +1,147 @@
+<html><head></head><body><h3>Date: 2022-09-15</h3>
+<p><u>1. Amendments to the Claims</u>: A listing of the entire set of pending claims (including amendments to the claims, if any) is submitted herewith per 37 CFR 1.121. This listing of claims will replace all prior versions, and listings, of claims in the application.</p>
+<p>Listing of Claims:</p>
+<br>
+
+<br>
+1-15. (Canceled)
+
+214
+<br>
+<br>
+
+<br>
+16. (Currently amended) An apparatus for determining a cavity within an object, the apparatus comprising: 
+<br>
+a catheter for being introduced into the cavity, wherein the catheter is shape sensing enabled and comprises a bendable segment for being arranged within the cavity in different arrangements; and 
+<br>
+a computer including a non-transitory storage medium for storing instructions that, when executed by the computer, cause the computer to: 
+<br>
+determine whether the bendable segment is in contact with an inner wall of the cavity in each arrangement of a plurality of different arrangements of the bendable segment introduced within the cavity; 
+<br>
+determine a plurality of curves defined by the bendable segment in the plurality of different arrangements of the bendable segment introduced within the cavity, respectively, using optical shape sensing information from the catheter, wherein the plurality of curves comprise at least one contact curve corresponding to at least one respective arrangement of the plurality of different arrangements <del>for which it is determined that</del> <u>of</u> the bendable segment is-determined <u>to be</u> in contact with the inner wall of the cavity, and at least one non-contact curve corresponding to at least one respective arrangement of the plurality of different arrangements <del>for which it is determined that</del> <u>of</u> the bendable segment is-determined not <u>to be</u> in contact with the inner wall of the cavity; and 
+
+   reconstruct the cavity, in response to the at least one contact curve and the at least one non-contact curve, to provide a map for guiding the catheter.
+
+<br>
+
+<br>
+17. (Previously presented) The apparatus of claim 16, wherein the instructions cause the computer to reconstruct the cavity using a regularization in response to the at least one non-contact curve and a morphological opening or closing of the at least one non-contact curve to estimate which points of the at least one non-contact curve lies necessarily within the cavity.
+
+<br>
+
+<br>
+18. (Canceled)
+
+<br>
+
+<br>
+19. (Previously presented) The apparatus of claim 16 further comprising a display device, operatively coupled to the computer, configured to display a representation of the reconstructed cavity.
+
+<br>
+
+<br>
+20. (Previously presented) The apparatus of claim 16, wherein the instructions further cause the computer to adapt an adaptable cavity model to the at least one contact curve and the least one non-contact curve defined by the bendable segment in the different arrangements for reconstructing the cavity.
+
+<br>
+
+<br>
+21. (Previously presented) The apparatus of claim 20, wherein the cavity model is adapted to wrap the at least one non-contact curve.
+
+<br>
+
+<br>
+22. (Original) The apparatus of claim 20, wherein the adaptable cavity model is an anatomical model.
+
+<br>
+
+23. (Canceled) 
+  
+
+<br>
+
+<br>
+24. (Currently amended) A method for mapping a cavity within an object, the method comprising: 
+<br>
+determining whether a bendable segment of a catheter introduced into a cavity is in contact with an inner wall of the cavity in each arrangement of a plurality of different arrangements of the bendable segment; 
+<br>
+determining a plurality of curves defined by the bendable segment of the catheter introduced into the cavity in different arrangements within the cavity, respectively, using optical shape sensing information from the catheter, wherein the plurality of curves comprise contact curves corresponding to respective arrangements of the plurality of different arrangements <del>for which it is determined that</del> <u>of</u> the bendable segment of the catheter introduced into the cavity i-s-determined <u>to be</u> in contact with the inner wall of the cavity, and non-contact curves corresponding to respective arrangements of the plurality of different arrangements <del>for which it is determined that</del> <u>of</u> the bendable segment of the catheter introduced into the cavity i-s-not <u>determined to be</u> in contact with the cavity; and 
+<br>
+reconstructing the cavity from the contact and non-contact curves to provide a map for guiding the catheter. 
+
+<br>
+
+<br>
+25. (Previously presented) The method of claim 24, further comprising: 
+<br>
+adapting a cavity model to the contact and non-contact curves defined by the bendable segment in the different arrangements for reconstructing the cavity. 
+
+<br>
+
+<br>
+26. (Currently amended) A non-transitory computer readable medium that stores program code for mapping a cavity within an object using an optical shape sensing enabled catheter for being introduced into the cavity, wherein the catheter comprises a bendable segment for being arranged within the cavity in a plurality of different arrangements, wherein, when executed by a computer, the program code causes the computer to carry out steps including: 
+
+   determining whether the bendable segment of the catheter introduced into the cavity is in contact with an inner wall of the cavity in each arrangement of the plurality of different arrangements of the bendable segment; 
+<br>
+determining a plurality of curves, defined by the bendable segment of the catheter introduced into the cavity in arrangements of the plurality of different arrangements, respectively, wherein the plurality of curves comprise contact curves corresponding to respective arrangements of the plurality of different arrangements <del>for which it is determined that</del> <u>of</u> the bendable segment of the catheter i-s-determined <u>to be</u> in contact with the inner wall of the cavity, and non-contact curves corresponding to of respective arrangements of the plurality different arrangements <del>for which it is determined that</del> <del>o</del><u>f</u> <u>the</u> bendable segment of the catheter i-s-determined not <u>to be</u> in contact the inner wall of the cavity; 
+<br>
+reconstructing the cavity from the contact and non-contact curves to provide a map for guiding the catheter; and 
+<br>
+displaying, on a display device operatively coupled to the computer, a representation of the map. 
+
+<br>
+
+<br>
+27. (Previously presented) The non-transitory computer readable medium of claim 26, wherein the program code causes the computer to reconstruct the cavity using a regularization in response to the non-contact curves and a morphological opening or closing of the non-contact curves to estimate which points of the non-contact curves lie necessarily within the cavity.
+
+<br>
+
+<br>
+28. (Previously presented) The non-transitory computer readable medium of claim 26, wherein the program code causes the computer to carry out further steps including display a representation of the reconstructed cavity on a display.
+
+<br>
+
+29. (Previously presented) The non-transitory computer readable medium of claim 26, wherein the program code causes the computer to carry out further steps including
+adapting an adaptable cavity model to the contact and non-contract curves defined by the bendable segment in the different arrangements for reconstructing the cavity.
+
+<br>
+
+<br>
+30. (Previously presented) The non-transitory computer readable medium of claim 29, wherein the cavity model is adapted to wrap the non-contact curves.
+
+<br>
+
+<br>
+31. (Previously presented) The non-transitory computer readable medium of claim 29, wherein the adaptable cavity model is an anatomical model.
+
+<br>
+
+<br>
+32. (Canceled)
+
+<br>
+
+<br>
+33. (Previously presented) The apparatus of claim 16, wherein the catheter comprises an ablation catheter, and wherein a distal tip of the ablation catheter is introduced into the cavity and the bendable segment is located at the distal tip.
+
+<br>
+
+<br>
+34. (Previously presented) The apparatus of claim 16, wherein determining whether the bendable segment is in contact with the inner wall of the cavity comprises receiving electrical signals from electrodes, arranged on the bendable segment, contacting the inner wall of the cavity.
+
+<br>
+
+<br>
+35. (Previously presented) The method of claim 24, wherein determining whether the bendable segment is in contact with the inner wall of the cavity comprises receiving electrical signals from electrodes, arranged on the bendable segment, contacting the inner wall of the cavity.
+
+<br>
+
+<br>
+36. (Previously presented) The non-transitory computer readable medium of claim 26, , wherein determining whether the bendable segment is in contact with the inner wall of the cavity comprises receiving electrical signals from electrodes, arranged on the bendable segment, contacting the inner wall of the cavity. 
+<br>
+PCIP.20726Attorney Docket No. 2012P00019 US
+PCIP.20723Attorney Docket No. 2012P00019 US
+PCIP.20724Attorney Docket No. 2012P00019 US
+PCIP.20725Attorney Docket No. 2012P00019 US
+PCIP.20722Attorney Docket No. 2012P00019 US
+</body></html>

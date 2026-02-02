@@ -1,0 +1,105 @@
+<html><head></head><body><h3>Date: 2024-01-12</h3>
+
+<h1><u>AMENDMENTS TO THE CLAIMS</u></h1>
+<p>The following listing of claims will replace all previous versions and listings of claims:</p>
+<h1><u>Listing of Claims</u></h1>
+<br>
+SVG
+{EMBED HERE}
+0.432.067<br>
+1.    (Currently Amended) A wearable fetal health monitoring device for determining a<u> health </u>[[heath]] condition of a fetus based on biosignals of an expecting mother and the fetus, the <u>wearable fetal health monitoring </u>device comprising:<u>a passive sensor configured to provide mechano-acoustically sensed phonocardiogram (aPCG) data from a first location on a maternal torso </u>a-<del> microelectromechanical system (ME</del><del>M</del><del>S) accelerometer that converts an acoustic wave sensed in an abdominal region into an abdominal acoustic signal</del>;<br>
+<u>an optical sensor </u><del>a pulse oximeter that generates a </del><u>configured to provide optically sensed </u>maternal photoplethysmogram (mPPG) <u>data </u>[[value]] from <u>a second location on the maternal torso </u><del>a pulse sensed in the abdominal region</del>;<br>
+<u>a securing device configured to provide skin contact of the passive sensor and the optical sensor to the maternal torso for continuous non-invasive non-clinical monitoring</u><u>;</u><br>
+<del>a ferroelectric nanogenerator sensor that detects abdominal pressure waves; </del>and<br>
+a microcontroller configured for [[to]]:<del>generate a maternal phonocardiogram (mPCG) value from the abdominal acoustic signal;</del><br>
+<del>calculate a first maternal heart rate (mHR) value from the mPCG value;</del><br>
+<del>calculate a second mHR value from the mPPG value;</del><br>
+<del>compare the first mHR value with the second mHR value to identify a noise correction value; and</del><br>
+SVG
+{EMBED HERE}
+0.432.067<u>monitorin</u><u>g</u><u> fetal movement (fM) using the passive sensor while operating in a first mode, wherein the first mode is a reduced power mode</u><u>;</u><u> and</u><br>
+<u>upon detectin</u><u>g</u><u> reduced fM activity, transitionin</u><u>g</u><u> to a second mode comprising:</u><u>decomposin</u><u>g</u><u> the mechano-acoustically sensed aPCG data usin</u><u>g</u><u> the optically sensed mPPG data </u><del>apply the identified noise correction value to the mPCG value </del>to extract [[a]] <u>mechano-acoustically sensed </u>fetal phonocardiogram (fPCG) <u>data </u>[[value]];<br>
+<u>determinin</u><u>g</u><u> fetal heart rate variability (fHRV) data from the mechano- acoustically sensed fPCG data</u><u>;</u><u> and providing an alert to the expectin</u><u>g</u><u> mother based on the fHRV data.</u><br>
+<br>
+2.    (Canceled)<br>
+<br>
+3.    (Canceled) <del>The device of claim 1, wherein the microcontroller is further configured to calculate from the fPCG value at least one of: a fetal heart rate (</del><del>fH</del><del>R) value and a fetal heart rate variability (fHRV) value.</del><br>
+<br>
+4.    (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, wherein the microcontroller is further configured to calculate [[a]] fetal movement (fM)<u></u><u>data </u>[[value]] from the <u>mechano-acoustically sensed aPCG data </u><del>abdominal acoustic signal</del>.<br>
+<br>
+5.    (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, wherein:the <u>optical sensor </u><del>pulse oximeter </del>is further configured to sense [[a]] maternal peripheral capillary oxygen saturation (mSpO2) <u>data </u><u>[[</u><u>value</u><u>]], </u><u>and</u><br>
+<u>transitionin</u><u>g</u><u> to the second mode is further based upon detectin</u><u>g</u><u> reduced mSp</u><u>O2</u><u> data.</u><br>
+SVG
+{EMBED HERE}
+0.432.067<br>
+6.    (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, wherein the passive sensor <del>MEMS accelerometer </del>comprises at least one of an acoustic wave sensor and a pressure wave sensor.<br>
+<br>
+7.    (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, wherein the microcontroller is further configured to calculate a maternal activity level from<u> the optical sensor </u><del>at least one of the mPPG value and the first mHR value and the second mHR value</del>.<br>
+<br>
+8.    (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, further comprising one or more of: a MEMS inclinometer, an inertia sensor, and a gyroscope.<br>
+<br>
+9.    (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, further comprising a patch configured to removably attach to the[[a]] maternal torso.<br>
+<br>
+10.   (Canceled)<br>
+<br>
+11.   (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, wherein the <u>wearable fetal health monitoring </u>device further <del>comprises </del>an acoustic impedance matching housing.<br>
+<br>
+12.   (Canceled)<br>
+<br>
+13.   (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, further comprising an inclinometer sensor that detects a sub-audible abdominal acoustic wave.<br>
+SVG
+{EMBED HERE}
+0.432.067<br>
+14.   (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, wherein a first portion of the <u>wearable fetal health monitoring </u>device is disposable, and<del> wherein </del>a second portion of the <u>wearable fetal health monitoring </u>device is re-usable.<br>
+<br>
+15.   (Canceled)<br>
+<br>
+16.   (Currently Amended) The <u>wearable fetal health monitoring </u>device of claim 1, further comprising a noise attenuator configured to: at least partially constructively or destructively combine a first physiological signal component of a first signal output by a first acoustic sensor and a second physiological signal component of a second signal output by a second acoustic sensor.<br>
+<br>
+17.   (Currently Amended) A method of determining a heath condition of a fetus based on biosignals of an expecting mother and the fetus, the method comprising:providing a wearable fetal health monitoring device, comprising:<br>
+<u>a passive sensor configured to provide mechano-acoustically sensed phonocardiogram (aPCG) data from a first location on a maternal torso </u>a-<del> microelectromechanical system (ME</del><del>M</del><del>S) accelerometer that converts an acoustic wave sensed in an abdominal region into an abdominal acoustic signal</del>;<br>
+<u>an optical sensor </u><del>a pulse oximeter that generates a </del><u>configured to provide optically sensed </u>maternal photoplethysmogram (mPPG) <u>data </u>[[value]] from <u>a second location on the maternal torso </u><del>a pulse sensed in the abdominal region</del>;<br>
+<u>a securing device configured to provide skin contact of the passive sensor and the optical sensor to the maternal torso for continuous non-invasive non- clinical monitoring</u><u>;</u><br>
+<del>a ferroelectric nanogenerator sensor that detects abdominal pressure waves;</del><br>
+and a microcontroller configured for [[to]]:SVG
+{EMBED HERE}
+0.432.067<del>generate a maternal phonocardiogram (mPCG) value from the abdominal acoustic signal;</del><br>
+<del>calculate a first maternal heart rate (mHR) value from the mPCG value;</del><br>
+<del>calculate a second mHR value from the mPPG value;</del><br>
+<del>compare the first mHR value with the second mHR value to identify a noise correction value; and</del><br>
+<u>monitorin</u><u>g</u><u> fetal movement (fM) using the passive sensor while operating in a first mode, wherein the first mode is a reduced power mode</u><u>;</u><u> and</u><br>
+<u>upon detecting reduced fM activity, transitioning to a second mode comprising:</u><u>decomposing the mechano-acoustically sensed aPCG data using the optically sensed mPPG data </u><del>apply the identified noise correction value to the mPCG value </del>to extract [[a]] <u>mechano-acoustically sensed </u>fetal phonocardiogram (fPCG) <u>data </u>[[value]];<br>
+<u>determinin</u><u>g</u><u> fetal heart rate variability (fHRV) data from the mechano-acoustically sensed fPCG data</u><u>;</u><u> and</u><br>
+<u>providing an alert to the expecting mother based on the fHRV data.</u><br>
+<br>
+18.   (Canceled)<br>
+<br>
+19.   (Currently Amended) The method of claim 17, further comprising outputting at least one of a normal state, caution state, and emergency state based on the <u>mechano- acoustically sensed fPCG data </u><del>extracted fetal phonocardiogram (fPCG) value</del>.<br>
+<br>
+20.   (Currently Amended) The method of claim 17, further comprising calculating [[a]] fetal movement (fM) <u>data </u>[[value]] from the <u>mechano-acoustically sensed aPCG data</u><del> abdominal acoustic signal</del>.<br>
+SVG
+{EMBED HERE}
+0.432.067<br>
+21.   (Currently Amended) A non-transitory computer-readable storage medium, the non-transitory computer-readable storage medium storing instructions to be implemented on a wearable fetal health monitoring device comprising:<u>a passive sensor configured to provide mechano-acoustically sensed phonocardiogram (aPCG) data from a first location on a maternal torso </u>a-<del> microelectromechanical system (ME</del><del>M</del><del>S) accelerometer that converts an acoustic wave sensed in an abdominal region into an abdominal acoustic signal</del>;<br>
+<u>an optical sensor </u><del>a pulse oximeter that generates a </del><u>configured to provide optically sensed </u>maternal photoplethysmogram (mPPG) <u>data </u>[[value]] from <u>a second location on the maternal torso </u><del>a pulse sensed in the abdominal region</del>;<u>a securing device configured to provide skin contact of the passive sensor and the optical sensor to the maternal torso for continuous non-invasive non-clinical monitoring</u><u>;</u><br>
+<del>a ferroelectric nanogenerator sensor that detects abdominal pressure waves; </del>and<br>
+at least one processor;<br>
+the instructions when executed by the at least one processor cause wearable fetal health monitoring device to perform a method of determining a heath condition of a fetus based on biosignals of an expecting mother and the fetus, the method comprising:<del>generating a maternal phonocardiogram (mPCG) value from the abdominal acoustic signal;</del><br>
+<del>calculating a first maternal heart rate (mHR) value from the mPCG value;</del><br>
+<del>calculating a second mHR value from the mPPG value;</del><br>
+<del>comparing the first mHR value with the second mHR value to identify a noise correction value; and</del><br>
+<u>monitoring fetal movement (fM) using the passive sensor while operating in a first mode, wherein the first mode is a reduced power mode</u><u>;</u><u> and</u><br>
+<u>upon detecting reduced fM activity, transitioning to a second mode comprising:</u><br>
+SVG
+{EMBED HERE}
+0.432.067<u>decomposing the mechano-acoustically sensed aPCG data using the optically sensed mPPG data </u><del>applying the identified noise correction value to the mPCG value </del>to extract [[a]] <u>mechano- acoustically sensed </u>fetal phonocardiogram (fPCG) <u>data </u>[[value]];<br>
+<u>determining fetal heart rate variability (fHRV) data from the mechano-acoustically sensed fPCG data</u><u>;</u><u> and providing an alert to the expecting mother based on the fHRV data.</u><br>
+<br>
+22.   (New) The wearable fetal health monitoring device of claim 1, wherein determining fHRV data from the mechano-acoustically sensed fPCG data comprises using a Hidden Semi-Markov Model (HSMM).<br>
+<br>
+23.   (New) The wearable fetal health monitoring device of claim 1, wherein determining fHRV data from the mechano-acoustically sensed fPCG data comprises using empirical mode decomposition (EMD).<br>
+<br>
+24.   (New) The wearable fetal health monitoring device of claim 1, wherein the passive sensor is selected from the group consisting of a microelectromechanical system (MEMS), an accelerometer, and a ferroelectric nanogenerator sensor.<br>
+<br>
+25.   (New) The wearable fetal health monitoring device of claim 1, wherein the securing device is selected from the group consisting of a belt, a band, and an adhesive patch.
+</body></html>

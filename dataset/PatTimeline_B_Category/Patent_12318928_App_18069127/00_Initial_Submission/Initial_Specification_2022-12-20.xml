@@ -1,0 +1,811 @@
+<html><head></head><body>18069127
+
+   <p>Description</p>
+   Title of Invention
+   CONTINUUM ROBOT CONTROL SYSTEM AND CONTROL METHOD, AND PROGRAM
+   
+Cross-Reference to Related Applications
+<p>
+[0001]
+ This application is a Continuation of International Patent Application No. PCT/JP2021/023884, filed June 24, 2021, which is incorporated by reference herein in its entirety and which claims the benefit of Japanese Patent Application No. 2020-109850, filed June 25, 2020 and Japanese Patent Application No. 2021-100189, filed June 16, 2021, both of which are hereby incorporated by reference herein in their entireties.
+
+</p>
+   
+   
+Technical Field
+<p>
+[0002]
+ The present disclosure relates to a control system and method for controlling a continuum robot that includes a bendable portion having a plurality of bending sections bent by being driven by a wire, and also relates to a program that causes a computer to function as the control system.
+
+</p>
+   
+   
+Background Art
+<p>
+[0003]
+ A continuum robot includes a bendable portion having a plurality of bending sections with a flexible structure.  The shape of the continuum robot is controlled by deforming the bending sections.  Such continuum robots have mainly two advantages over rigid-link robots composed of rigid links.  One advantage is that continuum robots can move along curves in confined spaces where rigid-link robots may get stuck, and in environments where objects are scattered.  The other advantage is that intrinsic softness of the continuum robots allows operation without damaging fragile objects.  The operation does not necessarily require detection of external force that rigid-link robots require.  With this feature, the continuum robots are expected to be applied in the field of medical instruments, such as endoscope sheaths and catheters, and in the field of robots for hazardous environments, such as rescue robots.
+
+[0004]
+ Patent Literature 1 describes a control method that enables characteristic motions of a continuum robot having a camera at the distal end of a bendable portion thereof (hereinafter referred to as "observation motion control") with a simple operation by the operator.  Examples of the observation motion control include moving the position of the distal end while keeping constant the direction of the line of sight of the camera, and changing the position and angle of the distal end in such a way that the line of sight of the camera always passes through a single distant point.
+
+</p>
+<p>Citation List</p>
+<p>Patent Literature
+
+[0005]
+ PTL 1  International Publication No. 2017/003468
+
+[0006]
+ Specifically, for transition to the observation motion control from an initial bending attitude of the bendable portion, the method described in Patent Literature 1 algebraically determines the amount of additional bending of all bending sections of the bendable portion from the amount of operation of an operating unit by the operator.  In the control described in Patent Literature 1, therefore, even when the amount of operation of the operating unit by the operator is small, the amount of additional bending of each bending section may be controlled significantly, depending on the initial bending attitude of the bendable portion.  Generally, the continuum robot can be moved along a narrow path in an object in a confined space by control (hereinafter referred to as "follow-the-leader control") that continuously transmits the bending attitude of the leading distal-most bending section to the following bending section along the length of each bending section.  If the control described in Patent Literature 1 is performed in such a confined space, the continuum robot may accidentally come into contact with the object.  This may damage the object or the continuum robot and it will be difficult to ensure safe operation of the continuum robot.
+
+</p>
+<p>Summary of Invention
+
+[0007]
+ One or more features of the present disclosure have been made in view of the issues described above.  At least one object of the present disclosure is to provide at least one mechanism that may ensure safe operation of a continuum robot.
+
+[0008]
+ A continuum robot control system according to an aspect of the present disclosure is a system for controlling a continuum robot that includes a bendable portion having a plurality of bending sections bent by being driven by a wire, a base configured to support the bendable portion, and a driving unit configured to drive the wire.  The continuum robot control system includes following calculating means, following operating means, following switching means, and computing means.  The following calculating means calculates a target bending angle and a target rotational angle of a following bending section of the plurality of bending sections on the basis of a target bending angle and a target rotational angle of a distal-most bending section of the plurality of bending sections and a displacement of the base in a direction of movement of the continuum robot.  The distal-most bending section is located farthest from the base, and the following bending section is located between the distal-most bending section and the base.  The following operating means receives a target bending angle and a target rotational angle of the following bending section by being operated.  The following switching means performs a switching operation for selecting the target bending angle and the target rotational angle of the following bending section obtained from the following calculating means or the target bending angle and the target rotational angle of the following bending section obtained from the following operating means.  The computing means computes, on the basis of the target bending angle and the target rotational angle of the following bending section selected by the following switching means, a drive displacement by which the driving unit drives the wire in the following bending section.
+
+[0009]
+ Other aspects of the present disclosure include a continuum robot control method for the continuum robot control system, and a program that causes a computer to function as the continuum robot control system.
+
+[0010]
+ Further features of the present disclosure will become apparent from the following description of exemplary embodiments with reference to the attached drawings.
+
+</p>
+   
+   
+Brief Description of Drawings
+<p>
+[0011]
+ Fig. 1 is a diagram illustrating an example of a general configuration of a continuum robot according to a first embodiment of the present disclosure.
+
+[0012]
+ Fig. 2 is a diagram illustrating details of one bending section of the continuum robot illustrated in Fig. 1.
+
+[0013]
+ Fig. 3 is a diagram illustrating an example of a general configuration of an operating device for operating three bending sections of the continuum robot illustrated in Fig. 1, according to the first embodiment of the present disclosure.
+
+[0014]
+ Fig. 4 is a diagram illustrating an example of a general configuration of a continuum robot control system according to the first embodiment of the present disclosure.
+
+[0015]
+ Fig. 5 is a diagram illustrating an example of how three wires (Wires a to c) for the n-th bending section, corresponding to three wires illustrated in Fig. 2, are arranged in an xy plane.
+
+[0016]
+ Fig. 6 is a diagram illustrating an example of follow-the-leader control of the continuum robot according to the first embodiment of the present disclosure.
+
+[0017]
+ Fig. 7A is a diagram illustrating an example of how a block FTL illustrated in Fig. 4 calculates a target bending angle of a following bending section, according to the first embodiment of the present disclosure.
+
+[0018]
+ Fig. 7B is a diagram illustrating an example of how the block FTL illustrated in Fig. 4 calculates a target rotational angle of the following bending section, according to the first embodiment of the present disclosure.
+
+[0019]
+ Fig. 8A is a diagram illustrating a first example of a result of simulation of a continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0020]
+ Fig. 8B is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0021]
+ Fig. 8C is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0022]
+ Fig. 8D is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0023]
+ Fig. 8E is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0024]
+ Fig. 8F is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0025]
+ Fig. 9A is a diagram illustrating a second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0026]
+ Fig. 9B is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0027]
+ Fig. 9C is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0028]
+ Fig. 9D is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0029]
+ Fig. 9E is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0030]
+ Fig. 9F is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0031]
+ Fig. 10A is a diagram illustrating a third example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0032]
+ Fig. 10B is another diagram illustrating the third example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0033]
+ Fig. 10C is another diagram illustrating the third example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0034]
+ Fig. 10D is another diagram illustrating the third example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0035]
+ Fig. 10E is another diagram illustrating the third example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0036]
+ Fig. 10F is another diagram illustrating the third example of the result of simulation of the continuum robot control method by the continuum robot control system according to the first embodiment of the present disclosure.
+
+[0037]
+ Fig. 11 is a diagram illustrating an example of a general configuration of a continuum robot control system according to a second embodiment of the present disclosure.
+
+[0038]
+ Fig. 12A is a diagram illustrating a first example of a result of simulation of a continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0039]
+ Fig. 12B is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0040]
+ Fig. 12C is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0041]
+ Fig. 12D is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0042]
+ Fig. 12E is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0043]
+ Fig. 12F is another diagram illustrating the first example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0044]
+ Fig. 13A is a diagram illustrating a second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0045]
+ Fig. 13B is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0046]
+ Fig. 13C is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0047]
+ Fig. 13D is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0048]
+ Fig. 13E is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0049]
+ Fig. 13F is another diagram illustrating the second example of the result of simulation of the continuum robot control method by the continuum robot control system according to the second embodiment of the present disclosure.
+
+[0050]
+ Fig. 14 is a diagram illustrating an example of a general configuration of a continuum robot control system according to a third embodiment of the present disclosure.
+
+[0051]
+ Fig. 15A is a diagram illustrating an example of a result of simulation of a continuum robot control method by the continuum robot control system according to the third embodiment of the present disclosure.
+
+[0052]
+ Fig. 15B is another diagram illustrating the example of the result of simulation of the continuum robot control method by the continuum robot control system according to the third embodiment of the present disclosure.
+
+[0053]
+ Fig. 15C is another diagram illustrating the example of the result of simulation of the continuum robot control method by the continuum robot control system according to the third embodiment of the present disclosure.
+
+[0054]
+ Fig. 15D is another diagram illustrating the example of the result of simulation of the continuum robot control method by the continuum robot control system according to the third embodiment of the present disclosure.
+
+[0055]
+ Fig. 15E is another diagram illustrating the example of the result of simulation of the continuum robot control method by the continuum robot control system according to the third embodiment of the present disclosure.
+
+[0056]
+ Fig. 15F is another diagram illustrating the example of the result of simulation of the continuum robot control method by the continuum robot control system according to the third embodiment of the present disclosure.
+
+[0057]
+ Fig. 16 is a diagram illustrating an example of a general configuration of a continuum robot control system according to a fourth embodiment of the present disclosure.
+
+[0058]
+ Fig. 17 is a diagram illustrating an example of a general configuration of an operating device for operating the three bending sections of the continuum robot illustrated in Fig. 1, according to a fifth embodiment of the present disclosure.
+
+[0059]
+ Fig. 18 is a diagram illustrating an example of a general configuration of a continuum robot control system according to a sixth embodiment of the present disclosure.
+
+</p>
+<p>Description of Embodiments
+
+[0060]
+ Hereinafter, embodiments of the present disclosure will be described with reference to the drawings.
+
+</p>
+<p>First Embodiment
+
+[0061]
+ A first embodiment of the present disclosure will now be described.
+
+[0062]
+ Fig. 1 is a diagram illustrating an example of a general configuration of a continuum robot 100 according to the first embodiment of the present disclosure.  Fig. 1 illustrates a base 140 and a bendable portion 170 as components of the continuum robot 100.
+
+[0063]
+ The bendable portion 170 is a component including a plurality of bending sections 171 to 173 bent by being driven by wires.  Specifically, Fig. 1 illustrates n (three) bending sections: the bending section 171 corresponding to (n-2), the bending section 172 corresponding to (n-1), and the bending section 173 corresponding to n.  Fig. 1 also illustrates a bending angle θn and a rotational angle ζn of the bending section 173, a bending angle θn-1 and a rotational angle ζn-1 of the bending section 172, and a bending angle θn-2 and a rotational angle ζn-2 of the bending section 171.  The base 140 is a component that supports the bendable portion 170.  The base 140 includes internal actuators (not shown in Fig. 1) serving as driving units that drive the respective wires for the bending sections 171 to 173.  Fig. 1 also illustrates an xyz coordinate system that has an origin O at a predetermined position (e.g., center position) of an upper surface 141 of the base 140, with a z direction being the direction of movement of the continuum robot 100 (e.g., direction of forward movement) and x and y directions being orthogonal to the z direction and orthogonal to each other.  The continuum robot 100 is thus capable of moving in the z direction as well as allowing a bending motion of the plurality of bending sections 171 to 173 of the bendable portion 170.  In Fig. 1, a displacement zb of the base 140 is illustrated as an index that represents the amount of movement (amount of forward movement) of the continuum robot 100 in the z direction.
+
+[0064]
+ Of the plurality of bending sections 171 to 173 constituting the bendable portion 170, the bending section 173 is the distal-most bending section farthest from the base 140 in Fig. 1.  The bending section 172 (and the bending section 171 as well) is a following bending section disposed between the bending section 173 (distal-most bending section) and the base 140 and configured to follow the bending section 173 (distal-most bending section) as the continuum robot 100 moves forward.  During forward movement of the continuum robot 100, the bending section 173 (distal-most bending section) is a leading bending section.
+
+[0065]
+ Fig. 2 is a diagram illustrating details of the bending section 171 of the continuum robot 100 illustrated in Fig. 1.  That is, Fig. 2 illustrates in detail the configuration of the bending section 171 at a proximal end closest to the base 140.  In Fig. 2, the same elements as those in Fig. 1 are denoted by the same reference numerals and their detailed description will be omitted.  In Fig. 2, the bending angle of the bending section 171 is denoted by θ1, the rotational angle of the bending section 171 is denoted by ζ1, and the radius of curvature of the bending section 171 (corresponding to a line segment connecting points O and w1 in Fig. 2) is denoted by ρ1.
+
+[0066]
+ The continuum robot 100 includes wires 111, 112, and 113 connected to connection points 121, 122, and 123, respectively, in a distal end 160 of the bending section 171.  The wires 111, 112, and 113 are pushed and pulled by actuators 131, 132, and 133, respectively, inside the base 140, so that the attitude (bending shape) of the continuum robot 100 is controlled.  The actuator 131 is a driving unit for driving the wire 111, the actuator 132 is a driving unit for driving the wire 112, and the actuator 133 is a driving unit for driving the wire 113.
+
+[0067]
+ The continuum robot 100 includes wire guides 161 to 164 for guiding the wires 111 to 113 in the bending section 171.  The wire guides 161 to 164 may be a plurality of members discretely arranged, or may be constituted by a continuum member, such as a bellows or mesh member.  The wire guides 161 to 164 are secured to the wire 111 at fixed points 150 to 153.  In Fig. 2, the central axis of the continuum robot 100 is indicated by a broken line.
+
+[0068]
+ In the present embodiment, the wires 111, 112, and 113 are referred to as Wire a, Wire b, and Wire c, respectively, counterclockwise in the xy plane.  Specifically, in the example illustrated in Fig. 2, the wire 111 corresponds to Wire a, and the drive displacement of the wire 111 pushed and pulled by the actuator 131 in the bending section 171 is denoted by lp1a.  Also, in the example illustrated in Fig. 2, the wire 112 corresponds to Wire b, and the drive displacement of the wire 112 pushed and pulled by the actuator 132 in the bending section 171 is denoted by lp1b.  Also, in the example illustrated in Fig. 2, the wire 113 corresponds to Wire c, and the drive displacement of the wire 113 pushed and pulled by the actuator 133 in the bending section 171 is denoted by lp1c.
+
+[0069]
+ Fig. 2 illustrates in detail the configuration of the bending section 171 alone.  The bending section 172 and the bending section 173 illustrated in Fig. 1 are configured similarly to the bending section 171 illustrated in Fig. 2.  That is, the bending section 172 and the bending section 173 each include wires corresponding to the wires 111 to 113, actuators corresponding to the actuators 131 to 133, a distal end corresponding to the distal end 160, and wire guides corresponding to the wire guides 161 to 164.  The drive displacements of Wires a to c that drive the n-th bending section are denoted in a generalized way by lpna, lpnb, and lpnc.
+
+[0070]
+ Fig. 3 is a diagram illustrating an example of a general configuration of an operating device 200 for operating the three bending sections 171 to 173 of the continuum robot 100 illustrated in Fig. 1, according to the first embodiment of the present disclosure.  In the following description, the operating device 200 according to the first embodiment illustrated in Fig. 3 is referred to as an "operating device 200-1".
+
+[0071]
+ As illustrated in Fig. 3, the operating device 200-1 includes a first operating unit 210 for operating the first bending section 171, a second operating unit 220 for operating the second bending section 172, and a third operating unit 230 for operating the third bending section 173.
+
+[0072]
+ Components 231 to 233 of the third operating unit 230 are components related to the bending angle θn of the third bending section 173 (distal-most bending section).  Specifically, the operating lever 231 is an operating lever for the bending angle θn of the third bending section 173 and is driven by the motor 232.  The angle of rotation of the operating lever 231 is detected by the angular sensor 233.  The motor 232 and the angular sensor 233 are secured to a housing (not shown) of the operating lever 231.  Also, components 234 to 236 of the third operating unit 230 are components related to the rotational angle ζn of the third bending section 173 (distal-most bending section).  Specifically, the operating lever 234 is an operating lever for the rotational angle ζn of the third bending section 173 and is driven by the motor 235.  The angle of rotation of the operating lever 234 is detected by the angular sensor 236.  The motor 235 and the angular sensor 236 are secured to a housing (not shown) of the operating lever 234.  The third operating unit 230 thus corresponds to distal-most operating means that is operated, for example, by the operator and receives the target bending angle θn and the target rotational angle ζn of the third bending section 173 (distal-most bending section).
+
+[0073]
+ Components 221 to 223 of the second operating unit 220 are components related to the bending angle θn-1 of the second bending section 172 (following bending section).  Specifically, the operating lever 221 is an operating lever for the bending angle θn-1 of the second bending section 172 and is driven by the motor 222.  The angle of rotation of the operating lever 221 is detected by the angular sensor 223.  The motor 222 and the angular sensor 223 are secured to a housing (not shown) of the operating lever 221.  Also, components 224 to 226 of the second operating unit 220 are components related to the rotational angle ζn-1 of the second bending section 172 (following bending section).  Specifically, the operating lever 224 is an operating lever for the rotational angle ζn-1 of the second bending section 172 and is driven by the motor 225.  The angle of rotation of the operating lever 224 is detected by the angular sensor 226.  The motor 225 and the angular sensor 226 are secured to a housing (not shown) of the operating lever 224.  The second operating unit 220 thus corresponds to second following operating means that is operated, for example, by the operator and receives the target bending angle θn-1 and the target rotational angle ζn-1 of the second bending section 172 (second following bending section).
+
+[0074]
+ Components 211 to 213 of the first operating unit 210 are components related to the bending angle θn-2 of the first bending section 171 (following bending section).  Specifically, the operating lever 211 is an operating lever for the bending angle θn-2 of the first bending section 171 and is driven by the motor 212.  The angle of rotation of the operating lever 211 is detected by the angular sensor 213.  The motor 212 and the angular sensor 213 are secured to a housing (not shown) of the operating lever 211.  Also, components 214 to 216 of the first operating unit 210 are components related to the rotational angle ζn-2 of the first bending section 171 (following bending section).  Specifically, the operating lever 214 is an operating lever for the rotational angle ζn-2 of the first bending section 171 and is driven by the motor 215.  The angle of rotation of the operating lever 214 is detected by the angular sensor 216.  The motor 215 and the angular sensor 216 are secured to a housing (not shown) of the operating lever 214.  The first operating unit 210 thus corresponds to first following operating means that is operated, for example, by the operator and receives the target bending angle θn-2 and the target rotational angle ζn-2 of the first bending section 171 (first following bending section).
+
+[0075]
+ As described above, for the bending sections 171 to 173, the operating device 200-1 includes the operating levers 211, 221, and 231 for the respective bending angles θ and the operating levers 214, 224, and 234 for the respective rotational angles ζ.  In the present embodiment, when a continuum robot control system 300 (to be described with reference to Fig. 4) controls the bending angle θ or the rotational angle ζ of the continuum robot 100 to any target angle, the operating levers 211, 221, and 231 or the operating levers 214, 224, and 234 are controlled to provide the same angle as the target angle.
+
+[0076]
+ The operating levers 211, 221, and 231 and the operating levers 214, 224, and 234 each include a sensor (not shown) that detects contact by the operator.  The sensor for each of the operating levers 211, 221, and 231 and the operating levers 214, 224, and 234 may be a push-button switch, or may be a sensor that detects capacitance.  There may be an operation button (not shown) for controlling the displacement zb of the base 140, or may be a plurality of switches (not shown) for changing the motion mode.
+
+[0077]
+ Fig. 4 is a diagram illustrating an example of a general configuration of the continuum robot control system 300 according to the first embodiment of the present disclosure.  In the following description, the continuum robot control system 300 according to the first embodiment illustrated in Fig. 4 is referred to as a "continuum robot control system 300-1".  Specifically, Fig. 4 is a block diagram illustrating a control system for switching between follow-the-leader control and observation motion control.
+
+[0078]
+ In the continuum robot control system 300-1 illustrated in Fig. 4, a block Ps represents the continuum robot 100 to be controlled (or more specifically, an actuator serving as a driving unit, corresponding to the actuators 131 to 133 illustrated in Fig. 2).  In Fig. 4, an output lp from the block Ps is a vector representing the drive displacement of a wire.  Also, in the continuum robot control system 300-1 illustrated in Fig. 4, a block Ks represents a position control system for settling to a target drive displacement lpref of the wire.
+
+[0079]
+ Also, in the continuum robot control system 300-1 illustrated in Fig. 4, a block Pl represents an operating system (following operating means), including a motor, for operating a following bending section.  In the example illustrated in Fig. 3, the block Pl is, for example, an operating system corresponding to the second operating unit 220 and the first operating unit 210 for operating the second bending section 172 and the first bending section 171 (following bending sections).  Also, in Fig. 4, dθ
+lf denotes an operating torque the operator applies to the operating lever for the bending angle of the following bending section and dζ
+lf denotes an operating torque the operator applies to the operating lever for the rotational angle of the following bending section.  In Fig. 4, a target bending angle θlf and a target rotational angle ζlf of the following bending section, which are outputs of the block Pl, are angles of the operating levers in the second operating unit 220 and the first operating unit 210 for controlling the bending angle and the rotational angle of the following bending sections.  Also, in Fig. 4, a block Kl is a position control system for settling these angles to target values.  Blocks Gin and Gout connected to an input end and an output end, respectively, of the block Kl are gains that take values from 0 to 1.
+
+[0080]
+ In the continuum robot control system 300-1 illustrated in Fig. 4, an input device 310 is a device that provides a block FTL and a kinematic computing unit 340 with a target bending angle θlt and a target rotational angle ζlt of the distal-most bending section (or third bending section 173 in the example illustrated in Fig. 1).  The target bending angle θlt and the target rotational angle ζlt of the distal-most bending section, which are outputs of the input device 310, are angles of the operating levers 231 and 234 in the third operating unit 230 for controlling the bending angle and the rotational angle of the distal-most bending section.  In the present embodiment, the operating levers 231 and 234 included in the third operating unit 230, illustrated in Fig. 3, for operating the third bending section 173 (distal-most bending section) are not motor-driven.
+
+[0081]
+ In the continuum robot control system 300-1 illustrated in Fig. 4, an input device 320 is a device that provides the block FTL with the displacement zb of the base 140 in the direction of movement (e.g., forward movement) of the continuum robot 100.
+
+[0082]
+ In the continuum robot control system 300-1 illustrated in Fig. 4, the block FTL represents an exemplary configuration of a follow-the-leader control algorithm.  The block FTL is following calculating means that calculates the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section on the basis of the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section received from the input device 310 and the displacement zb of the base 140 received from the input device 320.  Specifically, the target bending angle θfFTL and the target rotational angle ζfFTL are vectors of target values of a follow-the-leader control system for the following bending section.
+
+[0083]
+ In the continuum robot control system 300-1 illustrated in Fig. 4, a switch unit 330 includes a first switch 331 and a second switch 332.  The first switch 331 is a switch (following switching means) that performs a switching operation for selecting the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section obtained from the block FTL, or the target bending angle θlf and the target rotational angle ζlf of the following bending section obtained from the block Pl.  The second switch 332 is a switch that receives a "0" or "1" signal and performs switching in accordance with the input signal.  During follow-the-leader control (specifically, while the "1" signal is being received by the second switch 332), the switch unit 330 is in the state of a double-pole double-throw switch illustrated in Fig. 4.  That is, during the follow-the-leader control described above, the first switch 331 performs a switching operation for selecting the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section obtained from the block FTL.  When operator's contact with the operating lever for the following bending section is detected (specifically, when the second switch 332 receives the "0" signal), the control system of the present embodiment causes the switch unit 330 to reverse the position of the double-pole double-throw switch illustrated in Fig. 4.  That is, when operator's contact with the operating lever for the following bending section is detected as described above, the first switch 331 performs a switching operation for selecting the target bending angle θlf and the target rotational angle ζlf of the following bending section obtained from the block Pl.  This allows seamless transition from the follow-the-leader control to addition of an operator's operation onto the attitude (bending shape) of the continuum robot 100.
+
+[0084]
+ In the continuum robot control system 300-1 illustrated in Fig. 4, the kinematic computing unit (kinematics) 340 is computing means that computes, on the basis of the target bending angle θ and the target rotational angle ζ of the following bending section selected by the first switch 331, the target drive displacement lpref by which the driving unit of the continuum robot 100 drives the wire in the following bending section.  Additionally, in the present embodiment, the kinematic computing unit 340 also computes, on the basis of the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section received from the input device 310, the target drive displacement lpref by which the driving unit of the continuum robot 100 drives the wire in the distal-most bending section.
+
+</p>
+<p>1) Modeling
+
+[0085]
+ In the present chapter, kinematics is derived to determine the target drive displacement by which the actuator drives the wire to control the bending angle θ and the rotational angle ζ of the continuum robot 100.  Definitions of symbols used in the present chapter are as follows:
+
+</p>
+<p>ld: length of central axis of bending section</p>
+<p>θn: bending angle of distal end</p>
+<p>ζn: rotational angle of distal end</p>
+<p>ρn: radius of curvature of bending section
+
+[0086]
+ In the present embodiment, as described above, three wires for the bending sections, corresponding to the three wires 111, 112, and 113 illustrated in Fig. 2, are referred to as Wire a, Wire b, and Wire c, respectively, counterclockwise in the xy plane.  The drive displacements of Wires a to c that drive the n-th bending section are referred to as lpna, lpnb, and lpnc.
+
+[0087]
+ Fig. 5 is a diagram illustrating an example of how the three wires (Wires a to c) for the n-th bending section, corresponding to the three wires 111 to 113 illustrated in Fig. 2, are arranged in the xy plane.  As illustrated in Fig. 5, Wires a to c are arranged at the vertices of a regular triangle with a length of rs on each side.  A phase angle ξn in Fig. 5 is an angle that determines the position of the wire that drives the n-th bending section.  The phase angle ξ1 is zero (ξ1 = 0) in the present embodiment.
+
+[0088]
+ The kinematics of the continuum robot 100 is derived on the following assumptions:
+
+</p>
+<p>1. In each bending section, the wires deform with a constant curvature;</p>
+<p>2. Torsional deformation of the wires is not taken into account;</p>
+<p>3. The wires do not deform in the longitudinal direction; and</p>
+<p>4. Friction between the wire guides and the wires is not taken into account.
+
+[0089]
+ First, a relation between each of the drive displacements lp1a, lp1b, and lp1c of Wires a to c in the first bending section (corresponding to the bending section 171 in Fig. 1 and Fig. 2) and the bending angle θ1 and the rotational angle ζ1 of the distal end of the first bending section is represented by Equation (1):
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+1.5852274715660541
+5.805196850393701
+[0090]
+ Next, a relation between each of the drive displacements lpna, lpnb, and lpnc of Wires a to c in the n-th bending section of the plurality of bending sections of the continuum robot 100 and the bending angle θn and the rotational angle ζn of the distal end of the n-th bending section is determined.  The phase angle ξn of the wire that drives the n-th bending section is represented by Equation (2):
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.5944892825896763
+5.165334645669291
+
+</p>
+<p>where e is the number of bending sections.
+
+[0091]
+ The drive displacements lpna, lpnb, and lpnc of Wires a to c in the n-th bending section are thus represented by Equation (3):
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+1.3878543307086615
+5.937836832895888
+[0092]
+ Next, modeling of the operating device 200-1 illustrated in Fig. 3 is performed.
+
+[0093]
+ The equation of motion is expressed as Equation (4):
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+1.7203554243219596
+5.45194772528434
+
+</p>
+<p>where Jθ
+n is the moment of inertia of the operating lever for setting the bending angle θn of the n-th bending section and the motor for the operating lever, Jζ
+n is the moment of inertia of the operating lever for setting the rotational angle ζn of the n-th bending section and the motor for the operating lever, dθ
+n is an operating torque applied by the operator to the operating lever for setting the bending angle θn of the n-th bending section, dζ
+n is an operating torque applied by the operator to the operating lever for setting the rotational angle ζn of the n-th bending section, uθ
+n is a control torque applied to the operating lever for setting the bending angle θn of the n-th bending section, and uζ
+n is a control torque applied to the operating lever for setting the rotational angle ζn of the n-th bending section.
+
+[0094]
+ When Equation (4) is expressed as Equation (5) below,
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.20140529308836397
+3.8360706474190724
+
+</p>
+<p>the equation of state is expressed as Equation (6) below:</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.2224825021872266
+3.873542213473316
+[0095]
+ The amount of observation y1 is represented by an output equation, Equation (7) below:
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.18501202974628173
+3.8430971128608924
+
+</p>
+<p>2) Design of control system
+
+[0096]
+ The present chapter deals with design of a follow-the-leader control system and a control system for observation motion control performed in the process of follow-the-leader control.
+
+[0097]
+ Fig. 6 is a diagram illustrating an example of follow-the-leader control of the continuum robot 100 according to the first embodiment of the present disclosure.  In Fig. 6, the same elements as those in Fig. 1 are denoted by the same reference numerals.  Also, the z direction in Fig. 1 is the upward direction from the lower side of the drawing of Fig. 6.  Dotted lines in Fig. 6 each indicate a target path 610 along which the continuum robot 100 including the base 140 and the bendable portion 170 moves.
+
+[0098]
+ As illustrated in Fig. 6, the follow-the-leader control is a method that performs control in such a way that the following bending section of the bendable portion 170 passes along the path (target path 610) along which the distal-most bending section of the bendable portion 170 passes.
+
+[0099]
+ Examples of the follow-the-leader control include control that is performed in such a way that the bending angle of a following bending section corresponding to forward movement of the continuum robot 100 reaches a first target bending angle of a distal-most bending section received, in accordance with a profile of a first bending angle related to the bending angle of the following bending section and determined in accordance with the first target bending angle.
+
+[00100]
+ In Fig. 6, a time point 601 corresponds to an initial state where the bendable portion 170 extending from the upper surface 141 of the base 140 in the z direction does not bend.  Then, as time passes from a time point 602, a time point 603, a time point 604, and a time point 605 in Fig. 6, the bendable portion 170 bends as the base 140 moves in the z direction.
+
+[00101]
+ The follow-the-leader control thus allows the continuum robot 100 to move in such a way as to pass through a space.  It is not essential for the follow-the-leader control to determine the target path 610 in advance.  For example, the bending angle of the distal-most bending section may be continuously transmitted to the bending angle of the following bending section along the length of the bending section.  With this method, for example, by giving a command with a joystick to the bending angle of the distal-most bending section and the displacement (or the amount of movement (forward movement)) of the base 140, the operator can perform the follow-the-leader control of the continuum robot 100 in real time.
+
+</p>
+<p>2.1) Follow-the-leader control
+
+[00102]
+ Fig. 7A and Fig. 7B are diagrams illustrating an example of how the block FTL illustrated in Fig. 4 calculates the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section, according to the first embodiment of the present disclosure.  The example illustrated in Fig. 7A and Fig. 7B assumes that the distal-most bending section is the bending section 173 illustrated in Fig. 1 and the following bending section is the bending section 172 illustrated in Fig. 1.
+
+[00103]
+ Coordinates in the graphs of Fig. 7A and Fig. 7B represent a pair of the position of the base 140 and the angle of the bending section.  For the purposes of explanation, an angle corresponding to coordinates "a" may be referred to as an angle "a", and the position (displacement) of the base 140 corresponding to coordinates "a" may be referred to as a position "a" (displacement "a").
+
+[00104]
+ In Fig. 7A, the horizontal axis represents the displacement zb of the base 140 and the vertical axis represents the bending angle θ of the distal-most bending section and the following bending section.  In Fig. 7A, "Leader" indicated by a broken line represents a profile of the bending angle of the distal-most bending section corresponding to the target bending angle θlt of the distal-most bending section, for example, the operator has entered through the input device 310.  Also, in Fig. 7A, "Follower" indicated by a thick broken line represents a profile of the bending angle of the following bending section corresponding to, for example, the target bending angle θlf of the following bending section.
+
+[00105]
+ In Fig. 7B, the horizontal axis represents the displacement zb of the base 140 and the vertical axis represents the target rotational angle ζ of the distal-most bending section and the following bending section.  In Fig. 7B, "Leader" indicated by a broken line represents a profile of the rotational angle related to the target rotational angle ζlt of the distal-most bending section, for example, the operator has entered through the input device 310.  Also, in Fig. 7B, "Follower" indicated by a thick broken line represents a profile of the rotational angle related to, for example, the target rotational angle ζlf of the following bending section.
+
+[00106]
+ Referring to Fig. 7A, when the displacement zb of the base 140 is a displacement "a", if the target bending angle θlt of the distal-most bending section is changed from a distal-most bending angle "a" to a distal-most bending angle "B", for example, the target bending angle θlf of the following bending section represented by "Follower", indicated by a thick broken line, is automatically updated to change from a following bending angle "c" to a following bending angle "D" when the displacement zb of the base 140 is a displacement "c".  Referring to Fig. 7B, when the displacement zb of the base 140 is a displacement "a", if the target rotational angle ζlt of the distal-most bending section is changed from a distal-most rotational angle "a" to a distal-most rotational angle "b", for example, the target rotational angle ζlf of the following bending section represented by "Follower", indicated by a thick broken line, is automatically updated to change from a following rotational angle "c" to a following rotational angle "d" when the displacement zb of the base 140 is a displacement "c".  The displacement "c" is determined in such a way that the length between the displacement "a" and the displacement "c" is equal to the length ld of the following bending section.
+
+[00107]
+ When the displacement zb of the base 140 is between the displacement "a" and the displacement "c" in Fig. 7A and Fig. 7B, however, the target bending angle θlf and the target rotational angle ζlf of the following bending section represented by "Follower", indicated by a thick broken line, do not change.  The target bending angle θlf of the following bending section represented by "Follower", indicated by a thick broken line in Fig. 7A, changes from the following bending angle "c" to the following bending angle "D" at the displacement "c", and the target rotational angle ζlf of the following bending section, indicated by a thick broken line in Fig. 7B, changes from the following rotational angle "c" to the following rotational angle "d" at the displacement "c".  The continuum robot 100 thus behaves abruptly and the operability of the continuum robot 100 is lost.
+
+[00108]
+ Accordingly, in the present embodiment, the block FTL illustrated in in Fig. 4 calculates the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section in the manner described below.
+
+[00109]
+ In Fig. 7A, the target bending angle θ between the displacement "a" and the displacement "c" is interpolated by a line that connects the target bending angle "a" at the displacement "a" and the target bending angle "D" at the displacement "c", so that the block FTL in Fig. 4 calculates the resulting angle as the target bending angle θfFTL of the following bending section.  In Fig. 7A, the interpolated portion is indicated by a solid line.  Similarly, in Fig. 7B, the target rotational angle ζ between the displacement "a" and the displacement "c" is interpolated by a line that connects the target rotational angle "a" at the displacement "a" and the target rotational angle "d" at the displacement "c", so that the block FTL in Fig. 4 calculates the resulting angle as the target rotational angle ζfFTL of the following bending section.  In Fig. 7B, the interpolated portion is indicated by a solid line.  Then, the block FTL in Fig. 4 stores the profile of the bending angle related to the calculated target bending angle θfFTL of the following bending section and the profile of the rotational angle related to the calculated target rotational angle ζfFTL of the following bending section, for example, in an internal storage unit.
+
+[00110]
+ The explanation of Fig. 7 assumes that the distal-most bending section is the bending section 173 illustrated in Fig. 1 and the following bending section is the bending section 172 illustrated in Fig. 1.  When the bendable portion 170 of the continuum robot 100 includes three or more bending sections, that is, when, for example, the bendable portion 170 illustrated in Fig. 1 includes three bending sections, and the bending section 171 illustrated in Fig. 1 is used as the following bending section, the immediately preceding bending section 172 illustrated in Fig. 1 can be used as the distal-most bending section.
+
+</p>
+<p>2.2) Control for switching to observation motion control
+
+[00111]
+ The follow-the-leader control system described in the previous chapter "2.1) Follow-the-leader control" allows the operator to control the attitudes of all the following bending sections simply by giving an angle command to the distal-most bending section.  Depending on the condition of the target path 610, however, the operator may be required to perform observation motion control in the middle.  This can be performed by giving an additional command to the attitude of the following bending section.  For example, the attitude of the third bending section 173 does not change when the actuator for the second bending section 172 alone is driven.  This motion can change the position of the distal-most end of the bendable portion 170 while keeping constant the direction of the leading end of the third bending section 173, and is suitable for observation along walls, such as stomach and intestinal walls, that extend obliquely from the direction of movement of the continuum robot 100 (hereinafter referred to as "oblique motion").  Here, the operator adds a command value to the bending attitude set by the follow-the-leader control system.  For example, if the operating system for giving an additional command is a midpoint return lever, it is difficult to keep track of the bending shape set by the follow-the-leader control, and incorrect operation may damage the continuum robot 100 or the object therearound.  Also, the amount of additional operation is reset when the operator's hand is off the operating lever.  If, for example, the operating system that gives an additional command is a system that gives a bending angular velocity, keeping track of the resulting bending angle is indirect and thus is difficult, although the amount of additional operation is not reset.  To solve this, it is desirable that during the follow-the-leader control, the angle of the operating lever be synchronized with the bending angle or the rotational angle.  Accordingly, in the present embodiment, an operating system including a motor and an angular sensor, such as an encoder, is used as the operating device 200-1.  This allows the operator to keep track of the attitude of the continuum robot 100 set by the follow-the-leader control, so that the operator can add a command value simply by giving an operating torque to the operating lever.
+
+[00112]
+ Further description of Fig. 4 will now be provided.
+
+[00113]
+ Hereinafter, a relation between the continuum robot control system 300-1 illustrated in Fig. 4, and the model described in "1) Modeling" and the follow-the-leader control system described in "2.1) Follow-the-leader control", will be described.
+
+[00114]
+ As described with reference to Fig. 4, the block Ps is the continuum robot 100 to be controlled, the output lp from the block Ps is a vector representing the drive displacement of a wire, and the block Ks is a position control system for settling to the target drive displacement lpref of the wire.  The block Pl is an operating system including a motor represented by Equation (4), the block Kl is a position control system for settling to target values, and the blocks Gin and Gout connected to the input end and the output end of the position control system are gains that take values from 0 to 1.  In the present embodiment, as described above, the operating levers included in the operating unit for operating the distal-most bending section are not motor-driven.
+
+[00115]
+ The target bending angle θlt and the target rotational angle ζlt of the distal-most bending section are, for example, the angles of the operating levers for the bending angle and the rotational angle of the distal-most bending section and are equal to θln and ζln in Equation (4).  Also, the target bending angle θlf and the target rotational angle ζlf of the following bending section are, for example, the angles of the operating levers for the bending angle and the rotational angle of the following bending section, and are vectors constituted by [θl1, ..., θln-1, ζl1, ..., ζln-1] in Equation (4).  Also, as described above, the operating torques dθ
+lf and dζ
+lf are operating torques the operator applies to the operating levers for the bending angle and the rotational angle of the following bending section, and are vectors constituted by [dθ
+1, ..., dθ
+n-1, dζ
+1, ..., dζ
+n-1] in Equation (4).
+
+[00116]
+ As described above, during follow-the-leader control (specifically, while the "1" signal is being received by the second switch 332), the switch unit 330 is in the state of the double-pole double-throw switch illustrated in Fig. 4.  In this case, the kinematic computing unit 340 receives the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section for the follow-the-leader control system, output from the block FTL.  At the same time, since the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section for the follow-the-leader control system are target angles of the operating levers and the block Gin and the block Gout receive a value of 1, the angles of the operating levers are feedback-controlled by the block Kl to follow the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section.  In this case, the operating torques dθ
+lf and dζ
+lf applied to the operating levers are suppressed as disturbance, and thus have little impact on the angles θlf and ζlf of the operating levers.
+
+[00117]
+ When operator's contact with the operating lever for the following bending section is detected (specifically, when the second switch 332 receives the "0" signal), the switch unit 330 reverses the position of the double-pole double-throw switch illustrated in Fig. 4.  Since the block Gin and the block Gout receive a value of 0 in this case, the control system for the operating levers is shut off, and the operating torques dθ
+lf and dζ
+lf can vary the angles θlf and ζlf of the operating levers.  At the same time, the kinematic computing unit 340 receives the angles θlf and ζlf of the operating levers.  This allows seamless transition from the follow-the-leader control to addition of an operator's operation onto the attitude of the continuum robot 100.  Then, when operator's contact with the operating lever for the following bending section becomes undetected again (specifically, when the second switch 332 receives the "1" signal), the switch unit 330 switches to the position of the double-pole double-throw switch illustrated in Fig. 4.  The angles of the continuum robot 100 and the operating levers are thus returned to the attitude set by the follow-the-leader control.  Although the attitude angle of the continuum robot 100 is equal to the angles of the operating levers in the present embodiment, the configuration is not limited to this and, for example, one angle may be a multiple of the other.
+
+</p>
+<p>3) Simulation
+
+[00118]
+ In the present chapter, simulations are performed using the follow-the-leader control system described in the previous chapter "2) Design of control system".  The continuum robot 100 illustrated in Fig. 1 is simulated, which includes the bendable portion 170 having three bending sections with a length of 0.01 m.
+
+[00119]
+ Fig. 8A to Fig. 8F are diagrams illustrating a first example of a result of simulation of a method of controlling the continuum robot 100 by the continuum robot control system 300-1 according to the first embodiment of the present disclosure.  In Fig. 8A to Fig. 8F, the horizontal direction corresponds to the x direction in Fig. 1, and the vertical direction corresponds to the z direction in Fig. 1.  Fig. 8A to Fig. 8F illustrate how the motion control of the bending sections 171 to 173 in the bendable portion 170 of the continuum robot 100 proceeds with time.  Specifically, Fig. 8A to Fig. 8F are stick diagrams that illustrate, in a stepwise manner, how the attitude of the bendable portion 170 is controlled by the follow-the-leader control and the additional operation until the base 140 advances 0.02 m.  In Fig. 8A to Fig. 8F, a solid line represents the shape of the bendable portion 170 of the continuum robot 100, an open circle represents the leading end of each bending section, and a thin line represents the locus of the leading end of each bending section.
+
+[00120]
+ First, Fig. 8A illustrates an attitude where the third bending section 173 (distal-most bending section) is bent and the base 140 is started to move by an operator's bending operation.  Fig. 8B shows that when the base 140 is moved further by the operator, the follow-the-leader control system allows the second bending section 172 to follow the third bending section 173.
+
+[00121]
+ Fig. 8C illustrates motion control based on an operator's operation of the operating lever at the bending angle θ of the second bending section 172.  This causes the switch unit 330 to reverse the position of the double-pole double-throw switch illustrated in Fig. 4, so that the attitude illustrated in Fig. 8C is reached by adding an operation to the attitude set by the follow-the-leader control.  Fig. 8D illustrates an attitude reached by an additional operation in the direction of shallowing the bending angle θ of the second bending section 172.  This shows that an oblique motion can be performed which changes the position of the distal-most end of the bendable portion 170 while keeping constant the direction of the leading end of the third bending section 173.
+
+[00122]
+ In Fig. 8E, the operator's operation of the operating lever at the bending angle θ of the second bending section 172 ends and the attitude before the additional operation is resumed.  Fig. 8F then shows that as the base 140 moves further, the follow-the-leader control can continue, which allows the second bending section 172 and the first bending section 171 to follow the third bending section 173 and the second bending section 172, respectively.
+
+[00123]
+ Fig. 9A to Fig. 9F are diagrams illustrating a second example of the result of simulation of the method of controlling the continuum robot 100 by the continuum robot control system 300-1 according to the first embodiment of the present disclosure.  In Fig. 9A to Fig. 9F, the horizontal direction corresponds to the y direction in Fig. 1, the vertical direction corresponds to the z direction in Fig. 1, and the depth direction corresponds to the x direction in Fig. 1.  Fig. 9A to Fig. 9F illustrate how the motion control of the bending sections 171 to 173 in the bendable portion 170 of the continuum robot 100 proceeds with time.  Specifically, Fig. 9A to Fig. 9F illustrate a simulation response of giving an additional operation to the rotational angle ζ.
+
+[00124]
+ In Fig. 9A and Fig. 9B, follow-the-leader control is performed in the same manner as that illustrated in Fig. 8A and Fig. 8B. 
+
+[00125]
+ Fig. 9C illustrates an operator's operation of the operating lever in the direction of deepening the rotational angle ζ of the second bending section 172.  This causes the switch unit 330 to reverse the position of the double-pole double-throw switch illustrated in Fig. 4, so that the attitude illustrated in Fig. 9C is reached by adding an operation to the attitude set by the follow-the-leader control.  Fig. 9D illustrates an attitude reached by an additional operation in the direction of shallowing the rotational angle ζ of the second bending section 172.  This shows that it is possible to change the position of the distal-most end of the bendable portion 170 in an out-of-plane direction of the bending shape while keeping constant the direction of the leading end of the third bending section 173.
+
+[00126]
+ Fig. 9E and Fig. 9F show that as the base 140 moves further, the follow-the-leader control can continue, which allows the second bending section 172 and the first bending section 171 to follow the third bending section 173 and the second bending section 172, respectively.
+
+[00127]
+ Fig. 10A to Fig. 10F are diagrams illustrating a third example of the result of simulation of the method of controlling the continuum robot 100 by the continuum robot control system 300-1 according to the first embodiment of the present disclosure.  In Fig. 10A to Fig. 10F, the horizontal direction corresponds to the y direction in Fig. 1, the vertical direction corresponds to the z direction in Fig. 1, and the depth direction corresponds to the x direction in Fig. 1.  Fig. 10A to Fig. 10F illustrate how the motion control of the bending sections 171 to 173 in the bendable portion 170 of the continuum robot 100 proceeds with time.  Specifically, in Fig. 10A to Fig. 10F, the operation in Fig. 8A to Fig. 8F and the operation in Fig. 9A to Fig. 9F are combined, so as to control the position of the distal-most end of the bendable portion 170 while keeping constant the direction of the leading end of the third bending section 173 in a three-dimensional space.
+
+[00128]
+ In the continuum robot control system 300-1 according to the first embodiment, the block FTL calculates the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section on the basis of the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section and the displacement of the base 140.  The switch unit 330 performs a switching operation for selecting the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section obtained from the block FTL, or the target bending angle θlf and the target rotational angle ζlf of the following bending section obtained from the block Pl corresponding to the following operating means.  The kinematic computing unit 340 computes, on the basis of the target bending angle and the target rotational angle of the following bending section selected by the switch unit 330, the drive displacement by which the driving unit of the continuum robot 100 drives the wire in the following bending section.
+
+[00129]
+ This configuration enables switching between the motion control of the following bending section based on the follow-the-leader control and the motion control of the following bending section based on the operation by the following operating means, and thus can prevent the continuum robot 100 from accidentally coming into contact with an object.  Therefore, it is possible to prevent the object or the continuum robot 100 from being damaged, and ensure safe operation of the continuum robot 100.  Specifically, in the present embodiment, follow-the-leader control can seamlessly transition to observation motion control, an oblique motion can be performed by an additional operation, and the follow-the-leader control can be performed again after completion of the additional operation.
+
+</p>
+<p>Second Embodiment
+
+[00130]
+ A second embodiment of the present disclosure will now be described.  In the description of the second embodiment, things in common with the first embodiment will be omitted, and things different from the first embodiment will be described.
+
+[00131]
+ A general configuration of a continuum robot according to the second embodiment is the same as the general configuration of the continuum robot 100 according to the first embodiment illustrated in Fig. 1 and Fig. 2.  A general configuration of an operating device according to the second embodiment is the same as the general configuration of the operating device 200-1 according to the first embodiment illustrated in Fig. 3.
+
+[00132]
+ The control system described in the first embodiment simply gives an operator's operation command to the distal-most bending section.  In the second embodiment, however, the distal-most bending section is operated in conjunction with an additional operation of the following bending section to provide more types of observation motions.  For example, when the bendable portion 170 of the continuum robot 100 includes three bending sections as in the case of Fig. 1, the position of the leading end of the bendable portion 170 of the continuum robot 100 can be significantly changed by driving the second bending section 172 and the third bending section 173 in the same direction.  This motion is suitable for significantly moving the distal-most end of the continuum robot 100, for example, to observe across a wide area inside the body, or to avoid contact with organs (hereinafter referred to as "large bending motion").
+
+[00133]
+ Fig. 11 is a diagram illustrating an example of a general configuration of the continuum robot control system 300 according to the second embodiment of the present disclosure.  In the following description, the continuum robot control system 300 according to the second embodiment illustrated in Fig. 11 is referred to as a "continuum robot control system 300-2".  In Fig. 11, the same elements as those in Fig. 4 are denoted by the same reference numerals and their detailed description will be omitted.  Specifically, Fig. 11 is a block diagram illustrating a control system that operates the distal-most bending section in conjunction with addition of an operation to the following bending section.
+
+[00134]
+ The continuum robot control system 300-2 according to the second embodiment, illustrated in Fig. 11, is obtained by adding some components (described below) to, and changing some components (described below) of, the continuum robot control system 300-1 according to the first embodiment illustrated in Fig. 4.
+
+[00135]
+ Unlike the continuum robot control system 300-1 illustrated in Fig. 4, the continuum robot control system 300-2 includes a block Klt, blocks Gin and Gout connected to an input end and an output end, respectively, of the block Klt, a block Plt, and a block Kr.  The continuum robot control system 300-2 does not include the input device 310 of the continuum robot control system 300-1 illustrated in Fig. 4.  The block FTL, the block Kl, and the block Pl of the continuum robot control system 300-1 illustrated in Fig. 4 are changed to a block FTL + Memory (storage unit), a block Klf, and a block Plf, respectively, in the continuum robot control system 300-2.  The switch unit 330 of the continuum robot control system 300-2 includes a third switch 333, as well as the first switch 331 and the second switch 332 of the continuum robot control system 300-1 illustrated in Fig. 4.  Unlike the continuum robot control system 300-1 illustrated in Fig. 4, the continuum robot control system 300-2 includes a NOT gate downstream of the second switch 332.
+
+[00136]
+ The block Plt in Fig. 11 is an operating system including a motor for the distal-most bending section (distal-most operating means), the block Plf in Fig. 11 is an operating system including a motor for the following bending section (following operating means).  Also, the block Klt in Fig. 11 is an operating-system position control system for the distal-most bending section, and the block Klf in Fig. 11 is an operating-system position control system for the following bending section.  Also, the target bending angle θlt of the distal-most bending section in Fig. 11 is the angle of the operating lever for the bending angle of the distal-most section, and the target rotational angle ζlt of the distal-most bending section in Fig. 11 is the angle of the operating lever for the rotational angle of the distal-most section.  The target bending angle θlt and the target rotational angle ζlt correspond to θln and ζln, respectively, in Equation (4).  Operating torques dθ
+lt and dζ
+lt are operating torques the operator applies to the operating levers for the bending angle and the rotational angle, respectively, of the distal-most bending section, and correspond to dθ
+n and dζ
+n, respectively, in Equation (4).  The block FTL + Memory (storage unit) includes a storage unit that stores the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section, as well as the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section for the follow-the-leader control of the first embodiment.
+
+[00137]
+ The block Kr is an algorithm that makes the attitudes of the following bending section the distal-most bending section in conjunction with each other.  Switching the block Kr can change the type of motion.  Specifically, the block Kr is distal-most calculating means that calculates the target bending angle and the target rotational angle of the distal-most bending section on the basis of the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section stored in the block FTL + Memory (storage unit), and also on the basis of the target bending angle θlf and the target rotational angle ζlf of the following bending section received from the block Plf corresponding to the following operating means.
+
+[00138]
+ The third switch 333 of the switch unit 330 is a switch (distal-most switching means) that performs a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section obtained from the block Kr, or the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section obtained from the block Plt (distal-most operating means).
+
+[00139]
+ In the present embodiment, the kinematic computing unit 340 computes, on the basis of the target bending angle and the target rotational angle of the distal-most bending section selected by the third switch 333, the drive displacement by which the driving unit of the continuum robot 100 drives the wire in the distal-most bending section.
+
+[00140]
+ In the present embodiment, during follow-the-leader control (specifically, while the "1" signal is being received by the second switch 332), the switch unit 330 is in the state of a triple-pole double-throw switch illustrated in Fig. 11.  In this case, the NOT gate downstream of the second switch 332 provides a value of 0 to the blocks Gin and Gout in a feedback loop of the operating system for the distal-most bending section, illustrated in the upper part of Fig. 11.  This shuts off the operating system for the distal-most bending section and allows the operating torques dθ
+lt and dζ
+lt to change the angles θlt and ζlt of the operating levers.  That is, during the follow-the-leader control described above, the third switch 333 performs a switching operation for selecting the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section obtained from the block Plt.  In this case, the kinematic computing unit 340 receives the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section, obtained from the block Plt, and the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section, obtained from the block FTL + Memory.
+
+[00141]
+ At this point, when operator's contact with the operating lever for the following bending section is detected (specifically, when the second switch 332 receives the "0" signal), the switch unit 330 reverses the position of the triple-pole double-throw switch illustrated in Fig. 11.  In this case, the blocks Gin and Gout in a feedback loop of the operating system for the following bending section, illustrated in the lower part of Fig. 11, receive a value of 0.  This shuts off the operating system for the following bending section and allows the operating torques dθ
+lf and dζ
+lf to change the angles θlf and ζlf of the operating levers.  At the same time, the kinematic computing unit 340 receives the target bending angle θlf and the target rotational angle ζlf of the following bending section through the first switch 331.  This allows seamless transition from the follow-the-leader control to addition of an operator's operation onto the attitude of the continuum robot 100.  On the other hand, the NOT gate downstream of the second switch 332 provides a value of 1 to the blocks Gin and Gout in the feedback loop of the operating system for the distal-most bending section, illustrated in in the upper part of Fig. 11.  This enables positioning control by the block Klt and suppresses the operating torques dθ
+lt and dζ
+lt from the operator as disturbance.  In this case, the third switch 333 performs a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section obtained from the block Kr.  This allows the continuum robot 100 and the operating levers to operate in conjunction with the amount of additional operation and allows angles related to the distal-most bending section to change in conjunction with the amount of additional operation on the following bending section.
+
+[00142]
+ Fig. 12A to Fig. 12F are diagrams illustrating a first example of a result of simulation of a method of controlling the continuum robot 100 by the continuum robot control system 300-2 according to the second embodiment of the present disclosure.  In Fig. 12A to Fig. 12F, the horizontal direction corresponds to the x direction in Fig. 1, and the vertical direction corresponds to the z direction in Fig. 1.  Fig. 12A to Fig. 12F illustrate how the motion control of the bending sections 171 to 173 in the bendable portion 170 of the continuum robot 100 proceeds with time.  Specifically, Fig. 12A to Fig. 12F illustrate a simulation response of giving an additional operation.  In Fig. 12A to Fig. 12F, a solid line represents the shape of the bendable portion 170 of the continuum robot 100, an open circle represents the leading end of each bending section, and a thin line represents the locus of the leading end of each bending section.
+
+[00143]
+ In Fig. 12A and Fig. 12B, the same follow-the-leader control as that illustrated in Fig. 9A and Fig. 9B is performed.
+
+[00144]
+ Fig. 12C illustrates motion control based on an operator's operation of the operating lever at the bending angle θ of the second bending section 172.  This causes the switch unit 330 to reverse the position of the triple-pole double-throw switch illustrated in Fig. 11, so that the attitude illustrated in Fig. 12C is reached by adding an operation to the attitude set by the follow-the-leader control.  In this simulation, a bending angle θ3ref of the distal-most bending section is changed in conjunction with the difference between the command angle of the follow-the-leader control on the second bending section 172 and the angle of the additional operation (θl2 - θ2FTL) in such a way as to satisfy Equation (8) below:
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.49229549431321085
+5.297496719160105
+
+</p>
+<p>where θ3Mem is the bending angle of the distal-most bending section immediately before switching of the triple-pole double-throw switch of the switch unit 330, stored in the block FTL + Memory (storage unit).
+
+[00145]
+ Fig. 12D illustrates an attitude reached by an additional operation in the direction of shallowing the bending angle θ of the second bending section 172.  This shows that the direction of observation is changed by an additional operation while the third bending section 173 is always directed toward a small region around [x, y] = [0.015, 0.4] in front.
+
+[00146]
+ Fig. 12E and Fig. 12F show that as the base 140 moves further, the follow-the-leader control can continue, which allows the second bending section 172 and the first bending section 171 to follow the third bending section 173 and the second bending section 172, respectively.
+
+[00147]
+ Fig. 13 A to Fig. 13F are diagrams illustrating a second example of the result of simulation of the method of controlling the continuum robot 100 by the continuum robot control system 300-2 according to the second embodiment of the present disclosure.  In Fig. 13A to Fig. 13F, the horizontal direction corresponds to the x direction in Fig. 1, and the vertical direction corresponds to the z direction in Fig. 1.  Fig. 13A to Fig. 13F illustrate how the motion control of the bending sections 171 to 173 in the bendable portion 170 of the continuum robot 100 proceeds with time.  Specifically, Fig. 13A to Fig. 13F illustrate a large bending motion provided by an additional operation.
+
+[00148]
+ In the simulation illustrated in Fig. 13A to Fig. 13F, the bending angle θ3ref of the distal-most end is changed in conjunction with the difference between the command angle of the follow-the-leader control on the second bending section 172 and the angle of the additional operation in such a way as to satisfy Equation (9) below:
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.44994313210848647
+5.08871719160105
+[00149]
+ The second bending section 172 and the third bending section 173 are thus moved in conjunction with each other to provide a large bending motion.  Fig. 13E and Fig. 13F show that as the base 140 moves further, the follow-the-leader control can continue, which allows the second bending section 172 and the first bending section 171 to follow the third bending section 173 and the second bending section 172, respectively.
+
+[00150]
+ The simulations illustrated in Fig. 12A to Fig. 12F and 13A to Fig. 13F have been described by taking the bending angle θ into account, because the motion control of the bendable portion 170 is assumed to take place in the xz plane.  If the motion control takes place in the xyz three-dimensional space, the rotational angle ζ may also be taken into account.
+
+[00151]
+ Like the first embodiment, the second embodiment can prevent the continuum robot 100 from accidentally coming into contact with an object.  Therefore, it is possible to prevent the object or the continuum robot 100 from being damaged, and ensure safe operation of the continuum robot 100.
+
+</p>
+<p>Third Embodiment
+
+[00152]
+ A third embodiment of the present disclosure will now be described.  In the description of the third embodiment, things in common with the first and second embodiments will be omitted, and things different from the first and second embodiments will be described.
+
+[00153]
+ A general configuration of a continuum robot according to the third embodiment is the same as the general configuration of the continuum robot 100 according to the first embodiment illustrated in Fig. 1 and Fig. 2.  A general configuration of an operating device according to the third embodiment is the same as the general configuration of the operating device 200-1 according to the first embodiment illustrated in Fig. 3.
+
+[00154]
+ The control system of the second embodiment operates the distal-most bending section in conjunction with an additional operation of the following bending section.  In the third embodiment, however, the following bending sections are operated in conjunction with each other to provide more types of observation motions.
+
+[00155]
+ Fig. 14 is a diagram illustrating an example of a general configuration of the continuum robot control system 300 according to the third embodiment of the present disclosure.  In the following description, the continuum robot control system 300 according to the third embodiment illustrated in Fig. 14 is referred to as a "continuum robot control system 300-3".  In Fig. 14, the same elements as those in Fig. 4 are denoted by the same reference numerals and their detailed description will be omitted.  Specifically, Fig. 14 is a block diagram illustrating a control system that allows the following bending sections to be operated in conjunction with each other by an additional operation.
+
+[00156]
+ The continuum robot control system 300-3 according to the third embodiment, illustrated in Fig. 14, is obtained by adding some components (described below) to, and changing some components (described below) of, the continuum robot control system 300-1 according to the first embodiment illustrated in Fig. 4.
+
+[00157]
+ Unlike the continuum robot control system 300-1 illustrated in Fig. 4, the continuum robot control system 300-3 includes two control systems for following bending sections.  Specifically, the control system for the following bending section including the block Kl, the blocks Gin and Gout connected to the input end and the output end of the block Kl, and the block Pl, illustrated in Fig. 4, is changed to a control system for the second bending section 172 (second following bending section) in the continuum robot control system 300-3.  More specifically, the control system for the second bending section 172 is a control system for the following bending section including a block Kl2, the blocks Gin and Gout connected to the input end and the output end of the block Kl2, and a block Pl2 illustrated in Fig. 14.  Unlike the continuum robot control system 300-1 illustrated in Fig. 4, the continuum robot control system 300-3 further includes a control system for the first bending section 171 (first following bending section).  More specifically, the control system for the first bending section 171 is a control system for the following bending section including a block Kl1 and a block Pl1 illustrated in Fig. 14.  Unlike the continuum robot control system 300-1 illustrated in Fig. 4, the continuum robot control system 300-3 further includes a control gain block Gw.  Also, the switch unit 330 of the continuum robot control system 300-3 includes a fourth switch 334 and a fifth switch 335, instead of the first switch 331 of the continuum robot control system 300-1 illustrated in Fig. 4.
+
+[00158]
+ The block Pl1 is an operating system (first following operating means), including a motor, for receiving a target bending angle θlf1 and a target rotational angle ζlf1 of the first bending section 171 (first following bending section).  In the example illustrated in Fig. 3, for example, the block Pl1 is an operating system corresponding to the first operating unit 210 for operating the first bending section 171 (following bending section).  Specifically, the target bending angle θlf1 and the target rotational angle ζlf1 of the first bending section 171 are angles of the operating levers for the first bending section 171.  Operating torques dθ
+lf1 and dζ
+lf1 are operating torques the operator applies to the operating lever at the bending angle of the first bending section 171 and to the operating lever at the rotational angle of the first bending section 171.
+
+[00159]
+ The block Pl2 is an operating system (second following operating means), including a motor, for receiving a target bending angle θlf2 and a target rotational angle ζlf2 of the second bending section 172 (second following bending section).  In the example illustrated in Fig. 3, for example, the block Pl2 is an operating system corresponding to the second operating unit 220 for operating the second bending section 172 (following bending section).  Specifically, the target bending angle θlf2 and the target rotational angle ζlf2 of the second bending section 172 are angles of the operating levers for the second bending section 172.  Operating torques dθ
+lf2 and dζ
+lf2 are operating torques the operator applies to the operating lever at the bending angle of the second bending section 172 and to the operating lever at the rotational angle of the second bending section 172.
+
+[00160]
+ The block Kl1 is an operating-system position control system for the first bending section 171 (first following bending section), and the block Kl2 is an operating-system position control system for the second bending section 172 (second following bending section).
+
+[00161]
+ In the present embodiment, the block FTL calculates a target bending angle θf2FTL and a target rotational angle ζf2FTL of the second bending section 172, and also calculates a target bending angle θf1FTL and a target rotational angle ζf1FTL of the first bending section 171.
+
+[00162]
+ In the continuum robot control system 300-3 illustrated in Fig. 14, the control gain block Gw is a matrix that specifies the ratio of the attitudes of the following bending section and the distal-most bending section, and switching the control gain block Gw can change the type of motion.  Specifically, in the example illustrated in Fig. 14, the control gain block Gw is control gain means that multiplies, by a control gain, the target bending angle θlf2 and the target rotational angle ζlf2 of the second bending section 172 obtained from the block Pl2 (second following operating means).
+
+[00163]
+ In the present embodiment, for example, when operator's contact with the operating lever for the second bending section 172 is detected (specifically, when the second switch 332 receives the "0" signal), the switch unit 330 reverses the position of the triple-pole double-throw switch illustrated in Fig. 14.  The switch unit 330 thus causes the fourth switch 334 to perform a switching operation for selecting, as the target bending angle and the target rotational angle of the second bending section 172, the target bending angle θlf2 and the target rotational angle ζlf2 of the second bending section 172 obtained from the block Pl2 (second following operating means), and also causes the fifth switch 335 to perform a switching operation for selecting, as the target bending angle and the target rotational angle of the first bending section 171, the target bending angle θlf2 and the target rotational angle ζlf2 of the second bending section 172 multiplied by the control gain by the control gain block Gw.
+
+[00164]
+ Fig. 15A to Fig. 15F are diagrams illustrating an example of the result of simulation of the method of controlling the continuum robot 100 by the continuum robot control system 300-3 according to the third embodiment of the present disclosure.  In Fig. 15A to Fig. 15F, the horizontal direction corresponds to the x direction in Fig. 1, and the vertical direction corresponds to the z direction in Fig. 1.  Fig. 15A to Fig. 15F illustrate how the motion control of the bending sections 171 to 173 in the bendable portion 170 of the continuum robot 100 proceeds with time.  Specifically, Fig. 15A to Fig. 15F illustrate a simulation response of giving an additional operation.  In Fig. 15A to Fig. 15F, a solid line represents the shape of the bendable portion 170 of the continuum robot 100, an open circle represents the leading end of each bending section, and a thin line represents the locus of the leading end of each bending section.
+
+[00165]
+ In Fig. 15A and Fig. 15B, the same follow-the-leader control as that illustrated in Fig. 9A and Fig. 9B is performed.
+
+[00166]
+ Fig. 15C and Fig. 15D illustrate an operator's operation of the operating lever for the bending angle of the second bending section 172.  This causes the switch unit 330 to reverse the position of the triple-pole double-throw switch illustrated in Fig. 14, so that the attitudes illustrated in Fig. 15C and Fig. 15D are reached by adding an operation to the attitude set by the follow-the-leader control.  In this simulation, the bending angle of the first bending section 171 θ1ref is changed in conjunction with the difference between the command angle of the follow-the-leader control on the second bending section 172 and the angle of the additional operation (θl2 - θ2FTL) in such a way as to satisfy Equation (10) below:
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.4911417322834646
+5.213649387576553
+[00167]
+ The operator can thus change the displacement of the distal-most end in the forward and backward direction of movement while keeping constant the direction of the leading end of the third bending section 173.
+
+[00168]
+ Fig. 15E and Fig. 15F show that as the base 140 moves further, the follow-the-leader control can continue, which allows the second bending section 172 and the first bending section 171 to follow the third bending section 173 and the second bending section 172, respectively.
+
+[00169]
+ The simulations illustrated in Fig. 15A to Fig. 15F have been described by taking the bending angle θ into account, because motion control of the bendable portion 170 is assumed to take place in the xz plane.  If the motion control takes place in the xyz three-dimensional space, the rotational angle ζ may also be taken into account.
+
+[00170]
+ Like the first embodiment, the third embodiment can prevent the continuum robot 100 from accidentally coming into contact with an object.  Therefore, it is possible to prevent the object or the continuum robot 100 from being damaged, and ensure safe operation of the continuum robot 100.
+
+</p>
+<p>Fourth Embodiment
+
+[00171]
+ A fourth embodiment of the present disclosure will now be described.  In the description of the fourth embodiment, things in common with the first to third embodiments will be omitted, and things different from the first to third embodiments will be described.
+
+[00172]
+ A general configuration of a continuum robot according to the fourth embodiment is the same as the general configuration of the continuum robot 100 according to the first embodiment illustrated in Fig. 1 and Fig. 2.  A general configuration of an operating device according to the fourth embodiment is the same as the general configuration of the operating device 200-1 according to the first embodiment illustrated in Fig. 3.
+
+[00173]
+ The first to third embodiments described above assume that an additional bending operation takes place during forward movement which involves follow-the-leader control.  In the fourth embodiment, an additional bending operation that takes place during backward movement will be described.  During backward movement, the bending angle θ and the rotational angle ζ of the distal-most bending section may be controlled by the operator as in the case of during forward movement.  Alternatively, an operation during forward movement may be recorded and reproduced in accordance with the displacement zb of the base 140.
+
+[00174]
+ Fig. 16 is a diagram illustrating an example of a general configuration of the continuum robot control system 300 according to the fourth embodiment of the present disclosure.  In the following description, the continuum robot control system 300 according to the fourth embodiment illustrated in Fig. 16 is referred to as a "continuum robot control system 300-4".  In Fig. 16, the same elements as those in Fig. 11 are denoted by the same reference numerals and their detailed description will be omitted.
+
+[00175]
+ The continuum robot control system 300-4 according to the fourth embodiment, illustrated in Fig. 16, is obtained by adding some components (described below) to, and changing some components (described below) of, the continuum robot control system 300-2 according to the second embodiment illustrated in Fig. 11.
+
+[00176]
+ Unlike the continuum robot control system 300-2 illustrated in Fig. 11, the continuum robot control system 300-4 includes a "Bk = 1 Fw = 0" block 350 and a switch unit 360.  The continuum robot control system 300-4 does not include the block Kr of the continuum robot control system 300-2 illustrated in Fig. 11.  The switch unit 330 of the continuum robot control system 300-4 includes a sixth switch 336, instead of the third switch 333 of the continuum robot control system 300-2 illustrated in Fig. 11.  The continuum robot control system 300-4 includes a multiplication block 370, instead of the NOT gate downstream of the second switch 332 in the continuum robot control system 300-2 illustrated in Fig. 11.
+
+[00177]
+ The "Bk = 1 Fw = 0" block 350 is base determining means that determines whether the base 140 is moving forward or backward, on the basis of the displacement zb of the base 140.  The "Bk = 1 Fw = 0" block 350 outputs a "0" signal if determining that the base 140 is moving forward, and outputs a "1" signal if determining that the base 140 is moving backward.
+
+[00178]
+ The switch unit 360 is distal-most switching means that performs a switching operation for selecting, on the basis of the determination made by the "Bk = 1 Fw = 0" block 350, the target bending angle and the target rotational angle of the distal-most bending section stored in the block FTL + Memory (storage unit), or the target bending angle θlt and the target rotational angle ζlt of the distal-most bending section obtained from the block Plt (distal-most operating means).  Specifically, the switch unit 360 operates in conjunction with an output signal of the "Bk = 1 Fw = 0" block 350.  For example, if the "Bk = 1 Fw = 0" block 350 determines that the base 140 is moving backward (if a "1" signal is output), the switch unit 360 performs a switching operation for selecting the target bending angle and the target rotational angle of the distal-most bending section stored in the block FTL + Memory (storage unit).  On the basis of the target bending angle and the target rotational angle of the distal-most bending section selected by the switch unit 360, the kinematic computing unit 340 computes the drive displacement by which the driving unit of the continuum robot 100 drives the wire in the distal-most bending section.
+
+[00179]
+ Specifically, in the state of the triple-pole double-throw switch of the switch unit 330 and the state of a single-pole double-throw switch of the switch unit 360 illustrated in Fig. 16, the positioning control of the operating lever for the distal-most bending section is disabled.  In this case, the operating angle of the operating lever operated by the operator is received through the single-pole double-throw switch of the switch unit 360 by the kinematic computing unit 340, so that follow-the-leader control is performed.  If the base 140 is moved backward at this point, the switch unit 360 reverses the position of the single-pole double-throw switch illustrated in Fig. 16.  In this case, the positioning control of the operating lever for the distal-most bending section is enabled.  As the target values of the positioning control, the target bending angle and the target rotational angle of the distal-most bending section recorded during forward movement and corresponding to the displacement zb of the base 140 are output from the FTL + Memory (storage unit).  At the same time, the target bending angle and the target rotational angle of the distal-most bending section are received by the kinematic computing unit 340, so that the continuum robot 100 reproduces the shape recoded during forward movement while moving backward.
+
+[00180]
+ When operator's contact with the operating lever for the following bending section is detected, the control system of the present embodiment causes the switch unit 330 to reverse the position of the triple-pole double-throw switch illustrated in Fig. 16.  The motion of the following bending section at this point is the same as that in the first embodiment.  As for control of the distal-most bending section, the positioning control of the operating lever for the distal-most bending section is disabled regardless of whether the displacement zb of the base 140 is forward or backward, and the operating angle of the operating lever operated by the operator is received through the switch unit 330 by the kinematic computing unit 340 without passing through the switch unit 360.
+
+[00181]
+ The third embodiment allows seamless transition to an operator's additional operation as in the first embodiment while controlling the distal-most bending section during backward movement in such a way as to reproduce the operation recorded during forward movement.
+
+</p>
+<p>Fifth Embodiment
+
+[00182]
+ A fifth embodiment of the present disclosure will now be described.  In the description of the fifth embodiment, things in common with the first to fourth embodiments will be omitted, and things different from the first to fourth embodiments will be described.
+
+[00183]
+ A general configuration of a continuum robot according to the fifth embodiment is the same as the general configuration of the continuum robot 100 according to the first embodiment illustrated in Fig. 1 and Fig. 2.  A general configuration of a continuum robot control system according to the fifth embodiment of the present disclosure may be any of the general configurations of the continuum robot control systems 300-1 to 300-4 according to the first to fourth embodiments.
+
+[00184]
+ The first to fourth embodiments assume that the operating device 200-1, illustrated in Fig. 3, is used which includes operating levers that correspond one-to-one to the bending angle and the rotational angle of each bending section.  In the fifth embodiment, a joystick with a dual-axis motor is used as the operating device 200.
+
+[00185]
+ Fig. 17 is a diagram illustrating an example of a general configuration of the operating device 200 for operating the three bending sections 171 to 173 of the continuum robot 100 illustrated in Fig. 1, according to the fifth embodiment of the present disclosure.  In the following description, the operating device 200 according to the fifth embodiment illustrated in Fig. 17 is referred to as an "operating device 200-5".
+
+[00186]
+ As illustrated in Fig. 17, the operating device 200-5 includes a first operating unit 240 for operating the first bending section 171, a second operating unit 250 for operating the second bending section 172, and a third operating unit 260 for operating the third bending section 173.
+
+[00187]
+ The first operating unit 240 includes an operating lever 241, motors 242 and 244, and angular sensors 243 and 245.  The operating lever 241 is an operating lever for the first bending section 171.  The angular sensors 243 and 245 detect operating angles ϕx1 and ϕy1, respectively, with respect to the first bending section 171.  The motors 242 and 244 are motors for applying control torques to the operating angles ϕx1 and ϕy1, respectively.
+
+[00188]
+ The second operating unit 250 includes an operating lever 251, motors 252 and 254, and angular sensors 253 and 255.  The operating lever 251 is an operating lever for the second bending section 172.  The angular sensors 253 and 255 detect operating angles ϕx2 and ϕy2, respectively, with respect to the second bending section 172.  The motors 252 and 254 are motors for applying control torques to the operating angles ϕx2 and ϕy2, respectively.
+
+[00189]
+ The third operating unit 260 includes an operating lever 261, motors 262 and 264, and angular sensors 263 and 265.  The operating lever 261 is an operating lever for the third bending section 173.  The angular sensors 263 and 265 detect operating angles ϕx3 and ϕy3, respectively, with respect to the third bending section 173.  The motors 262 and 264 are motors for applying control torques to the operating angles ϕx3 and ϕy3, respectively.
+
+[00190]
+ For use in the control systems described in the first to fourth embodiments, a coordinate transformation may be performed as in Equation (11) below:
+
+</p>
+<p>
+
+SVG
+{EMBED HERE}
+0.5477580927384077
+5.389938757655293
+
+</p>
+<p>where ϕxn and ϕyn are operating angles with respect to the n-th bending section.</p>
+<p>Sixth Embodiment
+
+[00191]
+ A sixth embodiment of the present disclosure will now be described.  In the description of the sixth embodiment, things in common with the first to fifth embodiments will be omitted, and things different from the first to fifth embodiments will be described.
+
+[00192]
+ A general configuration of a continuum robot according to the sixth embodiment is the same as the general configuration of the continuum robot 100 according to the first embodiment illustrated in Fig. 1 and Fig. 2.  A general configuration of an operating device according to the sixth embodiment is the same as the general configuration of the operating device 200-1 according to the first embodiment illustrated in Fig. 3.
+
+[00193]
+ For switching between the follow-the-leader control and the additional operation, the control systems described in the first to fifth embodiments use a value of 0 or 1 for the blocks Gin and Gout.  However, since such switching between two values may lead to abrupt behavior caused by operation of an operating lever, a control system illustrated in Fig. 18 may be used.
+
+[00194]
+ Fig. 18 is a diagram illustrating an example of a general configuration of the continuum robot control system 300 according to the sixth embodiment of the present disclosure.  In the following description, the continuum robot control system 300 according to the sixth embodiment illustrated in Fig. 18 is referred to as a "continuum robot control system 300-6".  In Fig. 18, the same elements as those in Fig. 4 are denoted by the same reference numerals and their detailed description will be omitted.
+
+[00195]
+ The continuum robot control system 300-6 according to the sixth embodiment, illustrated in Fig. 18, is obtained by adding some components (described below) to, and changing some components (described below) of, the continuum robot control system 300-1 according to the first embodiment illustrated in Fig. 4.
+
+[00196]
+ Unlike the continuum robot control system 300-1 illustrated in Fig. 4, the continuum robot control system 300-6 includes a low-pass filter Flpf downstream of the second switch 332 of the switch unit 330.  In the continuum robot control system 300-6 according to the sixth embodiment illustrated in Fig. 18, a signal passing through the low-pass filter Flpf is received by the blocks Gin and Gout.  In this case, the break frequency of the low-pass filter Flpf may be about 1 Hz.  Fig. 18 illustrates the changes made to the control system of the first embodiment.  The same changes as those described may be made to the control systems of the second to fourth embodiments.
+
+</p>
+<p>Other Embodiments
+
+[00197]
+ One or more features of the present disclosure can also be implemented by processing where a program that performs one or more functions of the embodiments described above is supplied through a network or storage medium to a system or apparatus, and one or more processors in a computer of the system or apparatus read and execute the program.  One or more features of the present disclosure can also be implemented by a circuit (e.g., application-specific integrated circuit or ASIC) that performs one or more functions.
+
+[00198]
+ A program and a computer-readable storage medium that stores the program are included in the present disclosure.
+
+[00199]
+ One or more features of the present disclosure can ensure safe operation of the continuum robot.
+
+[00200]
+ While one or more features of the present disclosure have been described with reference to exemplary embodiments, it is to be understood that the disclosure is not limited to the disclosed exemplary embodiments.  The scope of the following claims is to be accorded the broadest interpretation so as to encompass all such modifications and equivalent structures and functions.
+
+</p>
+   
+
+</body></html>

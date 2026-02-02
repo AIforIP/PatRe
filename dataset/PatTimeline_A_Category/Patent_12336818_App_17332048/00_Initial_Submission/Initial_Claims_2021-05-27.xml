@@ -1,0 +1,164 @@
+<html><head></head><body><h3>Date: 2021-05-27</h3>
+<p>CLAIMS That which is claimed is:</p>
+<br>
+
+1.
+A device comprising: 
+<br>
+a biosensor comprising: 
+<br>
+a first electrode having a distal end for insertion into a subcutaneous layer beneath a patient's skin, a second electrode coupled to the first electrode, a portion of the second electrode for insertion into the subcutaneous layer, and 
+<br>
+a first battery to apply a voltage across the first and second electrodes, the first battery at least partially electrically decoupled from the electrodes; 
+<br>
+a second battery comprising: 
+<br>
+an anode material coupled to a portion of the distal end of the first electrode, the anode material for insertion into the subcutaneous layer, and 
+<br>
+a portion of the second electrode, the second battery activatable upon immersion in an electrolytic fluid; and 
+<br>
+a wake-up circuit coupled to the second battery to receive a signal from the second battery and, in response, to electrically couple the first battery to the first and second electrodes. 
+
+<br>
+
+2.
+The device of claim 1, further comprising a glucose oxidase material disposed on a portion of the distal end of the first electrode.
+<br>
+
+3.
+The device of claim 1, further comprising a radio frequency ("RF") transmitter, and wherein: 
+<br>
+the first battery is at least partially electrically decoupled from the RF transmitter and is further to apply power to the RF transmitter, and 
+<br>
+the wake-up is further to electrically couple the first battery to the RF transmitter in response to receiving the signal from the second battery. 
+
+<br>
+
+4.
+The device of claim 1, wherein: 
+<br>
+the first electrode comprises a platinum material; 
+
+ the second electrode comprises a silver/silver-chloride material coating a portion of the first electrode; and 
+<br>
+the anode material comprises zinc, iron, aluminum, or nickel. 
+
+<br>
+
+<br>
+5.    The device of claim 1, wherein the anode material comprises approximately 10 to 100 nanograms ("ng") of zinc, approximately 10 to 100 ng of nickel, approximately 10 to 100 ng of iron, or approximately 3 to 30 ng of aluminum.
+<br>
+
+<br>
+6.    The device of claim 1, wherein the wake-up circuit comprises one or more of (1) a voltage threshold detection circuit and a reference voltage source, (2) a current threshold detection circuit and a reference current source, (3) a ring oscillator, (4) a power-on reset circuit, or (5) an NMOS footer switch.
+<br>
+
+<br>
+7.    The device of claim 1, wherein the biosensor further comprises a processor, and 
+<br>
+wherein the wake-up circuit is further to electrically couple the first battery to the processor. 
+
+<br>
+
+<br>
+8.    The device of claim 8, wherein the wake-up circuit comprises a ring oscillator electrically coupled to a clock circuit of the processor to activate the clock circuit after receiving the signal from the second battery.
+<br>
+
+<br>
+9.    A method comprising: 
+<br>
+providing first and second electrodes, the first electrode having a distal end for insertion into a subcutaneous layer beneath a patient's skin, the second electrode coupled to the first electrode, a portion of the second electrode for insertion into the subcutaneous layer; 
+<br>
+applying an anode material proximate to the distal end of the first electrode; 
+<br>
+coupling a wake-up circuit to the first and second electrodes to receive a signal from a second battery in response to immersion of the second battery in an electrolytic fluid, the second battery comprising the anode material and the second electrode; and 
+<br>
+coupling a first battery to the wake-up circuit, the wake-up circuit to electrically couple the first battery to the first and second electrodes in response to the signal from the second battery. 
+<br>
+
+<br>
+10.   The method of claim 9, further comprising a glucose oxidase material disposed on a portion of the distal end of the first electrode.
+<br>
+
+<br>
+11.   The method of claim 9, further comprising coupling a radio frequency ("RF") transmitter to the wake-up circuit, and wherein: 
+<br>
+the first battery is at least partially electrically decoupled from the RF transmitter and is further to apply power to the RF transmitter, and 
+<br>
+the wake-up is further to electrically couple the first battery to the RF transmitter in response to receiving the signal from the second battery. 
+
+<br>
+
+<br>
+12.   The method of claim 9, wherein: 
+<br>
+the first electrode comprises a platinum material; 
+<br>
+the second electrode comprises a silver/silver-chloride material coating a portion of the first electrode; and 
+<br>
+the anode material comprises zinc, iron, aluminum, or nickel. 
+
+<br>
+
+<br>
+13.   The method of claim 9, wherein the anode material comprises approximately 10 to 100 nanograms ("ng") of zinc, approximately 10 to 100 ng of nickel, approximately 10 to 100 ng of iron, or approximately 3 to 30 ng of aluminum.
+<br>
+
+<br>
+14.   A method comprising: 
+<br>
+inserting an insertable portion of a biosensor and a second battery into a patient's skin and into the patient's interstitial fluid, the insertable portion comprising: 
+<br>
+a distal end of a first electrode and a portion of second electrode, the first electrode coupled to the second electrode, the biosensor further comprising a first battery to apply a voltage across the first and second electrodes, the first battery at least partially electrically decoupled from the electrodes, the second battery comprising an anode material coupled to a portion of the distal end of the first electrode and a portion of the second electrode; 
+<br>
+generating a signal by the second battery after the second battery is immersed in the patient's interstitial fluid; 
+
+ electrically coupling the first battery to the first and second electrodes by a wake- up circuit in response to receiving the signal from the second battery; and 
+<br>
+providing sensor information from the biosensor to a radio frequency ("RF") transmitter. 
+
+<br>
+
+<br>
+15.   The method of claim 14, further comprising transmitting the sensor information to a remote wireless device.
+<br>
+
+<br>
+16.   The method of claim 15, wherein the transmitting is performed using a radio frequency identification ("RFID") or near-field communication ("NFC") technique.
+<br>
+
+<br>
+17.   The method of claim 14, wherein the biosensor comprising a processor, and 
+<br>
+further comprising activating a clock circuit of the processor by the wake-up circuit. 
+
+<br>
+
+<br>
+18.   A device comprising: 
+<br>
+a biosensor comprising: 
+<br>
+a first electrode having a distal end for insertion into a subcutaneous layer beneath a patient's skin, and 
+<br>
+a second electrode coupled to the first electrode, a portion of the second electrode for insertion into the subcutaneous layer, and 
+<br>
+a first battery comprising: 
+<br>
+an anode material coupled to a portion of the distal end of the first electrode, the anode material for insertion into the subcutaneous layer, and 
+<br>
+a portion of the second electrode, the first battery activatable upon immersion in an electrolytic fluid to apply a voltage to the first and second electrodes. 
+
+<br>
+
+<br>
+19.   The device of claim 18, further comprising a glucose oxidase material disposed on a portion of the distal end of the first electrode.
+<br>
+
+<br>
+20.   The device of claim 18, further comprising a radio frequency ("RF") transmitter, and wherein the first battery is further to apply power to the RF transmitter.
+14
+15
+16
+17
+</body></html>

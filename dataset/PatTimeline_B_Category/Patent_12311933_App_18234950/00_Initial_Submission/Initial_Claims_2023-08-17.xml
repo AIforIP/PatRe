@@ -1,0 +1,33 @@
+<html><head></head><body><h3>Date: 2023-08-17</h3>
+
+<h1>WHAT IS CLAIMED IS:</h1>
+<br>
+<br>
+1. A driving support apparatus configured to:<br>
+conduct driving support of a vehicle responding to a blind spot in front of the vehicle;<br>
+detect a plurality of blind spots meeting a predetermined condition in front of the vehicle;<br>
+determine the plurality of blind spots as a conglomerate risk;<br>
+calculate a single risk estimation value indicating a level of a risk of each of the plurality of blind spots;calculate a conglomerate risk estimation value indicating a level of a risk of an entire conglomerate risk, the conglomerate risk estimation value being a total value of the single risk estimation values of the blind spots included in the conglomerate risk;<br>
+end the driving support at a position at which the vehicle passes a blind spot having a highest single risk estimation value; and<br>
+determine target passing speed of the vehicle at a position at which the driving support is ended in accordance with the conglomerate risk estimation value.<br>
+<br>
+2. The driving support apparatus according to claim 1, further configured to:<br>
+calculate a first driving path responding only to a first blind spot included in the conglomerate risk; and<br>
+determine that the plurality of blind spots meets the predetermined condition when the first driving path deviates from an original traffic lane and does not return to the original traffic lane before a second blind spot included in the conglomerate risk, the original traffic lane being a traffic lane in which the vehicle originally drives before the plurality of blind spots is detected, the second blind spot existing next behind to the first blind spot.<br>
+<br>
+3. The driving support apparatus according to The driving support apparatus according to <br>
+wherein the predetermined condition further includes a condition that the original traffic lane is a lane closest to roadside and the vehicle drives within the lane closest to the roadside before the plurality of blind spots is detected.<br>
+<br>
+4. The driving support apparatus according to claim 1, further configured to:<br>
+calculate a total number of pedestrians and oncoming vehicles detected before a blind spot is detected; and<br>
+change the conglomerate risk estimation value into a maximum value of single risk estimation values of blind spots included in the conglomerate risk when the total number is equal to or less than a predetermined threshold value.<br>
+<br>
+5. A driving support method comprising:<br>
+conducting driving support of a vehicle responding to a blind spot in front of the vehicle;<br>
+detecting a plurality of blind spots meeting a predetermined condition in front of the vehicle;<br>
+determining the plurality of blind spots as a conglomerate risk;<br>
+calculating a single risk estimation value indicating a level of a risk of each of the plurality of blind spots;calculating a conglomerate risk estimation value indicating a level of a risk of an entire conglomerate risk, the conglomerate risk estimation value being a total value of the single risk estimation values of the blind spots included in the conglomerate risk;<br>
+ending the driving support at a position at which the vehicle passes a blind spot having a highest single risk estimation value; and<br>
+determining target passing speed of the vehicle at a position at which the driving support is ended in accordance with the conglomerate risk estimation value.
+
+</body></html>

@@ -1,0 +1,132 @@
+<html><head></head><body><h3>Date: 2022-07-14</h3>
+<p><u>AMENDMENTS TO THE CLAIMS:</u></p>
+<p>This listing of claims will replace all prior versions and listings of claims in the application.</p>
+<p><u>LISTING OF THE CLAIMS:</u></p>
+<br>
+
+<br>
+1. (Currently Amended) An aircraft cargo handling system, comprising: 
+<br>
+a first cargo handling robot; and 
+<br>
+a second cargo handling robot, wherein the first cargo handling robot and the second cargo handling robot are configured to simultaneously couple to a common cargo unit to transport the cargo unit from a first position on a cargo deck to a different second position on the cargo deck, the first cargo handling robot and the second cargo handling robot configured to move in two <u>different</u> dimensions about the cargo deck in response to receiving instructions from a control module to move the cargo unit from the first position to the second position. 
+
+<br>
+
+<br>
+2. (Previously Presented) The aircraft cargo handling system of claim 1, wherein the first cargo handling robot comprises an attachment mechanism and a movement mechanism and the second cargo handling robot comprises an attachment mechanism and a movement mechanism.
+
+<br>
+
+<br>
+3. (Previously Presented) The aircraft cargo handling system of claim 2, wherein the first cargo handling robot and the second cargo handling robot are configured to attach to the cargo unit via the attachment mechanisms.
+
+<br>
+
+<br>
+4. (Previously Presented) The aircraft cargo handling system of claim 2, wherein the attachment mechanism comprises one of an electrically, pneumatically, or hydraulically powered clamp, piston, screw.
+<br>
+
+<br>
+5. (Previously Presented) The aircraft cargo handling system of claim 2, wherein the attachment mechanisms comprise one of an active attachment mechanism or passive attachment mechanism.
+
+<br>
+
+<br>
+6. (Previously Presented) The aircraft cargo handling system of claim 1, wherein the cargo deck comprises one of a metallic material or a composite material and comprises a plurality of conveyance rollers.
+
+<br>
+
+<br>
+7. (Previously Presented) The aircraft cargo handling system of claim 1, wherein the first cargo handling robot and second cargo handling robot communicate via a network.
+
+<br>
+
+<br>
+8. (Previously Presented) The aircraft cargo handling system of claim 7, further comprising the control module in communication with the network and configured to provide instructions to the first cargo handling robot and the second cargo handling robot.
+
+<br>
+
+<br>
+9. (Previously Presented) The aircraft cargo handling system of claim 1, wherein the first cargo handling robot and the second cargo handling robot comprise a sensing agent comprising a sensing module, a computing module, and a communication module.
+
+<br>
+
+<br>
+10. (Previously Presented) The aircraft cargo handling system of claim 9, wherein the first cargo handling robot and the second cargo handling robot are capable of functioning autonomously.
+
+<br>
+
+<br>
+11. (Currently Amended) A cargo handling robot, comprising: 
+<br>
+an attachment mechanism; and 
+
+  a movement mechanism, wherein the attachment mechanism is configured to couple to a cargo unit and the movement mechanism is configured to transport the cargo unit from a first position to a second position along two <u>different</u> dimensions in response to receiving instructions from a control module; 
+<br>
+wherein the cargo handling robot is configured to communicate with a second cargo handling robot so as to simultaneously move the cargo unit together with the second cargo handling robot. 
+
+<br>
+
+<br>
+12. (Original) The cargo handling robot of claim 11, wherein the movement mechanism and attachment mechanisms are powered by an internal battery or by an external power source.
+
+<br>
+
+<br>
+13. (Canceled)
+
+<br>
+
+<br>
+14. (Original) The cargo handling robot of claim 11, wherein the movement mechanism comprises a motor coupled to a gear box configured to drive a set of high friction coefficient wheels.
+
+<br>
+
+<br>
+15. (Original) The cargo handling robot of claim 11, further comprising a sensing agent comprising a sensing module, a computing module, and a communication module.
+
+<br>
+
+<br>
+16. (Original) The cargo handling robot of claim 15, wherein the sensing module comprises one of a one of a camera, a structured light sensor, a light detection and ranging sensor, an infrared sensor, a depth sensor, a 3D scanner, an ultrasound range finder, or a radar sensor.
+<br>
+
+<br>
+17. (Previously Presented) A method of moving a cargo unit via multiple cargo handling robots, the method comprising: 
+<br>
+transmitting, via a network, a first position to a first cargo handling robot and a second cargo handling robot; 
+<br>
+moving the first cargo handling robot and the second cargo handling robot to the first position; 
+<br>
+attaching the first cargo handling robot and the second cargo handling robot to the cargo unit at the first position; 
+<br>
+transmitting, via the network, a second position to the first cargo handling robot and the second cargo handling robot; and 
+<br>
+moving, via the first cargo handling robot and the second cargo handling robot, the cargo unit to the second position, wherein the first cargo handling robot and the second cargo handling robot transport the cargo unit horizontally about a cargo deck in response to moving from the first position to the second position. 
+
+<br>
+
+<br>
+18. (Original) The method of claim 17, wherein attaching the first cargo handling robot and the second cargo handling robot to the cargo unit comprises utilizing attachment mechanisms of the first cargo handling robot and the second cargo handling robot, the attachment mechanisms comprising one of an active attachment mechanism or a passive attachment mechanism.
+
+<br>
+
+<br>
+19. (Original) The method of claim 17, wherein moving the cargo unit to the second position comprises moving the cargo unit in two dimensions.
+<br>
+
+<br>
+20. (Original) The method of claim 17, wherein the network is in communication with a control module configured to provide instructions to the first cargo handling robot and the second cargo handling robot.
+
+<br>
+
+<br>
+21. (Previously Presented) The method of claim 17, wherein the step of moving, via the first cargo handling robot and the second cargo handling robot, the cargo unit to the second position includes simultaneously moving the first cargo handling robot and the second cargo handling robot from the first position to the second position while each are engaged with the cargo unit, to transport the cargo unit from the first position to the second position. 
+<br>
+4883-5619-69044
+4883-5619-69045
+4883-5619-69042
+4883-5619-69046
+4883-o19-69043
+</body></html>

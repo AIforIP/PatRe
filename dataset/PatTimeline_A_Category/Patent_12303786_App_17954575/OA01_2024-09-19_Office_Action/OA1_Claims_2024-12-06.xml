@@ -1,0 +1,103 @@
+<html><head></head><body><h3>Date: 2024-12-06</h3>
+
+<h1><u>Claims</u></h1>
+<p>The listing of the claims below replaces all previous listings of the claims.</p><br>
+<br>
+1. (Currently Amended) A method for displaying an aiming mark, wherein the method comprises:<br>
+displaying a level interface, the level interface displaying a master virtual character and at least two candidate virtual characters in a virtual environment, a candidate virtual character representing a virtual character to being aimed at by an aiming mark, and the aiming mark being for marking an aimed target of the master virtual character during shooting;<br>
+displaying the aiming mark on a first virtual character of the at least two candidate virtual characters; and<br>
+switching to display the aiming mark on a second virtual character of the at least two candidate virtual characters in response to a first switching operation on the aimed target;<br>
+<u>wherein the at least two candidate virtual characters comprise a third virtual character, and the method further comprises:</u><br>
+<u>in response to a second switching operation on the aimed target, switching back to display the aiming mark on the first virtual character in lieu of the third virtual character.</u><br>
+<br>
+2. (Original) The method according to claim 1, wherein the displaying the aiming mark on the first virtual character comprises:<br>
+determining the first virtual character of the at least two candidate virtual characters based on an automatic aiming mechanism, the first virtual character being a candidate virtual character with a highest priority determined by the automatic aiming mechanism; and<br>
+displaying the aiming mark on the first virtual character;<br>
+the switching to display the aiming mark on the second virtual character comprises:determining the second virtual character of the at least two candidate virtual characters based on the automatic aiming mechanism in response to the first switching operation on the aimed target, the second virtual character being a candidate virtual character with a highest priority other than the first virtual character determined by the automatic aiming mechanism; and<br>
+<br>
+<br>
+<br>
+displaying the aiming mark on the second virtual character.<br>
+<br>
+3. (Original) The method according to claim 2, wherein the determining the second virtual character in the at least two candidate virtual characters based on the automatic aiming mechanism comprises:<br>
+adding the first virtual character to a blacklist; and<br>
+determining a candidate virtual character with a highest priority in remaining virtual characters based on the automatic aiming mechanism as the second virtual character, the remaining virtual characters being candidate virtual characters other than the first virtual character in the at least two candidate virtual characters.<br>
+<br>
+4. (Original) The method according to claim 3, wherein the adding the first virtual character to the blacklist comprises:<br>
+directly adding the first virtual character to the blacklist in response to the blacklist being empty.<br>
+<br>
+5. (Original) The method according to claim 3, wherein the at least two candidate virtual characters comprise a third virtual character, and the adding the first virtual character to the blacklist comprises:<br>
+removing the third virtual character from the blacklist in response to the third virtual character being in the blacklist; and<br>
+adding the first virtual character to the blacklist.<br>
+<br>
+6. (Original) The method according to claim 3, wherein the method further comprises:<br>
+removing the first virtual character from the blacklist in response to the first virtual character meeting an aiming failure condition, the aiming failure condition indicating that the aimed target exceeds an aiming range of the master virtual character.<br>
+<br>
+7. (Original) The method according to claim 1, wherein the method further comprises:<br>
+maintaining a display of the aiming mark on the second virtual character in response to an aiming failure condition being not triggered, the aiming failure condition being a condition indicating that the aimed target exceeds an aiming range of the master virtual character.<br>
+<br>
+8. (Original) The method according to claim 7, wherein the maintaining the display of<br>
+<br>
+<br>
+the aiming mark on the second virtual character comprises:fixing the second virtual character at a top of an automatic aiming list in response to the aiming failure condition being not triggered, so as to maintain the display of the aiming mark on the second virtual character,<br>
+wherein the automatic aiming list is a priority list updated based on an automatic aiming mechanism, the automatic aiming mechanism determining a candidate virtual character with a highest priority as the aimed target based on a priority order of aiming at the at least two candidate virtual characters during shooting by the master virtual character.<br>
+<br>
+9. (Original) The method according to claim 7, wherein the aiming failure condition comprises at least one of the followings:<br>
+a hit point of the second virtual character is zero;<br>
+a distance between the second virtual character and the first virtual character is greater than a maximum aiming distance; or the second virtual character is removed from the level interface.<br>
+<br>
+10. (Original) The method according to claim 2, wherein the automatic aiming mechanism determining a candidate virtual character with a highest priority as the aimed target based on priorities of the at least two candidate virtual characters sorted by at least one of:<br>
+a distance between the master virtual character and the candidate virtual character in the virtual environment,<br>
+a remaining hit point of the candidate virtual character,<br>
+a percentage of the remaining hit point of the candidate virtual character, or a killing benefit corresponding to the candidate virtual character.<br>
+<br>
+11. (Original) The method according to claim 10, wherein an update timing of the automatic aiming mechanism comprises at least one of the followings:<br>
+a current moment meets an update period;<br>
+an instruction for controlling the master virtual character to shoot is received; or the aimed target meets an aiming failure condition, and the aiming failure condition Page 4 of 10<br>
+<br>
+<br>
+being a condition indicating that the aimed target exceeds an aiming range of the master virtual character.<br>
+<br>
+12. (Original) The method according to claim 1, wherein the displaying the aiming mark on the first virtual character comprises:<br>
+displaying a first aiming mark on the first virtual character;<br>
+the method further comprises:switching the first aiming mark displayed on the first virtual character to a second aiming mark in response to a continuous switching operation on the aimed target, the second aiming mark being different from the first aiming mark in type; and<br>
+shooting the first virtual character in response to a first shooting operation on the aimed target, and switching to display the second aiming mark on the second virtual character.<br>
+<br>
+13. (Original) The method according to claim 12, wherein after the switching to display the second aiming mark on the second virtual character, the method further comprises:<br>
+shooting the second virtual character in response to a second shooting operation on the aimed target, and switching to display the second aiming mark on the first virtual character.<br>
+<br>
+14. (Original) The method according to claim 12, wherein the at least two candidate virtual characters comprise a third virtual character, and after the switching to display the second aiming mark on the second virtual character, the method further comprises:<br>
+shooting the second virtual character in response to a third shooting operation on the aimed target, and switching to display the second aiming mark on the third virtual character.<br>
+<br>
+15. (Original) The method according to claim 14, wherein after the switching to display the second aiming mark on the third virtual character, the method further comprises:<br>
+shooting the third virtual character in response to a fourth shooting operation on the aimed target; and<br>
+switching to display the second aiming mark on the first virtual character in response to the third virtual character being a last character not shot in a round of shooting, a round of shooting representing a process of sequential shooting at the at least two candidate virtual<br>
+<br>
+<br>
+characters.<br>
+<br>
+16. (Canceled).<br>
+<br>
+17. (Currently Amended) An apparatus for displaying an aiming mark, comprising:<br>
+a memory operable to store computer-readable instructions; and<br>
+a processor circuitry operable to read the computer-readable instructions, the processor circuitry when executing the computer-readable instructions is configured to:display a level interface, the level interface displaying a master virtual character and at least two candidate virtual characters in a virtual environment, a candidate virtual character representing a virtual character to being aimed at by an aiming mark, and the aiming mark being for marling an aimed target of the master virtual character during shooting;<br>
+display the aiming mark on a first virtual character of the at least two candidate virtual characters; and<br>
+switch to display the aiming mark on a second virtual character of the at least two candidate virtual characters in response to a switching operation on the aimed target;<br>
+<u>wherein the at least two candidate virtual characters comprise a third virtual character, and the processor circuitry is further c</u><u>o</u><u>nfi</u><u>g</u><u>ured t</u><u>o:</u><u>in response to a second switching operation on the aimed target, switch back to display the aiming mark </u><u>o</u><u>n the first virtual character in lieu of the third virtual character.</u><br>
+<br>
+18. (Original) The apparatus according to claim 17, wherein the processor circuitry is configured to:<br>
+determine the first virtual character of the at least two candidate virtual characters based on an automatic aiming mechanism, the first virtual character being a candidate virtual character with a highest priority determined by the automatic aiming mechanism; and<br>
+display the aiming markon the first virtual character;<br>
+<br>
+19. (Original) The apparatus according to claim 18, wherein the processor circuitry is configured to:<br>
+<br>
+<br>
+determine the second virtual character of the at least two candidate virtual characters based on the automatic aiming mechanism in response to the switching operation on the aimed target, the second virtual character being a candidate virtual character with a highest priority other than the first virtual character determined by the automatic aiming mechanism;<br>
+and display the aiming mark on the second virtual character.<br>
+<br>
+20. (Currently Amended) A non-transitory machine-readable media, having instructions stored on the machine-readable media, the instructions configured to, when executed, cause a machine to:<br>
+display a level interface, the level interface displaying a master virtual character and at least two candidate virtual characters in a virtual environment, a candidate virtual character representing a virtual character to being aimed at by an aiming mark, and the aiming mark being for marking an aimed target of the master virtual character during shooting;<br>
+display the aiming mark on a first virtual character of the at least two candidate virtual characters; and<br>
+switch to display the aiming mark on a second virtual character of the at least two candidate virtual characters in response to a switching operation on the aimed target;<br>
+<u>wherein the at least two candidate virtual characters c</u><u>ompri</u><u>se a third virtual character, and the </u><u>p</u><u>rocessor circuitry is further configured to:</u><u>in response to a second switching operation </u><u>o</u><u>n the aimed target, switch bac</u><u>k</u><u> to display the aiming ma</u><u>rk o</u><u>n the first virtual character in lieu of the third virtual ch</u><u>a</u><u>racter.</u>
+</body></html>

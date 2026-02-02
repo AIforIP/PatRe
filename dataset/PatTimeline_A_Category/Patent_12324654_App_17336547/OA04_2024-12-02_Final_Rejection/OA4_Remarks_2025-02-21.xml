@@ -1,0 +1,81 @@
+<html><head></head><body><h3>Date: 2025-02-21</h3>
+<h1>REMARKS</h1>
+<p>Applicant has carefully reviewed the non-final Office Action mailed on December 2, 2024, and offers the following remarks to accompany the above amendments. Further, the Applicant would like to request an Examiner interview to discuss any unresolved issues.</p><p>Examiner Interview</p><p>Applicant wishes to thank Examiner Hodge and Primary Examiner Jian for the telephonic interview conducted on December 23, 2024. Examiner Hodge indicated that specifying the placement of the sensors should advance the prosecution under the currently pending 35 U.S.C. 101 rejection.</p><p>Summary of Remarks</p><p>Applicant has amended independent claims 1, 17, and 21 to indicate approximate anterior positions of a first acoustic sensor and an optical sensor relative to a maternal torso.</p><p>Status of the Claims</p><p>Claims 1, 4-5, 7-9, 11, 13-14, 17, 19-21, 23, and 25 were previously pending. Claims 2-3, 6, 10, 12, 15, 18, 22, and 24 were previously canceled. Claims 1, 4-5, 7-9, 13-14, 16- 17, 19-21, and 23 are amended herein. Claims 11 and 25 are canceled herein. New claims 26-29 are added herein. As such, claims 1, 4-5, 7-9, 11, 13-14, 17, 19-21, 23, and 26-29 remain pending.</p>
+<h1>Objection to the Claims</h1>
+<p>Claim 21 is objected to due to a spelling error. The cited limitation of claim 21 has been amended as follows:</p><p>Docket No.: 908/17 UTIL</p><p>Application No.: 17/336,547</p><p>the instructions when executed by the at least one processor cause</p><p><u>the fetal monitorin</u><u>g</u><u> patch </u><del>w</del><del>earable fetal health monitoring device </del>to perform a method of determining a <u>health </u>[[heath]] condition of a fetus based on biosignals of an expecting mother and the fetus, the method</p><p>comprising:</p><p>Accordingly, it is respectfully submitted that the objection to claim 21 be withdrawn.</p>
+<h1>Claim Rejections Under 35 U.S.C. 101</h1>
+<p>Claims 1, 4-5, 7-9, 11, 13-14, 16-17, 19-21, 23, and 25 are rejected under 35 U.S.C. 101 because the claimed invention is directed to a judicial exception, specifically an abstract idea without significantly more.</p><p>Claim 1 has been amended to recite:</p><p>(Currently Amended) A <u>fetal monitorin</u><u>g</u><u> patch </u><del>wearable fetal health monitoring device </del>for determining a health condition of a fetus based on biosignals of an expecting mother and the fetus, the<u> fetal monitorin</u><u>g</u><u> patch</u></p><p><del>wearable fetal health monitoring device </del>comprising:</p><p>[[an]] <u>a </u><u>fi</u><u>rst</u> acoustic sensor configured to provide mechano- acoustically sensed phonocardiogram (aPCG) data from <del>afirst </del><u>an anterior</u></p><p><u>side </u>location on a maternal torso;</p><p>an optical sensor configured to provide optically sensed maternal</p><p>photoplethysmogram (mPPG) data from <del>a second </del><u>an anterior centralized</u> location on the maternal torso <u>relative to the anterior</u> <u>side location</u><del>,</del><del> wherein</del></p><p><del>the first location and the second location are mutually exclusive</del>;</p><p>a <u>breathable substrate </u><del>securing device </del>configured toprovide skin</p><p>contact of the <u>frs</u><u>t</u> acoustic sensor <u>via a first acoustic impedance coupler</u></p><p>908/17 UTIL
+Page 10 of 21</p>
+
+<p>and <u>skin contact o</u><u>f</u><u> </u>the optical sensor to the maternal torso for continuous</p><p>non-invasive non-clinical monitoring; and</p><p>a microcontroller <u>mechanically coupled with the breathable substrate,</u></p><p><u>wherein the microcontroller is </u>configured for:</p><p><u>continuous</u><u>ly</u><u> </u>monitoring fetal movement (fM) using the <u>frs</u><u>t</u> acoustic sensor</p><p>while operating in a first mode, wherein the first mode is a low-power</p><p>vigilant monitoring state; and</p><p>upon detecting reducedfM activity, transitioning to a second mode comprising: decomposing the mechano-acoustically sensed aPCG data using the optically</p><p>sensed mPPG    data to extract mechano-acoustically sensed fetal</p><p>phonocardiogram (fPCG) data;</p><p>determining fetal heart rate variability (fHRV) data from the mechano- acoustically sensed fPCG data; and</p><p>providing an alert to the expecting mother based on the fHR V data, wherein the</p><p>alert is indicative of a medical emergency.</p><p>Support for the above amendment may be found in at least the following paragraphs and figures of the Published Application:</p><p>FIGS. 1 through 6 illustrate various aspects of the presently</p><p>disclosed subject matter. FIG. IA is a block diagram of various physical hardware in a wearable fetal monitoring device, according to at least one embodiment of the presently disclosed subject matter. FIG. 1B is a perspective view illustrating the placement of the belt-based version of the device and the adhesive patch version of the device, according to at least one embodiment of the presently disclosed subject matter. FIG. 2 is a flowchart of the operational cycle of a fetal monitoring device, according to at least one embodiment of the presently disclosed subject matter. FIG.</p>
+<p>Docket No.: 908/17 UTIL</p><p>Application No.: 17/336,547</p><p>3A is a top-down view of the non-contact side of a fetal monitoring patch, according to at least one embodiment of the presently disclosed subject matter. FIG. 3B is a profile view of the internal components of a fetal monitoring patch, according to at least one embodiment of the presently disclosed subject matter. FIG. 3C is a bottom view of the skin contacting side of a fetal monitoring patch, according to at least one embodiment of the presently disclosed subject matter. FIG. 3D is a top-down view of the two hardware modules of a fetal monitoring band, according to at least one embodiment of the presently disclosed subject matter. FIG. 5 is a flowchart of the flow of data in a fetal monitoring device, according to at least one embodiment of the presently disclosed subject matter. FIG. 6 is a flowchart of a vigilant monitor decision stream, according to at least one embodiment</p><p>of the presently disclosed subject matter.</p><p>SVG
+{EMBED HERE}
+3.3631.6371 SVG
+{EMBED HERE}
+3.3671.843 110</p><p>FIG. 1B</p><p>908/17 UTIL
+Page 12 of 21</p>
+
+<p> SVG
+{EMBED HERE}
+0.2470.787306SVG
+{EMBED HERE}
+2.7675.28</p><p>FIG. 3A</p><p>SVG
+{EMBED HERE}
+0.1630.523SVG
+{EMBED HERE}
+1.0874.70FIG. 3B</p><p>Docket No.: 908/17 UTIL</p><p>Application No.: 17/336,547</p><p>110SVG
+{EMBED HERE}
+0.1770.487</p><p> 308SVG
+{EMBED HERE}
+2.6575.273</p><p>SVG
+{EMBED HERE}
+0.190.897SVG
+{EMBED HERE}
+0.1530.46SVG
+{EMBED HERE}
+0.1533.707SVG
+{EMBED HERE}
+0.1535.00device forming part of system 100 is configured as a singular unit in the form of a wvearable pressure adhesive patch in the form of patch 110, as</p><p>shown on the right-side illustration of FIG. lB.</p><p>[0051] A simplified component layout of a wearable fetal</p><p>monitoring device in the form of a wearable pressure adhesive patch 110 (alternately referred to herein as "patch 110" or "patch') is shown in FIGS. 3A, SB and C. FIG. 3A illustrates a nondermal distal side ofpatch 110 with primaly components visible. In one embodiment, components of</p><p>908/17 UTIL
+Page 14 of 21</p>
+
+<p>patch 110 are placed on a flexible board and connected with one or more flexible interconnects 309. The components of patch 110 can comprise a microcontroller 301. In one embodiment, microcontroller 301 can comprise one of one or multiple cores capable of ultralow power sleep states. The components of patch 110 can further comprise a wireless communication module 302. In one embodiment, wireless communication module 302 can comprise one or more of the following sub-components: chip antenna, rigid-island antenna, flexible antenna, and similar other sub-components.</p><p>The components of patch 110 cab furthermore comprise a memory data storage 303. In one embodiment, memory data storage 303 can comprise a non-volatile memory data storage such as, for example, a Quad-SPI non- volatile memory data storage. The components of patch 110 can additionally comprise power management circuit 304 and a power source 305. In one embodiment, patch 110 includes a breathable substrate 310.</p><p>In one embodiment, a biocompatible material engineered to match the acoustic impedance of soft tissue is shown in the dermal contact side of patch 110. In one embodiment, patch 110 further includes an acoustic impedance coupler 308. In one embodiment, acoustic impedance coupler 308 is the primary point ofskin contactfor acoustic sensors 306 to minimize reflected signal loss due to acoustic impedance mismatch between the fetal health monitoring device and soft tissue. Since fetal signal is generally low magnitude, maximizing signal transmission to transducer is key for accurate feature extraction. The material in acoustic impedance coupler 308 can be composed of polydimethylsiloxane adjusted with TiO2 nanoparticles. In another embodiment, material of acoustic impedance coupler 308 can be composed of modified polyurethane or other</p><p>nanocomposites.</p>
+<p>Docket No.: 908/17 UTIL</p><p>Application No.: 17/336,547</p><p>Amended claim 1 is directed toward a specific structure (i.e. afetal monitoring patch) including a specific materal (i.e. a breathable substrate) and approximate anterior positions of afirst acoustic sensor and an optical sensor relative to a maternal torso. Clearly the fetal monitor patch of amended claim 1 is much more than an abstract idea. As such amended claim 1 is allowable.</p><p>Claims 4-5, 7-9, 13-14, 16, and 23 depend directly from amended claim 1 and are allowable at least by virtue of their dependence from amended claim 1.</p><p>Claims 17 and 21 have been amended to include features similar to now allowable claim 1. As such claims 17 and 21 are also allowable.</p><p>Claims 19-20 depend directly from amended claim 17 and are allowable at least by virtue of their dependence from amended claim 17.</p><p>Claims 11 and 25 have been canceled rendering their rejection moot.</p><p>Accordingly, it is respectfully submitted that the rejection under 35 U.S.C. 101 of claims 1, 4-5, 7-9, 13-14, 17, 19-21, and 23 be withdrawn.</p><p>New Claims</p><p>Support for new claims 26-28 may be found in at least the following paragraphs and figures of the Published Application:</p><p>[0044] FIGS. 1 through 6 illustrate various aspects of the presently</p><p>disclosed subject matter. FIG. IA is a block diagram of various physical hardware in a wearable fetal monitoring device, according to at least one embodiment of the presently disclosed subject matter. FIG. 1B is a perspective view illustrating the placement of the belt-based version of the device and the adhesive patch version of the device, according to at least</p><p>908/17 UTIL
+Page 16 of 21</p>
+
+<p>one embodiment of the presently disclosed subject matter. FIG. 2 is a flowchart of the operational cycle of a fetal monitoring device, according to at least one embodiment of the presently disclosed subject matter. FIG.</p><p>3A is a top-down view of the non-contact side of a fetal monitoring patch, according to at least one embodiment of the presently disclosed subject matter. FIG. 3B is a profile view of the internal components of a fetal monitoring patch, according to at least one embodiment of the presently disclosed subject matter. FIG. 3C is a bottom view of the skin contacting side of a fetal monitoring patch, according to at least one embodiment of the presently disclosed subject matter. FIG. 3D is a top-down view of the two hardware modules of a fetal monitoring band, according to at least one embodiment of the presently disclosed subject matter. FIG. 5 is a flowchart of the flow of data in a fetal monitoring device, according to at least one embodiment of the presently disclosed subject matter. FIG. 6 is a flowchart of a vigilant monitor decision stream, according to at least one embodiment</p><p>of the presently disclosed subject matter.</p>
+<p>SVG
+{EMBED HERE}
+0.471.00
+7SVG
+{EMBED HERE}
+0.280.913SVG
+{EMBED HERE}
+0.4430.78</p><p>SVG
+{EMBED HERE}
+3.964.00SVG
+{EMBED HERE}
+0.2730.893
+UT </p>
+
+<p>SVG
+{EMBED HERE}
+0.2470.573 10</p><p> 306SVG
+{EMBED HERE}
+2.7635.28</p><p>FIG. 3A</p><p>SVG
+{EMBED HERE}
+0.1630.523SVG
+{EMBED HERE}
+1.094.70FIG. 3B</p><p>Docket No.: 908/17 UTIL</p><p>Application No.: 17/336,547</p><p>-110</p><p> 308SVG
+{EMBED HERE}
+2.6535.27</p><p>FIG. 3C</p><p>Support for new claim 29 may be found in at least the following paragraph of the Published Application:</p><p>[0045] ... In various embodiments, belt 108 may comprise a</p><p>breathable elastomeric or fabric material. In some embodiments, the device forming part of system 100 is configured as a singular unit in the form of a wearable pressure adhesive patch in the form of patch 110, as</p><p>shown on the right-side illustration of FIG. lB.</p><p>New claims 26-29 depend, either directly or indirectly, from now allowable independent claim 1. Accordingly, it is respectfully submitted that new claims 26-29 are allowable.</p><p>908/17 UTIL
+Page 20 of 21</p>
+<h1>CONCLUSION</h1>
+<p>The above amendments and remarks completely respond to the Office Action and place the application in condition for allowance, which is respectfully requested. Further, the Applicant would like to request an additional interview with the Examiner and the Primary Examiner to discuss any unresolved issues.</p>
+<h1>DEPOSIT ACCOUNT</h1>
+<p>The Commissioner is hereby authorized to charge any otherwise unpaid fees associated with the filing of this correspondence to Deposit Account No. <u>50-6191.</u></p><p>Respectfully submitted, Date: February 21, 2025
+<u>/Gre</u><u>g</u><u>ory M. Evans</u><u>/</u></p><p>Gregory M. Evans Reg. No. 72,169NK Patent Law, PLLC 4101 Lake Boone Trail, Suite 218 Raleigh, NC 27607 Telephone:  (919) 348-2194 Facsimile:   (919) 882-8195</p><p>Customer No. 115007</p>
+
+306
+
+308
+</body></html>

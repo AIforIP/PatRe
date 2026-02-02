@@ -1,0 +1,4 @@
+<html><head></head><body><h3>Date: 2022-12-29</h3>
+<p>Attorney Docket No. 10081-01-0016-US</p>
+<h1>ABSTRACT</h1>
+<p>A control method for a robot system is provided. The robot system includes a plurality of motion arms, and the plurality of motion arms include a first motion arm and a second motion arm. The control method includes: determining a motion mode of ends of the first motion arm and the second motion arm of the robot system, where the motion mode includes synchronous motion of the ends of the first motion arm and the second motion arm; determining motion paths of the first motion arm and the second motion arm based on the motion mode and a relative end pose relationship between the first motion arm and the second motion arm; and controlling, based on the corresponding motion paths, the first motion arm and the second motion arm to move.</p><p>5</p></body></html>
