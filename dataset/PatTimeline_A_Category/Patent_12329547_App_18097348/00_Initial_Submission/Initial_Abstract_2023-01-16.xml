@@ -1,4 +1,0 @@
-<html><head></head><body><h3>Date: 2023-01-16</h3>
-<p>Attorney Docket No. 279.N69US2</p><p>Client Ref. No. t5-067tUSO2</p>
-<h1>ABSTRACT</h1>
-<p>Systems and methods for monitoring patients with multiple chronic diseases are described. A system may include a health status monitor that receives diagnostic data including physiological signals sensed from a patient. The system may produce at least a first risk indication of the patient developing a first disease and a second risk indication of the patient developing a different second disease. The system may detect the first and second diseases from the physiological signals, and generate a composite health status indicator using the detections of the first and second diseases and the first and second risk indications. An alert of worsening health status may be generated if the composite detection score exceeds an alert threshold.</p><p>44</p></body></html>

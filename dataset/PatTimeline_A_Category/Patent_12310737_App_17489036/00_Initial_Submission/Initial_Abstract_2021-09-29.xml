@@ -1,9 +1,0 @@
-<html><head></head><body><h3>Date: 2021-09-29</h3>
-
-<h1>INTERACTIVE 2D SCATTER PLOT OF EGM CHARACTERISTIC METRICS</h1>
-<h1>ABSTRACT</h1>
-
-<p>At least some embodiments of the present disclosure is directed to a system for processing cardiac information. The system comprises a processing unit configured to: receive an activation waveform comprising a set of activation waveform data of a plurality of signal sections collected at a plurality of locations; receive a range of window size. For each of the plurality of signal sections, the processing unit is further configured to: determine a set of confidence values, by iterating through a plurality of window sizes in the range of window size. For each of the plurality of signal sections, the processing unit is further configured to determine one of a plurality of local cycle lengths for the each of the plurality of signal sections based on the selected window size. And generate a representation of the plurality of local cycle lengths.</p>
-62
-US.134747784.01
-</body></html>

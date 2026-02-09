@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-11-30</h3>
-<h1>ABSTRACT</h1>
-
-<p>This application provides a cloud gaming processing method performed by a computer device, the method including: receiN ing an access request of a second client for a cloud gaming instance, the cloud gaming instance haN ing been created according to a play request of a first client for a cloud gaming and shared by the first client with the second client, the first client being bound to a first stream processing resource of the cloud gaming instance, and data transmission between the cloud gaming instance and the first client being implemented by using the first stream processing resource: creating a second stream processing resource of the cloud gaming instance in response to the access request of the second client: binding the second stream processing resource to the second client; and implementing data transmission between the second client and the cloud gaming instance by using the second stream processing resource.</p>
-031384-7504-US55
-</body></html>

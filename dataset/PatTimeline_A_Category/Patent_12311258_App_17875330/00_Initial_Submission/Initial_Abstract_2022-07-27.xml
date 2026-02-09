@@ -1,9 +1,0 @@
-<html><head></head><body><h3>Date: 2022-07-27</h3>
-<h1>IMPAIRED PLAYER ACCESSABILITY WITH OVERLAY LOGIC PROVIDING HAPTIC</h1>
-<h1>RESPONSES FOR IN-GAME EFFECTS</h1>
-<h1><u>ABSTRACT OF THE DISCLOSURE</u></h1>
-
-<p>A method including executing game logic of a video game to generate a plurality of video frames for a game play of the video game by a player, wherein game state data is generated during the executing the game logic. The method including identifying an effect that is generated for at least one video frame in the plurality of video frames based on the game state data. The method including translating the effect to a haptic response presentable to the player simultaneous with the at least one video frame, wherein the haptic response is communicating a gaming experience that is rendered by the effect in the at least one video frame.</p>
-SCEA22061US00
-SONYP633/LCH/ASP33PATENT APPLICATION
-</body></html>

@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-11-17</h3>
-<h1>ABSTRACT</h1>
-
-<p>This application provides a virtual object control method performed by a computer device. The method includes: displaying a virtual object in a virtual scene region of a first level; in response to a task execution instruction for the virtual object, controlling the virtual object to perform a task corresponding to the first level in the virtual scene region; when the virtual object completes the task, displaying level identifiers of at least two second levels adjacent to the first level;; in response to an interaction instruction for a target level identifier in the level identifiers of the at least two second levels, controlling the virtual object to perform an interaction operation on the target level identifier; and when the interaction operation is completed, controlling the virtual object to move to a virtual scene region of a second level corresponding to the target level identifier.</p>
-031384-7505-US39
-</body></html>

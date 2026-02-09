@@ -1,8 +1,0 @@
-Total Office Actions: 1
-Application Number: 17744411
-Patent Number: 12304652
-
-OA Timeline:
-  OA1: 2025-03-03 - Office_Action
-
-Final Status: Office_Action

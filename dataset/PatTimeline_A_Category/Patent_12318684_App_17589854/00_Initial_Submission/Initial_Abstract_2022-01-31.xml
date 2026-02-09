@@ -1,5 +1,0 @@
-<html><head></head><body><h3>Date: 2022-01-31</h3>
-<p>SYSTEMS AND METHODS FOR DETERMINING A TYPE OF</p><p>MATERIAL OF AN OBJECT IN A REAL-WORLD ENVIRONMENT</p>
-<h1><u>ABSTRACT</u></h1>
-<p>Methods and systems for determining a type of material of an object in a real-world environment are described. One of the methods includes receiving a plurality of sets of audio data based on sounds received from a plurality of objects within a plurality of environments. The method further includes receiving a plurality of sets of input data regarding a plurality of types of materials of the plurality of objects, training an artificial intelligence (Al) model based on the plurality of sets of audio data and the plurality of sets of input data, and applying the Al model to a set of audio data captured from the real-world environment to determine the type of material of the object within the real-world environment to enhance the realism of augmented reality</p><p>(AR) or virtual reality (VR) video games and applications.</p><p>SONYP489 57
-PATENT APPLICATION</p><p>SCEA21009US00</p><p>ASP/NVP</p></body></html>

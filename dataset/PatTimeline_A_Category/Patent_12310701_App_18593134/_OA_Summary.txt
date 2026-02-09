@@ -1,9 +1,0 @@
-Total Office Actions: 2
-Application Number: 18593134
-Patent Number: 12310701
-
-OA Timeline:
-  OA1: 2024-09-18 - Final_Rejection
-  OA2: 2025-02-04 - Office_Action
-
-Final Status: Office_Action

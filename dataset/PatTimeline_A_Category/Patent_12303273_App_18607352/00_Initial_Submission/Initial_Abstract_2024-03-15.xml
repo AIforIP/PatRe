@@ -1,7 +1,0 @@
-<html><head></head><body>18607352
-
-   
-   ABSTRACT
-   <p>A computer system receives a plurality of signals corresponding to first time-series magnetic data generated from a plurality of unshielded magnetometers proximate to the human subject.  The first time-series magnetic data corresponds to magnetic fields generated from the human subject.  The plurality of signals includes contributions from a biomagnetic field from at least a portion of the subject’s organ and a background magnetic field.  The computer system synchronizes the first time-series magnetic data to a common clock to generate synchronized time-series magnetic data. The computer system applies one or more filters to the synchronized time-series magnetic data to obtain filtered data.  The computer system applies one or more noise reduction techniques to the filtered data to generate updated time-series magnetic data.</p>
-
-</body></html>

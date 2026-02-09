@@ -1,7 +1,0 @@
-<html><head></head><body>18653235
-
-   
-   Abstract of the Disclosure:
-   <p>Apparatus for identification of abnormal biomedical features within images of biomedical data and methods used therein are described. The apparatus includes an image capture device, a processor connected to the image capture device, a memory connected to the processor, and a display device connected to the processor. The image capture device is configured to capture an image of biomedical data. The memory contains instructions configuring the processor to receive the image, extract a plurality of biomedical features from the biomedical data, receive repository data from a medical repository as a function of the plurality of biomedical features, generate at least a distance metric as a function of the plurality of biomedical features and the repository data, and highlight at least a biomedical feature within the image as a function of the at least a distance metric.</p>
-
-</body></html>

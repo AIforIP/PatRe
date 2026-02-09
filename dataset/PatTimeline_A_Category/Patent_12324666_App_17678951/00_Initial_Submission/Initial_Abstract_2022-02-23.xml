@@ -1,4 +1,0 @@
-<html><head></head><body><h3>Date: 2022-02-23</h3>
-<p>Client Reference No. 21512/CN9202112921-US-NP Attorney Docket No. 00223.0344.0OUS</p>
-<h1>ABSTRACT</h1>
-<p>A fatigue measurement method includes obtaining a face video of a target object,</p><p>processing the facial video to obtain a plurality of quasi-heart rates and a plurality of quasi- vibration frequencies, selecting a target heart rate from the plurality of quasi-heart rates and a target vibration frequency from the plurality of quasi-vibration frequencies, detecting the target heart rate and the target vibration frequency, and determining, according to the detection result, that the target object is in a fatigue state. The quasi-heart is obtained through one or more of a region of interest (ROI) between eyebrows and an ROI of chin, and the quasi-vibration frequency obtained through one or more of an ROI of eyes and an ROI of mouth.</p><p>-34-</p></body></html>

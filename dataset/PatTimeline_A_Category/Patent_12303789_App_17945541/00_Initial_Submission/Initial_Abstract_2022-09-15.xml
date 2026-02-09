@@ -1,7 +1,0 @@
-<html><head></head><body><h3>Date: 2022-09-15</h3>
-<p>44</p>
-<h1>ABSTRACT</h1>
-<p>Disclosed is system (100, 200) for detecting and preventing fraudulent activities in digital advertising, system comprising server arrangement (114, 202) that is communicably coupled with user device (102, 104, 204). Server arrangement is configured to: send data element of given</p><p>digital advertisement to user device; receive user-interaction data from user device responsive to rendering of data element at user device; receive sensor data from user device, sensor data being collected by at least one sensor (106, 108, 206) of user device during generation of user-interaction data; analyse at least one of: number of taps indicated</p><p>in user-interaction data, touch pressures during taps, sizes of touch areas on touchscreen (110, 112, 208) during taps, locations of touch areas on touchscreen during taps, time stamps of taps, to detect whether user of user device is bot; and perform at least one action when analysis indicates that user of user device is bot.</p><p>FIG. 1</p>5
-10
-15
-</body></html>

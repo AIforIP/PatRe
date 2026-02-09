@@ -1,4 +1,0 @@
-<html><head></head><body><h3>Date: 2023-01-09</h3>
-<p>48</p>
-<h1>ABSTRACT</h1>
-<p>Methods for reversing determination for a vehicle asset are provided. The methods include capturing by a telematics device coupled to the vehicle acceleration data from a three-axis accelerometer, determining by an edge reversing-determination machine learning mode, a machine-learning-determined reversing indication for the vehicle asset. The edge reversing-determination machine-learning model being updated based on a centralized reversing-determination machine-learning model trained using a vehicle-provided reversing indication.</p></body></html>

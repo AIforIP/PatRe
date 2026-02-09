@@ -1,4 +1,0 @@
-<html><head></head><body><h3>Date: 2022-02-16</h3>
-
-<h1>ABSTRACT</h1>
-<p>The disclosure provides a virtual prop control method and apparatus, a storage medium, and an electronic device. The method includes displaying a target virtual throw prop controlled by a first virtual operation object in a target game application. The method also includes controlling the throwing of the target virtual throw prop based on a target throw operation. The method also includes setting a target region at which the virtual throw prop is thrown as a damage detection region, with the damage detection region configured to reduce hit points of at least one target virtual operation object located in the damage detection region. Based on a second virtual operation object being included in the at least one target virtual operation object and entering the target region, the method also includes reducing hit points of the second virtual operation object.</p><p>35</p></body></html>

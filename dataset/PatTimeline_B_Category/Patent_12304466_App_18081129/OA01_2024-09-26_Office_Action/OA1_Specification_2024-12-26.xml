@@ -1,4 +1,0 @@
-<html><head></head><body><h3>Date: 2024-12-26</h3>
-<p>Appln. No. 18/081,129</p>
-<h1><u>AMENDMENTS TO THE SPECIFICATION</u></h1>
-<p>Please delete the paragraph [0112] of the Specification and replace with the following paragraph showing the changes in amended format:</p><p>[0112] When a plurality of crossing points exists, the controller 150 may decide on a crossing point closest to the vehicle among the plurality of crossing points, obtain the TTC with the closest crossing point, and output 1 for a third index when the TTC is equal to or less than a predetermined time. [[, the]]The controller 150 may output 0 for the third index when the TTC is greater than the predetermined time.</p><p>2</p></body></html>

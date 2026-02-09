@@ -1,7 +1,0 @@
-<html><head></head><body><h3>Date: 2022-08-25</h3>
-
-<h1><u>ABSTRACT</u></h1>
-<p>A method for providing operating data for an at least semi- automated vehicle. The method includes: sensorially detecting surroundings data with the aid of a surroundings sensor system of the vehicle; conveying the sensorially detected surroundings</p><p>data to a cloud and conveying a request to the cloud for</p><p>localization data; receiving the localization data from the</p><p>cloud; and ascertaining the operating data for use in a</p><p>cooperative driving maneuver of the vehicle with at least one further road user from the localization data received from the</p><p>cloud and from the sensorially detected surroundings data; and</p><p>initiating the cooperative driving maneuver using the</p><p>ascertained operating data.</p><p>131818235.1
-19</p>5
-10
-</body></html>

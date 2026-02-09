@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2021-08-12</h3>
-<h1>ABSTRACT</h1>
-
-<p>A sleep apnea syndrome determination apparatus includes: a processing unit (10) configured to, by using RRI data indicating a heart rate interval (R-R Interval: RRI) in a sleeping period of a subject, determine whether or not the subject has sleep apnea syndrome. The processing unit operates so as to: generate a feature vector including a plurality of heart rate intervals that are consecutive in the sleeping period; calculate, from a value that is outputted as a result of inputting the feature vector to a recurrent neural network and that is obtained for each identification target period that corresponds to the plurality of heart rate intervals included in the feature vector inputted, an index based on a ratio between a period of an apnea state and a period of a normal respiration state in the sleeping period; and determine whether or not the subject has sleep apnea syndrome, on the basis of the index.</p>
-33
-</body></html>

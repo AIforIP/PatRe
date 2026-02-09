@@ -1,4 +1,0 @@
-<html><head></head><body><h3>Date: 2023-03-30</h3>
-<p>Ref. No.: A0002598US03CON</p>
-<h1>ABSTRACT</h1>
-<p>A medical device is configured to sense an electrical signal and determine that signal to noise criteria are met based on electrical signal segments stored in response to sensed electrophysiological events. The medical device is configured to determine an increased gain signal segment from one of the stored electrical signal segments in response to determining that the signal to noise criteria are met. The medical device determines a noise metric from the increased gain signal segment. The stored electrical signal segment associated with the increased gain signal segment may be classified as a noise segment in response to the noise metric meeting noise detection criteria.</p><p>70</p></body></html>

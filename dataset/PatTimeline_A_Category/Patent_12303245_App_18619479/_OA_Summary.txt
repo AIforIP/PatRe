@@ -1,9 +1,0 @@
-Total Office Actions: 2
-Application Number: 18619479
-Patent Number: 12303245
-
-OA Timeline:
-  OA1: 2024-10-17 - Final_Rejection
-  OA2: 2025-01-23 - Office_Action
-
-Final Status: Office_Action

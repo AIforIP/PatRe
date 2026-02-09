@@ -1,5 +1,0 @@
-<html><head></head><body><h3>Date: 2021-05-28</h3>
-
-<h1>ABSTRACT</h1>
-<p>An activity monitor for a modular software system, the system having a first software</p><p>component for use in configuring operation of a second software component via a proxy and stub interface, the activity monitor comprising; an input arranged to monitor a first event associated with the first software component and a second event associated with the proxy; a processor</p><p>arranged to compare the first and second events to a schedule of events to assess compliance with the schedule of events; and an output arranged to generate an error message in response to non- compliance with the schedule of events, the error message being for use in treating the error. A method of generating an activity monitor for monitoring operation of a modular software system.</p><p>Page 13 - APPLICATION; Docket No. JLR213134PCTUSCON1</p>5
-</body></html>

@@ -1,6 +1,0 @@
-<html><head></head><body>18349268
-
-   ABSTRACT OF THE DISCLOSURE
-   <p>A driving support apparatus comprises  a sensor for detecting an object, and a controller for prohibiting a collision control when an override condition is satisfied. The controller executes the collision control in a case where the override condition is satisfied during an erroneous operation, determines that an acceleration operation is the erroneous operation in a case where a predetermined normal erroneous operation condition is satisfied, or in a case where a predetermined relaxation erroneous operation condition is satisfied when a predetermined relaxation condition is satisfied, and determines that the relaxation condition is satisfied when a number of executions of the collision control during the erroneous operation in one trip is greater than or equal to a first threshold number or when a number of determinations that the acceleration operation is the erroneous operation in one trip is greater than or equal to a second threshold number.</p>
-
-</body></html>

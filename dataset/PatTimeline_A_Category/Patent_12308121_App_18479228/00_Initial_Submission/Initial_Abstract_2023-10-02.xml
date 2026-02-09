@@ -1,6 +1,0 @@
-<html><head></head><body>18479228
-
-   ABSTRACT
-   <p>Techniques that include applying machine learning models to episode data, including a cardiac electrogram, stored by a medical device are disclosed.  In some examples, based on the application of one or more machine learning models to the episode data, processing circuitry derives, for each of a plurality of arrhythmia type classifications, class activation data indicating varying likelihoods of the classification over a period of time associated with the episode.  The processing circuitry may display a graph of the varying likelihoods of the arrhythmia type classifications over the period of time.  In some examples, processing circuitry may use arrhythmia type likelihoods and depolarization likelihoods to identify depolarizations, e.g., QRS complexes, during the episode.</p>
-
-</body></html>

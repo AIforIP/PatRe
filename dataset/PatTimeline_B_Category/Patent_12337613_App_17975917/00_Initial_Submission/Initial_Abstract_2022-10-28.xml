@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-10-28</h3>
-<h1>ABSTRACT</h1>
-
-<p>Vehicle dimension data describing dimensions of a vehicle are obtained, a robotic apparatus is moved to a position about the vehicle, a reference point of the vehicle is determined, and the robotic apparatus is caused to move to positions about the vehicle based on the reference point. The reference point may be a center point of a selected wheel of the vehicle. A coordinate system of the robotic apparatus is aligned to the reference point of the selected wheel of the vehicle. Based on the aligned coordinate system of the robotic apparatus, operations are performed by the robotic apparatus to remove lug nuts from a wheel hub of the vehicle.</p>
-58
-</body></html>

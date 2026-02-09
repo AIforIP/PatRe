@@ -1,9 +1,0 @@
-<html><head></head><body>18895880
-
-   
-   
-ABSTRACT
-   
-   <p>Disclosed herein are methods, devices, and systems for facilitating umpires officiating a baseball game.  According to one embodiment, a mobile device is disclosed for facilitating an umpire of a baseball game.  The mobile device includes a processor, a memory electrically coupled with the processor, a user interface electrically coupled with the processor, a haptic feedback device electrically coupled with the processor, and a wireless transceiver electrically coupled with the processor.  The processor is configured for (1) receiving a start pitch clock selection via the user interface; (2) upon receiving the start pitch clock selection via the user interface, transmitting a start pitch clock device message via the wireless transceiver to an access point; (3) receiving a start pitch clock access point acknowledgment message from the access point; and (4) upon receiving the start pitch clock access point acknowledgment message, momentarily activating the haptic feedback device.  </p>
-
-</body></html>

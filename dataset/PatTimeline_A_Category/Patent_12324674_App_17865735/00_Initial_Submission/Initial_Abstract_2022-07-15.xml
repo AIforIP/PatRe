@@ -1,7 +1,0 @@
-<html><head></head><body><h3>Date: 2022-07-15</h3>
-<h1><u>ABSTRACT</u></h1>
-
-<p>A computer-implemented method for voxelizing a 3D structural medical image of a human's brain. The method including obtaining a 3D structural medical image of the human's brain, including a reference frame, generating a voxelized 3D structural medical image, obtaining parameters of at least one EEG electrode sensor and, for each EEG electrode sensor: a localization in the voxelized 3D structural medical image's reference frame, and a sensor detection distance, obtaining a regular 3D grid of voxels, and for each voxel of the 3D grid, iteratively subdividing the voxel while the distance between the voxel and the localization of any electrode sensor is smaller than or equal to the sensor detection distance and while a size of the voxel is greater than a predetermined length, each subdivided voxel joining a finite number of voxels of the voxelized 3D structural medical image.</p>
-5
-10
-</body></html>

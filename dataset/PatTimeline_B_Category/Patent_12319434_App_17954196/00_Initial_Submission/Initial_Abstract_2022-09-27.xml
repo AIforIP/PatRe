@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-09-27</h3>
-<p>Ting Yu AU
-
-Docket No.: AHB-5065-847</p><p>Preliminary Amendment</p>
-<h1>ABSTRACT OF THE DISCLOSURE</h1>
-<p>A method of determining the position of one or more components of a landing gear assembly of an aircraft is disclosed including scanning the one or more components with a lidar system to generate a set of position data points, each position data point comprising a set of three orthogonal position values. The position data points are partitioned into one or more clusters using a distance metric. Each cluster is determined to represent a component of the landing gear assembly. The position of the components are then determined from the position data points in the clusters. The value of the distance metric for a first position data point and a second position data point is representative of the difference between a first position value of the three orthogonal position values of the first position data point and the corresponding first position value of the three orthogonal position values of the second position data point.</p><p>- 10 -</p></body></html>

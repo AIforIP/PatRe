@@ -1,8 +1,0 @@
-<html><head></head><body>18326770
-
-   
-ABSTRACT
-   
-   <p>A computerized method for estimating joint friction in a joint of a robotic wrist of an end effector.  Sensor measurements of force or torque in a transmission that mechanically couples a robotic wrist to an actuator, are produced.  Joint friction in a joint of the robotic wrist that is driven by the actuator is computed by applying the sensor measurements of force or torque to a closed form mathematical expression that relates transmission force or torque variables to a joint friction variable.  A tracking error of the end effector is also computed, using a closed form mathematical expression that relates the joint friction variable to the tracking error.  Other aspects are also described and claimed.</p>
-
-</body></html>

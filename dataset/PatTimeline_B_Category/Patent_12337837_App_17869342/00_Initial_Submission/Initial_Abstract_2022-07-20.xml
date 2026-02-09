@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-07-20</h3>
-
-<h1><u>ABSTRACT</u></h1>
-<p>There is provided a method for preventing car collision, the method comprising:</p><p>obtaining information about a vehicle stopped in front of a preceding vehicle acquired by the</p><p>preceding vehicle; calculating a deceleration amount for preventing a collision with the</p><p> stopped vehicle based on the information about the stopped vehicle; predicting a preset event</p><p>related to the preceding vehicle based on a change in the position of the preceding vehicle;</p><p>and controlling an autonomous driving vehicle based on the deceleration amount according to</p><p>a prediction result.</p><p>DB1/ 131678551.1
--29-</p>5
-</body></html>

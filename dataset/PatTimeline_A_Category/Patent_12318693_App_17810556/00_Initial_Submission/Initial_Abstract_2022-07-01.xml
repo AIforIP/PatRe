@@ -1,8 +1,0 @@
-<html><head></head><body>17810556
-
-   
-ABSTRACT
-   
-   <p>Machine learning is used to transform screen renders from the viewpoint of the player’s character to be from the viewpoint of other non-player characters (NPC) in the room. One or more neural networks are trained using game images captured during a human play session, and then subsequently the neural networks are used to create realistic video from the NPC viewpoints. To avoid rendering multiple viewpoints simultaneously, a single viewpoint is rendered, and neural networks are used to transform it for the viewpoints of other NPCs in the area. A group of NPCs may be treated as a batch and a single viewpoint transformed to multiple viewpoints in a single inference pass. For cloud gaming the game video can be rendered/sent immediately for the player but the actions of the NPCs are delayed for a frame while the neural network generates the behavior.</p>
-
-</body></html>

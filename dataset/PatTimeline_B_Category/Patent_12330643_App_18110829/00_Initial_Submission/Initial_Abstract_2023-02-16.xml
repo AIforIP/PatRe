@@ -1,7 +1,0 @@
-<html><head></head><body><h3>Date: 2023-02-16</h3>
-<h1><u>ABSTRACT</u></h1>
-
-<p>Disclosed herein are systems and methods for operating a vehicle. In an embodiment, a system can identify a maximum distance bound based on one or more objects around a vehicle; for each of a plurality of candidate trajectories for the vehicle, determine a velocity from the maximum distance bound at an ending time of the candidate trajectory; determine an available distance for the candidate trajectory as a function of the determined velocity at the ending time of the candidate trajectory and a comfort deceleration parameter; determine a target velocity for the candidate trajectory; and determine a velocity difference between the target velocity and a final velocity of the candidate trajectory at the ending time of the candidate trajectory; select a first candidate trajectory based on the velocity difference; and operate the vehicle based on the selected first candidate trajectory.</p>
-34
-4889-9567-9311.1
-</body></html>

@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2025-01-03</h3>
-<p>Attorney Docket No.: 97710-418183</p>
-<h1>ABSTRACT</h1>
-<p>Disclosed are techniques for just-in-time (JIT) game development and gameplay. A</p><p>system can include an oracle having Al models, the oracle being called by a game engine during JIT game development and JIT gameplay, and a data store that can be configured to store data</p>
-<h1>field entries in encyclopedias that can be associated with JIT game worlds for respective players</h1>
-<p>at their respective user devices. The game engine can perform a process including: receiving user input from a user device of a player, providing the JIT gameplay to the user device for presentation in one or more graphical user interfaces based on processing, by the oracle, the user input, and generating, simultaneously or in parallel, updates to the data field entries in an encyclopedia associated with the JIT game world for the player based on processing, by the oracle, the user input and the JIT gameplay.</p><p>1</p></body></html>

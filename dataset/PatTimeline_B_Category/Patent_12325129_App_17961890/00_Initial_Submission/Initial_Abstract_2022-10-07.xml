@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-10-07</h3>
-<p>129190.01</p>
-<h1>ABSTRACT</h1>
-<p>Methods, apparatus, and processor-readable storage media for implementing an automated</p><p>data center robotic system using artificial intelligence techniques are provided herein. An example computer-implemented method includes obtaining one or more items of data, external to an automated robotic system, from a data center environment; determining one or more automated</p><p>operations to be carried out by the automated robotic system within the data center environment by processing at least a portion of the one or more items of data and one or more user-provided commands using at least one artificial intelligence-based inference engine; generating one or more instructions related to carrying out the one or more automated operations within the data center environment; and performing at least a portion of the one or more automated operations within the</p><p>data center environment based at least in part on the one or more instructions.</p><p>29</p>5
-10
-</body></html>

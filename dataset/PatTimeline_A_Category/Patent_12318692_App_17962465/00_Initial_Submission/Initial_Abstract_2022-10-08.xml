@@ -1,5 +1,0 @@
-<html><head></head><body><h3>Date: 2022-10-08</h3>
-
-<h1>ABSTRACT</h1>
-<p>A virtual object control method includes: displaying a virtual environment screen and a target function control, the target function control being configured to control the first virtual object to perform a target operation which triggers change of a target attribute value of a second virtual object; determining, in response to a trigger operation on the target function control, one or more second virtual objects with target attribute values satisfying a preset condition as one or more candidate virtual objects, and displaying one or more candidate object identifiers of the one or more candidate virtual objects; and determining, in response to a selection operation on one of the one or more candidate object identifiers, that a selected candidate object identifier is a target object identifier, and controlling the first virtual object to perform the target operation on a target virtual object corresponding to the target object identifier.</p><p>00144.1225.OOUS (21PCT656US)
-58</p></body></html>

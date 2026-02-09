@@ -1,9 +1,0 @@
-<html><head></head><body><h3>Date: 2022-02-03</h3>
-<h1><u>ABS</u><u>TRACT</u></h1>
-
-<p>An   autonomous  driving   apparatus   for  generating   an intersection path reflecting a driving record may include: a path generating device that generates information on a first path for driving of an autonomous vehicle at an intersection; a path   comparison  operating   device   that  generates   offset information between the generated information on the first path and information on a second path along which the autonomous vehicle is driving; a comparison operation evaluating device that determines whether to store the information on the second path  based   on  the   generated  offset  information;   and  a comparison operation storage that stores the information on the second  path   and   the  offset   information   based  on   the determination of whether to store the information on the second path.</p>
-50
-5
-10
-15
-</body></html>

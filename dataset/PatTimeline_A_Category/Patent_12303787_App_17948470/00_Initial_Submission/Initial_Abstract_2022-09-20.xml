@@ -1,7 +1,0 @@
-<html><head></head><body><h3>Date: 2022-09-20</h3>
-
-<h1>ABSTRACT</h1>
-<p>A method for controlling a virtual object includes displaying physical strength display</p><p>components corresponding to a virtual object, each of the physical strength display components being configured to display a physical strength consumption status of a corresponding body part of the virtual object. Different physical strength display components correspond to different body parts of the virtual object. The method further includes determining, in response to a control operation instructing the virtual object to perform an action, a physical strength display component corresponding to the control operation. A body part of the virtual object used to perform the action corresponds to the determined physical strength display component. The method also includes controlling the virtual object to perform the action, and updating a first remaining physical strength value displayed by the determined physical strength display component to a second remaining physical strength value.</p><p>SVG
-{EMBED HERE}
-0.100.04346
-AFS Ref.: 043381.00401</p><p>AFDOCS/261 84169.2</p></body></html>

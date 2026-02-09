@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-05-13</h3>
-<h1>ABSTRACT</h1>
-
-<p>A system is described. The system may detect whether a user within a flight deck is authorized to control the aircraft. The user may receive differing levels of authority to control the aircraft depending on whether the user is authorized or unauthorized. The system may also control the aircraft depending on the various phases of the aircraft, including in flight and on the ground. The system may also be used to unlock the controls for the aircraft. The system may unlock the control using biometric information or nonbiometric information. The system may include a camera which is added to a flight deck. The camera may capture images of users within the flight deck. Faces within the images may be detected and compared against authorized users for locking or unlocking the aircraft controls.</p>
-27
-</body></html>

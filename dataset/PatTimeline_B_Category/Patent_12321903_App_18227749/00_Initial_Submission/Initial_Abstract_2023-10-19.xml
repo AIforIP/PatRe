@@ -1,5 +1,0 @@
-<html><head></head><body><h3>Date: 2023-10-19</h3>
-<p>125991-5001-US-02</p><p>SYSTEM, DEVICES AND METHODS FOR TELE-OPERATED ROBOTICS</p>
-<h1>ABSTRACT</h1>
-<p>The system, devices and methods disclosed herein enable autonomous operation of robots around known and unknown obstacles on a property. A robot includes an optical marker disposed to be visible in a top-view image of the robot, a receiver configured to receive a top- down image of an area of interest surrounding the robot within a property, and a processor configured to distinguish the robot from structural features on the property based on an image of the optical marker. A position and an orientation of the robot and the structural features relative to the property is determined based on the top-down image. Among the structural features, a subset of features classified as obstacles inhibiting an operation of the robot as the robot moves within the area of interest is determined. An operating path for the robot within the area of interest so as to avoid the obstacles is then determined.</p><p>DB1/ 141723174.1
--25-</p></body></html>

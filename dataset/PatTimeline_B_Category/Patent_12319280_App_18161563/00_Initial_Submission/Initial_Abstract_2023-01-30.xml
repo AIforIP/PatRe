@@ -1,7 +1,0 @@
-<html><head></head><body>18161563
-
-   ABSTRACT
-   <p>A vehicle control device is disclosed.  The vehicle control device controls a vehicle on the basis of one or more detection times each representing a distance measured by a distance measuring device mounted on the vehicle.   The distance measuring device measures a distance to an object around the vehicle by transmitting and receiving sound waves.   The vehicle control device includes acquisition circuitry and estimated coordinate calculation circuitry.  The acquisition circuitry acquires the one or more detection times.  The estimated coordinate calculation circuitry calculates estimated coordinates indicating an estimated position of an object in a case where the object is present in a neighborhood of the distance measuring device but a distance to the object is not measured.  The estimated coordinates is calculated on the basis of the one or more detection times having been acquired by the acquisition circuitry.</p>
-   <p>739356.428 / 9040086_1</p>
-
-</body></html>

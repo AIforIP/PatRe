@@ -1,7 +1,0 @@
-<html><head></head><body><h3>Date: 2021-04-02</h3>
-<h1>ABSTRACT</h1>
-
-<p>A sensory mapping method for a human brain is disclosed. The method includes the steps of flattening the cortical surface of the human brain, projecting functional imaging data onto the flattened surface, smoothing the functional imaging data, generating a sensory map, registering sensory maps across individuals and analyzing the maps in the common space. The flattening utilizes a conformal parametrization method. The smoothing utilizes a topological smoothing method that utilizes a diffeomorphic smoother. The registering is diffeomorphic. The sensory mapping method may further include a step of processing the functional imaging data to produce topological results.</p>
-38
-Attorney Docket No. 60980.10800
-</body></html>

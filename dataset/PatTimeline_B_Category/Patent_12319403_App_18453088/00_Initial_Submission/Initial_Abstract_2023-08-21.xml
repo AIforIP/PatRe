@@ -1,6 +1,0 @@
-<html><head></head><body>18453088
-
-   Abstract
-   <p>A system configuration significantly reduces the number of interconnections needed between an electromechanical actuator (EMA) and an EMA controller (EMAC) while maintaining redundancy and other safety aspects needed by the target application. This allows simplification of communication interfaces between multiple sensors in the EMA and EMAC and unification of the interface to multiple sensors inside the EMAC, leading to cost and weight reduction that can be significant for many aerospace products and applications, including unmanned vehicle (e.g., UAM/UAV) applications.</p>
-
-</body></html>

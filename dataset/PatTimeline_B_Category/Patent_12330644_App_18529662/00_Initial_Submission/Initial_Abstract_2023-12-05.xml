@@ -1,8 +1,0 @@
-<html><head></head><body>18529662
-
-   
-ABSTRACT
-   
-   <p>The driving support device includes: a vehicle speed controller configured to perform vehicle speed control, a system controller configured to perform at least one prerequisite control, and a storage device configured to store whether or not switching between enabling and disabling is permitted for each of the at least one prerequisite control, wherein the vehicle speed controller includes: determining whether each of the at least one prerequisite control is enabled or disabled in response to an operation of a driver of the vehicle for starting the vehicle speed control, determining, with reference to the storage device, whether or not enabling of the prerequisite control determined to be disabled is permitted, and in response to determining that enabling of the prerequisite control determined to be disabled is permitted, enabling the prerequisite control determined to be disabled and starting the vehicle speed control.</p>
-
-</body></html>

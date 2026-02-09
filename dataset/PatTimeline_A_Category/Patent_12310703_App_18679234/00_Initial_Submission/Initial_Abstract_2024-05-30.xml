@@ -1,5 +1,0 @@
-<html><head></head><body><h3>Date: 2024-05-30</h3>
-<p>ATTORNEY DOCKET NO.: AENDO.0104
-UTILITY PATENT APPLICATION</p>
-<h1><u>ABSTRACT OF THE DISCLOSURE</u></h1>
-<p>A system and method for measuring blood pressure that allows for both coupling of fiber optic pressure sensors with a standard patient care monitor (PCM) and vascular assessment using statistical analysis of pressure wave data. The disclosure has a blood pressure monitor (BPM) system that calibrates and compensates blood pressure data for display on a standard PCM using analog-to-digital-to-analog conversion and Wheatstone Bridge emulation. The BPM can also analyze collected pressure wave data using various statistical methods. Using fast Fourier transform (FFT), pressure wave data can be used in vascular assessments to image or otherwise graphically display key vessel attributes. This permits localized intervention and detection of physiologic attributes of vessels prior to the grossly evident anatomical interruption.</p><p>PAGE 40 OF 40</p></body></html>

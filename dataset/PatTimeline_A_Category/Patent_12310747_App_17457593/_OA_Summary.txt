@@ -1,9 +1,0 @@
-Total Office Actions: 2
-Application Number: 17457593
-Patent Number: 12310747
-
-OA Timeline:
-  OA1: 2024-10-16 - Office_Action
-  OA2: 2025-02-13 - Office_Action
-
-Final Status: Office_Action

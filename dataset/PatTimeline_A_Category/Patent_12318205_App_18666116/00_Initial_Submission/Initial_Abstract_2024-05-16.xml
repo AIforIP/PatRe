@@ -1,7 +1,0 @@
-<html><head></head><body>18666116
-
-   
-   Abstract:
-   <p>An apparatus and method for generating cardiac catheterization data. The apparatus includes at least a processor and a memory communicatively connected to the at least a processor, wherein the memory contains instructions configuring the at least a processor to: receive a plurality of cardiogram data examples; train a catheter data predictor using the plurality of cardiogram data examples; input a cardiogram data signal; generate a plurality of catheterization parameters from the cardiogram data signal and the catheter data predictor; and display the plurality of catheterization parameters.</p>
-
-</body></html>

@@ -1,8 +1,0 @@
-<html><head></head><body>18537639
-
-   
-ABSTRACT
-   
-   <p>A surgical robotic system has a tool drive coupled to a distal end of a robotic arm that has a plurality of actuators.  The tool drive has a docking interface to receive a trocar.  The system also includes one or more sensors that are operable to visually sense a surface feature of the trocar.  One or more processors determine a position and orientation of the trocar, based on the visually sensed surface feature.  In response, the processor controls the actuators to orient the docking interface to the determined orientation of the trocar and to guide the robotic arm toward the determined position of the trocar.  Other aspects are also described and claimed.</p>
-
-</body></html>

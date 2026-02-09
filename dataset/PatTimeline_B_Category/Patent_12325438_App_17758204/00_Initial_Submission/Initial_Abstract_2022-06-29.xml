@@ -1,9 +1,0 @@
-<html><head></head><body><h3>Date: 2022-06-29</h3>
-<h1>ABSTRACT</h1>
-
-<p>The present disclosure provides a vehicle control method, an apparatus and a system, applied to a terminal control device in a vehicle. The terminal control device is in communication connection to a human-machine interface device, and the vehicle comprises a plurality of executive mechanisms. The method comprises: when a start instruction for a target function is monitored, receiving current gesture data sent by the human-machine interface device; and when the current gesture data meets a preset condition, generating a target control instruction according to the current gesture data, and sending the target control instruction to a target executive mechanism for the target executive mechanism to execute an operation corresponding to the current gesture data. The present disclosure may avoid dangers resulting from false triggering of a vehicle function due to errors in the gesture data when the gesture data is destroyed during the transmission from the human-machine interface device to the terminal control device, thereby ensuring the safety of using gestures to control the vehicle.</p>
-33
-
-5
-10
-</body></html>

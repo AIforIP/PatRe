@@ -1,9 +1,0 @@
-Total Office Actions: 2
-Application Number: 17895392
-Patent Number: 12304501
-
-OA Timeline:
-  OA1: 2024-06-28 - Office_Action
-  OA2: 2024-09-20 - Office_Action
-
-Final Status: Office_Action

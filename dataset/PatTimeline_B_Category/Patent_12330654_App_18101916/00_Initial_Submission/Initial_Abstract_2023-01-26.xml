@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2023-01-26</h3>
-<h1>ABSTRACT</h1>
-
-<p>A method of optimizing vehicle mobility performance includes receiving technical parameters for each wheel associated with wheel power of the particular wheel on a particular terrain. The method includes determining an optimal vehicle mobility performance by determining an optimal tire slippage for one wheel based on the set of technical parameters for the wheel and individually determining an optimal tire slippage for another wheel based on the set of technical parameters for the other wheel. A system may utilize such a method to control mobility performance in a vehicle such as, but not limited to, an autonomous ground vehicle.</p>
-- 33 -
-</body></html>

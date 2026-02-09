@@ -1,6 +1,0 @@
-<html><head></head><body><h3>Date: 2022-01-03</h3>
-<p>FP20-1080-00</p>
-<h1><u>ABSTRACT</u></h1>
-<p>The system includes a first movement permission area setting</p><p>unit configured to set a movement permission area for autonomous traveling that includes a part of a traveling path along which the autonomous driving vehicle reaches the target parking space and does not</p><p>include the target parking space, and a second movement permission area setting unit configured to, when it is determined that the autonomous driving vehicle has arrived near the target parking space or when notification of a start of the automated valet parking for the target parking space is sent from the autonomous driving vehicle, set a movement</p><p>permission area for automated valet parking that includes the target parking space and a part of the traveling path near the target parking</p><p>space.</p><p>55</p>5
-10
-</body></html>

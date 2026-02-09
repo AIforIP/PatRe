@@ -1,6 +1,0 @@
-<html><head></head><body>18069127
-
-   ABSTRACT
-   <p>An object is to provide a mechanism that can ensure safe operation of a continuum robot.  A block FTL calculates a target bending angle θfFTL and a target rotational angle ζfFTL of a following bending section on the basis of a target bending angle θlt and a target rotational angle ζlt of a distal-most bending section and a displacement of a base.  A switch unit 330 selects the target bending angle θfFTL and the target rotational angle ζfFTL of the following bending section obtained from the block FTL or a target bending angle θlf and a target rotational angle ζlf of the following bending section obtained from a block Pl corresponding to following operating means.  A kinematic computing unit 340 computes, on the basis of the target bending angle and the target rotational angle, a drive displacement by which a driving unit drives a wire in the following bending section.</p>
-
-</body></html>

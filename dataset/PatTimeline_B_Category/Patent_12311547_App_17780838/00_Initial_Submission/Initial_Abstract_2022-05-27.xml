@@ -1,5 +1,0 @@
-<html><head></head><body><h3>Date: 2022-05-27</h3>
-<p>Abstract <u>Improved method for labellin</u><u>q</u><u> a trainin</u><u>q</u><u> set involvin</u><u>q</u><u> a GUI</u> The present invention relates to a computer-implemented method for labelling a training set, preferably for training a neural network, with respect to a 3D physical object by means of a GUI, the method comprising the steps of: obtaining a training set relating to a plurality of training objects, each of the training objects comprising a 3D surface similar to the 3D surface of said object, the training set comprising at least two images for each training object; generating, for each training object, a respective 3D voxel representation based on the respective at least two images; receiving, via said GUI, manual annotations with respect to a plurality of segment classes from a user of said GUI for labelling each of the training objects; and preferably training, based on said manual annotations (91, 92, 93), at least one NN, for obtaining said at least one trained NN.</p>
-5
-10
-</body></html>
