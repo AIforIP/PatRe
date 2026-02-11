@@ -168,7 +168,8 @@ ReferencePool*/
 
 # Specifically ignore JSON files which contain the scraped patent content
 *.json
-!crawl_status.json # 如果你想保留爬虫状态账本可以不忽略，但建议也忽略
+!crawl_status.json
+!config/*.json
 
 # Ignore result files from experiments to avoid leaking data samples
 results/
@@ -176,6 +177,8 @@ exp_results/
 
 # Ignore any local configuration with API keys
 config.yaml
+config/local_config.yaml
+config/secrets.yaml
 .env
 
 # Spider related bypass

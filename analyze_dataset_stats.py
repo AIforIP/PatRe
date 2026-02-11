@@ -61,6 +61,17 @@ def analyze_dataset():
         log(f"   - 总 Office Actions 数: {sum(oa_counts)}")
         avg_oa = sum(oa_counts)/total_patents if total_patents else 0
         log(f"   - 平均每案 OA 轮数: {avg_oa:.2f}")
+
+        # --- 新增：每一轮的具体案件数量统计 ---
+        log(f"\n1.1 审查轮数详细分布 (Rounds Breakdown):")
+        # 对轮数进行频次计数
+        rounds_dist = Counter(oa_counts)
+        # 按照轮数 1, 2, 3... 的顺序排序
+        for r_num in sorted(rounds_dist.keys()):
+            num_of_cases = rounds_dist[r_num]
+            percentage = (num_of_cases / total_patents) * 100 if total_patents else 0
+            log(f"   - 包含 {r_num} 轮 OA 的案件: {num_of_cases} 个 ({percentage:.1f}%)")
+        # ---------------------------------------
         
         log(f"\n2. 最终结局 (Outcome):")
         for outcome, count in outcome_stats.items():
