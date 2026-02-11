@@ -1,46 +1,46 @@
-﻿# 鍏ㄥ眬鍏冩暟鎹?
+# 全局元数据
 metadata:
   project: "PatRe_NIPS2026"
   ipc_categories: ["A", "B", "C", "D", "E", "F", "G", "H"]
 
-# 瀹為獙浠诲姟閰嶇疆
+# 实验任务配置
 task_settings:
   # current_task: "v1_initial_examination"
   current_task: "v1_high_fidelity_rebuttal"
   num_samples: 1
 
-# ===================== 瀹為獙鐭╅樀 (瀹屾暣淇濈暀锛屼弗绂佷慨鏀? =====================
-experiment_matrix: #瀹為獙鐭╅樀
-  test_modes:  #test_modes锛氳€冪敓鏄皝
-    - "zero_shot"      # 鐩存帴鐢熸垚  璁╀竴涓病缁忚繃涓撻棬娉曞緥璁粌锛屼絾涔﹁寰楀緢澶氱殑鈥滈€氱敤鍨嬪ぇ瀛︾敓鈥濆幓鑰冨緥甯堣瘉銆傜洿鎺ラ棶瀹冿細鈥滀綘鐪嬭繖涓撳埄鎬庝箞鍙嶉┏锛熲€?
-    - "sft_model"      # 缁忚繃寰皟鍚庣殑妯″瀷 缁欒繖涓ぇ瀛︾敓鎶ヤ簡涓€涓€滀笓鍒╁弽椹崇壒璁彮鈥濓紝璁╀粬璇讳簡鍑犱竾浠界湡瀹炵殑寰嬪笀鍥炲嚱銆傝繖鏄綘璁粌鍑烘潵鐨勨€滄硶瀛︿笓涓氱敓鈥濄€?
+# ===================== 实验矩阵 (完整保留，严禁修改) =====================
+experiment_matrix: #实验矩阵
+  test_modes:  #test_modes：考生是谁
+    - "zero_shot"      # 直接生成  让一个没经过专门法律训练，但书读得很多的“通用型大学生”去考律师证。直接问他：“你看这专利怎么反驳？”
+    - "sft_model"      # 经过微调后的模型 给这个大学生报了一个“专利反驳特训班”，让他读了几万份真实的律师回函。这是你训练出来的“法学专业生”。
   retrieval_settings:
-    - "no_ref"         # 涓嶇粰渚垫潈鏂囩尞 (娴嬭瘯甯歌瘑)
-    - "oracle_summary" # 鐩存帴缁?Ground Truth 鐨勬枃鐚?Summary
-    - "bm25_retrieved" # 妯℃嫙鐪熷疄妫€绱㈠嚭鐨勬枃鐚?
+    - "no_ref"         # 不给参考文献 (测试常识)
+    - "oracle_summary" # 直接给 Ground Truth 的文献 Summary
+    - "bm25_retrieved" # 模拟真实检索出的文献
   granularities:
-    - "full_text"      # 鍏ㄦ枃鐢熸垚
-    - "atomic_claim"   # 閽堝鍗曠偣 Claim 鐢熸垚
+    - "full_text"      # 全文生成
+    - "atomic_claim"   # 针对单点 Claim 生成
 
-# 妯″瀷鍒楄〃 (瀹屾暣淇濈暀锛屽悗缁唬鐮佸皢閬嶅巻姝ゅ垪琛?
+# 模型列表 (完整保留，后续代码将遍历此列表)
 models:
   backbone_list:
-    # - "gpt-4o-mini"
+    - "gpt-4o-mini"
     # - "llama3.1"
-    - "phi4-mini"
+    # - "phi4-mini"
     # - "gpt-4o"
     # - "deepseek-v3"
     # - "deepseek-r1"
     # - "qwen-2.5-7b-instruct"
-    # 杩欓噷鍙互缁х画娣诲姞浣犲師鏈夌殑鍏朵粬妯″瀷锛屽 Llama-3, Claude 绛?
+    # 这里可以继续添加你原有的其他模型，如 Llama-3, Claude 等
   judge_model: "gpt-5-mini-2025-08-07"
   coherence_judge_model: "gpt-5-mini-2025-08-07"
-  api_key: "YOUR_API_KEY_HERE"  # 鍦ㄦ澶勯厤缃偍鐨凙PI瀵嗛挜
-  base_url: "https://api.lqshop.cc/v1"  # 鍦ㄦ澶勯厤缃瓵PI鍩虹URL
+  api_key: "YOUR_API_KEY_HERE"  # 在此处配置您的API密钥
+  base_url: "https://api.lqshop.cc/v1"  # 在此处配置API基础URL
   backend: "ollama"
-  judge_backend: "api"  # 瑁佸垽浣跨敤API鍚庣
-  ollama_base_url: "http://localhost:11434/v1"  # Ollama鏈湴鏈嶅姟鍦板潃
-  ollama_api_key: "ollama"  # Ollama榛樿API瀵嗛挜
+  judge_backend: "api"  # 裁判使用API后端
+  ollama_base_url: "http://localhost:11434/v1"  # Ollama本地服务地址
+  ollama_api_key: "ollama"  # Ollama默认API密钥
   vllm_base_url: "http://localhost:8000/v1"
   vllm_api_key: "EMPTY"
   generation_params:
@@ -49,24 +49,23 @@ models:
     max_tokens: 2048
   sft_model_id: ""
 
-# ===================== 褰撳墠杩愯璁剧疆 (鐢ㄤ簬鍗曟璋冭瘯) =====================
+# ===================== 当前运行设置 (用于单次调试) =====================
 active_settings:
   test_mode: "zero_shot"
   retrieval_setting: "oracle_summary" 
   granularity: "full_text"
 
-# 璺緞绠＄悊
+# 路径管理
 paths:
   test_set: "dataset/processed/test_set.jsonl"
   prompt_path: "config/prompt_templates.json"
   results: "results/nips_exp/"
   reference_pool: "dataset/ReferencePool_Full"
 
-# 瀹為獙鍛藉悕瑙勮寖
+# 实验命名规范
 experiment_naming:
   use_academic_format: false
   include_model_name: false
   timestamp_format: "%Y%m%d_%H%M"
 retrieval_params:
   bm25_top_k: 5
-
