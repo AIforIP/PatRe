@@ -7,7 +7,17 @@ metadata:
 task_settings:
   # current_task: "v1_initial_examination"
   current_task: "v1_high_fidelity_rebuttal"
-  num_samples: 1
+  num_samples: 999
+  auto_run_extra_metrics: true
+  auto_run_claim_rediscovery: true
+  judge_max_chars: 12000
+  judge_default_field_max_chars: 4000
+  judge_field_max_chars:
+    generated_text: 4000
+    ground_truth: 4000
+    office_action: 3000
+    claims: 3000
+    reference_summaries: 2000
 
 # ===================== 实验矩阵 (完整保留，严禁修改) =====================
 experiment_matrix: #实验矩阵
@@ -25,8 +35,8 @@ experiment_matrix: #实验矩阵
 # 模型列表 (完整保留，后续代码将遍历此列表)
 models:
   backbone_list:
-    # - "gpt-4o-mini"
-    - "arcee-ai/trinity-large-preview:free"
+    - "gpt-4o-mini"
+    # - "arcee-ai/trinity-large-preview:free"
     # - "tngtech/deepseek-r1t2-chimera:free"
     # - "llama3.1"
     # - "phi4-mini"
@@ -35,10 +45,14 @@ models:
     # - "deepseek-r1"
     # - "qwen-2.5-7b-instruct"
     # 这里可以继续添加你原有的其他模型，如 Llama-3, Claude 等
-  judge_model: "gpt-5-mini-2025-08-07"
-  coherence_judge_model: "gpt-5-mini-2025-08-07"
-  api_key: "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"  # 在此处配置您的API密钥
-  base_url: "https://openrouter.ai/api/v1"  # 在此处配置API基础URL
+  # judge_model: "gpt-5-mini-2025-08-07"
+  judge_model: "gpt-4o-mini"
+  # coherence_judge_model: "gpt-5-mini-2025-08-07"
+  coherence_judge_model: "gpt-4o-mini"
+  # api_key: "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"  # 在此处配置您的API密钥
+  api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308" 
+  # base_url: "https://openrouter.ai/api/v1"  # 在此处配置API基础URL
+  base_url:  "https://api.lqshop.cc/v1"  
   judge_api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308"  # 在此处配置裁判API密钥
   judge_base_url: "https://api.lqshop.cc/v1"  # 在此处配置裁判API基础URL
   backend: "api"
@@ -61,7 +75,7 @@ active_settings:
 
 # 路径管理
 paths:
-  test_set: "dataset/processed/test_set.jsonl"
+  test_set: "dataset/processed/0214.jsonl"
   prompt_path: "config/prompt_templates.json"
   results: "results/nips_exp/"
   reference_pool: "dataset/ReferencePool_Full"

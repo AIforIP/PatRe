@@ -11,6 +11,7 @@ from src.metrics_library import (
     disposition_metrics,
     statute_metrics,
     citation_metrics,
+    citation_list_match,
     rouge_l_f1,
     bleu_score,
     bert_score_f1,
@@ -37,12 +38,36 @@ class PatentEvaluator:
 
     def _load_dataset(self, path):
         data = []
+        ipc_filter = self.config.get('task_settings', {}).get('ipc_filter')
+        if ipc_filter:
+            ipc_filter = str(ipc_filter).upper()
         if not os.path.exists(path):
             self.logger.error(f"?? {path}")
             return []
         with open(path, 'r', encoding='utf-8') as f:
             for line in f:
-                data.append(json.loads(line))
+                if not line or not line.strip():
+                    continue
+                s = line.lstrip()
+                if s.startswith("//"):
+                    continue
+                item = json.loads(line)
+                if ipc_filter:
+                    ipc_value = str(item.get("meta", {}).get("ipc", "")).upper()
+                    if ipc_value != ipc_filter:
+                        continue
+                data.append(item)
+        # Task-aware filtering (single dataset, avoid empty rebuttals)
+        task_key = self.config.get('task_settings', {}).get('current_task', '')
+        if task_key in ("v1_high_fidelity_rebuttal", "v1_response_to_rebuttal"):
+            filtered = []
+            for item in data:
+                rebut = item.get("input", {}).get("rebuttal", "")
+                if isinstance(rebut, str):
+                    rebut = rebut.strip()
+                if rebut and rebut.upper() != "N/A":
+                    filtered.append(item)
+            data = filtered
         #  config 
         limit = self.config['task_settings'].get('num_samples', 9999)
         return data[:limit]
@@ -73,13 +98,10 @@ class PatentEvaluator:
             # 1. 
             ref_summary = self._process_retrieval(item)
             
-            # 2. ?User Prompt
-            # OAA?
-            # OA
-            if task_key == "v1_high_fidelity_rebuttal" and item['input'].get('next_office_action'):
-                oa_content = item['input']['next_office_action']  # A
-            else:
-                oa_content = item['input'].get('office_action', "No Office Action provided in dataset.")
+            # 2. User Prompt input
+            # Always use real dataset inputs (OA and rebuttal), never generated outputs.
+            oa_content = item['input'].get('office_action', "No Office Action provided in dataset.")
+            rebuttal_text = item['input'].get('rebuttal', item.get('ground_truth', {}).get('rebuttal_text', "N/A"))
             
             enforce_instruction = "\n\nIMPORTANT: Use the provided Reference Summaries to cite specific documents. DO NOT use placeholders like '[insert references]'."
             
@@ -103,7 +125,7 @@ class PatentEvaluator:
                     current_claims=ai_input['claims'],
                     reference_summaries=ai_input['refs'],
                     office_action=oa_content if task_key != "v1_initial_examination" else "N/A",
-                    rebuttal=item['input'].get('rebuttal', "N/A") if task_key != "v1_initial_examination" else "N/A",
+                    rebuttal=rebuttal_text if task_key != "v1_initial_examination" else "N/A",
                     claim_count=item['meta'].get('claim_count', 1)
                 ) + enforce_instruction
             except KeyError as e:
@@ -123,6 +145,8 @@ class PatentEvaluator:
                 ground_truth_text = item['ground_truth'].get('rebuttal_text', "N/A")
             else:
                 ground_truth_text = item['ground_truth']['oa_text']
+
+            gt_citations = item.get("ground_truth", {}).get("citations_gt", [])
 
             # ?
             result_entry = {
@@ -146,6 +170,7 @@ class PatentEvaluator:
                         "rebuttal_history": item['input'].get('rebuttal', "N/A")
                     },
                     "ground_truth": ground_truth_text,
+                    "citations_gt": gt_citations,
                     "input_refs_preview": ref_summary[:200] + "..."  # 
                 }
             }
@@ -169,6 +194,63 @@ class PatentEvaluator:
             return ["ground_truth_oa", "rebuttal_history", "human_decisions"]
         else:
             return ["ground_truth_final_outcome"]
+
+    def _truncate_text(self, text, max_chars, head_ratio=0.6):
+        if not text or not max_chars or max_chars <= 0:
+            return text
+        if len(text) <= max_chars:
+            return text
+        marker = "\n...[TRUNCATED]...\n"
+        head = int(max_chars * head_ratio)
+        tail = max_chars - head - len(marker)
+        if tail <= 0:
+            return text[:max_chars]
+        return text[:head] + marker + text[-tail:]
+
+    def _shrink_prompt(self, template, fields, max_total):
+        prompt = template.format(**fields)
+        if len(prompt) <= max_total:
+            return prompt
+        shrink_keys = [
+            "generated_text",
+            "ground_truth",
+            "office_action",
+            "claims",
+            "reference_summaries",
+            "text_a",
+            "text_b",
+            "text",
+            "claim_text",
+        ]
+        for key in shrink_keys:
+            if len(prompt) <= max_total:
+                break
+            value = fields.get(key)
+            if isinstance(value, str) and len(value) > 500:
+                overflow = len(prompt) - max_total
+                new_limit = max(500, len(value) - overflow - 50)
+                fields[key] = self._truncate_text(value, new_limit)
+                prompt = template.format(**fields)
+        return prompt
+
+    def _build_judge_prompt(self, template, fields):
+        cfg = self.config.get("task_settings", {})
+        max_total = cfg.get("judge_max_chars", 12000)
+        default_limit = cfg.get("judge_default_field_max_chars", 4000)
+        per_field = cfg.get("judge_field_max_chars", {}) or {}
+
+        truncated = {}
+        for k, v in fields.items():
+            if isinstance(v, str):
+                limit = per_field.get(k, default_limit)
+                truncated[k] = self._truncate_text(v, limit)
+            else:
+                truncated[k] = v
+
+        prompt = template.format(**truncated)
+        if max_total and len(prompt) > max_total:
+            prompt = self._shrink_prompt(template, truncated, max_total)
+        return prompt
 
     def _process_retrieval(self, item):
         setting = self.config['active_settings'].get('retrieval_setting', "oracle_summary")
@@ -293,12 +375,15 @@ class PatentEvaluator:
             #  Prompt
             # ?Judge ?
             try:
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    generated_text=res['ai_exam']['output'],
-                    claims=res['ai_exam']['input']['claims'],
-                    reference_summaries=res['ai_exam']['input']['refs'],
-                    office_action=res['evaluation_context']['full_context']['office_action'],
-                    ground_truth=res['evaluation_context']['ground_truth']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "generated_text": res['ai_exam']['output'],
+                        "claims": res['ai_exam']['input']['claims'],
+                        "reference_summaries": res['ai_exam']['input']['refs'],
+                        "office_action": res['evaluation_context']['full_context']['office_action'],
+                        "ground_truth": res['evaluation_context']['ground_truth'],
+                    },
                 )
             except KeyError as e:
                 # ?{claims} ormat 
@@ -307,8 +392,9 @@ class PatentEvaluator:
                 # ?context ?
                 self.logger.warning(f" Prompt format warning: {e}")
                 # Fallback to simple format if needed, or just let it fail/warn
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    generated_text=res['ai_exam']['output']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {"generated_text": res['ai_exam']['output']},
                 )
 
             # ?GPT-4o 
@@ -316,6 +402,9 @@ class PatentEvaluator:
                 system_prompt=judge_config["system_prompt"],
                 user_prompt=judge_prompt
             )
+            # Always store raw judge output for debugging
+            res["raw_judge_output"] = raw_judge_res
+            res["judge_prompt_length"] = len(judge_prompt) if isinstance(judge_prompt, str) else 0
 
             try:
                 # ?JSON 
@@ -327,9 +416,15 @@ class PatentEvaluator:
                         system_prompt=judge_config["system_prompt"],
                         user_prompt=retry_prompt
                     )
+                    res["raw_judge_output"] = raw_judge_res
                     score_data = self._extract_json(raw_judge_res)
-                res["scores"] = score_data.get("scores", {})
-                res["justification"] = score_data.get("justification", "")
+                judge_scores = score_data.get("scores", {})
+                res["judge_scores"] = judge_scores
+                res["scores"] = dict(judge_scores)
+                res["judge_total_score"] = score_data.get("total_score", None)
+                justification_summary = score_data.get("justification_summary", score_data.get("justification", ""))
+                res["justification"] = justification_summary
+                res["justification_details"] = score_data.get("justification_details", {})
 
                 # OA GPT-5 mini 
                 if judge_key == "examiner_judge":
@@ -342,11 +437,16 @@ class PatentEvaluator:
                             ) + f"[GPT-5 mini coherence] {coherence_data['justification']}"
 
                 # ?total_score 
-                res["total_score"] = self._calculate_numeric_total(res.get("scores", {}))
+                combined_total = self._calculate_numeric_total(res.get("scores", {}))
+                res["combined_total_score"] = combined_total
+                res["total_score"] = res.get("judge_total_score", combined_total)
                 scored_results.append(res)
             except Exception as e:
-                self.logger.warning(f" Scoring failed for {res['patent_id']}: {e}")
-                res["scores"] = {"error": "PARSING_FAILED"}
+                self.logger.warning(f" Scoring failed for {res['patent_id']}: {e} (prompt_len={res.get('judge_prompt_length', 0)})")
+                res.setdefault("scores", {})
+                res["scores"]["error"] = "PARSING_FAILED"
+                res.setdefault("justification", "")
+                res.setdefault("justification_details", {})
                 scored_results.append(res)
 
         return scored_results
@@ -361,17 +461,23 @@ class PatentEvaluator:
 
         for res in tqdm(results, desc="Point-wise Evaluation"):
             try:
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    generated_text=res['ai_exam']['output'],
-                    ground_truth=res['evaluation_context']['ground_truth'],
-                    claims=res['ai_exam']['input']['claims'],
-                    office_action=res['evaluation_context']['full_context']['office_action']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "generated_text": res['ai_exam']['output'],
+                        "ground_truth": res['evaluation_context']['ground_truth'],
+                        "claims": res['ai_exam']['input']['claims'],
+                        "office_action": res['evaluation_context']['full_context']['office_action'],
+                    },
                 )
             except KeyError as e:
                 self.logger.warning(f" Point-wise prompt format warning: {e}")
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    generated_text=res['ai_exam']['output'],
-                    ground_truth=res['evaluation_context']['ground_truth']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "generated_text": res['ai_exam']['output'],
+                        "ground_truth": res['evaluation_context']['ground_truth'],
+                    },
                 )
 
             raw_judge_res = self.judge_backend.generate(
@@ -423,17 +529,23 @@ class PatentEvaluator:
             res_b = results[i + 1]
             
             try:
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    text_a=res_a['ai_exam']['output'],
-                    text_b=res_b['ai_exam']['output'],
-                    claims=res_a['ai_exam']['input']['claims'],
-                    office_action=res_a['evaluation_context']['full_context']['office_action']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "text_a": res_a['ai_exam']['output'],
+                        "text_b": res_b['ai_exam']['output'],
+                        "claims": res_a['ai_exam']['input']['claims'],
+                        "office_action": res_a['evaluation_context']['full_context']['office_action'],
+                    },
                 )
             except KeyError as e:
                 self.logger.warning(f" Pairwise prompt format warning: {e}")
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    text_a=res_a['ai_exam']['output'],
-                    text_b=res_b['ai_exam']['output']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "text_a": res_a['ai_exam']['output'],
+                        "text_b": res_b['ai_exam']['output'],
+                    },
                 )
 
             raw_judge_res = self.judge_backend.generate(
@@ -486,20 +598,26 @@ class PatentEvaluator:
                 claim_text = res.get('ai_exam', {}).get('input', {}).get('claims', '')
                 claim_number = res.get('round_info', {}).get('round_number', '1')
                 
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    generated_text=res['ai_exam']['output'],
-                    ground_truth=res['evaluation_context']['ground_truth'],
-                    claim_number=claim_number,
-                    claim_text=claim_text,
-                    office_action=res['evaluation_context']['full_context']['office_action']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "generated_text": res['ai_exam']['output'],
+                        "ground_truth": res['evaluation_context']['ground_truth'],
+                        "claim_number": claim_number,
+                        "claim_text": claim_text,
+                        "office_action": res['evaluation_context']['full_context']['office_action'],
+                    },
                 )
             except KeyError as e:
                 self.logger.warning(f" Claim-level prompt format warning: {e}")
-                judge_prompt = judge_config["user_prompt_template"].format(
-                    generated_text=res['ai_exam']['output'],
-                    ground_truth=res['evaluation_context']['ground_truth'],
-                    claim_number='1',
-                    claim_text=res['ai_exam']['input']['claims']
+                judge_prompt = self._build_judge_prompt(
+                    judge_config["user_prompt_template"],
+                    {
+                        "generated_text": res['ai_exam']['output'],
+                        "ground_truth": res['evaluation_context']['ground_truth'],
+                        "claim_number": '1',
+                        "claim_text": res['ai_exam']['input']['claims'],
+                    },
                 )
 
             raw_judge_res = self.judge_backend.generate(
@@ -549,29 +667,41 @@ class PatentEvaluator:
                 pred_stat = extract_statutes(pred_text)
                 gt_stat = extract_statutes(gt_text)
 
-                disp_scores = disposition_metrics(pred_disp, gt_disp)
+                # Per-sample: only keep accuracy to avoid misleading precision/recall/F1
+                disp_scores = {}
+                if pred_disp != "unknown" and gt_disp != "unknown":
+                    disp_scores["disposition_accuracy"] = round(1.0 if pred_disp == gt_disp else 0.0, 4)
                 stat_scores = statute_metrics(pred_stat, gt_stat)
-                cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text)
+                gt_ids = res.get("evaluation_context", {}).get("citations_gt", None)
+                cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text, gt_ids=gt_ids)
+                list_match = citation_list_match(pred_text, refs_text)
 
-                scores = {}
-                scores.update(disp_scores)
-                scores.update(stat_scores)
-                scores.update(cit_scores)
+                rule_scores = {}
+                rule_scores.update(disp_scores)
+                rule_scores.update(stat_scores)
+                rule_scores.update(cit_scores)
+                rule_scores["citation_list_match"] = list_match
+                if "disposition_accuracy" in rule_scores:
+                    rule_scores["disposition_accuracy_pct"] = round(rule_scores["disposition_accuracy"] * 100, 2)
+                if "statute_precision" in rule_scores:
+                    rule_scores["statute_precision_pct"] = round(rule_scores["statute_precision"] * 100, 2)
+                rule_scores["citation_list_match_pct"] = round(list_match * 100, 2)
 
                 r_l = rouge_l_f1(pred_text, gt_text)
                 if r_l is not None:
-                    scores["rouge_l"] = r_l
+                    rule_scores["rouge_l"] = r_l
                 b = bleu_score(pred_text, gt_text)
                 if b is not None:
-                    scores["bleu"] = b
+                    rule_scores["bleu"] = b
                 # Skip heavy metrics by default to avoid long stalls
 
                 fmt = formatting_score(pred_text, task_type)
                 if fmt is not None:
-                    scores["formatting_rule"] = fmt
+                    rule_scores["formatting_rule"] = fmt
 
                 res.setdefault("scores", {})
-                res["scores"].update(scores)
+                res["rule_scores"] = rule_scores
+                res["scores"].update(rule_scores)
                 res["metric_details"] = {
                     "disposition_pred": pred_disp,
                     "disposition_gt": gt_disp,
@@ -580,6 +710,12 @@ class PatentEvaluator:
                     "citations_pred": sorted(list(pred_ids)),
                     "citations_gt": sorted(list(ref_ids)),
                 }
+                # If judge parsing failed (or total_score missing), still compute a numeric total
+                # from available metrics so the run isn't forced to 0.
+                if res.get("total_score") is None or res.get("scores", {}).get("error") == "PARSING_FAILED":
+                    combined_total = self._calculate_numeric_total(res.get("scores", {}))
+                    res["combined_total_score"] = combined_total
+                    res["total_score"] = res.get("judge_total_score", combined_total)
             except Exception as e:
                 self.logger.warning(f" Additional metrics failed for {res.get('patent_id', 'unknown')}: {e}")
 
@@ -641,10 +777,16 @@ class PatentEvaluator:
 
     def _rediscovery_extract_atomic_claims(self, text, extractor_cfg):
         try:
-            prompt = extractor_cfg["user_prompt_template"].format(text=text)
+            prompt = self._build_judge_prompt(
+                extractor_cfg["user_prompt_template"],
+                {"text": text},
+            )
         except KeyError as e:
             self.logger.warning(f"?Rediscovery extractor prompt warning: {e}")
-            prompt = extractor_cfg["user_prompt_template"].format(text=text)
+            prompt = self._build_judge_prompt(
+                extractor_cfg["user_prompt_template"],
+                {"text": text},
+            )
 
         raw = self.judge_backend.generate(
             system_prompt=extractor_cfg["system_prompt"],
@@ -675,10 +817,16 @@ class PatentEvaluator:
                     return True
                 continue
             try:
-                prompt = matcher_cfg["user_prompt_template"].format(claim_a=claim_a, claim_b=claim_b)
+                prompt = self._build_judge_prompt(
+                    matcher_cfg["user_prompt_template"],
+                    {"claim_a": claim_a, "claim_b": claim_b},
+                )
             except KeyError as e:
                 self.logger.warning(f"?Rediscovery matcher prompt warning: {e}")
-                prompt = matcher_cfg["user_prompt_template"].format(claim_a=claim_a, claim_b=claim_b)
+                prompt = self._build_judge_prompt(
+                    matcher_cfg["user_prompt_template"],
+                    {"claim_a": claim_a, "claim_b": claim_b},
+                )
             raw = self.judge_backend.generate(
                 system_prompt=matcher_cfg["system_prompt"],
                 user_prompt=prompt
@@ -706,7 +854,9 @@ class PatentEvaluator:
 
     def _calculate_numeric_total(self, scores):
         total = 0.0
-        for v in scores.values():
+        for k, v in scores.items():
+            if k == "quality":
+                continue
             if isinstance(v, (int, float)):
                 total += v
         return total
@@ -718,16 +868,20 @@ class PatentEvaluator:
             return None
 
         try:
-            judge_prompt = coherence_cfg["user_prompt_template"].format(
-                generated_text=res['ai_exam']['output'],
-                claims=res['ai_exam']['input']['claims'],
-                reference_summaries=res['ai_exam']['input']['refs'],
-                ground_truth=res['evaluation_context']['ground_truth']
+            judge_prompt = self._build_judge_prompt(
+                coherence_cfg["user_prompt_template"],
+                {
+                    "generated_text": res['ai_exam']['output'],
+                    "claims": res['ai_exam']['input']['claims'],
+                    "reference_summaries": res['ai_exam']['input']['refs'],
+                    "ground_truth": res['evaluation_context']['ground_truth'],
+                },
             )
         except KeyError as e:
             self.logger.warning(f" Coherence prompt format warning: {e}")
-            judge_prompt = coherence_cfg["user_prompt_template"].format(
-                generated_text=res['ai_exam']['output']
+            judge_prompt = self._build_judge_prompt(
+                coherence_cfg["user_prompt_template"],
+                {"generated_text": res['ai_exam']['output']},
             )
 
         coherence_model = self.config.get("models", {}).get("coherence_judge_model", "gpt-5-mini")
@@ -764,18 +918,62 @@ class PatentEvaluator:
 
     def _extract_json(self, text):
         """Lightweight JSON extractor."""
-        try:
-            #  Markdown 
-            match = re.search(r'```json\s*(.*?)\s*```', text, re.DOTALL)
-            if match:
-                return json.loads(match.group(1))
-            # ?
-            return json.loads(text.strip())
-        except:
-            #  JSON 
-            text_clean = re.search(r'\{.*\}', text, re.DOTALL)
-            if text_clean:
-                return json.loads(text_clean.group(0))
+        if text is None:
             raise ValueError("No valid JSON found in response")
+        if isinstance(text, (dict, list)):
+            return text
+        raw = str(text).strip()
+        if not raw:
+            raise ValueError("No valid JSON found in response")
+        # 1) Prefer fenced JSON blocks
+        for m in re.finditer(r'```json\s*(.*?)\s*```', raw, re.DOTALL | re.IGNORECASE):
+            block = m.group(1).strip()
+            try:
+                return json.loads(block)
+            except Exception:
+                continue
+        # 2) Try direct parse
+        try:
+            return json.loads(raw)
+        except Exception:
+            pass
+        # 3) Find first valid JSON object/array using JSONDecoder
+        decoder = json.JSONDecoder()
+        for i, ch in enumerate(raw):
+            if ch in "{[":
+                try:
+                    obj, _ = decoder.raw_decode(raw[i:])
+                    return obj
+                except Exception:
+                    continue
+        # 4) Fallback: greedy braces (may still fail)
+        text_clean = re.search(r'\{.*\}', raw, re.DOTALL)
+        if text_clean:
+            try:
+                return json.loads(text_clean.group(0))
+            except Exception:
+                pass
+        # 5) Fallback: Python-literal parsing for near-JSON outputs
+        try:
+            import ast
+            candidates = []
+            obj_block = re.search(r'\{.*\}', raw, re.DOTALL)
+            arr_block = re.search(r'\[.*\]', raw, re.DOTALL)
+            if obj_block:
+                candidates.append(obj_block.group(0))
+            if arr_block:
+                candidates.append(arr_block.group(0))
+            if not candidates:
+                candidates.append(raw)
+            for cand in candidates:
+                cleaned = cand
+                cleaned = re.sub(r'\btrue\b', 'True', cleaned, flags=re.IGNORECASE)
+                cleaned = re.sub(r'\bfalse\b', 'False', cleaned, flags=re.IGNORECASE)
+                cleaned = re.sub(r'\bnull\b', 'None', cleaned, flags=re.IGNORECASE)
+                cleaned = re.sub(r',\s*([}\]])', r'\1', cleaned)
+                return ast.literal_eval(cleaned)
+        except Exception:
+            pass
+        raise ValueError("No valid JSON found in response")
 
 

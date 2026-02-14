@@ -79,6 +79,39 @@ def generate_multiround_sequence_from_data(max_rounds):
 def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
     """按专利组织结果文件的保存方法，支持追加各轮次结果"""
     # 将原始结果和评估结果合并
+    oa_schema = [
+        "disposition_accuracy",
+        "statute_precision",
+        "citation_accuracy",
+        "citation_list_match",
+        "bleu",
+        "rouge_l",
+        "bert_score",
+        "embed_cos",
+        "formatting_rule",
+        "accuracy",
+        "clarity",
+        "constructiveness",
+        "completeness",
+        "quality",
+    ]
+    rebuttal_schema = [
+        "point_wise_coverage",
+        "bleu",
+        "rouge_l",
+        "bert_score",
+        "embed_cos",
+        "formatting_rule",
+        "accuracy",
+        "clarity",
+        "constructiveness",
+        "completeness",
+        "quality",
+        "disposition_accuracy",
+        "statute_precision",
+        "citation_accuracy",
+        "citation_list_match",
+    ]
     for raw_result, eval_result in zip(raw_results, eval_report):
         patent_id = raw_result['patent_id']
         patent_dir = os.path.join(exp_dir, f"patent_{patent_id}")
@@ -89,12 +122,14 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
         task_key = round_info['task']
         
         # 简化任务标签以用于文件夹命名
-        if "initial_examination" in task_key:
+        if task_key == "v1_initial_examination":
             task_label = "initial_examination"
-        elif "rebuttal" in task_key:
+        elif task_key == "v1_response_to_rebuttal":
+            task_label = "response"
+        elif task_key == "v1_high_fidelity_rebuttal":
             task_label = "rebuttal"
         else:
-            task_label = "response"
+            task_label = "other"
             
         round_dir = os.path.join(patent_dir, f"round_{round_num}_{task_label}")
         os.makedirs(round_dir, exist_ok=True)
@@ -103,6 +138,10 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
         exam_input_path = os.path.join(round_dir, "input.json")
         with open(exam_input_path, 'w', encoding='utf-8') as f:
             ai_input_data = raw_result['ai_exam']['input'].copy()
+            # Persist OA for traceability (not used by the model directly).
+            oa_text = raw_result.get('evaluation_context', {}).get('full_context', {}).get('office_action', "")
+            if oa_text:
+                ai_input_data["office_action"] = oa_text
             json.dump(ai_input_data, f, indent=2, ensure_ascii=False)
         # 2. ai_output.txt (AI生成的答案)
         exam_output_path = os.path.join(round_dir, "ai_output.txt")
@@ -116,7 +155,8 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
                 "ai_input": raw_result['ai_exam']['input'],
                 "ai_output": raw_result['ai_exam']['output'],
                 "ground_truth": raw_result['evaluation_context'].get("ground_truth", ""),
-                "restricted_info": raw_result['ai_exam'].get('restricted_info', [])
+                "restricted_info": raw_result['ai_exam'].get('restricted_info', []),
+                "office_action": raw_result.get('evaluation_context', {}).get('full_context', {}).get('office_action', "")
             }
             json.dump(context_data, f, indent=2, ensure_ascii=False)
         
@@ -127,10 +167,83 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
                 "total_score": eval_result.get('total_score', 0),
                 "scores": eval_result.get('scores', {}),
                 "justification": eval_result.get('justification', ""),
+                "justification_details": eval_result.get('justification_details', {}),
+                "raw_judge_output": eval_result.get('raw_judge_output', ""),
                 "rediscovery_details": eval_result.get('rediscovery_details', {}),
                 "metric_details": eval_result.get('metric_details', {})
             }
             json.dump(score_data, f, indent=2, ensure_ascii=False)
+
+        summary_scores = {}
+        schema = rebuttal_schema if task_key == "v1_high_fidelity_rebuttal" else oa_schema
+        name_map_oa = {
+            "disposition_accuracy": "Dispositional Accuracy",
+            "statute_precision": "Statute Precision",
+            "citation_accuracy": "Citation Accuracy",
+            "citation_list_match": "Citation List Match",
+            "bleu": "BLEU",
+            "rouge_l": "ROUGE-L",
+            "bert_score": "BERTScore",
+            "embed_cos": "EmbedCos",
+            "formatting_rule": "formatting_",
+            "accuracy": "Accuracy",
+            "clarity": "Clarity",
+            "constructiveness": "Constructiveness",
+            "completeness": "Completeness",
+            "quality": "Quality",
+        }
+        name_map_rebuttal = {
+            "point_wise_coverage": "Point-wise Coverage",
+            "bleu": "BLEU",
+            "rouge_l": "ROUGE-L",
+            "bert_score": "BERTScore",
+            "embed_cos": "EmbedCos",
+            "formatting_rule": "formatting_",
+            "accuracy": "Accuracy",
+            "clarity": "Clarity",
+            "constructiveness": "Constructiveness",
+            "completeness": "Completeness",
+            "quality": "Quality",
+            "disposition_accuracy": "Dispositional Accuracy",
+            "statute_precision": "Statute Precision",
+            "citation_accuracy": "Citation Accuracy",
+            "citation_list_match": "Citation List Match",
+        }
+        name_map = name_map_rebuttal if task_key == "v1_high_fidelity_rebuttal" else name_map_oa
+        src_scores = eval_result.get("scores", {})
+        percent_metrics = {
+            "disposition_accuracy": 100.0,
+            "statute_precision": 100.0,
+            "citation_accuracy": 10.0,
+            "point_wise_coverage": 10.0,
+        }
+        for key in schema:
+            if key == "bert_score":
+                val = src_scores.get("bert_score", src_scores.get("bert_score_f1", None))
+            elif key == "embed_cos":
+                val = src_scores.get("embed_cos", src_scores.get("embed_cosine", None))
+            elif key == "citation_accuracy":
+                val = src_scores.get("citation_accuracy", src_scores.get("reference_citation_accuracy", None))
+            else:
+                val = src_scores.get(key, None)
+
+            out_key = name_map.get(key, key)
+            if key in percent_metrics and isinstance(val, (int, float)):
+                summary_scores[out_key] = f"{val * percent_metrics[key]:.2f}%"
+            else:
+                summary_scores[out_key] = val
+        summary_path = os.path.join(round_dir, "scores_summary.json")
+        with open(summary_path, 'w', encoding='utf-8') as f:
+            json.dump(
+                {
+                    "task_type": task_key,
+                    "total_score": eval_result.get('total_score', 0),
+                    "scores": summary_scores
+                },
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
     # 专利级别的汇总将在 _generate_summaries 函数中处理
     pass
 
@@ -160,6 +273,49 @@ def _calculate_overall_metrics(reports):
                 score_counts[k] = score_counts.get(k, 0) + 1
     return {k: score_sums[k] / score_counts[k] for k in score_sums} if score_counts else {}
 
+def _prf(tp, fp, fn):
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+    return precision, recall, f1
+
+def _calculate_disposition_micro_metrics(reports):
+    """Compute micro-averaged disposition metrics across all samples."""
+    tp = fp = fn = 0
+    correct = 0
+    total = 0
+    for res in reports:
+        md = res.get("metric_details", {}) if isinstance(res, dict) else {}
+        pred = md.get("disposition_pred")
+        gt = md.get("disposition_gt")
+        if not pred or not gt or pred == "unknown" or gt == "unknown":
+            continue
+        total += 1
+        if pred == gt:
+            correct += 1
+        pred_pos = pred in ("final_rejection", "non_final_rejection", "rejection")
+        gt_pos = gt in ("final_rejection", "non_final_rejection", "rejection")
+        if pred_pos and gt_pos:
+            tp += 1
+        elif pred_pos and not gt_pos:
+            fp += 1
+        elif (not pred_pos) and gt_pos:
+            fn += 1
+
+    if total == 0:
+        return {}
+    precision, recall, f1 = _prf(tp, fp, fn)
+    return {
+        "disposition_accuracy_overall": round(correct / total, 4),
+        "disposition_micro_precision": round(precision, 4),
+        "disposition_micro_recall": round(recall, 4),
+        "disposition_micro_f1": round(f1, 4),
+        "disposition_support": total,
+        "disposition_tp": tp,
+        "disposition_fp": fp,
+        "disposition_fn": fn,
+    }
+
 def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
     """生成实验汇总文件"""
     # 1. 每个专利的 summary.json
@@ -176,12 +332,15 @@ def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
             json.dump(patent_summary, f, indent=2, ensure_ascii=False)
     
     # 2. 整体实验概览 experiment_overview.json
+    all_reports = [item for sublist in all_results_map.values() for item in sublist]
+    disposition_micro = _calculate_disposition_micro_metrics(all_reports)
     experiment_overview = {
         "config_snapshot": config,
         "timestamp": datetime.now().isoformat(),
         "total_patents": len(grouped_data),
         "total_rounds_run": sum(len(results) for results in all_results_map.values()),
-        "overall_metrics": _calculate_overall_metrics([item for sublist in all_results_map.values() for item in sublist])
+        "overall_metrics": _calculate_overall_metrics(all_reports),
+        "overall_disposition": disposition_micro
     }
     overview_path = os.path.join(exp_dir, "experiment_overview.json")
     with open(overview_path, 'w', encoding='utf-8') as f:
@@ -195,6 +354,9 @@ def main():
 
     models_to_run = [args.model] if args.model else config['models']['backbone_list']
     test_set_path = config['paths']['test_set']
+    ipc_filter = args.ipc.strip().upper() if args.ipc else None
+    if ipc_filter:
+        config.setdefault('task_settings', {})['ipc_filter'] = ipc_filter
     
     # 处理命令行参数覆盖
     if args.test_mode:
@@ -204,6 +366,9 @@ def main():
     if args.backend:
         config['models']['backend'] = args.backend
     
+    auto_extra = bool(config.get('task_settings', {}).get('auto_run_extra_metrics', False))
+    auto_rediscovery = bool(config.get('task_settings', {}).get('auto_run_claim_rediscovery', False))
+
     # 获取命名配置
     naming_cfg = config.get('experiment_naming', {})
     use_academic_format = naming_cfg.get('use_academic_format', True)
@@ -213,7 +378,19 @@ def main():
     if args.run_multiround:
         # 加载并分组数据
         with open(test_set_path, 'r', encoding='utf-8') as f:
-            all_data = [json.loads(line) for line in f]
+            all_data = []
+            for line in f:
+                if not line or not line.strip():
+                    continue
+                s = line.lstrip()
+                if s.startswith("//"):
+                    continue
+                all_data.append(json.loads(line))
+        if ipc_filter:
+            all_data = [
+                item for item in all_data
+                if str(item.get("meta", {}).get("ipc", "")).upper() == ipc_filter
+            ]
         
         # 遵循 config 中的样本限制
         limit = config['task_settings'].get('num_samples', 9999)
@@ -263,9 +440,9 @@ def main():
                     raw = engine.run_batch()
                     for r in raw: r['round_info']['round_number'] = line_idx*2+1
                     report = engine.run_scoring(raw)
-                    if args.run_claim_rediscovery:
+                    if args.run_claim_rediscovery or auto_rediscovery:
                         report = engine.run_claim_rediscovery_evaluation(report)
-                    if args.run_extra_metrics:
+                    if args.run_extra_metrics or auto_extra:
                         report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir)
                     
@@ -281,7 +458,14 @@ def main():
                 for pid, lines in grouped_data.items():
                     if line_idx < len(lines):
                         item = lines[line_idx]
-                        if item.get('rebuttal') or item.get('ground_truth', {}).get('rebuttal_text'):
+                        rebuttal_text = (
+                            item.get("input", {}).get("rebuttal")
+                            or item.get("ground_truth", {}).get("rebuttal_text")
+                            or ""
+                        )
+                        if isinstance(rebuttal_text, str):
+                            rebuttal_text = rebuttal_text.strip()
+                        if rebuttal_text and str(rebuttal_text).upper() != "N/A":
                             batch_rebuttal.append(item)
                 
                 if batch_rebuttal:
@@ -291,9 +475,9 @@ def main():
                     raw = engine.run_batch()
                     for r in raw: r['round_info']['round_number'] = line_idx*2+2
                     report = engine.run_scoring(raw)
-                    if args.run_claim_rediscovery:
+                    if args.run_claim_rediscovery or auto_rediscovery:
                         report = engine.run_claim_rediscovery_evaluation(report)
-                    if args.run_extra_metrics:
+                    if args.run_extra_metrics or auto_extra:
                         report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir)
                     
@@ -345,9 +529,9 @@ def main():
                     engine = PatentEvaluator(config, logger)
                     raw = engine.run_batch()
                     report = engine.run_scoring(raw)
-                    if args.run_claim_rediscovery:
+                    if args.run_claim_rediscovery or auto_rediscovery:
                         report = engine.run_claim_rediscovery_evaluation(report)
-                    if args.run_extra_metrics:
+                    if args.run_extra_metrics or auto_extra:
                         report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, exp_dir)
                     # 单任务模式也生成一个简单的 overview

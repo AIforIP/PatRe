@@ -58,10 +58,10 @@ def extract_disposition(text, json_obj=None):
         return "final_rejection"
     if "non-final rejection" in t or "nonfinal rejection" in t:
         return "non_final_rejection"
-    if "allowance" in t or "allowed" in t or "allowable" in t:
-        return "allowance"
     if "rejected under" in t or "rejection" in t:
         return "rejection"
+    if "allowance" in t or "allowed" in t or "allowable" in t:
+        return "allowance"
     return "unknown"
 
 
@@ -104,7 +104,29 @@ def statute_metrics(pred_set, gt_set):
     }
 
 
-_REF_RE = re.compile(r"(US\\s*\\d{4}/\\d{6,7}|US\\s*\\d{7,}|WO\\s*\\d{4}\\d+|EP\\s*\\d{7,})", re.IGNORECASE)
+_REF_RE = re.compile(
+    r"(US\\s*\\d{4}/?\\d{6,8}\\s*[A-Z]\\d?|US\\s*\\d{7,}\\s*[A-Z]\\d?|US\\s*\\d{4}/?\\d{6,8}|US\\s*\\d{7,}|WO\\s*\\d{4}\\d+\\s*[A-Z]\\d?|WO\\s*\\d{4}\\d+|EP\\s*\\d{7,}\\s*[A-Z]\\d?|EP\\s*\\d{7,})",
+    re.IGNORECASE
+)
+
+
+def normalize_ref_id(text):
+    """
+    Normalize reference IDs to a stable form like 'US20210267678'.
+    Keeps prefix (US/WO/EP) + digits only, strips kind codes (A1/B2).
+    """
+    if not text:
+        return None
+    raw = re.sub(r"\\s+", "", str(text).upper())
+    m = re.match(r"^(US|WO|EP)(.+)$", raw)
+    if not m:
+        return raw
+    prefix, rest = m.group(1), m.group(2)
+    # Remove kind codes like A1/B2 (letters + optional digit at end)
+    rest = re.sub(r"[A-Z]\\d?$", "", rest)
+    # Remove any non-digits (slashes, commas)
+    digits = re.sub(r"\\D", "", rest)
+    return f"{prefix}{digits}" if digits else raw
 
 
 def extract_reference_ids(text):
@@ -112,12 +134,17 @@ def extract_reference_ids(text):
         return set()
     ids = set()
     for m in _REF_RE.finditer(text):
-        ids.add(re.sub(r"\\s+", "", m.group(1).upper()))
+        norm = normalize_ref_id(m.group(1))
+        if norm:
+            ids.add(norm)
     return ids
 
 
-def citation_metrics(pred_text, refs_text):
-    ref_ids = extract_reference_ids(refs_text)
+def citation_metrics(pred_text, refs_text, gt_ids=None):
+    if gt_ids is not None:
+        ref_ids = set(filter(None, (normalize_ref_id(x) for x in gt_ids)))
+    else:
+        ref_ids = extract_reference_ids(refs_text)
     pred_ids = extract_reference_ids(pred_text)
     if not ref_ids:
         return {}, ref_ids, pred_ids
@@ -138,6 +165,21 @@ def citation_metrics(pred_text, refs_text):
         "citation_f1": round(f1, 4),
         "citation_accuracy": round(precision * 10, 4),
     }, ref_ids, pred_ids
+
+
+def citation_list_match(pred_text, refs_text):
+    """
+    Check whether predicted citation IDs are in the provided reference list.
+    Returns precision in [0,1].
+    """
+    pred_ids = extract_reference_ids(pred_text)
+    ref_ids = extract_reference_ids(refs_text)
+    if not pred_ids:
+        return 1.0
+    if not ref_ids:
+        return 0.0
+    precision = len(pred_ids & ref_ids) / len(pred_ids)
+    return round(precision, 4)
 
 
 def rouge_l_f1(pred_text, gt_text):

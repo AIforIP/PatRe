@@ -1,0 +1,15 @@
+openai
+pyyaml
+tqdm
+requests
+numpy
+pandas
+rank_bm25
+rouge-score
+sacrebleu
+bert-score
+sentence-transformers
+torch
+scikit-learn
+nltk
+re-search

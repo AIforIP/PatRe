@@ -2,6 +2,7 @@
 from openai import OpenAI
 import time
 import os
+import random
 
 # 尝试加载 .env 文件
 try:
@@ -61,7 +62,15 @@ class ModelBackend:
         if model_override:
             model = model_override
         
-        for _ in range(3): # 自动重试 3 次，防止网络抖动
+        params = dict(self.params) if isinstance(self.params, dict) else {}
+        if "max_tokens" in params and "max_completion_tokens" not in params:
+            if isinstance(model, str) and model.startswith(("gpt-5", "gpt-4.1", "o1", "o3")):
+                params["max_completion_tokens"] = params.pop("max_tokens")
+        
+        max_retries = int(self.config.get("models", {}).get("max_retries", 3))
+        base_backoff = float(self.config.get("models", {}).get("retry_backoff_sec", 2))
+        jitter = float(self.config.get("models", {}).get("retry_jitter_sec", 0))
+        for attempt in range(max_retries): # 自动重试
             try:
                 response = self.client.chat.completions.create(
                     model=model,
@@ -69,10 +78,22 @@ class ModelBackend:
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt}
                     ],
-                    **self.params
+                    **params
                 )
-                return response.choices[0].message.content
+                content = response.choices[0].message.content
+                if content is None or not str(content).strip():
+                    raise ValueError("Empty response content")
+                return content
             except Exception as e:
+                msg = str(e)
+                if "max_tokens" in msg and "max_completion_tokens" in msg:
+                    if "max_tokens" in params and "max_completion_tokens" not in params:
+                        params["max_completion_tokens"] = params.pop("max_tokens")
+                        continue
                 print(f"⚠️ Error, retrying... {e}")
-                time.sleep(2)
+                if attempt < max_retries - 1:
+                    sleep_s = base_backoff * (2 ** attempt)
+                    if jitter:
+                        sleep_s += random.uniform(0, jitter)
+                    time.sleep(sleep_s)
         return "FAILED_TO_GENERATE"
