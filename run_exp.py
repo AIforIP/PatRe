@@ -30,6 +30,8 @@ def parse_args():
     parser.add_argument("--run_point_wise", action="store_true", help="Run point-wise evaluation against ground truth")
     parser.add_argument("--run_pairwise", action="store_true", help="Run pairwise comparison between models")
     parser.add_argument("--run_claim_level", action="store_true", help="Run claim-level evaluation")
+    parser.add_argument("--run_claim_rediscovery", action="store_true", help="Run claim-centric rediscovery evaluation")
+    parser.add_argument("--run_extra_metrics", action="store_true", help="Run additional rule-based metrics")
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
     return parser.parse_args()
 
@@ -124,7 +126,9 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             score_data = {
                 "total_score": eval_result.get('total_score', 0),
                 "scores": eval_result.get('scores', {}),
-                "justification": eval_result.get('justification', "")
+                "justification": eval_result.get('justification', ""),
+                "rediscovery_details": eval_result.get('rediscovery_details', {}),
+                "metric_details": eval_result.get('metric_details', {})
             }
             json.dump(score_data, f, indent=2, ensure_ascii=False)
     # 专利级别的汇总将在 _generate_summaries 函数中处理
@@ -259,6 +263,10 @@ def main():
                     raw = engine.run_batch()
                     for r in raw: r['round_info']['round_number'] = line_idx*2+1
                     report = engine.run_scoring(raw)
+                    if args.run_claim_rediscovery:
+                        report = engine.run_claim_rediscovery_evaluation(report)
+                    if args.run_extra_metrics:
+                        report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir)
                     
                     for r, e in zip(raw, report):
@@ -283,6 +291,10 @@ def main():
                     raw = engine.run_batch()
                     for r in raw: r['round_info']['round_number'] = line_idx*2+2
                     report = engine.run_scoring(raw)
+                    if args.run_claim_rediscovery:
+                        report = engine.run_claim_rediscovery_evaluation(report)
+                    if args.run_extra_metrics:
+                        report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir)
                     
                     for r, e in zip(raw, report):
@@ -333,6 +345,10 @@ def main():
                     engine = PatentEvaluator(config, logger)
                     raw = engine.run_batch()
                     report = engine.run_scoring(raw)
+                    if args.run_claim_rediscovery:
+                        report = engine.run_claim_rediscovery_evaluation(report)
+                    if args.run_extra_metrics:
+                        report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, exp_dir)
                     # 单任务模式也生成一个简单的 overview
                     all_results_map = {r['patent_id']: [e] for r,e in zip(raw, report)}

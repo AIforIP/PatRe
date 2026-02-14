@@ -1,9 +1,22 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import json
 import os
 import re
 from tqdm import tqdm
 from src.model_backend import ModelBackend
+from src.metrics_library import (
+    safe_parse_json,
+    extract_statutes,
+    extract_disposition,
+    disposition_metrics,
+    statute_metrics,
+    citation_metrics,
+    rouge_l_f1,
+    bleu_score,
+    bert_score_f1,
+    embed_cosine,
+    formatting_score,
+)
 
 class PatentEvaluator:
     def __init__(self, config, logger):
@@ -25,52 +38,52 @@ class PatentEvaluator:
     def _load_dataset(self, path):
         data = []
         if not os.path.exists(path):
-            self.logger.error(f"❌ 数据文件不存在: {path}")
+            self.logger.error(f"?? {path}")
             return []
         with open(path, 'r', encoding='utf-8') as f:
             for line in f:
                 data.append(json.loads(line))
-        # 根据 config 设置样本数量
+        #  config 
         limit = self.config['task_settings'].get('num_samples', 9999)
         return data[:limit]
 
     def run_batch(self):
-        """执行批处理生成任务 - 按专利分组，每轮独立输出"""
+        """?- """
         results = []
         task_key = self.config['task_settings']['current_task']
         
-        # --- 核心修复：优先根据模板成员关系决定任务类别，避免字符串匹配误判 ---
+        # --- ?---
         if task_key in self.templates.get("Office_Action_Generation", {}):
             root_key = "Office_Action_Generation"
         elif task_key in self.templates.get("Rebuttal_Generation", {}):
             root_key = "Rebuttal_Generation"
         else:
-            self.logger.error(f"❌ 未能在模板中找到任务: {task_key}")
+            self.logger.error(f"?: {task_key}")
             return []
             
         if task_key not in self.templates[root_key]:
-            self.logger.error(f"❌ 在 {root_key} 下找不到任务: {task_key}")
+            self.logger.error(f"??{root_key} : {task_key}")
             return []
             
         template_config = self.templates[root_key][task_key]
         
-        self.logger.info(f"📊 Starting batch inference for {len(self.dataset)} samples...")
+        self.logger.info(f" Starting batch inference for {len(self.dataset)} samples...")
 
         for item in tqdm(self.dataset, desc="Generating"):
-            # 1. 处理引文摘要内容
+            # 1. 
             ref_summary = self._process_retrieval(item)
             
-            # 2. 组装最终 User Prompt
-            # 对于反驳任务，使用下一轮的OA（即当前轮次的真实OA）
-            # 对于审查任务，使用当前轮次的OA
+            # 2. ?User Prompt
+            # OAA?
+            # OA
             if task_key == "v1_high_fidelity_rebuttal" and item['input'].get('next_office_action'):
-                oa_content = item['input']['next_office_action']  # 使用下一轮OA作为输入
+                oa_content = item['input']['next_office_action']  # A
             else:
                 oa_content = item['input'].get('office_action', "No Office Action provided in dataset.")
             
             enforce_instruction = "\n\nIMPORTANT: Use the provided Reference Summaries to cite specific documents. DO NOT use placeholders like '[insert references]'."
             
-            # 构建AI实际输入（考试时能看到的内容）
+            # AI
             ai_input = {
                 "claims": item['input']['claims'],
                 "refs": ref_summary,
@@ -78,14 +91,14 @@ class PatentEvaluator:
                 "retrieval_setting": self.config['active_settings'].get('retrieval_setting', "oracle_summary")
             }
             
-            # 移除AI不应该看到的信息
+            # AI
             if task_key == "v1_initial_examination":
-                # 初始审查阶段，AI不应该看到OA和反驳历史
+                # IA?
                 ai_input.pop("office_action", None)
                 ai_input.pop("rebuttal_history", None)
             
             try:
-                # 使用AI实际能看到的输入构建prompt
+                # AIprompt
                 user_prompt = template_config["user_prompt_template"].format(
                     current_claims=ai_input['claims'],
                     reference_summaries=ai_input['refs'],
@@ -94,16 +107,16 @@ class PatentEvaluator:
                     claim_count=item['meta'].get('claim_count', 1)
                 ) + enforce_instruction
             except KeyError as e:
-                self.logger.error(f"❌ Prompt 填充失败，缺少变量: {e}")
+                self.logger.error(f"?Prompt ? {e}")
                 raise e
 
-            # 3. 推理
+            # 3. 
             prediction = self.backend.generate(
                 system_prompt=template_config["system_prompt"],
                 user_prompt=user_prompt
             )
 
-            # 动态选择 Ground Truth
+            #  Ground Truth
             if task_key == "v1_response_to_rebuttal":
                 ground_truth_text = item['ground_truth'].get('next_oa_text', item['ground_truth'].get('oa_text', "N/A"))
             elif "rebuttal" in task_key.lower():
@@ -111,7 +124,7 @@ class PatentEvaluator:
             else:
                 ground_truth_text = item['ground_truth']['oa_text']
 
-            # 构建清晰的结果结构
+            # ?
             result_entry = {
                 "patent_id": item['id'],
                 "round_info": {
@@ -133,14 +146,14 @@ class PatentEvaluator:
                         "rebuttal_history": item['input'].get('rebuttal', "N/A")
                     },
                     "ground_truth": ground_truth_text,
-                    "input_refs_preview": ref_summary[:200] + "..."  # 方便溯源
+                    "input_refs_preview": ref_summary[:200] + "..."  # 
                 }
             }
             results.append(result_entry)
         return results
 
     def _get_round_number(self, task_key):
-        """根据任务类型确定轮次编号"""
+        """"""
         if task_key == "v1_initial_examination":
             return 1
         elif task_key == "v1_high_fidelity_rebuttal":
@@ -151,7 +164,7 @@ class PatentEvaluator:
             return 0
 
     def _get_restricted_info(self, task_key):
-        """获取AI不应该看到的信息列表"""
+        """AI"""
         if task_key == "v1_initial_examination":
             return ["ground_truth_oa", "rebuttal_history", "human_decisions"]
         else:
@@ -259,26 +272,26 @@ class PatentEvaluator:
 
     def run_scoring(self, results):
         """
-        自动化裁判打分逻辑：
-        根据当前 Task 自动选择 examiner_judge 或 rebuttal_judge
+        ?
+         Task  examiner_judge ?rebuttal_judge
         """
-        # 1. 获取当前任务名称 (例如 "v1_initial_examination" 或 "v1_high_fidelity_rebuttal")
+        # 1.  ( "v1_initial_examination" ?"v1_high_fidelity_rebuttal")
         current_task = self.config['task_settings']['current_task']
-        # 根据模板归属而非字符串，选择裁判类型
+        # 
         if current_task in self.templates.get("Office_Action_Generation", {}):
             judge_key = "examiner_judge"
         else:
             judge_key = "rebuttal_judge"
         
-        self.logger.info(f"⚖️ Routing Evaluation to: {judge_key}")
+        self.logger.info(f" Routing Evaluation to: {judge_key}")
         
-        # 3. 从模板中读取配置
+        # 3. 
         judge_config = self.templates["Evaluation_Metrics"][judge_key]
         scored_results = []
 
         for res in tqdm(results, desc="Scoring"):
-            # 填充裁判 Prompt
-            # 传入丰富的上下文供 Judge 判断准确性
+            #  Prompt
+            # ?Judge ?
             try:
                 judge_prompt = judge_config["user_prompt_template"].format(
                     generated_text=res['ai_exam']['output'],
@@ -288,29 +301,37 @@ class PatentEvaluator:
                     ground_truth=res['evaluation_context']['ground_truth']
                 )
             except KeyError as e:
-                # 兼容旧模板：如果模板里没写 {claims} 等占位符，format 应该忽略多余参数吗？
-                # Python 的 format 只要 key 存在于模板中就需要提供，多余的 key 传入通常没问题（除非 unpack dict）
-                # 但是如果模板里有 {claims} 而这里没传，就会报错。
-                # 这里的代码假设 context 都有。
-                self.logger.warning(f"⚠️ Prompt format warning: {e}")
+                # ?{claims} ormat 
+                # Python ?format  key ?key  unpack dict?
+                #  {claims} ?
+                # ?context ?
+                self.logger.warning(f" Prompt format warning: {e}")
                 # Fallback to simple format if needed, or just let it fail/warn
                 judge_prompt = judge_config["user_prompt_template"].format(
                     generated_text=res['ai_exam']['output']
                 )
 
-            # 调用裁判后端（通常裁判用 GPT-4o 保证公平性）
+            # ?GPT-4o 
             raw_judge_res = self.judge_backend.generate(
                 system_prompt=judge_config["system_prompt"],
                 user_prompt=judge_prompt
             )
 
             try:
-                # 解析裁判返回的 JSON 分数
-                score_data = self._extract_json(raw_judge_res)
+                # ?JSON 
+                try:
+                    score_data = self._extract_json(raw_judge_res)
+                except Exception:
+                    retry_prompt = judge_prompt + "\n\nReturn JSON only. Do not include any other text."
+                    raw_judge_res = self.judge_backend.generate(
+                        system_prompt=judge_config["system_prompt"],
+                        user_prompt=retry_prompt
+                    )
+                    score_data = self._extract_json(raw_judge_res)
                 res["scores"] = score_data.get("scores", {})
                 res["justification"] = score_data.get("justification", "")
 
-                # OA评分增加基于 GPT-5 mini 的逻辑连贯性分
+                # OA GPT-5 mini 
                 if judge_key == "examiner_judge":
                     coherence_data = self._run_gpt5_coherence_judge(res)
                     if coherence_data:
@@ -320,11 +341,11 @@ class PatentEvaluator:
                                 (res["justification"] + "\n\n") if res["justification"] else ""
                             ) + f"[GPT-5 mini coherence] {coherence_data['justification']}"
 
-                # 总分按数值型子项汇总，避免模板升级后 total_score 漏算
+                # ?total_score 
                 res["total_score"] = self._calculate_numeric_total(res.get("scores", {}))
                 scored_results.append(res)
             except Exception as e:
-                self.logger.warning(f"⚠️ Scoring failed for {res['patent_id']}: {e}")
+                self.logger.warning(f" Scoring failed for {res['patent_id']}: {e}")
                 res["scores"] = {"error": "PARSING_FAILED"}
                 scored_results.append(res)
 
@@ -332,9 +353,9 @@ class PatentEvaluator:
 
     def run_point_wise_evaluation(self, results):
         """
-        Point-wise 评估：将生成结果与真实值进行逐项对比
+        Point-wise 
         """
-        self.logger.info("📊 Running point-wise evaluation...")
+        self.logger.info(" Running point-wise evaluation...")
         judge_config = self.templates["Evaluation_Metrics"]["point_wise_evaluator"]
         evaluated_results = []
 
@@ -347,7 +368,7 @@ class PatentEvaluator:
                     office_action=res['evaluation_context']['full_context']['office_action']
                 )
             except KeyError as e:
-                self.logger.warning(f"⚠️ Point-wise prompt format warning: {e}")
+                self.logger.warning(f" Point-wise prompt format warning: {e}")
                 judge_prompt = judge_config["user_prompt_template"].format(
                     generated_text=res['ai_exam']['output'],
                     ground_truth=res['evaluation_context']['ground_truth']
@@ -359,13 +380,21 @@ class PatentEvaluator:
             )
 
             try:
-                score_data = self._extract_json(raw_judge_res)
+                try:
+                    score_data = self._extract_json(raw_judge_res)
+                except Exception:
+                    retry_prompt = judge_prompt + "\n\nReturn JSON only. Do not include any other text."
+                    raw_judge_res = self.judge_backend.generate(
+                        system_prompt=judge_config["system_prompt"],
+                        user_prompt=retry_prompt
+                    )
+                    score_data = self._extract_json(raw_judge_res)
                 res["point_wise_scores"] = score_data.get("scores", {})
                 res["point_wise_total"] = score_data.get("total_score", 0)
                 res["point_wise_justification"] = score_data.get("justification", "")
                 evaluated_results.append(res)
             except Exception as e:
-                self.logger.warning(f"⚠️ Point-wise evaluation failed for {res['patent_id']}: {e}")
+                self.logger.warning(f" Point-wise evaluation failed for {res['patent_id']}: {e}")
                 res["point_wise_scores"] = {"error": "PARSING_FAILED"}
                 evaluated_results.append(res)
 
@@ -373,17 +402,17 @@ class PatentEvaluator:
 
     def run_pairwise_comparison(self, results):
         """
-        Pair-wise 比较：比较两组结果哪一组更好
+        Pair-wise ?
         """
-        self.logger.info("⚖️ Running pairwise comparison...")
+        self.logger.info(" Running pairwise comparison...")
         judge_config = self.templates["Evaluation_Metrics"]["pairwise_evaluator"]
         compared_results = []
 
-        # 假设 results 包含两组数据用于比较
-        # 这里我们比较相同输入的不同模型输出
+        #  results 
+        # ?
         for i in range(0, len(results), 2):
             if i + 1 >= len(results):
-                # 如果是奇数个结果，最后一个单独处理
+                # ?
                 res = results[i]
                 res["pairwise_winner"] = None
                 res["pairwise_comparison"] = "Insufficient pairs for comparison"
@@ -401,7 +430,7 @@ class PatentEvaluator:
                     office_action=res_a['evaluation_context']['full_context']['office_action']
                 )
             except KeyError as e:
-                self.logger.warning(f"⚠️ Pairwise prompt format warning: {e}")
+                self.logger.warning(f" Pairwise prompt format warning: {e}")
                 judge_prompt = judge_config["user_prompt_template"].format(
                     text_a=res_a['ai_exam']['output'],
                     text_b=res_b['ai_exam']['output']
@@ -413,22 +442,30 @@ class PatentEvaluator:
             )
 
             try:
-                score_data = self._extract_json(raw_judge_res)
+                try:
+                    score_data = self._extract_json(raw_judge_res)
+                except Exception:
+                    retry_prompt = judge_prompt + "\n\nReturn JSON only. Do not include any other text."
+                    raw_judge_res = self.judge_backend.generate(
+                        system_prompt=judge_config["system_prompt"],
+                        user_prompt=retry_prompt
+                    )
+                    score_data = self._extract_json(raw_judge_res)
                 winner = score_data.get("winner", "unknown")
                 
-                # 记录比较结果
+                # 
                 res_a["pairwise_winner"] = winner
                 res_a["pairwise_scores"] = score_data.get("scores", {})
                 res_a["pairwise_justification"] = score_data.get("justification", "")
                 
-                # 为结果B也记录相同的比较结果，但调整winner
+                # winner
                 res_b["pairwise_winner"] = "A" if winner == "B" else "B" if winner == "A" else "tie"
                 res_b["pairwise_scores"] = score_data.get("scores", {})
                 res_b["pairwise_justification"] = score_data.get("justification", "")
                 
                 compared_results.extend([res_a, res_b])
             except Exception as e:
-                self.logger.warning(f"⚠️ Pairwise comparison failed for {res_a['patent_id']} vs {res_b['patent_id']}: {e}")
+                self.logger.warning(f" Pairwise comparison failed for {res_a['patent_id']} vs {res_b['patent_id']}: {e}")
                 res_a["pairwise_winner"] = "error"
                 res_b["pairwise_winner"] = "error"
                 compared_results.extend([res_a, res_b])
@@ -437,15 +474,15 @@ class PatentEvaluator:
 
     def run_claim_level_evaluation(self, results):
         """
-        Claim-level 评估：对每个权利要求进行单独评估
+        Claim-level 
         """
-        self.logger.info("🔍 Running claim-level evaluation...")
+        self.logger.info(" Running claim-level evaluation...")
         judge_config = self.templates["Evaluation_Metrics"]["claim_level_evaluator"]
         evaluated_results = []
 
         for res in tqdm(results, desc="Claim-level Evaluation"):
             try:
-                # 提取权利要求相关信息
+                # 
                 claim_text = res.get('ai_exam', {}).get('input', {}).get('claims', '')
                 claim_number = res.get('round_info', {}).get('round_number', '1')
                 
@@ -457,7 +494,7 @@ class PatentEvaluator:
                     office_action=res['evaluation_context']['full_context']['office_action']
                 )
             except KeyError as e:
-                self.logger.warning(f"⚠️ Claim-level prompt format warning: {e}")
+                self.logger.warning(f" Claim-level prompt format warning: {e}")
                 judge_prompt = judge_config["user_prompt_template"].format(
                     generated_text=res['ai_exam']['output'],
                     ground_truth=res['evaluation_context']['ground_truth'],
@@ -471,17 +508,201 @@ class PatentEvaluator:
             )
 
             try:
-                score_data = self._extract_json(raw_judge_res)
+                try:
+                    score_data = self._extract_json(raw_judge_res)
+                except Exception:
+                    retry_prompt = judge_prompt + "\n\nReturn JSON only. Do not include any other text."
+                    raw_judge_res = self.judge_backend.generate(
+                        system_prompt=judge_config["system_prompt"],
+                        user_prompt=retry_prompt
+                    )
+                    score_data = self._extract_json(raw_judge_res)
                 res["claim_level_scores"] = score_data.get("scores", {})
                 res["claim_level_total"] = score_data.get("total_score", 0)
                 res["claim_level_justification"] = score_data.get("justification", "")
                 evaluated_results.append(res)
             except Exception as e:
-                self.logger.warning(f"⚠️ Claim-level evaluation failed for {res['patent_id']}: {e}")
+                self.logger.warning(f" Claim-level evaluation failed for {res['patent_id']}: {e}")
                 res["claim_level_scores"] = {"error": "PARSING_FAILED"}
                 evaluated_results.append(res)
 
         return evaluated_results
+
+    def run_additional_metrics(self, results):
+        """
+        Compute rule-based and text similarity metrics without changing prompts.
+        """
+        self.logger.info(" Running additional metrics...")
+        for res in tqdm(results, desc="Additional Metrics"):
+            try:
+                pred_text = res.get("ai_exam", {}).get("output", "")
+                gt_text = res.get("evaluation_context", {}).get("ground_truth", "")
+                refs_text = res.get("ai_exam", {}).get("input", {}).get("refs", "")
+                task_type = res.get("round_info", {}).get("task", "")
+
+                pred_json = safe_parse_json(pred_text)
+                gt_json = safe_parse_json(gt_text)
+
+                pred_disp = extract_disposition(pred_text, pred_json)
+                gt_disp = extract_disposition(gt_text, gt_json)
+
+                pred_stat = extract_statutes(pred_text)
+                gt_stat = extract_statutes(gt_text)
+
+                disp_scores = disposition_metrics(pred_disp, gt_disp)
+                stat_scores = statute_metrics(pred_stat, gt_stat)
+                cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text)
+
+                scores = {}
+                scores.update(disp_scores)
+                scores.update(stat_scores)
+                scores.update(cit_scores)
+
+                r_l = rouge_l_f1(pred_text, gt_text)
+                if r_l is not None:
+                    scores["rouge_l"] = r_l
+                b = bleu_score(pred_text, gt_text)
+                if b is not None:
+                    scores["bleu"] = b
+                # Skip heavy metrics by default to avoid long stalls
+
+                fmt = formatting_score(pred_text, task_type)
+                if fmt is not None:
+                    scores["formatting_rule"] = fmt
+
+                res.setdefault("scores", {})
+                res["scores"].update(scores)
+                res["metric_details"] = {
+                    "disposition_pred": pred_disp,
+                    "disposition_gt": gt_disp,
+                    "statutes_pred": sorted(list(pred_stat)),
+                    "statutes_gt": sorted(list(gt_stat)),
+                    "citations_pred": sorted(list(pred_ids)),
+                    "citations_gt": sorted(list(ref_ids)),
+                }
+            except Exception as e:
+                self.logger.warning(f" Additional metrics failed for {res.get('patent_id', 'unknown')}: {e}")
+
+        return results
+
+    def run_claim_rediscovery_evaluation(self, results):
+        """
+        Claim-centric rediscovery evaluation:
+        1) Extract atomic claims from ground truth OA and AI output
+        2) Semantically match claims and compute recall/precision/F1
+        """
+        self.logger.info(" Running claim-centric rediscovery evaluation...")
+        eval_templates = self.templates.get("Evaluation_Metrics", {})
+        extractor_cfg = eval_templates.get("claim_rediscovery_extractor")
+        matcher_cfg = eval_templates.get("claim_rediscovery_matcher")
+        if not extractor_cfg or not matcher_cfg:
+            self.logger.warning("?Claim rediscovery templates not found. Skipping.")
+            return results
+
+        match_cache = {}
+
+        for res in tqdm(results, desc="Claim Rediscovery"):
+            gt_text = res.get('evaluation_context', {}).get('ground_truth', '')
+            ai_text = res.get('ai_exam', {}).get('output', '')
+
+            gt_claims = self._rediscovery_extract_atomic_claims(gt_text, extractor_cfg)
+            ai_claims = self._rediscovery_extract_atomic_claims(ai_text, extractor_cfg)
+
+            gt_claims = [c for c in gt_claims if isinstance(c, str) and c.strip()]
+            ai_claims = [c for c in ai_claims if isinstance(c, str) and c.strip()]
+
+            matched_gt = 0
+            matched_ai = 0
+
+            for gt in gt_claims:
+                if self._rediscovery_any_match(gt, ai_claims, matcher_cfg, match_cache):
+                    matched_gt += 1
+
+            for ai in ai_claims:
+                if self._rediscovery_any_match(ai, gt_claims, matcher_cfg, match_cache):
+                    matched_ai += 1
+
+            recall = (matched_gt / len(gt_claims)) if gt_claims else 0.0
+            precision = (matched_ai / len(ai_claims)) if ai_claims else 0.0
+            f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+
+            res.setdefault("scores", {})
+            res["scores"]["rediscovery_recall"] = round(recall, 4)
+            res["scores"]["rediscovery_precision"] = round(precision, 4)
+            res["scores"]["rediscovery_f1"] = round(f1, 4)
+            res["rediscovery_details"] = {
+                "ground_truth_claims": gt_claims,
+                "ai_claims": ai_claims,
+                "matched_ground_truth": matched_gt,
+                "matched_ai": matched_ai
+            }
+
+        return results
+
+    def _rediscovery_extract_atomic_claims(self, text, extractor_cfg):
+        try:
+            prompt = extractor_cfg["user_prompt_template"].format(text=text)
+        except KeyError as e:
+            self.logger.warning(f"?Rediscovery extractor prompt warning: {e}")
+            prompt = extractor_cfg["user_prompt_template"].format(text=text)
+
+        raw = self.judge_backend.generate(
+            system_prompt=extractor_cfg["system_prompt"],
+            user_prompt=prompt
+        )
+        try:
+            parsed = self._extract_json(raw)
+            return parsed.get("claims", [])
+        except Exception as e:
+            self.logger.warning(f"?Rediscovery extractor parsing failed: {e}")
+            retry_prompt = prompt + "\n\nReturn JSON only. Do not include any other text."
+            raw = self.judge_backend.generate(
+                system_prompt=extractor_cfg["system_prompt"],
+                user_prompt=retry_prompt
+            )
+            try:
+                parsed = self._extract_json(raw)
+                return parsed.get("claims", [])
+            except Exception as e2:
+                self.logger.warning(f"?Rediscovery extractor retry failed: {e2}")
+                return []
+
+    def _rediscovery_any_match(self, claim_a, claim_list, matcher_cfg, match_cache):
+        for claim_b in claim_list:
+            key = (claim_a, claim_b)
+            if key in match_cache:
+                if match_cache[key]:
+                    return True
+                continue
+            try:
+                prompt = matcher_cfg["user_prompt_template"].format(claim_a=claim_a, claim_b=claim_b)
+            except KeyError as e:
+                self.logger.warning(f"?Rediscovery matcher prompt warning: {e}")
+                prompt = matcher_cfg["user_prompt_template"].format(claim_a=claim_a, claim_b=claim_b)
+            raw = self.judge_backend.generate(
+                system_prompt=matcher_cfg["system_prompt"],
+                user_prompt=prompt
+            )
+            try:
+                parsed = self._extract_json(raw)
+                match = bool(parsed.get("match", False))
+            except Exception as e:
+                self.logger.warning(f"?Rediscovery matcher parsing failed: {e}")
+                retry_prompt = prompt + "\n\nReturn JSON only. Do not include any other text."
+                raw = self.judge_backend.generate(
+                    system_prompt=matcher_cfg["system_prompt"],
+                    user_prompt=retry_prompt
+                )
+                try:
+                    parsed = self._extract_json(raw)
+                    match = bool(parsed.get("match", False))
+                except Exception as e2:
+                    self.logger.warning(f"?Rediscovery matcher retry failed: {e2}")
+                    match = False
+            match_cache[key] = match
+            if match:
+                return True
+        return False
 
     def _calculate_numeric_total(self, scores):
         total = 0.0
@@ -504,7 +725,7 @@ class PatentEvaluator:
                 ground_truth=res['evaluation_context']['ground_truth']
             )
         except KeyError as e:
-            self.logger.warning(f"⚠️ Coherence prompt format warning: {e}")
+            self.logger.warning(f" Coherence prompt format warning: {e}")
             judge_prompt = coherence_cfg["user_prompt_template"].format(
                 generated_text=res['ai_exam']['output']
             )
@@ -516,9 +737,19 @@ class PatentEvaluator:
             is_judge=True,
             model_override=coherence_model
         )
-        parsed = self._extract_json(raw)
+        try:
+            parsed = self._extract_json(raw)
+        except Exception:
+            retry_prompt = judge_prompt + "\n\nReturn JSON only. Do not include any other text."
+            raw = self.judge_backend.generate(
+                system_prompt=coherence_cfg["system_prompt"],
+                user_prompt=retry_prompt,
+                is_judge=True,
+                model_override=coherence_model
+            )
+            parsed = self._extract_json(raw)
 
-        # 兼容两种返回格式:
+        # :
         # 1) {"coherence_score": 8, "justification": "..."}
         # 2) {"scores": {"coherence_score": 8}, "justification": "..."}
         if "coherence_score" in parsed:
@@ -532,17 +763,19 @@ class PatentEvaluator:
         }
 
     def _extract_json(self, text):
-        """鲁棒的 JSON 提取器"""
+        """Lightweight JSON extractor."""
         try:
-            # 尝试匹配 Markdown 格式
+            #  Markdown 
             match = re.search(r'```json\s*(.*?)\s*```', text, re.DOTALL)
             if match:
                 return json.loads(match.group(1))
-            # 尝试直接解析全文本
+            # ?
             return json.loads(text.strip())
         except:
-            # 如果还是不行，尝试清洗掉前后的非 JSON 字符
+            #  JSON 
             text_clean = re.search(r'\{.*\}', text, re.DOTALL)
             if text_clean:
                 return json.loads(text_clean.group(0))
             raise ValueError("No valid JSON found in response")
+
+

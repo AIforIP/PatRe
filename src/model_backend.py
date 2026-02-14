@@ -25,6 +25,11 @@ class ModelBackend:
         
         api_key = os.getenv('OPENAI_API_KEY') or config.get('api_key') or config['models'].get('api_key')
         base_url = os.getenv('OPENAI_BASE_URL') or config.get('base_url') or config['models'].get('base_url')
+
+        # Allow separate judge credentials/endpoint
+        if is_judge:
+            api_key = config['models'].get('judge_api_key') or api_key
+            base_url = config['models'].get('judge_base_url') or base_url
         
         # Ollama 配置
         if self.backend == 'ollama':
@@ -36,7 +41,10 @@ class ModelBackend:
         
         if not api_key:
             raise ValueError("API key is missing. Please provide it in config file or OPENAI_API_KEY environment variable.")
-        
+
+        # Debug: show which endpoint is used
+        print(f"[ModelBackend] backend={self.backend} is_judge={is_judge} base_url={base_url}")
+
         self.client = OpenAI(
             api_key=api_key,
             base_url=base_url

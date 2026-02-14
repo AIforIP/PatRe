@@ -25,7 +25,9 @@ experiment_matrix: #实验矩阵
 # 模型列表 (完整保留，后续代码将遍历此列表)
 models:
   backbone_list:
-    - "gpt-4o-mini"
+    # - "gpt-4o-mini"
+    - "arcee-ai/trinity-large-preview:free"
+    # - "tngtech/deepseek-r1t2-chimera:free"
     # - "llama3.1"
     # - "phi4-mini"
     # - "gpt-4o"
@@ -35,9 +37,11 @@ models:
     # 这里可以继续添加你原有的其他模型，如 Llama-3, Claude 等
   judge_model: "gpt-5-mini-2025-08-07"
   coherence_judge_model: "gpt-5-mini-2025-08-07"
-  api_key: "YOUR_API_KEY_HERE"  # 在此处配置您的API密钥
-  base_url: "https://api.lqshop.cc/v1"  # 在此处配置API基础URL
-  backend: "ollama"
+  api_key: "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"  # 在此处配置您的API密钥
+  base_url: "https://openrouter.ai/api/v1"  # 在此处配置API基础URL
+  judge_api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308"  # 在此处配置裁判API密钥
+  judge_base_url: "https://api.lqshop.cc/v1"  # 在此处配置裁判API基础URL
+  backend: "api"
   judge_backend: "api"  # 裁判使用API后端
   ollama_base_url: "http://localhost:11434/v1"  # Ollama本地服务地址
   ollama_api_key: "ollama"  # Ollama默认API密钥
