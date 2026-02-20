@@ -140,13 +140,11 @@ def align_data():
 
                         input_oa = oa_body
 
-                        # Use rebuttal from the *previous* OA.
-                        # This makes OA#1 behave as initial examination even if it has remarks in raw data.
-                        prev_remarks = ""
-                        if idx - 1 >= 0:
-                            prev = office_actions[idx - 1]
-                            if isinstance(prev, dict):
-                                prev_remarks = prev.get("remarks", "N/A")
+                        # Use rebuttal from the *current* OA.
+                        # This aligns with: OA#1 -> remarks (response) -> OA#2.
+                        cur_remarks = ""
+                        if isinstance(oa, dict):
+                            cur_remarks = oa.get("remarks", "N/A")
 
                         ref_text, ref_missing = get_ref_content(oa.get("references_cited", []))
                         decision_value = oa.get("decision", "")
@@ -167,13 +165,13 @@ def align_data():
                             "input": {
                                 "claims": claims_text,
                                 "oracle_reference_summaries": ref_text,
-                                "rebuttal": prev_remarks if prev_remarks is not None else "",
+                                "rebuttal": cur_remarks if cur_remarks is not None else "",
                                 "office_action": input_oa,
                                 "next_office_action": next_oa_body,
                             },
                             "ground_truth": {
                                 "oa_text": oa_body,
-                                "rebuttal_text": prev_remarks if prev_remarks is not None else "",
+                                "rebuttal_text": cur_remarks if cur_remarks is not None else "",
                                 "next_oa_text": next_oa_body,
                                 "decision": decision_value,
                             },
