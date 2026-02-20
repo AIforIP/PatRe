@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 import json
 import os
+import sys
+
+
+# 强制标准输出使用 utf-8 编码
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 # ===================== 路径配置 =====================
 # 使用相对路径以提高通用性

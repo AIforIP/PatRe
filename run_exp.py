@@ -2,6 +2,7 @@
 import os
 import yaml
 import json
+import copy
 import argparse
 from datetime import datetime
 # 注意这里：为了模块化，具体的逻辑被封装在 src.evaluator
@@ -474,9 +475,17 @@ def main():
                 for pid, lines in grouped_data.items():
                     if line_idx < len(lines):
                         item = lines[line_idx]
-                        item.setdefault("input", {})
-                        item["input"]["prosecution_history"] = history_map.get(pid, "N/A")
-                        batch_oa.append(item)
+                        item_oa = copy.deepcopy(item)
+                        item_oa.setdefault("input", {})
+                        item_oa["input"]["prosecution_history"] = history_map.get(pid, "N/A")
+                        # For OA generation, use the previous round's remarks (if any).
+                        prev_remarks = ""
+                        if line_idx - 1 >= 0:
+                            _, _, prev_remarks = _extract_round_texts(lines[line_idx - 1])
+                        if isinstance(prev_remarks, str):
+                            prev_remarks = prev_remarks.strip()
+                        item_oa["input"]["rebuttal"] = prev_remarks if prev_remarks is not None else ""
+                        batch_oa.append(item_oa)
                 
                 if batch_oa:
                     round_no = line_idx * 2 + 1 if args.task == "both" else line_idx + 1
@@ -512,17 +521,23 @@ def main():
                 for pid, lines in grouped_data.items():
                     if line_idx < len(lines):
                         item = lines[line_idx]
-                        item.setdefault("input", {})
-                        item["input"]["prosecution_history"] = history_map.get(pid, "N/A")
+                        item_rb = copy.deepcopy(item)
+                        item_rb.setdefault("input", {})
+                        item_rb["input"]["prosecution_history"] = history_map.get(pid, "N/A")
+                        # For rebuttal generation, use the current round's remarks.
+                        _, _, cur_remarks = _extract_round_texts(item_rb)
+                        if isinstance(cur_remarks, str):
+                            cur_remarks = cur_remarks.strip()
+                        item_rb["input"]["rebuttal"] = cur_remarks if cur_remarks is not None else ""
                         rebuttal_text = (
-                            item.get("input", {}).get("rebuttal")
-                            or item.get("ground_truth", {}).get("rebuttal_text")
+                            item_rb.get("input", {}).get("rebuttal")
+                            or item_rb.get("ground_truth", {}).get("rebuttal_text")
                             or ""
                         )
                         if isinstance(rebuttal_text, str):
                             rebuttal_text = rebuttal_text.strip()
                         if rebuttal_text and str(rebuttal_text).upper() != "N/A":
-                            batch_rebuttal.append(item)
+                            batch_rebuttal.append(item_rb)
                 
                 if batch_rebuttal:
                     round_no = line_idx * 2 + 2 if args.task == "both" else line_idx + 1

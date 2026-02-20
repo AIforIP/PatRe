@@ -7,7 +7,7 @@ metadata:
 task_settings:
   # current_task: "rebuttal"
   current_task: "oa"
-  num_samples: 7
+  num_samples: 2
   auto_run_extra_metrics: true
   auto_run_claim_rediscovery: false
   judge_max_chars: 12000
@@ -45,8 +45,8 @@ models:
     # - "deepseek-r1"
     # - "qwen-2.5-7b-instruct"
     # 这里可以继续添加你原有的其他模型，如 Llama-3, Claude 等
-  # judge_model: "gpt-5-mini-2025-08-07"
-  judge_model: "gpt-4o-mini"
+  judge_model: "gpt-5-mini-2025-08-07"
+  # judge_model: "gpt-4o-mini"
 
   # api_key: "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"  # 在此处配置您的API密钥
   api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308" 

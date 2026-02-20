@@ -135,11 +135,9 @@ class PatentEvaluator:
     def _resolve_template_task(self, task_key, item):
         if task_key != "oa":
             return task_key
-        rebuttal_text = (
-            item.get("input", {}).get("rebuttal")
-            or item.get("ground_truth", {}).get("rebuttal_text")
-            or ""
-        )
+        # For OA generation, decide prompt type based ONLY on current input rebuttal.
+        # Ground-truth rebuttal is for evaluation, and should not force a response-to-rebuttal prompt.
+        rebuttal_text = item.get("input", {}).get("rebuttal") or ""
         if isinstance(rebuttal_text, str):
             rebuttal_text = rebuttal_text.strip()
 
