@@ -5,16 +5,33 @@ import random
 def load_templates(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-def build_messages(task_key, template, item, ref_summary, oa_content):
+def _resolve_template_task(task_key, item):
+    if task_key != "oa":
+        return task_key
+    rebuttal_text = (
+        item.get("input", {}).get("rebuttal")
+        or item.get("ground_truth", {}).get("rebuttal_text")
+        or ""
+    )
+    if isinstance(rebuttal_text, str):
+        rebuttal_text = rebuttal_text.strip()
+    return "response_to_rebuttal" if rebuttal_text and rebuttal_text.upper() != "N/A" else "initial_examination"
+
+def build_messages(task_key, templates, item, ref_summary, oa_content):
+    template_task = _resolve_template_task(task_key, item)
+    if template_task in templates.get("Office_Action_Generation", {}):
+        template = templates["Office_Action_Generation"][template_task]
+    else:
+        template = templates["Rebuttal_Generation"][template_task]
     system_prompt = template["system_prompt"]
     user_prompt = template["user_prompt_template"].format(
         current_claims=item["input"]["claims"],
         reference_summaries=ref_summary,
-        office_action=oa_content,
-        rebuttal=item["input"].get("rebuttal", "N/A"),
+        office_action=oa_content if template_task != "initial_examination" else "N/A",
+        rebuttal=item["input"].get("rebuttal", "N/A") if template_task != "initial_examination" else "N/A",
         claim_count=item["meta"].get("claim_count", 1),
     )
-    if "rebuttal" in task_key.lower():
+    if task_key == "rebuttal":
         assistant_text = item["ground_truth"].get("rebuttal_text", "")
     else:
         assistant_text = item["ground_truth"].get("oa_text", "")
@@ -29,23 +46,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", type=str, default="dataset/processed/test_set.jsonl")
     parser.add_argument("--templates", type=str, default="config/prompt_templates.json")
-    parser.add_argument("--task", type=str, choices=["v1_initial_examination", "v1_high_fidelity_rebuttal"], required=True)
+    parser.add_argument("--task", type=str, choices=["oa", "rebuttal"], required=True)
     parser.add_argument("--outdir", type=str, default="sft")
     parser.add_argument("--val_ratio", type=float, default=0.1)
     args = parser.parse_args()
     os.makedirs(args.outdir, exist_ok=True)
     templates = load_templates(args.templates)
-    if args.task in templates.get("Office_Action_Generation", {}):
-        template = templates["Office_Action_Generation"][args.task]
-    else:
-        template = templates["Rebuttal_Generation"][args.task]
     records = []
     with open(args.dataset, "r", encoding="utf-8") as f:
         for line in f:
             item = json.loads(line)
             ref_summary = item["input"].get("oracle_reference_summaries", "")
             oa_content = item["input"].get("office_action", "")
-            rec = build_messages(args.task, template, item, ref_summary, oa_content)
+            rec = build_messages(args.task, templates, item, ref_summary, oa_content)
             if rec["messages"][-1]["content"]:
                 records.append(rec)
     random.shuffle(records)

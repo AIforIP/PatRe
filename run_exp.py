@@ -11,20 +11,24 @@ from src.utils import setup_logger
 def parse_args():
     parser = argparse.ArgumentParser(description="PatRe NIPS-2026 Evaluation Engine")
     parser.add_argument("--config", type=str, default="config/eval_config.yaml")
-    # 允许通过命令行指定只跑某一个 IPC 分类，例如 --ipc A
+    # 允许通过命令行指定只跑某一�?IPC 分类，例�?--ipc A
     parser.add_argument("--ipc", type=str, help="Run specific IPC category (A-H)")
     # 覆盖模型
     parser.add_argument("--model", type=str, help="Specific model to test")
-    # 运行指定任务 (例如: v1_initial_examination / v1_high_fidelity_rebuttal)
-    parser.add_argument("--task", type=str, help="Specific task key to run")
-    # 一次性顺序运行两类任务 (OA + Rebuttal)
-    parser.add_argument("--run_both", action="store_true", help="Run Office Action and Rebuttal tasks sequentially")
-    # 一次性顺序运行多轮审查流程
-    parser.add_argument("--run_chain3", action="store_true", help="Run OA → Rebuttal → Examiner Response sequence")
-    parser.add_argument("--run_multiround", action="store_true", help="Run multi-round OA-Rebuttal cycles based on data structure")
-    # 覆盖测试模式 (zero_shot 或 sft_model)
+
+    # 任务类型：只保留三种（oa / rebuttal / both），默认 both
+    parser.add_argument(
+        "--task",
+        type=str,
+        default="both",
+        choices=["oa", "rebuttal", "both"],
+        help="Task type to run: oa / rebuttal / both (default: both)",
+    )
+
+
+    # 覆盖测试模式 (zero_shot �?sft_model)
     parser.add_argument("--test_mode", type=str, choices=["zero_shot", "sft_model"], help="Override test mode")
-    # 覆盖检索模式
+    # 覆盖检索模�?
     parser.add_argument("--retrieval", type=str, choices=["no_ref", "oracle_summary", "bm25_retrieved"], help="Override retrieval setting")
     # 新增评估指标选项
     parser.add_argument("--run_point_wise", action="store_true", help="Run point-wise evaluation against ground truth")
@@ -36,54 +40,51 @@ def parse_args():
     return parser.parse_args()
 
 def analyze_dataset_rounds(config):
-    """分析数据集中的实际轮数分布"""
-    test_set_path = config['paths']['test_set']
+    """Analyze actual round distribution in the dataset."""
+    test_set_path = config["paths"]["test_set"]
     if not os.path.exists(test_set_path):
-        return 3  # 默认3轮
-    
+        return 3
+
     patent_rounds = {}
-    with open(test_set_path, 'r', encoding='utf-8') as f:
+    with open(test_set_path, "r", encoding="utf-8") as f:
         for line in f:
             item = json.loads(line)
-            patent_id = item['id']
-            if patent_id not in patent_rounds:
-                patent_rounds[patent_id] = 0
-            patent_rounds[patent_id] += 1
-    
+            patent_id = item["id"]
+            patent_rounds[patent_id] = patent_rounds.get(patent_id, 0) + 1
+
     if not patent_rounds:
         return 3
-    
+
     max_rounds = max(patent_rounds.values())
-    print(f"📊 数据集分析: 最大轮数为 {max_rounds} 轮")
-    print(f"   专利轮数分布: {sorted(set(patent_rounds.values()))}")
+    print(f"Dataset max rounds: {max_rounds}")
+    print(f"Round distribution: {sorted(set(patent_rounds.values()))}")
     return max_rounds
 
 def generate_multiround_sequence_from_data(max_rounds):
     """根据实际数据轮数生成多轮审查序列"""
-    sequence = ["v1_initial_examination"]  # 开始总是初始审查
+    sequence = ["oa"]  # 开始总是 OA
     
     # 根据实际轮数生成序列
-    # 轮数1: initial_examination
-    # 轮数2: initial_examination -> rebuttal
-    # 轮数3: initial_examination -> rebuttal -> response
-    # 轮数4+: 继续交替添加 rebuttal 和 response
+    # 轮数1: oa
+    # 轮数2: oa -> rebuttal
+    # 轮数3: oa -> rebuttal -> oa
+    # 轮数4+: 继续交替添加 oa �?rebuttal
     
     for i in range(1, max_rounds):
-        if i % 2 == 1:  # 奇数轮次（除了第1轮）是反驳
-            sequence.append("v1_high_fidelity_rebuttal")
-        else:  # 偶数轮次是审查员回复
-            sequence.append("v1_response_to_rebuttal")
+        if i % 2 == 1:
+            sequence.append("rebuttal")
+        else:
+            sequence.append("oa")
     
     return sequence
 
 def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
-    """按专利组织结果文件的保存方法，支持追加各轮次结果"""
+    """Save results grouped by patent, appending per-round outputs."""
     # 将原始结果和评估结果合并
     oa_schema = [
         "disposition_accuracy",
         "statute_precision",
         "citation_accuracy",
-        "citation_list_match",
         "bleu",
         "rouge_l",
         "bert_score",
@@ -107,10 +108,6 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
         "constructiveness",
         "completeness",
         "quality",
-        "disposition_accuracy",
-        "statute_precision",
-        "citation_accuracy",
-        "citation_list_match",
     ]
     for raw_result, eval_result in zip(raw_results, eval_report):
         patent_id = raw_result['patent_id']
@@ -121,16 +118,13 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
         round_num = round_info['round_number']
         task_key = round_info['task']
         
-        # 简化任务标签以用于文件夹命名
-        if task_key == "v1_initial_examination":
-            task_label = "initial_examination"
-        elif task_key == "v1_response_to_rebuttal":
-            task_label = "response"
-        elif task_key == "v1_high_fidelity_rebuttal":
+        # Simplify task label for folder names
+        if task_key == "oa":
+            task_label = "oa"
+        elif task_key == "rebuttal":
             task_label = "rebuttal"
         else:
             task_label = "other"
-            
         round_dir = os.path.join(patent_dir, f"round_{round_num}_{task_label}")
         os.makedirs(round_dir, exist_ok=True)
         
@@ -143,12 +137,12 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             if oa_text:
                 ai_input_data["office_action"] = oa_text
             json.dump(ai_input_data, f, indent=2, ensure_ascii=False)
-        # 2. ai_output.txt (AI生成的答案)
+        # 2. ai_output.txt (AI生成的答�?
         exam_output_path = os.path.join(round_dir, "ai_output.txt")
         with open(exam_output_path, 'w', encoding='utf-8') as f:
             f.write(raw_result['ai_exam']['output'])
         
-        # 3. context.json (评估上下文)
+        # 3. context.json (评估上下�?
         eval_context_path = os.path.join(round_dir, "context.json")
         with open(eval_context_path, 'w', encoding='utf-8') as f:
             context_data = {
@@ -175,7 +169,7 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             json.dump(score_data, f, indent=2, ensure_ascii=False)
 
         summary_scores = {}
-        schema = rebuttal_schema if task_key == "v1_high_fidelity_rebuttal" else oa_schema
+        schema = rebuttal_schema if task_key == "rebuttal" else oa_schema
         name_map_oa = {
             "disposition_accuracy": "Dispositional Accuracy",
             "statute_precision": "Statute Precision",
@@ -209,7 +203,7 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             "citation_accuracy": "Citation Accuracy",
             "citation_list_match": "Citation List Match",
         }
-        name_map = name_map_rebuttal if task_key == "v1_high_fidelity_rebuttal" else name_map_oa
+        name_map = name_map_rebuttal if task_key == "rebuttal" else name_map_oa
         src_scores = eval_result.get("scores", {})
         percent_metrics = {
             "disposition_accuracy": 100.0,
@@ -244,11 +238,11 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
                 indent=2,
                 ensure_ascii=False
             )
-    # 专利级别的汇总将在 _generate_summaries 函数中处理
+    # 专利级别的汇总将�?_generate_summaries 函数中处�?
     pass
 
 def _calculate_patent_average_scores(results):
-    """计算单个专利的平均分数"""
+    """Compute average scores for a single patent."""
     if not results: return {}
     score_sums = {}
     score_counts = {}
@@ -261,7 +255,7 @@ def _calculate_patent_average_scores(results):
     return {k: score_sums[k] / score_counts[k] for k in score_sums} if score_counts else {}
 
 def _calculate_overall_metrics(reports):
-    """计算整体评估指标"""
+    """Compute overall evaluation metrics."""
     if not reports: return {}
     score_sums = {}
     score_counts = {}
@@ -317,8 +311,8 @@ def _calculate_disposition_micro_metrics(reports):
     }
 
 def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
-    """生成实验汇总文件"""
-    # 1. 每个专利的 summary.json
+    """Generate experiment summary files."""
+    # 1. 每个专利�?summary.json
     for pid, results in all_results_map.items():
         patent_dir = os.path.join(exp_dir, f"patent_{pid}")
         os.makedirs(patent_dir, exist_ok=True)
@@ -346,6 +340,46 @@ def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
     with open(overview_path, 'w', encoding='utf-8') as f:
         json.dump(experiment_overview, f, indent=4, ensure_ascii=False)
 
+def _get_nested_text(item, *keys):
+    cur = item
+    for k in keys:
+        if not isinstance(cur, dict):
+            return ""
+        cur = cur.get(k)
+    return cur if isinstance(cur, str) else ""
+
+def _extract_round_texts(item):
+    claims = _get_nested_text(item, "input", "claims") or _get_nested_text(item, "ground_truth", "claims")
+    office_action = (
+        _get_nested_text(item, "input", "office_action")
+        or _get_nested_text(item, "ground_truth", "oa_text")
+        or _get_nested_text(item, "ground_truth", "next_oa_text")
+    )
+    remarks = (
+        _get_nested_text(item, "input", "rebuttal")
+        or _get_nested_text(item, "ground_truth", "rebuttal_text")
+    )
+    return claims, office_action, remarks
+
+def _build_prosecution_history(items):
+    blocks = []
+    for idx, it in enumerate(items, start=1):
+        claims, office_action, remarks = _extract_round_texts(it)
+        if not (claims or office_action or remarks):
+            continue
+        blocks.append(
+            "Round {idx} (historical):\n"
+            "Claims:\n{claims}\n"
+            "Office Action:\n{oa}\n"
+            "Remarks/Rebuttal:\n{remarks}".format(
+                idx=idx,
+                claims=claims or "[MISSING]",
+                oa=office_action or "[MISSING]",
+                remarks=remarks or "[MISSING]"
+            )
+        )
+    return "\n\n".join(blocks) if blocks else "N/A"
+
 def main():
     args = parse_args()
     
@@ -358,7 +392,7 @@ def main():
     if ipc_filter:
         config.setdefault('task_settings', {})['ipc_filter'] = ipc_filter
     
-    # 处理命令行参数覆盖
+    # 处理命令行参数覆�?
     if args.test_mode:
         config['active_settings']['test_mode'] = args.test_mode
     if args.retrieval:
@@ -375,70 +409,83 @@ def main():
     timestamp_format = naming_cfg.get('timestamp_format', "%Y%m%d_%H%M")
     include_model_name = naming_cfg.get('include_model_name', True)
 
-    if args.run_multiround:
-        # 加载并分组数据
-        with open(test_set_path, 'r', encoding='utf-8') as f:
-            all_data = []
-            for line in f:
-                if not line or not line.strip():
-                    continue
-                s = line.lstrip()
-                if s.startswith("//"):
-                    continue
-                all_data.append(json.loads(line))
-        if ipc_filter:
-            all_data = [
-                item for item in all_data
-                if str(item.get("meta", {}).get("ipc", "")).upper() == ipc_filter
-            ]
+    # 默认行为：多轮（按数据集真实轮数执行），不再支持“只跑一�?单任务模式”的分支�?
+    # 加载并分组数�?
+    with open(test_set_path, 'r', encoding='utf-8') as f:
+        all_data = []
+        for line in f:
+            if not line or not line.strip():
+                continue
+            s = line.lstrip()
+            if s.startswith("//"):
+                continue
+            all_data.append(json.loads(line))
+    if ipc_filter:
+        all_data = [
+            item for item in all_data
+            if str(item.get("meta", {}).get("ipc", "")).upper() == ipc_filter
+        ]
+    
+    # 遵循 config 中的样本限制
+    limit = config['task_settings'].get('num_samples', 9999)
+    all_data = all_data[:limit]
+    
+    grouped_data = {}
+    for item in all_data:
+        pid = item['id']
+        if pid not in grouped_data: grouped_data[pid] = []
+        grouped_data[pid].append(item)
         
-        # 遵循 config 中的样本限制
-        limit = config['task_settings'].get('num_samples', 9999)
-        all_data = all_data[:limit]
-        
-        grouped_data = {}
-        for item in all_data:
-            pid = item['id']
-            if pid not in grouped_data: grouped_data[pid] = []
-            grouped_data[pid].append(item)
-            
-        max_lines = max(len(v) for v in grouped_data.values()) if grouped_data else 0
+    max_lines = max(len(v) for v in grouped_data.values()) if grouped_data else 0
 
-        for model_idx, model_name in enumerate(models_to_run, start=1):
-            config['models']['active_model'] = model_name
-            timestamp = datetime.now().strftime(timestamp_format)
+    for model_idx, model_name in enumerate(models_to_run, start=1):
+        config['models']['active_model'] = model_name
+        timestamp = datetime.now().strftime(timestamp_format)
+        if use_academic_format:
+            # 学术规范命名：模型_多轮专利审查_时间�?
+            multiround_exp_dir = os.path.join(config['paths']['results'], f"{model_name}_multiround_patent_review_{timestamp}")
+        else:
+            # 原始命名方式
+            multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_{model_name}_{timestamp}")
+        if not include_model_name:
             if use_academic_format:
-                # 学术规范命名：模型_多轮专利审查_时间戳
-                multiround_exp_dir = os.path.join(config['paths']['results'], f"{model_name}_multiround_patent_review_{timestamp}")
+                multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_patent_review_{timestamp}")
             else:
-                # 原始命名方式
-                multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_{model_name}_{timestamp}")
-            if not include_model_name:
-                if use_academic_format:
-                    multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_patent_review_{timestamp}")
-                else:
-                    multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_{timestamp}")
-                if len(models_to_run) > 1:
-                    multiround_exp_dir = f"{multiround_exp_dir}_run{model_idx}"
-            os.makedirs(multiround_exp_dir, exist_ok=True)
-            
-            logger = setup_logger(multiround_exp_dir)
-            logger.info(f"🚀 Starting multi-round for model: {model_name}")
+                multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_{timestamp}")
+            if len(models_to_run) > 1:
+                multiround_exp_dir = f"{multiround_exp_dir}_run{model_idx}"
+        os.makedirs(multiround_exp_dir, exist_ok=True)
+        
+        logger = setup_logger(multiround_exp_dir)
+        logger.info(f"🚀 Starting multi-round for model: {model_name}")
 
-            all_results_map = {} # pid -> [eval_result, ...]
+        all_results_map = {} # pid -> [eval_result, ...]
 
-            for line_idx in range(max_lines):
-                # 1. Examiner Round
-                task_oa = "v1_initial_examination" if line_idx == 0 else "v1_response_to_rebuttal"
+        for line_idx in range(max_lines):
+            # 1. Examiner Round (OA)
+            if args.task in ("oa", "both"):
+                task_oa = "oa"
                 config['task_settings']['current_task'] = task_oa
-                batch_oa = [lines[line_idx] for pid, lines in grouped_data.items() if line_idx < len(lines)]
+                batch_oa = []
+                history_map = {
+                    pid: _build_prosecution_history(lines[:line_idx])
+                    for pid, lines in grouped_data.items()
+                }
+                for pid, lines in grouped_data.items():
+                    if line_idx < len(lines):
+                        item = lines[line_idx]
+                        item.setdefault("input", {})
+                        item["input"]["prosecution_history"] = history_map.get(pid, "N/A")
+                        batch_oa.append(item)
                 
                 if batch_oa:
-                    logger.info(f"📌 Round {line_idx*2+1}: {task_oa} for {len(batch_oa)} patents...")
+                    round_no = line_idx * 2 + 1 if args.task == "both" else line_idx + 1
+                    logger.info(f"📌 Round {round_no}: {task_oa} for {len(batch_oa)} patents...")
                     engine = PatentEvaluator(config, logger)
                     engine.dataset = batch_oa
                     raw = engine.run_batch()
-                    for r in raw: r['round_info']['round_number'] = line_idx*2+1
+                    for r in raw:
+                        r['round_info']['round_number'] = round_no
                     report = engine.run_scoring(raw)
                     if args.run_claim_rediscovery or auto_rediscovery:
                         report = engine.run_claim_rediscovery_evaluation(report)
@@ -451,13 +498,22 @@ def main():
                         if pid not in all_results_map: all_results_map[pid] = []
                         all_results_map[pid].append(e)
 
-                # 2. Applicant Round (Rebuttal)
-                task_rebuttal = "v1_high_fidelity_rebuttal"
+            # 2. Applicant Round (Rebuttal)
+            if args.task in ("rebuttal", "both"):
+                task_rebuttal = "rebuttal"
                 config['task_settings']['current_task'] = task_rebuttal
                 batch_rebuttal = []
+                # 重新计算 history，如果刚才跑�?OA，这�?history 其实可以包含刚才�?OA
+                # 但为了简单，先保持原逻辑，或者根据需要调�?
+                history_map = {
+                    pid: _build_prosecution_history(lines[:line_idx])
+                    for pid, lines in grouped_data.items()
+                }
                 for pid, lines in grouped_data.items():
                     if line_idx < len(lines):
                         item = lines[line_idx]
+                        item.setdefault("input", {})
+                        item["input"]["prosecution_history"] = history_map.get(pid, "N/A")
                         rebuttal_text = (
                             item.get("input", {}).get("rebuttal")
                             or item.get("ground_truth", {}).get("rebuttal_text")
@@ -469,11 +525,13 @@ def main():
                             batch_rebuttal.append(item)
                 
                 if batch_rebuttal:
-                    logger.info(f"📌 Round {line_idx*2+2}: {task_rebuttal} for {len(batch_rebuttal)} patents...")
+                    round_no = line_idx * 2 + 2 if args.task == "both" else line_idx + 1
+                    logger.info(f"📌 Round {round_no}: {task_rebuttal} for {len(batch_rebuttal)} patents...")
                     engine = PatentEvaluator(config, logger)
                     engine.dataset = batch_rebuttal
                     raw = engine.run_batch()
-                    for r in raw: r['round_info']['round_number'] = line_idx*2+2
+                    for r in raw:
+                        r['round_info']['round_number'] = round_no
                     report = engine.run_scoring(raw)
                     if args.run_claim_rediscovery or auto_rediscovery:
                         report = engine.run_claim_rediscovery_evaluation(report)
@@ -486,60 +544,10 @@ def main():
                         if pid not in all_results_map: all_results_map[pid] = []
                         all_results_map[pid].append(e)
 
-            # 生成汇总
-            _generate_summaries(multiround_exp_dir, grouped_data, all_results_map, config)
-            logger.info(f"✅ Multiround finished. Results: {multiround_exp_dir}")
+        # 生成汇�?
+        _generate_summaries(multiround_exp_dir, grouped_data, all_results_map, config)
+        logger.info(f"�?Multiround finished. Results: {multiround_exp_dir}")
 
-    else:
-        # 单任务模式
-        tasks_to_run = [args.task] if args.task else [config['task_settings']['current_task']]
-        for task_key in tasks_to_run:
-            config['task_settings']['current_task'] = task_key
-            for model_idx, model_name in enumerate(models_to_run, start=1):
-                config['models']['active_model'] = model_name
-                timestamp = datetime.now().strftime(timestamp_format)
-                if use_academic_format:
-                    # 学术规范命名：模型_任务缩写_检索方式_时间戳
-                    retrieval_abbr = {
-                        "no_ref": "noctx",
-                        "oracle_summary": "oracle",
-                        "bm25_retrieved": "bm25"
-                    }.get(config['active_settings'].get('retrieval_setting', 'oracle_summary'), 'unknown')
-                    
-                    task_abbr = {
-                        "v1_initial_examination": "oa_gen",
-                        "v1_high_fidelity_rebuttal": "rebuttal_gen",
-                        "v1_response_to_rebuttal": "oa_response"
-                    }.get(task_key, task_key)
-                    
-                    exp_dir = os.path.join(config['paths']['results'], f"{model_name}_{task_abbr}_{retrieval_abbr}_{timestamp}")
-                else:
-                    # 原始命名方式
-                    exp_dir = os.path.join(config['paths']['results'], f"{model_name}_{task_key}_{timestamp}")
-                if not include_model_name:
-                    if use_academic_format:
-                        exp_dir = os.path.join(config['paths']['results'], f"{task_abbr}_{retrieval_abbr}_{timestamp}")
-                    else:
-                        exp_dir = os.path.join(config['paths']['results'], f"{task_key}_{timestamp}")
-                    if len(models_to_run) > 1:
-                        exp_dir = f"{exp_dir}_run{model_idx}"
-                os.makedirs(exp_dir, exist_ok=True)
-                logger = setup_logger(exp_dir)
-                try:
-                    engine = PatentEvaluator(config, logger)
-                    raw = engine.run_batch()
-                    report = engine.run_scoring(raw)
-                    if args.run_claim_rediscovery or auto_rediscovery:
-                        report = engine.run_claim_rediscovery_evaluation(report)
-                    if args.run_extra_metrics or auto_extra:
-                        report = engine.run_additional_metrics(report)
-                    _save_patent_organized_results(raw, report, config, exp_dir)
-                    # 单任务模式也生成一个简单的 overview
-                    all_results_map = {r['patent_id']: [e] for r,e in zip(raw, report)}
-                    _generate_summaries(exp_dir, {k:[None] for k in all_results_map}, all_results_map, config)
-                    logger.info(f"✅ Finished. Results: {exp_dir}")
-                except Exception as e:
-                    logger.error(f"❌ Failed: {str(e)}", exc_info=True)
 
 if __name__ == "__main__":
     main()

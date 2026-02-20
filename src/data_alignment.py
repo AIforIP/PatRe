@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 import json
 import os
-import re
 
 # ===================== 路径配置 =====================
 # 使用相对路径以提高通用性
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DATA_BASE = os.path.join(BASE_DIR, "dataset")
-TARGET_CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H"]
+RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset")
+RAW_DATA_DIRS = []
+for name in sorted(os.listdir(RAW_DATA_ROOT)):
+    if name.startswith("PatTimeline_") and name.endswith("_Category"):
+        candidate = os.path.join(RAW_DATA_ROOT, name, "cleaned_json_output")
+        if os.path.isdir(candidate):
+            RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
-SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set.jsonl")
-SAVE_PATH_OA = os.path.join(BASE_DIR, "dataset", "processed", "test_set_oa.jsonl")
-SAVE_PATH_REBUTTAL = os.path.join(BASE_DIR, "dataset", "processed", "test_set_rebuttal.jsonl")
+SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.jsonl")
 
 # ===================== 辅助函数 =====================
 
@@ -33,7 +35,18 @@ def get_ref_content(ref_list):
             if os.path.exists(path):
                 with open(path, "r", encoding="utf-8") as f:
                     ref_data = json.load(f)
-                    summaries.append(f"Ref {doc_num}: {ref_data.get('abstract', 'No abstract available')}")
+                    abstract_text = ref_data.get("abstract", "No abstract available")
+                    summary_text = ref_data.get("summary_of_invention", "")
+                    if isinstance(summary_text, str):
+                        summary_text = summary_text.strip()
+                    else:
+                        summary_text = ""
+                    if summary_text and summary_text.lower() != "summary content not found":
+                        summaries.append(
+                            f"Ref {doc_num}: Abstract: {abstract_text}\nSummary of invention: {summary_text}"
+                        )
+                    else:
+                        summaries.append(f"Ref {doc_num}: {abstract_text}")
                     found = True
                     break
         if not found:
@@ -43,33 +56,13 @@ def get_ref_content(ref_list):
     return "\n".join(summaries), any_missing
 
 
-def _standardize_pid(pid):
-    p = re.sub(r"[^a-zA-Z0-9]", "", str(pid)).upper()
-    if not p:
-        return ""
-    if not p.startswith("US"):
-        p = "US" + p
-    return p
-
-
-def extract_citations_gt(ref_list):
-    """从 references_cited 抽取结构化引用并过滤未爬到的"""
-    if not ref_list:
-        return []
-    citations = []
-    seen = set()
-    for ref in ref_list:
-        doc_num = _standardize_pid(ref.get("document_number", ""))
-        if not doc_num:
-            continue
-        path = os.path.join(REF_POOL_DIR, f"{doc_num}.json")
-        if not os.path.exists(path):
-            continue
-        if doc_num in seen:
-            continue
-        citations.append(doc_num)
-        seen.add(doc_num)
-    return citations
+def infer_ipc_from_dir(raw_dir):
+    parent = os.path.basename(os.path.dirname(raw_dir))
+    if parent.startswith("PatTimeline_") and parent.endswith("_Category"):
+        mid = parent[len("PatTimeline_"):-len("_Category")]
+        if mid:
+            return mid.upper()
+    return "Unknown"
 
 
 def process_claims(claims):
@@ -93,16 +86,14 @@ def process_claims(claims):
 def align_data():
     os.makedirs(os.path.dirname(SAVE_PATH), exist_ok=True)
     count = 0
-    count_oa = 0
-    count_rebuttal = 0
 
-    with open(SAVE_PATH, "w", encoding="utf-8") as outfile, \
-         open(SAVE_PATH_OA, "w", encoding="utf-8") as outfile_oa, \
-         open(SAVE_PATH_REBUTTAL, "w", encoding="utf-8") as outfile_rebuttal:
-        for cat in TARGET_CATEGORIES:
-            raw_dir = os.path.join(RAW_DATA_BASE, f"PatTimeline_{cat}_Category", "cleaned_json_output")
-            if not os.path.exists(raw_dir):
-                continue
+    if not RAW_DATA_DIRS:
+        print("WARNING: No raw data directories found under dataset.")
+        return
+
+    with open(SAVE_PATH, "w", encoding="utf-8") as outfile:
+        for raw_dir in RAW_DATA_DIRS:
+            inferred_ipc = infer_ipc_from_dir(raw_dir)
             for filename in os.listdir(raw_dir):
                 if not filename.endswith(".json"):
                     continue
@@ -111,84 +102,87 @@ def align_data():
                     try:
                         item = json.load(f)
                     except json.JSONDecodeError:
-                        print(f"⚠️ 跳过损坏的 JSON 文件: {filename}")
+                        print(f"?? ????? JSON ??: {filename}")
                         continue
 
-                # 预处理权利要求文本
-                raw_claims = item.get("initial_submission", {}).get("claims", "")
-                claims_text = process_claims(raw_claims)
+                    raw_claims = item.get("initial_submission", {}).get("claims", "")
+                    claims_text = process_claims(raw_claims)
 
-                # 过滤掉没有权利要求的脏数据
-                if not claims_text.strip():
-                    continue
-
-                office_actions = item.get("office_actions", [])
-                for idx, oa in enumerate(office_actions):
-                    # 过滤掉没有 OA 文本的轮次
-                    oa_body = oa.get("office_action_text", "")
-                    if not oa_body or len(oa_body) < 100:  # 假设长度过短的是无效数据
+                    if not claims_text.strip():
                         continue
 
-                    next_oa_body = ""
-                    if idx + 1 < len(office_actions):
-                        nxt = office_actions[idx + 1]
-                        next_oa_body = nxt.get("office_action_text", "")
+                    office_actions = item.get("office_actions", [])
+                    # Ensure deterministic round order by oa_number (fallback to original order).
+                    if isinstance(office_actions, list) and office_actions:
+                        def _oa_sort_key(oa_obj, idx):
+                            if not isinstance(oa_obj, dict):
+                                return (1, idx)
+                            num = oa_obj.get("oa_number")
+                            try:
+                                return (0, int(num))
+                            except Exception:
+                                return (1, idx)
+                        office_actions = [
+                            oa for _, oa in sorted(
+                                enumerate(office_actions),
+                                key=lambda pair: _oa_sort_key(pair[1], pair[0])
+                            )
+                        ]
+                    for idx, oa in enumerate(office_actions):
+                        oa_body = oa.get("office_action_text", "")
+                        if not oa_body or len(oa_body) < 100:
+                            continue
 
-                    # 对于反驳任务，使用下一轮的 OA 作为输入（当前轮的真实 OA）
-                    # 对于审查任务，使用当前轮 de OA 作为输入
-                    input_oa = oa_body  # 默认使用当前轮次 OA
+                        next_oa_body = ""
+                        if idx + 1 < len(office_actions):
+                            nxt = office_actions[idx + 1]
+                            next_oa_body = nxt.get("office_action_text", "")
 
-                    ref_text, ref_missing = get_ref_content(oa.get("references_cited", []))
-                    citations_gt = extract_citations_gt(oa.get("references_cited", []))
-                    decision_value = oa.get("decision", "")
-                    decision_value = str(decision_value).strip()
-                    decision_missing = not bool(decision_value)
-                    if decision_missing:
-                        decision_value = "Unknown"
+                        input_oa = oa_body
 
-                    ipc_value = item.get("ipc_category") or cat
-                    formatted_item = {
-                        "id": item.get("patent_number"),
-                        "meta": {
-                            "ipc": ipc_value,
-                            "claim_count": len(raw_claims) if isinstance(raw_claims, list) else 1,
-                            "round_type": "rebuttal" if next_oa_body else "examination",  # 标记轮次类型
-                            "reference_missing": ref_missing,
-                            "decision_missing": decision_missing,
-                            "has_rebuttal": bool(oa.get("remarks") and str(oa.get("remarks")).strip() and str(oa.get("remarks")).strip().upper() != "N/A"),
-                        },
-                        "input": {
-                            "claims": claims_text,
-                            "oracle_reference_summaries": ref_text,
-                            "rebuttal": oa.get("remarks", "N/A"),
-                            "office_action": input_oa,  # 对于反驳：使用当前轮次 OA；对于审查：使用当前轮次 OA
-                            "next_office_action": next_oa_body,  # 下一轮 OA，供反驳任务使用
-                        },
-                        "ground_truth": {
-                            "oa_text": oa_body,
-                            "rebuttal_text": oa.get("remarks", "N/A"),
-                            "next_oa_text": next_oa_body,
-                            "decision": decision_value,
-                            "citations_gt": citations_gt,
-                        },
-                    }
-                    line = json.dumps(formatted_item, ensure_ascii=False) + "\n"
-                    outfile.write(line)
-                    outfile_oa.write(line)
-                    count_oa += 1
+                        # Use rebuttal from the *previous* OA.
+                        # This makes OA#1 behave as initial examination even if it has remarks in raw data.
+                        prev_remarks = ""
+                        if idx - 1 >= 0:
+                            prev = office_actions[idx - 1]
+                            if isinstance(prev, dict):
+                                prev_remarks = prev.get("remarks", "N/A")
 
-                    rebuttal_text = formatted_item["input"].get("rebuttal", "")
-                    if isinstance(rebuttal_text, str):
-                        rebuttal_text = rebuttal_text.strip()
-                    if rebuttal_text and rebuttal_text.upper() != "N/A":
-                        outfile_rebuttal.write(line)
-                        count_rebuttal += 1
-                    count += 1
+                        ref_text, ref_missing = get_ref_content(oa.get("references_cited", []))
+                        decision_value = oa.get("decision", "")
+                        decision_value = str(decision_value).strip()
+                        decision_missing = not bool(decision_value)
+                        if decision_missing:
+                            decision_value = "Unknown"
 
-    print(f"Alignment complete. Generated {count} samples.")
-    print(f"Saved to: {SAVE_PATH}")
-    print(f"OA-only saved to: {SAVE_PATH_OA} ({count_oa} samples)")
-    print(f"Rebuttal-only saved to: {SAVE_PATH_REBUTTAL} ({count_rebuttal} samples)")
+                        formatted_item = {
+                            "id": item.get("patent_number"),
+                            "meta": {
+                                "ipc": item.get("ipc_category") or inferred_ipc,
+                                "claim_count": len(raw_claims) if isinstance(raw_claims, list) else 1,
+                                "round_type": "rebuttal" if next_oa_body else "examination",
+                                "reference_missing": ref_missing,
+                                "decision_missing": decision_missing,
+                            },
+                            "input": {
+                                "claims": claims_text,
+                                "oracle_reference_summaries": ref_text,
+                                "rebuttal": prev_remarks if prev_remarks is not None else "",
+                                "office_action": input_oa,
+                                "next_office_action": next_oa_body,
+                            },
+                            "ground_truth": {
+                                "oa_text": oa_body,
+                                "rebuttal_text": prev_remarks if prev_remarks is not None else "",
+                                "next_oa_text": next_oa_body,
+                                "decision": decision_value,
+                            },
+                        }
+                        outfile.write(json.dumps(formatted_item, ensure_ascii=False) + "\n")
+                        count += 1
+
+    print(f"? ?????????? {count} ??????")
+    print(f"?? ????: {SAVE_PATH}")
 
 
 if __name__ == "__main__":

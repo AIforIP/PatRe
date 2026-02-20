@@ -82,13 +82,14 @@ def test_evaluation_metrics():
         parser.add_argument("--ipc", type=str, help="Run specific IPC category (A-H)")
         # 覆盖模型
         parser.add_argument("--model", type=str, help="Specific model to test")
-        # 运行指定任务 (例如: v1_initial_examination / v1_high_fidelity_rebuttal)
-        parser.add_argument("--task", type=str, help="Specific task key to run")
-        # 一次性顺序运行两类任务 (OA + Rebuttal)
-        parser.add_argument("--run_both", action="store_true", help="Run Office Action and Rebuttal tasks sequentially")
-        # 一次性顺序运行多轮审查流程
-        parser.add_argument("--run_chain3", action="store_true", help="Run OA → Rebuttal → Examiner Response sequence")
-        parser.add_argument("--run_multiround", action="store_true", help="Run multi-round OA-Rebuttal cycles based on data structure")
+        # 任务类型：只保留三种（oa / rebuttal / both），默认 both
+        parser.add_argument(
+            "--task",
+            type=str,
+            default="both",
+            choices=["oa", "rebuttal", "both"],
+            help="Task type to run: oa / rebuttal / both (default: both)",
+        )
         # 覆盖测试模式 (zero_shot 或 sft_model)
         parser.add_argument("--test_mode", type=str, choices=["zero_shot", "sft_model"], help="Override test mode")
         # 覆盖检索模式
@@ -124,8 +125,8 @@ def test_evaluation_metrics():
     print("  - Pairwise: pairwise_evaluator") 
     print("  - Claim-level: claim_level_evaluator")
     print("\n🚀 可以运行以下命令测试功能:")
-    print("  python run_exp.py --run_point_wise --model gpt-4o-mini --task v1_initial_examination")
-    print("  python run_exp.py --run_claim_level --model gpt-4o-mini --task v1_high_fidelity_rebuttal")
+    print("  python run_exp.py --run_point_wise --model gpt-4o-mini --task oa")
+    print("  python run_exp.py --run_claim_level --model gpt-4o-mini --task rebuttal")
     print("  python analyze_evaluation_metrics.py --result-file ./results/[experiment]/final_results.json")
     
     return True

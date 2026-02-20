@@ -47,9 +47,11 @@ REBUTTAL_METRICS = [
 ]
 
 TASK_METRICS = {
-    "v1_initial_examination": OA_METRICS,
-    "v1_response_to_rebuttal": OA_METRICS,
-    "v1_high_fidelity_rebuttal": REBUTTAL_METRICS,
+    "oa": OA_METRICS,
+    "rebuttal": REBUTTAL_METRICS,
+    # Backward compatibility for older results
+    "initial_examination": OA_METRICS,
+    "response_to_rebuttal": OA_METRICS,
 }
 
 

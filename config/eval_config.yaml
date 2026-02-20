@@ -1,23 +1,23 @@
-# 全局元数据
+﻿# 全局元数据
 metadata:
   project: "PatRe_NIPS2026"
   ipc_categories: ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 # 实验任务配置
 task_settings:
-  # current_task: "v1_initial_examination"
-  current_task: "v1_high_fidelity_rebuttal"
-  num_samples: 999
+  # current_task: "rebuttal"
+  current_task: "oa"
+  num_samples: 7
   auto_run_extra_metrics: true
-  auto_run_claim_rediscovery: true
+  auto_run_claim_rediscovery: false
   judge_max_chars: 12000
   judge_default_field_max_chars: 4000
   judge_field_max_chars:
-    generated_text: 4000
-    ground_truth: 4000
-    office_action: 3000
-    claims: 3000
-    reference_summaries: 2000
+    generated_text: 40000
+    ground_truth: 40000
+    office_action: 30000
+    claims: 70000
+    reference_summaries: 20000
 
 # ===================== 实验矩阵 (完整保留，严禁修改) =====================
 experiment_matrix: #实验矩阵
@@ -47,8 +47,7 @@ models:
     # 这里可以继续添加你原有的其他模型，如 Llama-3, Claude 等
   # judge_model: "gpt-5-mini-2025-08-07"
   judge_model: "gpt-4o-mini"
-  # coherence_judge_model: "gpt-5-mini-2025-08-07"
-  coherence_judge_model: "gpt-4o-mini"
+
   # api_key: "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"  # 在此处配置您的API密钥
   api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308" 
   # base_url: "https://openrouter.ai/api/v1"  # 在此处配置API基础URL
@@ -64,18 +63,19 @@ models:
   generation_params:
     temperature: 0.0
     top_p: 1.0
-    max_tokens: 2048
+    max_tokens: 6144
   sft_model_id: ""
 
 # ===================== 当前运行设置 (用于单次调试) =====================
 active_settings:
   test_mode: "zero_shot"
   retrieval_setting: "oracle_summary" 
+  oa_prompt_variant: "retrieval_aligned"
   granularity: "full_text"
 
 # 路径管理
 paths:
-  test_set: "dataset/processed/0214.jsonl"
+  test_set: "dataset/processed/test_set_new.jsonl"
   prompt_path: "config/prompt_templates.json"
   results: "results/nips_exp/"
   reference_pool: "dataset/ReferencePool_Full"

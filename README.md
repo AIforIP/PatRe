@@ -87,9 +87,9 @@ python run_exp.py --run_multiround
 python run_exp.py --run_chain3
 
 # 运行指定轮数的审查流程
-python run_exp.py --task v1_initial_examination  # 第1轮：初始审查
-python run_exp.py --task v1_high_fidelity_rebuttal  # 第2轮：申请人反驳
-python run_exp.py --task v1_response_to_rebuttal   # 第3轮：审查员回复
+python run_exp.py --task initial_examination  # 第1轮：初始审查
+python run_exp.py --task rebuttal  # 第2轮：申请人反驳
+python run_exp.py --task response_to_rebuttal   # 第3轮：审查员回复
 ```
 
 ## 5. 实验与评估 (Experiment & Evaluation)
@@ -223,9 +223,9 @@ python run_exp.py --run_multiround
 python run_exp.py --run_chain3
 
 # 运行指定任务
-python run_exp.py --task v1_initial_examination      # 初始审查
-python run_exp.py --task v1_high_fidelity_rebuttal   # 申请人反驳
-python run_exp.py --task v1_response_to_rebuttal     # 审查员回复
+python run_exp.py --task initial_examination      # 初始审查
+python run_exp.py --task rebuttal   # 申请人反驳
+python run_exp.py --task response_to_rebuttal     # 审查员回复
 
 # 运行 point-wise 评估 (Run point-wise evaluation)
 python run_exp.py --run_point_wise --model gpt-4o-mini

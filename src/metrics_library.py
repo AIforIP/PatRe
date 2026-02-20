@@ -105,7 +105,18 @@ def statute_metrics(pred_set, gt_set):
 
 
 _REF_RE = re.compile(
-    r"(US\\s*\\d{4}/?\\d{6,8}\\s*[A-Z]\\d?|US\\s*\\d{7,}\\s*[A-Z]\\d?|US\\s*\\d{4}/?\\d{6,8}|US\\s*\\d{7,}|WO\\s*\\d{4}\\d+\\s*[A-Z]\\d?|WO\\s*\\d{4}\\d+|EP\\s*\\d{7,}\\s*[A-Z]\\d?|EP\\s*\\d{7,})",
+    r"(?:"
+    r"US\s*\d{4}/?\d{6,8}\s*[A-Z]\d?|"
+    r"US\s*\d{7,}\s*[A-Z]\d?|"
+    r"US\s*\d{4}/?\d{6,8}|"
+    r"US\s*\d{7,}|"
+    r"U\.?\s*S\.?\s*PATENT\s*(?:NO\.?|#)?\s*\d{1,3}(?:,\d{3})+(?:\s*[A-Z]\d?)?|"
+    r"U\.?\s*S\.?\s*PAT(?:ENT)?\.?\s*(?:NO\.?|#)?\s*\d{1,3}(?:,\d{3})+(?:\s*[A-Z]\d?)?|"
+    r"WO\s*\d{4}\d+\s*[A-Z]\d?|"
+    r"WO\s*\d{4}\d+|"
+    r"EP\s*\d{7,}\s*[A-Z]\d?|"
+    r"EP\s*\d{7,}"
+    r")",
     re.IGNORECASE
 )
 
@@ -117,15 +128,19 @@ def normalize_ref_id(text):
     """
     if not text:
         return None
-    raw = re.sub(r"\\s+", "", str(text).upper())
+    raw = re.sub(r"\s+", "", str(text).upper())
+    # Normalize common prefixes like "U.S. Patent No."
+    raw = re.sub(r"U\.?S\.?PAT(?:ENT)?(?:NO\.?|#)?", "US", raw)
+    # Remove commas in numbers
+    raw = raw.replace(",", "")
     m = re.match(r"^(US|WO|EP)(.+)$", raw)
     if not m:
         return raw
     prefix, rest = m.group(1), m.group(2)
     # Remove kind codes like A1/B2 (letters + optional digit at end)
-    rest = re.sub(r"[A-Z]\\d?$", "", rest)
+    rest = re.sub(r"[A-Z]\d?$", "", rest)
     # Remove any non-digits (slashes, commas)
-    digits = re.sub(r"\\D", "", rest)
+    digits = re.sub(r"\D", "", rest)
     return f"{prefix}{digits}" if digits else raw
 
 
@@ -134,7 +149,7 @@ def extract_reference_ids(text):
         return set()
     ids = set()
     for m in _REF_RE.finditer(text):
-        norm = normalize_ref_id(m.group(1))
+        norm = normalize_ref_id(m.group(0))
         if norm:
             ids.add(norm)
     return ids
@@ -227,9 +242,10 @@ def embed_cosine(pred_text, gt_text):
 def formatting_score(text, task_type):
     if not text:
         return None
+    task_type = str(task_type or "")
     t = text.lower()
     required = []
-    if task_type in ("v1_initial_examination", "v1_response_to_rebuttal"):
+    if task_type in ("oa", "initial_examination", "response_to_rebuttal") or task_type.startswith("response_to_rebuttal_") or task_type.startswith("initial_examination_"):
         required = ["detailed action", "conclusion", "claim rejections"]
     elif "rebuttal" in task_type:
         required = ["response to office action", "amendment and remarks", "conclusion", "refined claims"]

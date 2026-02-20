@@ -57,9 +57,34 @@ class PatentEvaluator:
                     if ipc_value != ipc_filter:
                         continue
                 data.append(item)
+        # Attach prosecution history for single-task runs (use dataset order per patent)
+        history_blocks = {}
+        for item in data:
+            pid = item.get("id")
+            if not pid:
+                continue
+            item.setdefault("input", {})
+            if not item["input"].get("prosecution_history"):
+                blocks = history_blocks.get(pid, [])
+                item["input"]["prosecution_history"] = "\n\n".join(blocks) if blocks else "N/A"
+
+            claims, office_action, remarks = self._extract_round_texts(item)
+            if claims or office_action or remarks:
+                block = (
+                    "Round {idx} (historical):\n"
+                    "Claims:\n{claims}\n"
+                    "Office Action:\n{oa}\n"
+                    "Remarks/Rebuttal:\n{remarks}"
+                ).format(
+                    idx=len(history_blocks.get(pid, [])) + 1,
+                    claims=claims or "[MISSING]",
+                    oa=office_action or "[MISSING]",
+                    remarks=remarks or "[MISSING]"
+                )
+                history_blocks.setdefault(pid, []).append(block)
         # Task-aware filtering (single dataset, avoid empty rebuttals)
         task_key = self.config.get('task_settings', {}).get('current_task', '')
-        if task_key in ("v1_high_fidelity_rebuttal", "v1_response_to_rebuttal"):
+        if "rebuttal" in task_key:
             filtered = []
             for item in data:
                 rebut = item.get("input", {}).get("rebuttal", "")
@@ -72,30 +97,103 @@ class PatentEvaluator:
         limit = self.config['task_settings'].get('num_samples', 9999)
         return data[:limit]
 
+    def _get_nested_text(self, item, *keys):
+        cur = item
+        for k in keys:
+            if not isinstance(cur, dict):
+                return ""
+            cur = cur.get(k)
+        return cur if isinstance(cur, str) else ""
+
+    def _extract_round_texts(self, item):
+        claims = self._get_nested_text(item, "input", "claims") or self._get_nested_text(item, "ground_truth", "claims")
+        office_action = (
+            self._get_nested_text(item, "input", "office_action")
+            or self._get_nested_text(item, "ground_truth", "oa_text")
+            or self._get_nested_text(item, "ground_truth", "next_oa_text")
+        )
+        remarks = (
+            self._get_nested_text(item, "input", "rebuttal")
+            or self._get_nested_text(item, "ground_truth", "rebuttal_text")
+        )
+        return claims, office_action, remarks
+
+    def _split_claims(self, claims_text):
+        if not isinstance(claims_text, str):
+            return []
+        text = claims_text.strip()
+        if not text or text.upper() == "N/A":
+            return []
+        # Prefer numbered claim boundaries (e.g., "1. ...", "2) ...").
+        pattern = re.compile("(?m)^([0-9]+)\\s*[\\.|\\)]\\s+(.*?)(?=^[0-9]+\\s*[\\.|\\)]\\s+|\\Z)", re.DOTALL)
+        matches = pattern.findall(text)
+        if matches:
+            return [(num.strip(), body.strip()) for num, body in matches if body.strip()]
+        # Fallback: treat entire block as a single claim.
+        return [("1", text)]
+
+    def _resolve_template_task(self, task_key, item):
+        if task_key != "oa":
+            return task_key
+        rebuttal_text = (
+            item.get("input", {}).get("rebuttal")
+            or item.get("ground_truth", {}).get("rebuttal_text")
+            or ""
+        )
+        if isinstance(rebuttal_text, str):
+            rebuttal_text = rebuttal_text.strip()
+
+        prompt_variant = (
+            self.config.get("active_settings", {}).get("oa_prompt_variant")
+            or self.config.get("task_settings", {}).get("oa_prompt_variant")
+            or "legacy"
+        )
+
+        if not rebuttal_text or rebuttal_text.upper() == "N/A":
+            if prompt_variant == "retrieval_aligned":
+                retrieval_setting = self.config.get("active_settings", {}).get("retrieval_setting", "oracle_summary")
+                mapping = {
+                    "no_ref": "initial_examination_zero_shot",
+                    "oracle_summary": "initial_examination_oracle",
+                    "bm25_retrieved": "initial_examination_bm25",
+                }
+                return mapping.get(retrieval_setting, "initial_examination")
+            return "initial_examination"
+
+        if prompt_variant == "retrieval_aligned":
+            retrieval_setting = self.config.get("active_settings", {}).get("retrieval_setting", "oracle_summary")
+            mapping = {
+                "no_ref": "response_to_rebuttal_zero_shot",
+                "oracle_summary": "response_to_rebuttal_oracle",
+                "bm25_retrieved": "response_to_rebuttal_bm25",
+            }
+            return mapping.get(retrieval_setting, "response_to_rebuttal")
+        return "response_to_rebuttal"
     def run_batch(self):
         """?- """
         results = []
         task_key = self.config['task_settings']['current_task']
+        granularity = self.config.get('active_settings', {}).get('granularity', "full_text")
         
         # --- ?---
-        if task_key in self.templates.get("Office_Action_Generation", {}):
+        if task_key in ("oa",) or task_key in self.templates.get("Office_Action_Generation", {}):
             root_key = "Office_Action_Generation"
         elif task_key in self.templates.get("Rebuttal_Generation", {}):
             root_key = "Rebuttal_Generation"
         else:
             self.logger.error(f"?: {task_key}")
             return []
-            
-        if task_key not in self.templates[root_key]:
-            self.logger.error(f"??{root_key} : {task_key}")
-            return []
-            
-        template_config = self.templates[root_key][task_key]
         
         self.logger.info(f" Starting batch inference for {len(self.dataset)} samples...")
 
         for item in tqdm(self.dataset, desc="Generating"):
-            # 1. 
+            template_task = self._resolve_template_task(task_key, item)
+            if template_task not in self.templates.get(root_key, {}):
+                self.logger.error(f"??{root_key} : {template_task}")
+                return []
+            template_config = self.templates[root_key][template_task]
+
+            # 1.
             ref_summary = self._process_retrieval(item)
             
             # 2. User Prompt input
@@ -105,92 +203,110 @@ class PatentEvaluator:
             
             enforce_instruction = "\n\nIMPORTANT: Use the provided Reference Summaries to cite specific documents. DO NOT use placeholders like '[insert references]'."
             
-            # AI
-            ai_input = {
-                "claims": item['input']['claims'],
-                "refs": ref_summary,
-                "task_type": task_key,
-                "retrieval_setting": self.config['active_settings'].get('retrieval_setting', "oracle_summary")
-            }
+            claim_blocks = [("all", item['input'].get('claims', ""))]
+            if granularity == "atomic_claim":
+                split_claims = self._split_claims(item['input'].get('claims', ""))
+                if split_claims:
+                    claim_blocks = split_claims
             
-            # AI
-            if task_key == "v1_initial_examination":
-                # IA?
-                ai_input.pop("office_action", None)
-                ai_input.pop("rebuttal_history", None)
-            
-            try:
-                # AIprompt
-                user_prompt = template_config["user_prompt_template"].format(
-                    current_claims=ai_input['claims'],
-                    reference_summaries=ai_input['refs'],
-                    office_action=oa_content if task_key != "v1_initial_examination" else "N/A",
-                    rebuttal=rebuttal_text if task_key != "v1_initial_examination" else "N/A",
-                    claim_count=item['meta'].get('claim_count', 1)
-                ) + enforce_instruction
-            except KeyError as e:
-                self.logger.error(f"?Prompt ? {e}")
-                raise e
-
-            # 3. 
-            prediction = self.backend.generate(
-                system_prompt=template_config["system_prompt"],
-                user_prompt=user_prompt
-            )
-
-            #  Ground Truth
-            if task_key == "v1_response_to_rebuttal":
-                ground_truth_text = item['ground_truth'].get('next_oa_text', item['ground_truth'].get('oa_text', "N/A"))
-            elif "rebuttal" in task_key.lower():
-                ground_truth_text = item['ground_truth'].get('rebuttal_text', "N/A")
-            else:
-                ground_truth_text = item['ground_truth']['oa_text']
-
-            gt_citations = item.get("ground_truth", {}).get("citations_gt", [])
-
-            # ?
-            result_entry = {
-                "patent_id": item['id'],
-                "round_info": {
-                    "task": task_key,
-                    "round_number": self._get_round_number(task_key),
-                    "exam_phase": "pure_prediction" if task_key == "v1_initial_examination" else "context_aware"
-                },
-                "ai_exam": {
-                    "input": ai_input,
-                    "output": prediction,
-                    "available_info": list(ai_input.keys()),
-                    "restricted_info": self._get_restricted_info(task_key)
-                },
-                "evaluation_context": {
-                    "full_context": {
-                        "claims": item['input']['claims'],
-                        "refs": ref_summary,
-                        "office_action": oa_content,
-                        "rebuttal_history": item['input'].get('rebuttal', "N/A")
-                    },
-                    "ground_truth": ground_truth_text,
-                    "citations_gt": gt_citations,
-                    "input_refs_preview": ref_summary[:200] + "..."  # 
+            for claim_no, claim_text in claim_blocks:
+                # AI
+                ai_input = {
+                    "claims": f"Claim {claim_no}: {claim_text}" if granularity == "atomic_claim" else item['input']['claims'],
+                    "refs": ref_summary,
+                    "task_type": task_key,
+                    "retrieval_setting": self.config['active_settings'].get('retrieval_setting', "oracle_summary"),
+                    "prosecution_history": item['input'].get('prosecution_history', "N/A"),
+                    "granularity": granularity
                 }
-            }
-            results.append(result_entry)
+                
+                # AI
+                if task_key == "oa":
+                    # Avoid leaking ground-truth OA into OA generation.
+                    ai_input.pop("office_action", None)
+                
+                try:
+                    # AIprompt
+                    template_text = template_config["user_prompt_template"]
+                    user_prompt = template_text.format(
+                        current_claims=ai_input['claims'],
+                        reference_summaries=ai_input['refs'],
+                        office_action=oa_content if template_task != "initial_examination" else "N/A",
+                        rebuttal=rebuttal_text if template_task != "initial_examination" else "N/A",
+                        claim_count=1 if granularity == "atomic_claim" else item['meta'].get('claim_count', 1),
+                        prosecution_history=ai_input.get("prosecution_history", "N/A")
+                    )
+                    if "{reference_summaries}" in template_text:
+                        user_prompt += enforce_instruction
+                except KeyError as e:
+                    self.logger.error(f"?Prompt ? {e}")
+                    raise e
+
+                # 3.
+                prediction = self.backend.generate(
+                    system_prompt=template_config["system_prompt"],
+                    user_prompt=user_prompt
+                )
+
+                #  Ground Truth
+                response_templates = {
+                    "response_to_rebuttal",
+                    "response_to_rebuttal_zero_shot",
+                    "response_to_rebuttal_oracle",
+                    "response_to_rebuttal_bm25",
+                }
+                if task_key == "oa" and template_task in response_templates:
+                    ground_truth_text = item['ground_truth'].get('next_oa_text', item['ground_truth'].get('oa_text', "N/A"))
+                elif task_key == "rebuttal":
+                    ground_truth_text = item['ground_truth'].get('rebuttal_text', "N/A")
+                else:
+                    ground_truth_text = item['ground_truth'].get('oa_text', "N/A")
+
+                gt_citations = item.get("ground_truth", {}).get("citations_gt", [])
+
+                # ?
+                result_entry = {
+                    "patent_id": item['id'],
+                    "round_info": {
+                        "task": task_key,
+                        "round_number": self._get_round_number(task_key),
+                        "exam_phase": "pure_prediction" if template_task == "initial_examination" else "context_aware",
+                        "granularity": granularity,
+                        "claim_number": claim_no if granularity == "atomic_claim" else "all"
+                    },
+                    "ai_exam": {
+                        "input": ai_input,
+                        "output": prediction,
+                        "available_info": list(ai_input.keys()),
+                        "restricted_info": self._get_restricted_info(task_key)
+                    },
+                    "evaluation_context": {
+                        "full_context": {
+                            "claims": item['input']['claims'],
+                            "refs": ref_summary,
+                            "office_action": oa_content,
+                            "rebuttal_history": item['input'].get('rebuttal', "N/A")
+                        },
+                        "ground_truth": ground_truth_text,
+                        "citations_gt": gt_citations,
+                        "input_refs_preview": ref_summary[:200] + "..."  # 
+                    }
+                }
+                results.append(result_entry)
         return results
 
     def _get_round_number(self, task_key):
         """"""
-        if task_key == "v1_initial_examination":
+        if task_key == "oa":
             return 1
-        elif task_key == "v1_high_fidelity_rebuttal":
+        elif task_key == "rebuttal":
             return 2
-        elif task_key == "v1_response_to_rebuttal":
-            return 3
         else:
             return 0
 
     def _get_restricted_info(self, task_key):
         """AI"""
-        if task_key == "v1_initial_examination":
+        if task_key == "oa":
             return ["ground_truth_oa", "rebuttal_history", "human_decisions"]
         else:
             return ["ground_truth_final_outcome"]
@@ -252,6 +368,43 @@ class PatentEvaluator:
             prompt = self._shrink_prompt(template, truncated, max_total)
         return prompt
 
+    def _split_reference_summaries(self, text):
+        if not isinstance(text, str):
+            return []
+        lines = [ln.strip() for ln in text.splitlines() if ln and ln.strip()]
+        if lines:
+            return lines
+        return [text.strip()] if text.strip() else []
+
+    def _extract_ref_id(self, text):
+        if not isinstance(text, str):
+            return ""
+        m = re.search(r"Ref\\s+([A-Za-z0-9]+):", text)
+        if m:
+            return m.group(1).strip()
+        # Try common publication/patent ID patterns.
+        m = re.search(r"\\b[A-Z]{2}\\s?\\d{4}/\\d{7}\\s?[A-Z]\\d?\\b", text)
+        if m:
+            return re.sub(r"\\s+", "", m.group(0))
+        m = re.search(r"\\b[A-Z]{2}\\d{7,}[A-Z]?\\d?\\b", text)
+        if m:
+            return m.group(0)
+        return ""
+
+    def _dedupe_refs(self, refs):
+        seen = set()
+        out = []
+        for r in refs:
+            if not isinstance(r, str):
+                continue
+            rid = self._extract_ref_id(r)
+            key = rid if rid else r.strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            out.append(r)
+        return out
+
     def _process_retrieval(self, item):
         setting = self.config['active_settings'].get('retrieval_setting', "oracle_summary")
         
@@ -263,7 +416,24 @@ class PatentEvaluator:
             return content if content else "Warning: Oracle summary data is missing in test set."
         elif setting == "bm25_retrieved":
             query_text = item['input'].get('claims', '')
-            return self._bm25_retrieve(query_text)
+            bm25_list = self._bm25_retrieve_list(query_text, top_k=5)
+            oracle_text = item['input'].get('oracle_reference_summaries', "")
+            oracle_list = self._split_reference_summaries(oracle_text)
+            # Mix: BM25 5 + Oracle 5, dedupe, then fill to 10 with oracle.
+            pool = self._dedupe_refs(bm25_list[:5] + oracle_list[:5])
+            if len(pool) < 10:
+                for ref in oracle_list[5:]:
+                    pool = self._dedupe_refs(pool + [ref])
+                    if len(pool) >= 10:
+                        break
+            if len(pool) < 10:
+                for ref in bm25_list[5:]:
+                    pool = self._dedupe_refs(pool + [ref])
+                    if len(pool) >= 10:
+                        break
+            if not pool:
+                return "References corpus not available."
+            return "\n".join(pool[:10])
         return "Unknown retrieval setting"
 
     def _tokenize(self, text):
@@ -299,14 +469,14 @@ class PatentEvaluator:
         self._avgdl = sum(lens) / len(lens) if lens else 0.0
         self._corpus_loaded = True
 
-    def _bm25_retrieve(self, query_text):
+    def _bm25_retrieve_list(self, query_text, top_k=5):
         if not self._corpus_loaded:
             self._load_reference_corpus()
         if not self._corpus_docs:
-            return "References corpus not available."
+            return []
         q = self._tokenize(query_text)
         if not q:
-            return "No query terms found in claims."
+            return []
         N = len(self._corpus_docs)
         df = {}
         for term in set(q):
@@ -336,7 +506,7 @@ class PatentEvaluator:
                 s += (idf) * ((tf * (k1 + 1)) / denom)
             scores.append((s, i))
         scores.sort(reverse=True, key=lambda x: x[0])
-        top_k = self.config.get('retrieval_params', {}).get('bm25_top_k', 5)
+        top_k = int(top_k) if top_k else self.config.get('retrieval_params', {}).get('bm25_top_k', 5)
         ref_dir = self.config['paths'].get('reference_pool')
         out = []
         for s, i in scores[:top_k]:
@@ -350,17 +520,20 @@ class PatentEvaluator:
                 out.append(f"Ref {doc_id}: {title}. {abstract}")
             except:
                 out.append(f"Ref {doc_id}: [content unavailable]")
-        return "\n".join(out)
+        return out
+
+    def _bm25_retrieve(self, query_text):
+        return "\n".join(self._bm25_retrieve_list(query_text))
 
     def run_scoring(self, results):
         """
         ?
          Task  examiner_judge ?rebuttal_judge
         """
-        # 1.  ( "v1_initial_examination" ?"v1_high_fidelity_rebuttal")
+        # 1.  ( "oa" ?"rebuttal")
         current_task = self.config['task_settings']['current_task']
         # 
-        if current_task in self.templates.get("Office_Action_Generation", {}):
+        if current_task == "oa" or current_task in self.templates.get("Office_Action_Generation", {}):
             judge_key = "examiner_judge"
         else:
             judge_key = "rebuttal_judge"
@@ -419,22 +592,15 @@ class PatentEvaluator:
                     res["raw_judge_output"] = raw_judge_res
                     score_data = self._extract_json(raw_judge_res)
                 judge_scores = score_data.get("scores", {})
+                for k in ("patentscore_structure_stability", "patentscore_legal_clarity", "patentscore_semantic_logic"):
+                    if isinstance(judge_scores.get(k), (int, float)):
+                        judge_scores[k] = min(10, round(judge_scores[k] * 2, 4))
                 res["judge_scores"] = judge_scores
                 res["scores"] = dict(judge_scores)
                 res["judge_total_score"] = score_data.get("total_score", None)
                 justification_summary = score_data.get("justification_summary", score_data.get("justification", ""))
                 res["justification"] = justification_summary
                 res["justification_details"] = score_data.get("justification_details", {})
-
-                # OA GPT-5 mini 
-                if judge_key == "examiner_judge":
-                    coherence_data = self._run_gpt5_coherence_judge(res)
-                    if coherence_data:
-                        res["scores"]["coherence_score"] = coherence_data.get("coherence_score", 0)
-                        if coherence_data.get("justification"):
-                            res["justification"] = (
-                                (res["justification"] + "\n\n") if res["justification"] else ""
-                            ) + f"[GPT-5 mini coherence] {coherence_data['justification']}"
 
                 # ?total_score 
                 combined_total = self._calculate_numeric_total(res.get("scores", {}))
@@ -661,31 +827,33 @@ class PatentEvaluator:
                 pred_json = safe_parse_json(pred_text)
                 gt_json = safe_parse_json(gt_text)
 
-                pred_disp = extract_disposition(pred_text, pred_json)
-                gt_disp = extract_disposition(gt_text, gt_json)
-
-                pred_stat = extract_statutes(pred_text)
-                gt_stat = extract_statutes(gt_text)
-
-                # Per-sample: only keep accuracy to avoid misleading precision/recall/F1
-                disp_scores = {}
-                if pred_disp != "unknown" and gt_disp != "unknown":
-                    disp_scores["disposition_accuracy"] = round(1.0 if pred_disp == gt_disp else 0.0, 4)
-                stat_scores = statute_metrics(pred_stat, gt_stat)
-                gt_ids = res.get("evaluation_context", {}).get("citations_gt", None)
-                cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text, gt_ids=gt_ids)
-                list_match = citation_list_match(pred_text, refs_text)
-
                 rule_scores = {}
-                rule_scores.update(disp_scores)
-                rule_scores.update(stat_scores)
-                rule_scores.update(cit_scores)
-                rule_scores["citation_list_match"] = list_match
-                if "disposition_accuracy" in rule_scores:
-                    rule_scores["disposition_accuracy_pct"] = round(rule_scores["disposition_accuracy"] * 100, 2)
-                if "statute_precision" in rule_scores:
-                    rule_scores["statute_precision_pct"] = round(rule_scores["statute_precision"] * 100, 2)
-                rule_scores["citation_list_match_pct"] = round(list_match * 100, 2)
+                is_rebuttal = task_type == "rebuttal"
+                if not is_rebuttal:
+                    pred_disp = extract_disposition(pred_text, pred_json)
+                    gt_disp = extract_disposition(gt_text, gt_json)
+
+                    pred_stat = extract_statutes(pred_text)
+                    gt_stat = extract_statutes(gt_text)
+
+                    # Per-sample: only keep accuracy to avoid misleading precision/recall/F1
+                    disp_scores = {}
+                    if pred_disp != "unknown" and gt_disp != "unknown":
+                        disp_scores["disposition_accuracy"] = round(1.0 if pred_disp == gt_disp else 0.0, 4)
+                    stat_scores = statute_metrics(pred_stat, gt_stat)
+                    gt_ids = res.get("evaluation_context", {}).get("citations_gt", None)
+                    cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text, gt_ids=gt_ids)
+                    list_match = citation_list_match(pred_text, refs_text)
+
+                    rule_scores.update(disp_scores)
+                    rule_scores.update(stat_scores)
+                    rule_scores.update(cit_scores)
+                    rule_scores["citation_list_match"] = list_match
+                    if "disposition_accuracy" in rule_scores:
+                        rule_scores["disposition_accuracy_pct"] = round(rule_scores["disposition_accuracy"] * 100, 2)
+                    if "statute_precision" in rule_scores:
+                        rule_scores["statute_precision_pct"] = round(rule_scores["statute_precision"] * 100, 2)
+                    rule_scores["citation_list_match_pct"] = round(list_match * 100, 2)
 
                 r_l = rouge_l_f1(pred_text, gt_text)
                 if r_l is not None:
@@ -702,14 +870,15 @@ class PatentEvaluator:
                 res.setdefault("scores", {})
                 res["rule_scores"] = rule_scores
                 res["scores"].update(rule_scores)
-                res["metric_details"] = {
-                    "disposition_pred": pred_disp,
-                    "disposition_gt": gt_disp,
-                    "statutes_pred": sorted(list(pred_stat)),
-                    "statutes_gt": sorted(list(gt_stat)),
-                    "citations_pred": sorted(list(pred_ids)),
-                    "citations_gt": sorted(list(ref_ids)),
-                }
+                if not is_rebuttal:
+                    res["metric_details"] = {
+                        "disposition_pred": pred_disp,
+                        "disposition_gt": gt_disp,
+                        "statutes_pred": sorted(list(pred_stat)),
+                        "statutes_gt": sorted(list(gt_stat)),
+                        "citations_pred": sorted(list(pred_ids)),
+                        "citations_gt": sorted(list(ref_ids)),
+                    }
                 # If judge parsing failed (or total_score missing), still compute a numeric total
                 # from available metrics so the run isn't forced to 0.
                 if res.get("total_score") is None or res.get("scores", {}).get("error") == "PARSING_FAILED":

@@ -169,12 +169,31 @@ def extract_oa_metadata(oa_text):
     text_lower = oa_text.lower()
     
     # 识别 OA 类型（按优先级顺序）
-    if 'notice of allowance' in text_lower or 'allowed' in text_lower:
+    # Allowance indicators should win only if there is no active rejection in this OA.
+    def _has_active_rejection(txt: str) -> bool:
+        for seg in re.split(r'[.\n]', txt):
+            if not seg:
+                continue
+            if 'withdrawn' in seg:
+                continue
+            if re.search(r'\\b(are|is|be|been)\\s+rejected\\b', seg):
+                return True
+            if re.search(r'\\brejected\\s+under\\b|\\brejected\\s+on\\s+the\\s+ground\\b', seg):
+                return True
+            if 'provisionally rejected' in seg:
+                return True
+        return False
+
+    active_rejection = _has_active_rejection(text_lower)
+
+    if re.search(r'\\bnotice of allowance\\b|\\breasons for allowance\\b|\\ballowable\\b|\\ballowed\\b', text_lower) and not active_rejection:
         metadata["oa_type"] = "Notice of Allowance"
-    elif 'this action is made final' in text_lower or 'final office action' in text_lower or 'final rejection' in text_lower:
-        metadata["oa_type"] = "Final Rejection"
-    elif 'non-final rejection' in text_lower or 'non-final office action' in text_lower:
+    elif re.search(r'\\bnon[-\\s]?final (rejection|office action)\\b', text_lower) and active_rejection:
         metadata["oa_type"] = "Non-Final Rejection"
+    elif re.search(r'\\bthis action is made final\\b|\\bfinal office action\\b|\\bfinal rejection\\b', text_lower) and active_rejection:
+        metadata["oa_type"] = "Final Rejection"
+    elif active_rejection:
+        metadata["oa_type"] = "Office Action"
     elif 'restriction requirement' in text_lower or 'requirement for restriction' in text_lower or 'election requirement' in text_lower:
         metadata["oa_type"] = "Restriction Requirement"
     elif 'advisory action' in text_lower:
