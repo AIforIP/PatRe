@@ -7,7 +7,7 @@ metadata:
 task_settings:
   # current_task: "rebuttal"
   current_task: "oa"
-  num_samples: 2
+  num_samples: 180
   auto_run_extra_metrics: true
   auto_run_claim_rediscovery: false
   judge_max_chars: 12000
@@ -82,7 +82,7 @@ paths:
 
 # 实验命名规范
 experiment_naming:
-  use_academic_format: false
+  use_academic_format: true
   include_model_name: false
   timestamp_format: "%Y%m%d_%H%M"
 retrieval_params:

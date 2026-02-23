@@ -38,6 +38,7 @@ def parse_args():
     parser.add_argument("--run_claim_rediscovery", action="store_true", help="Run claim-centric rediscovery evaluation")
     parser.add_argument("--run_extra_metrics", action="store_true", help="Run additional rule-based metrics")
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
+    parser.add_argument("--generate_only", action="store_true", help="Only generate outputs, skip evaluation")
     return parser.parse_args()
 
 def analyze_dataset_rounds(config):
@@ -79,6 +80,76 @@ def generate_multiround_sequence_from_data(max_rounds):
     
     return sequence
 
+
+
+def _normalize_0_1(value):
+    if value is None or isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    v = float(value)
+    if v < 0:
+        return v
+    if v <= 1:
+        return round(v, 4)
+    if v <= 10:
+        return round(v / 10.0, 4)
+    if v <= 100:
+        return round(v / 100.0, 4)
+    return round(v, 4)
+
+
+def _pick_score(scores, *keys):
+    for k in keys:
+        v = scores.get(k)
+        if isinstance(v, (int, float)) and not isinstance(v, bool):
+            return v
+    return None
+
+
+def _build_scores_table(task_key, scores):
+    if not isinstance(scores, dict):
+        scores = {}
+
+    table = {}
+    if task_key == "rebuttal":
+        pw = _normalize_0_1(_pick_score(scores, "point_wise_coverage"))
+        if pw is not None:
+            table["Point-wise Coverage"] = pw
+    else:
+        disp = _normalize_0_1(_pick_score(scores, "disposition_accuracy"))
+        if disp is not None:
+            table["Disposition Accuracy"] = disp
+        stat = _normalize_0_1(_pick_score(scores, "statute_precision", "legal_statute_precision"))
+        if stat is not None:
+            table["Statute Precision"] = stat
+        cit = _normalize_0_1(_pick_score(scores, "reference_citation_accuracy", "citation_accuracy"))
+        if cit is not None:
+            table["Citation Accuracy"] = cit
+
+    bleu = _normalize_0_1(_pick_score(scores, "bleu"))
+    if bleu is not None:
+        table["BLEU"] = bleu
+    rouge = _normalize_0_1(_pick_score(scores, "rouge_l"))
+    if rouge is not None:
+        table["ROUGE-L"] = rouge
+    bert = _normalize_0_1(_pick_score(scores, "bert_score", "bert_score_f1"))
+    if bert is not None:
+        table["BERTScore"] = bert
+    fmt = _normalize_0_1(_pick_score(scores, "formatting_rule", "formatting_schema_score", "formatting_citation_style"))
+    if fmt is not None:
+        table["Formatting"] = fmt
+
+    for key, label in (
+        ("accuracy", "Accuracy"),
+        ("clarity", "Clarity"),
+        ("constructiveness", "Constructiveness"),
+        ("completeness", "Completeness"),
+        ("language_style", "Language Style"),
+    ):
+        val = _pick_score(scores, key)
+        if val is not None:
+            table[label] = val
+
+    return table
 def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
     """Save results grouped by patent, appending per-round outputs."""
     # 将原始结果和评估结果合并
@@ -233,7 +304,8 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
                 {
                     "task_type": task_key,
                     "total_score": eval_result.get('total_score', 0),
-                    "scores": summary_scores
+                    "scores": summary_scores,
+                    "scores_table": _build_scores_table(task_key, eval_result.get('scores', {}))
                 },
                 f,
                 indent=2,
@@ -495,11 +567,14 @@ def main():
                     raw = engine.run_batch()
                     for r in raw:
                         r['round_info']['round_number'] = round_no
-                    report = engine.run_scoring(raw)
-                    if args.run_claim_rediscovery or auto_rediscovery:
-                        report = engine.run_claim_rediscovery_evaluation(report)
-                    if args.run_extra_metrics or auto_extra:
-                        report = engine.run_additional_metrics(report)
+                    if args.generate_only:
+                        report = [{} for _ in raw]
+                    else:
+                        report = engine.run_scoring(raw)
+                        if args.run_claim_rediscovery or auto_rediscovery:
+                            report = engine.run_claim_rediscovery_evaluation(report)
+                        if args.run_extra_metrics or auto_extra:
+                            report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir)
                     
                     for r, e in zip(raw, report):
@@ -547,11 +622,14 @@ def main():
                     raw = engine.run_batch()
                     for r in raw:
                         r['round_info']['round_number'] = round_no
-                    report = engine.run_scoring(raw)
-                    if args.run_claim_rediscovery or auto_rediscovery:
-                        report = engine.run_claim_rediscovery_evaluation(report)
-                    if args.run_extra_metrics or auto_extra:
-                        report = engine.run_additional_metrics(report)
+                    if args.generate_only:
+                        report = [{} for _ in raw]
+                    else:
+                        report = engine.run_scoring(raw)
+                        if args.run_claim_rediscovery or auto_rediscovery:
+                            report = engine.run_claim_rediscovery_evaluation(report)
+                        if args.run_extra_metrics or auto_extra:
+                            report = engine.run_additional_metrics(report)
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir)
                     
                     for r, e in zip(raw, report):

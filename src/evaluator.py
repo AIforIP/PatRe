@@ -598,6 +598,7 @@ class PatentEvaluator:
                 res["judge_total_score"] = score_data.get("total_score", None)
                 justification_summary = score_data.get("justification_summary", score_data.get("justification", ""))
                 res["justification"] = justification_summary
+                res["evaluation_report"] = score_data.get("evaluation_report", "")
                 res["justification_details"] = score_data.get("justification_details", {})
 
                 # ?total_score 
@@ -619,8 +620,12 @@ class PatentEvaluator:
         """
         Point-wise 
         """
+        eval_templates = self.templates.get("Evaluation_Metrics", {})
+        judge_config = eval_templates.get("point_wise_evaluator")
+        if not judge_config:
+            self.logger.info(" Point-wise evaluator template not found. Skipping.")
+            return results
         self.logger.info(" Running point-wise evaluation...")
-        judge_config = self.templates["Evaluation_Metrics"]["point_wise_evaluator"]
         evaluated_results = []
 
         for res in tqdm(results, desc="Point-wise Evaluation"):
@@ -674,8 +679,12 @@ class PatentEvaluator:
         """
         Pair-wise ?
         """
+        eval_templates = self.templates.get("Evaluation_Metrics", {})
+        judge_config = eval_templates.get("pairwise_evaluator")
+        if not judge_config:
+            self.logger.info(" Pairwise evaluator template not found. Skipping.")
+            return results
         self.logger.info(" Running pairwise comparison...")
-        judge_config = self.templates["Evaluation_Metrics"]["pairwise_evaluator"]
         compared_results = []
 
         #  results 
@@ -752,8 +761,12 @@ class PatentEvaluator:
         """
         Claim-level 
         """
+        eval_templates = self.templates.get("Evaluation_Metrics", {})
+        judge_config = eval_templates.get("claim_level_evaluator")
+        if not judge_config:
+            self.logger.info(" Claim-level evaluator template not found. Skipping.")
+            return results
         self.logger.info(" Running claim-level evaluation...")
-        judge_config = self.templates["Evaluation_Metrics"]["claim_level_evaluator"]
         evaluated_results = []
 
         for res in tqdm(results, desc="Claim-level Evaluation"):
