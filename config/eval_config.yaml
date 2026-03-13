@@ -7,7 +7,7 @@ metadata:
 task_settings:
   # current_task: "rebuttal"
   current_task: "oa"
-  num_samples: 4
+  num_samples: 100000
   auto_run_extra_metrics: true
   similarity_metrics:
     bleu: true
