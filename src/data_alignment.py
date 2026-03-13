@@ -2,6 +2,8 @@
 import json
 import os
 import sys
+import io
+import re
 
 
 # 强制标准输出使用 utf-8 编码
@@ -19,46 +21,103 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
             RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
 SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.jsonl")
+REF_TEXT_LIMIT = 20000  # Keep aligned with config/eval_config.yaml: reference_summaries
 
 # ===================== 辅助函数 =====================
 
-def get_ref_content(ref_list):
-    """从引用池里抓取摘要，并进行简单的清洗"""
+def _normalize_ref_list(ref_list):
     if not ref_list:
-        return "No prior art cited.", True
+        return []
+    normalized = []
+    for ref in ref_list:
+        if not isinstance(ref, dict):
+            continue
+        if "document_number" in ref:
+            normalized.append(ref)
+        elif "doc_number" in ref:
+            normalized.append({"document_number": ref.get("doc_number", "")})
+    return normalized
 
-    summaries = []
+
+def _is_independent_claim(claim_text):
+    if not claim_text:
+        return False
+    m = re.match(r"^\s*(\d+)\s*[\.\)]\s*", claim_text)
+    claim_num = m.group(1) if m else None
+    for ref_num in re.findall(r"\bclaim\s+(\d+)\b", claim_text, flags=re.IGNORECASE):
+        if claim_num is None or ref_num != claim_num:
+            return False
+    return True
+
+
+def _format_claims(claims_list, independent_only=False):
+    if not claims_list:
+        return ""
+    lines = []
+    for c in claims_list:
+        if isinstance(c, dict):
+            text = c.get("text", "")
+        else:
+            text = str(c)
+        text = text.strip()
+        if not text:
+            continue
+        if independent_only and not _is_independent_claim(text):
+            continue
+        lines.append(text)
+    return "\n".join(lines)
+
+
+def _build_ref_entry(doc_num, ref_data, independent_only=False):
+    claims_text = _format_claims(ref_data.get("claims", []), independent_only=independent_only)
+    if claims_text:
+        return f"Ref {doc_num}: Claims:\n{claims_text}"
+    abstract_text = ref_data.get("abstract", "No abstract available")
+    return f"Ref {doc_num}: {abstract_text}"
+
+
+def _normalize_doc_id(doc_num):
+    if not doc_num:
+        return ""
+    s = str(doc_num).upper().strip()
+    s = re.sub(r"[^A-Z0-9]", "", s)
+    return s
+
+
+def _ref_possible_filenames(clean_doc_id):
+    if not clean_doc_id:
+        return []
+    if clean_doc_id.startswith(("US", "WO", "EP", "AU")):
+        return [f"{clean_doc_id}.json"]
+    return [f"{clean_doc_id}.json", f"US{clean_doc_id}.json"]
+
+
+def get_ref_ids(ref_list):
+    """仅记录引用列表（不在对齐阶段拼接长文本），并判断是否有缺失。"""
+    ref_list = _normalize_ref_list(ref_list)
+    if not ref_list:
+        return [], True
+
+    ids = []
     any_missing = False
     for ref in ref_list:
-        doc_num = ref.get("document_number", "").replace("-", "").strip()
-        # 兼容性处理：有些文件名带 US 前缀，有些不带
-        possible_names = [f"{doc_num}.json", f"US{doc_num}.json"] if not doc_num.startswith("US") else [f"{doc_num}.json"]
+        raw = ref.get("document_number", "")
+        clean_id = _normalize_doc_id(raw)
+        if not clean_id:
+            any_missing = True
+            continue
+        ids.append(clean_id)
 
         found = False
-        for name in possible_names:
+        for name in _ref_possible_filenames(clean_id):
             path = os.path.join(REF_POOL_DIR, name)
             if os.path.exists(path):
-                with open(path, "r", encoding="utf-8") as f:
-                    ref_data = json.load(f)
-                    abstract_text = ref_data.get("abstract", "No abstract available")
-                    summary_text = ref_data.get("summary_of_invention", "")
-                    if isinstance(summary_text, str):
-                        summary_text = summary_text.strip()
-                    else:
-                        summary_text = ""
-                    if summary_text and summary_text.lower() != "summary content not found":
-                        summaries.append(
-                            f"Ref {doc_num}: Abstract: {abstract_text}\nSummary of invention: {summary_text}"
-                        )
-                    else:
-                        summaries.append(f"Ref {doc_num}: {abstract_text}")
-                    found = True
-                    break
+                found = True
+                break
         if not found:
-            summaries.append(f"Ref {doc_num}: [Summary not found in library]")
             any_missing = True
 
-    return "\n".join(summaries), any_missing
+    return ids, any_missing
 
 
 def infer_ipc_from_dir(raw_dir):
@@ -75,7 +134,6 @@ def process_claims(claims):
     鲁棒性处理：专利数据中 Claims 可能是字符串，也可能是列表
     """
     if isinstance(claims, list):
-        # 鎻愬彇 text 瀛楁骞跺悎骞讹紝鎴栬€呯洿鎺ヨ繛鎺ュ瓧绗︿覆
         processed = []
         for c in claims:
             if isinstance(c, dict):
@@ -84,6 +142,15 @@ def process_claims(claims):
                 processed.append(str(c))
         return "\n".join(processed)
     return str(claims) if claims else ""
+
+
+def _count_claims_text(claims_text):
+    if not claims_text:
+        return 0
+    import re
+    hits = re.findall(r"(?m)^\s*(\d+)\s*[\.\)]", claims_text)
+    return len(hits) if hits else 1
+
 
 
 # ===================== 主逻辑 =====================
@@ -107,16 +174,12 @@ def align_data():
                     try:
                         item = json.load(f)
                     except json.JSONDecodeError:
-                        print(f"?? ????? JSON ??: {filename}")
-                        continue
-
-                    raw_claims = item.get("initial_submission", {}).get("claims", "")
-                    claims_text = process_claims(raw_claims)
-
-                    if not claims_text.strip():
+                        print(f"解析错误 JSON 文件: {filename}")
                         continue
 
                     office_actions = item.get("office_actions", [])
+                    if not isinstance(office_actions, list):
+                        office_actions = []
                     # Ensure deterministic round order by oa_number (fallback to original order).
                     if isinstance(office_actions, list) and office_actions:
                         def _oa_sort_key(oa_obj, idx):
@@ -145,31 +208,54 @@ def align_data():
 
                         input_oa = oa_body
 
-                        # Use rebuttal from the *current* OA.
+                        oa_type = ""
+                        if isinstance(oa, dict):
+                            oa_type = str(oa.get("oa_type", "")).strip()
+                        is_notice_of_allowance = "notice of allowance" in oa_type.lower()
+
+                        # Use rebuttal from the *current* OA unless this is Notice of Allowance.
                         # This aligns with: OA#1 -> remarks (response) -> OA#2.
                         cur_remarks = ""
-                        if isinstance(oa, dict):
+                        if isinstance(oa, dict) and not is_notice_of_allowance:
                             cur_remarks = oa.get("remarks", "N/A")
 
-                        ref_text, ref_missing = get_ref_content(oa.get("references_cited", []))
+                        # Claims: prefer OA current_claims; fallback to initial_submission.claims.
+                        raw_claims = oa.get("current_claims", "")
+                        if not raw_claims:
+                            raw_claims = item.get("initial_submission", {}).get("claims", "")
+                        claims_text = process_claims(raw_claims)
+                        if not claims_text.strip():
+                            continue
+
+                        # References: prefer references_cited; fallback to extracted_reference_contexts.
+                        refs = oa.get("references_cited", [])
+                        if not refs:
+                            refs = oa.get("extracted_reference_contexts", [])
+                        ref_ids, ref_missing = get_ref_ids(refs)
                         decision_value = oa.get("decision", "")
                         decision_value = str(decision_value).strip()
                         decision_missing = not bool(decision_value)
                         if decision_missing:
                             decision_value = "Unknown"
 
+                        if is_notice_of_allowance:
+                            # Terminate at Notice of Allowance: no remarks, no next OA.
+                            next_oa_body = ""
+
                         formatted_item = {
                             "id": item.get("patent_number"),
                             "meta": {
                                 "ipc": item.get("ipc_category") or inferred_ipc,
-                                "claim_count": len(raw_claims) if isinstance(raw_claims, list) else 1,
+                                "claim_count": len(raw_claims) if isinstance(raw_claims, list) else _count_claims_text(claims_text),
                                 "round_type": "rebuttal" if next_oa_body else "examination",
                                 "reference_missing": ref_missing,
                                 "decision_missing": decision_missing,
+                                "oa_type": oa_type,
                             },
                             "input": {
                                 "claims": claims_text,
-                                "oracle_reference_summaries": ref_text,
+                                "oracle_reference_summaries": "",
+                                "oracle_reference_ids": ref_ids,
                                 "rebuttal": cur_remarks if cur_remarks is not None else "",
                                 "office_action": input_oa,
                                 "next_office_action": next_oa_body,
@@ -184,8 +270,11 @@ def align_data():
                         outfile.write(json.dumps(formatted_item, ensure_ascii=False) + "\n")
                         count += 1
 
-    print(f"? ?????????? {count} ??????")
-    print(f"?? ????: {SAVE_PATH}")
+                        if is_notice_of_allowance:
+                            break
+
+    print(f"Successfully aligned {count} data samples.")
+    print(f"Saved to: {SAVE_PATH}")
 
 
 if __name__ == "__main__":

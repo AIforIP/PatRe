@@ -1,15 +1,18 @@
 ﻿# 全局元数据
 metadata:
-  project: "PatRe_NIPS2026"
+  project: "PatRe"
   ipc_categories: ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 # 实验任务配置
 task_settings:
   # current_task: "rebuttal"
   current_task: "oa"
-  num_samples: 180
+  num_samples: 4
   auto_run_extra_metrics: true
-  auto_run_claim_rediscovery: false
+  similarity_metrics:
+    bleu: true
+    rouge_l: true
+    bert_score: true
   judge_max_chars: 12000
   judge_default_field_max_chars: 4000
   judge_field_max_chars:
@@ -48,12 +51,10 @@ models:
   judge_model: "gpt-5-mini-2025-08-07"
   # judge_model: "gpt-4o-mini"
 
-  # api_key: "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"  # 在此处配置您的API密钥
-  api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308" 
-  # base_url: "https://openrouter.ai/api/v1"  # 在此处配置API基础URL
-  base_url:  "https://api.lqshop.cc/v1"  
-  judge_api_key: "sk-N0KfygnoEoUCERdR5f5cEd72C5374028A46d7f3f2cD6C308"  # 在此处配置裁判API密钥
-  judge_base_url: "https://api.lqshop.cc/v1"  # 在此处配置裁判API基础URL
+  api_key: ""
+  base_url: "https://api.chatanywhere.tech/v1"
+  judge_api_key: ""
+  judge_base_url: "https://api.chatanywhere.tech/v1"
   backend: "api"
   judge_backend: "api"  # 裁判使用API后端
   ollama_base_url: "http://localhost:11434/v1"  # Ollama本地服务地址
@@ -77,13 +78,13 @@ active_settings:
 paths:
   test_set: "dataset/processed/test_set_new.jsonl"
   prompt_path: "config/prompt_templates.json"
-  results: "results/nips_exp/"
+  results: "results/"
   reference_pool: "dataset/ReferencePool_Full"
 
 # 实验命名规范
 experiment_naming:
   use_academic_format: true
-  include_model_name: false
+  include_model_name: true
   timestamp_format: "%Y%m%d_%H%M"
 retrieval_params:
   bm25_top_k: 5

@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
-from openai import OpenAI
 import time
 import os
 import random
+import json
 
-# 尝试加载 .env 文件
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except ImportError:
-    pass  # 如果没有安装 python-dotenv，跳过加载
+    pass
 
 class ModelBackend:
     def __init__(self, config, is_judge=False):
         self.config = config
         self.model_name = config['models']['active_model']
         self.params = config['models']['generation_params']
+        self._dry_run = str(os.getenv("PATRE_DRY_RUN", "")).strip().lower() in ("1", "true", "yes")
         
         # 根据是否为裁判选择不同的后端
         if is_judge:
@@ -40,18 +40,23 @@ class ModelBackend:
             api_key = config['models'].get('vllm_api_key') or api_key or "EMPTY"
             base_url = config['models'].get('vllm_base_url') or base_url
         
-        if not api_key:
-            raise ValueError("API key is missing. Please provide it in config file or OPENAI_API_KEY environment variable.")
+        if not api_key and not self._dry_run:
+            raise ValueError("API key is missing. Please provide it via OPENAI_API_KEY or config.")
 
-        # Debug: show which endpoint is used
-        print(f"[ModelBackend] backend={self.backend} is_judge={is_judge} base_url={base_url}")
+        clean_base_url = (base_url or os.getenv("OPENAI_BASE_URL") or "https://api.openai.com/v1").strip().strip("`").strip()
+        self._base_url = clean_base_url.rstrip("/")
+        self._api_key = str(api_key or "").strip()
 
-        self.client = OpenAI(
-            api_key=api_key,
-            base_url=base_url
-        )
+        print(f"[ModelBackend] backend={self.backend} is_judge={is_judge} base_url={self._base_url}")
+
+        self._client = None
+        if not self._dry_run:
+            from openai import OpenAI
+            self._client = OpenAI(api_key=self._api_key, base_url=self._base_url)
 
     def generate(self, system_prompt, user_prompt, is_judge=False, model_override=None):
+        if self._dry_run:
+            return self._dry_generate(system_prompt, user_prompt)
         if is_judge:
             model = self.config['models']['judge_model']
         else:
@@ -72,18 +77,24 @@ class ModelBackend:
         jitter = float(self.config.get("models", {}).get("retry_jitter_sec", 0))
         for attempt in range(max_retries): # 自动重试
             try:
-                response = self.client.chat.completions.create(
+                resp = self._client.chat.completions.create(
                     model=model,
                     messages=[
                         {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": user_prompt}
+                        {"role": "user", "content": user_prompt},
                     ],
-                    **params
+                    **params,
                 )
-                content = response.choices[0].message.content
+                choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
+                content = None
+                if choice0 and getattr(choice0, "message", None):
+                    content = getattr(choice0.message, "content", None)
+                if content is None and choice0:
+                    content = getattr(choice0, "text", None)
+
                 if content is None or not str(content).strip():
                     raise ValueError("Empty response content")
-                return content
+                return str(content)
             except Exception as e:
                 msg = str(e)
                 if "max_tokens" in msg and "max_completion_tokens" in msg:
@@ -97,3 +108,67 @@ class ModelBackend:
                         sleep_s += random.uniform(0, jitter)
                     time.sleep(sleep_s)
         return "FAILED_TO_GENERATE"
+
+    def _dry_generate(self, system_prompt, user_prompt):
+        up = user_prompt or ""
+        sp = system_prompt or ""
+        up_l = up.lower()
+        sp_l = sp.lower()
+
+        def as_json(total, scores):
+            payload = {
+                "total_score": float(total),
+                "scores": scores,
+                "justification": "dry_run",
+                "justification_details": {},
+                "evaluation_report": "dry_run",
+            }
+            return json.dumps(payload, ensure_ascii=False)
+
+        if "evaluate the generated" in up_l or "output format" in up_l or "audit report" in up_l:
+            if "rebuttal" in up_l:
+                scores = {
+                    "effectiveness": 8.0,
+                    "accuracy": 8.0,
+                    "reliability": 8.0,
+                    "statute_compliance": 8.0,
+                    "feature_distinction": 8.0,
+                    "specification_support": 8.0,
+                    "clarity": 8.0,
+                    "completeness": 8.0,
+                    "constructiveness": 8.0,
+                    "language_style": 8.0,
+                    "point_wise_coverage": 8.0,
+                }
+                return as_json(8.0, scores)
+
+            scores = {
+                "accuracy": 8.0,
+                "rationality": 8.0,
+                "reliability": 8.0,
+                "legal_statute_precision": 8.0,
+                "feature_mapping_accuracy": 8.0,
+                "reference_citation_accuracy": 8.0,
+                "clarity": 8.0,
+                "completeness": 8.0,
+                "constructiveness": 8.0,
+                "language_style": 8.0,
+            }
+            return as_json(8.0, scores)
+
+        if "point-wise" in up_l or "point wise" in up_l:
+            return as_json(8.0, {"point_wise_coverage": 8.0})
+
+        if "pairwise" in up_l and ("text_a" in up_l or "text b" in up_l):
+            return as_json(8.0, {"winner": 1.0})
+
+        if "claim-level" in up_l or "claim level" in up_l:
+            return as_json(8.0, {"accuracy": 8.0, "clarity": 8.0})
+
+        if "detailed action" in up or "office action" in sp_l:
+            return "DETAILED ACTION\nOPENING STATEMENT\nClaims are examined in dry_run mode.\nCONCLUSION\nThe application is in condition for allowance."
+
+        if "rebuttal" in sp_l:
+            return "REMARKS\nApplicant respectfully traverses the rejections in dry_run mode.\nCONCLUSION\nWithdrawal of the rejections is requested."
+
+        return "DRY_RUN_OUTPUT"

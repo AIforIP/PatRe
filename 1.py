@@ -1,63 +1,109 @@
-import os
+# -*- coding: utf-8 -*-
 import json
+import re
+import os
 
-# 你的 JSON 目录路径
-TARGET_DIR = r"D:\study\competition\LLM_based_IP_Review_Research\Project\PatRe\dataset\PatTimeline_A_Category\2026-02-16\cleaned_json_output1"
+# -------------------------- 配置路径 --------------------------
+SOURCE_MD = r"D:\study\competition\LLM_based_IP_Review_Research\Project\2024-09-24_Applicant_Arguments_Remarks_Made_in_an_Amendment_17749934_XML_patentpull.md"
+TARGET_JSON = r"D:\study\competition\LLM_based_IP_Review_Research\Project\PatRe\dataset\PatTimeline_G_Category\cleaned_json_output\Patent_12189863_App_17749934.json"
 
-def find_patents_with_refs_except_last():
-    qualified_patents = []
+def lossless_clean_remarks(text: str) -> str:
+    """
+    无损清洗字符：仅移除Markdown转义、OCR噪声和排版装饰线，严禁改变文字内容和大小写。
+    """
+    # 1. 移除转换工具产生的图像/SVG占位符 (针对此文件可能存在的 SVG 信息)
+    text = re.sub(r"SVG\s*\{EMBED\s*HERE\}[^ \n]*", "", text)
+    
+    # 2. 还原 Markdown 转义 (例如把 \. 还原为 . 方便阅读序号)
+    text = text.replace("\\.", ".").replace("\\_", "_").replace("\\[", "[").replace("\\]", "]")
+    
+    # 3. 修正 OCR 可能产生的符号误匹配 (例如把 @ 还原为 §)
+    text = text.replace(" @ ", " § ")
+    
+    lines = text.splitlines()
+    clean_lines = []
+    
+    # 4. 逐行处理布局杂质
+    for line in lines:
+        stripped = line.strip()
+        # 移除纯装饰性的分割线 (如 ======= 或 -------)
+        if re.match(r"^[=\-\*_ ]{3,}$", stripped):
+            continue
+        # 压缩行内由于对齐产生的多余空格 (保留单个空格)
+        line = re.sub(r"[ \t]{2,}", " ", line)
+        clean_lines.append(line.rstrip())
+    
+    # 5. 段落重组：合并被硬换行切断的法律陈述
+    final_text = ""
+    for line in clean_lines:
+        if not line:
+            if not final_text.endswith("\n\n"):
+                final_text += "\n\n"
+            continue
+        
+        if final_text and not final_text.endswith("\n\n"):
+            # 如果当前行是小写字母开头，或者是句子的延续
+            if re.match(r"^[a-z0-9]", line):
+                final_text += " " + line
+            else:
+                # 如果当前行以大写字母开头，可能是新起的一行，但也可能是上一句的延续
+                # 这里采用较保守的逻辑：如果是常见的法律连接词开头则合并
+                if re.match(r"^(is|of|the|and|by|which|to)\b", line, re.I):
+                    final_text += " " + line
+                else:
+                    final_text += "\n" + line
+        else:
+            final_text += line
+            
+    # 6. 最终清理冗余换行
+    res = re.sub(r'\n{3,}', '\n\n', final_text)
+    return res.strip()
 
-    if not os.path.exists(TARGET_DIR):
-        print(f"❌ 目录不存在: {TARGET_DIR}")
+def update_json_gesture_recognition():
+    if not os.path.exists(SOURCE_MD):
+        print(f"❌ 找不到源 MD 文件: {SOURCE_MD}")
         return
 
-    json_files = [f for f in os.listdir(TARGET_DIR) if f.endswith('.json')]
-    print(f"📊 正在扫描 {len(json_files)} 个 JSON 文件...\n")
+    # 读取原文
+    with open(SOURCE_MD, "r", encoding="utf-8", errors="ignore") as f:
+        md_content = f.read()
 
-    for filename in json_files:
-        filepath = os.path.join(TARGET_DIR, filename)
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            
-            oa_list = data.get("office_actions", [])
-            total_oa = len(oa_list)
+    # 定位 REMARKS 章节 (通常在文件后半段)
+    match = re.search(r"REMARKS\b(.*?)$", md_content, re.S | re.I)
+    raw_remarks = match.group(1) if match else md_content
 
-            # 只有一轮的可能不符合“除了最后一轮都有”的逻辑，这里设定至少有2轮
-            if total_oa < 2:
-                continue
+    # 执行清洗
+    cleaned = lossless_clean_remarks(raw_remarks)
 
-            # 检查前 N-1 轮
-            all_previous_have_refs = True
-            for i in range(total_oa - 1):  # 遍历 0 到 N-2 轮
-                refs = oa_list[i].get("references_cited", [])
-                if not refs: # 如果中间某一轮引文为空
-                    all_previous_have_refs = False
-                    break
-            
-            # 检查最后一轮是否为空（根据你的需求，最后一轮通常是空的）
-            last_oa_empty = len(oa_list[-1].get("references_cited", [])) == 0
+    # 载入并更新 JSON
+    if not os.path.exists(TARGET_JSON):
+        print(f"❌ 找不到目标 JSON 文件: {TARGET_JSON}")
+        return
 
-            if all_previous_have_refs:
-                status = " (最后一轮也是满的)" if not last_oa_empty else " (最后一轮确实为空)"
-                qualified_patents.append({
-                    "filename": filename,
-                    "patent_number": data.get("patent_number"),
-                    "total_oa": total_oa,
-                    "info": status
-                })
+    with open(TARGET_JSON, "r", encoding="utf-8") as f:
+        data = json.load(f)
 
-        except Exception as e:
-            print(f"⚠️ 读取失败 {filename}: {str(e)}")
+    # 精准定位 oa_number 为 1 的条目
+    found = False
+    for oa in data.get("office_actions", []):
+        if str(oa.get("oa_number")) == "1":
+            oa["remarks"] = cleaned
+            found = True
+            print(f"🎯 成功匹配 OA #1 (Gesture Recognition)，正在注入...")
+            break
+    
+    if not found:
+        print("⚠️ 未在 JSON 中找到 oa_number: 1，请确认 JSON 内容。")
+        return
 
-    # 打印结果
-    if qualified_patents:
-        print(f"✅ 找到 {len(qualified_patents)} 个符合条件的专利:")
-        print("-" * 60)
-        for item in qualified_patents:
-            print(f"文件: {item['filename']} | 专利号: {item['patent_number']} | 总OA轮数: {item['total_oa']}{item['info']}")
-    else:
-        print("❌ 未找到符合条件的专利。")
+    # 写回 JSON 文件
+    with open(TARGET_JSON, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ 处理完成！")
+    print(f"📝 注入长度: {len(cleaned)} 字符。")
+    print("-" * 30)
+    print(f"清洗后的内容预览:\n{cleaned[:200]}...")
 
 if __name__ == "__main__":
-    find_patents_with_refs_except_last()
+    update_json_gesture_recognition()

@@ -9,6 +9,9 @@ except Exception:
 
 _STATUTE_RE = re.compile(r"(?:35\\s*U\\.S\\.C\\.?\\s*§?\\s*)?(101|102|103|112)(?:\\([a-z]\\))?", re.IGNORECASE)
 
+_ROUGE_L_SCORER = None
+_BERT_SCORER = None
+
 
 def _extract_json_block(text):
     if not text:
@@ -43,6 +46,8 @@ def extract_disposition(text, json_obj=None):
         status = json_obj.get("claim_status") or json_obj.get("decision")
         if isinstance(status, str):
             s = status.strip().lower()
+            if "apea" in s or "quayle" in s or "ex parte" in s or "restriction requirement" in s:
+                return "procedural_action"
             if "final" in s and "rejection" in s:
                 return "final_rejection"
             if "non" in s and "rejection" in s:
@@ -54,6 +59,8 @@ def extract_disposition(text, json_obj=None):
     if not text:
         return "unknown"
     t = text.lower()
+    if "apea" in t or "quayle action" in t or "ex parte quayle" in t or "restriction requirement" in t:
+        return "procedural_action"
     if "final rejection" in t:
         return "final_rejection"
     if "non-final rejection" in t or "nonfinal rejection" in t:
@@ -200,8 +207,10 @@ def citation_list_match(pred_text, refs_text):
 def rouge_l_f1(pred_text, gt_text):
     if not rouge_scorer or not pred_text or not gt_text:
         return None
-    scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
-    score = scorer.score(gt_text, pred_text)["rougeL"].fmeasure
+    global _ROUGE_L_SCORER
+    if _ROUGE_L_SCORER is None:
+        _ROUGE_L_SCORER = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+    score = _ROUGE_L_SCORER.score(gt_text, pred_text)["rougeL"].fmeasure
     return round(score, 4)
 
 
@@ -219,25 +228,23 @@ def bert_score_f1(pred_text, gt_text):
     if not pred_text or not gt_text:
         return None
     try:
-        from bert_score import score as bert_score
-        _, _, f1 = bert_score([pred_text], [gt_text], lang="en", verbose=False)
+        global _BERT_SCORER
+        if _BERT_SCORER is None:
+            from bert_score import BERTScorer
+            device = None
+            try:
+                import torch
+                device = "cuda" if torch.cuda.is_available() else "cpu"
+            except Exception:
+                device = None
+            kwargs = {"lang": "en", "rescale_with_baseline": True}
+            if isinstance(device, str) and device:
+                kwargs["device"] = device
+            _BERT_SCORER = BERTScorer(**kwargs)
+        _, _, f1 = _BERT_SCORER.score([pred_text], [gt_text])
         return round(float(f1[0]), 4)
     except Exception:
         return None
-
-
-def embed_cosine(pred_text, gt_text):
-    if not pred_text or not gt_text:
-        return None
-    try:
-        from sentence_transformers import SentenceTransformer, util
-        model = SentenceTransformer("all-MiniLM-L6-v2")
-        emb_a = model.encode(pred_text, convert_to_tensor=True)
-        emb_b = model.encode(gt_text, convert_to_tensor=True)
-        return round(float(util.cos_sim(emb_a, emb_b).item()), 4)
-    except Exception:
-        return None
-
 
 def formatting_score(text, task_type):
     if not text:
@@ -245,11 +252,31 @@ def formatting_score(text, task_type):
     task_type = str(task_type or "")
     t = text.lower()
     required = []
+    # Standard USPTO Office Action sections
     if task_type in ("oa", "initial_examination", "response_to_rebuttal") or task_type.startswith("response_to_rebuttal_") or task_type.startswith("initial_examination_"):
-        required = ["detailed action", "conclusion", "claim rejections"]
+        required = ["detailed action", "conclusion", "claim rejections", "35 u.s.c."]
     elif "rebuttal" in task_type:
         required = ["response to office action", "amendment and remarks", "conclusion", "refined claims"]
     if not required:
         return None
     hits = sum(1 for h in required if h in t)
     return round(hits / len(required), 4)
+
+def language_style_score(text):
+    if not text:
+        return None
+    t = str(text).lower()
+    formal_terms = [
+        "hereby", "thereof", "therein", "pursuant to", "under 35 u.s.c.",
+        "claim", "claims", "rejected", "allowance", "non-final", "final rejection",
+        "applicant", "office action", "prior art", "wherein", "comprising"
+    ]
+    informal_terms = [
+        "i think", "maybe", "kind of", "sort of", "you know", "let's", "can't", "won't",
+        "sorry", "apologize", "i cannot", "i can't", "awesome", "cool"
+    ]
+    formal_hits = sum(1 for term in formal_terms if term in t)
+    informal_hits = sum(1 for term in informal_terms if term in t)
+    score = 6.0 + min(4.0, formal_hits * 0.4) - min(4.0, informal_hits * 1.0)
+    score = max(1.0, min(10.0, score))
+    return round(score, 4)

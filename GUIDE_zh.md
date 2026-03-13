@@ -12,26 +12,27 @@ pip install -r requirements.txt
 *(注：如果根目录没有 requirements.txt，请确保安装了 `openai`, `yaml`, `rank_bm25`, `tqdm` 等常用库)*
 
 ### 1.2 API 配置
-编辑 [eval_config.yaml](file:///d:/study/competition/LLM_based_IP_Review_Research/Project/PatRe/config/eval_config.yaml) 文件：
-- `api_key`: 填入您的 LLM API Key。
-- `base_url`: 填入 API 基础路径。
-- `backend`: 选择后端类型（`api`, `ollama`, `vllm` 等）。
+建议使用环境变量配置 API（避免把 key 写进配置文件）：
+- OPENAI_API_KEY：你的 API Key
+- OPENAI_BASE_URL：https://api.chatanywhere.tech/v1
+
+config/eval_config.yaml 主要用于设置数据路径、模型名与运行参数；不建议在其中硬编码 api_key。
 
 ## 2. 核心功能运行
 
 ### 2.1 运行实验 (run_exp.py)
 这是项目的主要入口脚本，支持多种模式：
 
-- **单任务运行 (Zero-Shot)**:
+- **单任务运行**:
   ```bash
-  python run_exp.py --retrieval oracle_summary
+  python run_exp.py --task oa --retrieval oracle_summary
   ```
 
 - **多轮交互模拟 (Multi-round)**:
   ```bash
-  python run_exp.py --run_multiround --retrieval bm25_retrieved
+  python run_exp.py --task both --retrieval bm25_retrieved
   ```
-  该模式会根据数据中真实的 Rebuttal 轮数动态运行，并按照专利编号组织输出结果。
+  该模式会根据数据中轮次交替运行 OA 与 Rebuttal，并按专利编号组织输出结果。
 
 - **指定检索模式**:
   - `no_ref`: 不使用参考资料。
@@ -44,7 +45,7 @@ pip install -r requirements.txt
 
 ## 3. 结果查看
 
-实验结果将保存在 `results/` 目录下，结构如下：
+实验结果将保存在 `results/` 目录下（顶层目录名包含模型/任务/检索/IPC/时间戳），结构如下：
 ```text
 results/
 └── patent_[ID]_App/               # 按专利 ID 分组
@@ -64,4 +65,4 @@ results/
 3. `git push origin main`
 
 ---
-*如有疑问，请参考 [README.md](file:///d:/study/competition/LLM_based_IP_Review_Research/Project/PatRe/README.md) 或联系项目负责人。*
+提示：README.md 是最新的、可直接发布到 GitHub 的入口文档；本 GUIDE 用于补充说明，若与 README 冲突，以 README 为准。

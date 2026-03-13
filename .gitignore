@@ -131,6 +131,7 @@ dmypy.json
 *.swo
 *~
 .DS_Store
+.qoder/
 
 # Data files
 *.csv
@@ -163,8 +164,13 @@ temp/
 # ==============================================================================
 
 # Ignore all patent datasets and reference pools
-dataset/
-ReferencePool*/
+/data*/
+/dataset*/
+/ReferencePool*/
+/Claims*/
+dataset.zip
+
+
 
 # Specifically ignore JSON files which contain the scraped patent content
 *.json
@@ -175,6 +181,7 @@ ReferencePool*/
 results/
 exp_results/
 sft/
+/analysis_output/
 
 # Ignore any local configuration with API keys
 config.yaml
@@ -185,3 +192,11 @@ config/secrets.yaml
 # Spider related bypass
 spider/
 spider.zip
+
+# Optional utilities (not required for core pipeline)
+# Keep repo clean: ignore most tools, whitelist a few referenced in README
+tools/**
+!tools/regenerate_scores_summary.py
+!tools/aggregate_scores.py
+!tools/set_testset_path.py
+!tools/test_data_aligner.py

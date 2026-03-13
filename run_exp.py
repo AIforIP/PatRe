@@ -10,14 +10,15 @@ from src.evaluator import PatentEvaluator
 from src.utils import setup_logger
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="PatRe NIPS-2026 Evaluation Engine")
+    parser = argparse.ArgumentParser(description="PatRe")
     parser.add_argument("--config", type=str, default="config/eval_config.yaml")
     # 允许通过命令行指定只跑某一�?IPC 分类，例�?--ipc A
     parser.add_argument("--ipc", type=str, help="Run specific IPC category (A-H)")
+    parser.add_argument("--num_samples", type=int, help="Override task_settings.num_samples")
     # 覆盖模型
     parser.add_argument("--model", type=str, help="Specific model to test")
 
-    # 任务类型：只保留三种（oa / rebuttal / both），默认 both
+    # 任务类型：三种（oa / rebuttal / both），默认 both
     parser.add_argument(
         "--task",
         type=str,
@@ -32,13 +33,12 @@ def parse_args():
     # 覆盖检索模�?
     parser.add_argument("--retrieval", type=str, choices=["no_ref", "oracle_summary", "bm25_retrieved"], help="Override retrieval setting")
     # 新增评估指标选项
-    parser.add_argument("--run_point_wise", action="store_true", help="Run point-wise evaluation against ground truth")
-    parser.add_argument("--run_pairwise", action="store_true", help="Run pairwise comparison between models")
-    parser.add_argument("--run_claim_level", action="store_true", help="Run claim-level evaluation")
-    parser.add_argument("--run_claim_rediscovery", action="store_true", help="Run claim-centric rediscovery evaluation")
-    parser.add_argument("--run_extra_metrics", action="store_true", help="Run additional rule-based metrics")
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
-    parser.add_argument("--generate_only", action="store_true", help="Only generate outputs, skip evaluation")
+    mode_group = parser.add_mutually_exclusive_group()
+    mode_group.add_argument("--generate_only", action="store_true", help="Only generate outputs, skip evaluation")
+    mode_group.add_argument("--eval_only", action="store_true", help="Only evaluate existing results, skip generation")
+    parser.add_argument("--results_dir", type=str, help="Results directory for eval-only mode")
+    parser.add_argument("--eval_limit", type=int, default=0, help="Max rounds to evaluate in eval-only mode (0=all)")
     return parser.parse_args()
 
 def analyze_dataset_rounds(config):
@@ -150,7 +150,199 @@ def _build_scores_table(task_key, scores):
             table[label] = val
 
     return table
-def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
+
+
+def _load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _round_task_from_name(name):
+    # Expected like: round_1_oa or round_2_rebuttal
+    parts = name.split("_")
+    if len(parts) >= 3:
+        return parts[2].lower()
+    return ""
+
+
+def _build_result_entry(patent_id, round_dir, ctx):
+    ai_input = ctx.get("ai_input", {})
+    ai_output = ctx.get("ai_output", "")
+    office_action = ctx.get("office_action", "")
+    ground_truth = ctx.get("ground_truth", "")
+    refs = ai_input.get("refs", "")
+
+    # Fall back to files if not present in context.json
+    if not ai_output:
+        ai_txt = os.path.join(round_dir, "ai_output.txt")
+        if os.path.exists(ai_txt):
+            with open(ai_txt, "r", encoding="utf-8") as f:
+                ai_output = f.read()
+
+    task = ai_input.get("task_type") or _round_task_from_name(os.path.basename(round_dir))
+    round_name = os.path.basename(round_dir)
+    round_no = 0
+    if round_name.startswith("round_"):
+        try:
+            round_no = int(round_name.split("_")[1])
+        except Exception:
+            round_no = 0
+
+    return {
+        "_round_dir": round_dir,
+        "patent_id": patent_id,
+        "round_info": {
+            "task": task,
+            "round_number": round_no,
+            "exam_phase": "eval_only",
+            "granularity": ai_input.get("granularity", "full_text"),
+            "claim_number": "all",
+        },
+        "ai_exam": {
+            "input": {
+                "claims": ai_input.get("claims", ""),
+                "refs": refs,
+                "task_type": task,
+                "retrieval_setting": ai_input.get("retrieval_setting", ""),
+                "prosecution_history": ai_input.get("prosecution_history", "N/A"),
+                "granularity": ai_input.get("granularity", "full_text"),
+            },
+            "output": ai_output,
+            "available_info": list(ai_input.keys()),
+            "restricted_info": ctx.get("restricted_info", []),
+        },
+        "evaluation_context": {
+            "full_context": {
+                "claims": ai_input.get("claims", ""),
+                "refs": refs,
+                "office_action": office_action,
+                "rebuttal_history": ctx.get("rebuttal_history", "N/A"),
+            },
+            "ground_truth": ground_truth,
+            "citations_gt": ctx.get("citations_gt", []),
+            "input_refs_preview": (refs[:200] + "...") if isinstance(refs, str) else "",
+        },
+    }
+
+
+def _save_scores(round_dir, eval_result):
+    out_dir = round_dir
+    eval_subdir = os.path.join(round_dir, "eval")
+    if os.path.isdir(eval_subdir):
+        out_dir = eval_subdir
+
+    scores_path = os.path.join(out_dir, "scores.json")
+    payload = {
+        "total_score": eval_result.get("total_score", 0),
+        "scores": eval_result.get("scores", {}),
+        "llm_total_score": eval_result.get("judge_total_score", None),
+        "llm_scores": eval_result.get("judge_scores", {}),
+        "llm_system_prompt": eval_result.get("judge_system_prompt", ""),
+        "llm_user_prompt": eval_result.get("judge_user_prompt", ""),
+        "llm_attempts": eval_result.get("judge_attempts", []),
+        "llm_parsed_output": eval_result.get("judge_parsed_output", {}),
+        "llm_justification": eval_result.get("judge_justification", ""),
+        "llm_justification_details": eval_result.get("judge_justification_details", {}),
+        "llm_evaluation_report": eval_result.get("judge_evaluation_report", ""),
+        "justification": eval_result.get("justification", ""),
+        "evaluation_report": eval_result.get("evaluation_report", ""),
+        "justification_details": eval_result.get("justification_details", {}),
+        "raw_judge_output": eval_result.get("raw_judge_output", ""),
+        "metric_details": eval_result.get("metric_details", {}),
+        "rule_scores": eval_result.get("rule_scores", {}),
+    }
+    with open(scores_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+
+    # Lightweight summary for quick browsing
+    summary_path = os.path.join(out_dir, "scores_summary.json")
+    task = eval_result.get("round_info", {}).get("task", "")
+    percent_metrics = {
+        "disposition_accuracy": 100.0,
+        "statute_precision": 100.0,
+        "citation_accuracy": 10.0,
+        "point_wise_coverage": 10.0,
+    }
+    oa_schema = [
+        "disposition_accuracy",
+        "statute_precision",
+        "citation_accuracy",
+        "bleu",
+        "rouge_l",
+        "bert_score",
+        "formatting_rule",
+        "accuracy",
+        "clarity",
+        "language_style",
+        "constructiveness",
+        "completeness",
+    ]
+    rebuttal_schema = [
+        "point_wise_coverage",
+        "bleu",
+        "rouge_l",
+        "bert_score",
+        "formatting_rule",
+        "accuracy",
+        "clarity",
+        "language_style",
+        "constructiveness",
+        "completeness",
+    ]
+    name_map_oa = {
+        "disposition_accuracy": "Dispositional Accuracy",
+        "statute_precision": "Statute Precision",
+        "citation_accuracy": "Citation Accuracy",
+        "bleu": "BLEU",
+        "rouge_l": "ROUGE-L",
+        "bert_score": "BERTScore",
+        "formatting_rule": "Formatting",
+        "accuracy": "Accuracy",
+        "clarity": "Clarity",
+        "language_style": "Language Style",
+        "constructiveness": "Constructiveness",
+        "completeness": "Completeness",
+    }
+    name_map_rebuttal = {
+        "point_wise_coverage": "Point-wise Coverage",
+        "bleu": "BLEU",
+        "rouge_l": "ROUGE-L",
+        "bert_score": "BERTScore",
+        "formatting_rule": "Formatting",
+        "accuracy": "Accuracy",
+        "clarity": "Clarity",
+        "language_style": "Language Style",
+        "constructiveness": "Constructiveness",
+        "completeness": "Completeness",
+    }
+    schema = rebuttal_schema if task == "rebuttal" else oa_schema
+    name_map = name_map_rebuttal if task == "rebuttal" else name_map_oa
+    src_scores = eval_result.get("scores", {}) or {}
+    summary_scores = {}
+    for key in schema:
+        out_key = name_map.get(key, key)
+        summary_scores[out_key] = None
+        if key == "bert_score":
+            val = src_scores.get("bert_score", src_scores.get("bert_score_f1", None))
+        elif key == "citation_accuracy":
+            val = src_scores.get("citation_accuracy", src_scores.get("reference_citation_accuracy", None))
+        else:
+            val = src_scores.get(key, None)
+
+        if not isinstance(val, (int, float)) or isinstance(val, bool):
+            continue
+        if key in percent_metrics:
+            summary_scores[out_key] = f"{val * percent_metrics[key]:.2f}%"
+        else:
+            summary_scores[out_key] = val
+    summary = {
+        "task_type": task,
+        "total_score": eval_result.get("total_score", 0),
+        "scores": summary_scores,
+    }
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, indent=2, ensure_ascii=False)
+def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, write_scores=True):
     """Save results grouped by patent, appending per-round outputs."""
     # 将原始结果和评估结果合并
     oa_schema = [
@@ -160,28 +352,28 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
         "bleu",
         "rouge_l",
         "bert_score",
-        "embed_cos",
         "formatting_rule",
         "accuracy",
         "clarity",
+        "language_style",
         "constructiveness",
         "completeness",
-        "quality",
     ]
     rebuttal_schema = [
         "point_wise_coverage",
         "bleu",
         "rouge_l",
         "bert_score",
-        "embed_cos",
         "formatting_rule",
         "accuracy",
         "clarity",
+        "language_style",
         "constructiveness",
         "completeness",
-        "quality",
     ]
-    for raw_result, eval_result in zip(raw_results, eval_report):
+    eval_report = eval_report or []
+    for idx, raw_result in enumerate(raw_results or []):
+        eval_result = eval_report[idx] if idx < len(eval_report) and isinstance(eval_report[idx], dict) else {}
         patent_id = raw_result['patent_id']
         patent_dir = os.path.join(exp_dir, f"patent_{patent_id}")
         os.makedirs(patent_dir, exist_ok=True)
@@ -197,11 +389,17 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             task_label = "rebuttal"
         else:
             task_label = "other"
-        round_dir = os.path.join(patent_dir, f"round_{round_num}_{task_label}")
-        os.makedirs(round_dir, exist_ok=True)
+        # Better organized round folder with subdirectories
+        round_dir = os.path.join(patent_dir, f"round_{round_num:02d}_{task_label}")
+        input_dir = os.path.join(round_dir, "input")
+        output_dir = os.path.join(round_dir, "output")
+        eval_dir = os.path.join(round_dir, "eval")
+        os.makedirs(input_dir, exist_ok=True)
+        os.makedirs(output_dir, exist_ok=True)
+        os.makedirs(eval_dir, exist_ok=True)
         
-        # 1. input.json (AI 实际输入)
-        exam_input_path = os.path.join(round_dir, "input.json")
+        # 1. input/ai_input.json (AI 实际输入)
+        exam_input_path = os.path.join(input_dir, "ai_input.json")
         with open(exam_input_path, 'w', encoding='utf-8') as f:
             ai_input_data = raw_result['ai_exam']['input'].copy()
             # Persist OA for traceability (not used by the model directly).
@@ -209,34 +407,48 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             if oa_text:
                 ai_input_data["office_action"] = oa_text
             json.dump(ai_input_data, f, indent=2, ensure_ascii=False)
-        # 2. ai_output.txt (AI生成的答�?
-        exam_output_path = os.path.join(round_dir, "ai_output.txt")
+        # 2. output/ai_output.txt (AI生成的答案)
+        exam_output_path = os.path.join(output_dir, "ai_output.txt")
         with open(exam_output_path, 'w', encoding='utf-8') as f:
             f.write(raw_result['ai_exam']['output'])
         
-        # 3. context.json (评估上下�?
-        eval_context_path = os.path.join(round_dir, "context.json")
+        # 3. eval/context.json (评估上下文)
+        eval_context_path = os.path.join(eval_dir, "context.json")
         with open(eval_context_path, 'w', encoding='utf-8') as f:
             context_data = {
                 "ai_input": raw_result['ai_exam']['input'],
                 "ai_output": raw_result['ai_exam']['output'],
                 "ground_truth": raw_result['evaluation_context'].get("ground_truth", ""),
                 "restricted_info": raw_result['ai_exam'].get('restricted_info', []),
-                "office_action": raw_result.get('evaluation_context', {}).get('full_context', {}).get('office_action', "")
+                "office_action": raw_result.get('evaluation_context', {}).get('full_context', {}).get('office_action', ""),
+                "rebuttal_history": raw_result.get('evaluation_context', {}).get('full_context', {}).get('rebuttal_history', "N/A"),
+                "citations_gt": raw_result.get('evaluation_context', {}).get("citations_gt", []),
             }
             json.dump(context_data, f, indent=2, ensure_ascii=False)
         
-        # 4. scores.json (评分结果)
-        scores_path = os.path.join(round_dir, "scores.json")
+        if not write_scores:
+            continue
+
+        # 4. eval/scores.json (评分结果)
+        scores_path = os.path.join(eval_dir, "scores.json")
         with open(scores_path, 'w', encoding='utf-8') as f:
             score_data = {
                 "total_score": eval_result.get('total_score', 0),
                 "scores": eval_result.get('scores', {}),
+                "llm_total_score": eval_result.get('judge_total_score', None),
+                "llm_scores": eval_result.get('judge_scores', {}),
+                "llm_system_prompt": eval_result.get('judge_system_prompt', ""),
+                "llm_user_prompt": eval_result.get('judge_user_prompt', ""),
+                "llm_attempts": eval_result.get('judge_attempts', []),
+                "llm_parsed_output": eval_result.get('judge_parsed_output', {}),
+                "llm_justification": eval_result.get('judge_justification', ""),
+                "llm_justification_details": eval_result.get('judge_justification_details', {}),
+                "llm_evaluation_report": eval_result.get('judge_evaluation_report', ""),
                 "justification": eval_result.get('justification', ""),
                 "justification_details": eval_result.get('justification_details', {}),
                 "raw_judge_output": eval_result.get('raw_judge_output', ""),
-                "rediscovery_details": eval_result.get('rediscovery_details', {}),
-                "metric_details": eval_result.get('metric_details', {})
+                "metric_details": eval_result.get('metric_details', {}),
+                "rule_scores": eval_result.get('rule_scores', {})
             }
             json.dump(score_data, f, indent=2, ensure_ascii=False)
 
@@ -250,26 +462,24 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
             "bleu": "BLEU",
             "rouge_l": "ROUGE-L",
             "bert_score": "BERTScore",
-            "embed_cos": "EmbedCos",
-            "formatting_rule": "formatting_",
+            "formatting_rule": "Formatting",
             "accuracy": "Accuracy",
             "clarity": "Clarity",
+            "language_style": "Language Style",
             "constructiveness": "Constructiveness",
             "completeness": "Completeness",
-            "quality": "Quality",
         }
         name_map_rebuttal = {
             "point_wise_coverage": "Point-wise Coverage",
             "bleu": "BLEU",
             "rouge_l": "ROUGE-L",
             "bert_score": "BERTScore",
-            "embed_cos": "EmbedCos",
-            "formatting_rule": "formatting_",
+            "formatting_rule": "Formatting",
             "accuracy": "Accuracy",
             "clarity": "Clarity",
+            "language_style": "Language Style",
             "constructiveness": "Constructiveness",
             "completeness": "Completeness",
-            "quality": "Quality",
             "disposition_accuracy": "Dispositional Accuracy",
             "statute_precision": "Statute Precision",
             "citation_accuracy": "Citation Accuracy",
@@ -286,8 +496,6 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
         for key in schema:
             if key == "bert_score":
                 val = src_scores.get("bert_score", src_scores.get("bert_score_f1", None))
-            elif key == "embed_cos":
-                val = src_scores.get("embed_cos", src_scores.get("embed_cosine", None))
             elif key == "citation_accuracy":
                 val = src_scores.get("citation_accuracy", src_scores.get("reference_citation_accuracy", None))
             else:
@@ -298,14 +506,13 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir):
                 summary_scores[out_key] = f"{val * percent_metrics[key]:.2f}%"
             else:
                 summary_scores[out_key] = val
-        summary_path = os.path.join(round_dir, "scores_summary.json")
+        summary_path = os.path.join(eval_dir, "scores_summary.json")
         with open(summary_path, 'w', encoding='utf-8') as f:
             json.dump(
                 {
                     "task_type": task_key,
                     "total_score": eval_result.get('total_score', 0),
                     "scores": summary_scores,
-                    "scores_table": _build_scores_table(task_key, eval_result.get('scores', {}))
                 },
                 f,
                 indent=2,
@@ -464,6 +671,8 @@ def main():
     ipc_filter = args.ipc.strip().upper() if args.ipc else None
     if ipc_filter:
         config.setdefault('task_settings', {})['ipc_filter'] = ipc_filter
+    if args.num_samples is not None:
+        config.setdefault('task_settings', {})['num_samples'] = int(args.num_samples)
     
     # 处理命令行参数覆�?
     if args.test_mode:
@@ -473,8 +682,213 @@ def main():
     if args.backend:
         config['models']['backend'] = args.backend
     
-    auto_extra = bool(config.get('task_settings', {}).get('auto_run_extra_metrics', False))
-    auto_rediscovery = bool(config.get('task_settings', {}).get('auto_run_claim_rediscovery', False))
+    auto_extra = bool(config.get('task_settings', {}).get('auto_run_extra_metrics', True))
+
+    if args.eval_only:
+        if not args.results_dir:
+            raise SystemExit("--results_dir is required when --eval_only is set")
+        if not os.path.exists(args.results_dir):
+            raise SystemExit(f"results_dir not found: {args.results_dir}")
+
+        config.setdefault('task_settings', {})
+        models_cfg = config.get("models", {})
+        if "active_model" not in models_cfg:
+            # Evaluation should use judge_model; backend still expects active_model.
+            models_cfg["active_model"] = models_cfg.get("judge_model", "")
+            config["models"] = models_cfg
+
+        logger = setup_logger(args.results_dir)
+        engine = PatentEvaluator(config, logger)
+
+        dataset_by_pid = None
+        def _ensure_dataset_loaded():
+            nonlocal dataset_by_pid
+            if dataset_by_pid is not None:
+                return
+            dataset_by_pid = {}
+            if not os.path.exists(test_set_path):
+                return
+            with open(test_set_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    if not line or not line.strip():
+                        continue
+                    s = line.lstrip()
+                    if s.startswith("//"):
+                        continue
+                    try:
+                        item = json.loads(line)
+                    except Exception:
+                        continue
+                    pid = str(item.get("id", "")).strip()
+                    if not pid:
+                        continue
+                    dataset_by_pid.setdefault(pid, []).append(item)
+
+        def _infer_round_from_dir_name(round_dir_name):
+            parts = str(round_dir_name or "").split("_")
+            if len(parts) >= 3 and parts[0] == "round":
+                try:
+                    return int(parts[1]), str(parts[2]).lower()
+                except Exception:
+                    return 0, ""
+            return 0, ""
+
+        def _extract_from_item(item, key):
+            gt = item.get("ground_truth", {}) if isinstance(item, dict) else {}
+            inp = item.get("input", {}) if isinstance(item, dict) else {}
+            if key == "claims":
+                v = inp.get("claims", "")
+                return v if isinstance(v, str) else ""
+            if key == "office_action":
+                for k in ("office_action",):
+                    v = inp.get(k, "")
+                    if isinstance(v, str) and v.strip():
+                        return v
+                for k in ("oa_text", "next_oa_text"):
+                    v = gt.get(k, "")
+                    if isinstance(v, str) and v.strip():
+                        return v
+                return ""
+            if key == "ground_truth_oa":
+                v = gt.get("oa_text", "")
+                return v if isinstance(v, str) else ""
+            if key == "ground_truth_rebuttal":
+                v = gt.get("rebuttal_text", "")
+                return v if isinstance(v, str) else ""
+            if key == "rebuttal_history":
+                v = inp.get("rebuttal", "N/A")
+                return v if isinstance(v, str) else "N/A"
+            return ""
+
+        def _build_ctx_from_dataset(patent_id, round_dir_name, has_both_tasks):
+            _ensure_dataset_loaded()
+            items = (dataset_by_pid or {}).get(patent_id) if dataset_by_pid is not None else None
+            if not items:
+                return None
+            round_no, task = _infer_round_from_dir_name(round_dir_name)
+            if round_no <= 0 or task not in ("oa", "rebuttal"):
+                return None
+
+            if has_both_tasks:
+                if task == "oa":
+                    idx = (round_no - 1) // 2
+                else:
+                    idx = (round_no - 2) // 2
+            else:
+                idx = round_no - 1
+
+            if idx < 0 or idx >= len(items):
+                return None
+
+            item = items[idx]
+            claims = _extract_from_item(item, "claims")
+            office_action = _extract_from_item(item, "office_action")
+            rebuttal_history = _extract_from_item(item, "rebuttal_history")
+            if task == "rebuttal":
+                ground_truth = _extract_from_item(item, "ground_truth_rebuttal") or "N/A"
+            else:
+                ground_truth = _extract_from_item(item, "ground_truth_oa") or "N/A"
+            gt_citations = item.get("ground_truth", {}).get("citations_gt", [])
+            if not isinstance(gt_citations, list):
+                gt_citations = []
+
+            retrieval_setting = config.get("active_settings", {}).get("retrieval_setting", "")
+            ai_input = {
+                "claims": claims,
+                "refs": "",
+                "task_type": task,
+                "retrieval_setting": retrieval_setting,
+                "prosecution_history": "N/A",
+                "granularity": "full_text",
+            }
+            return {
+                "ai_input": ai_input,
+                "office_action": office_action,
+                "ground_truth": ground_truth,
+                "rebuttal_history": rebuttal_history,
+                "citations_gt": gt_citations,
+                "restricted_info": [],
+            }
+
+        ipc_allowed = None
+        if ipc_filter:
+            ipc_allowed = set()
+            if os.path.exists(test_set_path):
+                try:
+                    with open(test_set_path, "r", encoding="utf-8") as f:
+                        for line in f:
+                            if not line or not line.strip():
+                                continue
+                            item = json.loads(line)
+                            pid = str(item.get("id", "")).strip()
+                            ipc = str(item.get("meta", {}).get("ipc", "")).strip().upper()
+                            if pid and ipc == ipc_filter:
+                                ipc_allowed.add(pid)
+                except Exception:
+                    ipc_allowed = None
+
+        grouped = {}
+        scanned_rounds = 0
+        base_name = os.path.basename(os.path.normpath(args.results_dir))
+        if base_name.startswith("patent_"):
+            patent_dirs = [(base_name.replace("patent_", ""), args.results_dir)]
+        else:
+            patent_dirs = []
+            for name in os.listdir(args.results_dir):
+                if not name.startswith("patent_"):
+                    continue
+                patent_dir = os.path.join(args.results_dir, name)
+                if not os.path.isdir(patent_dir):
+                    continue
+                patent_id = name.replace("patent_", "")
+                patent_dirs.append((patent_id, patent_dir))
+
+        for patent_id, patent_dir in patent_dirs:
+            if ipc_allowed is not None and patent_id not in ipc_allowed:
+                continue
+            round_names = [n for n in os.listdir(patent_dir) if os.path.isdir(os.path.join(patent_dir, n))]
+            has_both_tasks = any("_rebuttal" in n for n in round_names) and any("_oa" in n for n in round_names)
+            for round_name in round_names:
+                round_dir = os.path.join(patent_dir, round_name)
+                ctx_path = os.path.join(round_dir, "eval", "context.json")
+                if not os.path.exists(ctx_path):
+                    ctx_path = os.path.join(round_dir, "context.json")
+                ctx = None
+                if os.path.exists(ctx_path):
+                    ctx = _load_json(ctx_path)
+                else:
+                    ctx = _build_ctx_from_dataset(patent_id, round_name, has_both_tasks)
+                    if isinstance(ctx, dict):
+                        ai_txt = os.path.join(round_dir, "ai_output.txt")
+                        if os.path.exists(ai_txt):
+                            with open(ai_txt, "r", encoding="utf-8") as f:
+                                ctx["ai_output"] = f.read()
+                if not isinstance(ctx, dict):
+                    continue
+                res = _build_result_entry(patent_id, round_dir, ctx)
+                task = res.get("round_info", {}).get("task", "")
+                if args.task != "both" and task != args.task:
+                    continue
+                grouped.setdefault(task, []).append(res)
+                scanned_rounds += 1
+                if args.eval_limit and scanned_rounds >= int(args.eval_limit):
+                    break
+            if args.eval_limit and scanned_rounds >= int(args.eval_limit):
+                break
+
+        for task, results in grouped.items():
+            if not results:
+                continue
+            config['task_settings']['current_task'] = task
+            # Evaluate one-by-one so each result is written immediately
+            for res in results:
+                scored = engine.run_scoring([res])
+                if auto_extra:
+                    scored = engine.run_additional_metrics(scored)
+                _save_scores(scored[0]["_round_dir"], scored[0])
+
+        logger.info("Eval-only complete.")
+        return
 
     # 获取命名配置
     naming_cfg = config.get('experiment_naming', {})
@@ -514,19 +928,20 @@ def main():
     for model_idx, model_name in enumerate(models_to_run, start=1):
         config['models']['active_model'] = model_name
         timestamp = datetime.now().strftime(timestamp_format)
-        if use_academic_format:
-            # 学术规范命名：模型_多轮专利审查_时间�?
-            multiround_exp_dir = os.path.join(config['paths']['results'], f"{model_name}_multiround_patent_review_{timestamp}")
-        else:
-            # 原始命名方式
-            multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_{model_name}_{timestamp}")
-        if not include_model_name:
-            if use_academic_format:
-                multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_patent_review_{timestamp}")
-            else:
-                multiround_exp_dir = os.path.join(config['paths']['results'], f"multiround_{timestamp}")
-            if len(models_to_run) > 1:
-                multiround_exp_dir = f"{multiround_exp_dir}_run{model_idx}"
+        tm = config.get('active_settings', {}).get('test_mode', 'zero_shot')
+        retr = config.get('active_settings', {}).get('retrieval_setting', 'oracle_summary')
+        task_tag = args.task
+        ipc_tag = ipc_filter if ipc_filter else "ALL"
+        def _safe(s):
+            return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in str(s))
+        parts = ["PatRe"]
+        if include_model_name:
+            parts.append(_safe(model_name))
+        parts.extend([_safe(task_tag), f"tm-{_safe(tm)}", f"ret-{_safe(retr)}", f"ipc-{_safe(ipc_tag)}", timestamp])
+        folder_name = "_".join(parts)
+        multiround_exp_dir = os.path.join(config['paths']['results'], folder_name)
+        if len(models_to_run) > 1:
+            multiround_exp_dir = f"{multiround_exp_dir}_run{model_idx}"
         os.makedirs(multiround_exp_dir, exist_ok=True)
         
         logger = setup_logger(multiround_exp_dir)
@@ -567,20 +982,26 @@ def main():
                     raw = engine.run_batch()
                     for r in raw:
                         r['round_info']['round_number'] = round_no
+                    scoring_ok = False
                     if args.generate_only:
                         report = [{} for _ in raw]
                     else:
-                        report = engine.run_scoring(raw)
-                        if args.run_claim_rediscovery or auto_rediscovery:
-                            report = engine.run_claim_rediscovery_evaluation(report)
-                        if args.run_extra_metrics or auto_extra:
-                            report = engine.run_additional_metrics(report)
-                    _save_patent_organized_results(raw, report, config, multiround_exp_dir)
+                        try:
+                            report = engine.run_scoring(raw)
+                            if auto_extra:
+                                report = engine.run_additional_metrics(report)
+                            scoring_ok = True
+                        except Exception as e:
+                            logger.warning(f"Scoring failed; saving generation only. Error: {e}")
+                            report = [{} for _ in raw]
+                            scoring_ok = False
+                    _save_patent_organized_results(raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok))
                     
-                    for r, e in zip(raw, report):
-                        pid = r['patent_id']
-                        if pid not in all_results_map: all_results_map[pid] = []
-                        all_results_map[pid].append(e)
+                    if not args.generate_only and scoring_ok:
+                        for r, e in zip(raw, report):
+                            pid = r['patent_id']
+                            if pid not in all_results_map: all_results_map[pid] = []
+                            all_results_map[pid].append(e)
 
             # 2. Applicant Round (Rebuttal)
             if args.task in ("rebuttal", "both"):
@@ -622,23 +1043,27 @@ def main():
                     raw = engine.run_batch()
                     for r in raw:
                         r['round_info']['round_number'] = round_no
+                    scoring_ok = False
                     if args.generate_only:
                         report = [{} for _ in raw]
                     else:
-                        report = engine.run_scoring(raw)
-                        if args.run_claim_rediscovery or auto_rediscovery:
-                            report = engine.run_claim_rediscovery_evaluation(report)
-                        if args.run_extra_metrics or auto_extra:
-                            report = engine.run_additional_metrics(report)
-                    _save_patent_organized_results(raw, report, config, multiround_exp_dir)
+                        try:
+                            report = engine.run_scoring(raw)
+                            if auto_extra:
+                                report = engine.run_additional_metrics(report)
+                            scoring_ok = True
+                        except Exception as e:
+                            logger.warning(f"Scoring failed; saving generation only. Error: {e}")
+                            report = [{} for _ in raw]
+                            scoring_ok = False
+                    _save_patent_organized_results(raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok))
                     
-                    for r, e in zip(raw, report):
-                        pid = r['patent_id']
-                        if pid not in all_results_map: all_results_map[pid] = []
-                        all_results_map[pid].append(e)
+                    if not args.generate_only and scoring_ok:
+                        for r, e in zip(raw, report):
+                            pid = r['patent_id']
+                            if pid not in all_results_map: all_results_map[pid] = []
+                            all_results_map[pid].append(e)
 
-        # 生成汇�?
-        _generate_summaries(multiround_exp_dir, grouped_data, all_results_map, config)
         logger.info(f"�?Multiround finished. Results: {multiround_exp_dir}")
 
 

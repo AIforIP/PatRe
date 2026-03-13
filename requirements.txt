@@ -1,15 +1,16 @@
-openai
-pyyaml
+openai>=1.0.0
+PyYAML
 tqdm
-requests
 numpy
-pandas
-rank_bm25
+torch
 rouge-score
 sacrebleu
 bert-score
-sentence-transformers
-torch
-scikit-learn
-nltk
-re-search
+# ---- Optional utilities for analysis (not required to run core pipeline)
+# rank-bm25 is now required for official BM25 retrieval
+rank-bm25
+# pandas
+# scikit-learn
+# sentence-transformers
+# matplotlib
+# seaborn
