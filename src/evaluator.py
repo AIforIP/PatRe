@@ -45,7 +45,7 @@ class PatentEvaluator:
         if ipc_filter:
             ipc_filter = str(ipc_filter).upper()
         if not os.path.exists(path):
-            self.logger.error(f"?? {path}")
+            self.logger.error(f"Test set path not found: {path}")
             return []
         with open(path, 'r', encoding='utf-8') as f:
             for line in f:
@@ -227,18 +227,17 @@ class PatentEvaluator:
             return mapping.get(retrieval_setting, "response_to_rebuttal")
         return "response_to_rebuttal"
     def run_batch(self):
-        """?- """
         results = []
         task_key = self.config['task_settings']['current_task']
         granularity = self.config.get('active_settings', {}).get('granularity', "full_text")
         
-        # --- ?---
+
         if task_key in ("oa",) or task_key in self.templates.get("Office_Action_Generation", {}):
             root_key = "Office_Action_Generation"
         elif task_key in self.templates.get("Rebuttal_Generation", {}):
             root_key = "Rebuttal_Generation"
         else:
-            self.logger.error(f"?: {task_key}")
+            self.logger.error(f"Unknown task key: {task_key}")
             return []
         
         self.logger.info(f" Starting batch inference for {len(self.dataset)} samples...")
@@ -246,7 +245,7 @@ class PatentEvaluator:
         for item in tqdm(self.dataset, desc="Generating"):
             template_task = self._resolve_template_task(task_key, item)
             if template_task not in self.templates.get(root_key, {}):
-                self.logger.error(f"??{root_key} : {template_task}")
+                self.logger.error(f"Template not found in {root_key}: {template_task}")
                 return []
             template_config = self.templates[root_key][template_task]
 
@@ -296,7 +295,7 @@ class PatentEvaluator:
                     if "{reference_summaries}" in template_text:
                         user_prompt += enforce_instruction
                 except KeyError as e:
-                    self.logger.error(f"?Prompt ? {e}")
+                    self.logger.error(f"Prompt  {e}")
                     raise e
 
                 # 3.
@@ -321,7 +320,6 @@ class PatentEvaluator:
 
                 gt_citations = item.get("ground_truth", {}).get("citations_gt", [])
 
-                # ?
                 result_entry = {
                     "patent_id": item['id'],
                     "round_info": {
@@ -353,7 +351,7 @@ class PatentEvaluator:
         return results
 
     def _get_round_number(self, task_key):
-        """"""
+
         if task_key == "oa":
             return 1
         elif task_key == "rebuttal":
@@ -796,10 +794,9 @@ class PatentEvaluator:
 
     def run_scoring(self, results):
         """
-        ?
-         Task  examiner_judge ?rebuttal_judge
+        Task  examiner_judge rebuttal_judge
         """
-        # 1.  ( "oa" ?"rebuttal")
+        # 1.  ( "oa" "rebuttal")
         current_task = self.config['task_settings']['current_task']
         # 
         if current_task == "oa" or current_task in self.templates.get("Office_Action_Generation", {}):
@@ -814,8 +811,8 @@ class PatentEvaluator:
         scored_results = []
 
         for res in tqdm(results, desc="Scoring"):
-            #  Prompt
-            # ?Judge ?
+            #Prompt
+            #Judge
             try:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
@@ -843,7 +840,7 @@ class PatentEvaluator:
 
             judge_attempts = []
             judge_system_prompt = judge_config["system_prompt"]
-            # ?GPT-4o 
+            # GPT-4o 
             raw_judge_res = self.judge_backend.generate(
                 system_prompt=judge_config["system_prompt"],
                 user_prompt=judge_prompt
@@ -861,7 +858,7 @@ class PatentEvaluator:
             res["judge_prompt_length"] = len(judge_prompt) if isinstance(judge_prompt, str) else 0
 
             try:
-                # ?JSON 
+                # JSON 
                 try:
                     score_data = self._extract_json(raw_judge_res)
                 except Exception:
@@ -985,7 +982,7 @@ class PatentEvaluator:
 
     def run_pairwise_comparison(self, results):
         """
-        Pair-wise ?
+        Pair-wise 
         """
         eval_templates = self.templates.get("Evaluation_Metrics", {})
         judge_config = eval_templates.get("pairwise_evaluator")
@@ -996,10 +993,10 @@ class PatentEvaluator:
         compared_results = []
 
         #  results 
-        # ?
+
         for i in range(0, len(results), 2):
             if i + 1 >= len(results):
-                # ?
+  
                 res = results[i]
                 res["pairwise_winner"] = None
                 res["pairwise_comparison"] = "Insufficient pairs for comparison"

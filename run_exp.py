@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import yaml
 import json
@@ -12,13 +11,13 @@ from src.utils import setup_logger
 def parse_args():
     parser = argparse.ArgumentParser(description="PatRe")
     parser.add_argument("--config", type=str, default="config/eval_config.yaml")
-    # 允许通过命令行指定只跑某一IPC 分类，例--ipc A
+    # Allow specifying a single IPC category via command line (e.g., --ipc A)
     parser.add_argument("--ipc", type=str, help="Run specific IPC category (A-H)")
     parser.add_argument("--num_samples", type=int, help="Override task_settings.num_samples")
-    # 模型
+    # model
     parser.add_argument("--model", type=str, help="Specific model to test")
 
-    # 任务类型：三种（oa / rebuttal / both），默认 both
+    # (oa / rebuttal / both)，default is both
     parser.add_argument(
         "--task",
         type=str,
@@ -28,9 +27,9 @@ def parse_args():
     )
 
 
-    # 覆盖测试模式 (zero_shot / sft_model)
+    #  (zero_shot / sft_model)
     parser.add_argument("--test_mode", type=str, choices=["zero_shot", "sft_model"], help="Override test mode")
-    # 覆盖检索模式 (no_ref / oracle_summary / bm25_retrieved)
+    #  (no_ref / oracle_summary / bm25_retrieved)
     parser.add_argument("--retrieval", type=str, choices=["no_ref", "oracle_summary", "bm25_retrieved"], help="Override retrieval setting")
 
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
@@ -63,14 +62,14 @@ def analyze_dataset_rounds(config):
     return max_rounds
 
 def generate_multiround_sequence_from_data(max_rounds):
-    """根据实际数据轮数生成多轮审查序列"""
-    sequence = ["oa"]  # 开始总是 OA
+   #Generate multi-round examination sequence based on actual dataset rounds.
+    sequence = ["oa"]  # start as OA
     
-    # 根据实际轮数生成序列
-    # 轮数1: oa
-    # 轮数2: oa -> rebuttal
-    # 轮数3: oa -> rebuttal -> oa
-    # 轮数4+: 继续交替添加 oa -> rebuttal
+
+    # round 1: oa
+    # round 2: oa -> rebuttal
+    # round 3: oa -> rebuttal -> oa
+    # round 4+: oa -> rebuttal -> oa -> rebuttal ...
     
     for i in range(1, max_rounds):
         if i % 2 == 1:
@@ -344,7 +343,6 @@ def _save_scores(round_dir, eval_result):
         json.dump(summary, f, indent=2, ensure_ascii=False)
 def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, write_scores=True):
     """Save results grouped by patent, appending per-round outputs."""
-    # 将原始结果和评估结果合并
     oa_schema = [
         "disposition_accuracy",
         "statute_precision",
@@ -398,7 +396,7 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, wr
         os.makedirs(output_dir, exist_ok=True)
         os.makedirs(eval_dir, exist_ok=True)
         
-        # 1. input/ai_input.json (AI 实际输入)
+        # 1. input/ai_input.json 
         exam_input_path = os.path.join(input_dir, "ai_input.json")
         with open(exam_input_path, 'w', encoding='utf-8') as f:
             ai_input_data = raw_result['ai_exam']['input'].copy()
@@ -407,12 +405,12 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, wr
             if oa_text:
                 ai_input_data["office_action"] = oa_text
             json.dump(ai_input_data, f, indent=2, ensure_ascii=False)
-        # 2. output/ai_output.txt (AI生成的答案)
+        # 2. output/ai_output.txt 
         exam_output_path = os.path.join(output_dir, "ai_output.txt")
         with open(exam_output_path, 'w', encoding='utf-8') as f:
             f.write(raw_result['ai_exam']['output'])
         
-        # 3. eval/context.json (评估上下文)
+        # 3. eval/context.json 
         eval_context_path = os.path.join(eval_dir, "context.json")
         with open(eval_context_path, 'w', encoding='utf-8') as f:
             context_data = {
@@ -429,7 +427,7 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, wr
         if not write_scores:
             continue
 
-        # 4. eval/scores.json (评分结果)
+        # 4. eval/scores.json 
         scores_path = os.path.join(eval_dir, "scores.json")
         with open(scores_path, 'w', encoding='utf-8') as f:
             score_data = {
@@ -518,7 +516,7 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, wr
                 indent=2,
                 ensure_ascii=False
             )
-    # 专利级别的汇总将�?_generate_summaries 函数中处�?
+   
     pass
 
 def _calculate_patent_average_scores(results):
@@ -592,7 +590,7 @@ def _calculate_disposition_micro_metrics(reports):
 
 def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
     """Generate experiment summary files."""
-    # 1. 每个专利�?summary.json
+
     for pid, results in all_results_map.items():
         patent_dir = os.path.join(exp_dir, f"patent_{pid}")
         os.makedirs(patent_dir, exist_ok=True)
@@ -605,7 +603,7 @@ def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
         with open(summary_path, 'w', encoding='utf-8') as f:
             json.dump(patent_summary, f, indent=2, ensure_ascii=False)
     
-    # 2. 整体实验概览 experiment_overview.json
+
     all_reports = [item for sublist in all_results_map.values() for item in sublist]
     disposition_micro = _calculate_disposition_micro_metrics(all_reports)
     experiment_overview = {
@@ -674,7 +672,7 @@ def main():
     if args.num_samples is not None:
         config.setdefault('task_settings', {})['num_samples'] = int(args.num_samples)
     
-    # 处理命令行参数覆�?
+
     if args.test_mode:
         config['active_settings']['test_mode'] = args.test_mode
     if args.retrieval:
@@ -890,14 +888,13 @@ def main():
         logger.info("Eval-only complete.")
         return
 
-    # 获取命名配置
+    # name
     naming_cfg = config.get('experiment_naming', {})
     use_academic_format = naming_cfg.get('use_academic_format', True)
     timestamp_format = naming_cfg.get('timestamp_format', "%Y%m%d_%H%M")
     include_model_name = naming_cfg.get('include_model_name', True)
 
-    # 默认行为：多轮（按数据集真实轮数执行），不再支持“只跑一�?单任务模式”的分支�?
-    # 加载并分组数�?
+
     with open(test_set_path, 'r', encoding='utf-8') as f:
         all_data = []
         for line in f:
@@ -913,7 +910,7 @@ def main():
             if str(item.get("meta", {}).get("ipc", "")).upper() == ipc_filter
         ]
     
-    # 遵循 config 中的样本限制
+
     limit = config['task_settings'].get('num_samples', 9999)
     all_data = all_data[:limit]
     
@@ -1008,8 +1005,7 @@ def main():
                 task_rebuttal = "rebuttal"
                 config['task_settings']['current_task'] = task_rebuttal
                 batch_rebuttal = []
-                # 重新计算 history，如果刚才跑�?OA，这�?history 其实可以包含刚才�?OA
-                # 但为了简单，先保持原逻辑，或者根据需要调�?
+
                 history_map = {
                     pid: _build_prosecution_history(lines[:line_idx])
                     for pid, lines in grouped_data.items()

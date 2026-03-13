@@ -1,9 +1,9 @@
-﻿# 全局元数据
+﻿
 metadata:
   project: "PatRe"
   ipc_categories: ["A", "B", "C", "D", "E", "F", "G", "H"]
 
-# 实验任务配置
+# task_settings
 task_settings:
   # current_task: "rebuttal"
   current_task: "oa"
@@ -22,20 +22,20 @@ task_settings:
     claims: 70000
     reference_summaries: 20000
 
-# ===================== 实验矩阵 (完整保留，严禁修改) =====================
-experiment_matrix: #实验矩阵
-  test_modes:  #test_modes：考生是谁
-    - "zero_shot"      # 直接生成  让一个没经过专门法律训练，但书读得很多的“通用型大学生”去考律师证。直接问他：“你看这专利怎么反驳？”
-    - "sft_model"      # 经过微调后的模型 给这个大学生报了一个“专利反驳特训班”，让他读了几万份真实的律师回函。这是你训练出来的“法学专业生”。
-  retrieval_settings:
-    - "no_ref"         # 不给参考文献 (测试常识)
-    - "oracle_summary" # 直接给 Ground Truth 的文献 Summary
-    - "bm25_retrieved" # 模拟真实检索出的文献
-  granularities:
-    - "full_text"      # 全文生成
-    - "atomic_claim"   # 针对单点 Claim 生成
 
-# 模型列表 (完整保留，后续代码将遍历此列表)
+experiment_matrix: 
+  test_modes:  
+    - "zero_shot"      
+    - "sft_model"      
+  retrieval_settings:
+    - "no_ref"         
+    - "oracle_summary" 
+    - "bm25_retrieved"
+  granularities:
+    - "full_text"      
+    - "atomic_claim"   
+
+
 models:
   backbone_list:
     - "gpt-4o-mini"
@@ -47,7 +47,7 @@ models:
     # - "deepseek-v3"
     # - "deepseek-r1"
     # - "qwen-2.5-7b-instruct"
-    # 这里可以继续添加你原有的其他模型，如 Llama-3, Claude 等
+
   judge_model: "gpt-5-mini-2025-08-07"
   # judge_model: "gpt-4o-mini"
 
@@ -56,9 +56,9 @@ models:
   judge_api_key: ""
   judge_base_url: "https://api.chatanywhere.tech/v1"
   backend: "api"
-  judge_backend: "api"  # 裁判使用API后端
-  ollama_base_url: "http://localhost:11434/v1"  # Ollama本地服务地址
-  ollama_api_key: "ollama"  # Ollama默认API密钥
+  judge_backend: "api"  
+  ollama_base_url: "http://localhost:11434/v1" 
+  ollama_api_key: "ollama"  
   vllm_base_url: "http://localhost:8000/v1"
   vllm_api_key: "EMPTY"
   generation_params:
@@ -67,21 +67,21 @@ models:
     max_tokens: 6144
   sft_model_id: ""
 
-# ===================== 当前运行设置 (用于单次调试) =====================
+# Current Run Settings
 active_settings:
   test_mode: "zero_shot"
   retrieval_setting: "oracle_summary" 
   oa_prompt_variant: "retrieval_aligned"
   granularity: "full_text"
 
-# 路径管理
+
 paths:
   test_set: "dataset/processed/test_set_new.jsonl"
   prompt_path: "config/prompt_templates.json"
   results: "results/"
   reference_pool: "dataset/ReferencePool_Full"
 
-# 实验命名规范
+
 experiment_naming:
   use_academic_format: true
   include_model_name: true

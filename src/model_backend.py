@@ -18,7 +18,7 @@ class ModelBackend:
         self.params = config['models']['generation_params']
         self._dry_run = str(os.getenv("PATRE_DRY_RUN", "")).strip().lower() in ("1", "true", "yes")
         
-        # 根据是否为裁判选择不同的后端
+
         if is_judge:
             self.backend = config['models'].get('judge_backend', 'api')
             self.model_name = config['models']['judge_model']
@@ -33,7 +33,7 @@ class ModelBackend:
             api_key = config['models'].get('judge_api_key') or api_key
             base_url = config['models'].get('judge_base_url') or base_url
         
-        # Ollama 配置
+        # Ollama 
         if self.backend == 'ollama':
             api_key = config['models'].get('ollama_api_key') or "ollama"
             base_url = config['models'].get('ollama_base_url') or "http://localhost:11434/v1"
@@ -76,7 +76,7 @@ class ModelBackend:
         max_retries = int(self.config.get("models", {}).get("max_retries", 3))
         base_backoff = float(self.config.get("models", {}).get("retry_backoff_sec", 2))
         jitter = float(self.config.get("models", {}).get("retry_jitter_sec", 0))
-        for attempt in range(max_retries): # 自动重试
+        for attempt in range(max_retries):
             try:
                 resp = self._client.chat.completions.create(
                     model=model,

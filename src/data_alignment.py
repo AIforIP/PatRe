@@ -5,12 +5,9 @@ import sys
 import io
 import re
 
-
-# 强制标准输出使用 utf-8 编码
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-# ===================== 路径配置 =====================
-# 使用相对路径以提高通用性
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset")
 RAW_DATA_DIRS = []
@@ -23,7 +20,7 @@ REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
 SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.jsonl")
 REF_TEXT_LIMIT = 20000  # Keep aligned with config/eval_config.yaml: reference_summaries
 
-# ===================== 辅助函数 =====================
+
 
 def _normalize_ref_list(ref_list):
     if not ref_list:
@@ -93,7 +90,6 @@ def _ref_possible_filenames(clean_doc_id):
 
 
 def get_ref_ids(ref_list):
-    """仅记录引用列表（不在对齐阶段拼接长文本），并判断是否有缺失。"""
     ref_list = _normalize_ref_list(ref_list)
     if not ref_list:
         return [], True
@@ -130,9 +126,7 @@ def infer_ipc_from_dir(raw_dir):
 
 
 def process_claims(claims):
-    """
-    鲁棒性处理：专利数据中 Claims 可能是字符串，也可能是列表
-    """
+
     if isinstance(claims, list):
         processed = []
         for c in claims:
@@ -153,7 +147,6 @@ def _count_claims_text(claims_text):
 
 
 
-# ===================== 主逻辑 =====================
 
 def align_data():
     os.makedirs(os.path.dirname(SAVE_PATH), exist_ok=True)
@@ -174,7 +167,7 @@ def align_data():
                     try:
                         item = json.load(f)
                     except json.JSONDecodeError:
-                        print(f"解析错误 JSON 文件: {filename}")
+                        print(f"Error parsing JSON file: {filename}")
                         continue
 
                     office_actions = item.get("office_actions", [])

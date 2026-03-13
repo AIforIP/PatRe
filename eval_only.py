@@ -272,6 +272,7 @@ def _build_scores_table(task_key, scores):
             table[label] = val
 
     return table
+
 def parse_args():
     parser = argparse.ArgumentParser(description="PatRe Evaluation Only Runner")
     parser.add_argument("--config", type=str, default="config/eval_config.yaml")
