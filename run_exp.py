@@ -5,17 +5,17 @@ import json
 import copy
 import argparse
 from datetime import datetime
-# 注意这里：为了模块化，具体的逻辑被封装在 src.evaluator
+#src.evaluator
 from src.evaluator import PatentEvaluator
 from src.utils import setup_logger
 
 def parse_args():
     parser = argparse.ArgumentParser(description="PatRe")
     parser.add_argument("--config", type=str, default="config/eval_config.yaml")
-    # 允许通过命令行指定只跑某一�?IPC 分类，例�?--ipc A
+    # 允许通过命令行指定只跑某一IPC 分类，例--ipc A
     parser.add_argument("--ipc", type=str, help="Run specific IPC category (A-H)")
     parser.add_argument("--num_samples", type=int, help="Override task_settings.num_samples")
-    # 覆盖模型
+    # 模型
     parser.add_argument("--model", type=str, help="Specific model to test")
 
     # 任务类型：三种（oa / rebuttal / both），默认 both
@@ -28,11 +28,11 @@ def parse_args():
     )
 
 
-    # 覆盖测试模式 (zero_shot �?sft_model)
+    # 覆盖测试模式 (zero_shot / sft_model)
     parser.add_argument("--test_mode", type=str, choices=["zero_shot", "sft_model"], help="Override test mode")
-    # 覆盖检索模�?
+    # 覆盖检索模式 (no_ref / oracle_summary / bm25_retrieved)
     parser.add_argument("--retrieval", type=str, choices=["no_ref", "oracle_summary", "bm25_retrieved"], help="Override retrieval setting")
-    # 新增评估指标选项
+
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
     mode_group = parser.add_mutually_exclusive_group()
     mode_group.add_argument("--generate_only", action="store_true", help="Only generate outputs, skip evaluation")
@@ -70,7 +70,7 @@ def generate_multiround_sequence_from_data(max_rounds):
     # 轮数1: oa
     # 轮数2: oa -> rebuttal
     # 轮数3: oa -> rebuttal -> oa
-    # 轮数4+: 继续交替添加 oa �?rebuttal
+    # 轮数4+: 继续交替添加 oa -> rebuttal
     
     for i in range(1, max_rounds):
         if i % 2 == 1:
@@ -172,7 +172,7 @@ def _build_result_entry(patent_id, round_dir, ctx):
     ground_truth = ctx.get("ground_truth", "")
     refs = ai_input.get("refs", "")
 
-    # Fall back to files if not present in context.json
+    
     if not ai_output:
         ai_txt = os.path.join(round_dir, "ai_output.txt")
         if os.path.exists(ai_txt):
@@ -254,7 +254,7 @@ def _save_scores(round_dir, eval_result):
     with open(scores_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
-    # Lightweight summary for quick browsing
+    
     summary_path = os.path.join(out_dir, "scores_summary.json")
     task = eval_result.get("round_info", {}).get("task", "")
     percent_metrics = {

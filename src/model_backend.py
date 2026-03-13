@@ -3,6 +3,7 @@ import time
 import os
 import random
 import json
+import re
 
 try:
     from dotenv import load_dotenv
@@ -100,6 +101,18 @@ class ModelBackend:
                 if "max_tokens" in msg and "max_completion_tokens" in msg:
                     if "max_tokens" in params and "max_completion_tokens" not in params:
                         params["max_completion_tokens"] = params.pop("max_tokens")
+                        continue
+                m_max_ctx = re.search(r"maximum context length is\s+(\d+)\s+tokens", msg)
+                m_input = re.search(r"request has\s+(\d+)\s+input tokens", msg)
+                if m_max_ctx and m_input:
+                    max_ctx = int(m_max_ctx.group(1))
+                    input_tokens = int(m_input.group(1))
+                    allowed = max(1, (max_ctx - input_tokens) - 16)
+                    if "max_tokens" in params:
+                        params["max_tokens"] = min(int(params["max_tokens"]), allowed)
+                        continue
+                    if "max_completion_tokens" in params:
+                        params["max_completion_tokens"] = min(int(params["max_completion_tokens"]), allowed)
                         continue
                 print(f"⚠️ Error, retrying... {e}")
                 if attempt < max_retries - 1:
