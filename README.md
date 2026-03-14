@@ -1,20 +1,18 @@
 # PatRe
-
-PatRe is an experimental framework for patent review that automates the generation of Office Actions and Applicant Rebuttals, providing automated evaluation through LLM-based and traditional metrics.
-
-## Overview
-
-Key features:
-- Prosecution Component Generation: Automates the creation of Office Actions and Applicant Rebuttals, strictly following legal procedures and dataset context.
-
-- Flexible Execution Modes: Supports three operational workflows: Full Pipeline (Generate + Evaluate), Production (Generate-only), or Analysis (Eval-only for existing outputs).
-
-- Multi-dimensional Evaluation: Provides comprehensive scoring via an LLM judge plus automated checks for disposition/statute compliance, citation accuracy, and linguistic similarity (BLEU/ROUGE-L/BERTScore).
-
-- Universal Backend Integration: Seamlessly connects with high-performance inference engines via standardized API protocols, supporting both remote services and local private instances like vLLM and Ollama.
+[**🌐 Homepage**](https://patre.wangqiyao.me/) | [**🤗 Dataset**](https://huggingface.co/datasets/IPIntelligence/PatRe-Bench) | [**📖 arXiv**](https://arxiv.org/abs/) | [**GitHub**](https://github.com/AIforIP/PatRe)
 
 
-## Installation
+This repo contains the evaluation code for the paper "[PatRe: A Large-Scale Full-Stage Patent Office Action and Rebuttal Dataset and Benchmark](https://arxiv.org/abs/)"
+
+## 🔔News
+
+- 🔥 [2026-02-16] Research Begining.
+
+## 👀 Introduction
+
+
+
+## 🚀 Quick Start
 
 Requirements:
 - Python 3.9+ recommended
@@ -25,7 +23,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-## API Configuration
+### API Configuration
 
 Recommended: configure credentials via environment variables (avoid hardcoding keys into YAML).
 
@@ -43,9 +41,14 @@ set OPENAI_API_KEY=YOUR_KEY
 set OPENAI_BASE_URL=https://api.chatanywhere.tech/v1
 ```
 
+Linux/MacOS:
 
+```shell
+export OPENAI_API_KEY="YOUR_KEY"
+export OPENAI_BASE_URL="https://api.chatanywhere.tech/v1"
+```
 
-## Data & Paths
+### Data & Paths
 
 Configure paths in [eval_config.yaml](config/eval_config.yaml):
 - `paths.test_set` (e.g., `dataset/processed/test_set_new.jsonl`)
@@ -59,8 +62,7 @@ python src/data_alignment.py
 ```
 
 
-
-## Quick Start
+## ✍️ Experiment
 
 Run a minimal OA experiment (1 sample):
 
@@ -86,7 +88,7 @@ Multi-round simulation (OA + rebuttal alternating):
 python run_exp.py
 ```
 
-## Common Arguments
+### 📖 Configuration Tips
 
 - `--task {oa|rebuttal|both}`: run OA only, rebuttal only, or full multi-round
 - `--ipc A-H`: filter by IPC category
@@ -98,7 +100,7 @@ python run_exp.py
 - `--retrieval {no_ref|oracle_summary|bm25_retrieved}`: override retrieval setting
 - `--backend {api|vllm|ollama}`: switch the model backend
 
-## vLLM / Ollama Backends
+### vLLM / Ollama Backends
 
 To use vLLM, you must both:
 - start a vLLM server exposing an OpenAI-compatible endpoint (usually under `/v1`)
@@ -112,7 +114,7 @@ python run_exp.py --backend vllm
 
 The base URL for vLLM is configured in `models.vllm_base_url` in [eval_config.yaml](config/eval_config.yaml).
 
-## Output Structure
+### Output Structure
 
 PatRe writes results under the experiment directory, grouped by patent and rounds.
 
@@ -136,7 +138,6 @@ Eval-only compatibility:
 - If `eval/context.json` exists, it will be used.
 - If only legacy `context.json` exists, it will be used.
 - If no context file exists, PatRe will attempt to reconstruct evaluation context from `paths.test_set` and the round folder name.
-
 
 
 ## Troubleshooting
