@@ -2,6 +2,7 @@ openai>=1.0.0
 PyYAML
 tqdm
 numpy
+vllm
 torch
 rouge-score
 sacrebleu
