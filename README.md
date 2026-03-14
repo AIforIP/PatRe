@@ -31,21 +31,21 @@ Windows PowerShell (persistent):
 
 ```powershell
 setx OPENAI_API_KEY "YOUR_KEY"
-setx OPENAI_BASE_URL "https://api.chatanywhere.tech/v1"
+setx OPENAI_BASE_URL "YOUR_BASE_URL"
 ```
 
 Windows CMD (current session only):
 
 ```bat
 set OPENAI_API_KEY=YOUR_KEY
-set OPENAI_BASE_URL=https://api.chatanywhere.tech/v1
+set OPENAI_BASE_URL=YOUR_BASE_URL
 ```
 
 Linux/MacOS:
 
 ```shell
 export OPENAI_API_KEY="YOUR_KEY"
-export OPENAI_BASE_URL="https://api.chatanywhere.tech/v1"
+export OPENAI_BASE_URL="YOUR_BASE_URL"
 ```
 
 ### Data & Paths
