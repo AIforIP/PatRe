@@ -142,7 +142,9 @@ def _count_claims_text(claims_text):
     if not claims_text:
         return 0
     import re
-    hits = re.findall(r"(?m)^\s*(\d+)\s*[\.\)]", claims_text)
+    # Match claim numbers followed by optional backslash + dot, or parenthesis
+    # Handles both "1." and "1\." formats
+    hits = re.findall(r"(?m)^\s*(\d+)\s*(?:\\?\.|\))", claims_text)
     return len(hits) if hits else 1
 
 
@@ -239,7 +241,7 @@ def align_data():
                             "id": item.get("patent_number"),
                             "meta": {
                                 "ipc": item.get("ipc_category") or inferred_ipc,
-                                "claim_count": len(raw_claims) if isinstance(raw_claims, list) else _count_claims_text(claims_text),
+                                "claim_count": _count_claims_text(claims_text),
                                 "round_type": "rebuttal" if next_oa_body else "examination",
                                 "reference_missing": ref_missing,
                                 "decision_missing": decision_missing,
