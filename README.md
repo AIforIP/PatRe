@@ -21,6 +21,7 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+export PYTHONPATH=$pwd
 ```
 
 ### API Configuration

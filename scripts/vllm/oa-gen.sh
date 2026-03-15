@@ -3,7 +3,7 @@ python run_exp.py \
     --task oa \
     --ipc A \
     --num_samples 1 \
-    --test_model zero_shot \
+    --test_mode zero_shot \
     --retrieval no_ref \
     --backend vllm 
 
