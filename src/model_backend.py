@@ -84,6 +84,9 @@ class ModelBackend:
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt},
                     ],
+                    extra_body={
+                        "chat_template_kwargs": {"enable_thinking": False},
+                    },
                     **params,
                 )
                 choice0 = resp.choices[0] if getattr(resp, "choices", None) else None

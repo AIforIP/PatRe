@@ -10,4 +10,5 @@ CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
     --served-model-name $MODEL_NAME \
     --host 0.0.0.0 \
     --port $PORT \
+    --gpu-memory-utilization 0.85 \
     --tensor-parallel-size 1

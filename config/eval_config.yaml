@@ -50,7 +50,7 @@ models:
 
   judge_model: "gemini-3.1-flash-lite-preview"
 
-  api_key: ""
+  api_key: "EMPTY"
   base_url: "https://api.chatanywhere.tech/v1"
   judge_api_key: ""
   judge_base_url: "https://api.chatanywhere.tech/v1"
