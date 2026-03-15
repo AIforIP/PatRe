@@ -58,7 +58,7 @@ models:
   judge_backend: "api"  
   ollama_base_url: "http://localhost:11434/v1" 
   ollama_api_key: "ollama"  
-  vllm_base_url: "http://localhost:8000/v1"
+  vllm_base_url: "http://localhost:8001/v1"
   vllm_api_key: "EMPTY"
   generation_params:
     temperature: 0.0
