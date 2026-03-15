@@ -48,8 +48,7 @@ models:
     # - "deepseek-r1"
     # - "qwen-2.5-7b-instruct"
 
-  judge_model: "gpt-5-mini-2025-08-07"
-  # judge_model: "gpt-4o-mini"
+  judge_model: "gemini-3.1-flash-lite-preview"
 
   api_key: ""
   base_url: "https://api.chatanywhere.tech/v1"
@@ -64,7 +63,7 @@ models:
   generation_params:
     temperature: 0.0
     top_p: 1.0
-    max_tokens: 6144
+    max_tokens: 16384
   sft_model_id: ""
 
 # Current Run Settings
