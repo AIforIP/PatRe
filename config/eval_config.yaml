@@ -10,9 +10,9 @@ task_settings:
   num_samples: 100000
   auto_run_extra_metrics: true
   similarity_metrics:
-    bleu: true
+    bleu: false
     rouge_l: true
-    bert_score: true
+    bert_score: false
   judge_max_chars: 12000
   judge_default_field_max_chars: 4000
   judge_field_max_chars:
