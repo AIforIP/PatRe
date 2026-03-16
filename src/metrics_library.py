@@ -111,6 +111,35 @@ def statute_metrics(pred_set, gt_set):
     }
 
 
+def normalize_rejection_types(rejection_types):
+    if not rejection_types:
+        return set()
+    if isinstance(rejection_types, str):
+        rejection_types = [rejection_types]
+    out = set()
+    for r in rejection_types:
+        if not r:
+            continue
+        m = re.search(r"\b(101|102|103|112)\b", str(r))
+        if m:
+            out.add(m.group(1))
+    return out
+
+
+def rejection_type_metrics(pred_set, gt_set):
+    if not pred_set and not gt_set:
+        return {}
+    tp = len(pred_set & gt_set)
+    fp = len(pred_set - gt_set)
+    fn = len(gt_set - pred_set)
+    precision, recall, f1 = _prf(tp, fp, fn)
+    return {
+        "rejection_precision": round(precision, 4),
+        "rejection_recall": round(recall, 4),
+        "rejection_f1": round(f1, 4),
+    }
+
+
 _REF_RE = re.compile(
     r"(?:"
     r"US\s*\d{4}/?\d{6,8}\s*[A-Z]\d?|"

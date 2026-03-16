@@ -9,7 +9,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset")
+RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset1")
 RAW_DATA_DIRS = []
 for name in sorted(os.listdir(RAW_DATA_ROOT)):
     if name.startswith("PatTimeline_") and name.endswith("_Category"):
@@ -87,6 +87,38 @@ def _ref_possible_filenames(clean_doc_id):
     if clean_doc_id.startswith(("US", "WO", "EP", "AU")):
         return [f"{clean_doc_id}.json"]
     return [f"{clean_doc_id}.json", f"US{clean_doc_id}.json"]
+
+
+def _load_reference_record(doc_num):
+    clean_id = _normalize_doc_id(doc_num)
+    if not clean_id:
+        return "", None
+    for name in _ref_possible_filenames(clean_id):
+        path = os.path.join(REF_POOL_DIR, name)
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return os.path.splitext(name)[0], json.load(f)
+        except Exception:
+            continue
+    return clean_id, None
+
+
+def _build_oracle_reference_summaries(ref_ids):
+    if not isinstance(ref_ids, list) or not ref_ids:
+        return ""
+    entries = []
+    for rid in ref_ids:
+        doc_id, ref_data = _load_reference_record(rid)
+        if ref_data:
+            entries.append(_build_ref_entry(doc_id, ref_data))
+        else:
+            entries.append(f"Ref {doc_id}: [content unavailable]")
+    text = "\n".join(entries).strip()
+    if REF_TEXT_LIMIT and isinstance(text, str) and len(text) > REF_TEXT_LIMIT:
+        return text[:REF_TEXT_LIMIT] + "\n[Truncated to input limit]"
+    return text
 
 
 def get_ref_ids(ref_list):
@@ -208,17 +240,24 @@ def align_data():
                             oa_type = str(oa.get("oa_type", "")).strip()
                         is_notice_of_allowance = "notice of allowance" in oa_type.lower()
 
-                        # Use rebuttal from the *current* OA unless this is Notice of Allowance.
-                        # This aligns with: OA#1 -> remarks (response) -> OA#2.
                         cur_remarks = ""
                         if isinstance(oa, dict) and not is_notice_of_allowance:
                             cur_remarks = oa.get("remarks", "N/A")
 
-                        # Claims: prefer OA current_claims; fallback to initial_submission.claims.
-                        raw_claims = oa.get("current_claims", "")
-                        if not raw_claims:
-                            raw_claims = item.get("initial_submission", {}).get("claims", "")
-                        claims_text = process_claims(raw_claims)
+                        prev_remarks = ""
+                        if idx - 1 >= 0:
+                            prev = office_actions[idx - 1]
+                            prev_remarks = prev.get("remarks", "N/A") if isinstance(prev, dict) else ""
+
+                        # Claims: use previous round claims as input (fallback to initial_submission.claims).
+                        prev_claims = ""
+                        if idx - 1 >= 0:
+                            prev_oa = office_actions[idx - 1]
+                            if isinstance(prev_oa, dict):
+                                prev_claims = prev_oa.get("current_claims", "")
+                        if not prev_claims:
+                            prev_claims = item.get("initial_submission", {}).get("claims", "")
+                        claims_text = process_claims(prev_claims)
                         if not claims_text.strip():
                             continue
 
@@ -227,6 +266,7 @@ def align_data():
                         if not refs:
                             refs = oa.get("extracted_reference_contexts", [])
                         ref_ids, ref_missing = get_ref_ids(refs)
+                        oracle_ref_summaries = _build_oracle_reference_summaries(ref_ids)
                         decision_value = oa.get("decision", "")
                         decision_value = str(decision_value).strip()
                         decision_missing = not bool(decision_value)
@@ -234,36 +274,67 @@ def align_data():
                             decision_value = "Unknown"
 
                         if is_notice_of_allowance:
-                            # Terminate at Notice of Allowance: no remarks, no next OA.
+                            # Terminate at Notice of Allowance: no rebuttal round and no next OA.
                             next_oa_body = ""
 
-                        formatted_item = {
+                        oa_item = {
                             "id": item.get("patent_number"),
                             "meta": {
                                 "ipc": item.get("ipc_category") or inferred_ipc,
                                 "claim_count": _count_claims_text(claims_text),
-                                "round_type": "rebuttal" if next_oa_body else "examination",
-                                "reference_missing": ref_missing,
-                                "decision_missing": decision_missing,
+                                "round_type": "oa",
                                 "oa_type": oa_type,
+                                "oa_number": oa.get("oa_number") if isinstance(oa, dict) else None,
+                                "oa_date": oa.get("oa_date") if isinstance(oa, dict) else "",
+                                "rejection_types": oa.get("rejection_types", []) if isinstance(oa, dict) else [],
                             },
                             "input": {
                                 "claims": claims_text,
-                                "oracle_reference_summaries": "",
+                                "oracle_reference_summaries": oracle_ref_summaries,
                                 "oracle_reference_ids": ref_ids,
-                                "rebuttal": cur_remarks if cur_remarks is not None else "",
+                                "rebuttal": prev_remarks if prev_remarks is not None else "",
                                 "office_action": input_oa,
                                 "next_office_action": next_oa_body,
                             },
                             "ground_truth": {
                                 "oa_text": oa_body,
-                                "rebuttal_text": cur_remarks if cur_remarks is not None else "",
+                                "rebuttal_text": prev_remarks if prev_remarks is not None else "",
                                 "next_oa_text": next_oa_body,
                                 "decision": decision_value,
                             },
                         }
-                        outfile.write(json.dumps(formatted_item, ensure_ascii=False) + "\n")
+                        outfile.write(json.dumps(oa_item, ensure_ascii=False) + "\n")
                         count += 1
+
+                        if not is_notice_of_allowance and cur_remarks and str(cur_remarks).strip().upper() != "N/A":
+                            rebuttal_item = {
+                                "id": item.get("patent_number"),
+                                "meta": {
+                                    "ipc": item.get("ipc_category") or inferred_ipc,
+                                    "claim_count": _count_claims_text(claims_text),
+                                    "round_type": "rebuttal",
+                                    "oa_type": oa_type,
+                                    "oa_number": oa.get("oa_number") if isinstance(oa, dict) else None,
+                                    "oa_date": oa.get("oa_date") if isinstance(oa, dict) else "",
+                                    "rejection_types": oa.get("rejection_types", []) if isinstance(oa, dict) else [],
+                                },
+                                "input": {
+                                    "claims": claims_text,
+                                    "oracle_reference_summaries": oracle_ref_summaries,
+                                    "oracle_reference_ids": ref_ids,
+                                    "rebuttal": cur_remarks,
+                                    "office_action": input_oa,
+                                    "next_office_action": next_oa_body,
+                                },
+                                "ground_truth": {
+                                    "oa_text": oa_body,
+                                    "rebuttal_text": cur_remarks,
+                                    "next_oa_text": next_oa_body,
+                                    "decision": decision_value,
+                                },
+                            }
+                            outfile.write(json.dumps(rebuttal_item, ensure_ascii=False) + "\n")
+                            count += 1
 
                         if is_notice_of_allowance:
                             break

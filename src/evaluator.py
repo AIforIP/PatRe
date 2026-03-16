@@ -17,6 +17,8 @@ from src.metrics_library import (
     bert_score_f1,
     formatting_score,
     language_style_score,
+    normalize_rejection_types,
+    rejection_type_metrics,
 )
 
 class PatentEvaluator:
@@ -60,31 +62,49 @@ class PatentEvaluator:
                     if ipc_value != ipc_filter:
                         continue
                 data.append(item)
-        # Attach prosecution history for single-task runs (use dataset order per patent)
-        history_blocks = {}
+        # Attach prosecution history for single-task runs (use only the previous same-type round)
+        patent_items = {}
         for item in data:
+            pid = item.get("id")
+            if pid:
+                patent_items.setdefault(pid, []).append(item)
+        
+        for idx, item in enumerate(data):
             pid = item.get("id")
             if not pid:
                 continue
             item.setdefault("input", {})
-            if not item["input"].get("prosecution_history"):
-                blocks = history_blocks.get(pid, [])
-                item["input"]["prosecution_history"] = "\n\n".join(blocks) if blocks else "N/A"
+            
+            # Build context from relevant previous rounds (ordered by OA number/date)
+            items_for_pid = list(patent_items.get(pid, []))
+            if items_for_pid:
+                def _sort_key(it):
+                    meta = it.get("meta", {}) if isinstance(it, dict) else {}
+                    num = meta.get("oa_number")
+                    try:
+                        num_val = int(num)
+                    except Exception:
+                        num_val = 10 ** 9
+                    date_val = meta.get("oa_date") or ""
+                    round_type = str(meta.get("round_type", "")).lower()
+                    round_order = 0 if round_type == "oa" else 1
+                    return (num_val, date_val, round_order)
+                items_for_pid = sorted(items_for_pid, key=_sort_key)
 
-            claims, office_action, remarks = self._extract_round_texts(item)
-            if claims or office_action or remarks:
-                block = (
-                    "Round {idx} (historical):\n"
-                    "Claims:\n{claims}\n"
-                    "Office Action:\n{oa}\n"
-                    "Remarks/Rebuttal:\n{remarks}"
-                ).format(
-                    idx=len(history_blocks.get(pid, [])) + 1,
-                    claims=claims or "[MISSING]",
-                    oa=office_action or "[MISSING]",
-                    remarks=remarks or "[MISSING]"
-                )
-                history_blocks.setdefault(pid, []).append(block)
+            current_idx_in_patent = None
+            for i, it in enumerate(items_for_pid):
+                if it is item or it.get("id") == pid and it == item:
+                    current_idx_in_patent = i
+                    break
+            
+            if current_idx_in_patent is None:
+                current_idx_in_patent = idx
+            
+            task_key = self.config.get('task_settings', {}).get('current_task', '')
+            prev_context = self._build_previous_round_context(items_for_pid, current_idx_in_patent, task_key)
+            item["input"]["prosecution_history"] = prev_context
+
+        
         # Task-aware filtering (single dataset, avoid empty rebuttals)
         task_key = self.config.get('task_settings', {}).get('current_task', '')
         if "rebuttal" in task_key:
@@ -268,18 +288,21 @@ class PatentEvaluator:
             for claim_no, claim_text in claim_blocks:
                 # AI
                 ai_input = {
-                    "claims": f"Claim {claim_no}: {claim_text}" if granularity == "atomic_claim" else item['input']['claims'],
+                    "claims": f"Claim {claim_no}: {claim_text}" if granularity == "atomic_claim" else item['input'].get('claims_for_generation', item['input'].get('claims', '')),
                     "refs": ref_summary,
                     "task_type": task_key,
                     "retrieval_setting": self.config['active_settings'].get('retrieval_setting', "oracle_summary"),
                     "prosecution_history": item['input'].get('prosecution_history', "N/A"),
                     "granularity": granularity
                 }
-                
-                # AI
-                if task_key == "oa":
-                    # Avoid leaking ground-truth OA into OA generation.
-                    ai_input.pop("office_action", None)
+
+                # Include true prompt inputs for traceability
+                if task_key == "rebuttal":
+                    ai_input["office_action"] = oa_content
+                elif task_key == "oa":
+                    # OA response-to-rebuttal should include the rebuttal being responded to
+                    if template_task != "initial_examination":
+                        ai_input["rebuttal"] = rebuttal_text
                 
                 try:
                     # AIprompt
@@ -425,8 +448,19 @@ class PatentEvaluator:
         default_limit = cfg.get("judge_default_field_max_chars", 4000)
         per_field = cfg.get("judge_field_max_chars", {}) or {}
 
+        # Build conditional section for response target (what this round is responding to)
+        processed_fields = fields.copy()
+        
+        # Handle response_target_section - the content being responded to in this round
+        if "current_response_target" in processed_fields:
+            response_target = processed_fields["current_response_target"]
+            if response_target and isinstance(response_target, str) and response_target.strip():
+                processed_fields["response_target_section"] = f"- Content Being Responded To:\n{response_target}\n"
+            else:
+                processed_fields["response_target_section"] = ""
+
         truncated = {}
-        for k, v in fields.items():
+        for k, v in processed_fields.items():
             if isinstance(v, str):
                 limit = per_field.get(k, default_limit)
                 truncated[k] = self._truncate_text(v, limit)
@@ -811,17 +845,50 @@ class PatentEvaluator:
         scored_results = []
 
         for res in tqdm(results, desc="Scoring"):
-            #Prompt
-            #Judge
+            # Prompt
+            task_type = res.get('round_info', {}).get('task', '')
+            round_num = res.get('round_info', {}).get('round_number', 1)
+            
+            # Build evaluation input: claims + ground_truth + generated + current context to respond to
+            # Note: Evaluation does NOT need refs or previous history!
+            # Only needs the content being responded to in this round
+            current_response_target = ""  # Either current OA (for rebuttal) or current rebuttal (for OA)
+            
+            if task_type == "oa":
+                # For OA evaluation:
+                # Round 1: Only claims + ground_truth + generated
+                # Round 2+: Also need the rebuttal being responded to
+                if round_num > 1:
+                    # Get the rebuttal that this OA is responding to
+                    prev_context = res['ai_exam']['input'].get('prosecution_history', '')
+                    if prev_context and isinstance(prev_context, str):
+                        if 'Current Round Rebuttal:' in prev_context:
+                            current_response_target = prev_context.replace('Current Round Rebuttal:', '').strip()
+                        elif 'Previous Round Rebuttal:' in prev_context:
+                            current_response_target = prev_context.replace('Previous Round Rebuttal:', '').strip()
+                        elif 'Current Round Rebuttal:' in prev_context or 'Previous Round Rebuttal:' in prev_context:
+                            # Multi-section format - extract only remarks
+                            lines = prev_context.split('\n')
+                            current_section = None
+                            for line in lines:
+                                if 'Current Round Rebuttal:' in line or 'Previous Round Rebuttal:' in line:
+                                    current_section = 'remarks'
+                                elif current_section == 'remarks' and line.strip():
+                                    current_response_target += line + '\n'
+                
+            elif task_type == "rebuttal":
+                # For rebuttal evaluation:
+                # Must have current OA (the one being responded to)
+                current_response_target = res['evaluation_context']['full_context'].get('office_action', '')
+            
             try:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
                         "generated_text": res['ai_exam']['output'],
                         "claims": res['ai_exam']['input']['claims'],
-                        "reference_summaries": res['ai_exam']['input']['refs'],
-                        "office_action": res['evaluation_context']['full_context']['office_action'],
                         "ground_truth": res['evaluation_context']['ground_truth'],
+                        "current_response_target": current_response_target.strip(),
                     },
                 )
             except KeyError as e:
@@ -832,9 +899,9 @@ class PatentEvaluator:
                     {
                         "generated_text": res['ai_exam'].get('output', ''),
                         "claims": res.get('ai_exam', {}).get('input', {}).get('claims', ''),
-                        "reference_summaries": res.get('ai_exam', {}).get('input', {}).get('refs', ''),
-                        "office_action": res.get('evaluation_context', {}).get('full_context', {}).get('office_action', ''),
                         "ground_truth": res.get('evaluation_context', {}).get('ground_truth', ''),
+                        "previous_remarks": prev_remarks or "",
+                        "previous_office_action": prev_oa or "",
                     },
                 )
 
@@ -1167,9 +1234,17 @@ class PatentEvaluator:
                     cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text, gt_ids=gt_ids)
                     list_match = citation_list_match(pred_text, refs_text)
 
+                    # Rejection type metrics (use dataset rejection_types as GT)
+                    gt_rejections = normalize_rejection_types(
+                        res.get("meta", {}).get("rejection_types", [])
+                    )
+                    pred_rejections = pred_stat
+                    rej_scores = rejection_type_metrics(pred_rejections, gt_rejections)
+
                     rule_scores.update(disp_scores)
                     rule_scores.update(stat_scores)
                     rule_scores.update(cit_scores)
+                    rule_scores.update(rej_scores)
                     rule_scores["citation_list_match"] = list_match
                     if "disposition_accuracy" in rule_scores:
                         rule_scores["disposition_accuracy_pct"] = round(rule_scores["disposition_accuracy"] * 100, 2)
@@ -1430,5 +1505,35 @@ class PatentEvaluator:
         except Exception:
             pass
         raise ValueError("No valid JSON found in response")
+
+    def _build_previous_round_context(self, items, current_round_idx, task_type):
+        """Build context from the previous same-type round.
+        
+        Rules:
+        - OA: history = previous OA (skip rebuttal rounds)
+        - Rebuttal: history = previous Rebuttal (skip OA rounds)
+        """
+        if current_round_idx <= 0 or current_round_idx >= len(items):
+            return "N/A"
+
+        if task_type == "oa":
+            for j in range(current_round_idx - 1, -1, -1):
+                prev_item = items[j]
+                if str(prev_item.get("meta", {}).get("round_type", "")).lower() == "oa":
+                    _, prev_oa, _ = self._extract_round_texts(prev_item)
+                    if prev_oa and prev_oa.strip():
+                        return f"Previous Round Office Action:\n{prev_oa}"
+            return "N/A"
+
+        if task_type == "rebuttal":
+            for j in range(current_round_idx - 1, -1, -1):
+                prev_item = items[j]
+                if str(prev_item.get("meta", {}).get("round_type", "")).lower() == "rebuttal":
+                    _, _, prev_rebuttal = self._extract_round_texts(prev_item)
+                    if prev_rebuttal and prev_rebuttal.strip() and prev_rebuttal.upper() != "N/A":
+                        return f"Previous Round Rebuttal:\n{prev_rebuttal}"
+            return "N/A"
+
+        return "N/A"
 
 

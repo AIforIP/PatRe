@@ -400,10 +400,7 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, wr
         exam_input_path = os.path.join(input_dir, "ai_input.json")
         with open(exam_input_path, 'w', encoding='utf-8') as f:
             ai_input_data = raw_result['ai_exam']['input'].copy()
-            # Persist OA for traceability (not used by the model directly).
-            oa_text = raw_result.get('evaluation_context', {}).get('full_context', {}).get('office_action', "")
-            if oa_text:
-                ai_input_data["office_action"] = oa_text
+            # Only persist the true model input
             json.dump(ai_input_data, f, indent=2, ensure_ascii=False)
         # 2. output/ai_output.txt 
         exam_output_path = os.path.join(output_dir, "ai_output.txt")
@@ -639,24 +636,38 @@ def _extract_round_texts(item):
     )
     return claims, office_action, remarks
 
-def _build_prosecution_history(items):
-    blocks = []
-    for idx, it in enumerate(items, start=1):
-        claims, office_action, remarks = _extract_round_texts(it)
-        if not (claims or office_action or remarks):
-            continue
-        blocks.append(
-            "Round {idx} (historical):\n"
-            "Claims:\n{claims}\n"
-            "Office Action:\n{oa}\n"
-            "Remarks/Rebuttal:\n{remarks}".format(
-                idx=idx,
-                claims=claims or "[MISSING]",
-                oa=office_action or "[MISSING]",
-                remarks=remarks or "[MISSING]"
-            )
-        )
-    return "\n\n".join(blocks) if blocks else "N/A"
+def _build_previous_round_context(items, current_round_idx, task_type):
+    """Build context from only the previous same-type round.
+
+    Args:
+        items: List of rounds for a patent (same type only)
+        current_round_idx: Current round index (0-based)
+        task_type: Current task type ('oa' or 'rebuttal')
+
+    Returns:
+        String containing previous round context, or 'N/A' if no previous round
+    """
+    if current_round_idx <= 0:
+        return "N/A"
+
+    prev_idx = current_round_idx - 1
+    if prev_idx >= len(items):
+        return "N/A"
+
+    prev_item = items[prev_idx]
+    _, office_action, remarks = _extract_round_texts(prev_item)
+
+    if task_type == "oa":
+        if not office_action or office_action.strip() == "":
+            return "N/A"
+        return f"Previous Round Office Action:\n{office_action}"
+
+    if task_type == "rebuttal":
+        if not remarks or remarks.strip() == "" or remarks.upper() == "N/A":
+            return "N/A"
+        return f"Previous Round Rebuttal:\n{remarks}"
+
+    return "N/A"
 
 def main():
     args = parse_args()
@@ -781,7 +792,8 @@ def main():
             item = items[idx]
             claims = _extract_from_item(item, "claims")
             office_action = _extract_from_item(item, "office_action")
-            rebuttal_history = _extract_from_item(item, "rebuttal_history")
+            # Use only previous round context (not all history)
+            prev_context = _build_previous_round_context(items, idx, task)
             if task == "rebuttal":
                 ground_truth = _extract_from_item(item, "ground_truth_rebuttal") or "N/A"
             else:
@@ -796,7 +808,7 @@ def main():
                 "refs": "",
                 "task_type": task,
                 "retrieval_setting": retrieval_setting,
-                "prosecution_history": "N/A",
+                "prosecution_history": prev_context,
                 "granularity": "full_text",
             }
             return {
@@ -917,10 +929,36 @@ def main():
     grouped_data = {}
     for item in all_data:
         pid = item['id']
-        if pid not in grouped_data: grouped_data[pid] = []
+        if pid not in grouped_data:
+            grouped_data[pid] = []
         grouped_data[pid].append(item)
-        
+
+    # Sort by oa_number/oa_date and split into same-type lists for correct sequencing
+    def _sort_key(it):
+        meta = it.get("meta", {}) if isinstance(it, dict) else {}
+        num = meta.get("oa_number")
+        try:
+            num_val = int(num)
+        except Exception:
+            num_val = 10 ** 9
+        date_val = meta.get("oa_date") or ""
+        round_type = str(meta.get("round_type", "")).lower()
+        round_order = 0 if round_type == "oa" else 1
+        return (num_val, date_val, round_order)
+
+    grouped_data = {pid: sorted(items, key=_sort_key) for pid, items in grouped_data.items()}
+    grouped_oa = {
+        pid: [it for it in items if str(it.get("meta", {}).get("round_type", "")).lower() == "oa"]
+        for pid, items in grouped_data.items()
+    }
+    grouped_rebuttal = {
+        pid: [it for it in items if str(it.get("meta", {}).get("round_type", "")).lower() == "rebuttal"]
+        for pid, items in grouped_data.items()
+    }
+
     max_lines = max(len(v) for v in grouped_data.values()) if grouped_data else 0
+    max_oa_lines = max((len(v) for v in grouped_oa.values()), default=0)
+    max_rebuttal_lines = max((len(v) for v in grouped_rebuttal.values()), default=0)
 
     for model_idx, model_name in enumerate(models_to_run, start=1):
         config['models']['active_model'] = model_name
@@ -946,31 +984,33 @@ def main():
 
         all_results_map = {} # pid -> [eval_result, ...]
 
-        for line_idx in range(max_lines):
+        total_rounds = max(max_oa_lines, max_rebuttal_lines) if args.task == "both" else max_lines
+        for line_idx in range(total_rounds):
             # 1. Examiner Round (OA)
             if args.task in ("oa", "both"):
                 task_oa = "oa"
                 config['task_settings']['current_task'] = task_oa
                 batch_oa = []
-                history_map = {
-                    pid: _build_prosecution_history(lines[:line_idx])
-                    for pid, lines in grouped_data.items()
-                }
-                for pid, lines in grouped_data.items():
+
+                for pid, lines in grouped_oa.items():
                     if line_idx < len(lines):
                         item = lines[line_idx]
                         item_oa = copy.deepcopy(item)
                         item_oa.setdefault("input", {})
-                        item_oa["input"]["prosecution_history"] = history_map.get(pid, "N/A")
-                        # For OA generation, use the previous round's remarks (if any).
+                        # Use only previous OA
+                        prev_context = _build_previous_round_context(lines, line_idx, "oa")
+                        item_oa["input"]["prosecution_history"] = prev_context
+                        # For OA generation, use previous rebuttal if exists
                         prev_remarks = ""
-                        if line_idx - 1 >= 0:
-                            _, _, prev_remarks = _extract_round_texts(lines[line_idx - 1])
+                        if line_idx - 1 >= 0 and pid in grouped_rebuttal:
+                            rb_lines = grouped_rebuttal.get(pid, [])
+                            if line_idx - 1 < len(rb_lines):
+                                _, _, prev_remarks = _extract_round_texts(rb_lines[line_idx - 1])
                         if isinstance(prev_remarks, str):
                             prev_remarks = prev_remarks.strip()
                         item_oa["input"]["rebuttal"] = prev_remarks if prev_remarks is not None else ""
                         batch_oa.append(item_oa)
-                
+
                 if batch_oa:
                     round_no = line_idx * 2 + 1 if args.task == "both" else line_idx + 1
                     logger.info(f"📌 Round {round_no}: {task_oa} for {len(batch_oa)} patents...")
@@ -993,11 +1033,12 @@ def main():
                             report = [{} for _ in raw]
                             scoring_ok = False
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok))
-                    
+
                     if not args.generate_only and scoring_ok:
                         for r, e in zip(raw, report):
                             pid = r['patent_id']
-                            if pid not in all_results_map: all_results_map[pid] = []
+                            if pid not in all_results_map:
+                                all_results_map[pid] = []
                             all_results_map[pid].append(e)
 
             # 2. Applicant Round (Rebuttal)
@@ -1006,17 +1047,15 @@ def main():
                 config['task_settings']['current_task'] = task_rebuttal
                 batch_rebuttal = []
 
-                history_map = {
-                    pid: _build_prosecution_history(lines[:line_idx])
-                    for pid, lines in grouped_data.items()
-                }
-                for pid, lines in grouped_data.items():
+                for pid, lines in grouped_rebuttal.items():
                     if line_idx < len(lines):
                         item = lines[line_idx]
                         item_rb = copy.deepcopy(item)
                         item_rb.setdefault("input", {})
-                        item_rb["input"]["prosecution_history"] = history_map.get(pid, "N/A")
-                        # For rebuttal generation, use the current round's remarks.
+                        # Use only previous rebuttal
+                        prev_context = _build_previous_round_context(lines, line_idx, "rebuttal")
+                        item_rb["input"]["prosecution_history"] = prev_context
+                        # For rebuttal generation, use current round's remarks.
                         _, _, cur_remarks = _extract_round_texts(item_rb)
                         if isinstance(cur_remarks, str):
                             cur_remarks = cur_remarks.strip()
@@ -1030,7 +1069,7 @@ def main():
                             rebuttal_text = rebuttal_text.strip()
                         if rebuttal_text and str(rebuttal_text).upper() != "N/A":
                             batch_rebuttal.append(item_rb)
-                
+
                 if batch_rebuttal:
                     round_no = line_idx * 2 + 2 if args.task == "both" else line_idx + 1
                     logger.info(f"📌 Round {round_no}: {task_rebuttal} for {len(batch_rebuttal)} patents...")
@@ -1053,11 +1092,12 @@ def main():
                             report = [{} for _ in raw]
                             scoring_ok = False
                     _save_patent_organized_results(raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok))
-                    
+
                     if not args.generate_only and scoring_ok:
                         for r, e in zip(raw, report):
                             pid = r['patent_id']
-                            if pid not in all_results_map: all_results_map[pid] = []
+                            if pid not in all_results_map:
+                                all_results_map[pid] = []
                             all_results_map[pid].append(e)
 
         logger.info(f"�?Multiround finished. Results: {multiround_exp_dir}")

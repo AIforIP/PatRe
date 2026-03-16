@@ -22,6 +22,65 @@ def _round_task_from_name(name):
     return ""
 
 
+def _build_previous_round_context(items, current_round_idx, task_type):
+    """Build context from only the previous round (not all history).
+    
+    Args:
+        items: List of all rounds for a patent
+        current_round_idx: Current round index (0-based)
+        task_type: Current task type ('oa' or 'rebuttal')
+    
+    Returns:
+        String containing previous round context, or 'N/A' if no previous round
+    """
+    if current_round_idx <= 0:
+        return "N/A"
+    
+    prev_idx = current_round_idx - 1
+    if prev_idx >= len(items):
+        return "N/A"
+    
+    prev_item = items[prev_idx]
+    claims, office_action, remarks = _extract_round_texts(prev_item)
+    
+    # For rebuttal generation: use previous OA
+    if task_type == "rebuttal":
+        if not office_action or office_action.strip() == "":
+            return "N/A"
+        return f"Previous Round Office Action:\n{office_action}"
+    
+    # For OA generation: use previous rebuttal
+    elif task_type == "oa":
+        if not remarks or remarks.strip() == "" or remarks.upper() == "N/A":
+            return "N/A"
+        return f"Previous Round Rebuttal:\n{remarks}"
+    
+    return "N/A"
+
+
+def _extract_round_texts(item):
+    """Extract claims, office action, and remarks from an item."""
+    def _get_nested_text(it, *keys):
+        cur = it
+        for k in keys:
+            if not isinstance(cur, dict):
+                return ""
+            cur = cur.get(k)
+        return cur if isinstance(cur, str) else ""
+    
+    claims = _get_nested_text(item, "input", "claims") or _get_nested_text(item, "ground_truth", "claims")
+    office_action = (
+        _get_nested_text(item, "input", "office_action")
+        or _get_nested_text(item, "ground_truth", "oa_text")
+        or _get_nested_text(item, "ground_truth", "next_oa_text")
+    )
+    remarks = (
+        _get_nested_text(item, "input", "rebuttal")
+        or _get_nested_text(item, "ground_truth", "rebuttal_text")
+    )
+    return claims, office_action, remarks
+
+
 def _build_result_entry(patent_id, round_dir, ctx):
     ai_input = ctx.get("ai_input", {})
     ai_output = ctx.get("ai_output", "")
