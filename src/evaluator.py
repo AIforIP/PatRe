@@ -335,7 +335,9 @@ class PatentEvaluator:
                     "response_to_rebuttal_bm25",
                 }
                 if task_key == "oa" and template_task in response_templates:
-                    ground_truth_text = item['ground_truth'].get('next_oa_text', item['ground_truth'].get('oa_text', "N/A"))
+                    # response_to_rebuttal: the model is expected to generate the CURRENT round OA in response
+                    # to the applicant's rebuttal. Therefore, use current oa_text as ground truth.
+                    ground_truth_text = item['ground_truth'].get('oa_text', "N/A")
                 elif task_key == "rebuttal":
                     ground_truth_text = item['ground_truth'].get('rebuttal_text', "N/A")
                 else:
@@ -673,6 +675,13 @@ class PatentEvaluator:
             return short_text if short_text else "Warning: Oracle references not available."
         elif setting == "bm25_retrieved":
             limit = self._get_ref_text_limit()
+            cached_bm25 = item.get("input", {}).get("bm25_reference_summaries", "")
+            if isinstance(cached_bm25, str) and cached_bm25.strip():
+                content = cached_bm25.strip()
+                if len(content) > limit:
+                    return content[:limit] + "\n[Truncated to input limit]"
+                return content
+
             query_text = item.get("input", {}).get("claims", "")
             bm25_list = self._bm25_retrieve_list(query_text, top_k=5)
 

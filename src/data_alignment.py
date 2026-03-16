@@ -19,7 +19,7 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
 SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.jsonl")
 REF_TEXT_LIMIT = 20000  # Keep aligned with config/eval_config.yaml: reference_summaries
-
+BM25_TOP_K = 5
 
 
 def _normalize_ref_list(ref_list):
@@ -121,6 +121,93 @@ def _build_oracle_reference_summaries(ref_ids):
     return text
 
 
+def _tokenize(text):
+    return [w for w in re.findall(r"[A-Za-z0-9]+", str(text).lower()) if w]
+
+
+def _load_bm25_corpus():
+    docs = []
+    ids = []
+    ref_dir = REF_POOL_DIR
+    if not ref_dir or not os.path.exists(ref_dir):
+        return docs, ids
+    for name in os.listdir(ref_dir):
+        if not name.endswith(".json"):
+            continue
+        path = os.path.join(ref_dir, name)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            title = data.get("title", "")
+            abstract = data.get("abstract", "")
+            summary = data.get("summary_of_invention", "")
+            content = " ".join([title, abstract, summary]).strip()
+            tokens = _tokenize(content)
+            docs.append(tokens)
+            ids.append(os.path.splitext(name)[0])
+        except Exception:
+            continue
+    return docs, ids
+
+
+def _bm25_topk(query_text, docs, ids, top_k):
+    if not docs or not ids:
+        return []
+    q = _tokenize(query_text)
+    if not q:
+        return []
+    try:
+        from rank_bm25 import BM25Okapi
+        bm25 = BM25Okapi(docs)
+        scores = bm25.get_scores(q)
+        scored = [(float(scores[i]), i) for i in range(len(scores))]
+        scored.sort(reverse=True, key=lambda x: x[0])
+    except Exception:
+        N = len(docs)
+        df = {}
+        for term in set(q):
+            c = 0
+            seen = set()
+            for doc in docs:
+                if term in set(doc):
+                    c += 1
+            df[term] = c
+        k1 = 1.5
+        b = 0.75
+        scored = []
+        avgdl = sum(len(d) for d in docs) / len(docs) if docs else 0.0
+        for i, doc in enumerate(docs):
+            doc_tf = {}
+            for t in doc:
+                doc_tf[t] = doc_tf.get(t, 0) + 1
+            dl = len(doc) if doc else 1
+            s = 0.0
+            for term in q:
+                if term not in doc_tf:
+                    continue
+                dfi = df.get(term, 0)
+                idf = max(0.0, ((N - dfi + 0.5) / (dfi + 0.5))) if dfi > 0 else 0.0
+                tf = doc_tf[term]
+                denom = tf + k1 * (1 - b + b * (dl / (avgdl if avgdl else dl)))
+                s += (idf) * ((tf * (k1 + 1)) / denom)
+            scored.append((s, i))
+        scored.sort(reverse=True, key=lambda x: x[0])
+
+    out = []
+    for _, i in scored[:top_k]:
+        doc_id = ids[i]
+        path = os.path.join(REF_POOL_DIR, f"{doc_id}.json")
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            title = data.get("title", "")
+            abstract = data.get("abstract", "")
+            out.append(f"Ref {doc_id}: {title}. {abstract}")
+        except Exception:
+            out.append(f"Ref {doc_id}: [content unavailable]")
+    return out
+
+
 def get_ref_ids(ref_list):
     ref_list = _normalize_ref_list(ref_list)
     if not ref_list:
@@ -189,6 +276,8 @@ def align_data():
     if not RAW_DATA_DIRS:
         print("WARNING: No raw data directories found under dataset.")
         return
+
+    docs, doc_ids = _load_bm25_corpus()
 
     with open(SAVE_PATH, "w", encoding="utf-8") as outfile:
         for raw_dir in RAW_DATA_DIRS:
@@ -267,6 +356,10 @@ def align_data():
                             refs = oa.get("extracted_reference_contexts", [])
                         ref_ids, ref_missing = get_ref_ids(refs)
                         oracle_ref_summaries = _build_oracle_reference_summaries(ref_ids)
+                        bm25_ref_summaries = ""
+                        if docs and doc_ids:
+                            bm25_entries = _bm25_topk(claims_text, docs, doc_ids, BM25_TOP_K)
+                            bm25_ref_summaries = "\n".join(bm25_entries).strip()
                         decision_value = oa.get("decision", "")
                         decision_value = str(decision_value).strip()
                         decision_missing = not bool(decision_value)
@@ -292,6 +385,7 @@ def align_data():
                                 "claims": claims_text,
                                 "oracle_reference_summaries": oracle_ref_summaries,
                                 "oracle_reference_ids": ref_ids,
+                                "bm25_reference_summaries": bm25_ref_summaries,
                                 "rebuttal": prev_remarks if prev_remarks is not None else "",
                                 "office_action": input_oa,
                                 "next_office_action": next_oa_body,
@@ -322,6 +416,7 @@ def align_data():
                                     "claims": claims_text,
                                     "oracle_reference_summaries": oracle_ref_summaries,
                                     "oracle_reference_ids": ref_ids,
+                                    "bm25_reference_summaries": bm25_ref_summaries,
                                     "rebuttal": cur_remarks,
                                     "office_action": input_oa,
                                     "next_office_action": next_oa_body,
