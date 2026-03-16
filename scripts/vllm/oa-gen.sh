@@ -1,5 +1,5 @@
 python run_exp.py \
-    --model gemma-3-12b-it \
+    --model Qwen3.5-9B \
     --task oa \
     --test_mode zero_shot \
     --retrieval no_ref \
