@@ -13,14 +13,9 @@ task_settings:
     bleu: false
     rouge_l: true
     bert_score: false
-  judge_max_chars: 12000
-  judge_default_field_max_chars: 4000
-  judge_field_max_chars:
-    generated_text: 40000
-    ground_truth: 40000
-    office_action: 30000
-    claims: 70000
-    reference_summaries: 20000
+  judge_max_chars: 0
+  judge_default_field_max_chars: 0
+  judge_field_max_chars: {}
 
 
 experiment_matrix: 

@@ -446,8 +446,8 @@ class PatentEvaluator:
 
     def _build_judge_prompt(self, template, fields):
         cfg = self.config.get("task_settings", {})
-        max_total = cfg.get("judge_max_chars", 12000)
-        default_limit = cfg.get("judge_default_field_max_chars", 4000)
+        max_total = cfg.get("judge_max_chars", 0)
+        default_limit = cfg.get("judge_default_field_max_chars", 0)
         per_field = cfg.get("judge_field_max_chars", {}) or {}
 
         # Build conditional section for response target (what this round is responding to)
@@ -465,12 +465,15 @@ class PatentEvaluator:
         for k, v in processed_fields.items():
             if isinstance(v, str):
                 limit = per_field.get(k, default_limit)
-                truncated[k] = self._truncate_text(v, limit)
+                if not limit or limit <= 0:
+                    truncated[k] = v
+                else:
+                    truncated[k] = self._truncate_text(v, limit)
             else:
                 truncated[k] = v
 
         prompt = self._safe_template_format(template, truncated)
-        if max_total and len(prompt) > max_total:
+        if max_total and max_total > 0 and len(prompt) > max_total:
             prompt = self._shrink_prompt(template, truncated, max_total)
         return prompt
 
@@ -895,7 +898,6 @@ class PatentEvaluator:
                     judge_config["user_prompt_template"],
                     {
                         "generated_text": res['ai_exam']['output'],
-                        "claims": res['ai_exam']['input']['claims'],
                         "ground_truth": res['evaluation_context']['ground_truth'],
                         "current_response_target": current_response_target.strip(),
                     },
@@ -907,7 +909,6 @@ class PatentEvaluator:
                     judge_config["user_prompt_template"],
                     {
                         "generated_text": res['ai_exam'].get('output', ''),
-                        "claims": res.get('ai_exam', {}).get('input', {}).get('claims', ''),
                         "ground_truth": res.get('evaluation_context', {}).get('ground_truth', ''),
                         "previous_remarks": prev_remarks or "",
                         "previous_office_action": prev_oa or "",
