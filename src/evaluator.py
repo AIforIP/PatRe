@@ -7,6 +7,7 @@ from src.model_backend import ModelBackend
 from src.metrics_library import (
     safe_parse_json,
     extract_statutes,
+    extract_rejection_types,
     extract_disposition,
     disposition_metrics,
     statute_metrics,
@@ -1235,6 +1236,8 @@ class PatentEvaluator:
                     pred_stat = extract_statutes(pred_text)
                     gt_stat = extract_statutes(gt_text)
 
+                    pred_rejections = extract_rejection_types(pred_text)
+
                     # Per-sample: only keep accuracy to avoid misleading precision/recall/F1
                     disp_scores = {}
                     if pred_disp != "unknown" and gt_disp not in ("unknown", "procedural_action"):
@@ -1248,7 +1251,6 @@ class PatentEvaluator:
                     gt_rejections = normalize_rejection_types(
                         res.get("meta", {}).get("rejection_types", [])
                     )
-                    pred_rejections = pred_stat
                     rej_scores = rejection_type_metrics(pred_rejections, gt_rejections)
 
                     rule_scores.update(disp_scores)

@@ -41,6 +41,17 @@ def extract_statutes(text):
     return set(m.group(1) for m in _STATUTE_RE.finditer(text))
 
 
+def extract_rejection_types(text):
+    if not text:
+        return set()
+    types = set(m.group(1) for m in _STATUTE_RE.finditer(text))
+    if re.search(r"\b(obviousness[-\s]*type\s+)?double\s*-?\s*patenting\b", text, re.IGNORECASE):
+        types.add("double_patenting")
+    if re.search(r"\bOTDP\b", text, re.IGNORECASE):
+        types.add("double_patenting")
+    return types
+
+
 def extract_disposition(text, json_obj=None):
     if json_obj:
         status = json_obj.get("claim_status") or json_obj.get("decision")
@@ -120,9 +131,17 @@ def normalize_rejection_types(rejection_types):
     for r in rejection_types:
         if not r:
             continue
-        m = re.search(r"\b(101|102|103|112)\b", str(r))
+        text = str(r)
+        m = re.search(r"\b(101|102|103|112)\b", text)
         if m:
             out.add(m.group(1))
+            continue
+        if re.search(r"\b(obviousness[-\s]*type\s+)?double\s*-?\s*patenting\b", text, re.IGNORECASE):
+            out.add("double_patenting")
+            continue
+        if re.search(r"\bOTDP\b", text, re.IGNORECASE):
+            out.add("double_patenting")
+            continue
     return out
 
 

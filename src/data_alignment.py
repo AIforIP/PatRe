@@ -9,7 +9,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset")
+RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset1")
 RAW_DATA_DIRS = []
 for name in sorted(os.listdir(RAW_DATA_ROOT)):
     if name.startswith("PatTimeline_") and name.endswith("_Category"):
