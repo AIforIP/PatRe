@@ -77,10 +77,28 @@ Generate-only (skip evaluation):
 python run_exp.py --task oa --generate_only
 ```
 
+Resume generation in an existing results directory (skip patents that already have non-empty `output/ai_output.txt`; with full pipeline, also skip when `eval/scores.json` exists). Re-run with the **same** `--task`, filters, and data slice as the original run.
+
+```bash
+python run_exp.py --task oa --generate_only --resume_dir results/YOUR_EXPERIMENT_DIR
+```
+
 Eval-only (re-score existing results):
 
 ```bash
 python run_exp.py --eval_only --results_dir results/YOUR_EXPERIMENT 
+```
+
+Eval-only resume (skip rounds that already have `eval/scores.json`):
+
+```bash
+python run_exp.py --eval_only --results_dir results/YOUR_EXPERIMENT
+```
+
+Force re-evaluation (overwrite by recomputing and writing new scores):
+
+```bash
+python run_exp.py --eval_only --results_dir results/YOUR_EXPERIMENT --eval_force
 ```
 
 Multi-round simulation (OA + rebuttal alternating):

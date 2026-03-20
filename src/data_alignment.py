@@ -21,6 +21,16 @@ SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.jsonl")
 REF_TEXT_LIMIT = 20000  # Keep aligned with config/eval_config.yaml: reference_summaries
 BM25_TOP_K = 5
 
+# Whether to compute and store BM25 retrieved reference summaries into the
+# generated test set (`test_set_new.jsonl`).
+# Default is OFF, so existing experiments that don't rely on BM25 won't pay
+# the extra cost and won't persist BM25-derived references.
+BM25_ENABLE = str(os.getenv("PATRE_ENABLE_BM25_ALIGNMENT", "")).strip().lower() in (
+    "1",
+    "true",
+    "yes",
+)
+
 
 def _normalize_ref_list(ref_list):
     if not ref_list:
@@ -277,7 +287,7 @@ def align_data():
         print("WARNING: No raw data directories found under dataset.")
         return
 
-    docs, doc_ids = _load_bm25_corpus()
+    docs, doc_ids = _load_bm25_corpus() if BM25_ENABLE else ([], [])
 
     with open(SAVE_PATH, "w", encoding="utf-8") as outfile:
         for raw_dir in RAW_DATA_DIRS:
@@ -357,7 +367,7 @@ def align_data():
                         ref_ids, ref_missing = get_ref_ids(refs)
                         oracle_ref_summaries = _build_oracle_reference_summaries(ref_ids)
                         bm25_ref_summaries = ""
-                        if docs and doc_ids:
+                        if BM25_ENABLE and docs and doc_ids:
                             bm25_entries = _bm25_topk(claims_text, docs, doc_ids, BM25_TOP_K)
                             bm25_ref_summaries = "\n".join(bm25_entries).strip()
                         decision_value = oa.get("decision", "")
@@ -394,6 +404,9 @@ def align_data():
                                 "oa_text": oa_body,
                                 "rebuttal_text": prev_remarks if prev_remarks is not None else "",
                                 "next_oa_text": next_oa_body,
+                                # Ground-truth citations used by citation-level evaluation.
+                                # `ref_ids` are normalized reference pool document ids (e.g. "USxxxx...").
+                                "citations_gt": ref_ids,
                                 "decision": decision_value,
                             },
                         }
@@ -425,6 +438,8 @@ def align_data():
                                     "oa_text": oa_body,
                                     "rebuttal_text": cur_remarks,
                                     "next_oa_text": next_oa_body,
+                                    # Same reference set as the aligned office action.
+                                    "citations_gt": ref_ids,
                                     "decision": decision_value,
                                 },
                             }

@@ -7,6 +7,7 @@ from datetime import datetime
 #src.evaluator
 from src.evaluator import PatentEvaluator
 from src.utils import setup_logger
+from tqdm import tqdm
 
 def parse_args():
     parser = argparse.ArgumentParser(description="PatRe")
@@ -38,6 +39,22 @@ def parse_args():
     mode_group.add_argument("--eval_only", action="store_true", help="Only evaluate existing results, skip generation")
     parser.add_argument("--results_dir", type=str, help="Results directory for eval-only mode")
     parser.add_argument("--eval_limit", type=int, default=0, help="Max rounds to evaluate in eval-only mode (0=all)")
+    parser.add_argument(
+        "--eval_force",
+        action="store_true",
+        help="In --eval_only mode, re-evaluate even if eval/scores.json already exists.",
+    )
+    parser.add_argument(
+        "--resume_dir",
+        type=str,
+        default=None,
+        help="Existing experiment directory to resume: skip patents that already have valid generation (and eval scores when not --generate_only).",
+    )
+    parser.add_argument(
+        "--resume_retry_failed",
+        action="store_true",
+        help="With --resume_dir, regenerate when the saved output is empty or FAILED_TO_GENERATE.",
+    )
     return parser.parse_args()
 
 def analyze_dataset_rounds(config):
@@ -669,6 +686,278 @@ def _build_previous_round_context(items, current_round_idx, task_type):
 
     return "N/A"
 
+
+def _task_label(task_key):
+    if task_key == "oa":
+        return "oa"
+    if task_key == "rebuttal":
+        return "rebuttal"
+    return "other"
+
+
+def _round_dir_for_patent(exp_dir, patent_id, round_no, task_key):
+    label = _task_label(task_key)
+    return os.path.join(exp_dir, f"patent_{patent_id}", f"round_{round_no:02d}_{label}")
+
+
+def _resolve_ai_output_path(round_dir):
+    p_new = os.path.join(round_dir, "output", "ai_output.txt")
+    p_legacy = os.path.join(round_dir, "ai_output.txt")
+    if os.path.isfile(p_new):
+        return p_new
+    if os.path.isfile(p_legacy):
+        return p_legacy
+    return p_new
+
+
+def _generation_is_complete(output_path, retry_failed):
+    if not os.path.isfile(output_path):
+        return False
+    try:
+        with open(output_path, "r", encoding="utf-8") as f:
+            text = f.read()
+    except OSError:
+        return False
+    text = (text or "").strip()
+    if not text:
+        return False
+    if text == "FAILED_TO_GENERATE" and not retry_failed:
+        return False
+    return True
+
+
+def _resume_restricted_info(task_key):
+    if task_key == "oa":
+        return ["ground_truth_oa", "rebuttal_history", "human_decisions"]
+    return ["ground_truth_final_outcome"]
+
+
+def _load_resume_raw_result(patent_id, round_dir, round_no, task_key, item):
+    """Rebuild a run_batch-style result dict from saved round files (for scoring after resume)."""
+    ctx_path = os.path.join(round_dir, "eval", "context.json")
+    in_path = os.path.join(round_dir, "input", "ai_input.json")
+    out_path = _resolve_ai_output_path(round_dir)
+
+    ai_output = ""
+    if os.path.isfile(out_path):
+        with open(out_path, "r", encoding="utf-8") as f:
+            ai_output = f.read()
+    if not str(ai_output).strip():
+        return None
+
+    office_action = ""
+    ground_truth = "N/A"
+    citations_gt = []
+    rebuttal_history = "N/A"
+    ai_input = {}
+
+    if os.path.isfile(ctx_path):
+        ctx = _load_json(ctx_path)
+        ai_input = dict(ctx.get("ai_input") or {})
+        if ctx.get("ai_output") is not None:
+            ai_output = str(ctx.get("ai_output"))
+        office_action = ctx.get("office_action") or ""
+        ground_truth = ctx.get("ground_truth") if ctx.get("ground_truth") is not None else "N/A"
+        cg = ctx.get("citations_gt", [])
+        citations_gt = cg if isinstance(cg, list) else []
+        rh = ctx.get("rebuttal_history")
+        rebuttal_history = rh if isinstance(rh, str) else "N/A"
+    elif os.path.isfile(in_path):
+        ai_input = _load_json(in_path)
+        inp = item.get("input", {}) if isinstance(item, dict) else {}
+        gt = item.get("ground_truth", {}) if isinstance(item, dict) else {}
+        office_action = (
+            inp.get("office_action", "")
+            or gt.get("oa_text", "")
+            or gt.get("next_oa_text", "")
+        )
+        if task_key == "rebuttal":
+            ground_truth = gt.get("rebuttal_text", "N/A")
+        else:
+            ground_truth = gt.get("oa_text", "N/A")
+        cg = gt.get("citations_gt", [])
+        citations_gt = cg if isinstance(cg, list) else []
+        rb = inp.get("rebuttal", "N/A")
+        rebuttal_history = rb if isinstance(rb, str) else "N/A"
+    else:
+        return None
+
+    if not str(ai_output).strip():
+        return None
+
+    if not ai_input.get("claims"):
+        ic = item.get("input", {}).get("claims", "") if isinstance(item, dict) else ""
+        if ic:
+            ai_input = dict(ai_input)
+            ai_input["claims"] = ic
+
+    refs = ai_input.get("refs", "") or ""
+    preview = (refs[:200] + "...") if isinstance(refs, str) and len(refs) > 200 else refs
+
+    claims_ctx = item.get("input", {}).get("claims", "") if isinstance(item, dict) else ""
+    if not office_action and isinstance(item, dict):
+        office_action = (
+            item.get("input", {}).get("office_action", "")
+            or item.get("ground_truth", {}).get("oa_text", "")
+            or item.get("ground_truth", {}).get("next_oa_text", "")
+        )
+
+    return {
+        "patent_id": patent_id,
+        "round_info": {
+            "task": task_key,
+            "round_number": round_no,
+            "exam_phase": "context_aware",
+            "granularity": ai_input.get("granularity", "full_text"),
+            "claim_number": ai_input.get("claim_number", "all"),
+        },
+        "ai_exam": {
+            "input": ai_input,
+            "output": ai_output,
+            "available_info": list(ai_input.keys()),
+            "restricted_info": _resume_restricted_info(task_key),
+        },
+        "evaluation_context": {
+            "full_context": {
+                "claims": claims_ctx or ai_input.get("claims", ""),
+                "refs": refs,
+                "office_action": office_action,
+                "rebuttal_history": rebuttal_history,
+            },
+            "ground_truth": ground_truth,
+            "citations_gt": citations_gt,
+            "input_refs_preview": preview,
+        },
+    }
+
+
+def _partition_resume_batch(items, exp_dir, round_no, task_key, args):
+    """Split batch into items that still need API generation vs. disk-only scoring."""
+    if not args.resume_dir:
+        return list(items), []
+
+    to_generate = []
+    score_only = []
+    for item in items:
+        pid = item["id"]
+        rd = _round_dir_for_patent(exp_dir, pid, round_no, task_key)
+        out_path = _resolve_ai_output_path(rd)
+        gen_ok = _generation_is_complete(out_path, args.resume_retry_failed)
+
+        if not gen_ok:
+            to_generate.append(item)
+            continue
+
+        if args.generate_only:
+            continue
+
+        scores_path = os.path.join(rd, "eval", "scores.json")
+        if os.path.isfile(scores_path):
+            continue
+
+        score_only.append((item, rd))
+
+    return to_generate, score_only
+
+
+def _run_one_task_round(
+    args,
+    config,
+    logger,
+    multiround_exp_dir,
+    batch_items,
+    round_no,
+    task_key,
+    all_results_map,
+    auto_extra,
+):
+    if not batch_items:
+        return
+
+    to_gen, score_pairs = _partition_resume_batch(batch_items, multiround_exp_dir, round_no, task_key, args)
+    if args.resume_dir:
+        if args.generate_only:
+            logger.info(
+                f"Resume round {round_no} ({task_key}): {len(to_gen)} to generate, "
+                f"{len(batch_items) - len(to_gen)} already on disk (skipped)"
+            )
+        else:
+            logger.info(
+                f"Resume round {round_no} ({task_key}): {len(to_gen)} to generate, "
+                f"{len(score_pairs)} pending eval from disk, "
+                f"{len(batch_items) - len(to_gen) - len(score_pairs)} complete (skipped)"
+            )
+
+    if score_pairs and not args.generate_only:
+        config["task_settings"]["current_task"] = task_key
+        raws = []
+        for item, rd in score_pairs:
+            r = _load_resume_raw_result(item["id"], rd, round_no, task_key, item)
+            if r:
+                raws.append(r)
+        if raws:
+            engine = PatentEvaluator(config, logger)
+            engine.dataset = []
+            scoring_ok = False
+            try:
+                report = engine.run_scoring(raws)
+                if auto_extra:
+                    report = engine.run_additional_metrics(report)
+                scoring_ok = True
+            except Exception as e:
+                logger.warning(f"Scoring failed (resume from disk); saving generation only. Error: {e}")
+                report = [{} for _ in raws]
+                scoring_ok = False
+            _save_patent_organized_results(
+                raws, report, config, multiround_exp_dir, write_scores=scoring_ok
+            )
+            if scoring_ok:
+                for r, e in zip(raws, report):
+                    pid = r["patent_id"]
+                    if pid not in all_results_map:
+                        all_results_map[pid] = []
+                    all_results_map[pid].append(e)
+
+    if not to_gen:
+        if batch_items and args.resume_dir:
+            logger.info(f"Round {round_no} ({task_key}): no new generations needed.")
+        return
+
+    config["task_settings"]["current_task"] = task_key
+    if not args.resume_dir:
+        logger.info(f"📌 Round {round_no}: {task_key} for {len(to_gen)} patents...")
+    else:
+        logger.info(f"📌 Round {round_no}: {task_key} — calling API for {len(to_gen)} patents...")
+    engine = PatentEvaluator(config, logger)
+    engine.dataset = to_gen
+    raw = engine.run_batch()
+    for r in raw:
+        r["round_info"]["round_number"] = round_no
+    scoring_ok = False
+    if args.generate_only:
+        report = [{} for _ in raw]
+    else:
+        try:
+            report = engine.run_scoring(raw)
+            if auto_extra:
+                report = engine.run_additional_metrics(report)
+            scoring_ok = True
+        except Exception as e:
+            logger.warning(f"Scoring failed; saving generation only. Error: {e}")
+            report = [{} for _ in raw]
+            scoring_ok = False
+    _save_patent_organized_results(
+        raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok)
+    )
+
+    if not args.generate_only and scoring_ok:
+        for r, e in zip(raw, report):
+            pid = r["patent_id"]
+            if pid not in all_results_map:
+                all_results_map[pid] = []
+            all_results_map[pid].append(e)
+
+
 def main():
     args = parse_args()
     
@@ -815,7 +1104,7 @@ def main():
                 "ai_input": ai_input,
                 "office_action": office_action,
                 "ground_truth": ground_truth,
-                "rebuttal_history": rebuttal_history,
+                "rebuttal_history": _extract_from_item(item, "rebuttal_history"),
                 "citations_gt": gt_citations,
                 "restricted_info": [],
             }
@@ -891,11 +1180,21 @@ def main():
                 continue
             config['task_settings']['current_task'] = task
             # Evaluate one-by-one so each result is written immediately
+            pbar = tqdm(total=len(results), desc=f"Eval {task}", unit="sample")
             for res in results:
-                scored = engine.run_scoring([res])
+                if not args.eval_force:
+                    rd = res.get("_round_dir") or ""
+                    if isinstance(rd, str) and rd:
+                        scores_path = os.path.join(rd, "eval", "scores.json")
+                        if os.path.isfile(scores_path):
+                            pbar.update(1)
+                            continue
+                scored = engine.run_scoring([res], show_progress=False)
                 if auto_extra:
                     scored = engine.run_additional_metrics(scored)
                 _save_scores(scored[0]["_round_dir"], scored[0])
+                pbar.update(1)
+            pbar.close()
 
         logger.info("Eval-only complete.")
         return
@@ -960,6 +1259,9 @@ def main():
     max_oa_lines = max((len(v) for v in grouped_oa.values()), default=0)
     max_rebuttal_lines = max((len(v) for v in grouped_rebuttal.values()), default=0)
 
+    if args.resume_dir and len(models_to_run) > 1:
+        print("Warning: --resume_dir with multiple models may write to the same directory; use --model for a single backbone.")
+
     for model_idx, model_name in enumerate(models_to_run, start=1):
         config['models']['active_model'] = model_name
         timestamp = datetime.now().strftime(timestamp_format)
@@ -969,14 +1271,17 @@ def main():
         ipc_tag = ipc_filter if ipc_filter else "ALL"
         def _safe(s):
             return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in str(s))
-        parts = ["PatRe"]
-        if include_model_name:
-            parts.append(_safe(model_name))
-        parts.extend([_safe(task_tag), f"tm-{_safe(tm)}", f"ret-{_safe(retr)}", f"ipc-{_safe(ipc_tag)}", timestamp])
-        folder_name = "_".join(parts)
-        multiround_exp_dir = os.path.join(config['paths']['results'], folder_name)
-        if len(models_to_run) > 1:
-            multiround_exp_dir = f"{multiround_exp_dir}_run{model_idx}"
+        if args.resume_dir:
+            multiround_exp_dir = os.path.abspath(args.resume_dir)
+        else:
+            parts = ["PatRe"]
+            if include_model_name:
+                parts.append(_safe(model_name))
+            parts.extend([_safe(task_tag), f"tm-{_safe(tm)}", f"ret-{_safe(retr)}", f"ipc-{_safe(ipc_tag)}", timestamp])
+            folder_name = "_".join(parts)
+            multiround_exp_dir = os.path.join(config['paths']['results'], folder_name)
+            if len(models_to_run) > 1:
+                multiround_exp_dir = f"{multiround_exp_dir}_run{model_idx}"
         os.makedirs(multiround_exp_dir, exist_ok=True)
         
         logger = setup_logger(multiround_exp_dir)
@@ -1013,33 +1318,17 @@ def main():
 
                 if batch_oa:
                     round_no = line_idx * 2 + 1 if args.task == "both" else line_idx + 1
-                    logger.info(f"📌 Round {round_no}: {task_oa} for {len(batch_oa)} patents...")
-                    engine = PatentEvaluator(config, logger)
-                    engine.dataset = batch_oa
-                    raw = engine.run_batch()
-                    for r in raw:
-                        r['round_info']['round_number'] = round_no
-                    scoring_ok = False
-                    if args.generate_only:
-                        report = [{} for _ in raw]
-                    else:
-                        try:
-                            report = engine.run_scoring(raw)
-                            if auto_extra:
-                                report = engine.run_additional_metrics(report)
-                            scoring_ok = True
-                        except Exception as e:
-                            logger.warning(f"Scoring failed; saving generation only. Error: {e}")
-                            report = [{} for _ in raw]
-                            scoring_ok = False
-                    _save_patent_organized_results(raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok))
-
-                    if not args.generate_only and scoring_ok:
-                        for r, e in zip(raw, report):
-                            pid = r['patent_id']
-                            if pid not in all_results_map:
-                                all_results_map[pid] = []
-                            all_results_map[pid].append(e)
+                    _run_one_task_round(
+                        args,
+                        config,
+                        logger,
+                        multiround_exp_dir,
+                        batch_oa,
+                        round_no,
+                        task_oa,
+                        all_results_map,
+                        auto_extra,
+                    )
 
             # 2. Applicant Round (Rebuttal)
             if args.task in ("rebuttal", "both"):
@@ -1072,33 +1361,17 @@ def main():
 
                 if batch_rebuttal:
                     round_no = line_idx * 2 + 2 if args.task == "both" else line_idx + 1
-                    logger.info(f"📌 Round {round_no}: {task_rebuttal} for {len(batch_rebuttal)} patents...")
-                    engine = PatentEvaluator(config, logger)
-                    engine.dataset = batch_rebuttal
-                    raw = engine.run_batch()
-                    for r in raw:
-                        r['round_info']['round_number'] = round_no
-                    scoring_ok = False
-                    if args.generate_only:
-                        report = [{} for _ in raw]
-                    else:
-                        try:
-                            report = engine.run_scoring(raw)
-                            if auto_extra:
-                                report = engine.run_additional_metrics(report)
-                            scoring_ok = True
-                        except Exception as e:
-                            logger.warning(f"Scoring failed; saving generation only. Error: {e}")
-                            report = [{} for _ in raw]
-                            scoring_ok = False
-                    _save_patent_organized_results(raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok))
-
-                    if not args.generate_only and scoring_ok:
-                        for r, e in zip(raw, report):
-                            pid = r['patent_id']
-                            if pid not in all_results_map:
-                                all_results_map[pid] = []
-                            all_results_map[pid].append(e)
+                    _run_one_task_round(
+                        args,
+                        config,
+                        logger,
+                        multiround_exp_dir,
+                        batch_rebuttal,
+                        round_no,
+                        task_rebuttal,
+                        all_results_map,
+                        auto_extra,
+                    )
 
         logger.info(f"�?Multiround finished. Results: {multiround_exp_dir}")
 

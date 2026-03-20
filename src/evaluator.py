@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import json
 import os
 import re
@@ -839,7 +839,7 @@ class PatentEvaluator:
     def _bm25_retrieve(self, query_text):
         return "\n".join(self._bm25_retrieve_list(query_text))
 
-    def run_scoring(self, results):
+    def run_scoring(self, results, show_progress=True):
         """
         Task  examiner_judge rebuttal_judge
         """
@@ -857,7 +857,7 @@ class PatentEvaluator:
         judge_config = self.templates["Evaluation_Metrics"][judge_key]
         scored_results = []
 
-        for res in tqdm(results, desc="Scoring"):
+        for res in tqdm(results, desc="Scoring", disable=not bool(show_progress)):
             # Prompt
             task_type = res.get('round_info', {}).get('task', '')
             round_num = res.get('round_info', {}).get('round_number', 1)
