@@ -83,16 +83,10 @@ Resume generation in an existing results directory (skip patents that already ha
 python run_exp.py --task oa --generate_only --resume_dir results/YOUR_EXPERIMENT_DIR
 ```
 
-Eval-only (re-score existing results):
+Eval-only:
 
 ```bash
 python run_exp.py --eval_only --results_dir results/YOUR_EXPERIMENT 
-```
-
-Eval-only resume (skip rounds that already have `eval/scores.json`):
-
-```bash
-python run_exp.py --eval_only --results_dir results/YOUR_EXPERIMENT
 ```
 
 Force re-evaluation (overwrite by recomputing and writing new scores):
@@ -167,4 +161,4 @@ Eval-only compatibility:
 
 ## License
 
-This repository is intended for academic/research use. Ensure you comply with dataset and model service licenses when distributing results.
+## Contact
