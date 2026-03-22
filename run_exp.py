@@ -4,9 +4,10 @@ import json
 import copy
 import argparse
 from datetime import datetime
-#src.evaluator
+# src.evaluator
 from src.evaluator import PatentEvaluator
-from src.utils import setup_logger
+from src.utils import setup_logger, load_dataset_json
+from src.patent_round_save import save_one_patent_round_artifacts
 from tqdm import tqdm
 
 def parse_args():
@@ -18,7 +19,7 @@ def parse_args():
     # model
     parser.add_argument("--model", type=str, help="Specific model to test")
 
-    # (oa / rebuttal / both)，default is both
+    # (oa / rebuttal / both), default is both
     parser.add_argument(
         "--task",
         type=str,
@@ -28,9 +29,9 @@ def parse_args():
     )
 
 
-    #  (zero_shot / sft_model)
+    # Override test_mode: zero_shot vs sft_model
     parser.add_argument("--test_mode", type=str, choices=["zero_shot", "sft_model"], help="Override test mode")
-    #  (no_ref / oracle_summary / bm25_retrieved)
+    # Override retrieval_setting: no_ref, oracle_summary, bm25_retrieved
     parser.add_argument("--retrieval", type=str, choices=["no_ref", "oracle_summary", "bm25_retrieved"], help="Override retrieval setting")
 
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
@@ -64,11 +65,9 @@ def analyze_dataset_rounds(config):
         return 3
 
     patent_rounds = {}
-    with open(test_set_path, "r", encoding="utf-8") as f:
-        for line in f:
-            item = json.loads(line)
-            patent_id = item["id"]
-            patent_rounds[patent_id] = patent_rounds.get(patent_id, 0) + 1
+    for item in load_dataset_json(test_set_path):
+        patent_id = item["id"]
+        patent_rounds[patent_id] = patent_rounds.get(patent_id, 0) + 1
 
     if not patent_rounds:
         return 3
@@ -79,7 +78,7 @@ def analyze_dataset_rounds(config):
     return max_rounds
 
 def generate_multiround_sequence_from_data(max_rounds):
-   #Generate multi-round examination sequence based on actual dataset rounds.
+    # Generate multi-round examination sequence based on actual dataset rounds.
     sequence = ["oa"]  # start as OA
     
 
@@ -150,9 +149,11 @@ def _build_scores_table(task_key, scores):
     bert = _normalize_0_1(_pick_score(scores, "bert_score", "bert_score_f1"))
     if bert is not None:
         table["BERTScore"] = bert
-    fmt = _normalize_0_1(_pick_score(scores, "formatting_rule", "formatting_schema_score", "formatting_citation_style"))
+    fmt = _pick_score(scores, "formatting_rule", "formatting_schema_score", "formatting_citation_style")
     if fmt is not None:
-        table["Formatting"] = fmt
+        f = float(fmt)
+        # 新存盘为 0–10；旧结果为 0–1，按 0–10 展示
+        table["Formatting"] = round(f * 10.0, 4) if f <= 1.0 else round(min(f, 10.0), 4)
 
     for key, label in (
         ("accuracy", "Accuracy"),
@@ -236,8 +237,10 @@ def _build_result_entry(patent_id, round_dir, ctx):
             },
             "ground_truth": ground_truth,
             "citations_gt": ctx.get("citations_gt", []),
+            "ground_truth_decision": ctx.get("ground_truth_decision", ""),
             "input_refs_preview": (refs[:200] + "...") if isinstance(refs, str) else "",
         },
+        "meta": ctx.get("meta") or {},
     }
 
 
@@ -351,6 +354,9 @@ def _save_scores(round_dir, eval_result):
             summary_scores[out_key] = f"{val * percent_metrics[key]:.2f}%"
         else:
             summary_scores[out_key] = val
+    ls_err = src_scores.get("language_style_error")
+    if isinstance(ls_err, str) and ls_err.strip():
+        summary_scores["Language Style Error"] = ls_err.strip()
     summary = {
         "task_type": task,
         "total_score": eval_result.get("total_score", 0),
@@ -360,178 +366,14 @@ def _save_scores(round_dir, eval_result):
         json.dump(summary, f, indent=2, ensure_ascii=False)
 def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, write_scores=True):
     """Save results grouped by patent, appending per-round outputs."""
-    oa_schema = [
-        "disposition_accuracy",
-        "statute_precision",
-        "citation_accuracy",
-        "bleu",
-        "rouge_l",
-        "bert_score",
-        "formatting_rule",
-        "accuracy",
-        "clarity",
-        "language_style",
-        "constructiveness",
-        "completeness",
-    ]
-    rebuttal_schema = [
-        "point_wise_coverage",
-        "bleu",
-        "rouge_l",
-        "bert_score",
-        "formatting_rule",
-        "accuracy",
-        "clarity",
-        "language_style",
-        "constructiveness",
-        "completeness",
-    ]
     eval_report = eval_report or []
     for idx, raw_result in enumerate(raw_results or []):
-        eval_result = eval_report[idx] if idx < len(eval_report) and isinstance(eval_report[idx], dict) else {}
-        patent_id = raw_result['patent_id']
-        patent_dir = os.path.join(exp_dir, f"patent_{patent_id}")
-        os.makedirs(patent_dir, exist_ok=True)
-        
-        round_info = raw_result['round_info']
-        round_num = round_info['round_number']
-        task_key = round_info['task']
-        
-        # Simplify task label for folder names
-        if task_key == "oa":
-            task_label = "oa"
-        elif task_key == "rebuttal":
-            task_label = "rebuttal"
-        else:
-            task_label = "other"
-        # Better organized round folder with subdirectories
-        round_dir = os.path.join(patent_dir, f"round_{round_num:02d}_{task_label}")
-        input_dir = os.path.join(round_dir, "input")
-        output_dir = os.path.join(round_dir, "output")
-        eval_dir = os.path.join(round_dir, "eval")
-        os.makedirs(input_dir, exist_ok=True)
-        os.makedirs(output_dir, exist_ok=True)
-        os.makedirs(eval_dir, exist_ok=True)
-        
-        # 1. input/ai_input.json 
-        exam_input_path = os.path.join(input_dir, "ai_input.json")
-        with open(exam_input_path, 'w', encoding='utf-8') as f:
-            ai_input_data = raw_result['ai_exam']['input'].copy()
-            # Only persist the true model input
-            json.dump(ai_input_data, f, indent=2, ensure_ascii=False)
-        # 2. output/ai_output.txt 
-        exam_output_path = os.path.join(output_dir, "ai_output.txt")
-        with open(exam_output_path, 'w', encoding='utf-8') as f:
-            f.write(raw_result['ai_exam']['output'])
-        
-        # 3. eval/context.json 
-        eval_context_path = os.path.join(eval_dir, "context.json")
-        with open(eval_context_path, 'w', encoding='utf-8') as f:
-            context_data = {
-                "ai_input": raw_result['ai_exam']['input'],
-                "ai_output": raw_result['ai_exam']['output'],
-                "ground_truth": raw_result['evaluation_context'].get("ground_truth", ""),
-                "restricted_info": raw_result['ai_exam'].get('restricted_info', []),
-                "office_action": raw_result.get('evaluation_context', {}).get('full_context', {}).get('office_action', ""),
-                "rebuttal_history": raw_result.get('evaluation_context', {}).get('full_context', {}).get('rebuttal_history', "N/A"),
-                "citations_gt": raw_result.get('evaluation_context', {}).get("citations_gt", []),
-            }
-            json.dump(context_data, f, indent=2, ensure_ascii=False)
-        
-        if not write_scores:
-            continue
-
-        # 4. eval/scores.json 
-        scores_path = os.path.join(eval_dir, "scores.json")
-        with open(scores_path, 'w', encoding='utf-8') as f:
-            score_data = {
-                "total_score": eval_result.get('total_score', 0),
-                "scores": eval_result.get('scores', {}),
-                "llm_total_score": eval_result.get('judge_total_score', None),
-                "llm_scores": eval_result.get('judge_scores', {}),
-                "llm_system_prompt": eval_result.get('judge_system_prompt', ""),
-                "llm_user_prompt": eval_result.get('judge_user_prompt', ""),
-                "llm_attempts": eval_result.get('judge_attempts', []),
-                "llm_parsed_output": eval_result.get('judge_parsed_output', {}),
-                "llm_justification": eval_result.get('judge_justification', ""),
-                "llm_justification_details": eval_result.get('judge_justification_details', {}),
-                "llm_evaluation_report": eval_result.get('judge_evaluation_report', ""),
-                "justification": eval_result.get('justification', ""),
-                "justification_details": eval_result.get('justification_details', {}),
-                "raw_judge_output": eval_result.get('raw_judge_output', ""),
-                "metric_details": eval_result.get('metric_details', {}),
-                "rule_scores": eval_result.get('rule_scores', {})
-            }
-            json.dump(score_data, f, indent=2, ensure_ascii=False)
-
-        summary_scores = {}
-        schema = rebuttal_schema if task_key == "rebuttal" else oa_schema
-        name_map_oa = {
-            "disposition_accuracy": "Dispositional Accuracy",
-            "statute_precision": "Statute Precision",
-            "citation_accuracy": "Citation Accuracy",
-            "citation_list_match": "Citation List Match",
-            "bleu": "BLEU",
-            "rouge_l": "ROUGE-L",
-            "bert_score": "BERTScore",
-            "formatting_rule": "Formatting",
-            "accuracy": "Accuracy",
-            "clarity": "Clarity",
-            "language_style": "Language Style",
-            "constructiveness": "Constructiveness",
-            "completeness": "Completeness",
-        }
-        name_map_rebuttal = {
-            "point_wise_coverage": "Point-wise Coverage",
-            "bleu": "BLEU",
-            "rouge_l": "ROUGE-L",
-            "bert_score": "BERTScore",
-            "formatting_rule": "Formatting",
-            "accuracy": "Accuracy",
-            "clarity": "Clarity",
-            "language_style": "Language Style",
-            "constructiveness": "Constructiveness",
-            "completeness": "Completeness",
-            "disposition_accuracy": "Dispositional Accuracy",
-            "statute_precision": "Statute Precision",
-            "citation_accuracy": "Citation Accuracy",
-            "citation_list_match": "Citation List Match",
-        }
-        name_map = name_map_rebuttal if task_key == "rebuttal" else name_map_oa
-        src_scores = eval_result.get("scores", {})
-        percent_metrics = {
-            "disposition_accuracy": 100.0,
-            "statute_precision": 100.0,
-            "citation_accuracy": 10.0,
-            "point_wise_coverage": 10.0,
-        }
-        for key in schema:
-            if key == "bert_score":
-                val = src_scores.get("bert_score", src_scores.get("bert_score_f1", None))
-            elif key == "citation_accuracy":
-                val = src_scores.get("citation_accuracy", src_scores.get("reference_citation_accuracy", None))
-            else:
-                val = src_scores.get(key, None)
-
-            out_key = name_map.get(key, key)
-            if key in percent_metrics and isinstance(val, (int, float)):
-                summary_scores[out_key] = f"{val * percent_metrics[key]:.2f}%"
-            else:
-                summary_scores[out_key] = val
-        summary_path = os.path.join(eval_dir, "scores_summary.json")
-        with open(summary_path, 'w', encoding='utf-8') as f:
-            json.dump(
-                {
-                    "task_type": task_key,
-                    "total_score": eval_result.get('total_score', 0),
-                    "scores": summary_scores,
-                },
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
-   
-    pass
+        eval_result = (
+            eval_report[idx] if idx < len(eval_report) and isinstance(eval_report[idx], dict) else {}
+        )
+        save_one_patent_round_artifacts(
+            raw_result, exp_dir, write_scores=write_scores, eval_result=eval_result
+        )
 
 def _calculate_patent_average_scores(results):
     """Compute average scores for a single patent."""
@@ -653,6 +495,18 @@ def _extract_round_texts(item):
     )
     return claims, office_action, remarks
 
+def _dataset_item_has_oracle_refs(item):
+    """Whether test-set row has oracle reference ids or non-empty oracle summaries."""
+    inp = item.get("input", {}) if isinstance(item, dict) else {}
+    ids = inp.get("oracle_reference_ids", [])
+    summ = inp.get("oracle_reference_summaries", "")
+    if isinstance(ids, list) and len(ids) > 0:
+        return True
+    if isinstance(summ, str) and summ.strip():
+        return True
+    return False
+
+
 def _build_previous_round_context(items, current_round_idx, task_type):
     """Build context from only the previous same-type round.
 
@@ -751,6 +605,10 @@ def _load_resume_raw_result(patent_id, round_dir, round_no, task_key, item):
     rebuttal_history = "N/A"
     ai_input = {}
 
+    ground_truth_decision = ""
+    if isinstance(item, dict):
+        ground_truth_decision = (item.get("ground_truth") or {}).get("decision", "") or ""
+
     if os.path.isfile(ctx_path):
         ctx = _load_json(ctx_path)
         ai_input = dict(ctx.get("ai_input") or {})
@@ -762,6 +620,9 @@ def _load_resume_raw_result(patent_id, round_dir, round_no, task_key, item):
         citations_gt = cg if isinstance(cg, list) else []
         rh = ctx.get("rebuttal_history")
         rebuttal_history = rh if isinstance(rh, str) else "N/A"
+        gtd = ctx.get("ground_truth_decision")
+        if isinstance(gtd, str) and gtd.strip():
+            ground_truth_decision = gtd
     elif os.path.isfile(in_path):
         ai_input = _load_json(in_path)
         inp = item.get("input", {}) if isinstance(item, dict) else {}
@@ -826,8 +687,10 @@ def _load_resume_raw_result(patent_id, round_dir, round_no, task_key, item):
             },
             "ground_truth": ground_truth,
             "citations_gt": citations_gt,
+            "ground_truth_decision": ground_truth_decision,
             "input_refs_preview": preview,
         },
+        "meta": item.get("meta") or {} if isinstance(item, dict) else {},
     }
 
 
@@ -924,13 +787,21 @@ def _run_one_task_round(
         return
 
     config["task_settings"]["current_task"] = task_key
-    if not args.resume_dir:
-        logger.info(f"📌 Round {round_no}: {task_key} for {len(to_gen)} patents...")
+    config["task_settings"]["_run_round_number"] = round_no
+    if config.get("task_settings", {}).get("incremental_disk_save", True):
+        config["task_settings"]["_incremental_save_exp_dir"] = multiround_exp_dir
     else:
-        logger.info(f"📌 Round {round_no}: {task_key} — calling API for {len(to_gen)} patents...")
+        config["task_settings"].pop("_incremental_save_exp_dir", None)
+
+    if not args.resume_dir:
+        logger.info(f"[Round {round_no}] {task_key}: {len(to_gen)} patents...")
+    else:
+        logger.info(f"[Round {round_no}] {task_key}: calling API for {len(to_gen)} patents...")
     engine = PatentEvaluator(config, logger)
     engine.dataset = to_gen
     raw = engine.run_batch()
+    config["task_settings"].pop("_incremental_save_exp_dir", None)
+    config["task_settings"].pop("_run_round_number", None)
     for r in raw:
         r["round_info"]["round_number"] = round_no
     scoring_ok = False
@@ -1006,21 +877,11 @@ def main():
             dataset_by_pid = {}
             if not os.path.exists(test_set_path):
                 return
-            with open(test_set_path, "r", encoding="utf-8") as f:
-                for line in f:
-                    if not line or not line.strip():
-                        continue
-                    s = line.lstrip()
-                    if s.startswith("//"):
-                        continue
-                    try:
-                        item = json.loads(line)
-                    except Exception:
-                        continue
-                    pid = str(item.get("id", "")).strip()
-                    if not pid:
-                        continue
-                    dataset_by_pid.setdefault(pid, []).append(item)
+            for item in load_dataset_json(test_set_path):
+                pid = str(item.get("id", "")).strip()
+                if not pid:
+                    continue
+                dataset_by_pid.setdefault(pid, []).append(item)
 
         def _infer_round_from_dir_name(round_dir_name):
             parts = str(round_dir_name or "").split("_")
@@ -1104,6 +965,8 @@ def main():
                 "ai_input": ai_input,
                 "office_action": office_action,
                 "ground_truth": ground_truth,
+                "ground_truth_decision": (item.get("ground_truth") or {}).get("decision", ""),
+                "meta": item.get("meta") or {},
                 "rebuttal_history": _extract_from_item(item, "rebuttal_history"),
                 "citations_gt": gt_citations,
                 "restricted_info": [],
@@ -1114,15 +977,11 @@ def main():
             ipc_allowed = set()
             if os.path.exists(test_set_path):
                 try:
-                    with open(test_set_path, "r", encoding="utf-8") as f:
-                        for line in f:
-                            if not line or not line.strip():
-                                continue
-                            item = json.loads(line)
-                            pid = str(item.get("id", "")).strip()
-                            ipc = str(item.get("meta", {}).get("ipc", "")).strip().upper()
-                            if pid and ipc == ipc_filter:
-                                ipc_allowed.add(pid)
+                    for item in load_dataset_json(test_set_path):
+                        pid = str(item.get("id", "")).strip()
+                        ipc = str(item.get("meta", {}).get("ipc", "")).strip().upper()
+                        if pid and ipc == ipc_filter:
+                            ipc_allowed.add(pid)
                 except Exception:
                     ipc_allowed = None
 
@@ -1155,6 +1014,16 @@ def main():
                 ctx = None
                 if os.path.exists(ctx_path):
                     ctx = _load_json(ctx_path)
+                    _ensure_dataset_loaded()
+                    ctx_ds = _build_ctx_from_dataset(patent_id, round_name, has_both_tasks)
+                    if isinstance(ctx, dict) and isinstance(ctx_ds, dict):
+                        gtd = ctx.get("ground_truth_decision")
+                        if not (isinstance(gtd, str) and gtd.strip()):
+                            ctx["ground_truth_decision"] = ctx_ds.get(
+                                "ground_truth_decision", ""
+                            )
+                        if not ctx.get("meta"):
+                            ctx["meta"] = ctx_ds.get("meta") or {}
                 else:
                     ctx = _build_ctx_from_dataset(patent_id, round_name, has_both_tasks)
                     if isinstance(ctx, dict):
@@ -1206,15 +1075,7 @@ def main():
     include_model_name = naming_cfg.get('include_model_name', True)
 
 
-    with open(test_set_path, 'r', encoding='utf-8') as f:
-        all_data = []
-        for line in f:
-            if not line or not line.strip():
-                continue
-            s = line.lstrip()
-            if s.startswith("//"):
-                continue
-            all_data.append(json.loads(line))
+    all_data = load_dataset_json(test_set_path)
     if ipc_filter:
         all_data = [
             item for item in all_data
@@ -1285,7 +1146,7 @@ def main():
         os.makedirs(multiround_exp_dir, exist_ok=True)
         
         logger = setup_logger(multiround_exp_dir)
-        logger.info(f"🚀 Starting multi-round for model: {model_name}")
+        logger.info(f"Starting multi-round for model: {model_name}")
 
         all_results_map = {} # pid -> [eval_result, ...]
 
@@ -1314,6 +1175,9 @@ def main():
                         if isinstance(prev_remarks, str):
                             prev_remarks = prev_remarks.strip()
                         item_oa["input"]["rebuttal"] = prev_remarks if prev_remarks is not None else ""
+                        if config.get("active_settings", {}).get("retrieval_setting") == "oracle_summary":
+                            if not _dataset_item_has_oracle_refs(item_oa):
+                                continue
                         batch_oa.append(item_oa)
 
                 if batch_oa:
@@ -1357,6 +1221,9 @@ def main():
                         if isinstance(rebuttal_text, str):
                             rebuttal_text = rebuttal_text.strip()
                         if rebuttal_text and str(rebuttal_text).upper() != "N/A":
+                            if config.get("active_settings", {}).get("retrieval_setting") == "oracle_summary":
+                                if not _dataset_item_has_oracle_refs(item_rb):
+                                    continue
                             batch_rebuttal.append(item_rb)
 
                 if batch_rebuttal:
@@ -1373,7 +1240,7 @@ def main():
                         auto_extra,
                     )
 
-        logger.info(f"�?Multiround finished. Results: {multiround_exp_dir}")
+        logger.info(f"Multiround finished. Results: {multiround_exp_dir}")
 
 
 if __name__ == "__main__":

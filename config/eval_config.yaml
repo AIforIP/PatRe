@@ -8,6 +8,8 @@ task_settings:
   # current_task: "rebuttal"
   current_task: "oa"
   num_samples: 100000
+  # After each patent: flush output/ai_output.txt (and siblings) for crash-safe resume
+  incremental_disk_save: true
   auto_run_extra_metrics: true
   similarity_metrics:
     bleu: false
@@ -70,7 +72,7 @@ active_settings:
 
 
 paths:
-  test_set: "dataset/processed/test_set_new.jsonl"
+  test_set: "dataset/processed/test_set_new.json"
   prompt_path: "config/prompt_templates.json"
   results: "results/"
   reference_pool: "dataset/ReferencePool_Full"

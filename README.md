@@ -52,7 +52,7 @@ export OPENAI_BASE_URL="YOUR_BASE_URL"
 ### Data & Paths
 
 Configure paths in [eval_config.yaml](config/eval_config.yaml):
-- `paths.test_set` (e.g., `dataset/processed/test_set_new.jsonl`)
+- `paths.test_set` (e.g., `dataset/processed/test_set_new.json` — a formatted JSON **array** of samples; legacy JSONL is still supported when loading)
 - `paths.reference_pool` (e.g., `dataset/ReferencePool_Full`)
 - `paths.results` (default: `results/`)
 
@@ -111,6 +111,7 @@ python run_exp.py
 - `--eval_limit N`: evaluate only the first N round directories in eval-only mode
 - `--test_mode {zero_shot|sft_model}`: override testing mode
 - `--retrieval {no_ref|oracle_summary|bm25_retrieved}`: override retrieval setting
+- **BM25 temporal filter**: for `bm25_retrieved`, the pool is restricted to ReferencePool documents whose parsed date is **strictly before** the sample’s `meta.oa_date` (same rule when precomputing with `PATRE_ENABLE_BM25_ALIGNMENT=1`). Which JSON keys are used for pool dates is documented in [src/ref_pool_dates.py](src/ref_pool_dates.py).
 - `--backend {api|vllm|ollama}`: switch the model backend
 
 ### vLLM / Ollama Backends

@@ -2,12 +2,21 @@
 import json
 import os
 import re
+import time
 from tqdm import tqdm
 from src.model_backend import ModelBackend
+from src.utils import load_dataset_json
+from src.ref_pool_dates import (
+    oa_cutoff_date,
+    ref_doc_effective_date,
+    reference_pool_date_policy_log_line,
+)
+from src.patent_round_save import save_one_patent_round_artifacts
 from src.metrics_library import (
     safe_parse_json,
     extract_statutes,
     extract_rejection_types,
+    disposition_from_oa_type,
     extract_disposition,
     disposition_metrics,
     statute_metrics,
@@ -20,9 +29,19 @@ from src.metrics_library import (
     language_style_score,
     normalize_rejection_types,
     rejection_type_metrics,
+    resolve_predicted_disposition,
+    MODEL_OA_TYPE_TRAILER_USER_SUFFIX,
+    split_model_oa_type_trailer,
 )
 
 class PatentEvaluator:
+    @staticmethod
+    def _output_body_without_oa_type_trailer(text, task_type):
+        if task_type != "oa" or not text:
+            return text
+        _, body = split_model_oa_type_trailer(text)
+        return body
+
     def __init__(self, config, logger):
         self.config = config
         self.logger = logger
@@ -34,7 +53,9 @@ class PatentEvaluator:
         self._avgdl = 0.0
         self._doclens = []
         self._docids = []
+        self._doc_dates = []
         self._bm25_index = None
+        self._bm25_temporal_policy_logged = False
         
         with open(config['paths']['prompt_path'], 'r', encoding='utf-8') as f:
             self.templates = json.load(f)
@@ -43,26 +64,19 @@ class PatentEvaluator:
         self.dataset = self._load_dataset(config['paths']['test_set'])
 
     def _load_dataset(self, path):
-        data = []
         ipc_filter = self.config.get('task_settings', {}).get('ipc_filter')
         if ipc_filter:
             ipc_filter = str(ipc_filter).upper()
         if not os.path.exists(path):
             self.logger.error(f"Test set path not found: {path}")
             return []
-        with open(path, 'r', encoding='utf-8') as f:
-            for line in f:
-                if not line or not line.strip():
-                    continue
-                s = line.lstrip()
-                if s.startswith("//"):
-                    continue
-                item = json.loads(line)
-                if ipc_filter:
-                    ipc_value = str(item.get("meta", {}).get("ipc", "")).upper()
-                    if ipc_value != ipc_filter:
-                        continue
-                data.append(item)
+        data = load_dataset_json(path)
+        if ipc_filter:
+            data = [
+                item
+                for item in data
+                if str(item.get("meta", {}).get("ipc", "")).upper() == ipc_filter
+            ]
         # Attach prosecution history for single-task runs (use only the previous same-type round)
         patent_items = {}
         for item in data:
@@ -117,7 +131,7 @@ class PatentEvaluator:
                 if rebut and rebut.upper() != "N/A":
                     filtered.append(item)
             data = filtered
-        #  config 
+        # Apply num_samples cap from config
         limit = self.config['task_settings'].get('num_samples', 9999)
         return data[:limit]
 
@@ -126,9 +140,13 @@ class PatentEvaluator:
         if not isinstance(eval_metrics, dict):
             return
 
-        def patch_scores_block(tmpl, keys):
+        # Avoid 0 for language_style in the example JSON (models often copy it literally).
+        _patch_num_defaults = {"language_style": 5}
+
+        def patch_scores_block(tmpl, keys, num_defaults=None):
             if not isinstance(tmpl, str):
                 return tmpl
+            num_defaults = num_defaults or {}
             m = re.search(r'("scores":\s*\{\n)([\s\S]*?)(\n\s*\}\s*,\s*\n\s*"justification")', tmpl)
             if not m:
                 return tmpl
@@ -158,24 +176,85 @@ class PatentEvaluator:
 
             for i, k in enumerate(missing):
                 comma = "," if i < len(missing) - 1 else ""
-                lines.append(f'    "{k}": 0{comma}\n')
+                val = num_defaults.get(k, 0)
+                lines.append(f'    "{k}": {val}{comma}\n')
 
             new_body = "".join(lines)
             return tmpl[:m.start()] + head + new_body + tail + tmpl[m.end():]
 
         cfg = eval_metrics.get("rebuttal_judge")
         if isinstance(cfg, dict) and isinstance(cfg.get("user_prompt_template"), str):
-            cfg["user_prompt_template"] = patch_scores_block(
+            t = patch_scores_block(
                 cfg["user_prompt_template"],
                 ["constructiveness", "language_style", "point_wise_coverage"],
+                num_defaults=_patch_num_defaults,
             )
+            t = t.replace(
+                "## Output Format:",
+                "## language_style (required): Integer 1-10 only. Rate professional applicant-side legal prose (aligned with **clarity**). "
+                "Never use 0; if uncertain, match **clarity**.\n\n## Output Format:",
+                1,
+            )
+            cfg["user_prompt_template"] = t
 
         cfg = eval_metrics.get("examiner_judge")
         if isinstance(cfg, dict) and isinstance(cfg.get("user_prompt_template"), str):
-            cfg["user_prompt_template"] = patch_scores_block(
+            t = patch_scores_block(
                 cfg["user_prompt_template"],
                 ["language_style"],
+                num_defaults=_patch_num_defaults,
             )
+            t = t.replace(
+                "## Output Format:",
+                "## language_style (required): Integer 1-10 only. Rate professional USPTO-style prose (similar intent to **clarity**). "
+                "Never use 0; if uncertain, match **clarity**.\n\n## Output Format:",
+                1,
+            )
+            cfg["user_prompt_template"] = t
+
+    @staticmethod
+    def _score_in_one_to_ten(x):
+        return isinstance(x, (int, float)) and not isinstance(x, bool) and 1.0 <= float(x) <= 10.0
+
+    def _resolve_language_style_after_judge(self, res, generated_body: str):
+        """
+        language_style must stay on 1-10. Never persist 0 or out-of-range values;
+        record an English explanation in scores['language_style_error'] when a fallback is used.
+        """
+        scores = res.setdefault("scores", {})
+        scores.pop("language_style_error", None)
+        raw = scores.get("language_style")
+        if self._score_in_one_to_ten(raw):
+            scores["language_style"] = round(float(raw), 4)
+            return
+
+        reasons = []
+        if raw == 0 or raw == 0.0:
+            reasons.append("Judge returned language_style=0, which is invalid on the 1-10 rubric.")
+        elif isinstance(raw, (int, float)) and not isinstance(raw, bool):
+            reasons.append(
+                f"Judge returned language_style={raw}, which is outside the required 1-10 range."
+            )
+        elif raw is not None:
+            reasons.append("Judge returned a non-numeric language_style.")
+        else:
+            reasons.append("Judge omitted language_style.")
+
+        heur = language_style_score(generated_body) if generated_body else None
+        clar = scores.get("clarity")
+        new_val = None
+        if isinstance(heur, (int, float)):
+            new_val = float(heur)
+            reasons.append(f"Fallback: heuristic language_style_score={new_val:.4f}.")
+        elif self._score_in_one_to_ten(clar):
+            new_val = float(clar)
+            reasons.append("Fallback: copied clarity score.")
+        else:
+            new_val = 1.0
+            reasons.append("Fallback: default 1.0 (heuristic unavailable and clarity missing or invalid).")
+
+        scores["language_style"] = round(new_val, 4)
+        scores["language_style_error"] = " ".join(reasons)
 
     def _get_nested_text(self, item, *keys):
         cur = item
@@ -270,10 +349,10 @@ class PatentEvaluator:
                 return []
             template_config = self.templates[root_key][template_task]
 
-            # 1.
+            # Step 1: retrieval / reference summaries for the prompt
             ref_summary = self._process_retrieval(item)
             
-            # 2. User Prompt input
+            # Step 2: user prompt inputs
             # Always use real dataset inputs (OA and rebuttal), never generated outputs.
             oa_content = item['input'].get('office_action', "No Office Action provided in dataset.")
             rebuttal_text = item['input'].get('rebuttal', item.get('ground_truth', {}).get('rebuttal_text', "N/A"))
@@ -285,9 +364,12 @@ class PatentEvaluator:
                 split_claims = self._split_claims(item['input'].get('claims', ""))
                 if split_claims:
                     claim_blocks = split_claims
-            
+
+            _rrn = self.config.get("task_settings", {}).get("_run_round_number")
+            _round_num = int(_rrn) if _rrn is not None else self._get_round_number(task_key)
+
             for claim_no, claim_text in claim_blocks:
-                # AI
+                # Model input payload
                 ai_input = {
                     "claims": f"Claim {claim_no}: {claim_text}" if granularity == "atomic_claim" else item['input'].get('claims_for_generation', item['input'].get('claims', '')),
                     "refs": ref_summary,
@@ -306,7 +388,7 @@ class PatentEvaluator:
                         ai_input["rebuttal"] = rebuttal_text
                 
                 try:
-                    # AIprompt
+                    # Build user prompt from template
                     template_text = template_config["user_prompt_template"]
                     user_prompt = template_text.format(
                         current_claims=ai_input['claims'],
@@ -318,17 +400,36 @@ class PatentEvaluator:
                     )
                     if "{reference_summaries}" in template_text:
                         user_prompt += enforce_instruction
+                    if task_key == "oa":
+                        user_prompt += MODEL_OA_TYPE_TRAILER_USER_SUFFIX
                 except KeyError as e:
-                    self.logger.error(f"Prompt  {e}")
+                    self.logger.error(f"Prompt template error: {e}")
                     raise e
 
-                # 3.
+                # Step 3: generation
+                pid = item.get("id", "?")
+                self.logger.info(
+                    "API generate start: patent_id=%s template=%s claim_block=%s",
+                    pid,
+                    template_task,
+                    claim_no,
+                )
+                t0 = time.perf_counter()
                 prediction = self.backend.generate(
                     system_prompt=template_config["system_prompt"],
                     user_prompt=user_prompt
                 )
+                elapsed = time.perf_counter() - t0
+                out_len = len(prediction) if isinstance(prediction, str) else 0
+                self.logger.info(
+                    "API generate done: patent_id=%s claim_block=%s elapsed_sec=%.2f out_chars=%s",
+                    pid,
+                    claim_no,
+                    elapsed,
+                    out_len,
+                )
 
-                #  Ground Truth
+                # Ground truth label for metrics
                 response_templates = {
                     "response_to_rebuttal",
                     "response_to_rebuttal_zero_shot",
@@ -348,9 +449,10 @@ class PatentEvaluator:
 
                 result_entry = {
                     "patent_id": item['id'],
+                    "meta": item.get("meta") or {},
                     "round_info": {
                         "task": task_key,
-                        "round_number": self._get_round_number(task_key),
+                        "round_number": _round_num,
                         "exam_phase": "pure_prediction" if template_task == "initial_examination" else "context_aware",
                         "granularity": granularity,
                         "claim_number": claim_no if granularity == "atomic_claim" else "all"
@@ -370,10 +472,42 @@ class PatentEvaluator:
                         },
                         "ground_truth": ground_truth_text,
                         "citations_gt": gt_citations,
-                        "input_refs_preview": ref_summary[:200] + "..."  # 
+                        "ground_truth_decision": item.get("ground_truth", {}).get("decision", ""),
+                        "input_refs_preview": ref_summary[:200] + "..."  # truncated preview
                     }
                 }
                 results.append(result_entry)
+
+                inc_dir = self.config.get("task_settings", {}).get("_incremental_save_exp_dir")
+                if inc_dir and self.config.get("task_settings", {}).get(
+                    "incremental_disk_save", True
+                ):
+                    try:
+                        save_one_patent_round_artifacts(
+                            result_entry,
+                            inc_dir,
+                            write_scores=False,
+                            eval_result=None,
+                        )
+                        if task_key == "oa":
+                            _tl = "oa"
+                        elif task_key == "rebuttal":
+                            _tl = "rebuttal"
+                        else:
+                            _tl = "other"
+                        self.logger.info(
+                            "Disk checkpoint: patent_id=%s wrote %s",
+                            item.get("id"),
+                            os.path.join(
+                                inc_dir,
+                                f"patent_{item['id']}",
+                                f"round_{_round_num:02d}_{_tl}",
+                                "output",
+                                "ai_output.txt",
+                            ),
+                        )
+                    except Exception as e:
+                        self.logger.warning("Incremental disk save failed: %s", e)
         return results
 
     def _get_round_number(self, task_key):
@@ -386,7 +520,7 @@ class PatentEvaluator:
             return 0
 
     def _get_restricted_info(self, task_key):
-        """AI"""
+        """Names of restricted evaluation fields for logging / UI."""
         if task_key == "oa":
             return ["ground_truth_oa", "rebuttal_history", "human_decisions"]
         else:
@@ -560,14 +694,38 @@ class PatentEvaluator:
             candidates.add(f"{base2}{kind}")
         return [c for c in candidates if c]
 
+    def _ref_stems_for_app_style_pool(self, clean_id):
+        """Alternate APP-style filenames (no US* / bare-digit pool names for application ids)."""
+        if not clean_id or not clean_id.startswith("APP") or len(clean_id) <= 3:
+            return []
+        rest = clean_id[3:]
+        if not rest.isdigit() or len(rest) < 8:
+            return []
+        return [f"APP-{rest[:2]}_{rest[2:]}"]
+
     def _ref_possible_names(self, clean_id):
         names = []
-        for cid in self._ref_id_variants(clean_id):
-            if cid.startswith(("US", "WO", "EP", "AU")):
-                names.append(f"{cid}.json")
-            else:
-                names.append(f"{cid}.json")
-                names.append(f"US{cid}.json")
+        # First expand APP-style ids to multiple pool naming conventions, then kind-code variants.
+        stem_seeds = [clean_id]
+        if clean_id.startswith("APP"):
+            stem_seeds.extend(self._ref_stems_for_app_style_pool(clean_id))
+        seen_stems = set()
+        ordered_stems = []
+        for s in stem_seeds:
+            if s in seen_stems:
+                continue
+            seen_stems.add(s)
+            ordered_stems.append(s)
+
+        for seed in ordered_stems:
+            for cid in self._ref_id_variants(seed):
+                if cid.startswith("APP"):
+                    names.append(f"{cid}.json")
+                elif cid.startswith(("US", "WO", "EP", "AU")):
+                    names.append(f"{cid}.json")
+                else:
+                    names.append(f"{cid}.json")
+                    names.append(f"US{cid}.json")
         seen = set()
         out = []
         for n in names:
@@ -687,7 +845,12 @@ class PatentEvaluator:
                 return content
 
             query_text = item.get("input", {}).get("claims", "")
-            bm25_list = self._bm25_retrieve_list(query_text, top_k=5)
+            oa_d = oa_cutoff_date((item.get("meta") or {}).get("oa_date"))
+            if oa_d is None and (item.get("meta") or {}).get("oa_date"):
+                self.logger.warning(
+                    "bm25_retrieved: meta.oa_date not parseable; BM25 runs without temporal pool filter."
+                )
+            bm25_list = self._bm25_retrieve_list(query_text, top_k=5, cutoff_date=oa_d)
 
             ids = item.get("input", {}).get("oracle_reference_ids", [])
             oracle_text = item.get("input", {}).get("oracle_reference_summaries", "")
@@ -749,6 +912,7 @@ class PatentEvaluator:
         docs = []
         ids = []
         lens = []
+        doc_dates = []
         for name in os.listdir(ref_dir):
             if not name.endswith(".json"):
                 continue
@@ -764,15 +928,21 @@ class PatentEvaluator:
                 docs.append(tokens)
                 ids.append(os.path.splitext(name)[0])
                 lens.append(len(tokens))
+                d_doc, _ = ref_doc_effective_date(data)
+                doc_dates.append(d_doc)
             except:
                 continue
         self._corpus_docs = docs
         self._docids = ids
         self._doclens = lens
+        self._doc_dates = doc_dates
         self._avgdl = sum(lens) / len(lens) if lens else 0.0
         self._corpus_loaded = True
+        if docs and not self._bm25_temporal_policy_logged:
+            self.logger.info(reference_pool_date_policy_log_line())
+            self._bm25_temporal_policy_logged = True
 
-    def _bm25_retrieve_list(self, query_text, top_k=5):
+    def _bm25_retrieve_list(self, query_text, top_k=5, cutoff_date=None):
         if not self._corpus_loaded:
             self._load_reference_corpus()
         if not self._corpus_docs:
@@ -821,6 +991,16 @@ class PatentEvaluator:
             tmp.sort(reverse=True, key=lambda x: x[0])
             scores = tmp
         top_k = int(top_k) if top_k else self.config.get('retrieval_params', {}).get('bm25_top_k', 5)
+        if cutoff_date is not None and self._doc_dates:
+            filtered = []
+            for s, i in scores:
+                if i >= len(self._doc_dates):
+                    continue
+                dd = self._doc_dates[i]
+                if dd is None or dd >= cutoff_date:
+                    continue
+                filtered.append((s, i))
+            scores = filtered
         ref_dir = self.config['paths'].get('reference_pool')
         out = []
         for s, i in scores[:top_k]:
@@ -841,11 +1021,10 @@ class PatentEvaluator:
 
     def run_scoring(self, results, show_progress=True):
         """
-        Task  examiner_judge rebuttal_judge
+        Run judge scoring (examiner_judge vs rebuttal_judge) per configured task.
         """
-        # 1.  ( "oa" "rebuttal")
+        # Route to the judge template that matches the current task (oa vs rebuttal)
         current_task = self.config['task_settings']['current_task']
-        # 
         if current_task == "oa" or current_task in self.templates.get("Office_Action_Generation", {}):
             judge_key = "examiner_judge"
         else:
@@ -853,7 +1032,6 @@ class PatentEvaluator:
         
         self.logger.info(f" Routing Evaluation to: {judge_key}")
         
-        # 3. 
         judge_config = self.templates["Evaluation_Metrics"][judge_key]
         scored_results = []
 
@@ -894,11 +1072,14 @@ class PatentEvaluator:
                 # Must have current OA (the one being responded to)
                 current_response_target = res['evaluation_context']['full_context'].get('office_action', '')
             
+            gen_for_judge = self._output_body_without_oa_type_trailer(
+                res["ai_exam"].get("output", ""), task_type
+            )
             try:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "generated_text": res['ai_exam']['output'],
+                        "generated_text": gen_for_judge,
                         "ground_truth": res['evaluation_context']['ground_truth'],
                         "current_response_target": current_response_target.strip(),
                     },
@@ -909,7 +1090,7 @@ class PatentEvaluator:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "generated_text": res['ai_exam'].get('output', ''),
+                        "generated_text": gen_for_judge,
                         "ground_truth": res.get('evaluation_context', {}).get('ground_truth', ''),
                         "previous_remarks": prev_remarks or "",
                         "previous_office_action": prev_oa or "",
@@ -918,7 +1099,6 @@ class PatentEvaluator:
 
             judge_attempts = []
             judge_system_prompt = judge_config["system_prompt"]
-            # GPT-4o 
             raw_judge_res = self.judge_backend.generate(
                 system_prompt=judge_config["system_prompt"],
                 user_prompt=judge_prompt
@@ -936,7 +1116,7 @@ class PatentEvaluator:
             res["judge_prompt_length"] = len(judge_prompt) if isinstance(judge_prompt, str) else 0
 
             try:
-                # JSON 
+                # Parse judge JSON output
                 try:
                     score_data = self._extract_json(raw_judge_res)
                 except Exception:
@@ -973,6 +1153,7 @@ class PatentEvaluator:
                     and isinstance(res["scores"].get("clarity"), (int, float))
                 ):
                     res["scores"]["language_style"] = res["scores"]["clarity"]
+                self._resolve_language_style_after_judge(res, gen_for_judge)
                 res["judge_total_score"] = score_data.get("total_score", None)
                 justification_summary = score_data.get("justification_summary", score_data.get("justification", ""))
                 res["justification"] = justification_summary
@@ -1012,11 +1193,14 @@ class PatentEvaluator:
         evaluated_results = []
 
         for res in tqdm(results, desc="Point-wise Evaluation"):
+            _tt = res.get("round_info", {}).get("task", "")
             try:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "generated_text": res['ai_exam']['output'],
+                        "generated_text": self._output_body_without_oa_type_trailer(
+                            res["ai_exam"]["output"], _tt
+                        ),
                         "ground_truth": res['evaluation_context']['ground_truth'],
                         "claims": res['ai_exam']['input']['claims'],
                         "office_action": res['evaluation_context']['full_context']['office_action'],
@@ -1027,7 +1211,9 @@ class PatentEvaluator:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "generated_text": res['ai_exam']['output'],
+                        "generated_text": self._output_body_without_oa_type_trailer(
+                            res["ai_exam"]["output"], _tt
+                        ),
                         "ground_truth": res['evaluation_context']['ground_truth'],
                     },
                 )
@@ -1060,7 +1246,7 @@ class PatentEvaluator:
 
     def run_pairwise_comparison(self, results):
         """
-        Pair-wise 
+        Pairwise comparison of consecutive result entries using the pairwise judge template.
         """
         eval_templates = self.templates.get("Evaluation_Metrics", {})
         judge_config = eval_templates.get("pairwise_evaluator")
@@ -1069,8 +1255,6 @@ class PatentEvaluator:
             return results
         self.logger.info(" Running pairwise comparison...")
         compared_results = []
-
-        #  results 
 
         for i in range(0, len(results), 2):
             if i + 1 >= len(results):
@@ -1083,13 +1267,19 @@ class PatentEvaluator:
             
             res_a = results[i]
             res_b = results[i + 1]
-            
+            _ta = res_a.get("round_info", {}).get("task", "")
+            _tb = res_b.get("round_info", {}).get("task", "")
+
             try:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "text_a": res_a['ai_exam']['output'],
-                        "text_b": res_b['ai_exam']['output'],
+                        "text_a": self._output_body_without_oa_type_trailer(
+                            res_a["ai_exam"]["output"], _ta
+                        ),
+                        "text_b": self._output_body_without_oa_type_trailer(
+                            res_b["ai_exam"]["output"], _tb
+                        ),
                         "claims": res_a['ai_exam']['input']['claims'],
                         "office_action": res_a['evaluation_context']['full_context']['office_action'],
                     },
@@ -1099,8 +1289,12 @@ class PatentEvaluator:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "text_a": res_a['ai_exam']['output'],
-                        "text_b": res_b['ai_exam']['output'],
+                        "text_a": self._output_body_without_oa_type_trailer(
+                            res_a["ai_exam"]["output"], _ta
+                        ),
+                        "text_b": self._output_body_without_oa_type_trailer(
+                            res_b["ai_exam"]["output"], _tb
+                        ),
                     },
                 )
 
@@ -1121,12 +1315,11 @@ class PatentEvaluator:
                     score_data = self._extract_json(raw_judge_res)
                 winner = score_data.get("winner", "unknown")
                 
-                # 
                 res_a["pairwise_winner"] = winner
                 res_a["pairwise_scores"] = score_data.get("scores", {})
                 res_a["pairwise_justification"] = score_data.get("justification", "")
                 
-                # winner
+                # Invert winner label for the paired sample
                 res_b["pairwise_winner"] = "A" if winner == "B" else "B" if winner == "A" else "tie"
                 res_b["pairwise_scores"] = score_data.get("scores", {})
                 res_b["pairwise_justification"] = score_data.get("justification", "")
@@ -1142,7 +1335,7 @@ class PatentEvaluator:
 
     def run_claim_level_evaluation(self, results):
         """
-        Claim-level 
+        Optional claim-level judge pass when a claim_level_evaluator template exists.
         """
         eval_templates = self.templates.get("Evaluation_Metrics", {})
         judge_config = eval_templates.get("claim_level_evaluator")
@@ -1153,15 +1346,17 @@ class PatentEvaluator:
         evaluated_results = []
 
         for res in tqdm(results, desc="Claim-level Evaluation"):
+            _ct = res.get("round_info", {}).get("task", "")
             try:
-                # 
                 claim_text = res.get('ai_exam', {}).get('input', {}).get('claims', '')
                 claim_number = res.get('round_info', {}).get('round_number', '1')
-                
+
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "generated_text": res['ai_exam']['output'],
+                        "generated_text": self._output_body_without_oa_type_trailer(
+                            res["ai_exam"]["output"], _ct
+                        ),
                         "ground_truth": res['evaluation_context']['ground_truth'],
                         "claim_number": claim_number,
                         "claim_text": claim_text,
@@ -1173,7 +1368,9 @@ class PatentEvaluator:
                 judge_prompt = self._build_judge_prompt(
                     judge_config["user_prompt_template"],
                     {
-                        "generated_text": res['ai_exam']['output'],
+                        "generated_text": self._output_body_without_oa_type_trailer(
+                            res["ai_exam"]["output"], _ct
+                        ),
                         "ground_truth": res['evaluation_context']['ground_truth'],
                         "claim_number": '1',
                         "claim_text": res['ai_exam']['input']['claims'],
@@ -1208,7 +1405,8 @@ class PatentEvaluator:
 
     def run_additional_metrics(self, results):
         """
-        Compute rule-based and text similarity metrics without changing prompts.
+        Rule-based + similarity metrics. OA disposition: prefer <<<MODEL_OA_TYPE>>> JSON
+        trailer in model output, else extract_disposition on body text (see metrics_library).
         """
         self.logger.info(" Running additional metrics...")
         sim_cfg = self.config.get("task_settings", {}).get("similarity_metrics", {})
@@ -1229,14 +1427,31 @@ class PatentEvaluator:
 
                 rule_scores = {}
                 is_rebuttal = task_type == "rebuttal"
+                pred_body = pred_text
+                pred_disp_source = ""
                 if not is_rebuttal:
-                    pred_disp = extract_disposition(pred_text, pred_json)
-                    gt_disp = extract_disposition(gt_text, gt_json)
+                    pred_disp, pred_body, pred_disp_source = resolve_predicted_disposition(
+                        pred_text
+                    )
+                    # GT disposition: (1) ground_truth.decision (2) meta.oa_type (3) OA body / JSON heuristics
+                    gt_disp = "unknown"
+                    gt_decision = (res.get("evaluation_context") or {}).get(
+                        "ground_truth_decision", ""
+                    )
+                    if isinstance(gt_decision, str) and gt_decision.strip():
+                        if gt_decision.strip().upper() != "UNKNOWN":
+                            gt_disp = disposition_from_oa_type(gt_decision)
+                    if gt_disp == "unknown":
+                        gt_disp = disposition_from_oa_type(
+                            (res.get("meta") or {}).get("oa_type", "")
+                        )
+                    if gt_disp == "unknown":
+                        gt_disp = extract_disposition(gt_text, gt_json)
 
-                    pred_stat = extract_statutes(pred_text)
+                    pred_stat = extract_statutes(pred_body)
                     gt_stat = extract_statutes(gt_text)
 
-                    pred_rejections = extract_rejection_types(pred_text)
+                    pred_rejections = extract_rejection_types(pred_body)
 
                     # Per-sample: only keep accuracy to avoid misleading precision/recall/F1
                     disp_scores = {}
@@ -1244,8 +1459,20 @@ class PatentEvaluator:
                         disp_scores["disposition_accuracy"] = round(1.0 if pred_disp == gt_disp else 0.0, 4)
                     stat_scores = statute_metrics(pred_stat, gt_stat)
                     gt_ids = res.get("evaluation_context", {}).get("citations_gt", None)
-                    cit_scores, ref_ids, pred_ids = citation_metrics(pred_text, refs_text, gt_ids=gt_ids)
-                    list_match = citation_list_match(pred_text, refs_text)
+                    cit_scores, ref_ids, pred_ids = citation_metrics(
+                        pred_body, refs_text, gt_ids=gt_ids
+                    )
+                    # Citation List Match is meant to compare predicted citations against the same GT set.
+                    # When `citations_gt` exists, compute it from that GT set instead of using the prompt `refs_text`.
+                    if gt_ids is not None:
+                        if not pred_ids:
+                            list_match = 1.0
+                        elif not ref_ids:
+                            list_match = 0.0
+                        else:
+                            list_match = round(len(pred_ids & ref_ids) / len(pred_ids), 4)
+                    else:
+                        list_match = citation_list_match(pred_body, refs_text)
 
                     # Rejection type metrics (use dataset rejection_types as GT)
                     gt_rejections = normalize_rejection_types(
@@ -1264,24 +1491,25 @@ class PatentEvaluator:
                         rule_scores["statute_precision_pct"] = round(rule_scores["statute_precision"] * 100, 2)
                     rule_scores["citation_list_match_pct"] = round(list_match * 100, 2)
 
+                sim_pred = pred_body if not is_rebuttal else pred_text
                 if enable_rouge_l:
-                    r_l = rouge_l_f1(pred_text, gt_text)
+                    r_l = rouge_l_f1(sim_pred, gt_text)
                     if r_l is not None:
                         rule_scores["rouge_l"] = r_l
                 if enable_bleu:
-                    b = bleu_score(pred_text, gt_text)
+                    b = bleu_score(sim_pred, gt_text)
                     if b is not None:
                         rule_scores["bleu"] = b
                 if enable_bert_score:
-                    bs = bert_score_f1(pred_text, gt_text)
+                    bs = bert_score_f1(sim_pred, gt_text)
                     if bs is not None:
                         rule_scores["bert_score"] = bs
 
-                fmt = formatting_score(pred_text, task_type)
+                fmt = formatting_score(sim_pred, task_type)
                 if fmt is not None:
                     rule_scores["formatting_rule"] = fmt
                 if not isinstance(res.get("scores", {}).get("language_style"), (int, float)):
-                    ls = language_style_score(pred_text)
+                    ls = language_style_score(sim_pred)
                     if ls is not None:
                         rule_scores["language_style"] = ls
 
@@ -1291,6 +1519,7 @@ class PatentEvaluator:
                 if not is_rebuttal:
                     res["metric_details"] = {
                         "disposition_pred": pred_disp,
+                        "disposition_pred_source": pred_disp_source,
                         "disposition_gt": gt_disp,
                         "statutes_pred": sorted(list(pred_stat)),
                         "statutes_gt": sorted(list(gt_stat)),
@@ -1366,7 +1595,7 @@ class PatentEvaluator:
                 "clarity": (0.12, False),
                 "language_style": (0.08, False),
                 "constructiveness": (0.08, False),
-                "formatting_rule": (0.10, True)
+                "formatting_rule": (0.10, False)
             }
         else:
             weights = {
@@ -1377,7 +1606,7 @@ class PatentEvaluator:
                 "completeness": (0.08, False),
                 "clarity": (0.08, False),
                 "language_style": (0.08, False),
-                "formatting_rule": (0.06, True)
+                "formatting_rule": (0.06, False)
             }
 
         total_weighted_score = 0.0
@@ -1410,10 +1639,13 @@ class PatentEvaluator:
             return None
 
         try:
+            _coh_task = res.get("round_info", {}).get("task", "")
             judge_prompt = self._build_judge_prompt(
                 coherence_cfg["user_prompt_template"],
                 {
-                    "generated_text": res['ai_exam']['output'],
+                    "generated_text": self._output_body_without_oa_type_trailer(
+                        res["ai_exam"]["output"], _coh_task
+                    ),
                     "claims": res['ai_exam']['input']['claims'],
                     "reference_summaries": res['ai_exam']['input']['refs'],
                     "ground_truth": res['evaluation_context']['ground_truth'],
@@ -1423,7 +1655,12 @@ class PatentEvaluator:
             self.logger.warning(f" Coherence prompt format warning: {e}")
             judge_prompt = self._build_judge_prompt(
                 coherence_cfg["user_prompt_template"],
-                {"generated_text": res['ai_exam']['output']},
+                {
+                    "generated_text": self._output_body_without_oa_type_trailer(
+                        res["ai_exam"]["output"],
+                        res.get("round_info", {}).get("task", ""),
+                    )
+                },
             )
 
         coherence_model = self.config.get("models", {}).get("coherence_judge_model", "gpt-5-mini")
@@ -1445,7 +1682,7 @@ class PatentEvaluator:
             )
             parsed = self._extract_json(raw)
 
-        # :
+        # Supported shapes:
         # 1) {"coherence_score": 8, "justification": "..."}
         # 2) {"scores": {"coherence_score": 8}, "justification": "..."}
         if "coherence_score" in parsed:

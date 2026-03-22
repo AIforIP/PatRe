@@ -1,7 +1,13 @@
 import os
+import sys
 import json
 import argparse
 import random
+
+_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _BASE not in sys.path:
+    sys.path.insert(0, _BASE)
+from src.utils import load_dataset_json
 def load_templates(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -44,7 +50,7 @@ def build_messages(task_key, templates, item, ref_summary, oa_content):
     }
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=str, default="dataset/processed/test_set.jsonl")
+    parser.add_argument("--dataset", type=str, default="dataset/processed/test_set_new.json")
     parser.add_argument("--templates", type=str, default="config/prompt_templates.json")
     parser.add_argument("--task", type=str, choices=["oa", "rebuttal"], required=True)
     parser.add_argument("--outdir", type=str, default="sft")
@@ -53,14 +59,12 @@ def main():
     os.makedirs(args.outdir, exist_ok=True)
     templates = load_templates(args.templates)
     records = []
-    with open(args.dataset, "r", encoding="utf-8") as f:
-        for line in f:
-            item = json.loads(line)
-            ref_summary = item["input"].get("oracle_reference_summaries", "")
-            oa_content = item["input"].get("office_action", "")
-            rec = build_messages(args.task, templates, item, ref_summary, oa_content)
-            if rec["messages"][-1]["content"]:
-                records.append(rec)
+    for item in load_dataset_json(args.dataset):
+        ref_summary = item["input"].get("oracle_reference_summaries", "")
+        oa_content = item["input"].get("office_action", "")
+        rec = build_messages(args.task, templates, item, ref_summary, oa_content)
+        if rec["messages"][-1]["content"]:
+            records.append(rec)
     random.shuffle(records)
     n = len(records)
     k = int(n * args.val_ratio)

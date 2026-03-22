@@ -52,6 +52,107 @@ def extract_rejection_types(text):
     return types
 
 
+_OA_TYPE_TRAILER_RE = re.compile(
+    r"<<<MODEL_OA_TYPE>>>\s*(.*?)\s*<<<END_MODEL_OA_TYPE>>>",
+    re.DOTALL | re.IGNORECASE,
+)
+
+
+def split_model_oa_type_trailer(text):
+    """
+    Strip the machine-readable OA type trailer from model output.
+    Returns (inner_payload_or_None, body_without_trailer).
+    """
+    if not text or not isinstance(text, str):
+        return None, text
+    m = _OA_TYPE_TRAILER_RE.search(text)
+    if not m:
+        return None, text
+    inner = (m.group(1) or "").strip()
+    body = (text[: m.start()] + text[m.end() :]).strip()
+    return inner, body
+
+
+def predicted_disposition_from_trailer(inner):
+    """
+    Parse inner block: JSON {\"oa_type\": \"...\"} or plain USPTO-style string.
+    """
+    if not inner or not isinstance(inner, str):
+        return "unknown"
+    s = inner.strip()
+    if s.startswith("{"):
+        try:
+            obj = json.loads(s)
+            if isinstance(obj, dict):
+                key = (
+                    obj.get("oa_type")
+                    or obj.get("office_action_type")
+                    or obj.get("decision")
+                )
+                if isinstance(key, str) and key.strip():
+                    return disposition_from_oa_type(key)
+        except (json.JSONDecodeError, TypeError):
+            pass
+    return disposition_from_oa_type(s)
+
+
+def resolve_predicted_disposition(pred_text):
+    """
+    Prefer explicit trailer JSON/label; else extract_disposition on body text.
+    Returns (disposition, pred_body_for_metrics, source) where source is
+    'explicit_trailer' or 'extracted'.
+    """
+    inner, body = split_model_oa_type_trailer(pred_text)
+    if inner:
+        d = predicted_disposition_from_trailer(inner)
+        if d != "unknown":
+            return d, body, "explicit_trailer"
+    pj = safe_parse_json(body)
+    d = extract_disposition(body, pj)
+    return d, body, "extracted"
+
+
+# Appended to OA generation user prompts so the model emits type outside the OA narrative.
+MODEL_OA_TYPE_TRAILER_USER_SUFFIX = (
+    "\n\n## Machine-readable OA type (required)\n"
+    "After the full Office Action (after the last substantive section such as CONCLUSION), "
+    "output EXACTLY one block and nothing after it. "
+    "Do not state this OA type only inside DETAILED ACTION body text as the sole signal; "
+    "the JSON in this block is the canonical type for scoring.\n"
+    "<<<MODEL_OA_TYPE>>>\n"
+    '{"oa_type": "<e.g. Non-Final Rejection | Final Rejection | Notice of Allowance | '
+    'Restriction Requirement | Ex Parte Quayle Action | APEA>"}\n'
+    "<<<END_MODEL_OA_TYPE>>>"
+)
+
+
+def disposition_from_oa_type(oa_type):
+    """
+    Map dataset meta.oa_type (USPTO-style string) to extract_disposition labels.
+    Used when OA body text does not yield a disposition (e.g. truncated input).
+    """
+    if not oa_type or not isinstance(oa_type, str):
+        return "unknown"
+    s = oa_type.strip().lower()
+    if not s:
+        return "unknown"
+    if "notice of allowance" in s:
+        return "allowance"
+    if "non-final" in s and "rejection" in s:
+        return "non_final_rejection"
+    if "final" in s and "rejection" in s:
+        return "final_rejection"
+    if "restriction" in s:
+        return "procedural_action"
+    if "quayle" in s or "ex parte" in s:
+        return "procedural_action"
+    if "rejection" in s:
+        return "rejection"
+    if "allow" in s:
+        return "allowance"
+    return "unknown"
+
+
 def extract_disposition(text, json_obj=None):
     if json_obj:
         status = json_obj.get("claim_status") or json_obj.get("decision")
@@ -308,7 +409,7 @@ def formatting_score(text, task_type):
     if not required:
         return None
     hits = sum(1 for h in required if h in t)
-    return round(hits / len(required), 4)
+    return round(hits / len(required) * 10.0, 4)
 
 def language_style_score(text):
     if not text:

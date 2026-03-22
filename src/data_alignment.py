@@ -5,10 +5,18 @@ import sys
 import io
 import re
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
+from src.ref_pool_dates import (
+    oa_cutoff_date,
+    ref_doc_effective_date,
+    reference_pool_date_policy_log_line,
+)
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset1")
 RAW_DATA_DIRS = []
 for name in sorted(os.listdir(RAW_DATA_ROOT)):
@@ -17,12 +25,12 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
         if os.path.isdir(candidate):
             RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
-SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.jsonl")
+SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.json")
 REF_TEXT_LIMIT = 20000  # Keep aligned with config/eval_config.yaml: reference_summaries
 BM25_TOP_K = 5
 
 # Whether to compute and store BM25 retrieved reference summaries into the
-# generated test set (`test_set_new.jsonl`).
+# generated test set (`test_set_new.json`).
 # Default is OFF, so existing experiments that don't rely on BM25 won't pay
 # the extra cost and won't persist BM25-derived references.
 BM25_ENABLE = str(os.getenv("PATRE_ENABLE_BM25_ALIGNMENT", "")).strip().lower() in (
@@ -91,12 +99,49 @@ def _normalize_doc_id(doc_num):
     return s
 
 
+def _ref_stems_for_pool_lookup(clean_doc_id):
+    """Ordered unique stems (no .json) to try under ReferencePool_Full."""
+    if not clean_doc_id:
+        return []
+    stems = []
+    seen = set()
+
+    def add(s):
+        if s and s not in seen:
+            seen.add(s)
+            stems.append(s)
+
+    add(clean_doc_id)
+    # Raw data e.g. APP-18_375137 -> normalize -> APP18375137; pool files stay APP-* only (no US* fallback).
+    if clean_doc_id.startswith("APP") and len(clean_doc_id) > 3:
+        rest = clean_doc_id[3:]
+        if rest.isdigit() and len(rest) >= 8:
+            add(f"APP-{rest[:2]}_{rest[2:]}")
+    return stems
+
+
 def _ref_possible_filenames(clean_doc_id):
     if not clean_doc_id:
         return []
+    names = []
+    nseen = set()
+
+    def add_name(fn):
+        if fn not in nseen:
+            nseen.add(fn)
+            names.append(fn)
+
     if clean_doc_id.startswith(("US", "WO", "EP", "AU")):
-        return [f"{clean_doc_id}.json"]
-    return [f"{clean_doc_id}.json", f"US{clean_doc_id}.json"]
+        add_name(f"{clean_doc_id}.json")
+        return names
+
+    for stem in _ref_stems_for_pool_lookup(clean_doc_id):
+        add_name(f"{stem}.json")
+        if stem.startswith("APP"):
+            continue
+        if not stem.startswith(("US", "WO", "EP", "AU")):
+            add_name(f"US{stem}.json")
+    return names
 
 
 def _load_reference_record(doc_num):
@@ -138,9 +183,10 @@ def _tokenize(text):
 def _load_bm25_corpus():
     docs = []
     ids = []
+    doc_dates = []
     ref_dir = REF_POOL_DIR
     if not ref_dir or not os.path.exists(ref_dir):
-        return docs, ids
+        return docs, ids, doc_dates
     for name in os.listdir(ref_dir):
         if not name.endswith(".json"):
             continue
@@ -155,12 +201,14 @@ def _load_bm25_corpus():
             tokens = _tokenize(content)
             docs.append(tokens)
             ids.append(os.path.splitext(name)[0])
+            d_doc, _ = ref_doc_effective_date(data)
+            doc_dates.append(d_doc)
         except Exception:
             continue
-    return docs, ids
+    return docs, ids, doc_dates
 
 
-def _bm25_topk(query_text, docs, ids, top_k):
+def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
     if not docs or not ids:
         return []
     q = _tokenize(query_text)
@@ -172,6 +220,14 @@ def _bm25_topk(query_text, docs, ids, top_k):
         scores = bm25.get_scores(q)
         scored = [(float(scores[i]), i) for i in range(len(scores))]
         scored.sort(reverse=True, key=lambda x: x[0])
+        if cutoff_date is not None and doc_dates:
+            scored = [
+                (s, i)
+                for s, i in scored
+                if i < len(doc_dates)
+                and doc_dates[i] is not None
+                and doc_dates[i] < cutoff_date
+            ]
     except Exception:
         N = len(docs)
         df = {}
@@ -202,6 +258,14 @@ def _bm25_topk(query_text, docs, ids, top_k):
                 s += (idf) * ((tf * (k1 + 1)) / denom)
             scored.append((s, i))
         scored.sort(reverse=True, key=lambda x: x[0])
+        if cutoff_date is not None and doc_dates:
+            scored = [
+                (s, i)
+                for s, i in scored
+                if i < len(doc_dates)
+                and doc_dates[i] is not None
+                and doc_dates[i] < cutoff_date
+            ]
 
     out = []
     for _, i in scored[:top_k]:
@@ -287,10 +351,14 @@ def align_data():
         print("WARNING: No raw data directories found under dataset.")
         return
 
-    docs, doc_ids = _load_bm25_corpus() if BM25_ENABLE else ([], [])
+    if BM25_ENABLE:
+        print(reference_pool_date_policy_log_line())
+    docs, doc_ids, doc_dates = (
+        _load_bm25_corpus() if BM25_ENABLE else ([], [], [])
+    )
 
-    with open(SAVE_PATH, "w", encoding="utf-8") as outfile:
-        for raw_dir in RAW_DATA_DIRS:
+    records = []
+    for raw_dir in RAW_DATA_DIRS:
             inferred_ipc = infer_ipc_from_dir(raw_dir)
             for filename in os.listdir(raw_dir):
                 if not filename.endswith(".json"):
@@ -360,20 +428,50 @@ def align_data():
                         if not claims_text.strip():
                             continue
 
-                        # References: prefer references_cited; fallback to extracted_reference_contexts.
-                        refs = oa.get("references_cited", [])
-                        if not refs:
-                            refs = oa.get("extracted_reference_contexts", [])
-                        ref_ids, ref_missing = get_ref_ids(refs)
-                        oracle_ref_summaries = _build_oracle_reference_summaries(ref_ids)
+                        # References:
+                        # - For oracle/bm25 "input refs", we merge references_cited + extracted_reference_contexts.
+                        # - For contrast "citations_gt" (citation-level evaluation), we only use extracted_reference_contexts.
+                        refs_cited = oa.get("references_cited", []) or []
+                        refs_extracted = oa.get("extracted_reference_contexts", []) or []
+
+                        ref_ids_cited, _ = get_ref_ids(refs_cited)
+                        ref_ids_extracted, _ = get_ref_ids(refs_extracted)
+
+                        # Merge (dedupe) for oracle input.
+                        oracle_ref_ids = []
+                        seen = set()
+                        for rid in (ref_ids_cited + ref_ids_extracted):
+                            if rid in seen:
+                                continue
+                            seen.add(rid)
+                            oracle_ref_ids.append(rid)
+
+                        oracle_ref_summaries = _build_oracle_reference_summaries(oracle_ref_ids)
                         bm25_ref_summaries = ""
                         if BM25_ENABLE and docs and doc_ids:
-                            bm25_entries = _bm25_topk(claims_text, docs, doc_ids, BM25_TOP_K)
+                            oa_cut = (
+                                oa_cutoff_date(oa.get("oa_date"))
+                                if isinstance(oa, dict)
+                                else None
+                            )
+                            if oa_cut is None and isinstance(oa, dict) and oa.get("oa_date"):
+                                print(
+                                    "WARNING: oa_date not parseable; BM25 without temporal pool filter.",
+                                    flush=True,
+                                )
+                            bm25_entries = _bm25_topk(
+                                claims_text,
+                                docs,
+                                doc_ids,
+                                BM25_TOP_K,
+                                doc_dates=doc_dates,
+                                cutoff_date=oa_cut,
+                            )
                             bm25_ref_summaries = "\n".join(bm25_entries).strip()
-                        decision_value = oa.get("decision", "")
+                        # Prefer explicit decision; else use USPTO OA kind label (oa_type).
+                        decision_value = oa.get("decision") or oa.get("oa_type") or ""
                         decision_value = str(decision_value).strip()
-                        decision_missing = not bool(decision_value)
-                        if decision_missing:
+                        if not decision_value:
                             decision_value = "Unknown"
 
                         if is_notice_of_allowance:
@@ -394,7 +492,7 @@ def align_data():
                             "input": {
                                 "claims": claims_text,
                                 "oracle_reference_summaries": oracle_ref_summaries,
-                                "oracle_reference_ids": ref_ids,
+                                "oracle_reference_ids": oracle_ref_ids,
                                 "bm25_reference_summaries": bm25_ref_summaries,
                                 "rebuttal": prev_remarks if prev_remarks is not None else "",
                                 "office_action": input_oa,
@@ -405,12 +503,13 @@ def align_data():
                                 "rebuttal_text": prev_remarks if prev_remarks is not None else "",
                                 "next_oa_text": next_oa_body,
                                 # Ground-truth citations used by citation-level evaluation.
-                                # `ref_ids` are normalized reference pool document ids (e.g. "USxxxx...").
-                                "citations_gt": ref_ids,
+                                # Here we only keep extracted_reference_contexts references.
+                                # `ref_ids_extracted` are normalized reference pool document ids (e.g. "USxxxx...").
+                                "citations_gt": ref_ids_extracted,
                                 "decision": decision_value,
                             },
                         }
-                        outfile.write(json.dumps(oa_item, ensure_ascii=False) + "\n")
+                        records.append(oa_item)
                         count += 1
 
                         if not is_notice_of_allowance and cur_remarks and str(cur_remarks).strip().upper() != "N/A":
@@ -428,7 +527,7 @@ def align_data():
                                 "input": {
                                     "claims": claims_text,
                                     "oracle_reference_summaries": oracle_ref_summaries,
-                                    "oracle_reference_ids": ref_ids,
+                                "oracle_reference_ids": oracle_ref_ids,
                                     "bm25_reference_summaries": bm25_ref_summaries,
                                     "rebuttal": cur_remarks,
                                     "office_action": input_oa,
@@ -438,16 +537,20 @@ def align_data():
                                     "oa_text": oa_body,
                                     "rebuttal_text": cur_remarks,
                                     "next_oa_text": next_oa_body,
-                                    # Same reference set as the aligned office action.
-                                    "citations_gt": ref_ids,
+                                # Same extracted-only reference set as the aligned office action.
+                                "citations_gt": ref_ids_extracted,
                                     "decision": decision_value,
                                 },
                             }
-                            outfile.write(json.dumps(rebuttal_item, ensure_ascii=False) + "\n")
+                            records.append(rebuttal_item)
                             count += 1
 
                         if is_notice_of_allowance:
                             break
+
+    with open(SAVE_PATH, "w", encoding="utf-8") as f:
+        json.dump(records, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     print(f"Successfully aligned {count} data samples.")
     print(f"Saved to: {SAVE_PATH}")
