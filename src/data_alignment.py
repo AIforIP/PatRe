@@ -4,6 +4,7 @@ import os
 import sys
 import io
 import re
+import yaml
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if BASE_DIR not in sys.path:
@@ -17,7 +18,7 @@ from src.ref_pool_dates import (
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset")
+RAW_DATA_ROOT = os.path.join(BASE_DIR, "dataset1")
 RAW_DATA_DIRS = []
 for name in sorted(os.listdir(RAW_DATA_ROOT)):
     if name.startswith("PatTimeline_") and name.endswith("_Category"):
@@ -26,8 +27,22 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
             RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
 SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.json")
-REF_TEXT_LIMIT = 20000  # Keep aligned with config/eval_config.yaml: reference_summaries
-BM25_TOP_K = 5
+# 0 means no truncation at data-alignment stage.
+REF_TEXT_LIMIT = 0
+
+
+def _load_bm25_top_k(default=5):
+    cfg_path = os.path.join(BASE_DIR, "config", "eval_config.yaml")
+    try:
+        with open(cfg_path, "r", encoding="utf-8") as f:
+            cfg = yaml.safe_load(f) or {}
+        top_k = int((cfg.get("retrieval_params") or {}).get("bm25_top_k", default))
+        return top_k if top_k > 0 else int(default)
+    except Exception:
+        return int(default)
+
+
+BM25_TOP_K = _load_bm25_top_k(default=5)
 
 # Whether to compute and store BM25 retrieved reference summaries into the
 # generated test set (`test_set_new.json`).

@@ -62,6 +62,16 @@ Build the aligned test set:
 python src/data_alignment.py
 ```
 
+**BM25 in alignment ([src/data_alignment.py](src/data_alignment.py))**: By default, alignment does **not** compute BM25 over the reference pool (faster, smaller `test_set_new.json`). To precompute BM25 summaries and write them to each sample’s `input.bm25_reference_summaries`, enable it with an environment variable:
+
+```bash
+PATRE_ENABLE_BM25_ALIGNMENT=1 python src/data_alignment.py
+```
+
+This loads [dataset/ReferencePool_Full](dataset/ReferencePool_Full), runs BM25 on claims (`BM25_TOP_K` in the script, default 5), and applies the same **temporal pool filter** as retrieval: only references whose parsed date is strictly before the sample’s `meta.oa_date` (see [src/ref_pool_dates.py](src/ref_pool_dates.py)). Requires `rank_bm25` (see [requirements.txt](requirements.txt)).
+
+At inference with `--retrieval bm25_retrieved`, the evaluator merges these BM25 entries with examiner-oracle references into one deduplicated candidate pool (up to 10 items) for the model prompt—not BM25 alone.
+
 
 ## ✍️ Experiment
 

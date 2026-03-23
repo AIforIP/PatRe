@@ -15,9 +15,16 @@ task_settings:
     bleu: false
     rouge_l: true
     bert_score: false
+  # Token-only prompt limits (char limits are disabled below).
+  judge_max_tokens: 0
+  judge_default_field_max_tokens: 0
+  # Generation-side reference packing uses judge_field_max_chars.reference_summaries
+  # as a token-limit proxy; set it huge to keep truncation code "on"
+  # but effectively non-binding.
+  judge_field_max_chars:
+    reference_summaries: 5000000
   judge_max_chars: 0
   judge_default_field_max_chars: 0
-  judge_field_max_chars: {}
 
 
 experiment_matrix: 

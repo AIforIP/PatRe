@@ -466,14 +466,12 @@ class PatentEvaluator:
                     "evaluation_context": {
                         "full_context": {
                             "claims": item['input']['claims'],
-                            "refs": ref_summary,
                             "office_action": oa_content,
                             "rebuttal_history": item['input'].get('rebuttal', "N/A")
                         },
                         "ground_truth": ground_truth_text,
                         "citations_gt": gt_citations,
                         "ground_truth_decision": item.get("ground_truth", {}).get("decision", ""),
-                        "input_refs_preview": ref_summary[:200] + "..."  # truncated preview
                     }
                 }
                 results.append(result_entry)
@@ -538,6 +536,81 @@ class PatentEvaluator:
             return text[:max_chars]
         return text[:head] + marker + text[-tail:]
 
+    def _safe_int(self, value, default=0):
+        try:
+            return int(value)
+        except Exception:
+            return default
+
+    def _count_tokens(self, text):
+        if not isinstance(text, str) or not text:
+            return 0
+        # Optional dependency: use tiktoken when available for accurate token counting.
+        try:
+            import tiktoken  # noqa: F401
+        except Exception:
+            # Fallback heuristic when tiktoken is unavailable.
+            return max(1, len(text) // 4)
+
+        model_name = (
+            self.config.get("models", {}).get("judge_model")
+            or self.config.get("models", {}).get("backbone_list", [""])[0]
+        )
+        try:
+            enc = tiktoken.encoding_for_model(model_name)
+        except Exception:
+            enc = tiktoken.get_encoding("cl100k_base")
+        return len(enc.encode(text, disallowed_special=()))
+
+    def _truncate_text_tokens(self, text, max_tokens, head_ratio=0.6):
+        if not isinstance(text, str) or not text:
+            return text
+        max_tokens = self._safe_int(max_tokens, 0)
+        if max_tokens <= 0:
+            return text
+        try:
+            import tiktoken
+            model_name = (
+                self.config.get("models", {}).get("judge_model")
+                or self.config.get("models", {}).get("backbone_list", [""])[0]
+            )
+            try:
+                enc = tiktoken.encoding_for_model(model_name)
+            except Exception:
+                enc = tiktoken.get_encoding("cl100k_base")
+            toks = enc.encode(text, disallowed_special=())
+            if len(toks) <= max_tokens:
+                return text
+            marker = "\n...[TRUNCATED]...\n"
+            marker_toks = enc.encode(marker, disallowed_special=())
+            head = int(max_tokens * head_ratio)
+            tail = max_tokens - head - len(marker_toks)
+            if tail <= 0:
+                return enc.decode(toks[:max_tokens])
+            return enc.decode(toks[:head]) + marker + enc.decode(toks[-tail:])
+        except Exception:
+            # Fallback to char-based truncation if tokenizer is unavailable.
+            return self._truncate_text(text, max_tokens * 4, head_ratio=head_ratio)
+
+    def _truncate_by_limits(self, text, max_chars=0, max_tokens=0):
+        out = text
+        max_tokens = self._safe_int(max_tokens, 0)
+        max_chars = self._safe_int(max_chars, 0)
+        if max_tokens > 0:
+            out = self._truncate_text_tokens(out, max_tokens)
+        if max_chars > 0:
+            out = self._truncate_text(out, max_chars)
+        return out
+
+    def _within_limits(self, text, max_chars=0, max_tokens=0):
+        max_tokens = self._safe_int(max_tokens, 0)
+        max_chars = self._safe_int(max_chars, 0)
+        if max_chars > 0 and len(text) > max_chars:
+            return False
+        if max_tokens > 0 and self._count_tokens(text) > max_tokens:
+            return False
+        return True
+
     def _safe_template_format(self, template, fields):
         if not isinstance(template, str):
             return ""
@@ -553,9 +626,9 @@ class PatentEvaluator:
 
         return re.sub(r"\{([A-Za-z_][A-Za-z0-9_]*)\}", repl, template)
 
-    def _shrink_prompt(self, template, fields, max_total):
+    def _shrink_prompt(self, template, fields, max_total_chars=0, max_total_tokens=0):
         prompt = self._safe_template_format(template, fields)
-        if len(prompt) <= max_total:
+        if self._within_limits(prompt, max_total_chars, max_total_tokens):
             return prompt
         shrink_keys = [
             "generated_text",
@@ -569,21 +642,32 @@ class PatentEvaluator:
             "claim_text",
         ]
         for key in shrink_keys:
-            if len(prompt) <= max_total:
+            if self._within_limits(prompt, max_total_chars, max_total_tokens):
                 break
             value = fields.get(key)
             if isinstance(value, str) and len(value) > 500:
-                overflow = len(prompt) - max_total
-                new_limit = max(500, len(value) - overflow - 50)
-                fields[key] = self._truncate_text(value, new_limit)
+                new_char_limit = 0
+                new_token_limit = 0
+                if max_total_chars and max_total_chars > 0:
+                    overflow_chars = max(0, len(prompt) - max_total_chars)
+                    new_char_limit = max(500, len(value) - overflow_chars - 50)
+                if max_total_tokens and max_total_tokens > 0:
+                    value_tokens = self._count_tokens(value)
+                    prompt_tokens = self._count_tokens(prompt)
+                    overflow_tokens = max(0, prompt_tokens - max_total_tokens)
+                    new_token_limit = max(200, value_tokens - overflow_tokens - 20)
+                fields[key] = self._truncate_by_limits(value, new_char_limit, new_token_limit)
                 prompt = self._safe_template_format(template, fields)
         return prompt
 
     def _build_judge_prompt(self, template, fields):
         cfg = self.config.get("task_settings", {})
-        max_total = cfg.get("judge_max_chars", 0)
-        default_limit = cfg.get("judge_default_field_max_chars", 0)
-        per_field = cfg.get("judge_field_max_chars", {}) or {}
+        max_total_chars = self._safe_int(cfg.get("judge_max_chars", 0), 0)
+        max_total_tokens = self._safe_int(cfg.get("judge_max_tokens", 0), 0)
+        default_chars = self._safe_int(cfg.get("judge_default_field_max_chars", 0), 0)
+        default_tokens = self._safe_int(cfg.get("judge_default_field_max_tokens", 0), 0)
+        per_field_chars = cfg.get("judge_field_max_chars", {}) or {}
+        per_field_tokens = cfg.get("judge_field_max_tokens", {}) or {}
 
         # Build conditional section for response target (what this round is responding to)
         processed_fields = fields.copy()
@@ -599,17 +683,23 @@ class PatentEvaluator:
         truncated = {}
         for k, v in processed_fields.items():
             if isinstance(v, str):
-                limit = per_field.get(k, default_limit)
-                if not limit or limit <= 0:
+                limit_chars = self._safe_int(per_field_chars.get(k, default_chars), 0)
+                limit_tokens = self._safe_int(per_field_tokens.get(k, default_tokens), 0)
+                if (not limit_chars or limit_chars <= 0) and (not limit_tokens or limit_tokens <= 0):
                     truncated[k] = v
                 else:
-                    truncated[k] = self._truncate_text(v, limit)
+                    truncated[k] = self._truncate_by_limits(v, limit_chars, limit_tokens)
             else:
                 truncated[k] = v
 
         prompt = self._safe_template_format(template, truncated)
-        if max_total and max_total > 0 and len(prompt) > max_total:
-            prompt = self._shrink_prompt(template, truncated, max_total)
+        if not self._within_limits(prompt, max_total_chars, max_total_tokens):
+            prompt = self._shrink_prompt(
+                template,
+                truncated,
+                max_total_chars=max_total_chars,
+                max_total_tokens=max_total_tokens,
+            )
         return prompt
 
     def _split_reference_summaries(self, text):
@@ -676,6 +766,150 @@ class PatentEvaluator:
         except Exception:
             limit = 20000
         return max(2000, limit)
+
+    def _count_text_tokens(self, text):
+        s = text if isinstance(text, str) else ""
+        try:
+            import tiktoken
+
+            enc = tiktoken.get_encoding("cl100k_base")
+            return len(enc.encode(s))
+        except Exception:
+            return len(re.findall(r"[A-Za-z0-9]+|[^\sA-Za-z0-9]", s))
+
+    def _truncate_text_to_token_budget(self, text, budget, add_marker=True):
+        """
+        Truncate text by token budget (not character budget).
+        Uses binary search on character prefix length to find a near-max prefix.
+        """
+        s = text if isinstance(text, str) else ""
+        if budget is None:
+            budget = 0
+        try:
+            budget = int(budget)
+        except Exception:
+            budget = 0
+        if budget <= 0:
+            return ""
+        if self._count_text_tokens(s) <= budget:
+            return s
+
+        marker = "\n[Truncated to input limit]"
+        marker_toks = self._count_text_tokens(marker)
+        use_marker = bool(add_marker) and budget > (marker_toks + 1)
+        content_budget = budget - marker_toks if use_marker else budget
+
+        lo, hi = 0, len(s)
+        best = ""
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            cand = s[:mid]
+            if self._count_text_tokens(cand) <= content_budget:
+                best = cand
+                lo = mid + 1
+            else:
+                hi = mid - 1
+
+        out = best.rstrip()
+        if use_marker and out:
+            out = out + marker
+
+        # Safety clamp (for tokenizer edge behavior around boundaries).
+        while out and self._count_text_tokens(out) > budget:
+            out = out[:-1]
+        return out
+
+    def _pack_ref_entries_with_limit(self, entries, limit):
+        """
+        Keep as many whole `Ref ...` entries as possible under `limit`.
+        If the next entry would exceed `limit`, truncate only that entry's tail.
+        """
+        if not isinstance(entries, list):
+            entries = []
+        cleaned = [e.strip() for e in entries if isinstance(e, str) and e.strip()]
+        if not cleaned:
+            return ""
+
+        marker = "\n[Truncated to input limit]"
+        joined = "\n".join(cleaned).strip()
+        if len(joined) <= limit:
+            return joined
+
+        out = []
+        cur_len = 0
+        for e in cleaned:
+            sep_len = 1 if out else 0
+            if cur_len + sep_len + len(e) <= limit:
+                out.append(e)
+                cur_len += sep_len + len(e)
+                continue
+
+            # Need to truncate this entry only.
+            remain = limit - cur_len - sep_len
+            if remain <= 0:
+                break
+            if remain <= len(marker):
+                # No room for meaningful content; stop with previous full entries.
+                break
+            tail_budget = remain - len(marker)
+            out.append(e[:tail_budget] + marker)
+            cur_len = limit
+            break
+
+        return "\n".join(out).strip()
+
+    def _pack_ref_entries_even_budget(self, entries, limit):
+        """
+        Even-budget packing:
+        - Allocate token budget evenly across refs.
+        - Used only after switching to independent-only refs and still over limit.
+        """
+        if not isinstance(entries, list):
+            entries = []
+        cleaned = [e.strip() for e in entries if isinstance(e, str) and e.strip()]
+        n = len(cleaned)
+        if n == 0:
+            return ""
+
+        try:
+            limit = int(limit)
+        except Exception:
+            limit = 0
+        if limit <= 0:
+            return ""
+
+        sep_tok = self._count_text_tokens("\n")
+        sep_total_toks = max(0, n - 1) * sep_tok
+        content_budget = max(0, limit - sep_total_toks)
+        if content_budget <= 0:
+            return ""
+
+        entry_toks = [self._count_text_tokens(e) for e in cleaned]
+        base = max(1, content_budget // n)
+        alloc = [min(t, base) for t in entry_toks]
+        used = sum(alloc)
+        remain = content_budget - used
+
+        # Round-robin distribute remaining tokens to refs not yet fully allocated.
+        if remain > 0:
+            i = 0
+            while remain > 0 and any(alloc[j] < entry_toks[j] for j in range(n)):
+                if alloc[i] < entry_toks[i]:
+                    alloc[i] += 1
+                    remain -= 1
+                i = (i + 1) % n
+
+        out = []
+        for e, k, t in zip(cleaned, alloc, entry_toks):
+            if k >= t:
+                out.append(e)
+            else:
+                out.append(self._truncate_text_to_token_budget(e, k, add_marker=True))
+
+        joined = "\n".join(out).strip()
+        if self._count_text_tokens(joined) > limit:
+            joined = self._truncate_text_to_token_budget(joined, limit, add_marker=True)
+        return joined
 
     def _normalize_doc_id(self, doc_num):
         if not doc_num:
@@ -810,39 +1044,45 @@ class PatentEvaluator:
         elif setting == "oracle_summary":
             limit = self._get_ref_text_limit()
             content = item.get("input", {}).get('oracle_reference_summaries', "")
+            ids = item.get("input", {}).get("oracle_reference_ids", [])
+            if isinstance(ids, list) and ids:
+                entries_full = []
+                for rid in ids:
+                    doc_id, ref_data = self._load_reference_record(rid)
+                    entries_full.append(self._build_oracle_ref_entry(doc_id, ref_data, independent_only=False))
+                full_text = "\n".join(entries_full).strip()
+                if full_text and self._count_text_tokens(full_text) <= limit:
+                    return full_text
+
+                # Over limit: prefer independent-claim-only per reference.
+                entries_ind = []
+                for rid in ids:
+                    doc_id, ref_data = self._load_reference_record(rid)
+                    entries_ind.append(self._build_oracle_ref_entry(doc_id, ref_data, independent_only=True))
+                ind_text = "\n".join(entries_ind).strip()
+                if ind_text and self._count_text_tokens(ind_text) <= limit:
+                    return ind_text
+
+                # Still over limit: use even per-reference budget on independent-only refs.
+                packed = self._pack_ref_entries_even_budget(
+                    entries_ind if entries_ind else entries_full, limit
+                )
+                return packed if packed else "Warning: Oracle references not available."
+
+            # Fallback when ids are unavailable: use prebuilt summaries.
             if isinstance(content, str) and content.strip():
                 content = content.strip()
-                if len(content) > limit:
-                    return content[:limit] + "\n[Truncated to input limit]"
-                return content
+                blocks = self._split_ref_blocks(content)
+                if not blocks:
+                    blocks = self._split_reference_summaries(content)
+                packed = self._pack_ref_entries_with_limit(blocks if blocks else [content], limit)
+                return packed if packed else "Warning: Oracle references not available."
 
-            ids = item.get("input", {}).get("oracle_reference_ids", [])
-            if not isinstance(ids, list) or not ids:
-                return "Warning: Oracle reference IDs are missing in test set."
-            entries = []
-            for rid in ids:
-                doc_id, ref_data = self._load_reference_record(rid)
-                entries.append(self._build_oracle_ref_entry(doc_id, ref_data, independent_only=False))
-            full_text = "\n".join(entries).strip()
-            if len(full_text) <= limit:
-                return full_text if full_text else "Warning: Oracle references not available."
-
-            entries = []
-            for rid in ids:
-                doc_id, ref_data = self._load_reference_record(rid)
-                entries.append(self._build_oracle_ref_entry(doc_id, ref_data, independent_only=True))
-            short_text = "\n".join(entries).strip()
-            if len(short_text) > limit:
-                return short_text[:limit] + "\n[Truncated to input limit]"
-            return short_text if short_text else "Warning: Oracle references not available."
+            return "Warning: Oracle reference IDs are missing in test set."
         elif setting == "bm25_retrieved":
             limit = self._get_ref_text_limit()
             cached_bm25 = item.get("input", {}).get("bm25_reference_summaries", "")
-            if isinstance(cached_bm25, str) and cached_bm25.strip():
-                content = cached_bm25.strip()
-                if len(content) > limit:
-                    return content[:limit] + "\n[Truncated to input limit]"
-                return content
+            cached_bm25 = cached_bm25.strip() if isinstance(cached_bm25, str) else ""
 
             query_text = item.get("input", {}).get("claims", "")
             oa_d = oa_cutoff_date((item.get("meta") or {}).get("oa_date"))
@@ -850,7 +1090,18 @@ class PatentEvaluator:
                 self.logger.warning(
                     "bm25_retrieved: meta.oa_date not parseable; BM25 runs without temporal pool filter."
                 )
-            bm25_list = self._bm25_retrieve_list(query_text, top_k=5, cutoff_date=oa_d)
+
+            # BM25 side: prefer precomputed summaries from the test set; otherwise run BM25 on claims.
+            # Always merge with Oracle below (never return cached BM25 alone).
+            bm25_list = []
+            if cached_bm25:
+                bm25_list = self._split_ref_blocks(cached_bm25)
+                if not bm25_list:
+                    bm25_list = self._split_reference_summaries(cached_bm25)
+                if not bm25_list:
+                    bm25_list = [cached_bm25]
+            if not bm25_list:
+                bm25_list = self._bm25_retrieve_list(query_text, top_k=5, cutoff_date=oa_d)
 
             ids = item.get("input", {}).get("oracle_reference_ids", [])
             oracle_text = item.get("input", {}).get("oracle_reference_summaries", "")
@@ -884,22 +1135,25 @@ class PatentEvaluator:
             if not pool:
                 return "References corpus not available."
             joined = "\n".join(pool[:10]).strip()
-            if len(joined) <= limit:
+            if self._count_text_tokens(joined) <= limit:
                 return joined
 
+            # Over limit: prefer independent-claim-only oracle entries.
+            pool_for_pack = pool
             if isinstance(ids, list) and ids:
                 oracle_entries_ind = []
                 for rid in ids:
                     doc_id, ref_data = self._load_reference_record(rid)
                     oracle_entries_ind.append(self._build_oracle_ref_entry(doc_id, ref_data, independent_only=True))
-                pool = _build_pool(oracle_entries_ind)
-                joined = "\n".join(pool[:10]).strip()
-                if len(joined) <= limit:
-                    return joined
+                pool_ind = _build_pool(oracle_entries_ind)
+                joined_ind = "\n".join(pool_ind[:10]).strip()
+                if self._count_text_tokens(joined_ind) <= limit:
+                    return joined_ind
+                pool_for_pack = pool_ind if pool_ind else pool
 
-            if len(joined) > limit:
-                return joined[:limit] + "\n[Truncated to input limit]"
-            return joined
+            # Still over limit: even budget across refs (after independent-only fallback).
+            packed = self._pack_ref_entries_even_budget(pool_for_pack[:10], limit)
+            return packed if packed else "References corpus not available."
         return "Unknown retrieval setting"
 
     def _tokenize(self, text):
@@ -1072,6 +1326,10 @@ class PatentEvaluator:
                 # Must have current OA (the one being responded to)
                 current_response_target = res['evaluation_context']['full_context'].get('office_action', '')
             
+            # Defaults used only when judge prompt template placeholders mismatch.
+            prev_remarks = ""
+            prev_oa = ""
+
             gen_for_judge = self._output_body_without_oa_type_trailer(
                 res["ai_exam"].get("output", ""), task_type
             )
@@ -1419,7 +1677,6 @@ class PatentEvaluator:
             try:
                 pred_text = res.get("ai_exam", {}).get("output", "")
                 gt_text = res.get("evaluation_context", {}).get("ground_truth", "")
-                refs_text = res.get("ai_exam", {}).get("input", {}).get("refs", "")
                 task_type = res.get("round_info", {}).get("task", "")
 
                 pred_json = safe_parse_json(pred_text)
@@ -1459,12 +1716,19 @@ class PatentEvaluator:
                         disp_scores["disposition_accuracy"] = round(1.0 if pred_disp == gt_disp else 0.0, 4)
                     stat_scores = statute_metrics(pred_stat, gt_stat)
                     gt_ids = res.get("evaluation_context", {}).get("citations_gt", None)
-                    cit_scores, ref_ids, pred_ids = citation_metrics(
-                        pred_body, refs_text, gt_ids=gt_ids
-                    )
-                    # Citation List Match is meant to compare predicted citations against the same GT set.
-                    # When `citations_gt` exists, compute it from that GT set instead of using the prompt `refs_text`.
+                    cit_scores = {}
+                    ref_ids = set()
+                    pred_ids = set()
+                    list_match = None
+                    refs_text = ""  # refs are intentionally removed from stored inputs
+
+                    # Citation metrics: rely only on dataset ground-truth citations (citations_gt),
+                    # not on retrieval-time reference text (which we intentionally removed from stored inputs).
                     if gt_ids is not None:
+                        cit_scores, ref_ids, pred_ids = citation_metrics(
+                            pred_body, "", gt_ids=gt_ids
+                        )
+                        # Citation List Match: compare predicted citations against the same GT set.
                         if not pred_ids:
                             list_match = 1.0
                         elif not ref_ids:
@@ -1631,69 +1895,6 @@ class PatentEvaluator:
         # Re-scale to 10 if some weights were missing
         final_score = total_weighted_score / sum_of_weights
         return round(final_score, 4)
-
-    def _run_gpt5_coherence_judge(self, res):
-        eval_templates = self.templates.get("Evaluation_Metrics", {})
-        coherence_cfg = eval_templates.get("coherence_judge")
-        if not coherence_cfg:
-            return None
-
-        try:
-            _coh_task = res.get("round_info", {}).get("task", "")
-            judge_prompt = self._build_judge_prompt(
-                coherence_cfg["user_prompt_template"],
-                {
-                    "generated_text": self._output_body_without_oa_type_trailer(
-                        res["ai_exam"]["output"], _coh_task
-                    ),
-                    "claims": res['ai_exam']['input']['claims'],
-                    "reference_summaries": res['ai_exam']['input']['refs'],
-                    "ground_truth": res['evaluation_context']['ground_truth'],
-                },
-            )
-        except KeyError as e:
-            self.logger.warning(f" Coherence prompt format warning: {e}")
-            judge_prompt = self._build_judge_prompt(
-                coherence_cfg["user_prompt_template"],
-                {
-                    "generated_text": self._output_body_without_oa_type_trailer(
-                        res["ai_exam"]["output"],
-                        res.get("round_info", {}).get("task", ""),
-                    )
-                },
-            )
-
-        coherence_model = self.config.get("models", {}).get("coherence_judge_model", "gpt-5-mini")
-        raw = self.judge_backend.generate(
-            system_prompt=coherence_cfg["system_prompt"],
-            user_prompt=judge_prompt,
-            is_judge=True,
-            model_override=coherence_model
-        )
-        try:
-            parsed = self._extract_json(raw)
-        except Exception:
-            retry_prompt = judge_prompt + "\n\nReturn JSON only. Do not include any other text."
-            raw = self.judge_backend.generate(
-                system_prompt=coherence_cfg["system_prompt"],
-                user_prompt=retry_prompt,
-                is_judge=True,
-                model_override=coherence_model
-            )
-            parsed = self._extract_json(raw)
-
-        # Supported shapes:
-        # 1) {"coherence_score": 8, "justification": "..."}
-        # 2) {"scores": {"coherence_score": 8}, "justification": "..."}
-        if "coherence_score" in parsed:
-            return {
-                "coherence_score": parsed.get("coherence_score", 0),
-                "justification": parsed.get("justification", "")
-            }
-        return {
-            "coherence_score": parsed.get("scores", {}).get("coherence_score", 0),
-            "justification": parsed.get("justification", "")
-        }
 
     def _extract_json(self, text):
         """Lightweight JSON extractor."""
