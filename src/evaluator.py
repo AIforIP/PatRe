@@ -350,7 +350,7 @@ class PatentEvaluator:
             template_config = self.templates[root_key][template_task]
 
             # Step 1: retrieval / reference summaries for the prompt
-            ref_summary = self._process_retrieval(item)
+            ref_summary = self._process_retrieval(item, task_key=task_key)
             
             # Step 2: user prompt inputs
             # Always use real dataset inputs (OA and rebuttal), never generated outputs.
@@ -1035,9 +1035,44 @@ class PatentEvaluator:
             return f"Ref {doc_id}: {title}. {abstract}"
         return f"Ref {doc_id}: {abstract}"
 
-    def _process_retrieval(self, item):
+    def _process_retrieval(self, item, task_key=None):
         setting = self.config['active_settings'].get('retrieval_setting', "oracle_summary")
         
+        # Rebuttal generation does not perform inference-time retrieval.
+        # Always use the per-sample aligned prosecution references:
+        # 1) If extracted_reference_contexts exists => only keep those blocks.
+        #    (mapped to ground_truth.citations_gt)
+        # 2) Else => keep the remaining references cited in prosecution.
+        # 3) If both empty => return empty string.
+        if str(task_key).lower() == "rebuttal":
+            oracle_text = item.get("input", {}).get("oracle_reference_summaries", "") or ""
+            oracle_text = oracle_text.strip()
+            if not oracle_text:
+                return ""
+
+            extracted_ids = item.get("ground_truth", {}).get("citations_gt", []) or []
+            extracted_set = set(
+                self._normalize_doc_id(x)
+                for x in extracted_ids
+                if isinstance(x, str) and x.strip()
+            )
+
+            limit = self._get_ref_text_limit()
+            blocks = self._split_ref_blocks(oracle_text)
+            if not blocks:
+                blocks = [oracle_text]
+
+            if extracted_set:
+                kept = []
+                for b in blocks:
+                    rid = self._extract_ref_id(b)
+                    if self._normalize_doc_id(rid) in extracted_set:
+                        kept.append(b)
+                blocks = kept
+
+            packed = self._pack_ref_entries_with_limit(blocks, limit)
+            return packed if packed else ""
+
         if setting == "no_ref":
             return "No prior art references provided for this examination."
         
