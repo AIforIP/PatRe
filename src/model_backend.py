@@ -41,18 +41,41 @@ class ModelBackend:
                 or base_url
             )
         
-        # Ollama 
+        # Ollama / vLLM (env/config only, no hardcoded endpoint fallback)
         if self.backend == 'ollama':
-            api_key = config['models'].get('ollama_api_key') or "ollama"
-            base_url = config['models'].get('ollama_base_url') or "http://localhost:11434/v1"
+            api_key = (
+                os.getenv("OLLAMA_API_KEY")
+                or config['models'].get('ollama_api_key')
+            )
+            base_url = (
+                os.getenv("OLLAMA_BASE_URL")
+                or config['models'].get('ollama_base_url')
+            )
         elif self.backend == 'vllm':
-            api_key = config['models'].get('vllm_api_key') or api_key or "EMPTY"
-            base_url = config['models'].get('vllm_base_url') or base_url
+            api_key = (
+                os.getenv("VLLM_API_KEY")
+                or config['models'].get('vllm_api_key')
+                or api_key
+            )
+            base_url = (
+                os.getenv("VLLM_BASE_URL")
+                or config['models'].get('vllm_base_url')
+                or base_url
+            )
         
-        if not api_key and not self._dry_run:
-            raise ValueError("API key is missing. Please provide it via OPENAI_API_KEY or config.")
+        if not self._dry_run:
+            if not api_key:
+                raise ValueError(
+                    f"API key is missing for backend='{self.backend}' (is_judge={is_judge}). "
+                    "Please provide it via env (.env) or config."
+                )
+            if not base_url:
+                raise ValueError(
+                    f"Base URL is missing for backend='{self.backend}' (is_judge={is_judge}). "
+                    "Please provide it via env (.env) or config."
+                )
 
-        clean_base_url = (base_url or os.getenv("OPENAI_BASE_URL") or "https://api.openai.com/v1").strip().strip("`").strip()
+        clean_base_url = str(base_url or "").strip().strip("`").strip()
         self._base_url = clean_base_url.rstrip("/")
         self._api_key = str(api_key or "").strip()
 

@@ -824,16 +824,8 @@ class PatentEvaluator:
         return out
 
     def _get_ref_text_limit(self):
-        if DISABLE_TRUNCATION:
-            return 10**12
-        cfg = self.config.get("task_settings", {}) or {}
-        per_field = cfg.get("judge_field_max_chars", {}) or {}
-        limit = per_field.get("reference_summaries")
-        try:
-            limit = int(limit)
-        except Exception:
-            limit = 20000
-        return max(2000, limit)
+        # Unlimited reference text budget (explicitly disable all limits).
+        return 10**12
 
     def _count_text_tokens(self, text):
         s = text if isinstance(text, str) else ""

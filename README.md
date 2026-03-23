@@ -69,13 +69,9 @@ Build the aligned test set:
 python src/data_alignment.py
 ```
 
-**BM25 in alignment ([src/data_alignment.py](src/data_alignment.py))**: By default, alignment does **not** compute BM25 over the reference pool (faster, smaller `test_set_new.json`). To precompute BM25 summaries and write them to each sample’s `input.bm25_reference_summaries`, enable it with an environment variable:
+**BM25 in alignment ([src/data_alignment.py](src/data_alignment.py))**: `data_alignment.py` will always compute BM25 over [dataset/ReferencePool_Full](dataset/ReferencePool_Full) and write the results to each sample’s `input.bm25_reference_summaries` (BM25 TOP-K defaults to 5 in the script).
 
-```bash
-PATRE_ENABLE_BM25_ALIGNMENT=1 python src/data_alignment.py
-```
-
-This loads [dataset/ReferencePool_Full](dataset/ReferencePool_Full), runs BM25 on claims (`BM25_TOP_K` in the script, default 5), and applies the same **temporal pool filter** as retrieval: only references whose parsed date is strictly before the sample’s `meta.oa_date` (see [src/ref_pool_dates.py](src/ref_pool_dates.py)). Requires `rank_bm25` (see [requirements.txt](requirements.txt)).
+The BM25 query is the aligned sample’s `claims`, and the retrieved reference text will prefer full `claims` when available (falling back to `abstract` otherwise). It applies the same **temporal pool filter** as retrieval: only references whose parsed date is strictly before the sample’s `meta.oa_date` (see [src/ref_pool_dates.py](src/ref_pool_dates.py)). (`rank_bm25` is recommended; a fallback implementation is used if it's not installed.)
 
 At inference with `--retrieval bm25_retrieved`, the evaluator merges these BM25 entries with examiner-oracle references into one deduplicated candidate pool (up to 10 items) for the model prompt—not BM25 alone.
 
@@ -128,7 +124,7 @@ python run_exp.py
 - `--eval_limit N`: evaluate only the first N round directories in eval-only mode
 - `--test_mode {zero_shot|sft_model}`: override testing mode
 - `--retrieval {no_ref|oracle_summary|bm25_retrieved}`: override retrieval setting
-- **BM25 temporal filter**: for `bm25_retrieved`, the pool is restricted to ReferencePool documents whose parsed date is **strictly before** the sample’s `meta.oa_date` (same rule when precomputing with `PATRE_ENABLE_BM25_ALIGNMENT=1`). Which JSON keys are used for pool dates is documented in [src/ref_pool_dates.py](src/ref_pool_dates.py).
+- **BM25 temporal filter**: for `bm25_retrieved`, the pool is restricted to ReferencePool documents whose parsed date is **strictly before** the sample’s `meta.oa_date` (same rule when precomputing in `data_alignment.py`). Which JSON keys are used for pool dates is documented in [src/ref_pool_dates.py](src/ref_pool_dates.py).
 - `--backend {api|vllm|ollama}`: switch the model backend
 
 ### vLLM / Ollama Backends

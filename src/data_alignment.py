@@ -46,13 +46,10 @@ BM25_TOP_K = _load_bm25_top_k(default=5)
 
 # Whether to compute and store BM25 retrieved reference summaries into the
 # generated test set (`test_set_new.json`).
-# Default is OFF, so existing experiments that don't rely on BM25 won't pay
-# the extra cost and won't persist BM25-derived references.
-BM25_ENABLE = str(os.getenv("PATRE_ENABLE_BM25_ALIGNMENT", "")).strip().lower() in (
-    "1",
-    "true",
-    "yes",
-)
+#
+# Default ON: always persist BM25-derived reference summaries so downstream
+# `--retrieval bm25_retrieved` can use them directly.
+BM25_ENABLE = True
 
 
 def _normalize_ref_list(ref_list):
@@ -230,7 +227,7 @@ def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
     if not q:
         return []
     try:
-        from rank_bm25 import BM25Okapi
+        from rank_bm25 import BM25Okapi  # pyright: ignore[reportMissingImports]
         bm25 = BM25Okapi(docs)
         scores = bm25.get_scores(q)
         scored = [(float(scores[i]), i) for i in range(len(scores))]
@@ -289,9 +286,8 @@ def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
         try:
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            title = data.get("title", "")
-            abstract = data.get("abstract", "")
-            out.append(f"Ref {doc_id}: {title}. {abstract}")
+            # For downstream prompting we prefer full claims when available.
+            out.append(_build_ref_entry(doc_id, data, independent_only=False))
         except Exception:
             out.append(f"Ref {doc_id}: [content unavailable]")
     return out

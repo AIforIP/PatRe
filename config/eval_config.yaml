@@ -55,16 +55,8 @@ models:
   judge_model: "gemini-3.1-flash-lite-preview"
 
   # API keys / endpoints should be provided via .env (preferred).
-  api_key: ""
-  base_url: ""
-  judge_api_key: ""
-  judge_base_url: ""
   backend: "api"
   judge_backend: "api"  
-  ollama_base_url: "http://localhost:11434/v1" 
-  ollama_api_key: "ollama"  
-  vllm_base_url: "http://localhost:8001/v1"
-  vllm_api_key: "EMPTY"
   generation_params:
     temperature: 0.0
     top_p: 1.0
