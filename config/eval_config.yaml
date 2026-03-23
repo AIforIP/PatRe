@@ -54,10 +54,11 @@ models:
 
   judge_model: "gemini-3.1-flash-lite-preview"
 
-  api_key: "EMPTY"
-  base_url: "https://api.chatanywhere.tech/v1"
+  # API keys / endpoints should be provided via .env (preferred).
+  api_key: ""
+  base_url: ""
   judge_api_key: ""
-  judge_base_url: "https://api.chatanywhere.tech/v1"
+  judge_base_url: ""
   backend: "api"
   judge_backend: "api"  
   ollama_base_url: "http://localhost:11434/v1" 

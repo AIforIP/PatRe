@@ -207,6 +207,17 @@ def _build_result_entry(patent_id, round_dir, ctx):
         except Exception:
             round_no = 0
 
+    input_payload = {
+        "claims": ai_input.get("claims", ""),
+        "refs": refs,
+        "task_type": task,
+        "prosecution_history": ai_input.get("prosecution_history", "N/A"),
+        "granularity": ai_input.get("granularity", "full_text"),
+    }
+    # For rebuttal, we don't output retrieval_setting to keep the ai_input clean.
+    if task != "rebuttal":
+        input_payload["retrieval_setting"] = ai_input.get("retrieval_setting", "")
+
     return {
         "_round_dir": round_dir,
         "patent_id": patent_id,
@@ -218,14 +229,7 @@ def _build_result_entry(patent_id, round_dir, ctx):
             "claim_number": "all",
         },
         "ai_exam": {
-            "input": {
-                "claims": ai_input.get("claims", ""),
-                "refs": refs,
-                "task_type": task,
-                "retrieval_setting": ai_input.get("retrieval_setting", ""),
-                "prosecution_history": ai_input.get("prosecution_history", "N/A"),
-                "granularity": ai_input.get("granularity", "full_text"),
-            },
+            "input": input_payload,
             "output": ai_output,
             "available_info": list(ai_input.keys()),
             "restricted_info": ctx.get("restricted_info", []),
@@ -959,10 +963,12 @@ def main():
                 "claims": claims,
                 "refs": "",
                 "task_type": task,
-                "retrieval_setting": retrieval_setting,
                 "prosecution_history": prev_context,
                 "granularity": "full_text",
             }
+            # For rebuttal, we don't output retrieval_setting into ai_input.json.
+            if task != "rebuttal":
+                ai_input["retrieval_setting"] = retrieval_setting
             return {
                 "ai_input": ai_input,
                 "office_action": office_action,

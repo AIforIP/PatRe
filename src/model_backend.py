@@ -30,8 +30,16 @@ class ModelBackend:
 
         # Allow separate judge credentials/endpoint
         if is_judge:
-            api_key = config['models'].get('judge_api_key') or api_key
-            base_url = config['models'].get('judge_base_url') or base_url
+            api_key = (
+                os.getenv('JUDGE_OPENAI_API_KEY')
+                or config['models'].get('judge_api_key')
+                or api_key
+            )
+            base_url = (
+                os.getenv('JUDGE_OPENAI_BASE_URL')
+                or config['models'].get('judge_base_url')
+                or base_url
+            )
         
         # Ollama 
         if self.backend == 'ollama':

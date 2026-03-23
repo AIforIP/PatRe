@@ -34,6 +34,10 @@ from src.metrics_library import (
     split_model_oa_type_trailer,
 )
 
+# Hard-disable prompt/reference truncation to avoid cutting long citations.
+DISABLE_TRUNCATION = True
+
+
 class PatentEvaluator:
     @staticmethod
     def _output_body_without_oa_type_trailer(text, task_type):
@@ -413,10 +417,12 @@ class PatentEvaluator:
                     "claims": f"Claim {claim_no}: {claim_text}" if granularity == "atomic_claim" else item['input'].get('claims_for_generation', item['input'].get('claims', '')),
                     "refs": ref_summary,
                     "task_type": task_key,
-                    "retrieval_setting": self.config['active_settings'].get('retrieval_setting', "oracle_summary"),
                     "prosecution_history": item['input'].get('prosecution_history', "N/A"),
                     "granularity": granularity
                 }
+                # For rebuttal, we don't include retrieval_setting into the saved ai_input.json.
+                if task_key != "rebuttal":
+                    ai_input["retrieval_setting"] = self.config['active_settings'].get('retrieval_setting', "oracle_summary")
 
                 # Include true prompt inputs for traceability
                 if task_key == "rebuttal":
@@ -632,6 +638,8 @@ class PatentEvaluator:
             return self._truncate_text(text, max_tokens * 4, head_ratio=head_ratio)
 
     def _truncate_by_limits(self, text, max_chars=0, max_tokens=0):
+        if DISABLE_TRUNCATION:
+            return text
         out = text
         max_tokens = self._safe_int(max_tokens, 0)
         max_chars = self._safe_int(max_chars, 0)
@@ -642,6 +650,8 @@ class PatentEvaluator:
         return out
 
     def _within_limits(self, text, max_chars=0, max_tokens=0):
+        if DISABLE_TRUNCATION:
+            return True
         max_tokens = self._safe_int(max_tokens, 0)
         max_chars = self._safe_int(max_chars, 0)
         if max_chars > 0 and len(text) > max_chars:
@@ -666,6 +676,8 @@ class PatentEvaluator:
         return re.sub(r"\{([A-Za-z_][A-Za-z0-9_]*)\}", repl, template)
 
     def _shrink_prompt(self, template, fields, max_total_chars=0, max_total_tokens=0):
+        if DISABLE_TRUNCATION:
+            return self._safe_template_format(template, fields)
         prompt = self._safe_template_format(template, fields)
         if self._within_limits(prompt, max_total_chars, max_total_tokens):
             return prompt
@@ -700,6 +712,18 @@ class PatentEvaluator:
         return prompt
 
     def _build_judge_prompt(self, template, fields):
+        if DISABLE_TRUNCATION:
+            processed_fields = fields.copy() if isinstance(fields, dict) else {}
+            if "current_response_target" in processed_fields:
+                response_target = processed_fields["current_response_target"]
+                if response_target and isinstance(response_target, str) and response_target.strip():
+                    processed_fields["response_target_section"] = (
+                        f"- Content Being Responded To:\n{response_target}\n"
+                    )
+                else:
+                    processed_fields["response_target_section"] = ""
+            return self._safe_template_format(template, processed_fields)
+
         cfg = self.config.get("task_settings", {})
         max_total_chars = self._safe_int(cfg.get("judge_max_chars", 0), 0)
         max_total_tokens = self._safe_int(cfg.get("judge_max_tokens", 0), 0)
@@ -800,6 +824,8 @@ class PatentEvaluator:
         return out
 
     def _get_ref_text_limit(self):
+        if DISABLE_TRUNCATION:
+            return 10**12
         cfg = self.config.get("task_settings", {}) or {}
         per_field = cfg.get("judge_field_max_chars", {}) or {}
         limit = per_field.get("reference_summaries")
@@ -824,6 +850,8 @@ class PatentEvaluator:
         Truncate text by token budget (not character budget).
         Uses binary search on character prefix length to find a near-max prefix.
         """
+        if DISABLE_TRUNCATION:
+            return text
         s = text if isinstance(text, str) else ""
         if budget is None:
             budget = 0
@@ -1888,35 +1916,60 @@ class PatentEvaluator:
         base_acc = float(scores.get("accuracy"))
 
         if is_rebuttal:
-            p = scores.get("point_wise_coverage")
-            if isinstance(p, (int, float)):
-                p_score = p * 10.0 if p <= 1.0 else p
-                merged = 0.7 * base_acc + 0.3 * p_score
-                scores["accuracy"] = round(max(0.0, min(10.0, merged)), 4)
+            # Rebuttal accuracy: recompute using judge sub-dimensions.
+            # Keep 1-10 scale and renormalize weights when any sub-dimension is missing.
+            effectiveness = scores.get("effectiveness")
+            rationality = scores.get("rationality")  # kept for backward compatibility; not used directly here
+            reliability = scores.get("reliability")
+            feature_distinction = scores.get("feature_distinction")
+            specification_support = scores.get("specification_support")
+
+            # Default weighting scheme:
+            # - accuracy dominates (0.70)
+            # - the remaining 0.30 is split equally across the other four dimensions
+            w_base = 0.70
+            w_rest = 0.30 / 4.0
+
+            weighted_sum = base_acc * w_base
+            weight_sum = w_base
+
+            def add_if_present(metric_val, w):
+                nonlocal weighted_sum, weight_sum
+                if isinstance(metric_val, (int, float)) and not isinstance(metric_val, bool):
+                    weighted_sum += float(metric_val) * w
+                    weight_sum += w
+
+            add_if_present(effectiveness, w_rest)
+            add_if_present(reliability, w_rest)
+            add_if_present(feature_distinction, w_rest)
+            add_if_present(specification_support, w_rest)
+
+            if weight_sum > 0:
+                merged = weighted_sum / weight_sum
+                merged = max(0.0, min(10.0, merged))
+                scores["accuracy"] = round(merged, 4)
             return
 
-        d = scores.get("disposition_accuracy")
-        s = scores.get("statute_precision")
-        c = scores.get("citation_accuracy")
+        # OA: Recompute "accuracy" using the same weighted scheme as tools/recompute_accuracy.py.
+        # This uses LLM judge sub-scores (accuracy/rationality/reliability) and ignores
+        # extracted core-metric fields (disposition/statute/citation precision) to avoid mixing scales.
+        rationality = scores.get("rationality")
+        reliability = scores.get("reliability")
 
-        d_score = d * 10.0 if isinstance(d, (int, float)) else None
-        s_score = s * 10.0 if isinstance(s, (int, float)) else None
-        c_score = None
-        if isinstance(c, (int, float)):
-            c_score = c if c > 1.0 else c * 10.0
-
-        weighted_sum = 0.0
-        weight_sum = 0.0
-        for val, w in ((base_acc, 0.55), (d_score, 0.20), (s_score, 0.15), (c_score, 0.10)):
-            if isinstance(val, (int, float)):
-                weighted_sum += val * w
-                weight_sum += w
+        weighted_sum = base_acc * 0.70
+        weight_sum = 0.70
+        if isinstance(rationality, (int, float)) and not isinstance(rationality, bool):
+            weighted_sum += float(rationality) * 0.15
+            weight_sum += 0.15
+        if isinstance(reliability, (int, float)) and not isinstance(reliability, bool):
+            weighted_sum += float(reliability) * 0.15
+            weight_sum += 0.15
 
         if weight_sum > 0:
             merged = weighted_sum / weight_sum
-            if isinstance(d_score, (int, float)) and d_score == 0.0:
-                merged = min(merged, 3.0)
-            scores["accuracy"] = round(max(0.0, min(10.0, merged)), 4)
+            # Clamp to 0-10 to match recompute_accuracy.py.
+            merged = max(0.0, min(10.0, merged))
+            scores["accuracy"] = round(merged, 4)
 
     def _calculate_numeric_total(self, scores, task_type=None):
         """
