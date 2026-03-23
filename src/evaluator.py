@@ -141,7 +141,8 @@ class PatentEvaluator:
             return
 
         # Avoid 0 for language_style in the example JSON (models often copy it literally).
-        _patch_num_defaults = {"language_style": 5}
+        # Also avoid 0 for constructiveness for the same reason: the model may copy example values.
+        _patch_num_defaults = {"language_style": 5, "constructiveness": 5}
 
         def patch_scores_block(tmpl, keys, num_defaults=None):
             if not isinstance(tmpl, str):
@@ -189,10 +190,16 @@ class PatentEvaluator:
                 ["constructiveness", "language_style", "point_wise_coverage"],
                 num_defaults=_patch_num_defaults,
             )
+            # Some templates (or patched JSON examples) may still contain "constructiveness": 0.
+            # If the model copies that example literally, we would end up with constant zeros.
+            t = t.replace('"constructiveness": 0', '"constructiveness": 5')
+            t = t.replace('"constructiveness": 0.0', '"constructiveness": 5')
             t = t.replace(
                 "## Output Format:",
-                "## language_style (required): Integer 1-10 only. Rate professional applicant-side legal prose (aligned with **clarity**). "
-                "Never use 0; if uncertain, match **clarity**.\n\n## Output Format:",
+                "## constructiveness (required): Integer 1-10 only. Rate how actionable and point-specific the rebuttal guidance is "
+                "(i.e., whether it proposes concrete legal paths/amendments tied to the Office Action). Never use 0; if uncertain, match "
+                "**clarity**.\n## language_style (required): Integer 1-10 only. Rate professional applicant-side legal prose (aligned with "
+                "**clarity**). Never use 0; if uncertain, match **clarity**.\n\n## Output Format:",
                 1,
             )
             cfg["user_prompt_template"] = t
@@ -255,6 +262,38 @@ class PatentEvaluator:
 
         scores["language_style"] = round(new_val, 4)
         scores["language_style_error"] = " ".join(reasons)
+
+    def _resolve_constructiveness_after_judge(self, res, generated_body: str):
+        """
+        constructiveness must stay on 1-10. If the judge omits it or returns 0, fall back to a safer value.
+        """
+        scores = res.setdefault("scores", {})
+        raw = scores.get("constructiveness")
+        if self._score_in_one_to_ten(raw):
+            scores["constructiveness"] = round(float(raw), 4)
+            scores.pop("constructiveness_error", None)
+            return
+
+        reasons = []
+        if raw == 0 or raw == 0.0:
+            reasons.append("Judge returned constructiveness=0, which is invalid on the 1-10 rubric.")
+        elif raw is None:
+            reasons.append("Judge omitted constructiveness.")
+        elif isinstance(raw, (int, float)):
+            reasons.append(f"Judge returned constructiveness={raw}, which is outside the required 1-10 range.")
+        else:
+            reasons.append("Judge returned a non-numeric constructiveness.")
+
+        clar = scores.get("clarity")
+        if self._score_in_one_to_ten(clar):
+            new_val = float(clar)
+            reasons.append(f"Fallback: copied clarity={new_val:.4f}.")
+        else:
+            new_val = 1.0
+            reasons.append("Fallback: default 1.0 (clarity unavailable/invalid).")
+
+        scores["constructiveness"] = round(new_val, 4)
+        scores["constructiveness_error"] = " ".join(reasons)
 
     def _get_nested_text(self, item, *keys):
         cur = item
@@ -731,14 +770,17 @@ class PatentEvaluator:
     def _extract_ref_id(self, text):
         if not isinstance(text, str):
             return ""
-        m = re.search(r"Ref\\s+([A-Za-z0-9]+):", text)
+        # oracle_reference_summaries typically uses lines like:
+        # "Ref US20080038979A1: <content>"
+        # Keep the regex permissive to handle small formatting variations.
+        m = re.search(r"Ref\s+([A-Za-z0-9]+):", text)
         if m:
             return m.group(1).strip()
         # Try common publication/patent ID patterns.
-        m = re.search(r"\\b[A-Z]{2}\\s?\\d{4}/\\d{7}\\s?[A-Z]\\d?\\b", text)
+        m = re.search(r"\b[A-Z]{2}\s?\d{4}/\d{7}\s?[A-Z]\d?\b", text)
         if m:
-            return re.sub(r"\\s+", "", m.group(0))
-        m = re.search(r"\\b[A-Z]{2}\\d{7,}[A-Z]?\\d?\\b", text)
+            return re.sub(r"\s+", "", m.group(0))
+        m = re.search(r"\b[A-Z]{2}\d{7,}[A-Z]?\d?\b", text)
         if m:
             return m.group(0)
         return ""
@@ -1447,6 +1489,7 @@ class PatentEvaluator:
                 ):
                     res["scores"]["language_style"] = res["scores"]["clarity"]
                 self._resolve_language_style_after_judge(res, gen_for_judge)
+                self._resolve_constructiveness_after_judge(res, gen_for_judge)
                 res["judge_total_score"] = score_data.get("total_score", None)
                 justification_summary = score_data.get("justification_summary", score_data.get("justification", ""))
                 res["justification"] = justification_summary

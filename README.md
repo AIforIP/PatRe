@@ -164,6 +164,16 @@ Eval-only compatibility:
 - If no context file exists, PatRe will attempt to reconstruct evaluation context from `paths.test_set` and the round folder name.
 
 
+## Score Aggregation
+
+Score aggregation (mean metrics across all `eval/scores_summary.json` under one experiment directory):
+
+```bash
+python aggregate_scores.py --root results/YOUR_EXPERIMENT --out results/YOUR_EXPERIMENT/metrics_mean_by_task.csv
+```
+
+`run_exp.py` also tries to run this aggregation automatically after evaluation, unless `task_settings.auto_run_aggregate_scores` is set to `false` in `config/eval_config.yaml`.
+
 ## Troubleshooting
 
 - Environment variables not applied on Windows: `setx` requires opening a new terminal; use `set` for current session.

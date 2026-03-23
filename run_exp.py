@@ -3,6 +3,8 @@ import yaml
 import json
 import copy
 import argparse
+import subprocess
+import sys
 from datetime import datetime
 # src.evaluator
 from src.evaluator import PatentEvaluator
@@ -1066,6 +1068,27 @@ def main():
             pbar.close()
 
         logger.info("Eval-only complete.")
+
+        if config.get("task_settings", {}).get("auto_run_aggregate_scores", True):
+            try:
+                agg_script = os.path.relpath(
+                    os.path.join(os.path.dirname(__file__), "aggregate_scores.py"),
+                    start=os.getcwd(),
+                )
+                out_csv = os.path.join(args.results_dir, "metrics_mean_by_task.csv")
+                subprocess.run(
+                    [
+                        sys.executable,
+                        agg_script,
+                        "--root",
+                        args.results_dir,
+                        "--out",
+                        out_csv,
+                    ],
+                    check=False,
+                )
+            except Exception as e:
+                logger.warning(f"Aggregate scores failed: {e}")
         return
 
     # name
@@ -1241,6 +1264,30 @@ def main():
                     )
 
         logger.info(f"Multiround finished. Results: {multiround_exp_dir}")
+
+        if (
+            not args.generate_only
+            and config.get("task_settings", {}).get("auto_run_aggregate_scores", True)
+        ):
+            try:
+                agg_script = os.path.relpath(
+                    os.path.join(os.path.dirname(__file__), "aggregate_scores.py"),
+                    start=os.getcwd(),
+                )
+                out_csv = os.path.join(multiround_exp_dir, "metrics_mean_by_task.csv")
+                subprocess.run(
+                    [
+                        sys.executable,
+                        agg_script,
+                        "--root",
+                        multiround_exp_dir,
+                        "--out",
+                        out_csv,
+                    ],
+                    check=False,
+                )
+            except Exception as e:
+                logger.warning(f"Aggregate scores failed: {e}")
 
 
 if __name__ == "__main__":
