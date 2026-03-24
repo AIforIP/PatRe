@@ -26,7 +26,7 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
         if os.path.isdir(candidate):
             RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
-SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed1", "test_set_new.json")
+SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.json")
 # 0 means no truncation at data-alignment stage.
 REF_TEXT_LIMIT = 0
 
