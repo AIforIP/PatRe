@@ -26,7 +26,7 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
         if os.path.isdir(candidate):
             RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
-SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.json")
+SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed1", "test_set_new.json")
 # 0 means no truncation at data-alignment stage.
 REF_TEXT_LIMIT = 0
 
@@ -280,8 +280,19 @@ def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
             ]
 
     out = []
-    for _, i in scored[:top_k]:
+    seen_canonical = set()
+    for _, i in scored:
+        if len(out) >= top_k:
+            break
         doc_id = ids[i]
+        # Deduplicate publication variants by numeric core:
+        # e.g., US1234567A / US1234567A1 / US1234567 -> one entry.
+        canon = re.sub(r"[A-Z]\d?$", "", _normalize_doc_id(doc_id))
+        if not canon:
+            canon = _normalize_doc_id(doc_id)
+        if canon in seen_canonical:
+            continue
+        seen_canonical.add(canon)
         path = os.path.join(REF_POOL_DIR, f"{doc_id}.json")
         try:
             with open(path, "r", encoding="utf-8") as f:

@@ -769,17 +769,29 @@ def _run_one_task_round(
             engine.dataset = []
             scoring_ok = False
             try:
-                report = engine.run_scoring(raws)
-                if auto_extra:
-                    report = engine.run_additional_metrics(report)
+                report = []
+                # Score and flush one-by-one so resume eval progress is durable.
+                for one_raw in raws:
+                    one_report = engine.run_scoring([one_raw], show_progress=False)
+                    if auto_extra:
+                        one_report = engine.run_additional_metrics(one_report)
+                    report.extend(one_report)
+                    _save_patent_organized_results(
+                        [one_raw],
+                        one_report,
+                        config,
+                        multiround_exp_dir,
+                        write_scores=True,
+                    )
                 scoring_ok = True
             except Exception as e:
                 logger.warning(f"Scoring failed (resume from disk); saving generation only. Error: {e}")
                 report = [{} for _ in raws]
                 scoring_ok = False
-            _save_patent_organized_results(
-                raws, report, config, multiround_exp_dir, write_scores=scoring_ok
-            )
+            if not scoring_ok:
+                _save_patent_organized_results(
+                    raws, report, config, multiround_exp_dir, write_scores=False
+                )
             if scoring_ok:
                 for r, e in zip(raws, report):
                     pid = r["patent_id"]
@@ -815,17 +827,29 @@ def _run_one_task_round(
         report = [{} for _ in raw]
     else:
         try:
-            report = engine.run_scoring(raw)
-            if auto_extra:
-                report = engine.run_additional_metrics(report)
+            report = []
+            # Score and flush one-by-one so normal runs are crash-resilient.
+            for one_raw in raw:
+                one_report = engine.run_scoring([one_raw], show_progress=False)
+                if auto_extra:
+                    one_report = engine.run_additional_metrics(one_report)
+                report.extend(one_report)
+                _save_patent_organized_results(
+                    [one_raw],
+                    one_report,
+                    config,
+                    multiround_exp_dir,
+                    write_scores=True,
+                )
             scoring_ok = True
         except Exception as e:
             logger.warning(f"Scoring failed; saving generation only. Error: {e}")
             report = [{} for _ in raw]
             scoring_ok = False
-    _save_patent_organized_results(
-        raw, report, config, multiround_exp_dir, write_scores=(not args.generate_only and scoring_ok)
-    )
+    if args.generate_only or not scoring_ok:
+        _save_patent_organized_results(
+            raw, report, config, multiround_exp_dir, write_scores=False
+        )
 
     if not args.generate_only and scoring_ok:
         for r, e in zip(raw, report):

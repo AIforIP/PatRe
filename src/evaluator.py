@@ -1354,8 +1354,19 @@ class PatentEvaluator:
             scores = filtered
         ref_dir = self.config['paths'].get('reference_pool')
         out = []
-        for s, i in scores[:top_k]:
+        seen_canonical = set()
+        for s, i in scores:
+            if len(out) >= top_k:
+                break
             doc_id = self._docids[i]
+            # Deduplicate publication variants by numeric core:
+            # e.g., US1234567A / US1234567A1 / US1234567 -> one entry.
+            canon = re.sub(r"[A-Z]\d?$", "", self._normalize_doc_id(doc_id))
+            if not canon:
+                canon = self._normalize_doc_id(doc_id)
+            if canon in seen_canonical:
+                continue
+            seen_canonical.add(canon)
             path = os.path.join(ref_dir, f"{doc_id}.json")
             try:
                 with open(path, 'r', encoding='utf-8') as f:
