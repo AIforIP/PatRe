@@ -26,34 +26,26 @@ export PYTHONPATH=$pwd
 
 ### API Configuration
 
-Recommended: configure credentials via environment variables (avoid hardcoding keys into YAML).
-If judge uses different credentials/endpoint, set `JUDGE_OPENAI_API_KEY` and `JUDGE_OPENAI_BASE_URL`.
+Use environment variables only (recommended). No API keys need to be written into YAML.
 
-Windows PowerShell (persistent):
+Create `.env` in the project root (you can copy from `.env.example`):
 
-```powershell
-setx OPENAI_API_KEY "YOUR_KEY"
-setx OPENAI_BASE_URL "YOUR_BASE_URL"
-setx JUDGE_OPENAI_API_KEY "YOUR_KEY"
-setx JUDGE_OPENAI_BASE_URL "YOUR_BASE_URL"
+```bash
+cp .env.example .env
 ```
 
-Windows CMD (current session only):
+Then fill values in `.env` (minimum required):
 
-```bat
-set OPENAI_API_KEY=YOUR_KEY
-set OPENAI_BASE_URL=YOUR_BASE_URL
-set JUDGE_OPENAI_API_KEY=YOUR_KEY
-set JUDGE_OPENAI_BASE_URL=YOUR_BASE_URL
+```env
+OPENAI_API_KEY=YOUR_KEY
+OPENAI_BASE_URL=YOUR_BASE_URL
 ```
 
-Linux/MacOS:
+Optional (if judge uses different credentials/endpoint):
 
-```shell
-export OPENAI_API_KEY="YOUR_KEY"
-export OPENAI_BASE_URL="YOUR_BASE_URL"
-export JUDGE_OPENAI_API_KEY="YOUR_KEY"
-export JUDGE_OPENAI_BASE_URL="YOUR_BASE_URL"
+```env
+JUDGE_OPENAI_API_KEY=YOUR_JUDGE_KEY
+JUDGE_OPENAI_BASE_URL=YOUR_JUDGE_BASE_URL
 ```
 
 ### Data & Paths
