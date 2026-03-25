@@ -1,7 +1,7 @@
 python run_exp.py \
-    --model Llama-3.1-8B-Instruct \
+    --model Llama-3.3-70B-Instruct \
     --task oa \
     --test_mode zero_shot \
-    --retrieval no_ref \
+    --retrieval bm25_retrieved \
     --backend vllm \
     --generate_only 
