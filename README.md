@@ -2,7 +2,7 @@
   <img src="./assets/patre-logo.png" width="200" alt="PatRe Logo">
 </p>
 
-<h3 align="center"><strong>PatRe</strong>: A Full-Stage Office Action and Rebuttal Generation Benchmark for Patent Examination</h3>
+<h3 align="center"><strong>PatRe</strong>: A Full-Stage Office Action and Rebuttal Generation <br> Benchmark for Patent Examination</h3>
 
 <p align="center">
   <a href="wangqiyao.me">Qiyao Wang</a><sup>1,2,*</sup>, Xinyi Chen<sup>3,*</sup>, Longze Chen<sup>1,2</sup>, Hongbo Wang<sup>3</sup>, Hamid Alinejad-Rokny<sup>4</sup>, Yuan Lin<sup>3,†</sup>, Min Yang<sup>1,5,†</sup>
