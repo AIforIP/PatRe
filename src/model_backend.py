@@ -109,27 +109,53 @@ class ModelBackend:
         jitter = float(self.config.get("models", {}).get("retry_jitter_sec", 0))
         for attempt in range(max_retries):
             try:
-                resp = self._client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": user_prompt},
-                    ],
-                    extra_body={
-                        "chat_template_kwargs": {"enable_thinking": False},
-                    },
-                    **params,
-                )
-                choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
-                content = None
-                if choice0 and getattr(choice0, "message", None):
-                    content = getattr(choice0.message, "content", None)
-                if content is None and choice0:
-                    content = getattr(choice0, "text", None)
+                # Check if model is deepseek-v3.2 for streaming output
+                is_deepseek_v32 = isinstance(model, str) and "deepseek-v3.2" in model.lower()
+                
+                if is_deepseek_v32:
+                    # Use streaming for deepseek-v3.2
+                    stream = self._client.chat.completions.create(
+                        model=model,
+                        messages=[
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": user_prompt},
+                        ],
+                        extra_body={
+                            "chat_template_kwargs": {"enable_thinking": False},
+                        },
+                        stream=True,
+                        **params,
+                    )
+                    content_parts = []
+                    for chunk in stream:
+                        if chunk.choices and chunk.choices[0].delta and chunk.choices[0].delta.content:
+                            content_parts.append(chunk.choices[0].delta.content)
+                    content = "".join(content_parts)
+                    if not content.strip():
+                        raise ValueError("Empty response content from stream")
+                    return content
+                else:
+                    resp = self._client.chat.completions.create(
+                        model=model,
+                        messages=[
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": user_prompt},
+                        ],
+                        extra_body={
+                            "chat_template_kwargs": {"enable_thinking": False},
+                        },
+                        **params,
+                    )
+                    choice0 = resp.choices[0] if getattr(resp, "choices", None) else None
+                    content = None
+                    if choice0 and getattr(choice0, "message", None):
+                        content = getattr(choice0.message, "content", None)
+                    if content is None and choice0:
+                        content = getattr(choice0, "text", None)
 
-                if content is None or not str(content).strip():
-                    raise ValueError("Empty response content")
-                return str(content)
+                    if content is None or not str(content).strip():
+                        raise ValueError("Empty response content")
+                    return str(content)
             except Exception as e:
                 msg = str(e)
                 if "max_tokens" in msg and "max_completion_tokens" in msg:

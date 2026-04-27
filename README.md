@@ -1,15 +1,47 @@
-# PatRe
-[**🌐 Homepage**](https://patre.wangqiyao.me/) | [**🤗 Dataset**](https://huggingface.co/datasets/IPIntelligence/PatRe-Bench) | [**📖 arXiv**](https://arxiv.org/abs/) | [**GitHub**](https://github.com/AIforIP/PatRe)
+<p align="center">
+  <img src="./assets/patre-logo.png" width="200" alt="PatRe Logo">
+</p>
+
+<h3 align="center"><strong>PatRe</strong>: A Full-Stage Office Action and Rebuttal Generation Benchmark for Patent Examination</h3>
+
+<p align="center">
+  <a href="wangqiyao.me">Qiyao Wang</a><sup>1,2,*</sup>, Xinyi Chen<sup>3,*</sup>, Longze Chen<sup>1,2</sup>, Hongbo Wang<sup>3</sup>, Hamid Alinejad-Rokny<sup>4</sup>, Yuan Lin<sup>3,†</sup>, Min Yang<sup>1,5,†</sup>
+</p>
+
+<p align="center">
+  <sup>1</sup>SIAT-NLP, <sup>2</sup>UCAS, <sup>3</sup>DUT-IR, <sup>4</sup>UNSW Sydney and <sup>5</sup>SUAT
+</p>
+
+<p align="center">
+  <sup>*</sup> Equal Contribution &nbsp;&nbsp; <sup>†</sup> Corresponding Authors
+</p>
+
+<p align="center">
+  <a href="https://patre.wangqiyao.me/">🌐 Homepage</a> |
+  <a href="">🤗 Dataset</a> |
+  <a href="https://arxiv.org/pdf/">📖 Paper</a> |
+  <a href="https://huggingface.co/papers/">🤗 HuggingFace Paper</a> |
+  <a href="https://github.com/AIforIP/PatRe">GitHub</a>
+</p>
 
 
-This repo contains the evaluation code for the paper "[PatRe: A Large-Scale Full-Stage Patent Office Action and Rebuttal Dataset and Benchmark](https://arxiv.org/abs/)"
+This repo contains the evaluation code for the paper "[PatRe: A Full-Stage Office Action and Rebuttal Generation Benchmark for Patent Examination](https://arxiv.org/pdf/)"
 
-## 🔔News
+## 🔔 News
 
+- 😄 [2026-04-24] Releasing [Website](https://patre.wangqiyao.me/).
 - 🔥 [2026-02-16] Research Begining.
 
-## 👀 Introduction
+## 📅 Timeline
 
+- [x] Code
+- [ ] Dataset
+- [ ] Software Demostration
+
+## 📝 Introduction
+
+
+![PatRe overview](./assets/framework.bmp)
 
 
 ## 🚀 Quick Start
@@ -175,6 +207,13 @@ python aggregate_scores.py --root results/YOUR_EXPERIMENT --out results/YOUR_EXP
 - `FAILED_TO_GENERATE`: check rate limits, model name, context length; try `PATRE_DRY_RUN=1` to validate the pipeline.
 - Similarity metrics are `null`: verify `rouge-score`, `sacrebleu`, `bert-score` are installed and that `ground_truth` is available.
 
-## License
+## Citation
+
+When citing this work, please use the following BibTeX entry:
+
+```bibtex
+
+```
 
 ## Contact
+Feel free to contact the author with `wangqiyao25@mails.ucas.ac.cn`.
