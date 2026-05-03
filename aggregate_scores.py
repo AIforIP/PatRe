@@ -54,13 +54,10 @@ TASK_METRICS = {
 
 
 CANONICAL_KEY = {
-    # OA labels
     "Dispositional Accuracy": "disposition_accuracy",
     "Statute Precision": "statute_precision",
     "Citation Accuracy": "citation_accuracy",
-    # Rebuttal labels
     "Point-wise Coverage": "point_wise_coverage",
-    # Common similarity/style labels
     "BLEU": "bleu",
     "ROUGE-L": "rouge_l",
     "BERTScore": "bert_score",
@@ -74,7 +71,6 @@ CANONICAL_KEY = {
 
 
 def parse_value(value):
-    """Parse a metric value from scores_summary.json to a float."""
     if value is None:
         return None
     if is_number(value):
@@ -92,7 +88,6 @@ def parse_value(value):
             except Exception:
                 return None
         try:
-            # Handle numeric strings like "6" or "6.0".
             return float(s)
         except Exception:
             return None
@@ -144,7 +139,6 @@ def main():
             task = data.get("task_type") or "unknown"
             file_count[task] += 1
 
-            # total_score is stored as a number (0-10)
             total_score = data.get("total_score", None)
             parsed_total = parse_value(total_score)
             if parsed_total is not None:

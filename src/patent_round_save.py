@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""Persist one patent-round to disk (same layout as run_exp multiround folders)."""
+#Persist one patent-round to disk (same layout as run_exp multiround folders).
 
 import json
 import os
@@ -33,11 +32,7 @@ _REBUTTAL_SCHEMA = [
 
 
 def save_one_patent_round_artifacts(raw_result, exp_dir, write_scores=False, eval_result=None):
-    """
-    Write input/ai_input.json, output/ai_output.txt, eval/context.json,
-    and optionally eval/scores.json + scores_summary.json for one sample.
-    Used by batch save and incremental checkpoint after each generation.
-    """
+    #Write input/ai_input.json, output/ai_output.txt, eval/context.json, and optionally eval/scores.json + scores_summary.json for one sample.
     eval_result = eval_result if isinstance(eval_result, dict) else {}
     patent_id = raw_result["patent_id"]
     patent_dir = os.path.join(exp_dir, f"patent_{patent_id}")
@@ -180,7 +175,6 @@ def save_one_patent_round_artifacts(raw_result, exp_dir, write_scores=False, eva
         json.dump(
             {
                 "task_type": task_key,
-                "total_score": eval_result.get("total_score", 0),
                 "scores": summary_scores,
             },
             f,

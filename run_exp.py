@@ -6,7 +6,6 @@ import argparse
 import subprocess
 import sys
 from datetime import datetime
-# src.evaluator
 from src.evaluator import PatentEvaluator
 from src.utils import setup_logger, load_dataset_json
 from src.patent_round_save import save_one_patent_round_artifacts
@@ -15,13 +14,12 @@ from tqdm import tqdm
 def parse_args():
     parser = argparse.ArgumentParser(description="PatRe")
     parser.add_argument("--config", type=str, default="config/eval_config.yaml")
-    # Allow specifying a single IPC category via command line (e.g., --ipc A)
+    #Allow specifying a single IPC category via command line(e.g.,--ipc A)
     parser.add_argument("--ipc", type=str, help="Run specific IPC category (A-H)")
     parser.add_argument("--num_samples", type=int, help="Override task_settings.num_samples")
-    # model
     parser.add_argument("--model", type=str, help="Specific model to test")
 
-    # (oa / rebuttal / both), default is both
+    #(oa / rebuttal / both), default is both
     parser.add_argument(
         "--task",
         type=str,
@@ -31,9 +29,9 @@ def parse_args():
     )
 
 
-    # Override test_mode: zero_shot vs sft_model
+    #Override test_mode: zero_shot vs sft_model
     parser.add_argument("--test_mode", type=str, choices=["zero_shot", "sft_model"], help="Override test mode")
-    # Override retrieval_setting: no_ref, oracle_summary, bm25_retrieved
+    #Override retrieval_setting: no_ref, oracle_summary, bm25_retrieved
     parser.add_argument("--retrieval", type=str, choices=["no_ref", "oracle_summary", "bm25_retrieved"], help="Override retrieval setting")
 
     parser.add_argument("--backend", type=str, choices=["api", "vllm", "ollama"], help="Override model backend")
@@ -61,7 +59,7 @@ def parse_args():
     return parser.parse_args()
 
 def analyze_dataset_rounds(config):
-    """Analyze actual round distribution in the dataset."""
+    #Analyze actual round distribution in the dataset.
     test_set_path = config["paths"]["test_set"]
     if not os.path.exists(test_set_path):
         return 3
@@ -80,14 +78,14 @@ def analyze_dataset_rounds(config):
     return max_rounds
 
 def generate_multiround_sequence_from_data(max_rounds):
-    # Generate multi-round examination sequence based on actual dataset rounds.
-    sequence = ["oa"]  # start as OA
+    #Generate multi-round examination sequence based on actual dataset rounds.
+    sequence = ["oa"]  #start as OA
     
 
-    # round 1: oa
-    # round 2: oa -> rebuttal
-    # round 3: oa -> rebuttal -> oa
-    # round 4+: oa -> rebuttal -> oa -> rebuttal ...
+    #round 1: oa
+    #round 2: oa -> rebuttal
+    #round 3: oa -> rebuttal -> oa
+    #round 4+: oa -> rebuttal -> oa -> rebuttal ...
     
     for i in range(1, max_rounds):
         if i % 2 == 1:
@@ -98,86 +96,13 @@ def generate_multiround_sequence_from_data(max_rounds):
     return sequence
 
 
-
-def _normalize_0_1(value):
-    if value is None or isinstance(value, bool) or not isinstance(value, (int, float)):
-        return None
-    v = float(value)
-    if v < 0:
-        return v
-    if v <= 1:
-        return round(v, 4)
-    if v <= 10:
-        return round(v / 10.0, 4)
-    if v <= 100:
-        return round(v / 100.0, 4)
-    return round(v, 4)
-
-
-def _pick_score(scores, *keys):
-    for k in keys:
-        v = scores.get(k)
-        if isinstance(v, (int, float)) and not isinstance(v, bool):
-            return v
-    return None
-
-
-def _build_scores_table(task_key, scores):
-    if not isinstance(scores, dict):
-        scores = {}
-
-    table = {}
-    if task_key == "rebuttal":
-        pw = _normalize_0_1(_pick_score(scores, "point_wise_coverage"))
-        if pw is not None:
-            table["Point-wise Coverage"] = pw
-    else:
-        disp = _normalize_0_1(_pick_score(scores, "disposition_accuracy"))
-        if disp is not None:
-            table["Disposition Accuracy"] = disp
-        stat = _normalize_0_1(_pick_score(scores, "statute_precision", "legal_statute_precision"))
-        if stat is not None:
-            table["Statute Precision"] = stat
-        cit = _normalize_0_1(_pick_score(scores, "reference_citation_accuracy", "citation_accuracy"))
-        if cit is not None:
-            table["Citation Accuracy"] = cit
-
-    bleu = _normalize_0_1(_pick_score(scores, "bleu"))
-    if bleu is not None:
-        table["BLEU"] = bleu
-    rouge = _normalize_0_1(_pick_score(scores, "rouge_l"))
-    if rouge is not None:
-        table["ROUGE-L"] = rouge
-    bert = _normalize_0_1(_pick_score(scores, "bert_score", "bert_score_f1"))
-    if bert is not None:
-        table["BERTScore"] = bert
-    fmt = _pick_score(scores, "formatting_rule", "formatting_schema_score", "formatting_citation_style")
-    if fmt is not None:
-        f = float(fmt)
-        # 新存盘为 0–10；旧结果为 0–1，按 0–10 展示
-        table["Formatting"] = round(f * 10.0, 4) if f <= 1.0 else round(min(f, 10.0), 4)
-
-    for key, label in (
-        ("accuracy", "Accuracy"),
-        ("clarity", "Clarity"),
-        ("constructiveness", "Constructiveness"),
-        ("completeness", "Completeness"),
-        ("language_style", "Language Style"),
-    ):
-        val = _pick_score(scores, key)
-        if val is not None:
-            table[label] = val
-
-    return table
-
-
 def _load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def _round_task_from_name(name):
-    # Expected like: round_1_oa or round_2_rebuttal
+    #Expected like: round_1_oa or round_2_rebuttal
     parts = name.split("_")
     if len(parts) >= 3:
         return parts[2].lower()
@@ -214,7 +139,7 @@ def _build_result_entry(patent_id, round_dir, ctx):
         "prosecution_history": ai_input.get("prosecution_history", "N/A"),
         "granularity": ai_input.get("granularity", "full_text"),
     }
-    # For rebuttal, we don't output retrieval_setting to keep the ai_input clean.
+    #For rebuttal, we don't output retrieval_setting to keep the ai_input clean
     if task != "rebuttal":
         input_payload["retrieval_setting"] = ai_input.get("retrieval_setting", "")
 
@@ -371,7 +296,7 @@ def _save_scores(round_dir, eval_result):
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
 def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, write_scores=True):
-    """Save results grouped by patent, appending per-round outputs."""
+    #Save results grouped by patent, appending per-round outputs.
     eval_report = eval_report or []
     for idx, raw_result in enumerate(raw_results or []):
         eval_result = (
@@ -381,104 +306,6 @@ def _save_patent_organized_results(raw_results, eval_report, config, exp_dir, wr
             raw_result, exp_dir, write_scores=write_scores, eval_result=eval_result
         )
 
-def _calculate_patent_average_scores(results):
-    """Compute average scores for a single patent."""
-    if not results: return {}
-    score_sums = {}
-    score_counts = {}
-    for res in results:
-        scores = res.get('scores', {})
-        for k, v in scores.items():
-            if isinstance(v, (int, float)):
-                score_sums[k] = score_sums.get(k, 0) + v
-                score_counts[k] = score_counts.get(k, 0) + 1
-    return {k: score_sums[k] / score_counts[k] for k in score_sums} if score_counts else {}
-
-def _calculate_overall_metrics(reports):
-    """Compute overall evaluation metrics."""
-    if not reports: return {}
-    score_sums = {}
-    score_counts = {}
-    for res in reports:
-        scores = res.get('scores', {})
-        for k, v in scores.items():
-            if isinstance(v, (int, float)):
-                score_sums[k] = score_sums.get(k, 0) + v
-                score_counts[k] = score_counts.get(k, 0) + 1
-    return {k: score_sums[k] / score_counts[k] for k in score_sums} if score_counts else {}
-
-def _prf(tp, fp, fn):
-    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
-    return precision, recall, f1
-
-def _calculate_disposition_micro_metrics(reports):
-    """Compute micro-averaged disposition metrics across all samples."""
-    tp = fp = fn = 0
-    correct = 0
-    total = 0
-    for res in reports:
-        md = res.get("metric_details", {}) if isinstance(res, dict) else {}
-        pred = md.get("disposition_pred")
-        gt = md.get("disposition_gt")
-        if not pred or not gt or pred == "unknown" or gt == "unknown":
-            continue
-        total += 1
-        if pred == gt:
-            correct += 1
-        pred_pos = pred in ("final_rejection", "non_final_rejection", "rejection")
-        gt_pos = gt in ("final_rejection", "non_final_rejection", "rejection")
-        if pred_pos and gt_pos:
-            tp += 1
-        elif pred_pos and not gt_pos:
-            fp += 1
-        elif (not pred_pos) and gt_pos:
-            fn += 1
-
-    if total == 0:
-        return {}
-    precision, recall, f1 = _prf(tp, fp, fn)
-    return {
-        "disposition_accuracy_overall": round(correct / total, 4),
-        "disposition_micro_precision": round(precision, 4),
-        "disposition_micro_recall": round(recall, 4),
-        "disposition_micro_f1": round(f1, 4),
-        "disposition_support": total,
-        "disposition_tp": tp,
-        "disposition_fp": fp,
-        "disposition_fn": fn,
-    }
-
-def _generate_summaries(exp_dir, grouped_data, all_results_map, config):
-    """Generate experiment summary files."""
-
-    for pid, results in all_results_map.items():
-        patent_dir = os.path.join(exp_dir, f"patent_{pid}")
-        os.makedirs(patent_dir, exist_ok=True)
-        
-        patent_summary = {
-            "total_rounds_executed": len(results),
-            "average_scores": _calculate_patent_average_scores(results)
-        }
-        summary_path = os.path.join(patent_dir, "summary.json")
-        with open(summary_path, 'w', encoding='utf-8') as f:
-            json.dump(patent_summary, f, indent=2, ensure_ascii=False)
-    
-
-    all_reports = [item for sublist in all_results_map.values() for item in sublist]
-    disposition_micro = _calculate_disposition_micro_metrics(all_reports)
-    experiment_overview = {
-        "config_snapshot": config,
-        "timestamp": datetime.now().isoformat(),
-        "total_patents": len(grouped_data),
-        "total_rounds_run": sum(len(results) for results in all_results_map.values()),
-        "overall_metrics": _calculate_overall_metrics(all_reports),
-        "overall_disposition": disposition_micro
-    }
-    overview_path = os.path.join(exp_dir, "experiment_overview.json")
-    with open(overview_path, 'w', encoding='utf-8') as f:
-        json.dump(experiment_overview, f, indent=4, ensure_ascii=False)
 
 def _get_nested_text(item, *keys):
     cur = item
@@ -502,7 +329,7 @@ def _extract_round_texts(item):
     return claims, office_action, remarks
 
 def _dataset_item_has_oracle_refs(item):
-    """Whether test-set row has oracle reference ids or non-empty oracle summaries."""
+    #Whether test-set row has oracle reference ids or non-empty oracle summaries
     inp = item.get("input", {}) if isinstance(item, dict) else {}
     ids = inp.get("oracle_reference_ids", [])
     summ = inp.get("oracle_reference_summaries", "")
@@ -514,16 +341,7 @@ def _dataset_item_has_oracle_refs(item):
 
 
 def _build_previous_round_context(items, current_round_idx, task_type):
-    """Build context from only the previous same-type round.
-
-    Args:
-        items: List of rounds for a patent (same type only)
-        current_round_idx: Current round index (0-based)
-        task_type: Current task type ('oa' or 'rebuttal')
-
-    Returns:
-        String containing previous round context, or 'N/A' if no previous round
-    """
+    #Build context from only the previous same-type round
     if current_round_idx <= 0:
         return "N/A"
 
@@ -593,7 +411,6 @@ def _resume_restricted_info(task_key):
 
 
 def _load_resume_raw_result(patent_id, round_dir, round_no, task_key, item):
-    """Rebuild a run_batch-style result dict from saved round files (for scoring after resume)."""
     ctx_path = os.path.join(round_dir, "eval", "context.json")
     in_path = os.path.join(round_dir, "input", "ai_input.json")
     out_path = _resolve_ai_output_path(round_dir)
@@ -701,7 +518,6 @@ def _load_resume_raw_result(patent_id, round_dir, round_no, task_key, item):
 
 
 def _partition_resume_batch(items, exp_dir, round_no, task_key, args):
-    """Split batch into items that still need API generation vs. disk-only scoring."""
     if not args.resume_dir:
         return list(items), []
 
@@ -770,7 +586,7 @@ def _run_one_task_round(
             scoring_ok = False
             try:
                 report = []
-                # Score and flush one-by-one so resume eval progress is durable.
+                #Score and flush one-by-one so resume eval progress is durable
                 for one_raw in raws:
                     one_report = engine.run_scoring([one_raw], show_progress=False)
                     if auto_extra:
@@ -828,7 +644,7 @@ def _run_one_task_round(
     else:
         try:
             report = []
-            # Score and flush one-by-one so normal runs are crash-resilient.
+            #Score and flush one-by-one so normal runs are crash-resilient.
             for one_raw in raw:
                 one_report = engine.run_scoring([one_raw], show_progress=False)
                 if auto_extra:
@@ -892,7 +708,7 @@ def main():
         config.setdefault('task_settings', {})
         models_cfg = config.get("models", {})
         if "active_model" not in models_cfg:
-            # Evaluation should use judge_model; backend still expects active_model.
+            #Evaluation should use judge_model; backend still expects active_model
             models_cfg["active_model"] = models_cfg.get("judge_model", "")
             config["models"] = models_cfg
 
@@ -972,7 +788,7 @@ def main():
             item = items[idx]
             claims = _extract_from_item(item, "claims")
             office_action = _extract_from_item(item, "office_action")
-            # Use only previous round context (not all history)
+            #Use only previous round context (not all history)
             prev_context = _build_previous_round_context(items, idx, task)
             if task == "rebuttal":
                 ground_truth = _extract_from_item(item, "ground_truth_rebuttal") or "N/A"
@@ -990,7 +806,7 @@ def main():
                 "prosecution_history": prev_context,
                 "granularity": "full_text",
             }
-            # For rebuttal, we don't output retrieval_setting into ai_input.json.
+
             if task != "rebuttal":
                 ai_input["retrieval_setting"] = retrieval_setting
             return {
@@ -1080,7 +896,7 @@ def main():
             if not results:
                 continue
             config['task_settings']['current_task'] = task
-            # Evaluate one-by-one so each result is written immediately
+            #Evaluate one-by-one so each result is written immediately
             pbar = tqdm(total=len(results), desc=f"Eval {task}", unit="sample")
             for res in results:
                 if not args.eval_force:
@@ -1121,7 +937,7 @@ def main():
                 logger.warning(f"Aggregate scores failed: {e}")
         return
 
-    # name
+    #name
     naming_cfg = config.get('experiment_naming', {})
     use_academic_format = naming_cfg.get('use_academic_format', True)
     timestamp_format = naming_cfg.get('timestamp_format', "%Y%m%d_%H%M")
@@ -1146,7 +962,7 @@ def main():
             grouped_data[pid] = []
         grouped_data[pid].append(item)
 
-    # Sort by oa_number/oa_date and split into same-type lists for correct sequencing
+    #Sort by oa_number/oa_date and split into same-type lists for correct sequencing
     def _sort_key(it):
         meta = it.get("meta", {}) if isinstance(it, dict) else {}
         num = meta.get("oa_number")
@@ -1201,11 +1017,10 @@ def main():
         logger = setup_logger(multiround_exp_dir)
         logger.info(f"Starting multi-round for model: {model_name}")
 
-        all_results_map = {} # pid -> [eval_result, ...]
 
         total_rounds = max(max_oa_lines, max_rebuttal_lines) if args.task == "both" else max_lines
         for line_idx in range(total_rounds):
-            # 1. Examiner Round (OA)
+            #1. Examiner Round (OA)
             if args.task in ("oa", "both"):
                 task_oa = "oa"
                 config['task_settings']['current_task'] = task_oa
@@ -1216,10 +1031,9 @@ def main():
                         item = lines[line_idx]
                         item_oa = copy.deepcopy(item)
                         item_oa.setdefault("input", {})
-                        # Use only previous OA
                         prev_context = _build_previous_round_context(lines, line_idx, "oa")
                         item_oa["input"]["prosecution_history"] = prev_context
-                        # For OA generation, use previous rebuttal if exists
+                        #For OA generation, use previous rebuttal if exists
                         prev_remarks = ""
                         if line_idx - 1 >= 0 and pid in grouped_rebuttal:
                             rb_lines = grouped_rebuttal.get(pid, [])
@@ -1247,7 +1061,7 @@ def main():
                         auto_extra,
                     )
 
-            # 2. Applicant Round (Rebuttal)
+            #2. Applicant Round (Rebuttal)
             if args.task in ("rebuttal", "both"):
                 task_rebuttal = "rebuttal"
                 config['task_settings']['current_task'] = task_rebuttal
@@ -1258,10 +1072,9 @@ def main():
                         item = lines[line_idx]
                         item_rb = copy.deepcopy(item)
                         item_rb.setdefault("input", {})
-                        # Use only previous rebuttal
                         prev_context = _build_previous_round_context(lines, line_idx, "rebuttal")
                         item_rb["input"]["prosecution_history"] = prev_context
-                        # For rebuttal generation, use current round's remarks.
+                        #For rebuttal generation, use current round's remarks.
                         _, _, cur_remarks = _extract_round_texts(item_rb)
                         if isinstance(cur_remarks, str):
                             cur_remarks = cur_remarks.strip()

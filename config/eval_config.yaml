@@ -3,24 +3,18 @@ metadata:
   project: "PatRe"
   ipc_categories: ["A", "B", "C", "D", "E", "F", "G", "H"]
 
-# task_settings
+#task_settings
 task_settings:
-  # current_task: "rebuttal"
   current_task: "oa"
   num_samples: 100000
-  # After each patent: flush output/ai_output.txt (and siblings) for crash-safe resume
   incremental_disk_save: true
   auto_run_extra_metrics: true
   similarity_metrics:
     bleu: false
     rouge_l: true
     bert_score: false
-  # Token-only prompt limits (char limits are disabled below).
   judge_max_tokens: 0
   judge_default_field_max_tokens: 0
-  # Generation-side reference packing uses judge_field_max_chars.reference_summaries
-  # as a token-limit proxy; set it huge to keep truncation code "on"
-  # but effectively non-binding.
   judge_field_max_chars:
     reference_summaries: 5000000
   judge_max_chars: 0
@@ -54,7 +48,7 @@ models:
 
   judge_model: "gemini-3.1-flash-lite-preview"
 
-  # API keys / endpoints should be provided via .env (preferred).
+  #API keys / endpoints should be provided via .env (preferred).
   backend: "api"
   judge_backend: "api"  
   generation_params:
@@ -63,7 +57,7 @@ models:
     max_tokens: 16384
   sft_model_id: ""
 
-# Current Run Settings
+#Current Run Settings
 active_settings:
   test_mode: "zero_shot"
   retrieval_setting: "oracle_summary" 

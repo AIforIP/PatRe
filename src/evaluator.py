@@ -34,7 +34,7 @@ from src.metrics_library import (
     split_model_oa_type_trailer,
 )
 
-# Hard-disable prompt/reference truncation to avoid cutting long citations.
+
 DISABLE_TRUNCATION = True
 
 
@@ -81,7 +81,6 @@ class PatentEvaluator:
                 for item in data
                 if str(item.get("meta", {}).get("ipc", "")).upper() == ipc_filter
             ]
-        # Attach prosecution history for single-task runs (use only the previous same-type round)
         patent_items = {}
         for item in data:
             pid = item.get("id")
@@ -94,7 +93,6 @@ class PatentEvaluator:
                 continue
             item.setdefault("input", {})
             
-            # Build context from relevant previous rounds (ordered by OA number/date)
             items_for_pid = list(patent_items.get(pid, []))
             if items_for_pid:
                 def _sort_key(it):
@@ -124,7 +122,6 @@ class PatentEvaluator:
             item["input"]["prosecution_history"] = prev_context
 
         
-        # Task-aware filtering (single dataset, avoid empty rebuttals)
         task_key = self.config.get('task_settings', {}).get('current_task', '')
         if "rebuttal" in task_key:
             filtered = []
@@ -135,7 +132,6 @@ class PatentEvaluator:
                 if rebut and rebut.upper() != "N/A":
                     filtered.append(item)
             data = filtered
-        # Apply num_samples cap from config
         limit = self.config['task_settings'].get('num_samples', 9999)
         return data[:limit]
 
@@ -144,8 +140,7 @@ class PatentEvaluator:
         if not isinstance(eval_metrics, dict):
             return
 
-        # Avoid 0 for language_style in the example JSON (models often copy it literally).
-        # Also avoid 0 for constructiveness for the same reason: the model may copy example values.
+
         _patch_num_defaults = {"language_style": 5, "constructiveness": 5}
 
         def patch_scores_block(tmpl, keys, num_defaults=None):
@@ -194,8 +189,7 @@ class PatentEvaluator:
                 ["constructiveness", "language_style", "point_wise_coverage"],
                 num_defaults=_patch_num_defaults,
             )
-            # Some templates (or patched JSON examples) may still contain "constructiveness": 0.
-            # If the model copies that example literally, we would end up with constant zeros.
+
             t = t.replace('"constructiveness": 0', '"constructiveness": 5')
             t = t.replace('"constructiveness": 0.0', '"constructiveness": 5')
             t = t.replace(
@@ -228,10 +222,6 @@ class PatentEvaluator:
         return isinstance(x, (int, float)) and not isinstance(x, bool) and 1.0 <= float(x) <= 10.0
 
     def _resolve_language_style_after_judge(self, res, generated_body: str):
-        """
-        language_style must stay on 1-10. Never persist 0 or out-of-range values;
-        record an English explanation in scores['language_style_error'] when a fallback is used.
-        """
         scores = res.setdefault("scores", {})
         scores.pop("language_style_error", None)
         raw = scores.get("language_style")
@@ -268,9 +258,6 @@ class PatentEvaluator:
         scores["language_style_error"] = " ".join(reasons)
 
     def _resolve_constructiveness_after_judge(self, res, generated_body: str):
-        """
-        constructiveness must stay on 1-10. If the judge omits it or returns 0, fall back to a safer value.
-        """
         scores = res.setdefault("scores", {})
         raw = scores.get("constructiveness")
         if self._score_in_one_to_ten(raw):
@@ -326,19 +313,15 @@ class PatentEvaluator:
         text = claims_text.strip()
         if not text or text.upper() == "N/A":
             return []
-        # Prefer numbered claim boundaries (e.g., "1. ...", "2) ...").
         pattern = re.compile("(?m)^([0-9]+)\\s*[\\.|\\)]\\s+(.*?)(?=^[0-9]+\\s*[\\.|\\)]\\s+|\\Z)", re.DOTALL)
         matches = pattern.findall(text)
         if matches:
             return [(num.strip(), body.strip()) for num, body in matches if body.strip()]
-        # Fallback: treat entire block as a single claim.
         return [("1", text)]
 
     def _resolve_template_task(self, task_key, item):
         if task_key != "oa":
             return task_key
-        # For OA generation, decide prompt type based ONLY on current input rebuttal.
-        # Ground-truth rebuttal is for evaluation, and should not force a response-to-rebuttal prompt.
         rebuttal_text = item.get("input", {}).get("rebuttal") or ""
         if isinstance(rebuttal_text, str):
             rebuttal_text = rebuttal_text.strip()
@@ -392,11 +375,7 @@ class PatentEvaluator:
                 return []
             template_config = self.templates[root_key][template_task]
 
-            # Step 1: retrieval / reference summaries for the prompt
             ref_summary = self._process_retrieval(item, task_key=task_key)
-            
-            # Step 2: user prompt inputs
-            # Always use real dataset inputs (OA and rebuttal), never generated outputs.
             oa_content = item['input'].get('office_action', "No Office Action provided in dataset.")
             rebuttal_text = item['input'].get('rebuttal', item.get('ground_truth', {}).get('rebuttal_text', "N/A"))
             
@@ -412,7 +391,6 @@ class PatentEvaluator:
             _round_num = int(_rrn) if _rrn is not None else self._get_round_number(task_key)
 
             for claim_no, claim_text in claim_blocks:
-                # Model input payload
                 ai_input = {
                     "claims": f"Claim {claim_no}: {claim_text}" if granularity == "atomic_claim" else item['input'].get('claims_for_generation', item['input'].get('claims', '')),
                     "refs": ref_summary,
@@ -420,20 +398,16 @@ class PatentEvaluator:
                     "prosecution_history": item['input'].get('prosecution_history', "N/A"),
                     "granularity": granularity
                 }
-                # For rebuttal, we don't include retrieval_setting into the saved ai_input.json.
                 if task_key != "rebuttal":
                     ai_input["retrieval_setting"] = self.config['active_settings'].get('retrieval_setting', "oracle_summary")
 
-                # Include true prompt inputs for traceability
                 if task_key == "rebuttal":
                     ai_input["office_action"] = oa_content
                 elif task_key == "oa":
-                    # OA response-to-rebuttal should include the rebuttal being responded to
                     if template_task != "initial_examination":
                         ai_input["rebuttal"] = rebuttal_text
                 
                 try:
-                    # Build user prompt from template
                     template_text = template_config["user_prompt_template"]
                     user_prompt = template_text.format(
                         current_claims=ai_input['claims'],
@@ -451,7 +425,6 @@ class PatentEvaluator:
                     self.logger.error(f"Prompt template error: {e}")
                     raise e
 
-                # Step 3: generation
                 pid = item.get("id", "?")
                 self.logger.info(
                     "API generate start: patent_id=%s template=%s claim_block=%s",
@@ -474,7 +447,6 @@ class PatentEvaluator:
                     out_len,
                 )
 
-                # Ground truth label for metrics
                 response_templates = {
                     "response_to_rebuttal",
                     "response_to_rebuttal_zero_shot",
@@ -482,8 +454,6 @@ class PatentEvaluator:
                     "response_to_rebuttal_bm25",
                 }
                 if task_key == "oa" and template_task in response_templates:
-                    # response_to_rebuttal: the model is expected to generate the CURRENT round OA in response
-                    # to the applicant's rebuttal. Therefore, use current oa_text as ground truth.
                     ground_truth_text = item['ground_truth'].get('oa_text', "N/A")
                 elif task_key == "rebuttal":
                     ground_truth_text = item['ground_truth'].get('rebuttal_text', "N/A")
@@ -563,7 +533,6 @@ class PatentEvaluator:
             return 0
 
     def _get_restricted_info(self, task_key):
-        """Names of restricted evaluation fields for logging / UI."""
         if task_key == "oa":
             return ["ground_truth_oa", "rebuttal_history", "human_decisions"]
         else:
@@ -590,11 +559,9 @@ class PatentEvaluator:
     def _count_tokens(self, text):
         if not isinstance(text, str) or not text:
             return 0
-        # Optional dependency: use tiktoken when available for accurate token counting.
         try:
-            import tiktoken  # noqa: F401
+            import tiktoken  
         except Exception:
-            # Fallback heuristic when tiktoken is unavailable.
             return max(1, len(text) // 4)
 
         model_name = (
@@ -634,7 +601,6 @@ class PatentEvaluator:
                 return enc.decode(toks[:max_tokens])
             return enc.decode(toks[:head]) + marker + enc.decode(toks[-tail:])
         except Exception:
-            # Fallback to char-based truncation if tokenizer is unavailable.
             return self._truncate_text(text, max_tokens * 4, head_ratio=head_ratio)
 
     def _truncate_by_limits(self, text, max_chars=0, max_tokens=0):
@@ -732,10 +698,8 @@ class PatentEvaluator:
         per_field_chars = cfg.get("judge_field_max_chars", {}) or {}
         per_field_tokens = cfg.get("judge_field_max_tokens", {}) or {}
 
-        # Build conditional section for response target (what this round is responding to)
         processed_fields = fields.copy()
-        
-        # Handle response_target_section - the content being responded to in this round
+
         if "current_response_target" in processed_fields:
             response_target = processed_fields["current_response_target"]
             if response_target and isinstance(response_target, str) and response_target.strip():
@@ -794,13 +758,9 @@ class PatentEvaluator:
     def _extract_ref_id(self, text):
         if not isinstance(text, str):
             return ""
-        # oracle_reference_summaries typically uses lines like:
-        # "Ref US20080038979A1: <content>"
-        # Keep the regex permissive to handle small formatting variations.
         m = re.search(r"Ref\s+([A-Za-z0-9]+):", text)
         if m:
             return m.group(1).strip()
-        # Try common publication/patent ID patterns.
         m = re.search(r"\b[A-Z]{2}\s?\d{4}/\d{7}\s?[A-Z]\d?\b", text)
         if m:
             return re.sub(r"\s+", "", m.group(0))
@@ -824,7 +784,6 @@ class PatentEvaluator:
         return out
 
     def _get_ref_text_limit(self):
-        # Unlimited reference text budget (explicitly disable all limits).
         return 10**12
 
     def _count_text_tokens(self, text):
@@ -876,16 +835,11 @@ class PatentEvaluator:
         if use_marker and out:
             out = out + marker
 
-        # Safety clamp (for tokenizer edge behavior around boundaries).
         while out and self._count_text_tokens(out) > budget:
             out = out[:-1]
         return out
 
     def _pack_ref_entries_with_limit(self, entries, limit):
-        """
-        Keep as many whole `Ref ...` entries as possible under `limit`.
-        If the next entry would exceed `limit`, truncate only that entry's tail.
-        """
         if not isinstance(entries, list):
             entries = []
         cleaned = [e.strip() for e in entries if isinstance(e, str) and e.strip()]
@@ -906,12 +860,10 @@ class PatentEvaluator:
                 cur_len += sep_len + len(e)
                 continue
 
-            # Need to truncate this entry only.
             remain = limit - cur_len - sep_len
             if remain <= 0:
                 break
             if remain <= len(marker):
-                # No room for meaningful content; stop with previous full entries.
                 break
             tail_budget = remain - len(marker)
             out.append(e[:tail_budget] + marker)
@@ -921,11 +873,6 @@ class PatentEvaluator:
         return "\n".join(out).strip()
 
     def _pack_ref_entries_even_budget(self, entries, limit):
-        """
-        Even-budget packing:
-        - Allocate token budget evenly across refs.
-        - Used only after switching to independent-only refs and still over limit.
-        """
         if not isinstance(entries, list):
             entries = []
         cleaned = [e.strip() for e in entries if isinstance(e, str) and e.strip()]
@@ -952,7 +899,6 @@ class PatentEvaluator:
         used = sum(alloc)
         remain = content_budget - used
 
-        # Round-robin distribute remaining tokens to refs not yet fully allocated.
         if remain > 0:
             i = 0
             while remain > 0 and any(alloc[j] < entry_toks[j] for j in range(n)):
@@ -991,7 +937,6 @@ class PatentEvaluator:
         return [c for c in candidates if c]
 
     def _ref_stems_for_app_style_pool(self, clean_id):
-        """Alternate APP-style filenames (no US* / bare-digit pool names for application ids)."""
         if not clean_id or not clean_id.startswith("APP") or len(clean_id) <= 3:
             return []
         rest = clean_id[3:]
@@ -1001,7 +946,6 @@ class PatentEvaluator:
 
     def _ref_possible_names(self, clean_id):
         names = []
-        # First expand APP-style ids to multiple pool naming conventions, then kind-code variants.
         stem_seeds = [clean_id]
         if clean_id.startswith("APP"):
             stem_seeds.extend(self._ref_stems_for_app_style_pool(clean_id))
@@ -1099,13 +1043,6 @@ class PatentEvaluator:
 
     def _process_retrieval(self, item, task_key=None):
         setting = self.config['active_settings'].get('retrieval_setting', "oracle_summary")
-        
-        # Rebuttal generation does not perform inference-time retrieval.
-        # Always use the per-sample aligned prosecution references:
-        # 1) If extracted_reference_contexts exists => only keep those blocks.
-        #    (mapped to ground_truth.citations_gt)
-        # 2) Else => keep the remaining references cited in prosecution.
-        # 3) If both empty => return empty string.
         if str(task_key).lower() == "rebuttal":
             oracle_text = item.get("input", {}).get("oracle_reference_summaries", "") or ""
             oracle_text = oracle_text.strip()
@@ -1150,8 +1087,6 @@ class PatentEvaluator:
                 full_text = "\n".join(entries_full).strip()
                 if full_text and self._count_text_tokens(full_text) <= limit:
                     return full_text
-
-                # Over limit: prefer independent-claim-only per reference.
                 entries_ind = []
                 for rid in ids:
                     doc_id, ref_data = self._load_reference_record(rid)
@@ -1160,13 +1095,11 @@ class PatentEvaluator:
                 if ind_text and self._count_text_tokens(ind_text) <= limit:
                     return ind_text
 
-                # Still over limit: use even per-reference budget on independent-only refs.
                 packed = self._pack_ref_entries_even_budget(
                     entries_ind if entries_ind else entries_full, limit
                 )
                 return packed if packed else "Warning: Oracle references not available."
 
-            # Fallback when ids are unavailable: use prebuilt summaries.
             if isinstance(content, str) and content.strip():
                 content = content.strip()
                 blocks = self._split_ref_blocks(content)
@@ -1188,8 +1121,6 @@ class PatentEvaluator:
                     "bm25_retrieved: meta.oa_date not parseable; BM25 runs without temporal pool filter."
                 )
 
-            # BM25 side: prefer precomputed summaries from the test set; otherwise run BM25 on claims.
-            # Always merge with Oracle below (never return cached BM25 alone).
             bm25_list = []
             if cached_bm25:
                 bm25_list = self._split_ref_blocks(cached_bm25)
@@ -1204,7 +1135,6 @@ class PatentEvaluator:
             oracle_text = item.get("input", {}).get("oracle_reference_summaries", "")
 
             def _build_pool(oracle_entries):
-                # Prefer oracle entries (often richer / claim-based) when duplicates exist.
                 pool = self._dedupe_refs(oracle_entries[:5] + bm25_list[:5])
                 if len(pool) < 10:
                     for ref in oracle_entries[5:]:
@@ -1235,7 +1165,6 @@ class PatentEvaluator:
             if self._count_text_tokens(joined) <= limit:
                 return joined
 
-            # Over limit: prefer independent-claim-only oracle entries.
             pool_for_pack = pool
             if isinstance(ids, list) and ids:
                 oracle_entries_ind = []
@@ -1248,7 +1177,7 @@ class PatentEvaluator:
                     return joined_ind
                 pool_for_pack = pool_ind if pool_ind else pool
 
-            # Still over limit: even budget across refs (after independent-only fallback).
+
             packed = self._pack_ref_entries_even_budget(pool_for_pack[:10], limit)
             return packed if packed else "References corpus not available."
         return "Unknown retrieval setting"
@@ -1359,8 +1288,6 @@ class PatentEvaluator:
             if len(out) >= top_k:
                 break
             doc_id = self._docids[i]
-            # Deduplicate publication variants by numeric core:
-            # e.g., US1234567A / US1234567A1 / US1234567 -> one entry.
             canon = re.sub(r"[A-Z]\d?$", "", self._normalize_doc_id(doc_id))
             if not canon:
                 canon = self._normalize_doc_id(doc_id)
@@ -1382,10 +1309,9 @@ class PatentEvaluator:
         return "\n".join(self._bm25_retrieve_list(query_text))
 
     def run_scoring(self, results, show_progress=True):
-        """
-        Run judge scoring (examiner_judge vs rebuttal_judge) per configured task.
-        """
-        # Route to the judge template that matches the current task (oa vs rebuttal)
+    
+        #Run judge scoring (examiner_judge vs rebuttal_judge) per configured task.
+        #Route to the judge template that matches the current task (oa vs rebuttal)
         current_task = self.config['task_settings']['current_task']
         if current_task == "oa" or current_task in self.templates.get("Office_Action_Generation", {}):
             judge_key = "examiner_judge"
@@ -1398,13 +1324,13 @@ class PatentEvaluator:
         scored_results = []
 
         for res in tqdm(results, desc="Scoring", disable=not bool(show_progress)):
-            # Prompt
+            #Prompt
             task_type = res.get('round_info', {}).get('task', '')
             round_num = res.get('round_info', {}).get('round_number', 1)
             
-            # Build evaluation input: claims + ground_truth + generated + current context to respond to
-            # Note: Evaluation does NOT need refs or previous history!
-            # Only needs the content being responded to in this round
+            #Build evaluation input: claims + ground_truth + generated + current context to respond to
+            #Note: Evaluation does NOT need refs or previous history!
+            #Only needs the content being responded to in this round
             current_response_target = ""  # Either current OA (for rebuttal) or current rebuttal (for OA)
             
             if task_type == "oa":
@@ -1474,7 +1400,6 @@ class PatentEvaluator:
                 "user_prompt": judge_prompt,
                 "raw_output": raw_judge_res
             })
-            # Always store raw judge output for debugging
             res["raw_judge_output"] = raw_judge_res
             res["judge_system_prompt"] = judge_system_prompt
             res["judge_user_prompt"] = judge_prompt
@@ -1482,7 +1407,6 @@ class PatentEvaluator:
             res["judge_prompt_length"] = len(judge_prompt) if isinstance(judge_prompt, str) else 0
 
             try:
-                # Parse judge JSON output
                 try:
                     score_data = self._extract_json(raw_judge_res)
                 except Exception:
@@ -1530,11 +1454,9 @@ class PatentEvaluator:
                 res["judge_justification_details"] = score_data.get("justification_details", {})
                 res["judge_evaluation_report"] = score_data.get("evaluation_report", "")
 
-                # FORCE total_score to be the weighted average of sub-metrics
                 combined_total = self._calculate_numeric_total(res.get("scores", {}), task_type=current_task)
                 res["combined_total_score"] = combined_total
                 res["total_score"] = combined_total
-                # Keep the judge's subjective total score separate for reference
                 res["judge_total_score"] = score_data.get("total_score", None)
                 scored_results.append(res)
             except Exception as e:
@@ -1685,9 +1607,13 @@ class PatentEvaluator:
                 res_a["pairwise_winner"] = winner
                 res_a["pairwise_scores"] = score_data.get("scores", {})
                 res_a["pairwise_justification"] = score_data.get("justification", "")
-                
-                # Invert winner label for the paired sample
-                res_b["pairwise_winner"] = "A" if winner == "B" else "B" if winner == "A" else "tie"
+
+                if winner == "B":
+                    res_b["pairwise_winner"] = "A"
+                elif winner == "A":
+                    res_b["pairwise_winner"] = "B"
+                else:
+                    res_b["pairwise_winner"] = "tie"
                 res_b["pairwise_scores"] = score_data.get("scores", {})
                 res_b["pairwise_justification"] = score_data.get("justification", "")
                 
@@ -1799,7 +1725,6 @@ class PatentEvaluator:
                     pred_disp, pred_body, pred_disp_source = resolve_predicted_disposition(
                         pred_text
                     )
-                    # GT disposition: (1) ground_truth.decision (2) meta.oa_type (3) OA body / JSON heuristics
                     gt_disp = "unknown"
                     gt_decision = (res.get("evaluation_context") or {}).get(
                         "ground_truth_decision", ""
@@ -1819,7 +1744,6 @@ class PatentEvaluator:
 
                     pred_rejections = extract_rejection_types(pred_body)
 
-                    # Per-sample: only keep accuracy to avoid misleading precision/recall/F1
                     disp_scores = {}
                     if pred_disp != "unknown" and gt_disp not in ("unknown", "procedural_action"):
                         disp_scores["disposition_accuracy"] = round(1.0 if pred_disp == gt_disp else 0.0, 4)
@@ -1829,15 +1753,12 @@ class PatentEvaluator:
                     ref_ids = set()
                     pred_ids = set()
                     list_match = None
-                    refs_text = ""  # refs are intentionally removed from stored inputs
+                    refs_text = ""
 
-                    # Citation metrics: rely only on dataset ground-truth citations (citations_gt),
-                    # not on retrieval-time reference text (which we intentionally removed from stored inputs).
                     if gt_ids is not None:
                         cit_scores, ref_ids, pred_ids = citation_metrics(
                             pred_body, "", gt_ids=gt_ids
                         )
-                        # Citation List Match: compare predicted citations against the same GT set.
                         if not pred_ids:
                             list_match = 1.0
                         elif not ref_ids:
@@ -1847,7 +1768,6 @@ class PatentEvaluator:
                     else:
                         list_match = citation_list_match(pred_body, refs_text)
 
-                    # Rejection type metrics (use dataset rejection_types as GT)
                     gt_rejections = normalize_rejection_types(
                         res.get("meta", {}).get("rejection_types", [])
                     )
@@ -1890,18 +1810,6 @@ class PatentEvaluator:
                 res["rule_scores"] = rule_scores
                 res["scores"].update(rule_scores)
                 if not is_rebuttal:
-                    res["metric_details"] = {
-                        "disposition_pred": pred_disp,
-                        "disposition_pred_source": pred_disp_source,
-                        "disposition_gt": gt_disp,
-                        "statutes_pred": sorted(list(pred_stat)),
-                        "statutes_gt": sorted(list(gt_stat)),
-                        "citations_pred": sorted(list(pred_ids)),
-                        "citations_gt": sorted(list(ref_ids)),
-                    }
-                self._merge_accuracy_from_core_metrics(res.get("scores", {}), task_type)
-                # Recalculate total_score now that we have more accurate detail metrics (disposition, statute, citation)
-                combined_total = self._calculate_numeric_total(res.get("scores", {}), task_type=task_type)
                 res["combined_total_score"] = combined_total
                 res["total_score"] = combined_total
             except Exception as e:
@@ -1919,17 +1827,12 @@ class PatentEvaluator:
         base_acc = float(scores.get("accuracy"))
 
         if is_rebuttal:
-            # Rebuttal accuracy: recompute using judge sub-dimensions.
-            # Keep 1-10 scale and renormalize weights when any sub-dimension is missing.
             effectiveness = scores.get("effectiveness")
-            rationality = scores.get("rationality")  # kept for backward compatibility; not used directly here
+            rationality = scores.get("rationality")
             reliability = scores.get("reliability")
             feature_distinction = scores.get("feature_distinction")
             specification_support = scores.get("specification_support")
 
-            # Default weighting scheme:
-            # - accuracy dominates (0.70)
-            # - the remaining 0.30 is split equally across the other four dimensions
             w_base = 0.70
             w_rest = 0.30 / 4.0
 
@@ -1953,9 +1856,6 @@ class PatentEvaluator:
                 scores["accuracy"] = round(merged, 4)
             return
 
-        # OA: Recompute "accuracy" using the same weighted scheme as tools/recompute_accuracy.py.
-        # This uses LLM judge sub-scores (accuracy/rationality/reliability) and ignores
-        # extracted core-metric fields (disposition/statute/citation precision) to avoid mixing scales.
         rationality = scores.get("rationality")
         reliability = scores.get("reliability")
 
@@ -1970,7 +1870,6 @@ class PatentEvaluator:
 
         if weight_sum > 0:
             merged = weighted_sum / weight_sum
-            # Clamp to 0-10 to match recompute_accuracy.py.
             merged = max(0.0, min(10.0, merged))
             scores["accuracy"] = round(merged, 4)
 
@@ -1984,7 +1883,6 @@ class PatentEvaluator:
         
         is_rebuttal = "rebuttal" in str(task_type).lower()
         
-        # Define weights and whether they need normalization (0-1 -> 0-10)
         if is_rebuttal:
             weights = {
                 "point_wise_coverage": (0.30, True),
@@ -2012,12 +1910,10 @@ class PatentEvaluator:
 
         for key, (weight, needs_norm) in weights.items():
             val = scores.get(key)
-            
-            # Special case for citation_accuracy which is often 0-10 in this project's scores dict
+
             if key == "citation_accuracy" and isinstance(val, (int, float)) and val > 1.0:
-                # If it's already 0-10, don't normalize it again
                 needs_norm = False
-                
+
             if isinstance(val, (int, float)) and not isinstance(val, bool):
                 score_value = val * 10.0 if needs_norm else val
                 total_weighted_score += score_value * weight
@@ -2025,8 +1921,7 @@ class PatentEvaluator:
         
         if sum_of_weights == 0:
             return 0.0
-        
-        # Re-scale to 10 if some weights were missing
+
         final_score = total_weighted_score / sum_of_weights
         return round(final_score, 4)
 
@@ -2039,19 +1934,16 @@ class PatentEvaluator:
         raw = str(text).strip()
         if not raw:
             raise ValueError("No valid JSON found in response")
-        # 1) Prefer fenced JSON blocks
         for m in re.finditer(r'```json\s*(.*?)\s*```', raw, re.DOTALL | re.IGNORECASE):
             block = m.group(1).strip()
             try:
                 return json.loads(block)
             except Exception:
                 continue
-        # 2) Try direct parse
         try:
             return json.loads(raw)
         except Exception:
             pass
-        # 3) Find first valid JSON object/array using JSONDecoder
         decoder = json.JSONDecoder()
         for i, ch in enumerate(raw):
             if ch in "{[":
@@ -2060,14 +1952,12 @@ class PatentEvaluator:
                     return obj
                 except Exception:
                     continue
-        # 4) Fallback: greedy braces (may still fail)
         text_clean = re.search(r'\{.*\}', raw, re.DOTALL)
         if text_clean:
             try:
                 return json.loads(text_clean.group(0))
             except Exception:
                 pass
-        # 5) Fallback: Python-literal parsing for near-JSON outputs
         try:
             import ast
             candidates = []

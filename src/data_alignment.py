@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import json
 import os
 import sys
@@ -27,7 +26,6 @@ for name in sorted(os.listdir(RAW_DATA_ROOT)):
             RAW_DATA_DIRS.append(candidate)
 REF_POOL_DIR = os.path.join(BASE_DIR, "dataset", "ReferencePool_Full")
 SAVE_PATH = os.path.join(BASE_DIR, "dataset", "processed", "test_set_new.json")
-# 0 means no truncation at data-alignment stage.
 REF_TEXT_LIMIT = 0
 
 
@@ -44,11 +42,8 @@ def _load_bm25_top_k(default=5):
 
 BM25_TOP_K = _load_bm25_top_k(default=5)
 
-# Whether to compute and store BM25 retrieved reference summaries into the
-# generated test set (`test_set_new.json`).
-#
-# Default ON: always persist BM25-derived reference summaries so downstream
-# `--retrieval bm25_retrieved` can use them directly.
+#BM25_ENABLE: compute and store BM25 retrieved reference summaries into generated test set.
+#Default ON: persist BM25-derived reference summaries so downstream --retrieval bm25_retrieved can use them directly.
 BM25_ENABLE = True
 
 
@@ -112,7 +107,6 @@ def _normalize_doc_id(doc_num):
 
 
 def _ref_stems_for_pool_lookup(clean_doc_id):
-    """Ordered unique stems (no .json) to try under ReferencePool_Full."""
     if not clean_doc_id:
         return []
     stems = []
@@ -124,7 +118,6 @@ def _ref_stems_for_pool_lookup(clean_doc_id):
             stems.append(s)
 
     add(clean_doc_id)
-    # Raw data e.g. APP-18_375137 -> normalize -> APP18375137; pool files stay APP-* only (no US* fallback).
     if clean_doc_id.startswith("APP") and len(clean_doc_id) > 3:
         rest = clean_doc_id[3:]
         if rest.isdigit() and len(rest) >= 8:
@@ -227,7 +220,7 @@ def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
     if not q:
         return []
     try:
-        from rank_bm25 import BM25Okapi  # pyright: ignore[reportMissingImports]
+        from rank_bm25 import BM25Okapi  
         bm25 = BM25Okapi(docs)
         scores = bm25.get_scores(q)
         scored = [(float(scores[i]), i) for i in range(len(scores))]
@@ -285,8 +278,6 @@ def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
         if len(out) >= top_k:
             break
         doc_id = ids[i]
-        # Deduplicate publication variants by numeric core:
-        # e.g., US1234567A / US1234567A1 / US1234567 -> one entry.
         canon = re.sub(r"[A-Z]\d?$", "", _normalize_doc_id(doc_id))
         if not canon:
             canon = _normalize_doc_id(doc_id)
@@ -297,7 +288,6 @@ def _bm25_topk(query_text, docs, ids, top_k, doc_dates=None, cutoff_date=None):
         try:
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            # For downstream prompting we prefer full claims when available.
             out.append(_build_ref_entry(doc_id, data, independent_only=False))
         except Exception:
             out.append(f"Ref {doc_id}: [content unavailable]")
@@ -357,8 +347,8 @@ def _count_claims_text(claims_text):
     if not claims_text:
         return 0
     import re
-    # Match claim numbers followed by optional backslash + dot, or parenthesis
-    # Handles both "1." and "1\." formats
+    #Match claim numbers followed by optional backslash + dot, or parenthesis
+    #Handles both "1." and "1\." formats
     hits = re.findall(r"(?m)^\s*(\d+)\s*(?:\\?\.|\))", claims_text)
     return len(hits) if hits else 1
 
@@ -396,7 +386,7 @@ def align_data():
                     office_actions = item.get("office_actions", [])
                     if not isinstance(office_actions, list):
                         office_actions = []
-                    # Ensure deterministic round order by oa_number (fallback to original order).
+                    #Ensure deterministic round order by oa_number (fallback to original order).
                     if isinstance(office_actions, list) and office_actions:
                         def _oa_sort_key(oa_obj, idx):
                             if not isinstance(oa_obj, dict):
@@ -438,7 +428,7 @@ def align_data():
                             prev = office_actions[idx - 1]
                             prev_remarks = prev.get("remarks", "N/A") if isinstance(prev, dict) else ""
 
-                        # Claims: use previous round claims as input (fallback to initial_submission.claims).
+                        #Claims: use previous round claims as input (fallback to initial_submission.claims).
                         prev_claims = ""
                         if idx - 1 >= 0:
                             prev_oa = office_actions[idx - 1]
@@ -450,16 +440,14 @@ def align_data():
                         if not claims_text.strip():
                             continue
 
-                        # References:
-                        # - For oracle/bm25 "input refs", we merge references_cited + extracted_reference_contexts.
-                        # - For contrast "citations_gt" (citation-level evaluation), we only use extracted_reference_contexts.
+                        
                         refs_cited = oa.get("references_cited", []) or []
                         refs_extracted = oa.get("extracted_reference_contexts", []) or []
 
                         ref_ids_cited, _ = get_ref_ids(refs_cited)
                         ref_ids_extracted, _ = get_ref_ids(refs_extracted)
 
-                        # Merge (dedupe) for oracle input.
+                        #Merge (dedupe) for oracle input.
                         oracle_ref_ids = []
                         seen = set()
                         for rid in (ref_ids_cited + ref_ids_extracted):
@@ -490,14 +478,13 @@ def align_data():
                                 cutoff_date=oa_cut,
                             )
                             bm25_ref_summaries = "\n".join(bm25_entries).strip()
-                        # Prefer explicit decision; else use USPTO OA kind label (oa_type).
                         decision_value = oa.get("decision") or oa.get("oa_type") or ""
                         decision_value = str(decision_value).strip()
                         if not decision_value:
                             decision_value = "Unknown"
 
                         if is_notice_of_allowance:
-                            # Terminate at Notice of Allowance: no rebuttal round and no next OA.
+                            #Terminate at Notice of Allowance: no rebuttal round and no next OA.
                             next_oa_body = ""
 
                         oa_item = {
@@ -524,9 +511,8 @@ def align_data():
                                 "oa_text": oa_body,
                                 "rebuttal_text": prev_remarks if prev_remarks is not None else "",
                                 "next_oa_text": next_oa_body,
-                                # Ground-truth citations used by citation-level evaluation.
-                                # Here we only keep extracted_reference_contexts references.
-                                # `ref_ids_extracted` are normalized reference pool document ids (e.g. "USxxxx...").
+                                #Ground-truth citations used by citation-level evaluation.
+                                #Here we only keep extracted_reference_contexts references.
                                 "citations_gt": ref_ids_extracted,
                                 "decision": decision_value,
                             },
@@ -559,7 +545,6 @@ def align_data():
                                     "oa_text": oa_body,
                                     "rebuttal_text": cur_remarks,
                                     "next_oa_text": next_oa_body,
-                                # Same extracted-only reference set as the aligned office action.
                                 "citations_gt": ref_ids_extracted,
                                     "decision": decision_value,
                                 },

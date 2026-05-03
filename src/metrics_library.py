@@ -59,10 +59,7 @@ _OA_TYPE_TRAILER_RE = re.compile(
 
 
 def split_model_oa_type_trailer(text):
-    """
-    Strip the machine-readable OA type trailer from model output.
-    Returns (inner_payload_or_None, body_without_trailer).
-    """
+
     if not text or not isinstance(text, str):
         return None, text
     m = _OA_TYPE_TRAILER_RE.search(text)
@@ -74,9 +71,6 @@ def split_model_oa_type_trailer(text):
 
 
 def predicted_disposition_from_trailer(inner):
-    """
-    Parse inner block: JSON {\"oa_type\": \"...\"} or plain USPTO-style string.
-    """
     if not inner or not isinstance(inner, str):
         return "unknown"
     s = inner.strip()
@@ -97,11 +91,6 @@ def predicted_disposition_from_trailer(inner):
 
 
 def resolve_predicted_disposition(pred_text):
-    """
-    Prefer explicit trailer JSON/label; else extract_disposition on body text.
-    Returns (disposition, pred_body_for_metrics, source) where source is
-    'explicit_trailer' or 'extracted'.
-    """
     inner, body = split_model_oa_type_trailer(pred_text)
     if inner:
         d = predicted_disposition_from_trailer(inner)
@@ -112,7 +101,7 @@ def resolve_predicted_disposition(pred_text):
     return d, body, "extracted"
 
 
-# Appended to OA generation user prompts so the model emits type outside the OA narrative.
+
 MODEL_OA_TYPE_TRAILER_USER_SUFFIX = (
     "\n\n## Machine-readable OA type (required)\n"
     "After the full Office Action (after the last substantive section such as CONCLUSION), "
@@ -127,10 +116,6 @@ MODEL_OA_TYPE_TRAILER_USER_SUFFIX = (
 
 
 def disposition_from_oa_type(oa_type):
-    """
-    Map dataset meta.oa_type (USPTO-style string) to extract_disposition labels.
-    Used when OA body text does not yield a disposition (e.g. truncated input).
-    """
     if not oa_type or not isinstance(oa_type, str):
         return "unknown"
     s = oa_type.strip().lower()
@@ -278,24 +263,16 @@ _REF_RE = re.compile(
 
 
 def normalize_ref_id(text):
-    """
-    Normalize reference IDs to a stable form like 'US20210267678'.
-    Keeps prefix (US/WO/EP) + digits only, strips kind codes (A1/B2).
-    """
     if not text:
         return None
     raw = re.sub(r"\s+", "", str(text).upper())
-    # Normalize common prefixes like "U.S. Patent No."
     raw = re.sub(r"U\.?S\.?PAT(?:ENT)?(?:NO\.?|#)?", "US", raw)
-    # Remove commas in numbers
     raw = raw.replace(",", "")
     m = re.match(r"^(US|WO|EP)(.+)$", raw)
     if not m:
         return raw
     prefix, rest = m.group(1), m.group(2)
-    # Remove kind codes like A1/B2 (letters + optional digit at end)
     rest = re.sub(r"[A-Z]\d?$", "", rest)
-    # Remove any non-digits (slashes, commas)
     digits = re.sub(r"\D", "", rest)
     return f"{prefix}{digits}" if digits else raw
 
@@ -339,10 +316,6 @@ def citation_metrics(pred_text, refs_text, gt_ids=None):
 
 
 def citation_list_match(pred_text, refs_text):
-    """
-    Check whether predicted citation IDs are in the provided reference list.
-    Returns precision in [0,1].
-    """
     pred_ids = extract_reference_ids(pred_text)
     ref_ids = extract_reference_ids(refs_text)
     if not pred_ids:
@@ -401,7 +374,6 @@ def formatting_score(text, task_type):
     task_type = str(task_type or "")
     t = text.lower()
     required = []
-    # Standard USPTO Office Action sections
     if task_type in ("oa", "initial_examination", "response_to_rebuttal") or task_type.startswith("response_to_rebuttal_") or task_type.startswith("initial_examination_"):
         required = ["detailed action", "conclusion", "claim rejections", "35 u.s.c."]
     elif "rebuttal" in task_type:

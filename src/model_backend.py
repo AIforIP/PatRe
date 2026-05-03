@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import time
 import os
 import random
@@ -28,7 +27,6 @@ class ModelBackend:
         api_key = os.getenv('OPENAI_API_KEY') or config.get('api_key') or config['models'].get('api_key')
         base_url = os.getenv('OPENAI_BASE_URL') or config.get('base_url') or config['models'].get('base_url')
 
-        # Allow separate judge credentials/endpoint
         if is_judge:
             api_key = (
                 os.getenv('JUDGE_OPENAI_API_KEY')
@@ -41,7 +39,7 @@ class ModelBackend:
                 or base_url
             )
         
-        # Ollama / vLLM (env/config only, no hardcoded endpoint fallback)
+        #Ollama / vLLM 
         if self.backend == 'ollama':
             api_key = (
                 os.getenv("OLLAMA_API_KEY")
@@ -109,11 +107,11 @@ class ModelBackend:
         jitter = float(self.config.get("models", {}).get("retry_jitter_sec", 0))
         for attempt in range(max_retries):
             try:
-                # Check if model is deepseek-v3.2 for streaming output
+                #Check if model is deepseek-v3.2 for streaming output
                 is_deepseek_v32 = isinstance(model, str) and "deepseek-v3.2" in model.lower()
                 
                 if is_deepseek_v32:
-                    # Use streaming for deepseek-v3.2
+                    #Use streaming for deepseek-v3.2
                     stream = self._client.chat.completions.create(
                         model=model,
                         messages=[

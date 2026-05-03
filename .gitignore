@@ -199,10 +199,7 @@ spider.zip
 # Optional utilities (not required for core pipeline)
 # Keep repo clean: ignore most tools, whitelist a few referenced in README
 tools/**
-# !tools/regenerate_scores_summary.py
-# !tools/aggregate_scores.py
-# !tools/set_testset_path.py
-# !tools/test_data_aligner.py
+
 
 EVALUATION_METRICS_GUIDE.md
 RESULT_STRUCTURE_GUIDE.md
