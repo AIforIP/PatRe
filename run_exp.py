@@ -1017,6 +1017,7 @@ def main():
         logger = setup_logger(multiround_exp_dir)
         logger.info(f"Starting multi-round for model: {model_name}")
 
+        all_results_map = {}  #pid -> [eval_result, ...]
 
         total_rounds = max(max_oa_lines, max_rebuttal_lines) if args.task == "both" else max_lines
         for line_idx in range(total_rounds):

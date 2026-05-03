@@ -1810,8 +1810,8 @@ class PatentEvaluator:
                 res["rule_scores"] = rule_scores
                 res["scores"].update(rule_scores)
                 if not is_rebuttal:
-                res["combined_total_score"] = combined_total
-                res["total_score"] = combined_total
+                    res["combined_total_score"] = combined_total
+                    res["total_score"] = combined_total
             except Exception as e:
                 self.logger.warning(f" Additional metrics failed for {res.get('patent_id', 'unknown')}: {e}")
 
